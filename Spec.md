@@ -50,6 +50,7 @@ Decisões fechadas. Alterar qualquer uma exige atualizar este arquivo primeiro.
 | ADR-004 | **Odds nativas do nflverse** | `load_schedules()` já entrega moneyline, spread e total com odds de ambos os lados. Zero dependência de API paga ou scraping. | Odds API externa (The Odds API, scraping de sportsbook). |
 | ADR-005 | **Polars como DataFrame primário no ETL** | `nflreadpy` retorna Polars nativamente. Converter tudo para pandas adiciona cópia de memória sem ganho. `.to_pandas()` fica disponível como escape hatch pontual. | pandas em toda a camada. |
 | ADR-006 | **Parquet como formato do data lake** | Colunar, comprimido, tipado. Play-by-play tem ~400 colunas e centenas de milhares de linhas por temporada — CSV é inviável em custo de leitura. | CSV. |
+| ADR-007 | **Amazon S3 como Data Lake (substituindo GCS)** | Validação sem atrito de conta e camada Always Free de 5GB. | Google Cloud Storage. |
 
 ---
 
@@ -58,7 +59,7 @@ Decisões fechadas. Alterar qualquer uma exige atualizar este arquivo primeiro.
 | Camada | Tecnologia | Função | Hospedagem |
 |---|---|---|---|
 | ETL & Ingestão | Python 3.11+, `nflreadpy`, Polars | Extrair play-by-play e schedules, calcular EPA agregado, exportar Parquet | GitHub Actions (cron) |
-| Data Lake | Google Cloud Storage | Armazenar Parquet bruto e processado | GCP |
+| Data Lake | Amazon S3 | Armazenar Parquet bruto e processado | AWS |
 | Banco relacional | PostgreSQL | Métricas consolidadas, metadados, cache de análises | Supabase |
 | Backend Core | Java 21, Spring Boot 3 | Regras de negócio, REST API, orquestração RAG | Google Cloud Run (Docker) |
 | Motor cognitivo | Gemini API | Gerar narrativa tática a partir de contexto numérico injetado | Google AI Studio |
@@ -77,7 +78,7 @@ nfl-sideline/
 │   │   ├── extract.py          # wrappers nflreadpy (pbp, schedules, rosters)
 │   │   ├── transform.py        # agregações EPA, success rate, janelas móveis
 │   │   ├── market.py           # odds → probabilidade implícita, remoção de vig
-│   │   ├── load.py             # escrita local e upload GCS
+│   │   ├── load.py             # escrita local e upload S3
 │   │   └── config.py           # temporadas, caminhos, env vars
 │   ├── tests/
 │   └── pyproject.toml
@@ -108,10 +109,10 @@ nfl-sideline/
 
 ## 6. Modelo de Dados
 
-### 6.1 Layout do GCS
+### 6.1 Layout do S3
 
 ```
-gs://nfl-sideline-lake/
+s3://nfl-sideline-lake/
 ├── raw/
 │   ├── pbp/season={YYYY}/pbp.parquet
 │   ├── schedules/season={YYYY}/schedules.parquet
@@ -294,11 +295,11 @@ Regras rígidas do prompt de sistema:
 `.github/workflows/etl-weekly.yml`:
 
 - **Cron:** `0 8 * * 2` (UTC) → terça-feira, 05:00 BRT. Janela segura: cobre jogos de domingo e o Monday Night, e o nflverse já publicou o lote.
-- Etapas: instalar dependências → autenticar no GCP via Service Account JSON em secret → executar ingestão da semana corrente → escrever Parquet no GCS → registrar linha em `ingestion_runs`.
+- Etapas: instalar dependências → autenticar na AWS via credenciais em secret → executar ingestão da semana corrente → escrever Parquet no S3 → registrar linha em `ingestion_runs`.
 - Falha deve abrir issue automática no repositório, não morrer em silêncio.
 - Backfill histórico: temporadas 2020 a 2026, executado uma única vez, manualmente, via `workflow_dispatch`.
 
-Secrets necessários: `GCP_SA_KEY`, `GCS_BUCKET`, `SUPABASE_DB_URL`, `GEMINI_API_KEY`.
+Secrets necessários: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `SUPABASE_DB_URL`, `GEMINI_API_KEY`.
 
 ---
 
@@ -307,9 +308,9 @@ Secrets necessários: `GCP_SA_KEY`, `GCS_BUCKET`, `SUPABASE_DB_URL`, `GEMINI_API
 | Fase | Entrega | Gate de saída |
 |---|---|---|
 | **1 — ETL local** *(atual)* | Script Python baixa pbp e schedules reais, calcula métricas, salva Parquet local. | Arquivos válidos em disco, testes passando, métricas conferidas manualmente contra fonte pública. |
-| **2 — Infraestrutura** *(pausa manual)* | Bucket GCS, projeto Supabase, Service Account, chave Gemini, secrets no GitHub. | Conexão testada de ponta a ponta. |
-| **3 — ETL em nuvem** | Upload para GCS integrado, workflow cron ativo. | Duas execuções semanais consecutivas bem-sucedidas sem intervenção. |
-| **4 — Backend e persistência** | Spring Boot com entidades, repositórios, sincronização GCS→Postgres, endpoints de leitura. | Todos os endpoints de `/teams` e `/games` respondendo com dados reais. |
+| **2 — Infraestrutura** *(pausa manual)* | Bucket S3, projeto Supabase, credenciais AWS, chave Gemini, secrets no GitHub. | Conexão testada de ponta a ponta. |
+| **3 — ETL em nuvem** | Upload para S3 integrado, workflow cron ativo. | Duas execuções semanais consecutivas bem-sucedidas sem intervenção. |
+| **4 — Backend e persistência** | Spring Boot com entidades, repositórios, sincronização S3→Postgres, endpoints de leitura. | Todos os endpoints de `/teams` e `/games` respondendo com dados reais. |
 | **5 — Orquestração LLM** | Pipeline RAG, cache, validação numérica. | Dez análises geradas, zero divergência numérica na validação. |
 | **6 — Frontend** | Dashboards React consumindo a API, deploy na Vercel. | Aplicação pública acessível, séries temporais renderizando. |
 
@@ -324,7 +325,7 @@ Cada fase termina com um commit de tag (`v0.1-etl`, `v0.2-cloud`, ...) e uma ent
 3. **Código é autoridade sobre números.** Nenhuma métrica é reportada de memória ou estimada. Se o valor não saiu de uma execução real, ele não entra em documento, README ou resposta.
 4. **Resultado negativo é resultado.** Se uma métrica não separa sinal, se o EPA não prediz nada útil, se o cache não reduz custo — documentar como está. Não maquiar.
 5. **Modularidade estrita.** Python não chama LLM. Python não escreve no Postgres. Java não calcula métrica. Frontend não faz regra de negócio.
-6. **Resiliência.** Tratar timeout de rede, arquivo ausente no GCS, coluna nula em DataFrame e resposta malformada do LLM. Falha explícita é aceitável; falha silenciosa não.
+6. **Resiliência.** Tratar timeout de rede, arquivo ausente no S3, coluna nula em DataFrame e resposta malformada do LLM. Falha explícita é aceitável; falha silenciosa não.
 7. **Commits cirúrgicos.** Uma preocupação por commit, mensagem descrevendo o porquê e não o quê.
 8. **Pré-registro.** Filtros de jogada, janelas móveis e limiares (ex.: 20 jardas para explosive play) são fixados aqui antes de rodar. Mudar limiar depois de ver o resultado exige ADR justificando.
 

@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "ETL pipeline da NFL Sideline: extração de dados nflverse para Parquet local"
 requires-python = ">=3.11,<4"
 dependencies = [
+    "boto3",
+    "botocore",
     "nflreadpy",
     "polars",
     "pyarrow",
