@@ -1,0 +1,20 @@
+# Ambiente virtual
+.venv/
+
+# Dados locais gerados pela extração (Fase 1)
+etl-pipeline/data/
+
+# Cache do Python
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+
+# Variáveis de ambiente
+.env
+
+# Arquivos de sistema operacional
+.DS_Store
+
+# Infraestrutura local da ferramenta de agente
+.freebuff/
