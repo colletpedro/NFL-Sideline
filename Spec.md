@@ -2,7 +2,7 @@
 
 **Versão:** 1.0
 **Status:** Fase 1 (ETL local)
-**Última atualização:** 2026-09-03
+**Última atualização:** 2026-09-04
 **Fonte única da verdade.** Nenhuma decisão arquitetural vale se não estiver aqui.
 
 ---
@@ -318,7 +318,18 @@ Cada fase termina com um commit de tag (`v0.1-etl`, `v0.2-cloud`, ...) e uma ent
 
 ---
 
-## 12. Regras para o Agente de IA (Cursor / Claude Code)
+## 12. Roadmap de Prioridades — Próximos Passos
+
+Ordem rigorosa de prioridades vigente. Nada abaixo é opcional nem paralelo: a etapa seguinte só começa com a anterior entregue e validada.
+
+1. **Expansão de Dados (ETL).** Ingestão massiva do histórico de play-by-play e cálculo de métricas para o Supabase. O volume de dados é o motor do projeto — sem histórico, o RAG não tem contexto e a plataforma não gera vantagem informacional.
+2. **Frontend (UI/UX).** Lapidação, componentização e deploy do painel tático em React/Vite para visualização pública.
+3. **Métricas Avançadas.** Refinamento matemático do motor: adicionar dropback rate e disparidades de passe vs corrida ao motor RAG.
+4. **Avaliação de Modelos (P&D).** Backtesting estruturado do pipeline comparando a saída do Gemini com modelos equivalentes da OpenAI. Movido para a última fase pela ausência atual de acesso às APIs da OpenAI.
+
+---
+
+## 13. Regras para o Agente de IA (Cursor / Claude Code)
 
 1. **Spec-driven.** Consultar este arquivo antes de qualquer tarefa. Nunca alterar arquitetura sem atualizar a spec no mesmo commit.
 2. **Teste antes de implementação.** Escrever o teste que falha, depois o código que passa. Vale para o ETL Python e para os services Java.
@@ -331,7 +342,7 @@ Cada fase termina com um commit de tag (`v0.1-etl`, `v0.2-cloud`, ...) e uma ent
 
 ---
 
-## 13. Riscos e Questões Abertas
+## 14. Riscos e Questões Abertas
 
 | # | Item | Estado |
 |---|---|---|
@@ -345,7 +356,7 @@ Cada fase termina com um commit de tag (`v0.1-etl`, `v0.2-cloud`, ...) e uma ent
 
 ---
 
-## 14. Glossário
+## 15. Glossário
 
 - **EPA (Expected Points Added):** variação no valor esperado de pontos da posse, entre o início e o fim da jogada. Métrica-base da análise moderna de NFL.
 - **Success rate:** proporção de jogadas com EPA positivo. Mede consistência; EPA médio mede magnitude.
