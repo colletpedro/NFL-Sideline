@@ -5,9 +5,14 @@ Lê todos os pbp.parquet sob data/raw/pbp/*/, agrega EPA médio e success rate p
 upsert em lote na tabela `team_week_metrics` com INSERT ... ON CONFLICT DO UPDATE.
 
 Filtros de jogada seguem a spec (§7): exclui epa nulo, kneel downs e spikes e
-restringe a play_type pass/run. `def_epa_play` usa o mesmo EPA visto pela defesa
+restringe a play_type pass/run. `def_*` usa o mesmo EPA visto pela defesa
 (valor menor = defesa melhor); `def_success_rate` espelha a taxa de sucesso
 (EPA > 0) do ataque adversário.
+
+Métricas avançadas (spec §6.2/§7): `off_epa_pass`/`off_epa_rush` e
+`def_epa_pass`/`def_epa_rush` isolam a média de EPA por tipo de jogada, e
+`dropback_rate` é a proporção de passes sobre o total de jogadas válidas do
+ataque (passes / (passes + corridas)).
 
 Conexão: SUPABASE_DB_URL + SUPABASE_DB_USER/SUPABASE_DB_PASSWORD, lidos do ambiente
 ou do .env na raiz do projeto (o prefixo `jdbc:` da URL é removido, se presente).
@@ -36,22 +41,31 @@ VALID_PLAY_TYPES = ("pass", "run")
 INSERT_COLUMNS = [
     "season", "week", "team_abbr",
     "off_epa_play", "off_success_rate", "plays_offense",
+    "off_epa_pass", "off_epa_rush", "dropback_rate",
     "def_epa_play", "def_success_rate", "plays_defense",
+    "def_epa_pass", "def_epa_rush",
 ]
 
 UPSERT_SQL = """
 INSERT INTO team_week_metrics
     (season, week, team_abbr,
      off_epa_play, off_success_rate, plays_offense,
-     def_epa_play, def_success_rate, plays_defense)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+     off_epa_pass, off_epa_rush, dropback_rate,
+     def_epa_play, def_success_rate, plays_defense,
+     def_epa_pass, def_epa_rush)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 ON CONFLICT (season, week, team_abbr) DO UPDATE SET
     off_epa_play     = EXCLUDED.off_epa_play,
     off_success_rate = EXCLUDED.off_success_rate,
     plays_offense    = EXCLUDED.plays_offense,
+    off_epa_pass     = EXCLUDED.off_epa_pass,
+    off_epa_rush     = EXCLUDED.off_epa_rush,
+    dropback_rate    = EXCLUDED.dropback_rate,
     def_epa_play     = EXCLUDED.def_epa_play,
     def_success_rate = EXCLUDED.def_success_rate,
-    plays_defense    = EXCLUDED.plays_defense;
+    plays_defense    = EXCLUDED.plays_defense,
+    def_epa_pass     = EXCLUDED.def_epa_pass,
+    def_epa_rush     = EXCLUDED.def_epa_rush;
 """
 
 
@@ -148,6 +162,8 @@ def build_team_week_metrics(pbp: pl.DataFrame) -> pl.DataFrame:
     )
 
     success = (pl.col("epa") > 0).cast(pl.Float64)
+    is_pass = pl.col("play_type") == "pass"
+    is_run = pl.col("play_type") == "run"
 
     offense = (
         valid_plays
@@ -156,6 +172,9 @@ def build_team_week_metrics(pbp: pl.DataFrame) -> pl.DataFrame:
             pl.col("epa").mean().alias("off_epa_play"),
             success.mean().alias("off_success_rate"),
             pl.len().alias("plays_offense"),
+            pl.col("epa").filter(is_pass).mean().alias("off_epa_pass"),
+            pl.col("epa").filter(is_run).mean().alias("off_epa_rush"),
+            is_pass.cast(pl.Float64).mean().alias("dropback_rate"),
         )
         .rename({"posteam": "team_abbr"})
     )
@@ -167,6 +186,8 @@ def build_team_week_metrics(pbp: pl.DataFrame) -> pl.DataFrame:
             pl.col("epa").mean().alias("def_epa_play"),
             success.mean().alias("def_success_rate"),
             pl.len().alias("plays_defense"),
+            pl.col("epa").filter(is_pass).mean().alias("def_epa_pass"),
+            pl.col("epa").filter(is_run).mean().alias("def_epa_rush"),
         )
         .rename({"defteam": "team_abbr"})
     )
