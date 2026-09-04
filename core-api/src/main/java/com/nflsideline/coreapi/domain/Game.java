@@ -40,11 +40,11 @@ public class Game {
     @Column(name = "gameday")
     private LocalDate gameday;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "home_team")
     private Team homeTeam;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "away_team")
     private Team awayTeam;
 

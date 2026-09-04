@@ -15,6 +15,7 @@ import com.nflsideline.coreapi.repository.TeamWeekMetricsRepository;
 import com.nflsideline.coreapi.service.dto.AnalysisRequest;
 import com.nflsideline.coreapi.service.dto.AnalysisResponse;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
@@ -95,20 +96,42 @@ public class AnalysisService {
         // 5. Chamada LLM
         String llmOutput = geminiClient.generateAnalysis(SYSTEM_PROMPT, userPrompt);
 
-        // 6. Validação numérica (anti-alucinação)
-        validateCitedNumbers(llmOutput, contextJson);
+        // 6. Parse, validação numérica (anti-alucinação) e extração da narrativa limpa
+        JsonNode llmRoot = parseLlmResponse(llmOutput);
+        validateCitedNumbers(llmRoot, contextJson);
+        String narrativeMarkdown = llmRoot.path("narrativa_markdown").asText("").trim();
+        if (narrativeMarkdown.isEmpty()) {
+            throw new IllegalStateException("Resposta do LLM sem narrativa_markdown");
+        }
 
-        // 7. Persistência
-        cacheRepository.save(AnalysisCache.builder()
-                .gameId(request.gameId())
-                .analysisType(request.analysisType())
-                .promptHash(promptHash)
-                .contextJson(contextJson)
-                .responseText(llmOutput)
-                .modelName(MODEL_NAME)
-                .build());
+        // 7. Persistência (apenas a narrativa limpa é armazenada)
+        try {
+            cacheRepository.save(AnalysisCache.builder()
+                    .gameId(request.gameId())
+                    .analysisType(request.analysisType())
+                    .promptHash(promptHash)
+                    .contextJson(contextJson)
+                    .responseText(narrativeMarkdown)
+                    .modelName(MODEL_NAME)
+                    .build());
+        } catch (DataIntegrityViolationException e) {
+            // Requisição concorrente idêntica já persistiu a mesma análise (mesma chave
+            // game_id + analysis_type + prompt_hash): devolve o que já está no cache.
+            return cacheRepository
+                    .findByGameIdAndAnalysisTypeAndPromptHash(request.gameId(), request.analysisType(), promptHash)
+                    .map(c -> new AnalysisResponse(c.getGameId(), c.getResponseText(), true))
+                    .orElseGet(() -> new AnalysisResponse(request.gameId(), narrativeMarkdown, false));
+        }
 
-        return new AnalysisResponse(request.gameId(), llmOutput, false);
+        return new AnalysisResponse(request.gameId(), narrativeMarkdown, false);
+    }
+
+    private JsonNode parseLlmResponse(String llmOutput) {
+        try {
+            return objectMapper.readTree(llmOutput);
+        } catch (JsonProcessingException e) {
+            throw new IllegalStateException("Falha ao interpretar a resposta do LLM", e);
+        }
     }
 
     private Map<String, Object> oddsOf(Game game) {
@@ -153,22 +176,17 @@ public class AnalysisService {
      * deve existir literalmente na string {@code contextJson}. Um número
      * inventado invalida a resposta inteira.
      */
-    private void validateCitedNumbers(String llmOutput, String contextJson) {
-        try {
-            JsonNode root = objectMapper.readTree(llmOutput);
-            JsonNode cited = root.path("metricas_citadas");
-            if (!cited.isObject()) {
-                return; // nenhum número citado, nada a validar
+    private void validateCitedNumbers(JsonNode root, String contextJson) {
+        JsonNode cited = root.path("metricas_citadas");
+        if (!cited.isObject()) {
+            return; // nenhum número citado, nada a validar
+        }
+        Iterator<Map.Entry<String, JsonNode>> fields = cited.fields();
+        while (fields.hasNext()) {
+            JsonNode value = fields.next().getValue();
+            if (value.isNumber() && !contextJson.contains(value.asText())) {
+                throw new IllegalStateException("Validação numérica falhou: número inventado pelo LLM");
             }
-            Iterator<Map.Entry<String, JsonNode>> fields = cited.fields();
-            while (fields.hasNext()) {
-                JsonNode value = fields.next().getValue();
-                if (value.isNumber() && !contextJson.contains(value.asText())) {
-                    throw new IllegalStateException("Validação numérica falhou: número inventado pelo LLM");
-                }
-            }
-        } catch (JsonProcessingException e) {
-            throw new IllegalStateException("Falha ao interpretar a resposta do LLM", e);
         }
     }
 }
