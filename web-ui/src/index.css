@@ -220,6 +220,22 @@ h1 {
   }
 }
 
+.dashboard-advanced {
+  margin-top: 2rem;
+}
+
+.dropback-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge-team {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+
 /* ---- Markdown body ---- */
 .markdown-body h1,
 .markdown-body h2,

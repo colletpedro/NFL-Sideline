@@ -15,12 +15,15 @@ import com.nflsideline.coreapi.repository.TeamWeekMetricsRepository;
 import com.nflsideline.coreapi.service.dto.AnalysisRequest;
 import com.nflsideline.coreapi.service.dto.AnalysisResponse;
 import jakarta.persistence.EntityNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HexFormat;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -31,6 +34,11 @@ import java.util.Map;
 public class AnalysisService {
 
     private static final String MODEL_NAME = "gemini-2.5-flash";
+
+    /** Tolerância de arredondamento da validação anti-alucinação (spec §9: 0.01). */
+    private static final double NUMERIC_TOLERANCE = 0.01;
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AnalysisService.class);
 
     private static final String SYSTEM_PROMPT = "Você é um analista tático da NFL. Responda ESTRITAMENTE em JSON com duas "
             + "chaves: 'narrativa_markdown' (com Panorama, Análise e Fechamento) e 'metricas_citadas' (um objeto "
@@ -101,6 +109,10 @@ public class AnalysisService {
         validateCitedNumbers(llmRoot, contextJson);
         String narrativeMarkdown = llmRoot.path("narrativa_markdown").asText("").trim();
         if (narrativeMarkdown.isEmpty()) {
+            LOGGER.warn(
+                "Resposta do LLM sem narrativa_markdown (game_id={}, hash={}): {}",
+                request.gameId(), promptHash, truncate(llmOutput, 2000)
+            );
             throw new IllegalStateException("Resposta do LLM sem narrativa_markdown");
         }
 
@@ -147,7 +159,10 @@ public class AnalysisService {
         String type = analysisType == null ? "" : analysisType.trim();
         return switch (type) {
             case "matchup" -> "Com base ESTRITAMENTE no contexto acima, escreva uma análise tática do confronto em "
-                    + "português, com os blocos Panorama, Análise e Fechamento.";
+                    + "português, com os blocos Panorama, Análise e Fechamento. "
+                    + "Analise a disparidade de eficiência entre o jogo aéreo (off_epa_pass) e terrestre (off_epa_rush). "
+                    + "Identifique tendências ofensivas e previsibilidade utilizando a taxa de recuo de passe "
+                    + "(dropback_rate).";
             default -> "Com base ESTRITAMENTE no contexto acima, escreva a análise solicitada para este jogo em "
                     + "português, com os blocos Panorama, Análise e Fechamento.";
         };
@@ -163,6 +178,10 @@ public class AnalysisService {
         }
     }
 
+    private static String truncate(String value, int max) {
+        return value != null && value.length() > max ? value.substring(0, max) + "…" : value;
+    }
+
     private String toJson(Map<String, Object> contextMap) {
         try {
             return objectMapper.writeValueAsString(contextMap);
@@ -172,21 +191,43 @@ public class AnalysisService {
     }
 
     /**
-     * Anti-alucinação: todo número citado pelo LLM em {@code metricas_citadas}
-     * deve existir literalmente na string {@code contextJson}. Um número
-     * inventado invalida a resposta inteira.
+     * Anti-alucinação (spec §9): todo número citado pelo LLM em
+     * {@code metricas_citadas} deve existir no contexto. A comparação é
+     * numérica com tolerância de arredondamento de 0.01 (conforme a spec) —
+     * não literal, pois o contexto carrega decimais longos (ex.: EPA por tipo
+     * de jogada) e o modelo arredonda ao citar. Um número inventado (sem
+     * correspondente no contexto dentro da tolerância) invalida a resposta.
      */
     private void validateCitedNumbers(JsonNode root, String contextJson) {
         JsonNode cited = root.path("metricas_citadas");
         if (!cited.isObject()) {
             return; // nenhum número citado, nada a validar
         }
+        JsonNode contextNode = parseLlmResponse(contextJson);
+        List<Double> contextNumbers = new ArrayList<>();
+        collectNumbers(contextNode, contextNumbers);
+
         Iterator<Map.Entry<String, JsonNode>> fields = cited.fields();
         while (fields.hasNext()) {
             JsonNode value = fields.next().getValue();
-            if (value.isNumber() && !contextJson.contains(value.asText())) {
+            if (!value.isNumber()) {
+                continue;
+            }
+            double citedNumber = value.doubleValue();
+            boolean foundInContext = contextNumbers.stream()
+                    .anyMatch(contextNumber -> Math.abs(contextNumber - citedNumber) <= NUMERIC_TOLERANCE);
+            if (!foundInContext) {
                 throw new IllegalStateException("Validação numérica falhou: número inventado pelo LLM");
             }
+        }
+    }
+
+    /** Coleta recursivamente todos os nós numéricos do contexto serializado. */
+    private void collectNumbers(JsonNode node, List<Double> out) {
+        if (node.isNumber()) {
+            out.add(node.doubleValue());
+        } else if (node.isContainerNode()) {
+            node.forEach(child -> collectNumbers(child, out));
         }
     }
 }

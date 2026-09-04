@@ -7,6 +7,7 @@ import {
   Bar,
   BarChart,
   Cell,
+  Legend,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -38,15 +39,52 @@ interface MarketImplied {
   vigPct: number | null;
 }
 
+interface TeamWeekMetrics {
+  id: { season: number; week: number; teamAbbr: string };
+  offEpaPlay: number | null;
+  offEpaPass: number | null;
+  offEpaRush: number | null;
+  defEpaPass: number | null;
+  defEpaRush: number | null;
+  dropbackRate: number | null;
+  playsOffense: number | null;
+}
+
 interface GameDetail {
   game: Game;
   market: MarketImplied | null;
+  homeMetrics: TeamWeekMetrics[];
+  awayMetrics: TeamWeekMetrics[];
 }
 
 interface AnalysisResponse {
   gameId: string;
   markdownText: string;
   fromCache: boolean;
+}
+
+/** Normaliza número JSON (possivelmente null/ausente) para o Recharts. */
+function toNumber(value: number | null | undefined): number | undefined {
+  return value === null || value === undefined ? undefined : Number(value);
+}
+
+/**
+ * Métrica do time para a semana do jogo. Prefere a semana exata do confronto;
+ * se ainda não houver dado (jogo futuro), cai para a última semana jogada
+ * (week <= alvo) e, por fim, para o último registro da série.
+ */
+function metricForWeek(
+  series: TeamWeekMetrics[] | undefined,
+  week: number
+): TeamWeekMetrics | null {
+  if (!series || series.length === 0) return null;
+  const exact = series.find((m) => m.id.week === week);
+  if (exact) return exact;
+  let latestBefore: TeamWeekMetrics | null = null;
+  for (const m of series) {
+    if (m.id.week <= week) latestBefore = m;
+  }
+  return latestBefore ?? series[series.length - 1];
 }
 
 function MatchupDashboard() {
@@ -113,6 +151,35 @@ function MatchupDashboard() {
           { name: game.awayTeam.teamAbbr, prob: awayFair * 100, fill: "#dc2626" },
         ]
       : null;
+
+  // Métricas avançadas: registro da semana do jogo para cada time
+  const homeMetric = game ? metricForWeek(detail?.homeMetrics, game.week) : null;
+  const awayMetric = game ? metricForWeek(detail?.awayMetrics, game.week) : null;
+
+  const efficiencyData =
+    game && homeMetric && awayMetric
+      ? [
+          {
+            name: game.homeTeam.teamAbbr,
+            Passe: toNumber(homeMetric.offEpaPass),
+            Corrida: toNumber(homeMetric.offEpaRush),
+          },
+          {
+            name: game.awayTeam.teamAbbr,
+            Passe: toNumber(awayMetric.offEpaPass),
+            Corrida: toNumber(awayMetric.offEpaRush),
+          },
+        ]
+      : null;
+
+  const hasEfficiencyValues = efficiencyData?.some(
+    (row) => row.Passe !== undefined || row.Corrida !== undefined
+  );
+
+  const dropbackLabel = (metric: TeamWeekMetrics | null, abbr: string) => {
+    if (!metric || metric.dropbackRate === null || metric.dropbackRate === undefined) return null;
+    return `${abbr} · Dropback ${(metric.dropbackRate * 100).toFixed(0)}%`;
+  };
 
   return (
     <div>
@@ -187,6 +254,39 @@ function MatchupDashboard() {
           )}
         </aside>
       </div>
+
+      <section className="dashboard-panel dashboard-advanced">
+        <div className="panel-header">
+          <h2>Eficiência por Tipo de Jogada</h2>
+          <div className="dropback-badges">
+            {game && dropbackLabel(homeMetric, game.homeTeam.teamAbbr) && (
+              <span className="badge badge-team">{dropbackLabel(homeMetric, game.homeTeam.teamAbbr)}</span>
+            )}
+            {game && dropbackLabel(awayMetric, game.awayTeam.teamAbbr) && (
+              <span className="badge badge-team">{dropbackLabel(awayMetric, game.awayTeam.teamAbbr)}</span>
+            )}
+          </div>
+        </div>
+        {efficiencyData && hasEfficiencyValues ? (
+            <>
+              <ResponsiveContainer width="100%" height={240}>
+                <BarChart data={efficiencyData}>
+                  <XAxis dataKey="name" />
+                  <YAxis width={52} />
+                  <Tooltip formatter={(value) => Number(value).toFixed(3)} />
+                  <Legend />
+                  <Bar dataKey="Passe" fill="#6366f1" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="Corrida" fill="#f59e0b" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+              <p className="market-legend">
+                EPA médio por jogada de passe vs corrida {game ? `— semana ${game.week}` : ""}
+              </p>
+            </>
+          ) : (
+            <p>Métricas por tipo de jogada ainda não disponíveis para este jogo.</p>
+          )}
+      </section>
     </div>
   );
 }
