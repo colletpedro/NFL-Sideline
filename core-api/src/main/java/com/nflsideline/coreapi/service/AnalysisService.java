@@ -29,7 +29,7 @@ import java.util.Map;
 @Service
 public class AnalysisService {
 
-    private static final String MODEL_NAME = "gemini-1.5-flash";
+    private static final String MODEL_NAME = "gemini-2.5-flash";
 
     private static final String SYSTEM_PROMPT = "Você é um analista tático da NFL. Responda ESTRITAMENTE em JSON com duas "
             + "chaves: 'narrativa_markdown' (com Panorama, Análise e Fechamento) e 'metricas_citadas' (um objeto "
