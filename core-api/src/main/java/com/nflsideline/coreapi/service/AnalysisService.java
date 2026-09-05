@@ -45,12 +45,15 @@ public class AnalysisService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AnalysisService.class);
 
-    private static final String SYSTEM_PROMPT = "Você é um analista PREDITIVO da NFL. Responda ESTRITAMENTE em JSON "
-            + "com EXATAMENTE estas chaves: 'fator_chave' (texto direto sobre a métrica principal que define o "
-            + "confronto), 'vantagem_tatica' (qual time leva a melhor no confronto de setores), 'alerta_vermelho' "
-            + "(o maior risco ou tendência de previsibilidade), 'veredito' (previsão final direta) e "
-            + "'metricas_citadas' (objeto chave-valor apenas com os números exatos que você mencionou). "
-            + "Nunca cite dados fora do contexto fornecido.";
+    private static final String SYSTEM_PROMPT = "Você é um Analista Esportivo Virtual e Autônomo da NFL. Seu objetivo "
+            + "é poupar o usuário de ler planilhas. TRADUZA A MATEMÁTICA: o usuário não é cientista de dados — em "
+            + "vez de citar 'EPA', use termos como 'ataque aéreo letal' ou 'defesa terrestre vulnerável', usando os "
+            + "números APENAS para embasar a conclusão internamente. FOCO NO MOMENTO: baseie sua vantagem tática no "
+            + "que aconteceu nas últimas 3 semanas (analise os dados de recent_form_last_3_weeks do contexto). "
+            + "Responda ESTRITAMENTE em JSON com EXATAMENTE estas chaves: 'fator_chave', 'vantagem_tatica', "
+            + "'alerta_vermelho' e 'veredito' — todas em linguagem direta e jornalística, explicando POR QUE um "
+            + "time tem vantagem hoje — e 'metricas_citadas' (objeto chave-valor apenas com os números exatos que "
+            + "você mencionou). Nunca cite dados fora do contexto fornecido.";
 
     private final GameRepository gameRepository;
     private final TeamWeekMetricsRepository metricsRepository;
@@ -91,6 +94,9 @@ public class AnalysisService {
         contextMap.put("gameday", game.getGameday());
         contextMap.put("home_team", Map.of("abbr", game.getHomeTeam().getTeamAbbr(), "metricas_semanais", homeMetrics));
         contextMap.put("away_team", Map.of("abbr", game.getAwayTeam().getTeamAbbr(), "metricas_semanais", awayMetrics));
+        contextMap.put("recent_form_last_3_weeks", Map.of(
+                game.getHomeTeam().getTeamAbbr(), recentFormOf(game.getSeason(), game.getHomeTeam().getTeamAbbr()),
+                game.getAwayTeam().getTeamAbbr(), recentFormOf(game.getSeason(), game.getAwayTeam().getTeamAbbr())));
         contextMap.put("mercado", market != null ? market : Map.of());
         contextMap.put("odds", oddsOf(game));
         String contextJson = toJson(contextMap);
@@ -170,15 +176,19 @@ public class AnalysisService {
         return out;
     }
 
-    /** Busca recursivamente o objeto preditivo (com fator_chave + vantagem_tatica). */
+    /**
+     * Busca recursivamente o objeto preditivo (com fator_chave +
+     * vantagem_tatica) em qualquer container — objeto OU array (o Gemini
+     * ocasionalmente embrulha o JSON num array ao usar responseMimeType).
+     */
     private JsonNode findPredictionObject(JsonNode node) {
         if (node == null) {
             return null;
         }
-        if (node.isObject()) {
-            if (node.has("fator_chave") && node.has("vantagem_tatica")) {
-                return node;
-            }
+        if (node.isObject() && node.has("fator_chave") && node.has("vantagem_tatica")) {
+            return node;
+        }
+        if (node.isContainerNode()) {
             Iterator<JsonNode> children = node.elements();
             while (children.hasNext()) {
                 JsonNode found = findPredictionObject(children.next());
@@ -207,18 +217,42 @@ public class AnalysisService {
         return odds;
     }
 
+    /**
+     * Forma recente do time: as últimas 3 semanas jogadas (ordem crescente).
+     * Se o time ainda não jogou na temporada corrente (ex.: Semana 1 de uma
+     * temporada futura), usa as últimas 3 semanas da temporada anterior.
+     * Com menos de 3 jogos, usa os disponíveis.
+     */
+    private Map<String, Object> recentFormOf(int season, String teamAbbr) {
+        List<TeamWeekMetrics> series =
+                metricsRepository.findByIdSeasonAndIdTeamAbbrOrderByIdWeekAsc(season, teamAbbr);
+        int usedSeason = season;
+        if (series.isEmpty() && season > 1999) {
+            usedSeason = season - 1;
+            series = metricsRepository.findByIdSeasonAndIdTeamAbbrOrderByIdWeekAsc(usedSeason, teamAbbr);
+        }
+        List<TeamWeekMetrics> lastWeeks =
+                series.size() <= 3 ? series : series.subList(series.size() - 3, series.size());
+        Map<String, Object> out = new LinkedHashMap<>();
+        out.put("temporada_usada", usedSeason);
+        out.put("semanas", lastWeeks);
+        return out;
+    }
+
     private String instructionFor(String analysisType) {
         String type = analysisType == null ? "" : analysisType.trim();
         return switch (type) {
-            case "matchup" -> "Este confronto AINDA VAI ACONTECER. Com base ESTRITAMENTE no contexto acima, monte a "
-                    + "previsão em português: 'fator_chave' destaca a métrica passada (ex.: off_epa_pass, "
-                    + "off_epa_rush, dropback_rate) que mais define o jogo; 'vantagem_tatica' indica qual time "
-                    + "leva a melhor no confronto de setores, projetando como a eficiência aérea vs terrestre de "
-                    + "cada ataque se contrapõe à defesa adversária; 'alerta_vermelho' aponta o maior risco ou a "
-                    + "tendência de previsibilidade (ex.: dropback alto) que pode ser explorada; 'veredito' é a "
-                    + "previsão final direta do vencedor.";
+            case "matchup" -> "Este confronto AINDA VAI ACONTECER. Fale como um comentarista de TV que explica o "
+                    + "jogo para o torcedor: 'fator_chave' destaca, com base no momento recente "
+                    + "(recent_form_last_3_weeks), o que mais define o confronto; 'vantagem_tatica' explica em "
+                    + "linguagem simples e jornalística POR QUE um time leva a melhor no confronto de setores "
+                    + "(projetando como o ataque aéreo/terrestre recente de cada time se contrapõe à defesa "
+                    + "adversária); 'alerta_vermelho' aponta o maior risco ou tendência de previsibilidade do "
+                    + "momento; 'veredito' é a previsão final direta. Traduza cada número em consequência de "
+                    + "jogo — nada de jargão de cientista de dados.";
             default -> "Com base ESTRITAMENTE no contexto acima, escreva a análise solicitada para este jogo em "
-                    + "português, com os blocos Panorama, Análise e Fechamento.";
+                    + "português, com as chaves 'fator_chave', 'vantagem_tatica', 'alerta_vermelho' e "
+                    + "'veredito'.";
         };
     }
 

@@ -18,7 +18,7 @@ interface Game {
   awayScore: number | null;
 }
 
-const SEASON = 2023;
+const SEASON = 2026;
 
 function formatDate(isoDate: string): string {
   return new Date(`${isoDate}T00:00:00Z`).toLocaleDateString("pt-BR", {
