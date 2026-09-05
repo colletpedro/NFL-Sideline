@@ -1,0 +1,71 @@
+name: NFL Sideline Weekly ETL
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * 2"
+
+jobs:
+  run-etl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install polars psycopg2-binary nflreadpy
+
+      - name: Download current season (schedules + play-by-play)
+        run: |
+          python - <<'PY'
+          from datetime import date
+          from pathlib import Path
+          import nflreadpy as nfl
+          import polars as pl
+
+          # Temporada NFL corrente: setembro de um ano até fevereiro do seguinte.
+          today = date.today()
+          season = today.year if today.month >= 3 else today.year - 1
+
+          # Mesmo layout do data lake local usado pelos loaders
+          # (etl-pipeline/load_games.py e load_metrics.py).
+          base = Path("etl-pipeline/data/raw")
+
+          # Schedules
+          schedules = pl.from_pandas(nfl.load_schedules(seasons=[season]))
+          sched_dir = base / f"schedules/season={season}"
+          sched_dir.mkdir(parents=True, exist_ok=True)
+          schedules.write_parquet(sched_dir / "schedules.parquet")
+          print(f"schedules {season}: {schedules.height} jogos -> {sched_dir}")
+
+          # Play-by-play pode ainda não existir para a temporada corrente
+          # (ex.: antes do início da temporada) — não deve quebrar o pipeline.
+          try:
+              pbp = pl.from_pandas(nfl.load_pbp(seasons=[season]))
+          except Exception as exc:
+              print(f"pbp {season} indisponível: {exc}")
+              pbp = None
+
+          if pbp is not None and pbp.height > 0:
+              pbp_dir = base / f"pbp/season={season}"
+              pbp_dir.mkdir(parents=True, exist_ok=True)
+              pbp.write_parquet(pbp_dir / "pbp.parquet")
+              print(f"pbp {season}: {pbp.height} jogadas -> {pbp_dir}")
+          else:
+              print(f"pbp {season}: sem jogadas ainda (esperado antes do início da temporada)")
+          PY
+
+      - name: Load games + market into Supabase
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+          SUPABASE_DB_USER: ${{ secrets.SUPABASE_DB_USER }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+        run: |
+          python etl-pipeline/load_games.py
+          python etl-pipeline/load_metrics.py
