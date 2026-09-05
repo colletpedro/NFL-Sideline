@@ -20,6 +20,7 @@ export interface Game {
   totalLine: number | null;
   homeMoneyline: number | null;
   awayMoneyline: number | null;
+  updatedAt: string | null;
 }
 
 export interface MarketImplied {

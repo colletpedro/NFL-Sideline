@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import { ChevronLeft } from "lucide-react";
 import { api } from "../services/api";
-import ModelReadout from "../components/ModelReadout";
-import ProbabilitySplit from "../components/ProbabilitySplit";
 import type {
   AnalysisResponse,
   Game,
@@ -11,20 +10,22 @@ import type {
   Predicao,
   TeamWeekMetrics,
 } from "../services/types";
+import { favoriteOf } from "../services/types";
 import {
-  fairProbability,
-  favoriteOf,
-  fmtDateLong,
-  fmtLine,
-  fmtPct,
-  fmtNum,
-} from "../services/types";
+  confidenceOf,
+  dayDateOf,
+  edgePts,
+  gameProbs,
+} from "../services/model";
+import MatchupHero from "../components/MatchupHero";
+import TabNav from "../components/TabNav";
+import type { TabKey } from "../components/TabNav";
+import OverviewPanel from "../components/OverviewPanel";
+import AnalysisSections from "../components/AnalysisSections";
+import MarketComparison from "../components/MarketComparison";
+import TacticalComparison from "../components/TacticalComparison";
 
-/**
- * Métrica do time para a semana do jogo. Prefere a semana exata do confronto;
- * se ainda não houver dado (jogo futuro), cai para a última semana jogada
- * (week <= alvo) e, por fim, para o último registro da série.
- */
+/** Metrics for the game week; falls back to the latest recorded week. */
 function metricForWeek(
   series: TeamWeekMetrics[] | undefined,
   week: number
@@ -39,7 +40,7 @@ function metricForWeek(
   return latestBefore ?? series[series.length - 1];
 }
 
-/** Faz o parse do JSON preditivo; devolve null se não for JSON válido. */
+/** Parse the predictive JSON payload; null when not valid JSON. */
 function parsePredicao(markdownText: string | undefined): Predicao | null {
   if (!markdownText) return null;
   try {
@@ -51,31 +52,6 @@ function parsePredicao(markdownText: string | undefined): Predicao | null {
   }
 }
 
-/** Abertura jornalística composta apenas de dados estruturados. */
-function buildLead(game: Game, favAbbr: string, favPct: number | null): string {
-  const fav = favAbbr === game.homeTeam.teamAbbr ? game.homeTeam : game.awayTeam;
-  const dog = fav === game.homeTeam ? game.awayTeam : game.homeTeam;
-  const parts: string[] = [
-    `${fav.teamName} travel to ${dog.teamName} in Week ${game.week} of the ${game.season} season.`,
-  ];
-  if (favPct !== null) {
-    parts.push(
-      `The model opens with ${fav.teamName} at ${(favPct * 100).toFixed(1)} percent.`
-    );
-  }
-  const line: string[] = [];
-  if (game.spreadLine !== null && game.spreadLine !== undefined) {
-    line.push(`a line of ${fmtLine(game.spreadLine)}`);
-  }
-  if (game.totalLine !== null && game.totalLine !== undefined) {
-    line.push(`a total of ${game.totalLine.toFixed(1)}`);
-  }
-  if (line.length > 0) {
-    parts.push(`The board carries ${line.join(" and ")}.`);
-  }
-  return parts.join(" ");
-}
-
 function MatchupDashboard() {
   const { id } = useParams<{ id: string }>();
   const [detail, setDetail] = useState<GameDetail | null>(null);
@@ -83,6 +59,8 @@ function MatchupDashboard() {
   const [weekGames, setWeekGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [tab, setTab] = useState<TabKey>("overview");
+  const tabRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!id) return;
@@ -90,6 +68,7 @@ function MatchupDashboard() {
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setTab("overview");
 
     Promise.all([
       api.get<GameDetail>(`/games/${id}`),
@@ -108,9 +87,9 @@ function MatchupDashboard() {
         if (axios.isAxiosError(err) && err.response?.status === 404) {
           setError("Game not found.");
         } else if (axios.isAxiosError(err) && err.response?.status === 503) {
-          setError("The model could not produce this edition.");
+          setError("The model could not produce this analysis.");
         } else {
-          setError("The edition could not be loaded.");
+          setError("This game could not be loaded.");
         }
       })
       .finally(() => {
@@ -122,25 +101,42 @@ function MatchupDashboard() {
     };
   }, [id]);
 
-  /** Numeração editorial do jogo dentro da semana (WEEK 01 / GAME 03). */
   useEffect(() => {
     if (!detail) return;
     let cancelled = false;
     api
-      .get<Game[]>("/games", { params: { season: detail.game.season, week: detail.game.week } })
+      .get<Game[]>("/games", {
+        params: { season: detail.game.season, week: detail.game.week },
+      })
       .then((r) => {
-        if (!cancelled) setWeekGames(r.data);
+        if (!cancelled) {
+          const sorted = [...r.data].sort(
+            (a, b) => a.gameday.localeCompare(b.gameday) || a.gameId.localeCompare(b.gameId)
+          );
+          setWeekGames(sorted);
+        }
       })
       .catch(() => {
-        /* numeração é opcional */
+        /* numbering is optional */
       });
     return () => {
       cancelled = true;
     };
   }, [detail?.game.season, detail?.game.week]);
 
+  const goToAnalysis = () => {
+    setTab("analysis");
+    tabRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  useEffect(() => {
+    const body = document.body;
+    body.classList.toggle("cta-active", tab !== "analysis");
+    return () => body.classList.remove("cta-active");
+  }, [tab]);
+
   if (loading) {
-    return <div className="page-state">Composing the edition…</div>;
+    return <div className="page-state">Loading the matchup…</div>;
   }
 
   if (error || !detail) {
@@ -151,163 +147,88 @@ function MatchupDashboard() {
   const predicao = parsePredicao(analysis?.markdownText);
   const favorite = favoriteOf(game);
   const favAbbr = favorite.teamAbbr;
+  const dogTeam = favorite === game.homeTeam ? game.awayTeam : game.homeTeam;
 
-  const marketFair =
-    market?.homeImpliedFair !== null && market?.homeImpliedFair !== undefined &&
-    market?.awayImpliedFair !== null && market?.awayImpliedFair !== undefined
-      ? { home: market.homeImpliedFair, away: market.awayImpliedFair }
-      : null;
-  const mlFair = fairProbability(game.homeMoneyline, game.awayMoneyline);
-  const homePct =
-    marketFair ? marketFair.home : mlFair && mlFair.home !== null ? mlFair.home : null;
-  const awayPct =
-    marketFair ? marketFair.away : mlFair && mlFair.away !== null ? mlFair.away : null;
+  const probs = gameProbs(game, market);
+  const awayPct = probs.awayModel;
+  const homePct = probs.homeModel;
   const favPct = favAbbr === game.homeTeam.teamAbbr ? homePct : awayPct;
+  const dogPct = favPct !== null ? 1 - favPct : null;
+  const confidence = confidenceOf(favPct);
+  const edge = edgePts(favPct);
+  const vig = market?.vigPct ?? null;
 
   const homeMetric = metricForWeek(detail.homeMetrics, game.week);
   const awayMetric = metricForWeek(detail.awayMetrics, game.week);
 
   const gameNo = weekGames.findIndex((g) => g.gameId === game.gameId) + 1;
-  const kicker = `Week ${String(game.week).padStart(2, "0")}${
-    gameNo > 0 ? ` / Game ${String(gameNo).padStart(2, "0")}` : ""
-  }`;
+  const weekLabel = `Week ${String(game.week).padStart(2, "0")}`;
+  const position = `${weekLabel} / Game ${String(gameNo).padStart(2, "0")}`;
 
   return (
     <article>
-      <header className="hero">
-        <p className="hero-kicker">{kicker} — {fmtDateLong(game.gameday)}</p>
-        <h1 className="hero-matchup">
-          {game.awayTeam.teamName} <span className="at">@</span> {game.homeTeam.teamName}
-        </h1>
+      <div className="mu-crumb">
+        <Link to="/">
+          <ChevronLeft size={14} strokeWidth={2.5} aria-hidden="true" />
+          All Games
+        </Link>
+        <span className="pos">{position}</span>
+      </div>
 
-        <div className="hero-stats">
-          <div className="hero-stat">
-            <span className="label">Away — {game.awayTeam.teamAbbr}</span>
-            <span className={`value ${favAbbr === game.awayTeam.teamAbbr ? "fav" : ""}`}>
-              {fmtPct(awayPct)}
-            </span>
-          </div>
-          <div className="hero-stat">
-            <span className="label">Home — {game.homeTeam.teamAbbr}</span>
-            <span className={`value ${favAbbr === game.homeTeam.teamAbbr ? "fav" : ""}`}>
-              {fmtPct(homePct)}
-            </span>
-          </div>
-          <div className="hero-stat">
-            <span className="label">Spread</span>
-            <span className="value">
-              {fmtLine(game.spreadLine)} <small>{favAbbr}</small>
-            </span>
-          </div>
-          <div className="hero-stat">
-            <span className="label">Total</span>
-            <span className="value">{fmtNum(game.totalLine, 1)}</span>
-          </div>
-        </div>
+      <MatchupHero
+        game={game}
+        awayPct={awayPct}
+        homePct={homePct}
+        favAbbr={favAbbr}
+        confidence={confidence}
+        edge={edge}
+        vig={vig}
+        weekLabel={weekLabel}
+      />
 
-        {favPct !== null && (
-          <div className="hero-favorite">
-            <span className="flag" aria-hidden="true" />
-            <span className="text">Model favorite — {favAbbr} at {(favPct * 100).toFixed(1)}%</span>
-          </div>
+      <div ref={tabRef}>
+        <TabNav active={tab} onChange={setTab} />
+      </div>
+
+      <div className="tabpanel">
+        {tab === "overview" && (
+          <OverviewPanel
+            game={game}
+            favTeam={favorite}
+            dogTeam={dogTeam}
+            favAbbr={favAbbr}
+            favPct={favPct}
+            dogPct={dogPct}
+            confidence={confidence}
+            edge={edge}
+            vig={vig}
+            predicao={predicao}
+            onViewAnalysis={goToAnalysis}
+          />
         )}
-      </header>
+        {tab === "analysis" && <AnalysisSections predicao={predicao} />}
+        {tab === "market" && (
+          <MarketComparison game={game} market={market} favAbbr={favAbbr} edge={edge} />
+        )}
+        {tab === "matchup" && (
+          <TacticalComparison
+            awayTeam={game.awayTeam}
+            homeTeam={game.homeTeam}
+            awayMetric={awayMetric}
+            homeMetric={homeMetric}
+            week={game.week}
+          />
+        )}
+      </div>
 
-      <p className="lead">
-        <span className="lead-mono">The editorial desk</span>
-        {buildLead(game, favAbbr, favPct)}
+      <div className={`mobile-cta ${tab !== "analysis" ? "show" : ""}`}>
+        <button onClick={goToAnalysis}>View Full Analysis</button>
+      </div>
+
+      <p className="mu-footnote">
+        {dayDateOf(game.gameday)} · {weekLabel} · Model probabilities are vig-free fair value
+        derived from the market. Lines are informational, not a recommendation.
       </p>
-
-      <section className="case">
-        <div className="case-seq">
-          <section className="case-section">
-            <span className="case-no">01</span>
-            <h2 className="case-head">The Matchup</h2>
-            <p className="case-body">{predicao?.fator_chave ?? "The desk's analysis is not available for this game."}</p>
-          </section>
-
-          <section className="case-section">
-            <span className="case-no">02</span>
-            <h2 className="case-head">The Advantage</h2>
-            <p className="case-body">{predicao?.vantagem_tatica ?? "The desk's analysis is not available for this game."}</p>
-          </section>
-
-          <section className="red-flag">
-            <span className="case-no">03</span>
-            <h2 className="case-head">Red Flag</h2>
-            <p className="case-body">{predicao?.alerta_vermelho ?? "The desk's analysis is not available for this game."}</p>
-          </section>
-
-          <section className="case-section case-verdict">
-            <span className="case-no">04</span>
-            <h2 className="case-head">The Verdict</h2>
-            <p className="case-body">{predicao?.veredito ?? "The desk's analysis is not available for this game."}</p>
-          </section>
-        </div>
-
-        <ModelReadout
-          game={game}
-          market={market}
-          homePct={homePct}
-          awayPct={awayPct}
-          favoriteAbbr={favAbbr}
-          fromCache={analysis?.fromCache ?? false}
-        />
-      </section>
-
-      <section className="ledger">
-        <div className="ledger-head">
-          <h2 className="ledger-title">Weekly Ledger</h2>
-          <span className="ledger-week">Week {String(game.week).padStart(2, "0")} form</span>
-        </div>
-        {homeMetric || awayMetric ? (
-          <div className="ledger-cols">
-            {[
-              { team: game.homeTeam, metric: homeMetric },
-              { team: game.awayTeam, metric: awayMetric },
-            ].map(({ team, metric }) => (
-              <div key={team.teamAbbr} className="ledger-team">
-                <p className="ledger-team-name">{team.teamName}</p>
-                {metric ? (
-                  <>
-                    <div className="ledger-row">
-                      <span className="k">EPA / Play</span>
-                      <span className="v">{fmtNum(metric.offEpaPlay, 3)}</span>
-                    </div>
-                    <div className="ledger-row">
-                      <span className="k">Air EPA</span>
-                      <span className="v">{fmtNum(metric.offEpaPass, 3)}</span>
-                    </div>
-                    <div className="ledger-row">
-                      <span className="k">Ground EPA</span>
-                      <span className="v">{fmtNum(metric.offEpaRush, 3)}</span>
-                    </div>
-                    <div className="ledger-row">
-                      <span className="k">Plays</span>
-                      <span className="v">{metric.playsOffense ?? "—"}</span>
-                    </div>
-                    {metric.dropbackRate !== null && metric.dropbackRate !== undefined && (
-                      <div className="ledger-split">
-                        <ProbabilitySplit
-                          left={{ abbr: "Pass", pct: metric.dropbackRate * 100 }}
-                          right={{ abbr: "Run", pct: (1 - metric.dropbackRate) * 100 }}
-                          favSide={metric.dropbackRate >= 0.5 ? "left" : "right"}
-                        />
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <p className="ledger-note">No weekly ledger recorded for this team.</p>
-                )}
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p className="ledger-note">
-            The play-by-play ledger opens with the season — no weeks recorded yet.
-          </p>
-        )}
-      </section>
     </article>
   );
 }
