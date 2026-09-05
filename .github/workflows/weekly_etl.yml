@@ -1,4 +1,4 @@
-name: NFL Sideline Weekly ETL
+name: NFL Sideline - Weekly ETL
 
 on:
   workflow_dispatch:
