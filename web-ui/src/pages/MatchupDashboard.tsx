@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import ReactMarkdown from "react-markdown";
-import { Sparkles } from "lucide-react";
+import {
+  AlertTriangle,
+  CheckCircle,
+  Crosshair,
+  Key,
+  Sparkles,
+} from "lucide-react";
 import {
   Bar,
   BarChart,
@@ -63,6 +68,14 @@ interface AnalysisResponse {
   fromCache: boolean;
 }
 
+/** Objeto preditivo estruturado exigido do LLM (Fase 9). */
+interface Predicao {
+  fator_chave?: string;
+  vantagem_tatica?: string;
+  alerta_vermelho?: string;
+  veredito?: string;
+}
+
 /** Normaliza número JSON (possivelmente null/ausente) para o Recharts. */
 function toNumber(value: number | null | undefined): number | undefined {
   return value === null || value === undefined ? undefined : Number(value);
@@ -85,6 +98,54 @@ function metricForWeek(
     if (m.id.week <= week) latestBefore = m;
   }
   return latestBefore ?? series[series.length - 1];
+}
+
+/** Faz o parse do JSON preditivo; devolve null se não for JSON válido. */
+function parsePredicao(markdownText: string | undefined): Predicao | null {
+  if (!markdownText) return null;
+  try {
+    const parsed: unknown = JSON.parse(markdownText);
+    if (typeof parsed !== "object" || parsed === null) return null;
+    return parsed as Predicao;
+  } catch {
+    return null;
+  }
+}
+
+interface TendencyBarProps {
+  abbr: string;
+  dropback: number | null | undefined;
+}
+
+/** Barra de tendência de chamadas de jogo: Passe X% vs Corrida Y%. */
+function TendencyBar({ abbr, dropback }: TendencyBarProps) {
+  if (dropback === null || dropback === undefined) return null;
+  const pass = Math.min(100, Math.max(0, Number(dropback) * 100));
+  const run = 100 - pass;
+  return (
+    <div className="tendency">
+      <div className="tendency-head">
+        <span className="tendency-team">{abbr}</span>
+        <span className="tendency-label">
+          Tendência de Passe: {pass.toFixed(0)}%
+        </span>
+      </div>
+      <div className="tendency-track">
+        <div className="tendency-pass" style={{ width: `${pass}%` }} />
+        <div className="tendency-run" style={{ width: `${run}%` }} />
+      </div>
+      <div className="tendency-legend">
+        <span>
+          <span className="tendency-pass-dot" aria-hidden="true" />
+          Passe {pass.toFixed(0)}%
+        </span>
+        <span>
+          <span className="tendency-run-dot" aria-hidden="true" />
+          Corrida {run.toFixed(0)}%
+        </span>
+      </div>
+    </div>
+  );
 }
 
 function MatchupDashboard() {
@@ -176,10 +237,38 @@ function MatchupDashboard() {
     (row) => row.Passe !== undefined || row.Corrida !== undefined
   );
 
-  const dropbackLabel = (metric: TeamWeekMetrics | null, abbr: string) => {
-    if (!metric || metric.dropbackRate === null || metric.dropbackRate === undefined) return null;
-    return `${abbr} · Dropback ${(metric.dropbackRate * 100).toFixed(0)}%`;
-  };
+  // Objeto preditivo estruturado (contrato Fase 9)
+  const predicao = parsePredicao(analysis?.markdownText);
+  const predictionCards = [
+    {
+      key: "fator_chave",
+      title: "Fator Chave",
+      icon: Key,
+      text: predicao?.fator_chave,
+      tone: "fator",
+    },
+    {
+      key: "vantagem_tatica",
+      title: "Vantagem Tática",
+      icon: Crosshair,
+      text: predicao?.vantagem_tatica,
+      tone: "vantagem",
+    },
+    {
+      key: "alerta_vermelho",
+      title: "Alerta Vermelho",
+      icon: AlertTriangle,
+      text: predicao?.alerta_vermelho,
+      tone: "alerta",
+    },
+    {
+      key: "veredito",
+      title: "Veredito",
+      icon: CheckCircle,
+      text: predicao?.veredito,
+      tone: "veredito",
+    },
+  ];
 
   return (
     <div>
@@ -193,17 +282,30 @@ function MatchupDashboard() {
             <h2>Análise Tática</h2>
             <span className="badge">
               <Sparkles size={14} aria-hidden="true" />
-              Powered by Gemini 2.5 Flash
+              Powered by Gemini 3.1 Pro Preview
               {analysis?.fromCache ? " (cache)" : ""}
             </span>
           </div>
-          <div className="markdown-body">
-            {analysis ? (
-              <ReactMarkdown>{analysis.markdownText}</ReactMarkdown>
-            ) : (
-              <p>Nenhuma análise disponível.</p>
-            )}
-          </div>
+          {predicao ? (
+            <div className="prediction-grid">
+              {predictionCards.map((card) => {
+                const Icon = card.icon;
+                return (
+                  <article key={card.key} className={`prediction-card card-${card.tone}`}>
+                    <header className="prediction-card-header">
+                      <Icon size={18} className="icon" aria-hidden="true" />
+                      <h3>{card.title}</h3>
+                    </header>
+                    <p>{card.text || "—"}</p>
+                  </article>
+                );
+              })}
+            </div>
+          ) : analysis ? (
+            <p className="raw-fallback">{analysis.markdownText}</p>
+          ) : (
+            <p>Nenhuma análise disponível.</p>
+          )}
         </section>
 
         <aside className="dashboard-panel dashboard-market">
@@ -258,12 +360,12 @@ function MatchupDashboard() {
       <section className="dashboard-panel dashboard-advanced">
         <div className="panel-header">
           <h2>Eficiência por Tipo de Jogada</h2>
-          <div className="dropback-badges">
-            {game && dropbackLabel(homeMetric, game.homeTeam.teamAbbr) && (
-              <span className="badge badge-team">{dropbackLabel(homeMetric, game.homeTeam.teamAbbr)}</span>
+          <div className="tendency-bars">
+            {game && homeMetric && (
+              <TendencyBar abbr={game.homeTeam.teamAbbr} dropback={homeMetric.dropbackRate} />
             )}
-            {game && dropbackLabel(awayMetric, game.awayTeam.teamAbbr) && (
-              <span className="badge badge-team">{dropbackLabel(awayMetric, game.awayTeam.teamAbbr)}</span>
+            {game && awayMetric && (
+              <TendencyBar abbr={game.awayTeam.teamAbbr} dropback={awayMetric.dropbackRate} />
             )}
           </div>
         </div>

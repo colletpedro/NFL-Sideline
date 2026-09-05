@@ -1,8 +1,10 @@
 """Carrega métricas semanais por time (team_week_metrics) do Parquet local para o Supabase.
 
-Lê todos os pbp.parquet sob data/raw/pbp/*/, agrega EPA médio e success rate por
-(season, week, team_abbr) — separando ataque (posteam) e defesa (defteam) — e faz
-upsert em lote na tabela `team_week_metrics` com INSERT ... ON CONFLICT DO UPDATE.
+Lê todos os pbp.parquet sob data/raw/pbp/*/ (multi-temporada: 2023, 2025 e 2026 quando
+houver jogadas — 2026 pode ainda não ter dados e o script não deve quebrar), agrega EPA
+médio e success rate por (season, week, team_abbr) — separando ataque (posteam) e defesa
+(defteam) — e faz upsert em lote na tabela `team_week_metrics` com INSERT ... ON CONFLICT
+DO UPDATE.
 
 Filtros de jogada seguem a spec (§7): exclui epa nulo, kneel downs e spikes e
 restringe a play_type pass/run. `def_*` usa o mesmo EPA visto pela defesa
@@ -120,7 +122,11 @@ def connect(config: dict[str, str]) -> PgConnection:
 
 
 def load_pbp(data_dir: Path) -> pl.DataFrame:
-    """Lê todos os pbp.parquet de data/raw/pbp/*/ (uma ou mais temporadas)."""
+    """Lê todos os pbp.parquet de data/raw/pbp/*/ (uma ou mais temporadas).
+
+    Arquivos completamente vazios (ex.: temporada futura sem jogadas registradas,
+    como 2026) são ignorados com aviso em vez de quebrar a carga.
+    """
     files = sorted(data_dir.glob("raw/pbp/*/pbp.parquet"))
     if not files:
         raise FileNotFoundError(
@@ -135,11 +141,20 @@ def load_pbp(data_dir: Path) -> pl.DataFrame:
         if missing:
             LOGGER.warning("Ignorando %s: colunas ausentes %s", path.name, missing)
             continue
-        frames.append(pl.scan_parquet(path).select(NEEDED_COLUMNS))
+        lazy = pl.scan_parquet(path).select(NEEDED_COLUMNS)
+        if lazy.head(1).collect().is_empty():
+            LOGGER.warning("Ignorando %s: arquivo vazio (temporada sem jogadas?)", path.name)
+            continue
+        frames.append(lazy)
     if not frames:
         raise RuntimeError("Nenhum arquivo pbp válido para processar.")
 
-    return pl.concat(frames).collect()
+    pbp = pl.concat(frames).collect()
+    LOGGER.info(
+        "Temporadas no PBP local: %s (%d jogadas)",
+        sorted(pbp["season"].unique().to_list()), pbp.height,
+    )
+    return pbp
 
 
 def build_team_week_metrics(pbp: pl.DataFrame) -> pl.DataFrame:

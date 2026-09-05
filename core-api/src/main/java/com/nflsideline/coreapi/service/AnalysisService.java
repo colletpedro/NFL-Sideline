@@ -3,6 +3,7 @@ package com.nflsideline.coreapi.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.nflsideline.coreapi.domain.AnalysisCache;
 import com.nflsideline.coreapi.domain.Game;
 import com.nflsideline.coreapi.domain.MarketImplied;
@@ -33,17 +34,23 @@ import java.util.Map;
 @Service
 public class AnalysisService {
 
-    private static final String MODEL_NAME = "gemini-2.5-flash";
+    private static final String MODEL_NAME = "gemini-3.1-pro-preview";
 
     /** Tolerância de arredondamento da validação anti-alucinação (spec §9: 0.01). */
     private static final double NUMERIC_TOLERANCE = 0.01;
 
+    /** Chaves do objeto preditivo exigido do LLM (contrato da Fase 9). */
+    private static final List<String> PREDICTION_KEYS =
+            List.of("fator_chave", "vantagem_tatica", "alerta_vermelho", "veredito");
+
     private static final Logger LOGGER = LoggerFactory.getLogger(AnalysisService.class);
 
-    private static final String SYSTEM_PROMPT = "Você é um analista tático da NFL. Responda ESTRITAMENTE em JSON com duas "
-            + "chaves: 'narrativa_markdown' (com Panorama, Análise e Fechamento) e 'metricas_citadas' (um objeto "
-            + "chave-valor apenas com os números exatos que você mencionou no texto). Nunca cite dados fora do "
-            + "contexto fornecido.";
+    private static final String SYSTEM_PROMPT = "Você é um analista PREDITIVO da NFL. Responda ESTRITAMENTE em JSON "
+            + "com EXATAMENTE estas chaves: 'fator_chave' (texto direto sobre a métrica principal que define o "
+            + "confronto), 'vantagem_tatica' (qual time leva a melhor no confronto de setores), 'alerta_vermelho' "
+            + "(o maior risco ou tendência de previsibilidade), 'veredito' (previsão final direta) e "
+            + "'metricas_citadas' (objeto chave-valor apenas com os números exatos que você mencionou). "
+            + "Nunca cite dados fora do contexto fornecido.";
 
     private final GameRepository gameRepository;
     private final TeamWeekMetricsRepository metricsRepository;
@@ -104,26 +111,20 @@ public class AnalysisService {
         // 5. Chamada LLM
         String llmOutput = geminiClient.generateAnalysis(SYSTEM_PROMPT, userPrompt);
 
-        // 6. Parse, validação numérica (anti-alucinação) e extração da narrativa limpa
+        // 6. Parse, validação numérica (anti-alucinação) e extração do objeto preditivo
         JsonNode llmRoot = parseLlmResponse(llmOutput);
         validateCitedNumbers(llmRoot, contextJson);
-        String narrativeMarkdown = llmRoot.path("narrativa_markdown").asText("").trim();
-        if (narrativeMarkdown.isEmpty()) {
-            LOGGER.warn(
-                "Resposta do LLM sem narrativa_markdown (game_id={}, hash={}): {}",
-                request.gameId(), promptHash, truncate(llmOutput, 2000)
-            );
-            throw new IllegalStateException("Resposta do LLM sem narrativa_markdown");
-        }
+        JsonNode prediction = extractPredictionObject(llmRoot);
+        String responseText = writeJson(prediction);
 
-        // 7. Persistência (apenas a narrativa limpa é armazenada)
+        // 7. Persistência (apenas o objeto preditivo validado é armazenado)
         try {
             cacheRepository.save(AnalysisCache.builder()
                     .gameId(request.gameId())
                     .analysisType(request.analysisType())
                     .promptHash(promptHash)
                     .contextJson(contextJson)
-                    .responseText(narrativeMarkdown)
+                    .responseText(responseText)
                     .modelName(MODEL_NAME)
                     .build());
         } catch (DataIntegrityViolationException e) {
@@ -132,10 +133,10 @@ public class AnalysisService {
             return cacheRepository
                     .findByGameIdAndAnalysisTypeAndPromptHash(request.gameId(), request.analysisType(), promptHash)
                     .map(c -> new AnalysisResponse(c.getGameId(), c.getResponseText(), true))
-                    .orElseGet(() -> new AnalysisResponse(request.gameId(), narrativeMarkdown, false));
+                    .orElseGet(() -> new AnalysisResponse(request.gameId(), responseText, false));
         }
 
-        return new AnalysisResponse(request.gameId(), narrativeMarkdown, false);
+        return new AnalysisResponse(request.gameId(), responseText, false);
     }
 
     private JsonNode parseLlmResponse(String llmOutput) {
@@ -143,6 +144,57 @@ public class AnalysisService {
             return objectMapper.readTree(llmOutput);
         } catch (JsonProcessingException e) {
             throw new IllegalStateException("Falha ao interpretar a resposta do LLM", e);
+        }
+    }
+
+    /**
+     * Extrai o objeto preditivo do contrato da Fase 9 (fator_chave,
+     * vantagem_tatica, alerta_vermelho, veredito) da resposta do LLM e o
+     * devolve sem as chaves auxiliares (ex.: metricas_citadas, usada apenas
+     * na validação numérica). O objeto pode estar no nível raiz ou aninhado.
+     */
+    private JsonNode extractPredictionObject(JsonNode root) {
+        JsonNode target = root.isObject() && root.has("fator_chave") ? root : findPredictionObject(root);
+        if (target == null || !target.isObject()) {
+            LOGGER.warn("Resposta do LLM sem objeto preditivo: {}", truncate(String.valueOf(root), 2000));
+            throw new IllegalStateException("Resposta do LLM sem objeto preditivo");
+        }
+        ObjectNode out = objectMapper.createObjectNode();
+        for (String key : PREDICTION_KEYS) {
+            JsonNode value = target.get(key);
+            if (value == null || value.isNull() || value.asText("").trim().isEmpty()) {
+                throw new IllegalStateException("Resposta do LLM incompleta: chave ausente '" + key + "'");
+            }
+            out.set(key, value);
+        }
+        return out;
+    }
+
+    /** Busca recursivamente o objeto preditivo (com fator_chave + vantagem_tatica). */
+    private JsonNode findPredictionObject(JsonNode node) {
+        if (node == null) {
+            return null;
+        }
+        if (node.isObject()) {
+            if (node.has("fator_chave") && node.has("vantagem_tatica")) {
+                return node;
+            }
+            Iterator<JsonNode> children = node.elements();
+            while (children.hasNext()) {
+                JsonNode found = findPredictionObject(children.next());
+                if (found != null) {
+                    return found;
+                }
+            }
+        }
+        return null;
+    }
+
+    private String writeJson(JsonNode node) {
+        try {
+            return objectMapper.writeValueAsString(node);
+        } catch (JsonProcessingException e) {
+            throw new IllegalStateException("Falha ao serializar a resposta do LLM", e);
         }
     }
 
@@ -158,11 +210,13 @@ public class AnalysisService {
     private String instructionFor(String analysisType) {
         String type = analysisType == null ? "" : analysisType.trim();
         return switch (type) {
-            case "matchup" -> "Com base ESTRITAMENTE no contexto acima, escreva uma análise tática do confronto em "
-                    + "português, com os blocos Panorama, Análise e Fechamento. "
-                    + "Analise a disparidade de eficiência entre o jogo aéreo (off_epa_pass) e terrestre (off_epa_rush). "
-                    + "Identifique tendências ofensivas e previsibilidade utilizando a taxa de recuo de passe "
-                    + "(dropback_rate).";
+            case "matchup" -> "Este confronto AINDA VAI ACONTECER. Com base ESTRITAMENTE no contexto acima, monte a "
+                    + "previsão em português: 'fator_chave' destaca a métrica passada (ex.: off_epa_pass, "
+                    + "off_epa_rush, dropback_rate) que mais define o jogo; 'vantagem_tatica' indica qual time "
+                    + "leva a melhor no confronto de setores, projetando como a eficiência aérea vs terrestre de "
+                    + "cada ataque se contrapõe à defesa adversária; 'alerta_vermelho' aponta o maior risco ou a "
+                    + "tendência de previsibilidade (ex.: dropback alto) que pode ser explorada; 'veredito' é a "
+                    + "previsão final direta do vencedor.";
             default -> "Com base ESTRITAMENTE no contexto acima, escreva a análise solicitada para este jogo em "
                     + "português, com os blocos Panorama, Análise e Fechamento.";
         };

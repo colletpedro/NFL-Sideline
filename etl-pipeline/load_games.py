@@ -1,7 +1,8 @@
 """Carrega o calendário (games) e as probabilidades implícitas (market_implied) no Supabase.
 
-Lê os schedules.parquet sob data/raw/schedules/*/, filtra estritamente a temporada
-2023 excluindo pré-temporada, e faz upsert em duas tabelas (spec §6.2):
+Lê os schedules.parquet sob data/raw/schedules/*/, filtra estritamente as temporadas
+2025 (histórico recente) e 2026 (calendário futuro) excluindo pré-temporada, e faz
+upsert em duas tabelas (spec §6.2):
 
 1. `games` — mapeia game_id, season, week, game_type, gameday, home_team, away_team,
    spread_line, total_line, home_moneyline e away_moneyline. Jogos sem cotação
@@ -31,8 +32,8 @@ from load_metrics import _read_db_config, connect
 
 LOGGER = logging.getLogger("load_games")
 
-#: Temporada-alvo desta carga (fixada — volume histórico entra em iteração futura).
-SEASON = 2023
+#: Temporadas-alvo desta carga (2025 = histórico recente; 2026 = calendário futuro).
+SEASONS: tuple[int, ...] = (2025, 2026)
 #: Tipos de jogo que entram na carga (pré-temporada fica fora).
 #: Nesta versão do nflverse os playoffs chegam granularizados (WC/DIV/CON/SB) em vez
 #: de "POST" — por isso a lista cobre as duas vocabulários; "PRE"/"HOF" ficam fora.
@@ -96,11 +97,11 @@ def load_schedules(data_dir: Path) -> pl.DataFrame:
     schedules = pl.concat(frames).collect()
 
     season_df = schedules.filter(
-        (pl.col("season") == SEASON) & (pl.col("game_type").is_in(VALID_GAME_TYPES))
+        pl.col("season").is_in(SEASONS) & pl.col("game_type").is_in(VALID_GAME_TYPES)
     )
     LOGGER.info(
-        "Schedules %d: %d jogos REG/POST (descartados %d de outras temporadas/tipos)",
-        SEASON, season_df.height, schedules.height - season_df.height,
+        "Schedules %s: %d jogos REG/POST (descartados %d de outras temporadas/tipos)",
+        SEASONS, season_df.height, schedules.height - season_df.height,
     )
     return season_df
 
@@ -283,7 +284,7 @@ def main() -> None:
             schedules = load_schedules(data_dir)
             games = prepare_games(schedules)
             if games.is_empty():
-                LOGGER.warning("Nenhum jogo cotado para a temporada %d — nada a persistir.", SEASON)
+                LOGGER.warning("Nenhum jogo cotado para as temporadas %s — nada a persistir.", SEASONS)
             else:
                 upsert_games(conn, games)
         except Exception as exc:

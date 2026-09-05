@@ -224,15 +224,161 @@ h1 {
   margin-top: 2rem;
 }
 
-.dropback-badges {
+/* ---- Tendency bars (Tendência de Passe vs Corrida) ---- */
+.tendency-bars {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.9rem;
+  min-width: 240px;
 }
 
-.badge-team {
-  background: #fef3c7;
-  color: #92400e;
+.tendency {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.tendency-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.tendency-team {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tendency-label {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tendency-track {
+  display: flex;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.tendency-pass {
+  height: 100%;
+  background: #6366f1;
+}
+
+.tendency-run {
+  height: 100%;
+  background: #f59e0b;
+}
+
+.tendency-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.tendency-pass-dot,
+.tendency-run-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  margin-right: 0.25rem;
+}
+
+.tendency-pass-dot {
+  background: #6366f1;
+}
+
+.tendency-run-dot {
+  background: #f59e0b;
+}
+
+/* ---- Prediction cards (Fase 9) ---- */
+.prediction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.prediction-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.07);
+}
+
+.prediction-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.prediction-card-header h3 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.prediction-card-header .icon {
+  color: var(--accent);
+}
+
+.prediction-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card-alerta {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.card-alerta .prediction-card-header {
+  color: #b91c1c;
+}
+
+.card-alerta .prediction-card-header h3 {
+  color: #b91c1c;
+}
+
+.card-alerta .prediction-card-header .icon {
+  color: #dc2626;
+}
+
+.card-veredito {
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 14px rgb(29 78 216 / 0.12);
+}
+
+.card-veredito .prediction-card-header {
+  color: #1d4ed8;
+}
+
+.card-veredito .prediction-card-header h3 {
+  color: #1d4ed8;
+}
+
+.card-veredito .prediction-card-header .icon {
+  color: #2563eb;
+}
+
+.raw-fallback {
+  white-space: pre-wrap;
+  font-size: 0.95rem;
 }
 
 
