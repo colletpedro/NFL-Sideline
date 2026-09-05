@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import GamesList from "./pages/GamesList";
+import Home from "./pages/Home";
 import MatchupDashboard from "./pages/MatchupDashboard";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<GamesList />} />
+          <Route path="/" element={<Home />} />
           <Route path="/game/:id" element={<MatchupDashboard />} />
         </Routes>
       </Layout>
