@@ -6,6 +6,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -89,6 +90,9 @@ public class Game {
 
     @Column(name = "div_game")
     private Boolean divGame;
+
+    @OneToOne(mappedBy = "game", fetch = FetchType.LAZY)
+    private MarketImplied marketImplied;
 
     @Column(name = "updated_at", insertable = false, updatable = false)
     private OffsetDateTime updatedAt;

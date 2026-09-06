@@ -32,9 +32,9 @@ public class GameService {
      */
     public List<Game> findGames(Integer season, Integer week) {
         if (week == null) {
-            return gameRepository.findBySeasonOrderByWeekAsc(season);
+            return gameRepository.findAllBySeasonWithDetails(season);
         }
-        return gameRepository.findBySeasonAndWeek(season, week);
+        return gameRepository.findBySeasonAndWeekWithDetails(season, week);
     }
 
     /**
@@ -43,10 +43,10 @@ public class GameService {
      * (contrato da spec §8 — "detalhe do jogo com métricas de ambos os times").
      */
     public Optional<GameDetail> findGameDetail(String gameId) {
-        return gameRepository.findById(gameId)
+        return gameRepository.findByIdWithDetails(gameId)
                 .map(game -> new GameDetail(
                         game,
-                        marketImpliedRepository.findById(gameId).orElse(null),
+                        game.getMarketImplied(),
                         weeklyMetrics(game, game.getHomeTeam()),
                         weeklyMetrics(game, game.getAwayTeam())));
     }

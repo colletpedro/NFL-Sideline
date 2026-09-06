@@ -8,19 +8,28 @@ import GameRow from "../components/GameRow";
 
 const SEASON = 2026;
 
+// Simple in-memory cache to avoid re-fetching on back navigation
+let cachedGames: Game[] | null = null;
+
 function Home() {
-  const [games, setGames] = useState<Game[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [games, setGames] = useState<Game[]>(cachedGames || []);
+  const [loading, setLoading] = useState(!cachedGames);
   const [error, setError] = useState<string | null>(null);
   const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
   const [dayFilter, setDayFilter] = useState("ALL");
 
   useEffect(() => {
+    if (cachedGames) {
+      return;
+    }
     let cancelled = false;
     api
       .get<Game[]>("/games", { params: { season: SEASON } })
       .then((r) => {
-        if (!cancelled) setGames(r.data);
+        if (!cancelled) {
+          cachedGames = r.data;
+          setGames(r.data);
+        }
       })
       .catch(() => {
         if (!cancelled) setError("The board could not be loaded.");

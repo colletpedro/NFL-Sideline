@@ -23,6 +23,7 @@ interface OverviewPanelProps {
   edge: number | null;
   vig: number | null;
   predicao: Predicao | null;
+  analysisLoading?: boolean;
   onViewAnalysis: () => void;
 }
 
@@ -37,6 +38,7 @@ function OverviewPanel({
   edge,
   vig,
   predicao,
+  analysisLoading,
   onViewAnalysis,
 }: OverviewPanelProps) {
   const awayFav = favAbbr === game.awayTeam.teamAbbr;
@@ -100,29 +102,40 @@ function OverviewPanel({
           <span className="s">Model reasoning</span>
         </div>
 
-        {factors.map((f) => (
-          <div key={f.no} className="ov-factor">
-            <span className="no">{f.no}</span>
-            <div className="body">
-              <span className="k">{f.label}</span>
-              <p className={`t ${f.red ? "factor-red" : ""}`}>
-                {f.text ?? "Analysis not available for this game."}
-              </p>
-            </div>
+        {analysisLoading ? (
+          <div className="flex flex-col items-center justify-center py-12 animate-pulse text-gray-400">
+            <span className="mb-2">Model is crunching data...</span>
+            <div className="h-4 w-3/4 bg-gray-200 rounded mt-4"></div>
+            <div className="h-4 w-1/2 bg-gray-200 rounded mt-2"></div>
+            <div className="h-4 w-5/6 bg-gray-200 rounded mt-2"></div>
           </div>
-        ))}
+        ) : (
+          <>
+            {factors.map((f) => (
+              <div key={f.no} className="ov-factor">
+                <span className="no">{f.no}</span>
+                <div className="body">
+                  <span className="k">{f.label}</span>
+                  <p className={`t ${f.red ? "factor-red" : ""}`}>
+                    {f.text ?? "Analysis not available for this game."}
+                  </p>
+                </div>
+              </div>
+            ))}
 
-        {verdict && (
-          <div className="ov-verdict">
-            <span className="k">Model Verdict</span>
-            <p className="t">{verdict}</p>
-          </div>
+            {verdict && (
+              <div className="ov-verdict">
+                <span className="k">Model Verdict</span>
+                <p className="t">{verdict}</p>
+              </div>
+            )}
+
+            <button className="ov-cta" onClick={onViewAnalysis}>
+              View Full Analysis
+              <ArrowRight size={14} strokeWidth={2.5} aria-hidden="true" />
+            </button>
+          </>
         )}
-
-        <button className="ov-cta" onClick={onViewAnalysis}>
-          View Full Analysis
-          <ArrowRight size={14} strokeWidth={2.5} aria-hidden="true" />
-        </button>
       </div>
     </section>
   );

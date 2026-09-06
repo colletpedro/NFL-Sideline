@@ -56,6 +56,7 @@ function MatchupDashboard() {
   const { id } = useParams<{ id: string }>();
   const [detail, setDetail] = useState<GameDetail | null>(null);
   const [analysis, setAnalysis] = useState<AnalysisResponse | null>(null);
+  const [analysisLoading, setAnalysisLoading] = useState(false);
   const [weekGames, setWeekGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -67,33 +68,43 @@ function MatchupDashboard() {
 
     let cancelled = false;
     setLoading(true);
+    setAnalysisLoading(true);
     setError(null);
     setTab("overview");
 
-    Promise.all([
-      api.get<GameDetail>(`/games/${id}`),
-      api.post<AnalysisResponse>("/analysis/matchup", {
-        gameId: id,
-        analysisType: "matchup",
-      }),
-    ])
-      .then(([detailResponse, analysisResponse]) => {
-        if (cancelled) return;
-        setDetail(detailResponse.data);
-        setAnalysis(analysisResponse.data);
-      })
-      .catch((err) => {
-        if (cancelled) return;
-        if (axios.isAxiosError(err) && err.response?.status === 404) {
-          setError("Game not found.");
-        } else if (axios.isAxiosError(err) && err.response?.status === 503) {
-          setError("The model could not produce this analysis.");
-        } else {
-          setError("This game could not be loaded.");
+    api.get<GameDetail>(`/games/${id}`)
+      .then((detailResponse) => {
+        if (!cancelled) {
+          setDetail(detailResponse.data);
+          setLoading(false);
         }
       })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
+      .catch((err) => {
+        if (!cancelled) {
+          if (axios.isAxiosError(err) && err.response?.status === 404) {
+            setError("Game not found.");
+          } else {
+            setError("This game could not be loaded.");
+          }
+          setLoading(false);
+          setAnalysisLoading(false);
+        }
+      });
+
+    api.post<AnalysisResponse>("/analysis/matchup", {
+      gameId: id,
+      analysisType: "matchup",
+    })
+      .then((analysisResponse) => {
+        if (!cancelled) {
+          setAnalysis(analysisResponse.data);
+          setAnalysisLoading(false);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setAnalysisLoading(false);
+        }
       });
 
     return () => {
@@ -203,10 +214,11 @@ function MatchupDashboard() {
             edge={edge}
             vig={vig}
             predicao={predicao}
+            analysisLoading={analysisLoading}
             onViewAnalysis={goToAnalysis}
           />
         )}
-        {tab === "analysis" && <AnalysisSections predicao={predicao} />}
+        {tab === "analysis" && <AnalysisSections predicao={predicao} analysisLoading={analysisLoading} />}
         {tab === "market" && (
           <MarketComparison game={game} market={market} favAbbr={favAbbr} edge={edge} />
         )}
