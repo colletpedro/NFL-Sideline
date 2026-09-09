@@ -1,10 +1,10 @@
 # NFL Sideline — Especificação Técnica
 
-**Versão documental:** 2.0
+**Versão documental:** 2.1
 
 **Status:** protótipo funcional em estabilização
 
-**Baseline documental:** pacote de reprodutibilidade do ETL validado localmente em 2026-09-09, a partir de `fbcb2b7`
+**Baseline documental:** pacote de consistência e observabilidade do ETL validado localmente em 2026-09-09, a partir de `ce49ec8`
 
 **Autoridade:** esta especificação descreve o comportamento observado no código e no schema nessa baseline. Itens sem evidência são marcados como planejados, não comprovados ou pendentes.
 
@@ -34,6 +34,7 @@ Odds, spreads, totais e probabilidades implícitas são contexto complementar. E
 - Autenticação, autorização e multi-tenancy.
 - Deploy comprovado em Cloud Run ou Vercel.
 - Operação confiável e observada do ETL semanal.
+- Alertas, retenção, dashboard operacional ou fechamento automático de runs presos em `RUNNING`.
 
 ## 2. Arquitetura implementada
 
@@ -41,7 +42,8 @@ Odds, spreads, totais e probabilidades implícitas são contexto complementar. E
 nflverse
   -> nflreadpy
   -> Parquet em etl-pipeline/data/raw/{schedules,pbp}/season=YYYY/
-  -> seed_teams.py / load_games.py / load_metrics.py
+  -> run_pipeline.py
+     -> seed_teams.py / load_games.py / load_metrics.py
   -> conexão psycopg2 direta
   -> Supabase PostgreSQL
   -> Spring Boot 3.3.5 / Java 21 / JPA
@@ -84,6 +86,7 @@ NFL Sideline/
 │   ├── src/nfl_sideline_etl/{extract.py,load.py}
 │   ├── load_games.py
 │   ├── load_metrics.py
+│   ├── run_pipeline.py
 │   ├── run_local.py
 │   ├── seed_teams.py
 │   └── pyproject.toml
@@ -118,7 +121,7 @@ O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente
 
 ### 3.1 Política compartilhada de temporadas
 
-`nfl_sideline_etl.seasons` é a única implementação da política usada pelas quatro CLIs e pelo workflow por meio dos defaults das CLIs:
+`nfl_sideline_etl.seasons` é a única implementação da política usada pelas cinco CLIs e pelo workflow por meio dos defaults das CLIs:
 
 - `--season YEAR` pode ser repetido; valores são deduplicados e ordenados;
 - sem a opção, março a dezembro usa o ano corrente e janeiro/fevereiro usa o ano anterior;
@@ -130,27 +133,35 @@ O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente
 
 ### 4.1 Ordem de preparação
 
-1. Criar um banco vazio usando a migration baseline.
-2. Executar `run_local.py` para disponibilizar Parquet no layout local.
-3. Executar `seed_teams.py`.
-4. Executar `load_games.py`, que também popula `market_implied`.
-5. Executar `load_metrics.py`.
-6. Iniciar backend e frontend.
+1. Abrir e conferir a conexão PostgreSQL.
+2. Inserir `RUNNING` em `ingestion_runs` e commitar.
+3. Adquirir schedules e PBP, salvo com `--skip-acquire`.
+4. Carregar/atualizar times.
+5. Carregar games e `market_implied`.
+6. Carregar métricas.
+7. Registrar `SUCCEEDED` com as contagens finais.
 
-A ordem dos loaders é obrigatória por causa das FKs de times e jogos. Todos os loaders usam `INSERT ... ON CONFLICT DO UPDATE`.
+A ordem é implementada diretamente por `run_pipeline.py`, sem subprocessos, e é obrigatória por causa das FKs de times e jogos. Os scripts individuais continuam funcionando como CLIs. Todos os loaders usam `INSERT ... ON CONFLICT DO UPDATE`.
 
-`run_local.py` baixa schedules e PBP de cada temporada pedida. `--schedules-only` e `--pbp-only` selecionam uma fonte e são mutuamente exclusivos; schedules são obrigatórios salvo no segundo modo. Arquivos com zero linhas não contam como sucesso. `--allow-missing-pbp` é restrito a PBP vazio, temporada futura ou HTTP 404 de arquivo ainda não publicado. Timeout, DNS/conexão, HTTP 401/403, 429, 5xx, parsing e schema continuam fatais; schedules nunca recebem essa tolerância. S3 é estritamente opt-in por `--upload-s3` e preserva a chave legada de schedules.
+Cada temporada é uma execução independente e sequencial. A política é fail-fast: qualquer exceção após a criação do run identifica a etapa, faz rollback aplicável, tenta registrar `FAILED` e é propagada; nenhuma temporada seguinte é iniciada. Se a própria gravação de `FAILED` falhar, o erro secundário é sanitizado no log e a exceção original permanece a exceção do pipeline.
+
+`run_local.py` baixa schedules e PBP de cada temporada pedida. `--schedules-only` e `--pbp-only` selecionam uma fonte e são mutuamente exclusivos; schedules são obrigatórios salvo no segundo modo. Arquivos com zero linhas não contam como sucesso. `--allow-missing-pbp` é restrito a PBP vazio, temporada futura ou HTTP 404 de arquivo ainda não publicado. Timeout, DNS/conexão, HTTP 401/403, 429, 5xx, parsing e schema continuam fatais; schedules nunca recebem essa tolerância. S3 é estritamente opt-in por `--upload-s3` e preserva a chave legada de schedules. O orquestrador não oferece S3.
+
+`run_pipeline.py --skip-acquire` não chama nflverse nem S3: exige schedules válidos da temporada no `--data-dir` e usa uma referência mínima de times derivada deles, preservando metadados ricos já existentes em conflitos. PBP ausente só é tolerado com `--allow-missing-pbp`; schema incompatível permanece fatal.
 
 ### 4.2 Schedules e mercado
 
-`load_games.py` lê somente as partições pedidas e filtra explicitamente as temporadas selecionadas e os tipos `REG`, `POST`, `WC`, `DIV`, `CON` e `SB`. Se houver Parquets locais, mas nenhum da seleção, a carga falha de forma clara. Jogos sem moneylines de casa/fora ou sem spread continuam descartados. O loader grava somente:
+`load_games.py` lê somente as partições pedidas e filtra explicitamente as temporadas selecionadas e os tipos `REG`, `POST`, `WC`, `DIV`, `CON` e `SB`. Se houver Parquets locais, mas nenhum da seleção, a carga falha de forma clara. Jogos sem moneylines de casa/fora ou sem spread continuam descartados. O loader grava:
 
 - identidade, temporada, semana, tipo e data do jogo;
 - times da casa e visitante;
+- `home_score`, `away_score` e `result` fornecidos diretamente pelo schedule;
 - `spread_line`, `total_line`, `home_moneyline` e `away_moneyline`;
 - probabilidades brutas, fair e vig em `market_implied`.
 
-Ele não grava placares, resultado, odds de spread, odds de total, teto, superfície ou indicador divisional, embora essas colunas existam no contrato.
+`home_score`, `away_score` e `result` formam um snapshot atômico: devem ser todos nulos ou todos preenchidos. Valores preenchidos devem ser inteiros, scores não negativos e `result = home_score - away_score`, com empate representado por zero. Jogos futuros com o trio nulo são válidos. Não há derivação de `result` nem preenchimento de campo ausente; qualquer combinação parcial aborta antes do banco com `game_id`, sem serializar o registro completo.
+
+No conflito, uma única condição — a presença de `EXCLUDED.home_score`, garantida pela validação all-or-none — controla os três campos: trio novo nulo preserva integralmente o resultado conhecido; trio novo completo o substitui integralmente. Assim, snapshots diferentes nunca são combinados. Todo upsert, inclusive idempotente, define `updated_at = now()`. Odds de spread/total, teto, superfície e indicador divisional continuam sem produtor.
 
 Para moneyline americana `ml`:
 
@@ -194,8 +205,6 @@ Antes da agregação, `load_metrics.py` mantém apenas jogadas com:
 
 - `early_down_epa`
 - `explosive_play_rate`
-- `games.home_score`, `games.away_score` e `games.result`
-- `ingestion_runs` inteira
 - campos adicionais de odds e ambiente de `games` não incluídos no upsert atual
 
 #### Planejadas
@@ -204,6 +213,18 @@ Antes da agregação, `load_metrics.py` mantém apenas jogadas com:
 - Taxa de jogadas explosivas com limiares formalizados.
 - Ajuste por força de adversário.
 - Histórico e backtest para eventual modelo quantitativo próprio.
+
+### 4.4 Contrato de `ingestion_runs`
+
+Há uma linha por execução e por temporada. `week` é sempre NULL porque o pipeline reprocessa a temporada inteira. Os estados usados exatamente pelo código são `RUNNING`, `SUCCEEDED` e `FAILED`; este pacote não adiciona enum nem constraint.
+
+- `rows_pbp`: altura do PBP bruto selecionado para a temporada, antes do filtro de jogadas válidas;
+- `rows_games`: altura do DataFrame final preparado para `games`, após os filtros vigentes e antes do upsert;
+- `started_at`: `now()` do banco no insert inicial, commitado antes das etapas;
+- `finished_at`: `now()` do banco no encerramento;
+- `error_message`: NULL no sucesso; na falha contém etapa, classe e descrição sem quebras de linha, com credenciais redigidas e limite de 1.000 caracteres.
+
+Linhas de mercado e métricas aparecem no log e no resultado interno tipado, sem novas colunas no schema. Idempotência não zera contagens: uma reexecução processa/upserta as mesmas linhas e cria outro run auditável. Ausência explicitamente permitida de PBP pode terminar em `SUCCEEDED` com `rows_pbp = 0`. Uma interrupção abrupta pode permanecer `RUNNING`, representando corretamente a falta de fechamento.
 
 ## 5. Schema PostgreSQL/Supabase
 
@@ -298,13 +319,13 @@ O React Router expõe `/` e `/game/:id`. A home usa a temporada 2026 fixa, carre
 | Vercel | configuração SPA existe; deploy não comprovado |
 | Frontend/API | endpoint de API ainda fixo em localhost |
 
-O workflow semanal preserva `workflow_dispatch`, o cron e os pins existentes de `actions/checkout@v4` e `actions/setup-python@v5`. Ele instala `etl-pipeline` pelo `pyproject.toml`, sem enumerar dependências nem duplicar Python inline, e executa `run_local.py --allow-missing-pbp`, `seed_teams.py`, `load_games.py` e `load_metrics.py --allow-empty`. A temporada corrente é resolvida pelo módulo compartilhado. A flag de aquisição não mascara outage: apenas PBP vazio, futuro ou 404 ainda não publicado segue sem bloquear. Os três secrets PostgreSQL existentes continuam sendo os únicos secrets do job; S3 e Data API não participam. O YAML corrigido ainda não comprova confiabilidade contínua em produção.
+O workflow semanal preserva `workflow_dispatch`, o cron e os pins existentes de `actions/checkout@v4` e `actions/setup-python@v5`. Ele instala `etl-pipeline` pelo `pyproject.toml` e executa somente `python etl-pipeline/run_pipeline.py --allow-missing-pbp`. A temporada corrente é resolvida pelo módulo compartilhado. A flag não mascara outage: apenas PBP vazio, futuro ou 404 ainda não publicado segue sem bloquear; qualquer outra falha tenta registrar `FAILED` e falha o job. Os três secrets PostgreSQL existentes continuam sendo os únicos secrets do job; S3 e Data API não participam. O YAML corrigido ainda não comprova confiabilidade contínua em produção.
 
 ### 9.1 Reprodutibilidade e validação do ETL
 
-As dependências diretas validadas estão fixadas em versões exatas no `pyproject.toml`; o extra `test` contém pytest e Pandas. Os testes offline cobrem política/CLI de temporadas, retorno Polars/Pandas, paths, S3 opt-in, ausência de PBP, classificação de 404 versus falhas operacionais, filtros, schema, moneyline e agregação mínima.
+As dependências diretas validadas estão fixadas em versões exatas no `pyproject.toml`; o extra `test` contém pytest e Pandas. Os testes offline cobrem política/CLI de temporadas, retorno Polars/Pandas, paths, S3 opt-in, ausência de PBP, classificação de 404 versus falhas operacionais, filtros, schema, moneyline, scores/result, sanitização, persistência de runs, rollback, ordem/falhas do orquestrador, fail-fast, `--skip-acquire`, contagens e agregação mínima.
 
-No mesmo dia, as migrations foram reaplicadas no Supabase local e fixtures temporárias foram carregadas duas vezes na ordem oficial. As duas leituras resultaram em 2 times, 1 jogo, 1 mercado e 2 métricas, com zero FKs órfãs e zero duplicação. O diretório temporário foi removido. Um smoke real de schedules 2025 retornou 285 linhas e 46 colunas essenciais presentes em `etl-pipeline/data/`; o PBP real completo não foi baixado por volume.
+No mesmo dia, as duas migrations intactas foram reaplicadas no Supabase local e fixtures temporárias executaram o orquestrador: 2 times, 1 jogo, 1 mercado, 4 linhas brutas de PBP e 2 métricas. A segunda execução não duplicou entidades e criou outro run; `updated_at` avançou. A regressão para NULL preservou `27–20/result=7`, a correção não nula atualizou para `30–24/result=6` e uma inconsistência posterior gerou código não zero e `FAILED`, sem alterar o jogo válido. O diretório temporário foi removido ao fim. Nenhum banco remoto ou S3 participou.
 
 ## 10. Roadmap
 
@@ -334,7 +355,8 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 - A cobertura Python inicial existe, mas ainda não abrange falhas transitórias reais do nflverse nem execuções hospedadas do cron.
 - Rollout remoto da Data API concluído em 2026-09-08; futuras migrations e qualquer reativação da Data API exigem nova revisão de segurança. A baseline histórica não deve ser reexecutada.
 - Workflow semanal estruturalmente autossuficiente, porém ainda sem histórico suficiente para comprovar confiabilidade contínua.
-- Colunas contratuais sem produtor atual e dados futuros sem PBP.
+- Campos avançados sem produtor e temporadas futuras potencialmente sem PBP.
+- `ingestion_runs` oferece auditoria básica, não observabilidade completa: não há alertas, retenção, dashboard nem tratamento automático de runs presos em `RUNNING`.
 - Campo `markdownText` carrega JSON, criando um contrato nominalmente enganoso.
 - Hash do cache não inclui explicitamente o nome do modelo.
 - Cliente Gemini sem timeout explícito.

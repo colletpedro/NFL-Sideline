@@ -26,8 +26,4 @@ jobs:
           SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
           SUPABASE_DB_USER: ${{ secrets.SUPABASE_DB_USER }}
           SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
-        run: |
-          python etl-pipeline/run_local.py --allow-missing-pbp
-          python etl-pipeline/seed_teams.py
-          python etl-pipeline/load_games.py
-          python etl-pipeline/load_metrics.py --allow-empty
+        run: python etl-pipeline/run_pipeline.py --allow-missing-pbp

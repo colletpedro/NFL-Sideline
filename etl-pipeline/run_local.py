@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
 
@@ -28,6 +29,15 @@ DEFAULT_DATA_DIR = Path(__file__).resolve().parent / "data"
 
 class MissingPbpError(RuntimeError):
     """Indica ausência esperada de PBP para uma temporada ainda sem jogadas."""
+
+
+@dataclass(frozen=True)
+class AcquisitionResult:
+    """Contagens dos dados brutos efetivamente gravados para uma temporada."""
+
+    season: int
+    rows_schedules: int
+    rows_pbp: int
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -78,12 +88,16 @@ def acquire_season(
     schedules_loader: Callable[[int], pl.DataFrame] = download_schedules,
     pbp_loader: Callable[[int], pl.DataFrame] = download_pbp,
     s3_uploader: Callable[[str, str, str], None] | None = None,
-) -> None:
+) -> AcquisitionResult:
     """Adquire uma temporada, validando vazio e mantendo S3 estritamente opt-in."""
+    rows_schedules = 0
+    rows_pbp = 0
     if schedules:
+        schedules_frame = schedules_loader(season)
         schedules_path = _write_nonempty_parquet(
-            schedules_loader(season), season=season, source="schedules", data_dir=data_dir
+            schedules_frame, season=season, source="schedules", data_dir=data_dir
         )
+        rows_schedules = schedules_frame.height
         if upload_s3:
             if s3_uploader is None:
                 from nfl_sideline_etl.load import upload_parquet_to_s3
@@ -100,13 +114,18 @@ def acquire_season(
                     f"PBP {season} ainda não é suportado; temporada NFL corrente é "
                     f"{current_nfl_season()}"
                 )
-            _write_nonempty_parquet(
-                pbp_loader(season), season=season, source="pbp", data_dir=data_dir
-            )
+            pbp_frame = pbp_loader(season)
+            _write_nonempty_parquet(pbp_frame, season=season, source="pbp", data_dir=data_dir)
+            rows_pbp = pbp_frame.height
         except (MissingPbpError, SourceDataNotPublishedError) as exc:
             if not allow_missing_pbp:
                 raise
             LOGGER.warning("season=%d source=pbp not_published_or_empty=%s", season, exc)
+    return AcquisitionResult(
+        season=season,
+        rows_schedules=rows_schedules,
+        rows_pbp=rows_pbp,
+    )
 
 
 def main(argv: list[str] | None = None) -> int:

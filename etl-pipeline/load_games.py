@@ -3,7 +3,7 @@
 Lê os schedules.parquet das temporadas selecionadas, exclui pré-temporada e faz
 upsert em duas tabelas (spec §6.2):
 
-1. `games` — mapeia game_id, season, week, game_type, gameday, home_team, away_team,
+1. `games` — mapeia identidade, times, placares/result fornecidos pelo schedule,
    spread_line, total_line, home_moneyline e away_moneyline. Jogos sem cotação
    (moneyline ou spread nulos — cancelados/sem linha) são descartados.
 2. `market_implied` — converte a moneyline americana em probabilidade implícita bruta,
@@ -21,6 +21,7 @@ do ambiente ou do .env na raiz do projeto).
 import argparse
 import logging
 import sys
+from dataclasses import dataclass
 from decimal import Decimal
 from pathlib import Path
 
@@ -44,7 +45,8 @@ VALID_GAME_TYPES = ("REG", "POST", "WC", "DIV", "CON", "SB")
 #: Colunas persistidas em `games`, na ordem exata do SQL de INSERT abaixo.
 GAMES_COLUMNS = [
     "game_id", "season", "week", "game_type", "gameday",
-    "home_team", "away_team", "spread_line", "total_line",
+    "home_team", "away_team", "home_score", "away_score", "result",
+    "spread_line", "total_line",
     "home_moneyline", "away_moneyline",
 ]
 #: Colunas NUMERIC do games que exigem conversão exata para Decimal.
@@ -54,9 +56,9 @@ SCHEDULE_COLUMNS = tuple(GAMES_COLUMNS)
 UPSERT_GAMES_SQL = """
 INSERT INTO games
     (game_id, season, week, game_type, gameday,
-     home_team, away_team, spread_line, total_line,
-     home_moneyline, away_moneyline)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+     home_team, away_team, home_score, away_score, result,
+     spread_line, total_line, home_moneyline, away_moneyline)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 ON CONFLICT (game_id) DO UPDATE SET
     season          = EXCLUDED.season,
     week            = EXCLUDED.week,
@@ -64,10 +66,23 @@ ON CONFLICT (game_id) DO UPDATE SET
     gameday         = EXCLUDED.gameday,
     home_team       = EXCLUDED.home_team,
     away_team       = EXCLUDED.away_team,
+    home_score      = CASE
+        WHEN EXCLUDED.home_score IS NULL THEN games.home_score
+        ELSE EXCLUDED.home_score
+    END,
+    away_score      = CASE
+        WHEN EXCLUDED.home_score IS NULL THEN games.away_score
+        ELSE EXCLUDED.away_score
+    END,
+    result          = CASE
+        WHEN EXCLUDED.home_score IS NULL THEN games.result
+        ELSE EXCLUDED.result
+    END,
     spread_line     = EXCLUDED.spread_line,
     total_line      = EXCLUDED.total_line,
     home_moneyline  = EXCLUDED.home_moneyline,
-    away_moneyline  = EXCLUDED.away_moneyline;
+    away_moneyline  = EXCLUDED.away_moneyline,
+    updated_at      = now();
 """
 
 UPSERT_MARKET_SQL = """
@@ -85,6 +100,70 @@ ON CONFLICT (game_id) DO UPDATE SET
 
 #: Tolerância para a soma das probabilidades fair (arredondamento do contexto Decimal).
 FAIR_SUM_TOLERANCE = Decimal("1e-9")
+
+
+@dataclass(frozen=True)
+class GamesLoadResult:
+    """Contagens do DataFrame preparado e do mercado persistido."""
+
+    rows_games: int
+    rows_market: int
+
+
+def _integer_value(value: object, *, field: str, game_id: str) -> int | None:
+    """Normaliza inteiro anulável sem truncar valores fracionários."""
+    if value is None:
+        return None
+    if isinstance(value, bool):
+        raise ValueError(f"Placares inválidos para game_id={game_id}: {field} não é inteiro")
+    try:
+        decimal_value = Decimal(str(value))
+    except Exception as exc:
+        raise ValueError(
+            f"Placares inválidos para game_id={game_id}: {field} não é inteiro"
+        ) from exc
+    if not decimal_value.is_finite() or decimal_value != decimal_value.to_integral_value():
+        raise ValueError(f"Placares inválidos para game_id={game_id}: {field} não é inteiro")
+    return int(decimal_value)
+
+
+def _validate_and_normalize_scores(schedules: pl.DataFrame) -> pl.DataFrame:
+    """Valida o trio da fonte e devolve scores/result como inteiros anuláveis."""
+    home_values: list[int | None] = []
+    away_values: list[int | None] = []
+    result_values: list[int | None] = []
+    for record in schedules.iter_rows(named=True):
+        game_id = str(record["game_id"])
+        home_score = _integer_value(record["home_score"], field="home_score", game_id=game_id)
+        away_score = _integer_value(record["away_score"], field="away_score", game_id=game_id)
+        result = _integer_value(record["result"], field="result", game_id=game_id)
+
+        trio = (home_score, away_score, result)
+        has_any_score_field = any(value is not None for value in trio)
+        has_complete_score_trio = all(value is not None for value in trio)
+        if has_any_score_field and not has_complete_score_trio:
+            raise ValueError(
+                f"Placares inválidos para game_id={game_id}: home_score, away_score e result "
+                "devem ser todos nulos ou todos preenchidos"
+            )
+        if has_complete_score_trio and (home_score < 0 or away_score < 0):
+            raise ValueError(
+                f"Placares inválidos para game_id={game_id}: placar não pode ser negativo"
+            )
+        if has_complete_score_trio and result != home_score - away_score:
+            raise ValueError(
+                f"Placares inválidos para game_id={game_id}: result é inconsistente"
+            )
+
+        home_values.append(home_score)
+        away_values.append(away_score)
+        result_values.append(result)
+
+    return schedules.with_columns(
+        pl.Series("home_score", home_values, dtype=pl.Int64),
+        pl.Series("away_score", away_values, dtype=pl.Int64),
+        pl.Series("result", result_values, dtype=pl.Int64),
+    )
 
 
 def load_schedules(data_dir: Path, seasons: tuple[int, ...]) -> pl.DataFrame:
@@ -123,7 +202,8 @@ def prepare_games(schedules: pl.DataFrame) -> pl.DataFrame:
     Remove registros com moneyline (casa ou fora) ou spread nulos — jogos
     cancelados ou sem linha de mercado — e converte gameday (String) em Date.
     """
-    quoted = schedules.filter(
+    validated = _validate_and_normalize_scores(schedules)
+    quoted = validated.filter(
         pl.col("home_moneyline").is_not_null()
         & pl.col("away_moneyline").is_not_null()
         & pl.col("spread_line").is_not_null()
@@ -158,7 +238,7 @@ def _rows_for_games(games: pl.DataFrame) -> list[tuple[object, ...]]:
     return rows
 
 
-def upsert_games(conn: PgConnection, games: pl.DataFrame) -> int:
+def upsert_games(conn: PgConnection, games: pl.DataFrame, *, commit: bool = True) -> int:
     """Persiste o calendário com upsert por game_id; retorna o total de linhas."""
     rows = _rows_for_games(games)
     try:
@@ -167,11 +247,12 @@ def upsert_games(conn: PgConnection, games: pl.DataFrame) -> int:
                 cursor.execute(UPSERT_GAMES_SQL, row)
                 if position % 100 == 0:
                     LOGGER.info("... %d jogos processados", position)
-        conn.commit()
+        if commit:
+            conn.commit()
     except Exception:
         conn.rollback()
         raise
-    LOGGER.info("Commit: %d jogos upsertados em games", len(rows))
+    LOGGER.info("Jogos enviados para upsert em games: %d", len(rows))
     return len(rows)
 
 
@@ -252,7 +333,12 @@ def build_market_rows(games: pl.DataFrame) -> list[dict[str, object]]:
     return rows
 
 
-def upsert_market(conn: PgConnection, rows: list[dict[str, object]]) -> int:
+def upsert_market(
+    conn: PgConnection,
+    rows: list[dict[str, object]],
+    *,
+    commit: bool = True,
+) -> int:
     """Persiste market_implied com upsert por game_id; retorna o total de linhas."""
     try:
         with conn.cursor() as cursor:
@@ -270,12 +356,37 @@ def upsert_market(conn: PgConnection, rows: list[dict[str, object]]) -> int:
                 )
                 if position % 100 == 0:
                     LOGGER.info("... %d jogos de mercado processados", position)
+        if commit:
+            conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
+    LOGGER.info("Linhas enviadas para upsert em market_implied: %d", len(rows))
+    return len(rows)
+
+
+def load_games_and_market(
+    conn: PgConnection,
+    data_dir: Path,
+    seasons: tuple[int, ...],
+) -> GamesLoadResult:
+    """Prepara e persiste jogos e mercado na mesma transação."""
+    schedules = load_schedules(data_dir, seasons)
+    games = prepare_games(schedules)
+    market_rows = build_market_rows(games)
+    try:
+        upsert_games(conn, games, commit=False)
+        upsert_market(conn, market_rows, commit=False)
         conn.commit()
     except Exception:
         conn.rollback()
         raise
-    LOGGER.info("Commit: %d linhas upsertadas em market_implied", len(rows))
-    return len(rows)
+    LOGGER.info(
+        "Etapa games concluída: rows_games=%d rows_market=%d",
+        games.height,
+        len(market_rows),
+    )
+    return GamesLoadResult(rows_games=games.height, rows_market=len(market_rows))
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -298,29 +409,10 @@ def main(argv: list[str] | None = None) -> int:
 
     conn = connect(_read_db_config(project_root))
     try:
-        # Carga 1 — calendário (games)
         try:
-            LOGGER.info("Iniciando carga do calendário (games)")
-            schedules = load_schedules(data_dir, seasons)
-            games = prepare_games(schedules)
-            if games.is_empty():
-                LOGGER.warning("Nenhum jogo cotado para as temporadas %s — nada a persistir.", seasons)
-            else:
-                upsert_games(conn, games)
+            load_games_and_market(conn, data_dir, seasons)
         except Exception as exc:
-            LOGGER.exception("[ERRO CARGA GAMES] %s", exc)
-            raise
-
-        # Carga 2 — probabilidades implícitas (market_implied), derivadas do calendário
-        try:
-            LOGGER.info("Iniciando carga de probabilidades implícitas (market_implied)")
-            market_rows = build_market_rows(games)
-            if not market_rows:
-                LOGGER.warning("Nenhum mercado calculado — nada a persistir.")
-            else:
-                upsert_market(conn, market_rows)
-        except Exception as exc:
-            LOGGER.exception("[ERRO CARGA MARKET_IMPLIED] %s", exc)
+            LOGGER.exception("[ERRO CARGA GAMES/MARKET] %s", exc)
             raise
     finally:
         conn.close()

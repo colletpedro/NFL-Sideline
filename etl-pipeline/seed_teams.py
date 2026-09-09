@@ -28,10 +28,14 @@ TEAMS_SQL = """
 INSERT INTO teams (team_abbr, team_name, conference, division, logo_url)
 VALUES (%s, %s, %s, %s, %s)
 ON CONFLICT (team_abbr) DO UPDATE SET
-    team_name  = EXCLUDED.team_name,
-    conference = EXCLUDED.conference,
-    division   = EXCLUDED.division,
-    logo_url   = EXCLUDED.logo_url;
+    team_name  = CASE
+        WHEN EXCLUDED.team_name = EXCLUDED.team_abbr
+        THEN teams.team_name
+        ELSE EXCLUDED.team_name
+    END,
+    conference = COALESCE(EXCLUDED.conference, teams.conference),
+    division   = COALESCE(EXCLUDED.division, teams.division),
+    logo_url   = COALESCE(EXCLUDED.logo_url, teams.logo_url);
 """
 
 
@@ -63,6 +67,27 @@ def teams_present_in_schedules(data_dir: Path, seasons: tuple[int, ...]) -> set[
     return teams
 
 
+def teams_from_schedules(data_dir: Path, seasons: tuple[int, ...]) -> pl.DataFrame:
+    """Cria referência mínima local, sem qualquer chamada ao nflverse."""
+    abbreviations = sorted(teams_present_in_schedules(data_dir, seasons))
+    return pl.DataFrame(
+        {
+            "team_abbr": abbreviations,
+            "team_name": abbreviations,
+            "conference": [None] * len(abbreviations),
+            "division": [None] * len(abbreviations),
+            "logo_url": [None] * len(abbreviations),
+        },
+        schema={
+            "team_abbr": pl.String,
+            "team_name": pl.String,
+            "conference": pl.String,
+            "division": pl.String,
+            "logo_url": pl.String,
+        },
+    )
+
+
 def upsert_teams(conn, teams: pl.DataFrame) -> int:
     """Persiste os times com upsert por team_abbr; retorna o total enviado."""
     inserted = 0
@@ -78,6 +103,32 @@ def upsert_teams(conn, teams: pl.DataFrame) -> int:
         conn.rollback()
         raise
     return inserted
+
+
+def seed_teams(
+    conn,
+    data_dir: Path,
+    seasons: tuple[int, ...],
+    *,
+    local_only: bool = False,
+) -> int:
+    """Seleciona e persiste os times, retornando o total processado."""
+    active = teams_present_in_schedules(data_dir, seasons)
+    if local_only:
+        teams = teams_from_schedules(data_dir, seasons)
+    else:
+        reference = load_teams_reference()
+        teams = reference.filter(pl.col("team_abbr").is_in(active)).sort("team_abbr")
+        LOGGER.info(
+            "Times ativos identificados nos schedules: %d de %d na referência",
+            teams.height,
+            reference.height,
+        )
+    if teams.is_empty():
+        raise RuntimeError(f"Nenhum time da referência pertence aos schedules {seasons}.")
+    count = upsert_teams(conn, teams)
+    LOGGER.info("Seed concluído: %d times em teams", count)
+    return count
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -99,22 +150,12 @@ def main(argv: list[str] | None = None) -> int:
     data_dir = args.data_dir or script_dir / "data"
 
     LOGGER.info("Iniciando seed da tabela teams")
-    reference = load_teams_reference()
-    active = teams_present_in_schedules(data_dir, seasons)
-    teams = reference.filter(pl.col("team_abbr").is_in(active)).sort("team_abbr")
-    LOGGER.info(
-        "Times ativos identificados nos schedules: %d de %d na referência",
-        teams.height, reference.height,
-    )
-    if teams.is_empty():
-        raise RuntimeError(f"Nenhum time da referência pertence aos schedules {seasons}.")
-
     conn = connect(_read_db_config(project_root))
     try:
-        upsert_teams(conn, teams)
+        count = seed_teams(conn, data_dir, seasons)
     finally:
         conn.close()
-    LOGGER.info("Seed concluído: %d times em teams", teams.height)
+    LOGGER.info("Seed CLI concluído: %d times", count)
     return 0
 
 

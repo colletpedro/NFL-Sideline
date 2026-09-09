@@ -16,7 +16,7 @@ nflverse / nflreadpy
   -> React 18 / TypeScript / Vite
 ```
 
-- `etl-pipeline/`: baixa dados do nflverse, grava Parquet local e carrega times, jogos, mercado e métricas diretamente no Supabase.
+- `etl-pipeline/`: `run_pipeline.py` orquestra aquisição, times, jogos/mercado, métricas e auditoria de cada temporada diretamente no PostgreSQL do Supabase.
 - `core-api/`: expõe a API REST e orquestra o Gemini, cache e validação numérica.
 - `web-ui/`: dashboard local que hoje aponta para `http://localhost:8080/api/v1`.
 - `supabase/config.toml` e `supabase/migrations/`: configuração local e baseline versionadas para reconstruir o schema em um banco vazio.
@@ -76,31 +76,34 @@ pip install -e "etl-pipeline[test]"
 python -m pytest etl-pipeline
 ```
 
-### 3. Adquirir uma ou mais temporadas
+### 3. Executar o pipeline observável
 
 Sem `--season`, todos os scripts usam a temporada NFL corrente: o ano civil de março a dezembro e o ano anterior em janeiro/fevereiro. A faixa aceita é 1999 até a temporada seguinte à corrente; flags repetidas são deduplicadas e ordenadas.
 
 ```bash
 source etl-pipeline/.venv/bin/activate
-python etl-pipeline/run_local.py --allow-missing-pbp
-python etl-pipeline/run_local.py --season 2024 --season 2025
-python etl-pipeline/run_local.py --season 2025 --schedules-only
+python etl-pipeline/run_pipeline.py --allow-missing-pbp
+python etl-pipeline/run_pipeline.py --season 2024 --season 2025
+python etl-pipeline/run_pipeline.py --season 2025 --data-dir /tmp/fixture --skip-acquire
 ```
 
-Os arquivos são gravados em `etl-pipeline/data/raw/{schedules,pbp}/season=YYYY/`. Use `--data-dir PATH` em aquisição e loaders para outra raiz. Schedules são obrigatórios, exceto com `--pbp-only`. PBP vazio, temporada futura ou HTTP 404 de arquivo ainda não publicado falha por padrão, mas pode terminar com warning explícito via `--allow-missing-pbp`, sem criar arquivo vazio. Timeout, DNS/conexão, autenticação, rate limit, HTTP 5xx e parsing continuam fatais mesmo com a flag. `--schedules-only` e `--pbp-only` são mutuamente exclusivos. Upload do schedules ao caminho S3 legado só ocorre com `--upload-s3`; credenciais AWS isoladamente não têm efeito.
+Sem `--season`, a temporada NFL corrente é usada; múltiplas temporadas são processadas sequencialmente, com uma linha independente em `ingestion_runs`, e o pipeline para na primeira falha. Por temporada, a ordem é: conexão PostgreSQL, `RUNNING`, aquisição de schedules/PBP, times, games/market, métricas e `SUCCEEDED`. Uma falha após o início faz rollback da etapa aplicável, tenta registrar `FAILED` e é propagada ao processo.
 
-### 4. Carregar na ordem das chaves estrangeiras
+Os arquivos são gravados em `etl-pipeline/data/raw/{schedules,pbp}/season=YYYY/`. `--allow-missing-pbp` permite sucesso com `rows_pbp = 0` quando o PBP ainda não existe, desde que schedules, seed e games tenham concluído; schema inválido e falhas operacionais continuam fatais. `--skip-acquire` exige schedules locais válidos, usa somente Parquets do `--data-dir`, não chama nflverse nem S3 e só tolera PBP ausente junto com `--allow-missing-pbp`.
+
+`run_local.py`, `seed_teams.py`, `load_games.py` e `load_metrics.py` permanecem disponíveis como CLIs individuais. Somente o `run_local.py` legado aceita `--upload-s3`; S3 não faz parte de `run_pipeline.py`.
+
+### 4. Contratos de jogos e execução
 
 ```bash
-source etl-pipeline/.venv/bin/activate
-python etl-pipeline/seed_teams.py
-python etl-pipeline/load_games.py
-python etl-pipeline/load_metrics.py --allow-empty
+result = home_score - away_score
 ```
 
-Repita `--season YEAR` e use `--data-dir PATH` da mesma forma nos três loaders. `load_metrics.py` falha sem PBP válido por padrão; `--allow-empty` termina com sucesso e warning somente quando não há PBP/métricas elegíveis. Schema Parquet incompatível continua sendo erro, mesmo com essa flag. `load_games.py` mantém a regra vigente de descartar jogos sem cotação completa.
+`load_games.py` persiste diretamente `home_score`, `away_score` e `result` do schedule como um snapshot atômico. Os três campos devem ser todos nulos ou todos preenchidos; valores preenchidos são inteiros, scores são não negativos e `result` deve ser a diferença acima, incluindo empate com zero. Não há derivação nem preenchimento de campo ausente. Em conflito, um trio integralmente nulo preserva integralmente o resultado conhecido; um trio completo e válido o substitui integralmente. Qualquer combinação parcial falha antes do banco. Todo upsert define `games.updated_at = now()`. A seleção continua descartando jogos sem cotação completa.
 
-Essa ordem é obrigatória por causa das chaves estrangeiras. O workflow semanal instala o pacote versionado e executa exatamente aquisição, seed, jogos/mercado e métricas, usando os defaults compartilhados de temporada. Seu `--allow-missing-pbp` tem semântica restrita: tolera apenas PBP vazio, futuro ou 404 de arquivo ainda não publicado; não mascara outages.
+`ingestion_runs` tem uma linha por execução/temporada: `week` fica NULL porque a temporada inteira é reprocessada; `status` usa exatamente `RUNNING`, `SUCCEEDED` ou `FAILED`; `rows_pbp` conta o PBP bruto selecionado antes do filtro de jogadas válidas; `rows_games` conta o DataFrame final após os filtros e antes do upsert; `started_at` e `finished_at` vêm do banco; sucesso deixa `error_message` NULL e falha grava mensagem sanitizada de até 1.000 caracteres. Uma interrupção abrupta pode deixar `RUNNING`; ainda não há tratamento automático desses runs.
+
+O workflow semanal instala o pacote versionado e chama somente `python etl-pipeline/run_pipeline.py --allow-missing-pbp`. Isso fornece um único caminho observável, mas ainda não comprova confiabilidade contínua em produção.
 
 ### 5. Backend
 
@@ -137,16 +140,16 @@ npm --prefix web-ui run build
 npm --prefix web-ui run lint
 ```
 
-Em 2026-09-09, a validação local aplicou as duas migrations num stack vazio e carregou fixtures representativas duas vezes: 2 times, 1 jogo, 1 mercado e 2 métricas, sem órfãos nem duplicação. Um smoke real de schedules 2025 gravou 285 linhas e 46 colunas no diretório ignorado; o PBP real completo não foi baixado por volume, permanecendo coberto por fixtures e testes offline. Isso valida a reprodutibilidade local, não a confiabilidade contínua do cron em produção.
+Em 2026-09-09, a validação local reaplicou as duas migrations intactas e executou o novo orquestrador com fixtures: 2 times, 1 jogo, 1 mercado, 4 linhas brutas de PBP e 2 métricas. A segunda execução não duplicou dados e criou outro run auditável; `updated_at` avançou. Um placar válido sobreviveu a uma fonte posterior com NULL, outro placar não nulo o corrigiu, e uma inconsistência posterior encerrou com código não zero e `FAILED`, mantendo os dados válidos. Os testes e advisors usaram somente o stack local. Isso não comprova confiabilidade contínua do cron em produção.
 
 ## Limitações conhecidas
 
 - Não há modelo preditivo quantitativo próprio; o fair value exibido vem do mercado.
 - `early_down_epa` e `explosive_play_rate` existem no schema, mas não são populadas.
-- Placares e `ingestion_runs` existem no schema, mas os loaders atuais não os gravam.
+- A observabilidade é deliberadamente parcial: não há alertas, retenção, dashboard nem tratamento automático de runs presos em `RUNNING`.
 - A validação anti-alucinação verifica somente números enviados em `metricas_citadas`; ela não inspeciona todos os números que possam aparecer nos quatro textos finais.
 - O frontend usa uma URL de API localhost fixa.
-- O ETL semanal reutiliza as CLIs versionadas e é autossuficiente quanto à ordem, mas ainda não possui evidência de execuções reais suficientes para afirmar confiabilidade contínua em produção.
+- O ETL semanal usa o orquestrador único e é autossuficiente quanto à ordem, mas ainda não possui evidência de execuções reais suficientes para afirmar confiabilidade contínua em produção.
 - A Data API remota está desativada. Qualquer reativação ou nova migration remota exige revisão de segurança e o fluxo versionado documentado no runbook; a baseline histórica não deve ser executada novamente.
 
 Consulte [`Spec.md`](Spec.md) para contratos, schema, métricas, decisões e roadmap completos.

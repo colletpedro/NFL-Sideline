@@ -23,6 +23,7 @@ import argparse
 import logging
 import os
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -80,6 +81,14 @@ ON CONFLICT (season, week, team_abbr) DO UPDATE SET
 
 class PbpUnavailable(NoSeasonDataError):
     """Não há PBP utilizável para as temporadas solicitadas."""
+
+
+@dataclass(frozen=True)
+class MetricsLoadResult:
+    """Contagens bruta de PBP e final de métricas persistidas."""
+
+    rows_pbp: int
+    rows_metrics: int
 
 
 def _load_env_file(env_path: Path) -> dict[str, str]:
@@ -242,6 +251,52 @@ def upsert_team_week_metrics(conn: PgConnection, metrics: pl.DataFrame) -> int:
     return upserted
 
 
+def prepare_team_week_metrics(
+    data_dir: Path,
+    seasons: tuple[int, ...],
+    *,
+    allow_empty: bool,
+) -> tuple[MetricsLoadResult, pl.DataFrame | None]:
+    """Carrega PBP e agrega métricas sem acessar o banco."""
+    try:
+        pbp = load_pbp(data_dir, seasons)
+    except PbpUnavailable as exc:
+        if not allow_empty:
+            raise
+        LOGGER.warning("PBP ausente; carga vazia permitida explicitamente: %s", exc)
+        return MetricsLoadResult(rows_pbp=0, rows_metrics=0), None
+
+    metrics = build_team_week_metrics(pbp)
+    if metrics.is_empty():
+        message = f"Nenhuma métrica agregada para as temporadas {seasons}."
+        if not allow_empty:
+            raise PbpUnavailable(message)
+        LOGGER.warning("%s Carga vazia permitida explicitamente.", message)
+        return MetricsLoadResult(rows_pbp=pbp.height, rows_metrics=0), None
+
+    LOGGER.info("Total a persistir: %d linhas (time-semana)", metrics.height)
+    return MetricsLoadResult(rows_pbp=pbp.height, rows_metrics=metrics.height), metrics
+
+
+def load_and_persist_metrics(
+    conn: PgConnection,
+    data_dir: Path,
+    seasons: tuple[int, ...],
+    *,
+    allow_empty: bool,
+) -> MetricsLoadResult:
+    """Persiste métricas e retorna contagens sem usar rowcount de upsert."""
+    prepared, metrics = prepare_team_week_metrics(
+        data_dir,
+        seasons,
+        allow_empty=allow_empty,
+    )
+    if metrics is None:
+        return prepared
+    rows_metrics = upsert_team_week_metrics(conn, metrics)
+    return MetricsLoadResult(rows_pbp=prepared.rows_pbp, rows_metrics=rows_metrics)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     add_season_arguments(parser)
@@ -266,21 +321,13 @@ def main(argv: list[str] | None = None) -> int:
     data_dir = args.data_dir or script_dir / "data"
 
     LOGGER.info("Iniciando carga de métricas semanais (team_week_metrics)")
-    try:
-        pbp = load_pbp(data_dir, seasons)
-    except PbpUnavailable as exc:
-        if not args.allow_empty:
-            raise
-        LOGGER.warning("PBP ausente; carga vazia permitida explicitamente: %s", exc)
+    prepared, metrics = prepare_team_week_metrics(
+        data_dir,
+        seasons,
+        allow_empty=args.allow_empty,
+    )
+    if metrics is None:
         return 0
-    metrics = build_team_week_metrics(pbp)
-    if metrics.is_empty():
-        message = f"Nenhuma métrica agregada para as temporadas {seasons}."
-        if not args.allow_empty:
-            raise PbpUnavailable(message)
-        LOGGER.warning("%s Carga vazia permitida explicitamente.", message)
-        return 0
-    LOGGER.info("Total a persistir: %d linhas (time-semana)", metrics.height)
 
     conn = connect(_read_db_config(project_root))
     try:
