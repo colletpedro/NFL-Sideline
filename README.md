@@ -63,7 +63,7 @@ Validação da baseline e do hardening: a Supabase CLI 2.117.0 executa `db reset
 
 Não há consumidores atuais da Data API. O stack local a mantém desativada (`[api].enabled = false`); o PostgreSQL local permanece disponível para o backend e ETL. Nas seis tabelas da aplicação, RLS é habilitado sem policies e `anon`/`authenticated` não recebem privilégios, como defesa em profundidade. A migration também revoga os default privileges de `postgres` para tabelas, sequences e funções futuras; em funções, a revogação é global ao criador para substituir o `EXECUTE` implícito de `PUBLIC`. Objetos criados por outra role exigem auditoria e decisão separada. Qualquer acesso futuro pela Data API exige decisão arquitetural, grants explícitos, policies e novos testes. `service_role` conserva somente os grants explícitos dos objetos atuais, é exclusivamente server-side e nunca pode ser exposta no frontend.
 
-O hardening foi validado somente no ambiente local. O ambiente remoto permanece no estado anterior até uma aplicação explicitamente autorizada; desativar a Data API remota é uma configuração do projeto no Dashboard, não um efeito de `db push`. Antes de qualquer `db push`, a baseline precisa ser reconciliada com o histórico de migrations remoto conforme o [runbook](docs/runbooks/supabase-remote-hardening.md).
+O rollout remoto foi concluído em 2026-09-08: a baseline foi reconciliada somente no histórico, a migration de hardening foi aplicada e o proprietário confirmou no Dashboard que **Enable Data API** está desativado. REST e GraphQL não expõem a aplicação; JDBC e psycopg2 permanecem como os únicos caminhos de acesso. O remoto tem RLS habilitado sem policies, sem acesso para `anon`, `authenticated` ou `PUBLIC`, e com `service_role` privilegiada apenas nos objetos atuais por grants explícitos. Os defaults residuais de `supabase_admin` são gerenciados pela plataforma e não foram alterados. Reativar a Data API exige nova revisão de grants, default ACLs, funções, policies e consumidores. Para mudanças futuras, aplique somente migrations versionadas; não execute novamente a baseline existente. Consulte o [runbook](docs/runbooks/supabase-remote-hardening.md).
 
 ### 2. Preparar o ETL e carregar os times
 
@@ -132,6 +132,6 @@ npm --prefix web-ui run lint
 - A validação anti-alucinação verifica somente números enviados em `metricas_citadas`; ela não inspeciona todos os números que possam aparecer nos quatro textos finais.
 - O frontend usa uma URL de API localhost fixa.
 - O ETL semanal e a CI existem, mas não possuem evidência suficiente de confiabilidade contínua.
-- O hardening da Data API é local e ainda não foi aplicado ao ambiente remoto; a reconciliação do histórico remoto é pré-requisito para qualquer `db push`.
+- A Data API remota está desativada. Qualquer reativação ou nova migration remota exige revisão de segurança e o fluxo versionado documentado no runbook; a baseline histórica não deve ser executada novamente.
 
 Consulte [`Spec.md`](Spec.md) para contratos, schema, métricas, decisões e roadmap completos.

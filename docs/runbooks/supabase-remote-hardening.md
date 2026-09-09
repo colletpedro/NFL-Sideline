@@ -4,7 +4,7 @@
 
 Aplicar, sob autorização explícita, a baseline já existente e a migration `20260908224641_harden_data_api_access.sql` sem alterar o contrato relacional. O resultado esperado é: RLS sem policies nas seis tabelas da aplicação, ausência de grants para `anon`, `authenticated` e `PUBLIC`, grants explícitos apenas para `service_role` nos objetos atuais, nenhum grant automático para objetos futuros e Data API desativada no Dashboard.
 
-Este runbook é futuro: não foi executado durante a criação deste pacote. Use exclusivamente a CLI `supabase@2.117.0`. Não use `supabase link`; passe uma URL de banco percent-encoded em `REMOTE_DB_URL`, fornecida apenas no shell seguro da pessoa autorizada. Nunca registre URL, senha, token, project ref ou conteúdo de `.env` nas evidências.
+Este é um procedimento reutilizável. Use exclusivamente a CLI `supabase@2.117.0`. Não use `supabase link`; passe uma URL de banco percent-encoded em `REMOTE_DB_URL`, fornecida apenas no shell seguro da pessoa autorizada. Nunca registre URL, senha, token, project ref ou conteúdo de `.env` nas evidências.
 
 ## Pré-condições
 
@@ -142,3 +142,13 @@ npx --yes supabase@2.117.0 db push \
 - Evidência da configuração **Enable Data API** desativada no Dashboard.
 - Resultados do teste PostgreSQL direto, backend e, quando autorizado, ETL.
 - Decisão explícita caso qualquer rollback seja necessário.
+
+## Registro de execução — 2026-09-08
+
+- A baseline `20260908201813` foi reconciliada somente no histórico do schema remoto; seu DDL não foi executado novamente.
+- A migration `20260908224641_harden_data_api_access.sql` foi aplicada pelo fluxo versionado, sem alteração do contrato relacional ou de dados de negócio.
+- O histórico remoto passou a conter exclusivamente a baseline e o hardening. As seis tabelas permaneceram íntegras, com RLS habilitado, `FORCE ROW LEVEL SECURITY` desabilitado e zero policies.
+- `anon`, `authenticated` e `PUBLIC` não mantêm privilégios nas tabelas e sequences da aplicação. `service_role` mantém somente os grants explícitos concedidos aos objetos atuais.
+- Os default privileges de `postgres` não concedem acesso automático futuro às roles da Data API nem `EXECUTE` a `PUBLIC`. Defaults residuais de `supabase_admin` permanecem gerenciados pela plataforma e não foram alterados.
+- O proprietário confirmou no Dashboard, em 2026-09-08, que **Enable Data API** estava desativado e que não havia schemas consultáveis. REST e GraphQL não expõem a aplicação; JDBC e psycopg2 continuam como os únicos caminhos de acesso.
+- Qualquer reativação da Data API exige uma nova revisão de grants, default ACLs, funções, policies e consumidores. Migrations futuras devem usar exclusivamente o fluxo versionado; não execute novamente a baseline histórica.

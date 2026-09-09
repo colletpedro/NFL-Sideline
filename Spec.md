@@ -216,7 +216,7 @@ O aplicativo usa PostgreSQL diretamente: o frontend conversa somente com o backe
 
 A migration `*_harden_data_api_access.sql` habilita RLS, sem `FORCE ROW LEVEL SECURITY`, nas seis tabelas da aplicação e não cria policies. Ela revoga todos os privilégios de tabela e das sequences da aplicação para `anon`, `authenticated` e `PUBLIC`, preservando explicitamente todos os privilégios de `service_role` nos objetos atuais. Também revoga os default privileges de `postgres` para tabelas, sequences e funções futuras; em funções, a revogação é global ao criador para substituir o `EXECUTE` implícito de `PUBLIC`. Até `service_role` exige GRANT explícito para objetos novos criados por `postgres`; objetos criados por outra role exigem auditoria e decisão separada. O `config.toml` local define `auto_expose_new_tables = false` e desativa a Data API local (`[api].enabled = false`), sem desativar PostgreSQL. RLS e revogações permanecem como defesa em profundidade caso a Data API seja reativada. Qualquer uso futuro da Data API exige decisão arquitetural, grants explícitos, policies e novos testes. `service_role` é uma credencial privilegiada exclusivamente server-side e jamais pode ser exposta no frontend.
 
-O hardening foi validado somente no stack local. O banco remoto permanece no estado anterior até aplicação explicitamente autorizada; não execute `db push` antes de reconciliar esta baseline com o histórico de migrations remoto. Desativar a Data API remota é uma configuração do projeto no Dashboard, não um efeito de `db push`; o procedimento futuro está em `docs/runbooks/supabase-remote-hardening.md`.
+O rollout remoto foi concluído em 2026-09-08. A baseline foi reconciliada apenas no histórico remoto, a migration de hardening foi aplicada e o proprietário confirmou no Dashboard que **Enable Data API** está desativado. REST e GraphQL não expõem a aplicação; JDBC e psycopg2 continuam sendo os únicos caminhos de acesso. As seis tabelas remotas têm RLS habilitado sem policies, `anon`, `authenticated` e `PUBLIC` não possuem acesso e `service_role` mantém grants explícitos somente nos objetos atuais. Defaults residuais de `supabase_admin` continuam gerenciados pela plataforma e não foram alterados. Reativar a Data API exige nova revisão de grants, default ACLs, funções, policies e consumidores. Migrations futuras devem seguir exclusivamente o fluxo versionado; a baseline existente não deve ser executada novamente. O procedimento reutilizável e o registro de execução estão em `docs/runbooks/supabase-remote-hardening.md`.
 
 ## 6. API REST implementada
 
@@ -312,7 +312,7 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 ## 12. Riscos e pendências
 
 - Ausência de testes de negócio e integração nas três camadas.
-- Hardening da Data API validado localmente; o remoto permanece pendente de autorização explícita e reconciliação do histórico de migrations.
+- Rollout remoto da Data API concluído em 2026-09-08; futuras migrations e qualquer reativação da Data API exigem nova revisão de segurança. A baseline histórica não deve ser reexecutada.
 - Workflow semanal não comprovadamente autossuficiente.
 - Colunas contratuais sem produtor atual e dados futuros sem PBP.
 - Campo `markdownText` carrega JSON, criando um contrato nominalmente enganoso.
