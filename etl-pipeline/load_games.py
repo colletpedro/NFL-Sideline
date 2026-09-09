@@ -1,7 +1,6 @@
 """Carrega o calendário (games) e as probabilidades implícitas (market_implied) no Supabase.
 
-Lê os schedules.parquet sob data/raw/schedules/*/, filtra estritamente as temporadas
-2025 (histórico recente) e 2026 (calendário futuro) excluindo pré-temporada, e faz
+Lê os schedules.parquet das temporadas selecionadas, exclui pré-temporada e faz
 upsert em duas tabelas (spec §6.2):
 
 1. `games` — mapeia game_id, season, week, game_type, gameday, home_team, away_team,
@@ -19,9 +18,9 @@ Conexão: reutiliza os helpers de load_metrics.py (SUPABASE_DB_URL + user/passwo
 do ambiente ou do .env na raiz do projeto).
 """
 
+import argparse
 import logging
 import sys
-from datetime import date
 from decimal import Decimal
 from pathlib import Path
 
@@ -29,11 +28,15 @@ import polars as pl
 from psycopg2.extensions import connection as PgConnection
 
 from load_metrics import _read_db_config, connect
+from nfl_sideline_etl.parquet import (
+    NoSeasonDataError,
+    ParquetSchemaError,
+    season_partition_files,
+)
+from nfl_sideline_etl.seasons import add_season_arguments, seasons_from_args
 
 LOGGER = logging.getLogger("load_games")
 
-#: Temporadas-alvo desta carga (2025 = histórico recente; 2026 = calendário futuro).
-SEASONS: tuple[int, ...] = (2025, 2026)
 #: Tipos de jogo que entram na carga (pré-temporada fica fora).
 #: Nesta versão do nflverse os playoffs chegam granularizados (WC/DIV/CON/SB) em vez
 #: de "POST" — por isso a lista cobre as duas vocabulários; "PRE"/"HOF" ficam fora.
@@ -46,6 +49,7 @@ GAMES_COLUMNS = [
 ]
 #: Colunas NUMERIC do games que exigem conversão exata para Decimal.
 GAMES_DECIMAL_COLUMNS = ("spread_line", "total_line")
+SCHEDULE_COLUMNS = tuple(GAMES_COLUMNS)
 
 UPSERT_GAMES_SQL = """
 INSERT INTO games
@@ -83,25 +87,32 @@ ON CONFLICT (game_id) DO UPDATE SET
 FAIR_SUM_TOLERANCE = Decimal("1e-9")
 
 
-def load_schedules(data_dir: Path) -> pl.DataFrame:
-    """Lê todos os schedules.parquet locais e filtra a temporada-alvo, sem pré-temporada."""
-    files = sorted(data_dir.glob("raw/schedules/*/schedules.parquet"))
-    if not files:
-        raise FileNotFoundError(
-            f"Nenhum schedules.parquet em {data_dir / 'raw' / 'schedules'}: "
-            "execute run_local.py antes."
-        )
+def load_schedules(data_dir: Path, seasons: tuple[int, ...]) -> pl.DataFrame:
+    """Lê somente schedules das temporadas explícitas e exclui pré-temporada."""
+    files = season_partition_files(data_dir, "schedules", "schedules.parquet", seasons)
     LOGGER.info("Arquivos de schedules encontrados: %s", ", ".join(str(f) for f in files))
 
-    frames = [pl.scan_parquet(f) for f in files]
+    frames: list[pl.LazyFrame] = []
+    for path in files:
+        schema = pl.read_parquet_schema(path)
+        missing = [column for column in SCHEDULE_COLUMNS if column not in schema]
+        if missing:
+            raise ParquetSchemaError(f"Schema incompatível em {path}: colunas ausentes {missing}")
+        frames.append(pl.scan_parquet(path).select(SCHEDULE_COLUMNS))
     schedules = pl.concat(frames).collect()
+    if schedules.is_empty():
+        raise NoSeasonDataError(f"Schedules vazio para as temporadas solicitadas {seasons}.")
 
     season_df = schedules.filter(
-        pl.col("season").is_in(SEASONS) & pl.col("game_type").is_in(VALID_GAME_TYPES)
+        pl.col("season").is_in(seasons) & pl.col("game_type").is_in(VALID_GAME_TYPES)
     )
+    if season_df.is_empty() and not schedules.is_empty():
+        raise NoSeasonDataError(
+            f"Os Parquets selecionados não contêm jogos das temporadas solicitadas {seasons}."
+        )
     LOGGER.info(
         "Schedules %s: %d jogos REG/POST (descartados %d de outras temporadas/tipos)",
-        SEASONS, season_df.height, schedules.height - season_df.height,
+        seasons, season_df.height, schedules.height - season_df.height,
     )
     return season_df
 
@@ -267,24 +278,33 @@ def upsert_market(conn: PgConnection, rows: list[dict[str, object]]) -> int:
     return len(rows)
 
 
-def main() -> None:
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    add_season_arguments(parser)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s | %(levelname)s | %(message)s",
     )
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent
-    data_dir = script_dir / "data"
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    seasons = seasons_from_args(parser, args)
+    data_dir = args.data_dir or script_dir / "data"
 
     conn = connect(_read_db_config(project_root))
     try:
         # Carga 1 — calendário (games)
         try:
             LOGGER.info("Iniciando carga do calendário (games)")
-            schedules = load_schedules(data_dir)
+            schedules = load_schedules(data_dir, seasons)
             games = prepare_games(schedules)
             if games.is_empty():
-                LOGGER.warning("Nenhum jogo cotado para as temporadas %s — nada a persistir.", SEASONS)
+                LOGGER.warning("Nenhum jogo cotado para as temporadas %s — nada a persistir.", seasons)
             else:
                 upsert_games(conn, games)
         except Exception as exc:
@@ -306,11 +326,12 @@ def main() -> None:
         conn.close()
 
     LOGGER.info("Carga de jogos e mercado concluída com sucesso.")
+    return 0
 
 
 if __name__ == "__main__":
     try:
-        main()
+        sys.exit(main())
     except Exception as exc:  # falha explícita, nunca silenciosa (spec §13)
         LOGGER.exception("[ERRO DE CARGA] %s", exc)
         sys.exit(1)

@@ -4,12 +4,18 @@ version = "0.1.0"
 description = "ETL pipeline da NFL Sideline: extração de dados nflverse para Parquet local"
 requires-python = ">=3.11,<4"
 dependencies = [
-    "boto3",
-    "botocore",
-    "nflreadpy",
-    "polars",
-    "psycopg2-binary",
-    "pyarrow",
+    "boto3==1.43.88",
+    "botocore==1.43.88",
+    "nflreadpy==0.1.5",
+    "polars==1.44.1",
+    "psycopg2-binary==2.9.12",
+    "pyarrow==25.0.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pandas==2.3.3",
+    "pytest==9.0.2",
 ]
 
 [build-system]
@@ -18,3 +24,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

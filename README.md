@@ -22,7 +22,7 @@ nflverse / nflreadpy
 - `supabase/config.toml` e `supabase/migrations/`: configuração local e baseline versionadas para reconstruir o schema em um banco vazio.
 - `.github/workflows/`: CI Java e ETL semanal existentes; a confiabilidade do workflow semanal ainda não foi comprovada.
 
-S3 permanece apenas como caminho opcional/legado em `run_local.py`; não participa da carga principal. Cloud Run e Vercel ainda não estão implantados.
+S3 permanece apenas como caminho opcional/legado em `run_local.py`; nenhum upload ocorre sem `--upload-s3`. Cloud Run e Vercel ainda não estão implantados.
 
 O frontend não usa a Supabase Data API: acessa somente o backend Spring. O backend e os loaders Python acessam o PostgreSQL diretamente por JDBC e psycopg2.
 
@@ -42,7 +42,7 @@ Crie o arquivo local de ambiente a partir do exemplo:
 cp .env.example .env
 ```
 
-Preencha `SUPABASE_DB_URL`, `SUPABASE_DB_USER`, `SUPABASE_DB_PASSWORD` e `GEMINI_API_KEY`. O `.env` contém segredos e não deve ser commitado. As variáveis AWS são opcionais e só atendem ao fluxo S3 legado.
+Preencha `SUPABASE_DB_URL`, `SUPABASE_DB_USER`, `SUPABASE_DB_PASSWORD` e `GEMINI_API_KEY`. O `.env` contém segredos e não deve ser commitado. Variáveis AWS, quando presentes, não disparam upload: o fluxo S3 legado exige também `--upload-s3`.
 
 ## Execução local
 
@@ -65,32 +65,42 @@ Não há consumidores atuais da Data API. O stack local a mantém desativada (`[
 
 O rollout remoto foi concluído em 2026-09-08: a baseline foi reconciliada somente no histórico, a migration de hardening foi aplicada e o proprietário confirmou no Dashboard que **Enable Data API** está desativado. REST e GraphQL não expõem a aplicação; JDBC e psycopg2 permanecem como os únicos caminhos de acesso. O remoto tem RLS habilitado sem policies, sem acesso para `anon`, `authenticated` ou `PUBLIC`, e com `service_role` privilegiada apenas nos objetos atuais por grants explícitos. Os defaults residuais de `supabase_admin` são gerenciados pela plataforma e não foram alterados. Reativar a Data API exige nova revisão de grants, default ACLs, funções, policies e consumidores. Para mudanças futuras, aplique somente migrations versionadas; não execute novamente a baseline existente. Consulte o [runbook](docs/runbooks/supabase-remote-hardening.md).
 
-### 2. Preparar o ETL e carregar os times
+### 2. Preparar e testar o ETL
 
-Os scripts esperam Parquet em `etl-pipeline/data/raw/schedules/season=YYYY/` e `etl-pipeline/data/raw/pbp/season=YYYY/`. `run_local.py` baixa apenas 2023, enquanto `load_games.py` aceita somente 2025/2026. Portanto, um checkout novo ainda precisa receber Parquets compatíveis antes da carga completa; essa lacuna de preparação dos dados será resolvida no próximo pacote do ETL. O fluxo abaixo documenta a ordem correta, mas o ETL completo ainda não é reproduzível apenas a partir do checkout.
+As dependências diretas são pinadas e o extra `test` instala pytest e Pandas para validar também a compatibilidade do adaptador de extração.
 
 ```bash
 python3.11 -m venv etl-pipeline/.venv
 source etl-pipeline/.venv/bin/activate
-pip install -e etl-pipeline
+pip install -e "etl-pipeline[test]"
+python -m pytest etl-pipeline
+```
+
+### 3. Adquirir uma ou mais temporadas
+
+Sem `--season`, todos os scripts usam a temporada NFL corrente: o ano civil de março a dezembro e o ano anterior em janeiro/fevereiro. A faixa aceita é 1999 até a temporada seguinte à corrente; flags repetidas são deduplicadas e ordenadas.
+
+```bash
+source etl-pipeline/.venv/bin/activate
+python etl-pipeline/run_local.py --allow-missing-pbp
+python etl-pipeline/run_local.py --season 2024 --season 2025
+python etl-pipeline/run_local.py --season 2025 --schedules-only
+```
+
+Os arquivos são gravados em `etl-pipeline/data/raw/{schedules,pbp}/season=YYYY/`. Use `--data-dir PATH` em aquisição e loaders para outra raiz. Schedules são obrigatórios, exceto com `--pbp-only`. PBP vazio, temporada futura ou HTTP 404 de arquivo ainda não publicado falha por padrão, mas pode terminar com warning explícito via `--allow-missing-pbp`, sem criar arquivo vazio. Timeout, DNS/conexão, autenticação, rate limit, HTTP 5xx e parsing continuam fatais mesmo com a flag. `--schedules-only` e `--pbp-only` são mutuamente exclusivos. Upload do schedules ao caminho S3 legado só ocorre com `--upload-s3`; credenciais AWS isoladamente não têm efeito.
+
+### 4. Carregar na ordem das chaves estrangeiras
+
+```bash
+source etl-pipeline/.venv/bin/activate
 python etl-pipeline/seed_teams.py
-```
-
-### 3. Carregar jogos e mercado
-
-```bash
-source etl-pipeline/.venv/bin/activate
 python etl-pipeline/load_games.py
+python etl-pipeline/load_metrics.py --allow-empty
 ```
 
-### 4. Carregar métricas
+Repita `--season YEAR` e use `--data-dir PATH` da mesma forma nos três loaders. `load_metrics.py` falha sem PBP válido por padrão; `--allow-empty` termina com sucesso e warning somente quando não há PBP/métricas elegíveis. Schema Parquet incompatível continua sendo erro, mesmo com essa flag. `load_games.py` mantém a regra vigente de descartar jogos sem cotação completa.
 
-```bash
-source etl-pipeline/.venv/bin/activate
-python etl-pipeline/load_metrics.py
-```
-
-Essa ordem é obrigatória por causa das chaves estrangeiras.
+Essa ordem é obrigatória por causa das chaves estrangeiras. O workflow semanal instala o pacote versionado e executa exatamente aquisição, seed, jogos/mercado e métricas, usando os defaults compartilhados de temporada. Seu `--allow-missing-pbp` tem semântica restrita: tolera apenas PBP vazio, futuro ou 404 de arquivo ainda não publicado; não mascara outages.
 
 ### 5. Backend
 
@@ -119,10 +129,15 @@ A interface ficará em `http://localhost:5173`.
 
 ```bash
 npx --yes supabase@2.117.0 db reset --local
+python3.11 -m venv /tmp/nfl-sideline-etl-test-venv
+/tmp/nfl-sideline-etl-test-venv/bin/pip install -e "etl-pipeline[test]"
+/tmp/nfl-sideline-etl-test-venv/bin/python -m pytest etl-pipeline
 mvn -f core-api/pom.xml -o test
 npm --prefix web-ui run build
 npm --prefix web-ui run lint
 ```
+
+Em 2026-09-09, a validação local aplicou as duas migrations num stack vazio e carregou fixtures representativas duas vezes: 2 times, 1 jogo, 1 mercado e 2 métricas, sem órfãos nem duplicação. Um smoke real de schedules 2025 gravou 285 linhas e 46 colunas no diretório ignorado; o PBP real completo não foi baixado por volume, permanecendo coberto por fixtures e testes offline. Isso valida a reprodutibilidade local, não a confiabilidade contínua do cron em produção.
 
 ## Limitações conhecidas
 
@@ -131,7 +146,7 @@ npm --prefix web-ui run lint
 - Placares e `ingestion_runs` existem no schema, mas os loaders atuais não os gravam.
 - A validação anti-alucinação verifica somente números enviados em `metricas_citadas`; ela não inspeciona todos os números que possam aparecer nos quatro textos finais.
 - O frontend usa uma URL de API localhost fixa.
-- O ETL semanal e a CI existem, mas não possuem evidência suficiente de confiabilidade contínua.
+- O ETL semanal reutiliza as CLIs versionadas e é autossuficiente quanto à ordem, mas ainda não possui evidência de execuções reais suficientes para afirmar confiabilidade contínua em produção.
 - A Data API remota está desativada. Qualquer reativação ou nova migration remota exige revisão de segurança e o fluxo versionado documentado no runbook; a baseline histórica não deve ser executada novamente.
 
 Consulte [`Spec.md`](Spec.md) para contratos, schema, métricas, decisões e roadmap completos.

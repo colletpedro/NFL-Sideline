@@ -1,48 +1,138 @@
-"""Executa a extração local dos dados brutos da NFL (Fase 1).
+"""Adquire schedules e play-by-play do nflverse para Parquet local."""
 
-Baixa schedules e play-by-play da temporada 2023 e salva em
-data/raw/{schedules,pbp}/season=2023/*.parquet, seguindo o layout do
-data lake da spec (s3://nfl-sideline-lake/raw/...). Se as credenciais
-AWS (AWS_ACCESS_KEY_ID e AWS_SECRET_ACCESS_KEY) estiverem no ambiente,
-também envia o schedules.parquet para o bucket S3.
-"""
+from __future__ import annotations
 
-import os
+import argparse
+import logging
 import sys
 from pathlib import Path
+from typing import Callable
 
-from nfl_sideline_etl.extract import download_pbp, download_schedules
-from nfl_sideline_etl.load import upload_parquet_to_s3
+import polars as pl
 
-SEASON = 2023
+from nfl_sideline_etl.extract import (
+    SourceDataNotPublishedError,
+    download_pbp,
+    download_schedules,
+)
+from nfl_sideline_etl.seasons import (
+    add_season_arguments,
+    current_nfl_season,
+    seasons_from_args,
+)
+
+LOGGER = logging.getLogger("run_local")
 S3_BUCKET = "nfl-sideline-lake"
-DATA_DIR = Path(__file__).resolve().parent / "data"
+DEFAULT_DATA_DIR = Path(__file__).resolve().parent / "data"
 
 
-def main() -> None:
-    try:
-        # 1. Schedules
-        schedules = download_schedules(SEASON)
-        schedules_dir = DATA_DIR / "raw" / "schedules" / f"season={SEASON}"
-        schedules_dir.mkdir(parents=True, exist_ok=True)
-        schedules_path = schedules_dir / "schedules.parquet"
-        schedules.write_parquet(schedules_path)
+class MissingPbpError(RuntimeError):
+    """Indica ausência esperada de PBP para uma temporada ainda sem jogadas."""
 
-        # 2. Upload opcional para o S3 (apenas com credenciais AWS no ambiente)
-        if os.environ.get("AWS_ACCESS_KEY_ID") and os.environ.get("AWS_SECRET_ACCESS_KEY"):
-            s3_key = f"raw/schedules/season={SEASON}/schedules.parquet"
-            upload_parquet_to_s3(str(schedules_path), S3_BUCKET, s3_key)
-            print(f"[S3 OK] {s3_key}")
 
-        # 3. Play-by-play
-        pbp = download_pbp(SEASON)
-        pbp_dir = DATA_DIR / "raw" / "pbp" / f"season={SEASON}"
-        pbp_dir.mkdir(parents=True, exist_ok=True)
-        pbp.write_parquet(pbp_dir / "pbp.parquet")
-    except Exception as exc:
-        print(f"[ERRO DE EXTRAÇÃO] {exc}")
-        sys.exit(1)
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    add_season_arguments(parser)
+    source = parser.add_mutually_exclusive_group()
+    source.add_argument("--schedules-only", action="store_true")
+    source.add_argument("--pbp-only", action="store_true")
+    parser.add_argument(
+        "--allow-missing-pbp",
+        action="store_true",
+        help="Tolera somente PBP vazio, futuro ou HTTP 404 ainda não publicado.",
+    )
+    parser.add_argument(
+        "--upload-s3",
+        action="store_true",
+        help="Envia explicitamente schedules ao caminho S3 legado.",
+    )
+    return parser
+
+
+def _write_nonempty_parquet(
+    frame: pl.DataFrame,
+    *,
+    season: int,
+    source: str,
+    data_dir: Path,
+) -> Path:
+    if frame.is_empty():
+        if source == "pbp":
+            raise MissingPbpError(f"PBP {season} sem jogadas")
+        raise RuntimeError(f"Schedules {season} retornou zero linhas")
+    path = data_dir / "raw" / source / f"season={season}" / f"{source}.parquet"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    frame.write_parquet(path)
+    LOGGER.info("season=%d source=%s rows=%d path=%s", season, source, frame.height, path)
+    return path
+
+
+def acquire_season(
+    season: int,
+    *,
+    data_dir: Path,
+    schedules: bool,
+    pbp: bool,
+    allow_missing_pbp: bool,
+    upload_s3: bool,
+    schedules_loader: Callable[[int], pl.DataFrame] = download_schedules,
+    pbp_loader: Callable[[int], pl.DataFrame] = download_pbp,
+    s3_uploader: Callable[[str, str, str], None] | None = None,
+) -> None:
+    """Adquire uma temporada, validando vazio e mantendo S3 estritamente opt-in."""
+    if schedules:
+        schedules_path = _write_nonempty_parquet(
+            schedules_loader(season), season=season, source="schedules", data_dir=data_dir
+        )
+        if upload_s3:
+            if s3_uploader is None:
+                from nfl_sideline_etl.load import upload_parquet_to_s3
+
+                s3_uploader = upload_parquet_to_s3
+            s3_key = f"raw/schedules/season={season}/schedules.parquet"
+            s3_uploader(str(schedules_path), S3_BUCKET, s3_key)
+            LOGGER.info("season=%d source=schedules uploaded=s3://%s/%s", season, S3_BUCKET, s3_key)
+
+    if pbp:
+        try:
+            if season > current_nfl_season():
+                raise MissingPbpError(
+                    f"PBP {season} ainda não é suportado; temporada NFL corrente é "
+                    f"{current_nfl_season()}"
+                )
+            _write_nonempty_parquet(
+                pbp_loader(season), season=season, source="pbp", data_dir=data_dir
+            )
+        except (MissingPbpError, SourceDataNotPublishedError) as exc:
+            if not allow_missing_pbp:
+                raise
+            LOGGER.warning("season=%d source=pbp not_published_or_empty=%s", season, exc)
+
+
+def main(argv: list[str] | None = None) -> int:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    seasons = seasons_from_args(parser, args)
+    data_dir = args.data_dir or DEFAULT_DATA_DIR
+    if args.pbp_only and args.upload_s3:
+        parser.error("--upload-s3 só se aplica a schedules e não pode ser usado com --pbp-only")
+
+    for season in seasons:
+        acquire_season(
+            season,
+            data_dir=data_dir,
+            schedules=not args.pbp_only,
+            pbp=not args.schedules_only,
+            allow_missing_pbp=args.allow_missing_pbp,
+            upload_s3=args.upload_s3,
+        )
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        sys.exit(main())
+    except Exception as exc:
+        LOGGER.exception("[ERRO DE EXTRAÇÃO] %s", exc)
+        sys.exit(1)

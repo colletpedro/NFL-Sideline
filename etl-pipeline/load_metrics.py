@@ -1,7 +1,6 @@
 """Carrega métricas semanais por time (team_week_metrics) do Parquet local para o Supabase.
 
-Lê todos os pbp.parquet sob data/raw/pbp/*/ (multi-temporada: 2023, 2025 e 2026 quando
-houver jogadas — 2026 pode ainda não ter dados e o script não deve quebrar), agrega EPA
+Lê os pbp.parquet das temporadas selecionadas, agrega EPA
 médio e success rate por (season, week, team_abbr) — separando ataque (posteam) e defesa
 (defteam) — e faz upsert em lote na tabela `team_week_metrics` com INSERT ... ON CONFLICT
 DO UPDATE.
@@ -20,6 +19,7 @@ Conexão: SUPABASE_DB_URL + SUPABASE_DB_USER/SUPABASE_DB_PASSWORD, lidos do ambi
 ou do .env na raiz do projeto (o prefixo `jdbc:` da URL é removido, se presente).
 """
 
+import argparse
 import logging
 import os
 import sys
@@ -29,6 +29,13 @@ from urllib.parse import urlparse
 import polars as pl
 import psycopg2
 from psycopg2.extensions import connection as PgConnection
+
+from nfl_sideline_etl.parquet import (
+    NoSeasonDataError,
+    ParquetSchemaError,
+    season_partition_files,
+)
+from nfl_sideline_etl.seasons import add_season_arguments, seasons_from_args
 
 LOGGER = logging.getLogger("load_metrics")
 
@@ -69,6 +76,10 @@ ON CONFLICT (season, week, team_abbr) DO UPDATE SET
     def_epa_pass     = EXCLUDED.def_epa_pass,
     def_epa_rush     = EXCLUDED.def_epa_rush;
 """
+
+
+class PbpUnavailable(NoSeasonDataError):
+    """Não há PBP utilizável para as temporadas solicitadas."""
 
 
 def _load_env_file(env_path: Path) -> dict[str, str]:
@@ -121,17 +132,12 @@ def connect(config: dict[str, str]) -> PgConnection:
     )
 
 
-def load_pbp(data_dir: Path) -> pl.DataFrame:
-    """Lê todos os pbp.parquet de data/raw/pbp/*/ (uma ou mais temporadas).
-
-    Arquivos completamente vazios (ex.: temporada futura sem jogadas registradas,
-    como 2026) são ignorados com aviso em vez de quebrar a carga.
-    """
-    files = sorted(data_dir.glob("raw/pbp/*/pbp.parquet"))
-    if not files:
-        raise FileNotFoundError(
-            f"Nenhum pbp.parquet em {data_dir / 'raw' / 'pbp'}: execute run_local.py antes."
-        )
+def load_pbp(data_dir: Path, seasons: tuple[int, ...]) -> pl.DataFrame:
+    """Lê e filtra PBP somente das temporadas explícitas."""
+    try:
+        files = season_partition_files(data_dir, "pbp", "pbp.parquet", seasons)
+    except NoSeasonDataError as exc:
+        raise PbpUnavailable(str(exc)) from exc
     LOGGER.info("Arquivos PBP encontrados: %s", ", ".join(str(f) for f in files))
 
     frames: list[pl.LazyFrame] = []
@@ -139,17 +145,18 @@ def load_pbp(data_dir: Path) -> pl.DataFrame:
         schema = pl.read_parquet_schema(path)
         missing = [c for c in NEEDED_COLUMNS if c not in schema]
         if missing:
-            LOGGER.warning("Ignorando %s: colunas ausentes %s", path.name, missing)
-            continue
+            raise ParquetSchemaError(f"Schema incompatível em {path}: colunas ausentes {missing}")
         lazy = pl.scan_parquet(path).select(NEEDED_COLUMNS)
         if lazy.head(1).collect().is_empty():
-            LOGGER.warning("Ignorando %s: arquivo vazio (temporada sem jogadas?)", path.name)
+            LOGGER.warning("PBP vazio: %s", path)
             continue
         frames.append(lazy)
     if not frames:
-        raise RuntimeError("Nenhum arquivo pbp válido para processar.")
+        raise PbpUnavailable(f"Nenhum PBP com linhas para as temporadas {seasons}.")
 
-    pbp = pl.concat(frames).collect()
+    pbp = pl.concat(frames).collect().filter(pl.col("season").is_in(seasons))
+    if pbp.is_empty():
+        raise PbpUnavailable(f"Nenhuma linha PBP pertence às temporadas solicitadas {seasons}.")
     LOGGER.info(
         "Temporadas no PBP local: %s (%d jogadas)",
         sorted(pbp["season"].unique().to_list()), pbp.height,
@@ -235,21 +242,44 @@ def upsert_team_week_metrics(conn: PgConnection, metrics: pl.DataFrame) -> int:
     return upserted
 
 
-def main() -> None:
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    add_season_arguments(parser)
+    parser.add_argument(
+        "--allow-empty",
+        action="store_true",
+        help="Termina com sucesso e warning quando não houver PBP/métricas para a temporada.",
+    )
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s | %(levelname)s | %(message)s",
     )
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent
-    data_dir = script_dir / "data"
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    seasons = seasons_from_args(parser, args)
+    data_dir = args.data_dir or script_dir / "data"
 
     LOGGER.info("Iniciando carga de métricas semanais (team_week_metrics)")
-    pbp = load_pbp(data_dir)
+    try:
+        pbp = load_pbp(data_dir, seasons)
+    except PbpUnavailable as exc:
+        if not args.allow_empty:
+            raise
+        LOGGER.warning("PBP ausente; carga vazia permitida explicitamente: %s", exc)
+        return 0
     metrics = build_team_week_metrics(pbp)
     if metrics.is_empty():
-        LOGGER.warning("Nenhuma métrica agregada — nada a persistir.")
-        return
+        message = f"Nenhuma métrica agregada para as temporadas {seasons}."
+        if not args.allow_empty:
+            raise PbpUnavailable(message)
+        LOGGER.warning("%s Carga vazia permitida explicitamente.", message)
+        return 0
     LOGGER.info("Total a persistir: %d linhas (time-semana)", metrics.height)
 
     conn = connect(_read_db_config(project_root))
@@ -259,11 +289,12 @@ def main() -> None:
         conn.close()
 
     LOGGER.info("Carga concluída com sucesso.")
+    return 0
 
 
 if __name__ == "__main__":
     try:
-        main()
+        sys.exit(main())
     except Exception as exc:  # falha explícita, nunca silenciosa (spec §12)
         LOGGER.exception("[ERRO DE CARGA] %s", exc)
         sys.exit(1)

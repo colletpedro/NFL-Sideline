@@ -4,7 +4,7 @@
 
 **Status:** protótipo funcional em estabilização
 
-**Baseline documental:** 2026-09-08, commit `705536f`
+**Baseline documental:** pacote de reprodutibilidade do ETL validado localmente em 2026-09-09, a partir de `fbcb2b7`
 
 **Autoridade:** esta especificação descreve o comportamento observado no código e no schema nessa baseline. Itens sem evidência são marcados como planejados, não comprovados ou pendentes.
 
@@ -49,7 +49,7 @@ nflverse
   -> React 18 / TypeScript / Vite
 ```
 
-O fluxo principal não passa por um data lake remoto. S3 existe como caminho opcional/legado: `run_local.py` pode enviar o Parquet de schedules de 2023 quando as credenciais AWS estão presentes, por meio de `src/nfl_sideline_etl/load.py`. Os loaders ativos leem Parquet local e gravam diretamente no Supabase.
+O fluxo principal não passa por um data lake remoto. S3 existe como caminho opcional/legado: `run_local.py` envia schedules somente quando `--upload-s3` é informado; credenciais AWS isoladamente não provocam chamadas a boto3. Os loaders ativos leem Parquet local e gravam diretamente no Supabase.
 
 ### 2.1 Responsabilidades
 
@@ -110,18 +110,28 @@ Variáveis efetivamente consumidas:
 | `SUPABASE_DB_USER` | sim | Spring datasource e loaders Python |
 | `SUPABASE_DB_PASSWORD` | sim | Spring datasource e loaders Python |
 | `GEMINI_API_KEY` | sim | backend Gemini |
-| `AWS_ACCESS_KEY_ID` | não | S3 legado via boto3 |
-| `AWS_SECRET_ACCESS_KEY` | não | S3 legado via boto3 |
-| `AWS_REGION` | não | S3 legado via boto3 |
+| `AWS_ACCESS_KEY_ID` | não | S3 legado via boto3, somente com `--upload-s3` |
+| `AWS_SECRET_ACCESS_KEY` | não | S3 legado via boto3, somente com `--upload-s3` |
+| `AWS_REGION` | não | S3 legado via boto3, somente com `--upload-s3` |
 
 O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente. `GEMINI_API_KEY_PROD` também não é consumida. O frontend não lê uma variável `VITE_*`: a base URL está fixa em localhost.
+
+### 3.1 Política compartilhada de temporadas
+
+`nfl_sideline_etl.seasons` é a única implementação da política usada pelas quatro CLIs e pelo workflow por meio dos defaults das CLIs:
+
+- `--season YEAR` pode ser repetido; valores são deduplicados e ordenados;
+- sem a opção, março a dezembro usa o ano corrente e janeiro/fevereiro usa o ano anterior;
+- a função aceita uma data injetável para testes determinísticos;
+- a faixa plausível é 1999 (início do PBP suportado pelo nflreadpy) até a temporada seguinte à corrente, permitindo schedules publicados antecipadamente;
+- `--data-dir PATH` troca a raiz, cujo default permanece `etl-pipeline/data`.
 
 ## 4. Pipeline de dados
 
 ### 4.1 Ordem de preparação
 
 1. Criar um banco vazio usando a migration baseline.
-2. Disponibilizar os Parquet no layout local.
+2. Executar `run_local.py` para disponibilizar Parquet no layout local.
 3. Executar `seed_teams.py`.
 4. Executar `load_games.py`, que também popula `market_implied`.
 5. Executar `load_metrics.py`.
@@ -129,9 +139,11 @@ O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente
 
 A ordem dos loaders é obrigatória por causa das FKs de times e jogos. Todos os loaders usam `INSERT ... ON CONFLICT DO UPDATE`.
 
+`run_local.py` baixa schedules e PBP de cada temporada pedida. `--schedules-only` e `--pbp-only` selecionam uma fonte e são mutuamente exclusivos; schedules são obrigatórios salvo no segundo modo. Arquivos com zero linhas não contam como sucesso. `--allow-missing-pbp` é restrito a PBP vazio, temporada futura ou HTTP 404 de arquivo ainda não publicado. Timeout, DNS/conexão, HTTP 401/403, 429, 5xx, parsing e schema continuam fatais; schedules nunca recebem essa tolerância. S3 é estritamente opt-in por `--upload-s3` e preserva a chave legada de schedules.
+
 ### 4.2 Schedules e mercado
 
-`load_games.py` lê todos os `schedules.parquet`, mas filtra as temporadas constantes `(2025, 2026)` e os tipos `REG`, `POST`, `WC`, `DIV`, `CON` e `SB`. Jogos sem moneylines de casa/fora ou sem spread são descartados. O loader atual grava somente:
+`load_games.py` lê somente as partições pedidas e filtra explicitamente as temporadas selecionadas e os tipos `REG`, `POST`, `WC`, `DIV`, `CON` e `SB`. Se houver Parquets locais, mas nenhum da seleção, a carga falha de forma clara. Jogos sem moneylines de casa/fora ou sem spread continuam descartados. O loader grava somente:
 
 - identidade, temporada, semana, tipo e data do jogo;
 - times da casa e visitante;
@@ -153,6 +165,8 @@ vig_pct = overround - 1
 A remoção de vig usa normalização proporcional. O loader rejeita moneyline zero, probabilidade fora de `(0, 1)`, vig menor ou igual a zero e soma fair divergente de 1 por mais de `1e-9`.
 
 ### 4.3 Métricas semanais
+
+`load_metrics.py` seleciona explicitamente as partições e linhas das temporadas pedidas. Ausência de PBP ou de métricas elegíveis falha por padrão; `--allow-empty` a transforma em sucesso com warning. Schema incompatível é sempre erro e não é reclassificado como vazio permitido.
 
 Antes da agregação, `load_metrics.py` mantém apenas jogadas com:
 
@@ -284,13 +298,19 @@ O React Router expõe `/` e `/game/:id`. A home usa a temporada 2026 fixa, carre
 | Vercel | configuração SPA existe; deploy não comprovado |
 | Frontend/API | endpoint de API ainda fixo em localhost |
 
-O workflow semanal baixa a temporada corrente e executa `load_games.py` e `load_metrics.py`. Ele não executa `seed_teams.py`, não registra `ingestion_runs`, depende de PBP local disponível e convive com a lista fixa de temporadas em `load_games.py`. Esses pontos impedem afirmar que o cron é autossuficiente ou confiável.
+O workflow semanal preserva `workflow_dispatch`, o cron e os pins existentes de `actions/checkout@v4` e `actions/setup-python@v5`. Ele instala `etl-pipeline` pelo `pyproject.toml`, sem enumerar dependências nem duplicar Python inline, e executa `run_local.py --allow-missing-pbp`, `seed_teams.py`, `load_games.py` e `load_metrics.py --allow-empty`. A temporada corrente é resolvida pelo módulo compartilhado. A flag de aquisição não mascara outage: apenas PBP vazio, futuro ou 404 ainda não publicado segue sem bloquear. Os três secrets PostgreSQL existentes continuam sendo os únicos secrets do job; S3 e Data API não participam. O YAML corrigido ainda não comprova confiabilidade contínua em produção.
+
+### 9.1 Reprodutibilidade e validação do ETL
+
+As dependências diretas validadas estão fixadas em versões exatas no `pyproject.toml`; o extra `test` contém pytest e Pandas. Os testes offline cobrem política/CLI de temporadas, retorno Polars/Pandas, paths, S3 opt-in, ausência de PBP, classificação de 404 versus falhas operacionais, filtros, schema, moneyline e agregação mínima.
+
+No mesmo dia, as migrations foram reaplicadas no Supabase local e fixtures temporárias foram carregadas duas vezes na ordem oficial. As duas leituras resultaram em 2 times, 1 jogo, 1 mercado e 2 métricas, com zero FKs órfãs e zero duplicação. O diretório temporário foi removido. Um smoke real de schedules 2025 retornou 285 linhas e 46 colunas essenciais presentes em `etl-pipeline/data/`; o PBP real completo não foi baixado por volume.
 
 ## 10. Roadmap
 
 1. **Estabilização e reprodutibilidade** — baseline de schema, configuração segura, documentação coerente e processo repetível de ambiente local/remoto.
 2. **Consistência de dados e análise** — corrigir lacunas de placares/execuções, formalizar métricas, alinhar janelas e fortalecer o contrato da análise.
-3. **Confiabilidade e testes** — testes unitários, de contrato, integração e ETL; workflow semanal autossuficiente e observável.
+3. **Confiabilidade e testes** — ampliar cobertura de integração/contrato e observar execuções reais do workflow semanal agora autossuficiente.
 4. **Deploy** — endpoint configurável, segurança de acesso, ambientes, Cloud Run/Vercel ou alvos equivalentes e validação ponta a ponta.
 5. **Evolução analítica/preditiva** — métricas avançadas, ajuste por adversário, dataset de avaliação, backtest e eventual modelo quantitativo próprio.
 
@@ -311,9 +331,9 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 
 ## 12. Riscos e pendências
 
-- Ausência de testes de negócio e integração nas três camadas.
+- A cobertura Python inicial existe, mas ainda não abrange falhas transitórias reais do nflverse nem execuções hospedadas do cron.
 - Rollout remoto da Data API concluído em 2026-09-08; futuras migrations e qualquer reativação da Data API exigem nova revisão de segurança. A baseline histórica não deve ser reexecutada.
-- Workflow semanal não comprovadamente autossuficiente.
+- Workflow semanal estruturalmente autossuficiente, porém ainda sem histórico suficiente para comprovar confiabilidade contínua.
 - Colunas contratuais sem produtor atual e dados futuros sem PBP.
 - Campo `markdownText` carrega JSON, criando um contrato nominalmente enganoso.
 - Hash do cache não inclui explicitamente o nome do modelo.
