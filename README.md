@@ -1,89 +1,137 @@
 # NFL Sideline
 
-Um ecossistema analítico e plataforma cloud-native para predição quantitativa, ingestão de dados em lote da NFL e geração de relatórios táticos assistidos por RAG (Retrieval-Augmented Generation) com validação determinística anti-alucinação.
+NFL Sideline é um protótipo funcional para análise tática de confrontos da NFL. O sistema combina métricas semanais de eficiência, contexto de calendário e mercado e uma análise textual estruturada gerada pelo Gemini.
 
-## 🏗️ Arquitetura do Sistema
+A prioridade do produto é explicar o confronto entre ataques e defesas. Uma previsão pode aparecer como conclusão secundária da análise, mas ainda não existe um modelo preditivo quantitativo independente. As probabilidades chamadas de “Model” na interface são probabilidades implícitas sem vig, derivadas das moneylines do mercado.
 
-O projeto adere estritamente aos princípios de Twelve-Factor App e Spec-Driven Development (SDD), desacoplando a ingestão de dados, o motor de inteligência e a interface visual.
+## Arquitetura atual
 
-```
-[ nflverse Parquet ]
-       │
-       ▼ (ETL Polars/Python)
-[ PostgreSQL / Supabase ] ◄─── (JPA / Hibernate EAGER)
-       │
-       ▼
-[ Core API (Spring Boot 3 / Java 21) ]
-       │
-       ├─► [ SHA-256 Analysis Cache ]
-       └─► [ Gemini 2.5 Flash Client ] ──► [ Validador Anti-Alucinação (Tolerância 0.01) ]
-       │
-       ▼
-[ Web UI (React, Vite, TypeScript & Recharts) ]
+```text
+nflverse / nflreadpy
+  -> Parquet local
+  -> ETL Python + Polars + psycopg2
+  -> PostgreSQL no Supabase
+  -> API Java 21 / Spring Boot / JPA
+  -> análise Gemini + cache PostgreSQL
+  -> React 18 / TypeScript / Vite
 ```
 
-## 🚀 Principais Módulos & Tecnologias
+- `etl-pipeline/`: baixa dados do nflverse, grava Parquet local e carrega times, jogos, mercado e métricas diretamente no Supabase.
+- `core-api/`: expõe a API REST e orquestra o Gemini, cache e validação numérica.
+- `web-ui/`: dashboard local que hoje aponta para `http://localhost:8080/api/v1`.
+- `supabase/config.toml` e `supabase/migrations/`: configuração local e baseline versionadas para reconstruir o schema em um banco vazio.
+- `.github/workflows/`: CI Java e ETL semanal existentes; a confiabilidade do workflow semanal ainda não foi comprovada.
 
-**Backend (`core-api/`):** Java 21, Spring Boot 3, Maven, Spring Data JPA / PostgreSQL, cliente HTTP nativo para integração com LLM.
+S3 permanece apenas como caminho opcional/legado em `run_local.py`; não participa da carga principal. Cloud Run e Vercel ainda não estão implantados.
 
-**ETL Pipeline (`etl-pipeline/`):** Python 3.11+, Polars para processamento massivo de arquivos Parquet de play-by-play, psycopg2 e tipagem estrita.
+O frontend não usa a Supabase Data API: acessa somente o backend Spring. O backend e os loaders Python acessam o PostgreSQL diretamente por JDBC e psycopg2.
 
-**Frontend (`web-ui/`):** React 18, TypeScript, Vite, Recharts para visualização de assimetria de mercado e eficiência de passes/corridas, react-markdown para renderização de narrativas.
-
-**Motor RAG & Confiabilidade:**
-
-- Cache inteligente com hash SHA-256 do prompt para zerar latência e custo em consultas repetidas.
-- Barreira determinística anti-alucinação comparando numéricas citadas contra o contexto com tolerância de 0.01 para arredondamentos do modelo.
-
-## 📊 Pipeline de Dados e Métricas Avançadas
-
-O pipeline processa o histórico completo de play-by-play e calendários da NFL, calculando métricas fundamentais para modelagem quantitativa:
-
-- **EPA (Expected Points Added)** desagregado por tipo de jogada (`off_epa_pass`, `off_epa_rush`, `def_epa_pass`, `def_epa_rush`).
-- **Success Rate** ofensivo e defensivo por semana e temporada.
-- **Dropback Rate** para mensuração de tendências ofensivas e previsibilidade.
-- **Precificação Implícita de Mercado:** Conversão de moneylines americanas em probabilidades brutas, remoção de overround (vig) e cálculo de fair value das odds.
-
-## ⚙️ Configuração e Execução Local
-
-### Pré-requisitos
+## Pré-requisitos
 
 - Java 21 e Maven 3.9+
+- Python 3.11+
 - Node.js 18+ e npm
-- Python 3.11+ com ambiente virtual configurado
+- PostgreSQL/Supabase acessível
+- Supabase CLI 2.117.0 via `npx` e Docker somente se você quiser reconstruir e testar o banco localmente
 
-### 1. Configuração de Ambiente (`.env`)
+## Configuração
 
-Crie um arquivo `.env` na raiz do repositório contendo as credenciais de acesso ao banco e à inteligência artificial:
-
-```bash
-SUPABASE_DB_URL=jdbc:postgresql://<seu-host>:5432/postgres
-SUPABASE_DB_USER=postgres
-SUPABASE_DB_PASSWORD=sua_senha
-GEMINI_API_KEY=sua_chave_gemini
-```
-
-### 2. Executando o Backend (Spring Boot)
+Crie o arquivo local de ambiente a partir do exemplo:
 
 ```bash
-cd core-api
-export $(xargs < ../.env)
-mvn clean package -DskipTests
-java -jar target/core-api-0.1.0.jar
+cp .env.example .env
 ```
 
-A API estará ativa em `http://localhost:8080`.
+Preencha `SUPABASE_DB_URL`, `SUPABASE_DB_USER`, `SUPABASE_DB_PASSWORD` e `GEMINI_API_KEY`. O `.env` contém segredos e não deve ser commitado. As variáveis AWS são opcionais e só atendem ao fluxo S3 legado.
 
-### 3. Executando o Frontend (React / Vite)
+## Execução local
+
+### 1. Preparar o banco
+
+A baseline está em [`supabase/migrations/`](supabase/migrations/) e a configuração local já está versionada em `supabase/config.toml`; num checkout normal, não execute `supabase init`. Aplique a baseline somente a um PostgreSQL/Supabase novo e vazio:
 
 ```bash
-cd web-ui
-npm install
-npm run dev
+npx --yes supabase@2.117.0 start
+npx --yes supabase@2.117.0 db reset --local
 ```
 
-A interface web estará acessível em `http://localhost:5173`.
+Esses comandos exigem Docker ativo. Não aplique esta baseline sobre o Supabase remoto existente: a reconciliação do histórico será feita separadamente.
 
-## 🛡️ Contrato de Resiliência de IA (Anti-Alucinação)
+Validação da baseline e do hardening: a Supabase CLI 2.117.0 executa `db reset --local` em um stack vazio. As seis tabelas são criadas sem dados; a migration `*_harden_data_api_access.sql` habilita RLS sem policies e remove os privilégios de `anon`, `authenticated` e `PUBLIC`. Como não há `supabase/seed.sql`, a CLI emite um aviso de arquivo de seed ausente, mas o reset termina normalmente.
 
-Qualquer tentativa do modelo de inventar métricas numéricas fora do escopo determinístico do banco de dados aciona a barreira de validação. Caso haja divergência estrita acima da tolerância permitida, o endpoint degrada de forma graciosa retornando um erro RFC 7807 (503 Service Unavailable), garantindo que nenhum dado falso seja exibido ao usuário final.
+### Segurança da Data API
+
+Não há consumidores atuais da Data API. O stack local a mantém desativada (`[api].enabled = false`); o PostgreSQL local permanece disponível para o backend e ETL. Nas seis tabelas da aplicação, RLS é habilitado sem policies e `anon`/`authenticated` não recebem privilégios, como defesa em profundidade. A migration também revoga os default privileges de `postgres` para tabelas, sequences e funções futuras; em funções, a revogação é global ao criador para substituir o `EXECUTE` implícito de `PUBLIC`. Objetos criados por outra role exigem auditoria e decisão separada. Qualquer acesso futuro pela Data API exige decisão arquitetural, grants explícitos, policies e novos testes. `service_role` conserva somente os grants explícitos dos objetos atuais, é exclusivamente server-side e nunca pode ser exposta no frontend.
+
+O hardening foi validado somente no ambiente local. O ambiente remoto permanece no estado anterior até uma aplicação explicitamente autorizada; desativar a Data API remota é uma configuração do projeto no Dashboard, não um efeito de `db push`. Antes de qualquer `db push`, a baseline precisa ser reconciliada com o histórico de migrations remoto conforme o [runbook](docs/runbooks/supabase-remote-hardening.md).
+
+### 2. Preparar o ETL e carregar os times
+
+Os scripts esperam Parquet em `etl-pipeline/data/raw/schedules/season=YYYY/` e `etl-pipeline/data/raw/pbp/season=YYYY/`. `run_local.py` baixa apenas 2023, enquanto `load_games.py` aceita somente 2025/2026. Portanto, um checkout novo ainda precisa receber Parquets compatíveis antes da carga completa; essa lacuna de preparação dos dados será resolvida no próximo pacote do ETL. O fluxo abaixo documenta a ordem correta, mas o ETL completo ainda não é reproduzível apenas a partir do checkout.
+
+```bash
+python3.11 -m venv etl-pipeline/.venv
+source etl-pipeline/.venv/bin/activate
+pip install -e etl-pipeline
+python etl-pipeline/seed_teams.py
+```
+
+### 3. Carregar jogos e mercado
+
+```bash
+source etl-pipeline/.venv/bin/activate
+python etl-pipeline/load_games.py
+```
+
+### 4. Carregar métricas
+
+```bash
+source etl-pipeline/.venv/bin/activate
+python etl-pipeline/load_metrics.py
+```
+
+Essa ordem é obrigatória por causa das chaves estrangeiras.
+
+### 5. Backend
+
+Carregue as quatro variáveis obrigatórias do `.env` no ambiente do processo sem `export $(xargs ...)` e execute a partir da raiz:
+
+```bash
+set -a
+source .env
+set +a
+mvn -f core-api/pom.xml test
+mvn -f core-api/pom.xml spring-boot:run
+```
+
+A API ficará em `http://localhost:8080/api/v1`.
+
+### 6. Frontend
+
+```bash
+npm --prefix web-ui ci
+npm --prefix web-ui run dev
+```
+
+A interface ficará em `http://localhost:5173`.
+
+## Verificações
+
+```bash
+npx --yes supabase@2.117.0 db reset --local
+mvn -f core-api/pom.xml -o test
+npm --prefix web-ui run build
+npm --prefix web-ui run lint
+```
+
+## Limitações conhecidas
+
+- Não há modelo preditivo quantitativo próprio; o fair value exibido vem do mercado.
+- `early_down_epa` e `explosive_play_rate` existem no schema, mas não são populadas.
+- Placares e `ingestion_runs` existem no schema, mas os loaders atuais não os gravam.
+- A validação anti-alucinação verifica somente números enviados em `metricas_citadas`; ela não inspeciona todos os números que possam aparecer nos quatro textos finais.
+- O frontend usa uma URL de API localhost fixa.
+- O ETL semanal e a CI existem, mas não possuem evidência suficiente de confiabilidade contínua.
+- O hardening da Data API é local e ainda não foi aplicado ao ambiente remoto; a reconciliação do histórico remoto é pré-requisito para qualquer `db push`.
+
+Consulte [`Spec.md`](Spec.md) para contratos, schema, métricas, decisões e roadmap completos.
