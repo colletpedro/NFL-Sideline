@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { api } from "../services/api";
+import { api, classifyApiFailure } from "../services/api";
 import type { Game } from "../services/types";
 import { buildRow, weekdayOf } from "../services/model";
 import WeekSelector from "../components/WeekSelector";
@@ -15,6 +15,7 @@ function Home() {
   const [games, setGames] = useState<Game[]>(cachedGames || []);
   const [loading, setLoading] = useState(!cachedGames);
   const [error, setError] = useState<string | null>(null);
+  const [loadAttempt, setLoadAttempt] = useState(0);
   const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
   const [dayFilter, setDayFilter] = useState("ALL");
 
@@ -23,16 +24,28 @@ function Home() {
       return;
     }
     let cancelled = false;
+    setLoading(true);
+    setError(null);
     api
       .get<Game[]>("/games", { params: { season: SEASON } })
       .then((r) => {
         if (!cancelled) {
+          if (!Array.isArray(r.data)) {
+            throw new Error("Invalid games response");
+          }
           cachedGames = r.data;
           setGames(r.data);
         }
       })
-      .catch(() => {
-        if (!cancelled) setError("The board could not be loaded.");
+      .catch((requestError: unknown) => {
+        if (!cancelled) {
+          const kind = classifyApiFailure(requestError);
+          setError(
+            kind === "network"
+              ? "The sideline is temporarily unavailable. Please try again."
+              : "The board returned an unexpected response. Please try again."
+          );
+        }
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -40,7 +53,13 @@ function Home() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [loadAttempt]);
+
+  const retry = () => {
+    cachedGames = null;
+    setGames([]);
+    setLoadAttempt((attempt) => attempt + 1);
+  };
 
   const weeks = useMemo(
     () => [...new Set(games.map((g) => g.week))].sort((a, b) => a - b),
@@ -98,8 +117,19 @@ function Home() {
     return <div className="page-state">Loading the board…</div>;
   }
 
-  if (error || activeWeek === null) {
-    return <div className="page-state">{error ?? "No games in the calendar."}</div>;
+  if (error) {
+    return (
+      <div className="page-state page-state-error" role="alert">
+        <p>{error}</p>
+        <button className="page-state-retry" type="button" onClick={retry}>
+          Retry
+        </button>
+      </div>
+    );
+  }
+
+  if (activeWeek === null) {
+    return <div className="page-state">No games are scheduled for this season yet.</div>;
   }
 
   return (

@@ -3,7 +3,6 @@ package com.nflsideline.coreapi.controller;
 import com.nflsideline.coreapi.domain.Game;
 import com.nflsideline.coreapi.service.GameService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin
 public class GameController {
 
     private final GameService gameService;

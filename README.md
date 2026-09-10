@@ -11,18 +11,19 @@ nflverse / nflreadpy
   -> Parquet local
   -> ETL Python + Polars + psycopg2
   -> PostgreSQL no Supabase
-  -> API Java 21 / Spring Boot / JPA
+  -> API Java 21 / Spring Boot / JPA protegida por token de servico
   -> análise Gemini + cache PostgreSQL
-  -> React 18 / TypeScript / Vite
+  -> proxy server-side da Vercel
+  -> React 18 / TypeScript / Vite via /api/v1 same-origin
 ```
 
 - `etl-pipeline/`: `run_pipeline.py` orquestra aquisição, times, jogos/mercado, métricas e auditoria de cada temporada diretamente no PostgreSQL do Supabase.
 - `core-api/`: expõe a API REST e orquestra o Gemini, cache e validação numérica.
-- `web-ui/`: dashboard local que hoje aponta para `http://localhost:8080/api/v1`.
+- `web-ui/`: dashboard Vite; em desenvolvimento usa `http://localhost:8080/api/v1` por default e em produção usa `/api/v1` na mesma origem.
 - `supabase/config.toml` e `supabase/migrations/`: configuração local e baseline versionadas para reconstruir o schema em um banco vazio.
 - `.github/workflows/`: CI Java e ETL semanal existentes; a confiabilidade do workflow semanal ainda não foi comprovada.
 
-S3 permanece apenas como caminho opcional/legado em `run_local.py`; nenhum upload ocorre sem `--upload-s3`. Cloud Run e Vercel ainda não estão implantados.
+S3 permanece apenas como caminho opcional/legado em `run_local.py`; nenhum upload ocorre sem `--upload-s3`. A existência de um frontend Vercel publicado foi relatada, mas o inventário autenticado de Vercel e Cloud Run ainda precisa ser concluído antes de qualquer mutation remota.
 
 O frontend não usa a Supabase Data API: acessa somente o backend Spring. O backend e os loaders Python acessam o PostgreSQL diretamente por JDBC e psycopg2.
 
@@ -42,7 +43,9 @@ Crie o arquivo local de ambiente a partir do exemplo:
 cp .env.example .env
 ```
 
-Preencha `SUPABASE_DB_URL`, `SUPABASE_DB_USER`, `SUPABASE_DB_PASSWORD` e `GEMINI_API_KEY`. O `.env` contém segredos e não deve ser commitado. Variáveis AWS, quando presentes, não disparam upload: o fluxo S3 legado exige também `--upload-s3`.
+Preencha `SUPABASE_DB_URL`, `SUPABASE_DB_USER`, `SUPABASE_DB_PASSWORD` e `GEMINI_API_KEY`. `APP_ENV` é obrigatório e aceita somente `local`, `preview` ou `production`; ausência, vazio ou valor desconhecido encerram o startup. Para desenvolvimento, defina explicitamente `APP_ENV=local`. `PORT` usa `8080` por default. Em `preview` e `production`, `CORE_API_SHARED_TOKEN` é obrigatório e deve ter ao menos 32 caracteres. O `.env` contém segredos e não deve ser commitado. Variáveis AWS, quando presentes, não disparam upload: o fluxo S3 legado exige também `--upload-s3`.
+
+Na Vercel, `CORE_API_BASE_URL` e `CORE_API_SHARED_TOKEN` são variáveis exclusivamente server-side e devem existir separadamente em Preview e Production. `CORE_API_BASE_URL` deve ser exclusivamente uma origem HTTPS, sem caminho, query, fragmento ou credenciais; o token deve ter 32+ caracteres. `VITE_API_BASE_URL` é pública e só vale em development/test local: não a cadastre em Preview ou Production, pois builds de produção usam obrigatoriamente `/api/v1`. Toda variável `VITE_*` é visível no browser. Nunca use `VITE_*` para senha do banco, chave Gemini ou token compartilhado.
 
 ## Execução local
 
@@ -119,14 +122,25 @@ mvn -f core-api/pom.xml spring-boot:run
 
 A API ficará em `http://localhost:8080/api/v1`.
 
+Somente o perfil explicitamente configurado como `APP_ENV=local` aceita rotas sem token. `preview` e `production` exigem `X-NFL-Sideline-Token` em todas as rotas `/api/v1/**`, inclusive health; ausência, token menor que 32 caracteres, ambiente vazio ou ambiente desconhecido fazem o processo falhar no startup. CORS é centralizado e, por default, permite somente `http://localhost:5173` e `http://127.0.0.1:5173` no perfil local. CORS não autentica chamadas.
+
 ### 6. Frontend
 
 ```bash
 npm --prefix web-ui ci
+npm --prefix web-ui test
 npm --prefix web-ui run dev
 ```
 
 A interface ficará em `http://localhost:5173`.
+
+Para trocar a API apenas no desenvolvimento/teste local, copie `web-ui/.env.example` para `web-ui/.env.local` e ajuste `VITE_API_BASE_URL`. O build de produção ignora qualquer valor dessa variável e usa obrigatoriamente `/api/v1`. O proxy permite somente health, teams, games e `POST /analysis/matchup`, limita o body do POST, não encaminha cookies/Authorization do browser e injeta o token compartilhado apenas no servidor. Ele só aceita backend HTTPS de origem pura e recusa configuração ausente, curta ou inválida com resposta sanitizada.
+
+O token compartilhado protege o Spring contra chamadas diretas, mas não limita clientes que chamem a função pública da Vercel. Antes de promover para Production, aplique e valide uma regra de rate limiting no Vercel Firewall especificamente para `POST /api/v1/analysis/matchup`. Uma futura autenticação de usuário pode fornecer quotas mais fortes, mas não faz parte deste pacote.
+
+## Deploy seguro
+
+O runbook de inventário, preparação de Cloud Run, configuração Preview da Vercel, validação e rollback está em [`docs/runbooks/deploy-recovery.md`](docs/runbooks/deploy-recovery.md). Nenhum comando de mutation remota deve ser executado sem autorização específica. O primeiro deploy remoto deve ser Preview; promoção para Production exige uma autorização separada.
 
 ## Verificações
 
@@ -136,6 +150,7 @@ python3.11 -m venv /tmp/nfl-sideline-etl-test-venv
 /tmp/nfl-sideline-etl-test-venv/bin/pip install -e "etl-pipeline[test]"
 /tmp/nfl-sideline-etl-test-venv/bin/python -m pytest etl-pipeline
 mvn -f core-api/pom.xml -o test
+npm --prefix web-ui test
 npm --prefix web-ui run build
 npm --prefix web-ui run lint
 ```
@@ -148,7 +163,7 @@ Em 2026-09-09, a validação local reaplicou as duas migrations intactas e execu
 - `early_down_epa` e `explosive_play_rate` existem no schema, mas não são populadas.
 - A observabilidade é deliberadamente parcial: não há alertas, retenção, dashboard nem tratamento automático de runs presos em `RUNNING`.
 - A validação anti-alucinação verifica somente números enviados em `metricas_citadas`; ela não inspeciona todos os números que possam aparecer nos quatro textos finais.
-- O frontend usa uma URL de API localhost fixa.
+- O inventário remoto de Vercel e GCP depende de autenticação válida; a implementação local não comprova que o backend público e os secrets de Preview já existam.
 - O ETL semanal usa o orquestrador único e é autossuficiente quanto à ordem, mas ainda não possui evidência de execuções reais suficientes para afirmar confiabilidade contínua em produção.
 - A Data API remota está desativada. Qualquer reativação ou nova migration remota exige revisão de segurança e o fluxo versionado documentado no runbook; a baseline histórica não deve ser executada novamente.
 

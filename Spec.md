@@ -113,11 +113,17 @@ Variáveis efetivamente consumidas:
 | `SUPABASE_DB_USER` | sim | Spring datasource e loaders Python |
 | `SUPABASE_DB_PASSWORD` | sim | Spring datasource e loaders Python |
 | `GEMINI_API_KEY` | sim | backend Gemini |
+| `PORT` | não (`8080`) | porta HTTP do Spring; Cloud Run injeta o valor |
+| `APP_ENV` | sim (`local`, `preview` ou `production`) | somente `local` explícito dispensa autenticação; ausência, vazio ou valor desconhecido falham no startup |
+| `CORE_API_SHARED_TOKEN` | em `preview`/`production`, 32+ caracteres | Spring e proxy server-side da Vercel |
+| `CORE_API_BASE_URL` | na Vercel | origem HTTPS do Spring, somente server-side |
+| `APP_CORS_ALLOWED_ORIGINS` | não | origens locais explícitas, usadas somente em `local` |
+| `VITE_API_BASE_URL` | não | override público somente para development/test local; ignorado em builds de produção e proibido em Preview/Production |
 | `AWS_ACCESS_KEY_ID` | não | S3 legado via boto3, somente com `--upload-s3` |
 | `AWS_SECRET_ACCESS_KEY` | não | S3 legado via boto3, somente com `--upload-s3` |
 | `AWS_REGION` | não | S3 legado via boto3, somente com `--upload-s3` |
 
-O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente. `GEMINI_API_KEY_PROD` também não é consumida. O frontend não lê uma variável `VITE_*`: a base URL está fixa em localhost.
+O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente. `GEMINI_API_KEY_PROD` também não é consumida. Toda variável `VITE_*` é pública e incorporada ao bundle; senha PostgreSQL, chave Gemini e token compartilhado nunca podem usar esse prefixo.
 
 ### 3.1 Política compartilhada de temporadas
 
@@ -305,7 +311,11 @@ Portanto, a implementação reduz um tipo de alucinação numérica, mas não ga
 
 O React Router expõe `/` e `/game/:id`. A home usa a temporada 2026 fixa, carrega jogos e calcula favoritos, confiança e “edge” a partir do fair value de mercado. O detalhe carrega jogo e análise em paralelo e oferece abas de visão geral, análise, mercado e comparação tática.
 
-`web-ui/src/services/api.ts` usa `http://localhost:8080/api/v1` de forma fixa. Não há configuração de endpoint para deploy. A terminologia visual “Model” permanece por compatibilidade, mas sua semântica nesta baseline é sempre probabilidade implícita sem vig derivada do mercado.
+`web-ui/src/services/api.ts` usa `VITE_API_BASE_URL` somente em development/test local, remove barras finais e escolhe `http://localhost:8080/api/v1` nesses modos. O runtime usa `import.meta.env.PROD` para forçar `/api/v1` em qualquer build de produção, inclusive Preview; nenhum valor explícito pode contornar o proxy. A home separa falha de rede de resposta HTTP inválida, oferece retry sanitizado e trata uma lista vazia válida como estado sem jogos.
+
+Na Vercel, `api/v1/[...path].ts` é uma função Node server-side. Ela aceita somente as rotas REST já documentadas, somente GET/POST/OPTIONS aplicáveis, timeout de 8 s, body JSON de até 32 KiB e resposta de até 2 MiB. O destino é derivado exclusivamente da allowlist e de `CORE_API_BASE_URL`, que só aceita origem HTTPS sem caminho, query, fragmento ou credenciais; cookies e `Authorization` do browser não são encaminhados. `CORE_API_SHARED_TOKEN` precisa ter 32+ caracteres e é adicionado como `X-NFL-Sideline-Token`. Erros de configuração, timeout, indisponibilidade, JSON inválido e 5xx do upstream são sanitizados.
+
+O Spring lê `PORT`, mas exige `APP_ENV` explícito em `local`, `preview` ou `production`; ausência, vazio ou valor desconhecido falham fechados. Somente `local` dispensa token. Em `preview`/`production`, `CORE_API_SHARED_TOKEN` é obrigatório, tem mínimo de 32 caracteres e nunca é refletido em erros. Todas as rotas `/api/v1/**`, inclusive health, passam por um filtro central com comparação de digests SHA-256 em tempo constante. CORS foi removido dos controllers e existe apenas como conveniência local para origens explícitas; Vercel → Spring é server-to-server e não depende de CORS. CORS não é autenticação nem rate limiting.
 
 ## 9. Infraestrutura e operação
 
@@ -315,9 +325,9 @@ O React Router expõe `/` e `/game/:id`. A home usa a temporada 2026 fixa, carre
 | Parquet local | fluxo ativo entre extração/download e loaders |
 | S3 | código opcional/legado; não está no caminho principal ativo |
 | GitHub Actions | `ci-java.yml` e `weekly_etl.yml` existem; confiabilidade contínua não comprovada |
-| Cloud Run | Dockerfile existe; deploy não comprovado |
-| Vercel | configuração SPA existe; deploy não comprovado |
-| Frontend/API | endpoint de API ainda fixo em localhost |
+| Cloud Run | Dockerfile compatível com Java 21 existe; `PORT` agora é respeitada; deploy público não comprovado |
+| Vercel | função de proxy e configuração Vite/SPA existem; projeto/deploy/protection não inventariados por falta de autenticação |
+| Frontend/API | produção usa `/api/v1` same-origin; backend remoto e secrets ainda precisam de inventário/autorização |
 
 O workflow semanal preserva `workflow_dispatch`, o cron e os pins existentes de `actions/checkout@v4` e `actions/setup-python@v5`. Ele instala `etl-pipeline` pelo `pyproject.toml` e executa somente `python etl-pipeline/run_pipeline.py --allow-missing-pbp`. A temporada corrente é resolvida pelo módulo compartilhado. A flag não mascara outage: apenas PBP vazio, futuro ou 404 ainda não publicado segue sem bloquear; qualquer outra falha tenta registrar `FAILED` e falha o job. Os três secrets PostgreSQL existentes continuam sendo os únicos secrets do job; S3 e Data API não participam. O YAML corrigido ainda não comprova confiabilidade contínua em produção.
 
@@ -349,8 +359,11 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 | ADR-006 | Carga direta no Supabase | Os loaders atuais escrevem diretamente no PostgreSQL; S3 é opcional/legado. |
 | ADR-007 | Gemini para narrativa tática estruturada | O LLM recebe somente o contexto serializado e responde em JSON. |
 | ADR-008 | Supabase migrations como fonte versionada do schema | Mudanças futuras devem evoluir a partir da baseline em `supabase/migrations/`. |
+| ADR-009 | Proxy Vercel same-origin com allowlist e token compartilhado | Segredos ficam server-side e o Spring nega chamadas diretas sem o token. O endpoint público do proxy ainda exige rate limiting antes de Production. |
 
 ## 12. Riscos e pendências
+
+- O token compartilhado não autentica o usuário do browser. `POST /api/v1/analysis/matchup` precisa de rate limiting no Vercel Firewall antes da promoção para Production; identidade e quotas por usuário ficam fora deste pacote.
 
 - A cobertura Python inicial existe, mas ainda não abrange falhas transitórias reais do nflverse nem execuções hospedadas do cron.
 - Rollout remoto da Data API concluído em 2026-09-08; futuras migrations e qualquer reativação da Data API exigem nova revisão de segurança. A baseline histórica não deve ser reexecutada.
@@ -360,8 +373,7 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 - Campo `markdownText` carrega JSON, criando um contrato nominalmente enganoso.
 - Hash do cache não inclui explicitamente o nome do modelo.
 - Cliente Gemini sem timeout explícito.
-- CORS aberto nos controllers de domínio.
-- URL localhost e temporada 2026 fixas no frontend.
+- A temporada 2026 permanece fixa no frontend; `localhost` é usado somente como default de desenvolvimento local.
 
 ## 13. Glossário mínimo
 

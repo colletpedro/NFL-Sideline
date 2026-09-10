@@ -246,6 +246,31 @@ a.sports-nav-item:hover {
   text-align: center;
 }
 
+.page-state-error p {
+  margin: 0;
+}
+
+.page-state-retry {
+  margin-top: 20px;
+  border: 1px solid var(--lime);
+  padding: 9px 18px;
+  background: transparent;
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.page-state-retry:hover,
+.page-state-retry:focus-visible {
+  background: var(--lime);
+  color: var(--ink);
+  outline: none;
+}
+
 /* ------------------------------------------------------------
    WEEK BAR — week selector + day filters
    ------------------------------------------------------------ */
