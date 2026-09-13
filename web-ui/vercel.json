@@ -4,11 +4,6 @@
   "buildCommand": "npm run build",
   "installCommand": "npm ci",
   "outputDirectory": "dist",
-  "functions": {
-    "api/v1/**/*.ts": {
-      "maxDuration": 15
-    }
-  },
   "rewrites": [
     {
       "source": "/(.*)",

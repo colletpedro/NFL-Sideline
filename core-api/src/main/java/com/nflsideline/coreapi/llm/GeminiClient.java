@@ -3,6 +3,7 @@ package com.nflsideline.coreapi.llm;
 import com.nflsideline.coreapi.llm.dto.GeminiRequest;
 import com.nflsideline.coreapi.llm.dto.GeminiResponse;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
@@ -16,6 +17,7 @@ import java.util.List;
  * hardcoded to {@code application/json}, so the model returns a JSON string.
  */
 @Component
+@Profile("!snapshot")
 public class GeminiClient {
 
     private final String apiKey;

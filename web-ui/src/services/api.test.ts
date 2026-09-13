@@ -1,21 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { normalizeApiBaseUrl, resolveApiBaseUrl } from "./api";
+import { normalizeApiBaseUrl, resolveApiBaseUrl } from "./apiDataClient";
 
 describe("API base URL", () => {
   it("uses localhost for local development", () => {
     expect(resolveApiBaseUrl("development")).toBe(
       "http://localhost:8080/api/v1"
     );
-  });
-
-  it("uses the same-origin API in production", () => {
-    expect(resolveApiBaseUrl("production")).toBe("/api/v1");
-    expect(
-      resolveApiBaseUrl(
-        "production",
-        "https://direct-backend.example/api/v1"
-      )
-    ).toBe("/api/v1");
   });
 
   it("normalizes an explicit base URL", () => {

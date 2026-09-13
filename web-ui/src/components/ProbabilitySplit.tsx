@@ -4,7 +4,7 @@ interface ProbabilitySplitProps {
   /** Right segment — the home team. */
   home: { abbr: string; pct: number };
   /** Which team the model favors — its segment gets the signal color. */
-  favAbbr: string;
+  favAbbr: string | null;
   size?: "sm" | "md" | "lg";
   showLabels?: boolean;
 }
@@ -28,7 +28,7 @@ function ProbabilitySplit({ away, home, favAbbr, size = "md", showLabels = true 
           <span className={awayFav ? "fav" : undefined}>
             {away.abbr} {pct(away.pct).toFixed(0)}%
           </span>
-          <span className={!awayFav ? "fav" : undefined}>
+          <span className={favAbbr === home.abbr ? "fav" : undefined}>
             {home.abbr} {pct(home.pct).toFixed(0)}%
           </span>
         </span>
@@ -39,7 +39,7 @@ function ProbabilitySplit({ away, home, favAbbr, size = "md", showLabels = true 
           style={{ width: `${pct(away.pct)}%` }}
         />
         <span
-          className={`side ${awayFav ? "side-dog" : "side-fav"}`}
+          className={`side ${favAbbr === home.abbr ? "side-fav" : "side-dog"}`}
           style={{ width: `${pct(home.pct)}%` }}
         />
       </span>

@@ -1965,11 +1965,11 @@ a.sports-nav-item:hover {
     color: var(--accent);
   }
 
-  .gr-team-away {
+  .gr-away {
     grid-area: away;
   }
 
-  .gr-team-home {
+  .gr-home {
     grid-area: home;
   }
 
@@ -1980,6 +1980,7 @@ a.sports-nav-item:hover {
 
   .gr-pct {
     display: block;
+    order: 3;
     margin-left: auto;
     font-family: var(--font-mono);
     font-weight: 600;
@@ -2001,6 +2002,7 @@ a.sports-nav-item:hover {
 
   .gr-meta {
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .gr-rail {

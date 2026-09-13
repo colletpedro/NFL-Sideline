@@ -17,12 +17,9 @@ interface GameRowProps {
 }
 
 function GameRow({ row }: GameRowProps) {
-  const { game, favAbbr, favPct, dogPct, confidence, day, date } = row;
+  const { game, favAbbr, awayPct, homePct, confidence, day, date } = row;
   const awayFav = favAbbr === game.awayTeam.teamAbbr;
-  const awayPct = awayFav ? favPct : dogPct;
-  const homePct = awayFav ? dogPct : favPct;
-
-  const style = { "--fav-color": teamColor(favAbbr) } as CSSProperties;
+  const style = favAbbr ? { "--fav-color": teamColor(favAbbr) } as CSSProperties : undefined;
   const dotColor = confidence ? CONF_DOT[confidence] : "#6B7280";
 
   return (
@@ -30,7 +27,7 @@ function GameRow({ row }: GameRowProps) {
       <span className="gr-day">
         <span className="d">{day}</span>
         <span className="dt">{date}</span>
-        <span className="gr-mob-pick">Model pick {favAbbr}</span>
+        {favAbbr && <span className="gr-mob-pick">Market favorite {favAbbr}</span>}
       </span>
 
       <span className="gr-team gr-away">
@@ -57,13 +54,14 @@ function GameRow({ row }: GameRowProps) {
           />
         )}
         <span className="gr-meta">
-          <span>{favAbbr} {fmtLine(game.spreadLine)}</span>
+          {awayPct === null && <span>Market unavailable</span>}
+          <span>Spread {fmtLine(game.spreadLine)}</span>
           <span>Total {game.totalLine !== null ? game.totalLine.toFixed(1) : "—"}</span>
         </span>
       </span>
 
       <span className="gr-team gr-home">
-        <span className={`gr-pct ${!awayFav ? "fav" : ""}`}>
+        <span className={`gr-pct ${favAbbr === game.homeTeam.teamAbbr ? "fav" : ""}`}>
           {homePct !== null ? `${(homePct * 100).toFixed(0)}%` : "—"}
         </span>
         <span className="gr-info">
@@ -84,7 +82,7 @@ function GameRow({ row }: GameRowProps) {
             {confidence}
           </span>
         )}
-        <span className="gr-view">View Prediction</span>
+        <span className="gr-view">View Game</span>
         <ChevronRight className="gr-chev" size={16} strokeWidth={2.5} aria-hidden="true" />
       </span>
     </Link>

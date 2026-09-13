@@ -4,8 +4,8 @@ Lê os schedules.parquet das temporadas selecionadas, exclui pré-temporada e fa
 upsert em duas tabelas (spec §6.2):
 
 1. `games` — mapeia identidade, times, placares/result fornecidos pelo schedule,
-   spread_line, total_line, home_moneyline e away_moneyline. Jogos sem cotação
-   (moneyline ou spread nulos — cancelados/sem linha) são descartados.
+   spread_line, total_line, home_moneyline e away_moneyline. Calendário independe
+   de cotação: todos os jogos estruturalmente válidos são preservados.
 2. `market_implied` — converte a moneyline americana em probabilidade implícita bruta,
    calcula o overround (vig) e remove o vig por normalização proporcional (spec §7.1),
    gravando raw, fair e vig_pct por game.
@@ -78,10 +78,14 @@ ON CONFLICT (game_id) DO UPDATE SET
         WHEN EXCLUDED.home_score IS NULL THEN games.result
         ELSE EXCLUDED.result
     END,
-    spread_line     = EXCLUDED.spread_line,
-    total_line      = EXCLUDED.total_line,
-    home_moneyline  = EXCLUDED.home_moneyline,
-    away_moneyline  = EXCLUDED.away_moneyline,
+    spread_line     = COALESCE(EXCLUDED.spread_line, games.spread_line),
+    total_line      = COALESCE(EXCLUDED.total_line, games.total_line),
+    home_moneyline  = CASE
+        WHEN EXCLUDED.home_moneyline IS NOT NULL AND EXCLUDED.away_moneyline IS NOT NULL
+        THEN EXCLUDED.home_moneyline ELSE games.home_moneyline END,
+    away_moneyline  = CASE
+        WHEN EXCLUDED.home_moneyline IS NOT NULL AND EXCLUDED.away_moneyline IS NOT NULL
+        THEN EXCLUDED.away_moneyline ELSE games.away_moneyline END,
     updated_at      = now();
 """
 
@@ -95,7 +99,8 @@ ON CONFLICT (game_id) DO UPDATE SET
     away_implied_raw  = EXCLUDED.away_implied_raw,
     home_implied_fair = EXCLUDED.home_implied_fair,
     away_implied_fair = EXCLUDED.away_implied_fair,
-    vig_pct           = EXCLUDED.vig_pct;
+    vig_pct           = EXCLUDED.vig_pct,
+    computed_at       = now();
 """
 
 #: Tolerância para a soma das probabilidades fair (arredondamento do contexto Decimal).
@@ -197,25 +202,31 @@ def load_schedules(data_dir: Path, seasons: tuple[int, ...]) -> pl.DataFrame:
 
 
 def prepare_games(schedules: pl.DataFrame) -> pl.DataFrame:
-    """Seleciona e tipa as colunas de `games`, descartando jogos sem cotação.
+    """Prepara o calendário; par parcial vira NULL/NULL, nunca cotação sintética.
 
-    Remove registros com moneyline (casa ou fora) ou spread nulos — jogos
-    cancelados ou sem linha de mercado — e converte gameday (String) em Date.
+    No conflito, o SQL preserva o último par completo e linhas conhecidas.
+    Valores presentes inválidos continuam sendo erros, mesmo em pares parciais.
     """
-    validated = _validate_and_normalize_scores(schedules)
-    quoted = validated.filter(
-        pl.col("home_moneyline").is_not_null()
-        & pl.col("away_moneyline").is_not_null()
-        & pl.col("spread_line").is_not_null()
+    validated = _validate_and_normalize_scores(
+        schedules.filter(pl.col("game_type").is_in(VALID_GAME_TYPES))
     )
-    dropped = schedules.height - quoted.height
-    if dropped:
-        LOGGER.warning(
-            "%d jogos sem cotação completa (moneyline/spread nulos) descartados",
-            dropped,
-        )
-
-    games = quoted.select(GAMES_COLUMNS).with_columns(
+    home_values: list[int | None] = []
+    away_values: list[int | None] = []
+    missing_by_season: dict[int, int] = {}
+    for record in validated.iter_rows(named=True):
+        pair = [_moneyline_value(record[column]) for column in ("home_moneyline", "away_moneyline")]
+        if any(value is None for value in pair):
+            pair = [None, None]
+            season = int(record["season"])
+            missing_by_season[season] = missing_by_season.get(season, 0) + 1
+        home_values.append(pair[0])
+        away_values.append(pair[1])
+    for season, count in sorted(missing_by_season.items()):
+        LOGGER.warning("season=%d games_without_complete_moneyline_pair=%d; calendário preservado", season, count)
+    games = validated.with_columns(
+        pl.Series("home_moneyline", home_values, dtype=pl.Int64),
+        pl.Series("away_moneyline", away_values, dtype=pl.Int64),
+    ).select(GAMES_COLUMNS).with_columns(
         pl.col("gameday").str.to_date("%Y-%m-%d")
     )
     if games["gameday"].null_count():
@@ -262,9 +273,10 @@ def american_odds_to_implied(odds: int) -> Decimal:
     odd < 0: p = |odd| / (|odd| + 100); odd > 0: p = 100 / (odd + 100).
     Moneyline zero é inválida (probabilidade indefinida) e aborta a carga.
     """
-    if odds == 0:
-        raise ValueError("Moneyline 0 é inválida: sem probabilidade definida.")
-    odds_dec = Decimal(odds)
+    odds_dec = Decimal(str(odds))
+    if (not odds_dec.is_finite() or odds_dec == 0
+            or odds_dec != odds_dec.to_integral_value() or isinstance(odds, bool)):
+        raise ValueError("Moneyline inválida: deve ser um inteiro finito diferente de zero.")
     if odds_dec < 0:
         implied = (-odds_dec) / (-odds_dec + Decimal(100))
     else:
@@ -275,6 +287,13 @@ def american_odds_to_implied(odds: int) -> Decimal:
             f"Conversão de moneyline {odds} produziu probabilidade fora de (0, 1): {implied}"
         )
     return implied
+
+
+def _moneyline_value(value: object) -> int | None:
+    if value is None:
+        return None
+    american_odds_to_implied(value)
+    return int(value)
 
 
 def _validate_market(
@@ -310,8 +329,12 @@ def build_market_rows(games: pl.DataFrame) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
     for record in games.iter_rows(named=True):
         game_id = str(record["game_id"])
-        home_raw = american_odds_to_implied(int(record["home_moneyline"]))
-        away_raw = american_odds_to_implied(int(record["away_moneyline"]))
+        home_ml = _moneyline_value(record["home_moneyline"])
+        away_ml = _moneyline_value(record["away_moneyline"])
+        if home_ml is None or away_ml is None:
+            continue
+        home_raw = american_odds_to_implied(home_ml)
+        away_raw = american_odds_to_implied(away_ml)
 
         overround = home_raw + away_raw
         vig_pct = overround - Decimal(1)

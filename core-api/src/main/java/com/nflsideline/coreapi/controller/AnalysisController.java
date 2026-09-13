@@ -7,12 +7,16 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Profile("!snapshot")
 @RequestMapping("/api/v1")
 public class AnalysisController {
 
@@ -33,5 +37,12 @@ public class AnalysisController {
             problem.setTitle("LLM Failure");
             return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(problem);
         }
+    }
+
+    @GetMapping("/analysis/matchup/{gameId}")
+    public ResponseEntity<AnalysisResponse> getCachedMatchupAnalysis(@PathVariable String gameId) {
+        return analysisService.findLatestCachedMatchup(gameId)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }

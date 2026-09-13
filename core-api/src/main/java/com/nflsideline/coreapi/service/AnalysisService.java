@@ -19,6 +19,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
@@ -32,6 +33,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Profile("!snapshot")
 public class AnalysisService {
 
     private static final String MODEL_NAME = "gemini-3.1-pro-preview";
@@ -143,6 +145,12 @@ public class AnalysisService {
         }
 
         return new AnalysisResponse(request.gameId(), responseText, false);
+    }
+
+    public java.util.Optional<AnalysisResponse> findLatestCachedMatchup(String gameId) {
+        return cacheRepository
+                .findFirstByGameIdAndAnalysisTypeOrderByCreatedAtDescIdDesc(gameId, "matchup")
+                .map(cache -> new AnalysisResponse(cache.getGameId(), cache.getResponseText(), true));
     }
 
     private JsonNode parseLlmResponse(String llmOutput) {

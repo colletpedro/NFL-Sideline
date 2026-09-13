@@ -2,9 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 
 interface SportsHeaderProps {
   updatedLabel: string;
+  season: number | null;
+  week: number | null;
 }
 
-function SportsHeader({ updatedLabel }: SportsHeaderProps) {
+function SportsHeader({ updatedLabel, season, week }: SportsHeaderProps) {
   const { pathname } = useLocation();
 
   return (
@@ -21,12 +23,12 @@ function SportsHeader({ updatedLabel }: SportsHeaderProps) {
           </Link>
           <span className="sports-nav-item inert">Predictions</span>
           <span className="sports-nav-item inert">Markets</span>
-          <span className="sports-nav-item inert">Week 01</span>
+          {week !== null && <span className="sports-nav-item inert">Week {String(week).padStart(2, "0")}</span>}
         </nav>
 
         <div className="sports-meta">
-          <span className="season">2026</span>
-          <span className="week">Week 01</span>
+          {season !== null && <span className="season">{season}</span>}
+          {week !== null && <span className="week">Week {String(week).padStart(2, "0")}</span>}
           <span className={`updated ${updatedLabel.startsWith("Updated —") ? "" : "online"}`}>
             {updatedLabel}
           </span>

@@ -5,7 +5,7 @@ import { fmtLine, fmtNum } from "../services/types";
 interface MarketComparisonProps {
   game: Game;
   market: MarketImplied | null;
-  favAbbr: string;
+  favAbbr: string | null;
   edge: number | null;
 }
 
@@ -26,9 +26,10 @@ function MarketComparison({ game, market, favAbbr, edge }: MarketComparisonProps
 
   return (
     <section className="market">
+      {probs.homeModel === null ? <p className="page-state">Market unavailable. A complete valid moneyline pair is not available for this game.</p> : favAbbr === null ? <p className="page-state">No market favorite. Both teams have equal fair probability.</p> : <>
       <div className="mc-compare">
         <div className="mc-cell">
-          <span className="k">Model</span>
+          <span className="k">Fair probability</span>
           <span className="v">
             {favAbbr} {pct(modelPct)}
           </span>
@@ -42,16 +43,16 @@ function MarketComparison({ game, market, favAbbr, edge }: MarketComparisonProps
           <span className="d">Listed price, incl. vig</span>
         </div>
         <div className="mc-cell">
-          <span className="k">Model edge</span>
+          <span className="k">Market edge</span>
           <span className="v lime">{fmtEdge(edge)} pts</span>
-          <span className="d">Model read vs. 50/50</span>
+          <span className="d">Fair probability vs. 50/50</span>
         </div>
       </div>
 
       <div className="mc-bars">
         <div className="mc-bar-row">
           <div className="mc-bar-top">
-            <span>Model — fair value</span>
+            <span>Market — fair value</span>
             <span className="val">{pct(modelPct)}</span>
           </div>
           <div className="mc-bar model">
@@ -74,7 +75,7 @@ function MarketComparison({ game, market, favAbbr, edge }: MarketComparisonProps
           </div>
         </div>
       </div>
-
+      </>}
       <div className="mc-data">
         <div className="cell">
           <span className="k">Moneyline</span>
@@ -93,7 +94,7 @@ function MarketComparison({ game, market, favAbbr, edge }: MarketComparisonProps
         </div>
         <div className="cell">
           <span className="k">Vig</span>
-          <span className="v lime">{vig !== null ? `${(vig * 100).toFixed(1)}%` : "—"}</span>
+          <span className={vig !== null ? "v lime" : "v"}>{vig !== null ? `${(vig * 100).toFixed(1)}%` : "—"}</span>
         </div>
       </div>
     </section>

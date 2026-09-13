@@ -14,7 +14,7 @@ NFL Sideline é uma plataforma de análise tática de confrontos da NFL. Seu obj
 
 Uma conclusão preditiva pode surgir naturalmente dessa análise e aparece hoje no campo `veredito`, mas é uma saída secundária. O produto ainda não possui um modelo quantitativo próprio de previsão, calibração ou backtest.
 
-Odds, spreads, totais e probabilidades implícitas são contexto complementar. Encontrar assimetrias de mercado não é a tese central atual. Em particular, todas as probabilidades chamadas de **“Model”** na UI são probabilidades implícitas sem vig calculadas a partir das moneylines do mercado; elas não são estimativas de um modelo independente.
+Odds, spreads, totais e probabilidades implícitas são contexto complementar. Encontrar assimetrias de mercado não é a tese central atual. As probabilidades da UI são fair values sem vig derivados do mercado; não são estimativas de um modelo independente. Na ausência de probabilidade válida, nenhum favorito, confiança ou edge é mostrado.
 
 ### 1.1 Escopo implementado
 
@@ -47,8 +47,9 @@ nflverse
   -> conexão psycopg2 direta
   -> Supabase PostgreSQL
   -> Spring Boot 3.3.5 / Java 21 / JPA
-  -> Gemini (análise) + analysis_cache
-  -> React 18 / TypeScript / Vite
+     -> API REST local -> Gemini (sob solicitação) + analysis_cache
+     -> exportador batch read-only -> snapshots JSON públicos
+  -> React 18 / TypeScript / Vite -> Production estática
 ```
 
 O fluxo principal não passa por um data lake remoto. S3 existe como caminho opcional/legado: `run_local.py` envia schedules somente quando `--upload-s3` é informado; credenciais AWS isoladamente não provocam chamadas a boto3. Os loaders ativos leem Parquet local e gravam diretamente no Supabase.
@@ -61,9 +62,9 @@ O fluxo principal não passa por um data lake remoto. S3 existe como caminho opc
 | Dados brutos | Parquet local | interface entre download e cargas |
 | ETL | Python 3.11+, Polars, psycopg2 | filtros, agregações, odds e upserts |
 | Banco | Supabase/PostgreSQL | contrato relacional e cache |
-| Backend | Java 21, Spring Boot 3.3.5, JPA | leitura, janelas, contexto e Gemini |
+| Backend | Java 21, Spring Boot 3.3.5, JPA | API local, domínio, Gemini sob solicitação e exportação batch |
 | LLM | Gemini `gemini-3.1-pro-preview` | narrativa tática estruturada |
-| Frontend | React 18, TypeScript, Vite | calendário e detalhe do matchup |
+| Frontend | React 18, TypeScript, Vite | calendário e detalhe via API local ou snapshots em Production |
 
 ### 2.2 Estrutura real do monorepo
 
@@ -112,18 +113,15 @@ Variáveis efetivamente consumidas:
 | `SUPABASE_DB_URL` | sim | Spring datasource e loaders Python |
 | `SUPABASE_DB_USER` | sim | Spring datasource e loaders Python |
 | `SUPABASE_DB_PASSWORD` | sim | Spring datasource e loaders Python |
-| `GEMINI_API_KEY` | sim | backend Gemini |
-| `PORT` | não (`8080`) | porta HTTP do Spring; Cloud Run injeta o valor |
-| `APP_ENV` | sim (`local`, `preview` ou `production`) | somente `local` explícito dispensa autenticação; ausência, vazio ou valor desconhecido falham no startup |
-| `CORE_API_SHARED_TOKEN` | em `preview`/`production`, 32+ caracteres | Spring e proxy server-side da Vercel |
-| `CORE_API_BASE_URL` | na Vercel | origem HTTPS do Spring, somente server-side |
-| `APP_CORS_ALLOWED_ORIGINS` | não | origens locais explícitas, usadas somente em `local` |
+| `GEMINI_API_KEY` | somente para geração local | backend Gemini; não é exigida pelo batch |
+| `PORT` | não (`8080`) | porta HTTP do Spring local |
+| `APP_CORS_ALLOWED_ORIGINS` | não | origens locais explícitas da API |
 | `VITE_API_BASE_URL` | não | override público somente para development/test local; ignorado em builds de produção e proibido em Preview/Production |
 | `AWS_ACCESS_KEY_ID` | não | S3 legado via boto3, somente com `--upload-s3` |
 | `AWS_SECRET_ACCESS_KEY` | não | S3 legado via boto3, somente com `--upload-s3` |
 | `AWS_REGION` | não | S3 legado via boto3, somente com `--upload-s3` |
 
-O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente. `GEMINI_API_KEY_PROD` também não é consumida. Toda variável `VITE_*` é pública e incorporada ao bundle; senha PostgreSQL, chave Gemini e token compartilhado nunca podem usar esse prefixo.
+O bucket S3 é constante em `run_local.py`; `S3_BUCKET` não é lida do ambiente. `GEMINI_API_KEY_PROD` também não é consumida. Toda variável `VITE_*` é pública e incorporada ao bundle; senha PostgreSQL e chave Gemini nunca podem usar esse prefixo.
 
 ### 3.1 Política compartilhada de temporadas
 
@@ -157,7 +155,7 @@ Cada temporada é uma execução independente e sequencial. A política é fail-
 
 ### 4.2 Schedules e mercado
 
-`load_games.py` lê somente as partições pedidas e filtra explicitamente as temporadas selecionadas e os tipos `REG`, `POST`, `WC`, `DIV`, `CON` e `SB`. Se houver Parquets locais, mas nenhum da seleção, a carga falha de forma clara. Jogos sem moneylines de casa/fora ou sem spread continuam descartados. O loader grava:
+`load_games.py` lê somente as partições pedidas e filtra explicitamente as temporadas selecionadas e os tipos `REG`, `POST`, `WC`, `DIV`, `CON` e `SB`. Se houver Parquets locais, mas nenhum da seleção, a carga falha de forma clara. Todo jogo estruturalmente válido é mantido, independentemente de odds. O loader grava:
 
 - identidade, temporada, semana, tipo e data do jogo;
 - times da casa e visitante;
@@ -179,7 +177,9 @@ p_fair = p_raw / overround
 vig_pct = overround - 1
 ```
 
-A remoção de vig usa normalização proporcional. O loader rejeita moneyline zero, probabilidade fora de `(0, 1)`, vig menor ou igual a zero e soma fair divergente de 1 por mais de `1e-9`.
+A remoção de vig usa normalização proporcional. O loader rejeita moneyline zero, não inteira ou não finita, probabilidade fora de `(0, 1)`, vig menor ou igual a zero e soma fair divergente de 1 por mais de `1e-9`.
+
+`market_implied` exige apenas as duas moneylines completas e válidas, nunca spread. O par é substituído atomicamente com seu mercado. Dados ausentes/parciais posteriores preservam o último par completo conhecido e não atualizam nem removem o mercado. Jogo novo sem par completo recebe `NULL/NULL` e nenhum `market_implied`. Cada spread/total não nulo atualiza sua linha; ausência preserva a linha anterior via `COALESCE`. Jogos e mercados são persistidos na mesma transação. Warnings de pares incompletos são agregados por temporada, sem log por jogo.
 
 ### 4.3 Métricas semanais
 
@@ -225,7 +225,8 @@ Antes da agregação, `load_metrics.py` mantém apenas jogadas com:
 Há uma linha por execução e por temporada. `week` é sempre NULL porque o pipeline reprocessa a temporada inteira. Os estados usados exatamente pelo código são `RUNNING`, `SUCCEEDED` e `FAILED`; este pacote não adiciona enum nem constraint.
 
 - `rows_pbp`: altura do PBP bruto selecionado para a temporada, antes do filtro de jogadas válidas;
-- `rows_games`: altura do DataFrame final preparado para `games`, após os filtros vigentes e antes do upsert;
+- `rows_games`: todos os jogos preparados REG/POST, inclusive sem odds, antes do upsert;
+- `rows_market`: resumo retornado/logado pela etapa e pipeline, somente mercados calculados/upsertados nessa execução; não é nova coluna de `ingestion_runs`;
 - `started_at`: `now()` do banco no insert inicial, commitado antes das etapas;
 - `finished_at`: `now()` do banco no encerramento;
 - `error_message`: NULL no sucesso; na falha contém etapa, classe e descrição sem quebras de linha, com credenciais redigidas e limite de 1.000 caracteres.
@@ -253,7 +254,7 @@ Os únicos índices observados são os criados pelas PKs e pela constraint únic
 
 ### 5.1 RLS e Data API
 
-O aplicativo usa PostgreSQL diretamente: o frontend conversa somente com o backend Spring, enquanto o backend usa JDBC e os loaders Python usam psycopg2. Não há consumidor atual da Supabase Data API.
+O aplicativo usa PostgreSQL diretamente: em desenvolvimento o frontend conversa com o Spring; em Production lê snapshots públicos. O Java e os loaders Python usam JDBC e psycopg2. Não há consumidor atual da Supabase Data API.
 
 A migration `*_harden_data_api_access.sql` habilita RLS, sem `FORCE ROW LEVEL SECURITY`, nas seis tabelas da aplicação e não cria policies. Ela revoga todos os privilégios de tabela e das sequences da aplicação para `anon`, `authenticated` e `PUBLIC`, preservando explicitamente todos os privilégios de `service_role` nos objetos atuais. Também revoga os default privileges de `postgres` para tabelas, sequences e funções futuras; em funções, a revogação é global ao criador para substituir o `EXECUTE` implícito de `PUBLIC`. Até `service_role` exige GRANT explícito para objetos novos criados por `postgres`; objetos criados por outra role exigem auditoria e decisão separada. O `config.toml` local define `auto_expose_new_tables = false` e desativa a Data API local (`[api].enabled = false`), sem desativar PostgreSQL. RLS e revogações permanecem como defesa em profundidade caso a Data API seja reativada. Qualquer uso futuro da Data API exige decisão arquitetural, grants explícitos, policies e novos testes. `service_role` é uma credencial privilegiada exclusivamente server-side e jamais pode ser exposta no frontend.
 
@@ -270,6 +271,7 @@ Base: `/api/v1`.
 | `GET` | `/teams/{abbr}/metrics?season=&window=` | métricas do time; `window=season`, `l4` ou `l6` |
 | `GET` | `/games?season=&week=` | lista jogos; `week` é opcional |
 | `GET` | `/games/{gameId}` | retorna `game`, `market`, `homeMetrics` e `awayMetrics` |
+| `GET` | `/analysis/matchup/{gameId}` | retorna somente a análise cacheada mais recente, ou 404 |
 | `POST` | `/analysis/matchup` | recebe `{ "gameId": "...", "analysisType": "matchup" }` |
 
 Não existe uma rota separada `/games/{gameId}/market`; o mercado vem no detalhe do jogo. Erros de parâmetros e recursos usam `ProblemDetail`; falhas de LLM tratadas pelo controller retornam 503. Não há timeout explícito configurado no `RestClient` do Gemini.
@@ -309,13 +311,15 @@ Portanto, a implementação reduz um tipo de alucinação numérica, mas não ga
 
 ## 8. Frontend
 
-O React Router expõe `/` e `/game/:id`. A home usa a temporada 2026 fixa, carrega jogos e calcula favoritos, confiança e “edge” a partir do fair value de mercado. O detalhe carrega jogo e análise em paralelo e oferece abas de visão geral, análise, mercado e comparação tática.
+O React Router expõe `/` e `/game/:id`. O contexto de publicação fornece a temporada padrão de `manifest.defaultSeason` e a atualização de `manifest.generatedAt`. No REST, `/api/v1/publication` retorna a temporada NFL corrente e a última atualização dos jogos. Home, header e footer compartilham o contexto, sem constantes sazonais duplicadas. A semana inicial usa intervalos inclusivos de datas UTC: semana contendo hoje; entre semanas, a próxima; antes da temporada, a primeira; depois do último jogo, a última. O seletor manual é preservado. A escolha independe de mercado/análises.
 
-`web-ui/src/services/api.ts` usa `VITE_API_BASE_URL` somente em development/test local, remove barras finais e escolhe `http://localhost:8080/api/v1` nesses modos. O runtime usa `import.meta.env.PROD` para forçar `/api/v1` em qualquer build de produção, inclusive Preview; nenhum valor explícito pode contornar o proxy. A home separa falha de rede de resposta HTTP inválida, oferece retry sanitizado e trata uma lista vazia válida como estado sem jogos.
+Favorito, confiança e “edge” exigem fair probability válida; empate fair não cria favorito. Sem odds, os jogos permanecem navegáveis com mercado indisponível e análise cacheada independente. O detalhe carrega jogo e análise em paralelo e oferece abas de visão geral, análise, mercado e comparação tática. Métricas estáticas pertencem somente à temporada exportada; ausência de PBP é apresentada honestamente, sem fallback de outra temporada.
 
-Na Vercel, `api/v1/[...path].ts` é uma função Node server-side. Ela aceita somente as rotas REST já documentadas, somente GET/POST/OPTIONS aplicáveis, timeout de 8 s, body JSON de até 32 KiB e resposta de até 2 MiB. O destino é derivado exclusivamente da allowlist e de `CORE_API_BASE_URL`, que só aceita origem HTTPS sem caminho, query, fragmento ou credenciais; cookies e `Authorization` do browser não são encaminhados. `CORE_API_SHARED_TOKEN` precisa ter 32+ caracteres e é adicionado como `X-NFL-Sideline-Token`. Erros de configuração, timeout, indisponibilidade, JSON inválido e 5xx do upstream são sanitizados.
+`NflDataClient` unifica lista de jogos, detalhe e análise disponível. Development/test usa o Spring local e aceita `VITE_API_BASE_URL`; Production resolve em build um módulo separado que lê `/data/manifest.json` e `/data/seasons/{season}.json`. A seleção estática não pode ser desviada por variável Vite, mantém cache de requests em memória, usa somente GET e devolve erros incompatíveis sanitizados. `Home`, `Layout` e `MatchupDashboard` não conhecem Axios.
 
-O Spring lê `PORT`, mas exige `APP_ENV` explícito em `local`, `preview` ou `production`; ausência, vazio ou valor desconhecido falham fechados. Somente `local` dispensa token. Em `preview`/`production`, `CORE_API_SHARED_TOKEN` é obrigatório, tem mínimo de 32 caracteres e nunca é refletido em erros. Todas as rotas `/api/v1/**`, inclusive health, passam por um filtro central com comparação de digests SHA-256 em tempo constante. CORS foi removido dos controllers e existe apenas como conveniência local para origens explícitas; Vercel → Spring é server-to-server e não depende de CORS. CORS não é autenticação nem rate limiting.
+O detalhe estático monta times, mercado e séries de métricas em memória. Análise ausente é um estado válido e não dispara geração. Não existe Function Vercel nem rota catch-all de API. O Spring lê `PORT` e mantém CORS centralizado apenas para as origens locais configuradas.
+
+O contrato completo de `schemaVersion: 1`, ordenação, atomicidade e campos públicos está em `docs/static-snapshot-contract.md`. O exportador usa três queries por temporada, não serializa entidades JPA e não instancia Gemini no perfil `snapshot`.
 
 ## 9. Infraestrutura e operação
 
@@ -325,9 +329,9 @@ O Spring lê `PORT`, mas exige `APP_ENV` explícito em `local`, `preview` ou `pr
 | Parquet local | fluxo ativo entre extração/download e loaders |
 | S3 | código opcional/legado; não está no caminho principal ativo |
 | GitHub Actions | `ci-java.yml` e `weekly_etl.yml` existem; confiabilidade contínua não comprovada |
-| Cloud Run | Dockerfile compatível com Java 21 existe; `PORT` agora é respeitada; deploy público não comprovado |
-| Vercel | função de proxy e configuração Vite/SPA existem; projeto/deploy/protection não inventariados por falta de autenticação |
-| Frontend/API | produção usa `/api/v1` same-origin; backend remoto e secrets ainda precisam de inventário/autorização |
+| Cloud Run | fora do caminho público atual; Dockerfile preservado para usos locais/futuros separados |
+| Vercel | build Vite estático com snapshots versionados e fallback SPA |
+| Frontend/API | Production usa somente `/data`; API Spring permanece local |
 
 O workflow semanal preserva `workflow_dispatch`, o cron e os pins existentes de `actions/checkout@v4` e `actions/setup-python@v5`. Ele instala `etl-pipeline` pelo `pyproject.toml` e executa somente `python etl-pipeline/run_pipeline.py --allow-missing-pbp`. A temporada corrente é resolvida pelo módulo compartilhado. A flag não mascara outage: apenas PBP vazio, futuro ou 404 ainda não publicado segue sem bloquear; qualquer outra falha tenta registrar `FAILED` e falha o job. Os três secrets PostgreSQL existentes continuam sendo os únicos secrets do job; S3 e Data API não participam. O YAML corrigido ainda não comprova confiabilidade contínua em produção.
 
@@ -342,7 +346,7 @@ No mesmo dia, as duas migrations intactas foram reaplicadas no Supabase local e 
 1. **Estabilização e reprodutibilidade** — baseline de schema, configuração segura, documentação coerente e processo repetível de ambiente local/remoto.
 2. **Consistência de dados e análise** — corrigir lacunas de placares/execuções, formalizar métricas, alinhar janelas e fortalecer o contrato da análise.
 3. **Confiabilidade e testes** — ampliar cobertura de integração/contrato e observar execuções reais do workflow semanal agora autossuficiente.
-4. **Deploy** — endpoint configurável, segurança de acesso, ambientes, Cloud Run/Vercel ou alvos equivalentes e validação ponta a ponta.
+4. **Publicação estática** — automatizar a geração controlada dos snapshots, validar o artefato e publicar o build estático na Vercel sem servidor permanente.
 5. **Evolução analítica/preditiva** — métricas avançadas, ajuste por adversário, dataset de avaliação, backtest e eventual modelo quantitativo próprio.
 
 Nenhuma etapa posterior é considerada concluída apenas pela presença de código ou configuração.
@@ -359,11 +363,10 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 | ADR-006 | Carga direta no Supabase | Os loaders atuais escrevem diretamente no PostgreSQL; S3 é opcional/legado. |
 | ADR-007 | Gemini para narrativa tática estruturada | O LLM recebe somente o contexto serializado e responde em JSON. |
 | ADR-008 | Supabase migrations como fonte versionada do schema | Mudanças futuras devem evoluir a partir da baseline em `supabase/migrations/`. |
-| ADR-009 | Proxy Vercel same-origin com allowlist e token compartilhado | Segredos ficam server-side e o Spring nega chamadas diretas sem o token. O endpoint público do proxy ainda exige rate limiting antes de Production. |
+| ADR-009 | Substituído pelo ADR-010 | O proxy hospedado não possui consumidor no desenho estático. |
+| ADR-010 | Java exporta snapshots públicos; Production é estática | Sem servidor permanente; política editorial futura registrada sem implementação. |
 
 ## 12. Riscos e pendências
-
-- O token compartilhado não autentica o usuário do browser. `POST /api/v1/analysis/matchup` precisa de rate limiting no Vercel Firewall antes da promoção para Production; identidade e quotas por usuário ficam fora deste pacote.
 
 - A cobertura Python inicial existe, mas ainda não abrange falhas transitórias reais do nflverse nem execuções hospedadas do cron.
 - Rollout remoto da Data API concluído em 2026-09-08; futuras migrations e qualquer reativação da Data API exigem nova revisão de segurança. A baseline histórica não deve ser reexecutada.
@@ -373,7 +376,7 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 - Campo `markdownText` carrega JSON, criando um contrato nominalmente enganoso.
 - Hash do cache não inclui explicitamente o nome do modelo.
 - Cliente Gemini sem timeout explícito.
-- A temporada 2026 permanece fixa no frontend; `localhost` é usado somente como default de desenvolvimento local.
+- O snapshot público preservado ainda tem 112 jogos e aguarda rollout remoto autorizado para incorporar o calendário completo; a política editorial do ADR-010 ainda não foi implementada.
 
 ## 13. Glossário mínimo
 
@@ -381,5 +384,5 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 - **Success rate:** proporção de jogadas com EPA positivo.
 - **Moneyline:** odd americana para vitória direta.
 - **Vig/overround:** margem implícita no conjunto de odds.
-- **Fair value:** probabilidade normalizada após remoção proporcional da vig; nesta baseline, é a “Model Probability” da UI.
+- **Fair value:** probabilidade normalizada após remoção proporcional da vig; apresentada como probabilidade de mercado na UI.
 - **RAG:** uso de dados recuperados do banco como contexto factual para a geração do Gemini.

@@ -14,9 +14,8 @@ function trim(text: string | undefined, max: number): string | null {
 
 interface OverviewPanelProps {
   game: Game;
-  favTeam: Team;
-  dogTeam: Team;
-  favAbbr: string;
+  dogTeam: Team | null;
+  favAbbr: string | null;
   favPct: number | null;
   dogPct: number | null;
   confidence: Confidence | null;
@@ -29,7 +28,6 @@ interface OverviewPanelProps {
 
 function OverviewPanel({
   game,
-  favTeam,
   dogTeam,
   favAbbr,
   favPct,
@@ -55,7 +53,8 @@ function OverviewPanel({
   return (
     <section className="overview">
       <div className="ov-pick">
-        <span className="k">Model Pick</span>
+        {favAbbr && favPct !== null ? <>
+        <span className="k">Market favorite</span>
         <div className="ov-pick-main">
           <span className="abbr">{favAbbr}</span>
           <span className="pct">{favPct !== null ? `${(favPct * 100).toFixed(1)}%` : "—"}</span>
@@ -63,6 +62,7 @@ function OverviewPanel({
         <span className="winlabel">
           Win probability{confidence ? ` · ${confidence} confidence` : ""}
         </span>
+        </> : <p>Market favorite unavailable</p>}
 
         {awayPct !== null && homePct !== null && (
           <ProbabilitySplit
@@ -77,7 +77,7 @@ function OverviewPanel({
           <div className="cell">
             <span className="k">Spread</span>
             <span className="v">
-              {favTeam.teamAbbr} {fmtLine(game.spreadLine)}
+              {fmtLine(game.spreadLine)}
             </span>
           </div>
           <div className="cell">
@@ -90,10 +90,10 @@ function OverviewPanel({
           </div>
         </div>
 
-        <span className="ov-edge">
-          Model edge {fmtEdge(edge)} pts vs. even · {dogTeam.teamName} at{" "}
+        {edge !== null && dogTeam && <span className="ov-edge">
+          Market edge {fmtEdge(edge)} pts vs. even · {dogTeam.teamName} at{" "}
           {dogPct !== null ? `${(dogPct * 100).toFixed(1)}%` : "—"}
-        </span>
+        </span>}
       </div>
 
       <div className="ov-factors">
@@ -104,7 +104,7 @@ function OverviewPanel({
 
         {analysisLoading ? (
           <div className="flex flex-col items-center justify-center py-12 animate-pulse text-gray-400">
-            <span className="mb-2">Model is crunching data...</span>
+            <span className="mb-2">Loading available analysis...</span>
             <div className="h-4 w-3/4 bg-gray-200 rounded mt-4"></div>
             <div className="h-4 w-1/2 bg-gray-200 rounded mt-2"></div>
             <div className="h-4 w-5/6 bg-gray-200 rounded mt-2"></div>
@@ -117,7 +117,7 @@ function OverviewPanel({
                 <div className="body">
                   <span className="k">{f.label}</span>
                   <p className={`t ${f.red ? "factor-red" : ""}`}>
-                    {f.text ?? "Analysis not available for this game."}
+                    {f.text ?? "Analysis not available yet"}
                   </p>
                 </div>
               </div>
@@ -131,7 +131,7 @@ function OverviewPanel({
             )}
 
             <button className="ov-cta" onClick={onViewAnalysis}>
-              View Full Analysis
+              {predicao ? "View Full Analysis" : "Analysis not available yet"}
               <ArrowRight size={14} strokeWidth={2.5} aria-hidden="true" />
             </button>
           </>

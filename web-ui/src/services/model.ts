@@ -1,14 +1,16 @@
 import type { Game, MarketImplied, Team } from "./types";
-import { fairProbability, favoriteOf, mlToImplied } from "./types";
+import { fairProbability, favoriteOf, mlToImplied, validFairPair, validProbability } from "./types";
 
 export type Confidence = "HIGH" | "MEDIUM" | "LOW";
 
 export interface RowData {
   game: Game;
-  favTeam: Team;
-  dogTeam: Team;
-  favAbbr: string;
-  dogAbbr: string;
+  favTeam: Team | null;
+  dogTeam: Team | null;
+  favAbbr: string | null;
+  dogAbbr: string | null;
+  homePct: number | null;
+  awayPct: number | null;
   /** Favorite win probability, 0–1. */
   favPct: number | null;
   /** Dog win probability, 0–1. */
@@ -45,7 +47,7 @@ export function dayDateOf(iso: string | null | undefined): string {
 }
 
 export function confidenceOf(favPct: number | null): Confidence | null {
-  if (favPct === null) return null;
+  if (!validProbability(favPct) || favPct <= .5) return null;
   if (favPct >= 0.7) return "HIGH";
   if (favPct >= 0.6) return "MEDIUM";
   return "LOW";
@@ -53,7 +55,7 @@ export function confidenceOf(favPct: number | null): Confidence | null {
 
 /** Model edge over a coin flip, in percentage points (0–50). */
 export function edgePts(favPct: number | null): number | null {
-  if (favPct === null) return null;
+  if (!validProbability(favPct) || favPct <= .5) return null;
   return (favPct - 0.5) * 100;
 }
 
@@ -63,11 +65,12 @@ export function fmtEdge(pts: number | null | undefined): string {
 }
 
 export function buildRow(game: Game): RowData {
-  const fav = favoriteOf(game);
-  const dog = fav === game.homeTeam ? game.awayTeam : game.homeTeam;
-  const fair = fairProbability(game.homeMoneyline, game.awayMoneyline);
+  const probs = gameProbs(game, game.market ?? null);
+  const fair = { home: probs.homeModel, away: probs.awayModel };
+  const fav = favoriteOf(game, fair);
+  const dog = fav ? (fav === game.homeTeam ? game.awayTeam : game.homeTeam) : null;
   let favPct: number | null = null;
-  if (fair !== null && fair.home !== null && fair.away !== null) {
+  if (fav && fair.home !== null && fair.away !== null) {
     favPct = fav === game.homeTeam ? fair.home : fair.away;
   }
   const dogPct = favPct !== null ? 1 - favPct : null;
@@ -75,8 +78,10 @@ export function buildRow(game: Game): RowData {
     game,
     favTeam: fav,
     dogTeam: dog,
-    favAbbr: fav.teamAbbr,
-    dogAbbr: dog.teamAbbr,
+    favAbbr: fav?.teamAbbr ?? null,
+    dogAbbr: dog?.teamAbbr ?? null,
+    homePct: fair.home,
+    awayPct: fair.away,
     favPct,
     dogPct,
     edge: edgePts(favPct),
@@ -102,10 +107,7 @@ export function gameProbs(game: Game, market: MarketImplied | null): GameProbs {
   let homeModel: number | null = null;
   let awayModel: number | null = null;
   if (
-    market?.homeImpliedFair !== null &&
-    market?.homeImpliedFair !== undefined &&
-    market?.awayImpliedFair !== null &&
-    market?.awayImpliedFair !== undefined
+    market && validFairPair(market.homeImpliedFair, market.awayImpliedFair)
   ) {
     homeModel = market.homeImpliedFair;
     awayModel = market.awayImpliedFair;
@@ -123,9 +125,10 @@ export function gameProbs(game: Game, market: MarketImplied | null): GameProbs {
     market?.awayImpliedRaw !== null && market?.awayImpliedRaw !== undefined
       ? market.awayImpliedRaw
       : null;
-  if (homeRaw === null || awayRaw === null) {
-    homeRaw = mlToImplied(game.homeMoneyline);
-    awayRaw = mlToImplied(game.awayMoneyline);
+  if (!validProbability(homeRaw) || !validProbability(awayRaw) || homeRaw + awayRaw <= 1) {
+    const fair = fairProbability(game.homeMoneyline, game.awayMoneyline);
+    homeRaw = fair.home !== null ? mlToImplied(game.homeMoneyline) : null;
+    awayRaw = fair.away !== null ? mlToImplied(game.awayMoneyline) : null;
   }
   return { homeModel, awayModel, homeRaw, awayRaw };
 }

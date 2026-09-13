@@ -9,6 +9,10 @@
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "#runtime-client": ["src/services/runtimeClient.production.ts"]
+    },
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",

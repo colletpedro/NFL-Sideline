@@ -11,16 +11,25 @@ export interface Game {
   season: number;
   week: number;
   gameType: string;
-  gameday: string;
+  gameday: string | null;
   homeTeam: Team;
   awayTeam: Team;
   homeScore: number | null;
   awayScore: number | null;
+  result: number | null;
   spreadLine: number | null;
   totalLine: number | null;
   homeMoneyline: number | null;
   awayMoneyline: number | null;
+  homeSpreadOdds: number | null;
+  awaySpreadOdds: number | null;
+  overOdds: number | null;
+  underOdds: number | null;
+  roof: string | null;
+  surface: string | null;
+  divisionGame: boolean | null;
   updatedAt: string | null;
+  market?: MarketImplied | null;
 }
 
 export interface MarketImplied {
@@ -56,6 +65,72 @@ export interface AnalysisResponse {
   fromCache: boolean;
 }
 
+export interface SnapshotManifest {
+  schemaVersion: number;
+  generatedAt: string;
+  defaultSeason: number;
+  seasons: number[];
+}
+
+export interface SnapshotGame {
+  gameId: string;
+  season: number;
+  week: number;
+  gameType: string;
+  gameday: string | null;
+  homeTeamAbbr: string;
+  awayTeamAbbr: string;
+  homeScore: number | null;
+  awayScore: number | null;
+  result: number | null;
+  spreadLine: number | null;
+  totalLine: number | null;
+  homeMoneyline: number | null;
+  awayMoneyline: number | null;
+  homeSpreadOdds: number | null;
+  awaySpreadOdds: number | null;
+  overOdds: number | null;
+  underOdds: number | null;
+  roof: string | null;
+  surface: string | null;
+  divisionGame: boolean | null;
+  updatedAt: string | null;
+  market: MarketImplied | null;
+}
+
+export interface SnapshotAnalysis {
+  gameId: string;
+  analysisType: "matchup";
+  createdAt: string;
+  fatorChave: string;
+  vantagemTatica: string;
+  alertaVermelho: string;
+  veredito: string;
+}
+
+export interface SnapshotMetric {
+  season: number;
+  week: number;
+  teamAbbr: string;
+  offEpaPlay: number | null;
+  offEpaPass: number | null;
+  offEpaRush: number | null;
+  defEpaPass: number | null;
+  defEpaRush: number | null;
+  dropbackRate: number | null;
+  playsOffense: number | null;
+}
+
+export interface SnapshotSeason {
+  schemaVersion: number;
+  season: number;
+  generatedAt: string;
+  teams: Team[];
+  games: SnapshotGame[];
+  metricsByTeam: Record<string, SnapshotMetric[]>;
+  analysesByGame: Record<string, SnapshotAnalysis>;
+}
+
 /** Objeto preditivo estruturado exigido do LLM (contrato Fase 9). */
 export interface Predicao {
   fator_chave?: string;
@@ -66,7 +141,7 @@ export interface Predicao {
 
 /** Probabilidade implícita bruta de uma moneyline americana (spec §7.1). */
 export function mlToImplied(ml: number | null | undefined): number | null {
-  if (ml === null || ml === undefined || ml === 0) return null;
+  if (ml === null || ml === undefined || !Number.isFinite(ml) || !Number.isInteger(ml) || ml === 0) return null;
   return ml < 0 ? Math.abs(ml) / (Math.abs(ml) + 100) : 100 / (ml + 100);
 }
 
@@ -79,15 +154,25 @@ export function fairProbability(
   const a = mlToImplied(awayMl);
   if (h === null || a === null) return { home: null, away: null };
   const sum = h + a;
-  if (sum <= 0) return { home: null, away: null };
+  if (sum <= 1) return { home: null, away: null };
   return { home: h / sum, away: a / sum };
 }
 
-/** Favorito: a moneyline mais baixa (mais negativa) vence. */
-export function favoriteOf(game: Pick<Game, "homeTeam" | "awayTeam" | "homeMoneyline" | "awayMoneyline">): Team {
-  const homeMl = game.homeMoneyline ?? 0;
-  const awayMl = game.awayMoneyline ?? 0;
-  return homeMl <= awayMl ? game.homeTeam : game.awayTeam;
+export function validProbability(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value) && value > 0 && value < 1;
+}
+
+export function validFairPair(home: unknown, away: unknown): boolean {
+  return validProbability(home) && validProbability(away) && Math.abs(home + away - 1) < 1e-9;
+}
+
+/** Sem par fair válido (ou em empate), não existe favorito. */
+export function favoriteOf(
+  game: Pick<Game, "homeTeam" | "awayTeam" | "homeMoneyline" | "awayMoneyline">,
+  fair = fairProbability(game.homeMoneyline, game.awayMoneyline),
+): Team | null {
+  if (!validFairPair(fair.home, fair.away) || fair.home === fair.away) return null;
+  return fair.home! > fair.away! ? game.homeTeam : game.awayTeam;
 }
 
 export function fmtPct(value: number | null | undefined, digits = 1): string {

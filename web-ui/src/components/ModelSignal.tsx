@@ -10,11 +10,12 @@ interface ModelSignalProps {
 
 function ModelSignal({ row }: ModelSignalProps) {
   const { game, favAbbr, favPct, edge } = row;
+  if (!favAbbr || favPct === null || edge === null) return null;
 
   return (
     <Link to={`/game/${game.gameId}`} className="model-signal">
       <div className="ms-label">
-        <span className="k">Model Signal</span>
+        <span className="k">Market Signal</span>
         <span className="t">Biggest Edge</span>
       </div>
 
@@ -31,12 +32,12 @@ function ModelSignal({ row }: ModelSignalProps) {
       <div className="ms-stats">
         <span className="ms-stat">
           <span className="k">{favAbbr}</span>
-          <span className="v lime">{favPct !== null ? (favPct * 100).toFixed(0) : "—"}%</span>
+          <span className="v lime">{(favPct * 100).toFixed(0)}%</span>
         </span>
         <span className="ms-stat">
           <span className="k">Spread</span>
           <span className="v">
-            {favAbbr} {fmtLine(game.spreadLine)}
+            {fmtLine(game.spreadLine)}
           </span>
         </span>
         <span className="ms-edge">Edge {fmtEdge(edge)} pts</span>

@@ -210,11 +210,12 @@ def test_pbp_http_404_is_classified_and_tolerated_only_with_flag(
     run_local.acquire_season(allow_missing_pbp=True, **kwargs)
 
 
-def test_pbp_http_503_remains_fatal_with_allow_missing(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+@pytest.mark.parametrize("status_code", [429, 500, 503])
+def test_pbp_http_errors_remain_fatal_with_allow_missing(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, status_code: int
 ) -> None:
     monkeypatch.setattr(
-        extract.nfl, "load_pbp", lambda seasons: (_ for _ in ()).throw(wrapped_connection_error(503))
+        extract.nfl, "load_pbp", lambda seasons: (_ for _ in ()).throw(wrapped_connection_error(status_code))
     )
     with pytest.raises(ConnectionError):
         run_local.acquire_season(
@@ -232,6 +233,7 @@ def test_pbp_http_503_remains_fatal_with_allow_missing(
     "pbp_loader, expected",
     [
         (lambda season: (_ for _ in ()).throw(wrapped_connection_error()), ConnectionError),
+        (lambda season: (_ for _ in ()).throw(TimeoutError("timeout")), TimeoutError),
         (lambda season: (_ for _ in ()).throw(ValueError("parquet inválido")), ValueError),
     ],
 )

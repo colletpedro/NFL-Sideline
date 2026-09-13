@@ -14,7 +14,7 @@ interface MatchupHeroProps {
   game: Game;
   awayPct: number | null;
   homePct: number | null;
-  favAbbr: string;
+  favAbbr: string | null;
   confidence: Confidence | null;
   edge: number | null;
   vig: number | null;
@@ -74,14 +74,14 @@ function MatchupHero({
               </div>
             </div>
           </div>
-          <span className={`mu-pct ${!awayFav ? "fav" : ""}`}>
+          <span className={`mu-pct ${favAbbr === game.homeTeam.teamAbbr ? "fav" : ""}`}>
             {homePct !== null ? `${(homePct * 100).toFixed(1)}%` : "—"}
           </span>
         </div>
       </div>
 
-      <div className="mu-favline">
-        <span className="pick">Model favorite: {favAbbr}</span>
+      {favAbbr ? <div className="mu-favline">
+        <span className="pick">Market favorite: {favAbbr}</span>
         <span className="sep">·</span>
         {confidence && (
           <span className="conf">
@@ -91,7 +91,7 @@ function MatchupHero({
         )}
         <span className="sep">·</span>
         <span className="edge">Edge {fmtEdge(edge)} pts</span>
-      </div>
+      </div> : <p className="mu-favline">{homePct === null ? "Market unavailable" : "No market favorite"}</p>}
 
       <div className="mu-board">
         <div className="mu-board-split">
@@ -104,15 +104,15 @@ function MatchupHero({
           ) : (
             <span className="mu-board-cell" style={{ padding: 0 }}>
               <span className="k">Probability</span>
-              <span className="v">—</span>
+              <span className="v">Unavailable</span>
             </span>
           )}
         </div>
 
         <div className="mu-board-cell">
-          <span className="k">Model spread</span>
+          <span className="k">Spread</span>
           <span className="v">
-            <span className="fav-abbr">{favAbbr}</span> {fmtLine(game.spreadLine)}
+            {fmtLine(game.spreadLine)}
           </span>
         </div>
 
@@ -126,10 +126,10 @@ function MatchupHero({
           <span className="v">{vig !== null ? `${(vig * 100).toFixed(1)}%` : "—"}</span>
         </div>
 
-        <div className="mu-board-cell">
-          <span className="k">Model edge</span>
+        {edge !== null && <div className="mu-board-cell">
+          <span className="k">Market edge</span>
           <span className="v lime">{fmtEdge(edge)} pts</span>
-        </div>
+        </div>}
       </div>
     </header>
   );

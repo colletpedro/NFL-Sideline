@@ -12,4 +12,6 @@ public interface TeamWeekMetricsRepository extends JpaRepository<TeamWeekMetrics
     List<TeamWeekMetrics> findByIdSeasonAndIdTeamAbbrOrderByIdWeekAsc(Integer season, String teamAbbr);
 
     List<TeamWeekMetrics> findByIdSeasonAndIdTeamAbbrOrderByIdWeekDesc(Integer season, String teamAbbr, Pageable pageable);
+
+    List<TeamWeekMetrics> findAllByIdSeasonOrderByIdTeamAbbrAscIdWeekAsc(Integer season);
 }

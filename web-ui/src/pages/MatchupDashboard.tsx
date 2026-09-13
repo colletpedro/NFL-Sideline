@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
 import { ChevronLeft } from "lucide-react";
-import { api } from "../services/api";
+import { dataClient } from "#runtime-client";
 import type {
   AnalysisResponse,
   Game,
@@ -24,6 +23,7 @@ import OverviewPanel from "../components/OverviewPanel";
 import AnalysisSections from "../components/AnalysisSections";
 import MarketComparison from "../components/MarketComparison";
 import TacticalComparison from "../components/TacticalComparison";
+import { usePublication } from "../services/publicationContext";
 
 /** Metrics for the game week; falls back to the latest recorded week. */
 function metricForWeek(
@@ -53,6 +53,7 @@ function parsePredicao(markdownText: string | undefined): Predicao | null {
 }
 
 function MatchupDashboard() {
+  const { setDetailGame } = usePublication();
   const { id } = useParams<{ id: string }>();
   const [detail, setDetail] = useState<GameDetail | null>(null);
   const [analysis, setAnalysis] = useState<AnalysisResponse | null>(null);
@@ -60,6 +61,7 @@ function MatchupDashboard() {
   const [weekGames, setWeekGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [loadAttempt, setLoadAttempt] = useState(0);
   const [tab, setTab] = useState<TabKey>("overview");
   const tabRef = useRef<HTMLDivElement>(null);
 
@@ -70,70 +72,45 @@ function MatchupDashboard() {
     setLoading(true);
     setAnalysisLoading(true);
     setError(null);
+    setDetail(null);
+    setAnalysis(null);
+    setWeekGames([]);
     setTab("overview");
 
-    api.get<GameDetail>(`/games/${id}`)
-      .then((detailResponse) => {
-        if (!cancelled) {
-          setDetail(detailResponse.data);
-          setLoading(false);
+    Promise.all([
+      dataClient.getGameDetail(id),
+      dataClient.getAvailableAnalysis(id).catch(() => null),
+    ])
+      .then(async ([loadedDetail, loadedAnalysis]) => {
+        if (!loadedDetail) {
+          if (!cancelled) setError("Game not found.");
+          return;
         }
-      })
-      .catch((err) => {
+        const seasonGames = await dataClient.listGames(loadedDetail.game.season);
         if (!cancelled) {
-          if (axios.isAxiosError(err) && err.response?.status === 404) {
-            setError("Game not found.");
-          } else {
-            setError("This game could not be loaded.");
-          }
-          setLoading(false);
-          setAnalysisLoading(false);
-        }
-      });
-
-    api.post<AnalysisResponse>("/analysis/matchup", {
-      gameId: id,
-      analysisType: "matchup",
-    })
-      .then((analysisResponse) => {
-        if (!cancelled) {
-          setAnalysis(analysisResponse.data);
-          setAnalysisLoading(false);
+          setDetail(loadedDetail);
+          setDetailGame(loadedDetail.game);
+          setAnalysis(loadedAnalysis);
+          setWeekGames(seasonGames
+            .filter((game) => game.week === loadedDetail.game.week)
+            .sort((a, b) => (a.gameday ?? "").localeCompare(b.gameday ?? "") || a.gameId.localeCompare(b.gameId)));
         }
       })
       .catch(() => {
+        if (!cancelled) setError("This game could not be loaded.");
+      })
+      .finally(() => {
         if (!cancelled) {
+          setLoading(false);
           setAnalysisLoading(false);
         }
       });
 
     return () => {
       cancelled = true;
+      setDetailGame(null);
     };
-  }, [id]);
-
-  useEffect(() => {
-    if (!detail) return;
-    let cancelled = false;
-    api
-      .get<Game[]>("/games", {
-        params: { season: detail.game.season, week: detail.game.week },
-      })
-      .then((r) => {
-        if (!cancelled) {
-          const sorted = [...r.data].sort(
-            (a, b) => a.gameday.localeCompare(b.gameday) || a.gameId.localeCompare(b.gameId)
-          );
-          setWeekGames(sorted);
-        }
-      })
-      .catch(() => {
-        /* numbering is optional */
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [detail?.game.season, detail?.game.week]);
+  }, [id, loadAttempt, setDetailGame]);
 
   const goToAnalysis = () => {
     setTab("analysis");
@@ -151,19 +128,32 @@ function MatchupDashboard() {
   }
 
   if (error || !detail) {
-    return <div className="page-state">{error ?? "Game not found."}</div>;
+    return (
+      <div className="page-state page-state-error" role="alert">
+        <p>{error ?? "Game not found."}</p>
+        <button
+          className="page-state-retry"
+          type="button"
+          onClick={() => {
+            dataClient.clearCache();
+            setLoadAttempt((attempt) => attempt + 1);
+          }}
+        >
+          Retry
+        </button>
+      </div>
+    );
   }
 
   const { game, market } = detail;
   const predicao = parsePredicao(analysis?.markdownText);
-  const favorite = favoriteOf(game);
-  const favAbbr = favorite.teamAbbr;
-  const dogTeam = favorite === game.homeTeam ? game.awayTeam : game.homeTeam;
-
   const probs = gameProbs(game, market);
+  const favorite = favoriteOf(game, { home: probs.homeModel, away: probs.awayModel });
+  const favAbbr = favorite?.teamAbbr ?? null;
+  const dogTeam = favorite ? (favorite === game.homeTeam ? game.awayTeam : game.homeTeam) : null;
   const awayPct = probs.awayModel;
   const homePct = probs.homeModel;
-  const favPct = favAbbr === game.homeTeam.teamAbbr ? homePct : awayPct;
+  const favPct = favorite ? (favAbbr === game.homeTeam.teamAbbr ? homePct : awayPct) : null;
   const dogPct = favPct !== null ? 1 - favPct : null;
   const confidence = confidenceOf(favPct);
   const edge = edgePts(favPct);
@@ -205,7 +195,6 @@ function MatchupDashboard() {
         {tab === "overview" && (
           <OverviewPanel
             game={game}
-            favTeam={favorite}
             dogTeam={dogTeam}
             favAbbr={favAbbr}
             favPct={favPct}
@@ -233,13 +222,14 @@ function MatchupDashboard() {
         )}
       </div>
 
-      <div className={`mobile-cta ${tab !== "analysis" ? "show" : ""}`}>
+      <div className={`mobile-cta ${tab !== "analysis" && predicao ? "show" : ""}`}>
         <button onClick={goToAnalysis}>View Full Analysis</button>
       </div>
 
       <p className="mu-footnote">
-        {dayDateOf(game.gameday)} · {weekLabel} · Model probabilities are vig-free fair value
-        derived from the market. Lines are informational, not a recommendation.
+        {dayDateOf(game.gameday)} · {weekLabel} · {homePct !== null
+          ? "Probabilities are vig-free fair value derived from the market."
+          : "Market probabilities are unavailable."} Lines are informational, not a recommendation.
       </p>
     </article>
   );

@@ -10,10 +10,13 @@ import java.util.Optional;
 
 public interface GameRepository extends JpaRepository<Game, String> {
 
+    @Query("SELECT MAX(g.updatedAt) FROM Game g WHERE g.season = :season")
+    java.time.OffsetDateTime latestUpdatedAt(@Param("season") int season);
+
     @Query("SELECT g FROM Game g JOIN FETCH g.homeTeam JOIN FETCH g.awayTeam LEFT JOIN FETCH g.marketImplied WHERE g.season = :season AND g.week = :week")
     List<Game> findBySeasonAndWeekWithDetails(@Param("season") Integer season, @Param("week") Integer week);
 
-    @Query("SELECT g FROM Game g JOIN FETCH g.homeTeam JOIN FETCH g.awayTeam LEFT JOIN FETCH g.marketImplied WHERE g.season = :season ORDER BY g.week ASC, g.gameday ASC")
+    @Query("SELECT g FROM Game g JOIN FETCH g.homeTeam JOIN FETCH g.awayTeam LEFT JOIN FETCH g.marketImplied WHERE g.season = :season ORDER BY g.week ASC, g.gameday ASC, g.gameId ASC")
     List<Game> findAllBySeasonWithDetails(@Param("season") int season);
 
     @Query("SELECT g FROM Game g JOIN FETCH g.homeTeam JOIN FETCH g.awayTeam LEFT JOIN FETCH g.marketImplied WHERE g.id = :id")

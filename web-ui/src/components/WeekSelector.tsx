@@ -9,6 +9,7 @@ interface WeekSelectorProps {
   dayFilter: string;
   onSelectDay: (day: string) => void;
   gameCount: number;
+  season: number | null;
 }
 
 function WeekSelector({
@@ -19,6 +20,7 @@ function WeekSelector({
   dayFilter,
   onSelectDay,
   gameCount,
+  season,
 }: WeekSelectorProps) {
   const idx = weeks.indexOf(selectedWeek);
   const prev = idx > 0 ? weeks[idx - 1] : null;
@@ -39,7 +41,7 @@ function WeekSelector({
         <div className="week-label">
           <span className="w">Week {String(selectedWeek).padStart(2, "0")}</span>
           <span className="s">
-            {gameCount} games · 2026
+            {gameCount} games{season !== null ? ` · ${season}` : ""}
           </span>
         </div>
         <button

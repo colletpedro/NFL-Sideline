@@ -1,6 +1,6 @@
 import type { Predicao } from "../services/types";
 
-const FALLBACK = "The model's analysis is not available for this game.";
+const FALLBACK = "Analysis not available yet";
 
 interface AnalysisSectionsProps {
   predicao: Predicao | null;
