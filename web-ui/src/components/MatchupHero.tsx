@@ -3,6 +3,7 @@ import type { Confidence } from "../services/model";
 import { dayDateOf, fmtEdge } from "../services/model";
 import { fmtLine } from "../services/types";
 import ProbabilitySplit from "./ProbabilitySplit";
+import { finalGameResult } from "./matchupResult";
 
 const CONF_DOT: Record<string, string> = {
   HIGH: "#D7FF3F",
@@ -31,8 +32,32 @@ function MatchupHero({
   vig,
   weekLabel,
 }: MatchupHeroProps) {
-  const awayFav = favAbbr === game.awayTeam.teamAbbr;
+  const finalResult = finalGameResult(game);
+  const isPregame = game.homeScore === null && game.awayScore === null && game.result === null;
+  const showPregameMarket = finalResult === null && isPregame;
+  const awayFav = showPregameMarket && favAbbr === game.awayTeam.teamAbbr;
+  const homeFav = showPregameMarket && favAbbr === game.homeTeam.teamAbbr;
   const dotColor = confidence ? CONF_DOT[confidence] : "#6B7280";
+  const awayPrimary = finalResult
+    ? String(finalResult.awayScore)
+    : showPregameMarket && awayPct !== null
+      ? `${(awayPct * 100).toFixed(1)}%`
+      : "—";
+  const homePrimary = finalResult
+    ? String(finalResult.homeScore)
+    : showPregameMarket && homePct !== null
+      ? `${(homePct * 100).toFixed(1)}%`
+      : "—";
+  const awayPrimaryLabel = finalResult
+    ? `${game.awayTeam.teamAbbr} score ${finalResult.awayScore}`
+    : showPregameMarket && awayPct !== null
+      ? `${game.awayTeam.teamAbbr} win probability ${(awayPct * 100).toFixed(1)} percent`
+      : `${game.awayTeam.teamAbbr} primary value unavailable`;
+  const homePrimaryLabel = finalResult
+    ? `${game.homeTeam.teamAbbr} score ${finalResult.homeScore}`
+    : showPregameMarket && homePct !== null
+      ? `${game.homeTeam.teamAbbr} win probability ${(homePct * 100).toFixed(1)} percent`
+      : `${game.homeTeam.teamAbbr} primary value unavailable`;
 
   return (
     <header className="mu-hero">
@@ -53,8 +78,11 @@ function MatchupHero({
               <img className="mu-logo" src={game.awayTeam.logoUrl} alt="" />
             )}
           </div>
-          <span className={`mu-pct ${awayFav ? "fav" : ""}`}>
-            {awayPct !== null ? `${(awayPct * 100).toFixed(1)}%` : "—"}
+          <span
+            className={`mu-pct ${finalResult ? "mu-score" : ""} ${awayFav ? "fav" : ""}`.trim()}
+            aria-label={awayPrimaryLabel}
+          >
+            {awayPrimary}
           </span>
         </div>
 
@@ -74,13 +102,18 @@ function MatchupHero({
               </div>
             </div>
           </div>
-          <span className={`mu-pct ${favAbbr === game.homeTeam.teamAbbr ? "fav" : ""}`}>
-            {homePct !== null ? `${(homePct * 100).toFixed(1)}%` : "—"}
+          <span
+            className={`mu-pct ${finalResult ? "mu-score" : ""} ${homeFav ? "fav" : ""}`.trim()}
+            aria-label={homePrimaryLabel}
+          >
+            {homePrimary}
           </span>
         </div>
       </div>
 
-      {favAbbr ? <div className="mu-favline">
+      {finalResult ? (
+        <p className="mu-favline mu-resultline">{finalResult.label}</p>
+      ) : favAbbr ? <div className="mu-favline">
         <span className="pick">Market favorite: {favAbbr}</span>
         <span className="sep">·</span>
         {confidence && (

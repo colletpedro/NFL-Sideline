@@ -998,6 +998,11 @@ a.sports-nav-item:hover {
   color: var(--accent);
 }
 
+.mu-pct.mu-score {
+  color: var(--white);
+  font-weight: 700;
+}
+
 .mu-at {
   font-family: var(--font-display);
   font-weight: 700;
@@ -1044,6 +1049,13 @@ a.sports-nav-item:hover {
 
 .mu-favline .edge {
   color: var(--text-2);
+}
+
+.mu-resultline {
+  color: var(--white);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: none;
 }
 
 /* ------------------------------------------------------------
