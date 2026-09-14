@@ -1,35 +1,43 @@
-# Runbook: publicação estática
+# Runbook: publicação e recuperação estática
 
-O site público não depende de backend hospedado. O fluxo é `ETL controlado -> PostgreSQL -> exportador Java read-only -> snapshots JSON -> build Vite -> Vercel estática`.
+## Estado recuperado e vigente
 
-## Preparação
+A recuperação do site foi concluída em 2026-09-14. O site oficial é o React/Vite estático publicado no projeto Vercel `nfl-sideline`, nas URLs canônicas `https://nfl-sideline.vercel.app/` e `https://nfl-sideline-git-main-colletpedros-projects.vercel.app/`. Production serve assets e `/data/**` e não possui backend Java/Cloud Run, Function, `/api/v1`, localhost, Supabase ou Gemini no caminho público.
 
-1. Execute a suíte offline.
-2. Carregue as credenciais PostgreSQL já existentes somente no processo local.
-3. Gere o snapshot com o comando documentado em `docs/static-snapshot-contract.md`.
-4. Inspecione `manifest.json` e os arquivos de temporada. É proibida a presença de `context_json`, prompts, hashes de prompt, segredos ou configuração interna.
-5. Execute `npm --prefix web-ui run build`.
-6. Confirme no diretório `web-ui/dist` que não existem chamadas para backend, localhost, Supabase ou Gemini.
+O fluxo vigente é `ETL Python controlado -> PostgreSQL/Supabase -> exportador Java read-only -> snapshots JSON versionados -> build Vite -> Vercel estática`. Java continua API local, camada de domínio, integração Gemini explicitamente acionada e exportador batch; Python continua o ETL que grava diretamente no PostgreSQL. A Data API do Supabase permanece desativada. S3/AWS é opcional/legado e não integra esse fluxo.
 
-## Leitura remota controlada
+O projeto `web-ui`, disponível em `web-ui-khaki.vercel.app`, é ambiente temporário de segurança/rollback e não é endereço canônico.
 
-Quando autorizada, a geração remota usa JDBC PostgreSQL em conexão read-only e uma transação `@Transactional(readOnly = true)`. Não execute ETL, migrations ou qualquer comando de escrita. Compare antes e depois as contagens de `teams`, `games`, `team_week_metrics`, `market_implied`, `analysis_cache` e `ingestion_runs`; qualquer diferença invalida a execução.
+## Atualização manual futura do snapshot
 
-## Vercel
+O workflow semanal atualiza o PostgreSQL, mas não exporta snapshots, não os versiona, não cria commit e não publica a Vercel. Para uma atualização autorizada:
 
-- Root Directory: `web-ui`;
-- Framework: Vite;
-- Install: `npm ci`;
-- Build: `npm run build`;
-- Output: `dist`;
-- fallback SPA: `/(.*) -> /index.html`.
+1. Execute e revise o ETL conforme o procedimento aprovado; não trate o workflow atual como publicação automática.
+2. Quando a leitura remota for autorizada, use JDBC PostgreSQL read-only e transação `@Transactional(readOnly = true)` no exportador. Não execute migrations nem escrita; compare antes e depois as contagens de `teams`, `games`, `team_week_metrics`, `market_implied`, `analysis_cache` e `ingestion_runs`.
+3. Empacote Java 21, carregue `.env` explicitamente no processo e execute o exportador read-only:
 
-Production serve somente assets e `/data/**`. Não configure destino de backend, token de proxy nem override de API na Vercel. Não há Function em `api/`.
+   ```bash
+   set -a
+   source .env
+   set +a
+   java -jar core-api/target/core-api-0.1.0.jar snapshot-export \
+     --season 2026 \
+     --output web-ui/public/data
+   ```
 
-## Validação local antes de publicar
+   O Java não carrega `.env` sozinho.
+4. Revise `manifest.json` e os snapshots. Não publique `context_json`, prompts, hashes de prompt, segredos ou configuração interna. Preserve o contrato atômico de scores e o estado neutro para mercado ausente.
+5. Valide o build Vite e a navegação direta. A rede deve conter apenas assets e GETs de `/data/**`; são proibidos `/api/v1`, POST, localhost, Supabase e Gemini.
+6. Versione o artefato revisado e faça a publicação manual aprovada.
 
-Sirva `web-ui/dist`, abra a home e um detalhe, teste navegação direta e retorno, e confira desktop/mobile. A aba de rede deve mostrar apenas arquivos estáticos; são proibidos `/api/v1`, POST, localhost, Supabase e Gemini.
+## Deployment manual na Vercel
+
+No projeto oficial, `Root Directory = web-ui`. Para a CLI resolver essa configuração corretamente, execute o deployment manual na raiz do repositório, nunca já dentro de `web-ui`; o segundo caso procura incorretamente `web-ui/web-ui`.
+
+- Projeto oficial/canônico: `nfl-sideline`;
+- Framework: Vite; instalação `npm ci`; build `npm run build`; saída `dist`; fallback SPA `/(.*) -> /index.html`;
+- Não configure proxy, token de backend ou override de API na Vercel.
 
 ## Rollback
 
-Como snapshots são versionados, restaure em uma mudança posterior o último conjunto conhecido e gere novo build. Nunca reexecute a baseline do banco e nunca edite o banco para corrigir um snapshot público. S3/AWS permanecem fora deste fluxo e serão tratados separadamente.
+Como os snapshots são versionados, restaure em uma mudança posterior o último conjunto conhecido e gere/publice o build estático correspondente. O ambiente temporário `web-ui` pode servir como referência de segurança, mas não substitui as URLs canônicas. Nunca reexecute a baseline do banco nem edite o banco para corrigir um snapshot público.

@@ -29,6 +29,16 @@ S3 permanece apenas como caminho opcional/legado em `run_local.py`; nenhum uploa
 
 O frontend de Production não usa Supabase nem backend. O Java batch e os loaders Python acessam o PostgreSQL diretamente por JDBC e psycopg2; a Data API permanece desativada.
 
+### Production estática atual
+
+O rollout oficial foi concluído em 2026-09-14. Os endereços canônicos são [nfl-sideline.vercel.app](https://nfl-sideline.vercel.app/) e [nfl-sideline-git-main-colletpedros-projects.vercel.app](https://nfl-sideline-git-main-colletpedros-projects.vercel.app/); ambos servem o build Vite estático e leem somente `/data/manifest.json` e `/data/seasons/2026.json`. Não há backend Java, Cloud Run, `/api/v1`, localhost, Supabase ou Gemini no caminho público.
+
+O projeto Vercel `web-ui`, acessível em `web-ui-khaki.vercel.app`, é mantido apenas como ambiente temporário de segurança/rollback e não é endereço canônico.
+
+O snapshot público atual tem temporada 2026, 272 jogos nas semanas 1–18, 32 times, 112 jogos com mercado e 160 sem mercado. Há quatro métricas da semana 1 (LA, NE, SEA e SF), oito análises públicas e dois resultados completos: `NE 10 @ SEA 13` (`Final · SEA won by 3`) e `SF 27 @ LA 7` (`Final · SF won by 20`). Jogos futuros sem mercado permanecem visíveis em estado neutro; em jogos concluídos, os placares são primários e as probabilidades ficam na área de mercado.
+
+A publicação de novos snapshots continua manual: o workflow semanal atualiza o PostgreSQL, mas não executa o exportador Java, não atualiza os JSONs versionados, não cria commit e não publica a Vercel automaticamente. Sua confiabilidade contínua também ainda não foi comprovada por execuções observadas.
+
 ## Pré-requisitos
 
 - Java 21 e Maven 3.9+
@@ -130,10 +140,15 @@ Para o gate Java reproduzível, confirme primeiro com `mvn -version` que o Maven
 
 A API é destinada a desenvolvimento e demonstração locais. CORS é centralizado e, por default, permite somente `http://localhost:5173` e `http://127.0.0.1:5173`.
 
-Para exportar a temporada 2026 sem iniciar servidor, após `mvn -f core-api/pom.xml package`:
+Para exportar a temporada 2026 sem iniciar servidor, após `mvn -f core-api/pom.xml package`, carregue as credenciais no processo. O Java não carrega `.env` sozinho:
 
 ```bash
-java -jar core-api/target/core-api-0.1.0.jar snapshot-export --season 2026 --output web-ui/public/data
+set -a
+source .env
+set +a
+java -jar core-api/target/core-api-0.1.0.jar snapshot-export \
+  --season 2026 \
+  --output web-ui/public/data
 ```
 
 Consulte o [contrato de snapshots](docs/static-snapshot-contract.md) para formato, atomicidade e opções.
@@ -152,7 +167,7 @@ Para trocar a API apenas no desenvolvimento/teste local, copie `web-ui/.env.exam
 
 O contexto de publicação usa `manifest.defaultSeason` e `manifest.generatedAt` em Production; a API local oferece `/api/v1/publication` com a temporada NFL corrente e a última atualização dos jogos. Home, header e footer compartilham esse contexto. A semana inicial é escolhida pelas datas UTC: semana cujo intervalo contém hoje; entre semanas, a próxima; antes da temporada, a primeira; depois do último jogo, a última. A seleção manual permanece disponível e independe de odds/análises. PBP ausente significa métricas ausentes, sem substituir dados por outra temporada.
 
-A integração opt-in `python etl-pipeline/validate_local_calendar.py`, após reaplicar as migrations no Supabase **local**, usa exclusivamente `127.0.0.1:54322` e não lê `.env`. Em 2026-09-13 validou 272 jogos/112 mercados em duas execuções e PBP local com 323 linhas/quatro métricas da semana 1. O snapshot público de 112 jogos continua preservado e aguarda rollout remoto expressamente autorizado.
+A integração opt-in `python etl-pipeline/validate_local_calendar.py`, após reaplicar as migrations no Supabase **local**, usa exclusivamente `127.0.0.1:54322` e não lê `.env`. Em 2026-09-13 validou 272 jogos/112 mercados em duas execuções e PBP local com 323 linhas/quatro métricas da semana 1. O snapshot público publicado em 2026-09-14 contém o calendário completo de 272 jogos; seus 112 mercados são apenas o subconjunto com cotação válida.
 
 ## Deploy seguro
 

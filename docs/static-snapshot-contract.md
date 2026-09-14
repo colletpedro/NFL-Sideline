@@ -2,6 +2,12 @@
 
 O frontend de Production lê somente arquivos versionados em `web-ui/public/data`. O contrato atual é `schemaVersion: 1`; mudanças incompatíveis exigem nova versão e suporte explícito no cliente.
 
+## Publicação atual
+
+O rollout estático oficial foi concluído em 2026-09-14. As URLs canônicas são `https://nfl-sideline.vercel.app/` e `https://nfl-sideline-git-main-colletpedros-projects.vercel.app/`; ambas leem este contrato sem backend público, Cloud Run, `/api/v1`, Supabase ou Gemini. O projeto Vercel temporário `web-ui` (`web-ui-khaki.vercel.app`) é apenas ambiente de segurança/rollback e não é canônico.
+
+O artefato publicado contém a temporada 2026: 272 jogos nas semanas 1–18, 32 times, 112 mercados válidos, 160 jogos sem mercado, quatro métricas da semana 1 para LA/NE/SEA/SF, oito análises públicas e dois trios de scores completos. Os resultados exibidos são `NE 10 @ SEA 13` (`Final · SEA won by 3`) e `SF 27 @ LA 7` (`Final · SF won by 20`).
+
 ## Manifesto
 
 `/data/manifest.json` contém:
@@ -53,9 +59,12 @@ O conteúdo é gravado em um diretório temporário irmão e só então trocado.
 
 ## Comando
 
-Após empacotar o Java 21:
+Após empacotar o Java 21, carregue explicitamente as credenciais no processo; o Java não carrega `.env` sozinho:
 
 ```bash
+set -a
+source .env
+set +a
 java -jar core-api/target/core-api-0.1.0.jar snapshot-export \
   --season 2026 \
   --output web-ui/public/data
@@ -65,4 +74,4 @@ java -jar core-api/target/core-api-0.1.0.jar snapshot-export \
 
 Falhas batch emitem códigos fixos úteis para CI (`INVALID_OPTIONS`, `STARTUP_FAILED`, `DATABASE_READ_FAILED`, `OUTPUT_WRITE_FAILED`, `EMPTY_SEASON` ou `EXPORT_FAILED`) com orientações sanitizadas; mensagens de exceção, URLs de banco e payloads não são impressos.
 
-O snapshot público atual não deve ser substituído por resultados de validação local. O rollout posterior exige autorização para atualizar o remoto, exportar read-only preservando caches e só então versionar/publicar o artefato definitivo.
+O snapshot público não deve ser substituído por resultados de validação local. A próxima atualização pública continua manual: após a leitura remota read-only autorizada, exporte preservando caches, revise os JSONs, versione o artefato e publique o build estático. O workflow semanal ainda não executa essas etapas automaticamente.

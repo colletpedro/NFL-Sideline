@@ -1,10 +1,10 @@
 # NFL Sideline — Especificação Técnica
 
-**Versão documental:** 2.1
+**Versão documental:** 2.2
 
 **Status:** protótipo funcional em estabilização
 
-**Baseline documental:** pacote de consistência e observabilidade do ETL validado localmente em 2026-09-09, a partir de `ce49ec8`
+**Baseline documental:** pacote de consistência e observabilidade do ETL validado localmente em 2026-09-09, com rollout estático oficial confirmado em 2026-09-14.
 
 **Autoridade:** esta especificação descreve o comportamento observado no código e no schema nessa baseline. Itens sem evidência são marcados como planejados, não comprovados ou pendentes.
 
@@ -32,7 +32,6 @@ Odds, spreads, totais e probabilidades implícitas são contexto complementar. E
 - Odds ao vivo, movimentação de linha, recomendação de aposta ou gestão de banca.
 - Dados de tracking, lesões em tempo real ou charting proprietário.
 - Autenticação, autorização e multi-tenancy.
-- Deploy comprovado em Cloud Run ou Vercel.
 - Operação confiável e observada do ETL semanal.
 - Alertas, retenção, dashboard operacional ou fechamento automático de runs presos em `RUNNING`.
 
@@ -53,6 +52,14 @@ nflverse
 ```
 
 O fluxo principal não passa por um data lake remoto. S3 existe como caminho opcional/legado: `run_local.py` envia schedules somente quando `--upload-s3` é informado; credenciais AWS isoladamente não provocam chamadas a boto3. Os loaders ativos leem Parquet local e gravam diretamente no Supabase.
+
+### Production publicada
+
+O rollout oficial está comprovado em 2026-09-14 no projeto Vercel `nfl-sideline`. As URLs canônicas `https://nfl-sideline.vercel.app/` e `https://nfl-sideline-git-main-colletpedros-projects.vercel.app/` servem o site React/Vite estático. Production lê somente `/data/manifest.json` e `/data/seasons/2026.json`; não hospeda Java, Cloud Run, `/api/v1`, Supabase ou Gemini.
+
+O projeto Vercel temporário `web-ui` (`web-ui-khaki.vercel.app`) permanece preservado para segurança/rollback e não é canônico. No projeto oficial, `Root Directory = web-ui`; um deployment manual pela CLI deve ser iniciado na raiz do repositório, pois iniciá-lo dentro de `web-ui` faria a Vercel resolver incorretamente `web-ui/web-ui`.
+
+O snapshot publicado é a temporada 2026 com 272 jogos nas semanas 1–18, 32 times, 112 jogos com mercado, 160 sem mercado, quatro métricas da semana 1 (LA, NE, SEA e SF), oito análises e dois jogos com placar completo: `NE 10 @ SEA 13` e `SF 27 @ LA 7`. O contrato de scores e o mercado opcional permanecem os descritos nesta especificação.
 
 ### 2.1 Responsabilidades
 
@@ -330,7 +337,7 @@ O contrato completo de `schemaVersion: 1`, ordenação, atomicidade e campos pú
 | S3 | código opcional/legado; não está no caminho principal ativo |
 | GitHub Actions | `ci-java.yml` e `weekly_etl.yml` existem; confiabilidade contínua não comprovada |
 | Cloud Run | fora do caminho público atual; Dockerfile preservado para usos locais/futuros separados |
-| Vercel | build Vite estático com snapshots versionados e fallback SPA |
+| Vercel | Production oficial comprovada em 2026-09-14; build Vite estático com snapshots versionados e fallback SPA |
 | Frontend/API | Production usa somente `/data`; API Spring permanece local |
 
 O workflow semanal preserva `workflow_dispatch`, o cron e os pins existentes de `actions/checkout@v4` e `actions/setup-python@v5`. Ele instala `etl-pipeline` pelo `pyproject.toml` e executa somente `python etl-pipeline/run_pipeline.py --allow-missing-pbp`. A temporada corrente é resolvida pelo módulo compartilhado. A flag não mascara outage: apenas PBP vazio, futuro ou 404 ainda não publicado segue sem bloquear; qualquer outra falha tenta registrar `FAILED` e falha o job. Os três secrets PostgreSQL existentes continuam sendo os únicos secrets do job; S3 e Data API não participam. O YAML corrigido ainda não comprova confiabilidade contínua em produção.
@@ -346,7 +353,7 @@ No mesmo dia, as duas migrations intactas foram reaplicadas no Supabase local e 
 1. **Estabilização e reprodutibilidade** — baseline de schema, configuração segura, documentação coerente e processo repetível de ambiente local/remoto.
 2. **Consistência de dados e análise** — corrigir lacunas de placares/execuções, formalizar métricas, alinhar janelas e fortalecer o contrato da análise.
 3. **Confiabilidade e testes** — ampliar cobertura de integração/contrato e observar execuções reais do workflow semanal agora autossuficiente.
-4. **Publicação estática** — automatizar a geração controlada dos snapshots, validar o artefato e publicar o build estático na Vercel sem servidor permanente.
+4. **Automação da publicação estática** — automatizar a geração controlada dos snapshots, validar o artefato e publicar o build estático na Vercel sem servidor permanente. O rollout manual atual já está publicado, mas esse fluxo automático não existe.
 5. **Evolução analítica/preditiva** — métricas avançadas, ajuste por adversário, dataset de avaliação, backtest e eventual modelo quantitativo próprio.
 
 Nenhuma etapa posterior é considerada concluída apenas pela presença de código ou configuração.
@@ -376,7 +383,7 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 - Campo `markdownText` carrega JSON, criando um contrato nominalmente enganoso.
 - Hash do cache não inclui explicitamente o nome do modelo.
 - Cliente Gemini sem timeout explícito.
-- O snapshot público preservado ainda tem 112 jogos e aguarda rollout remoto autorizado para incorporar o calendário completo; a política editorial do ADR-010 ainda não foi implementada.
+- O snapshot público atual contém 272 jogos, mas sua atualização continua manual: o workflow semanal não exporta nem versiona snapshots e não publica a Vercel. A política editorial do ADR-010 continua apenas registrada, sem implementação.
 
 ## 13. Glossário mínimo
 
