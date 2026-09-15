@@ -6,6 +6,9 @@
 
 **Baseline documental:** pacote de consistência e observabilidade do ETL validado localmente em 2026-09-09, com rollout estático oficial confirmado em 2026-09-14.
 
+**Estado do editorial v0:** implementado localmente e validado offline. Ainda não foi executado com banco/Gemini
+reais, integrado ao artefato público nem publicado; o manifesto editorial segue vazio e não contém aprovações reais.
+
 **Autoridade:** esta especificação descreve o comportamento observado no código e no schema nessa baseline. Itens sem evidência são marcados como planejados, não comprovados ou pendentes.
 
 ## 1. Produto e posicionamento
@@ -279,13 +282,21 @@ Base: `/api/v1`.
 | `GET` | `/games?season=&week=` | lista jogos; `week` é opcional |
 | `GET` | `/games/{gameId}` | retorna `game`, `market`, `homeMetrics` e `awayMetrics` |
 | `GET` | `/analysis/matchup/{gameId}` | retorna somente a análise cacheada mais recente, ou 404 |
-| `POST` | `/analysis/matchup` | recebe `{ "gameId": "...", "analysisType": "matchup" }` |
+| `POST` | `/analysis/matchup` | recebe `gameId`, `analysisType` (`matchup_full_v0` ou `matchup_basic_v0`), `asOfDate` UTC e `revisionKey`; rejeita tipo ou janela incompatível |
 
-Não existe uma rota separada `/games/{gameId}/market`; o mercado vem no detalhe do jogo. Erros de parâmetros e recursos usam `ProblemDetail`; falhas de LLM tratadas pelo controller retornam 503. Não há timeout explícito configurado no `RestClient` do Gemini.
+Não existe uma rota separada `/games/{gameId}/market`; o mercado vem no detalhe do jogo. Erros de parâmetros e recursos usam `ProblemDetail`; falhas de LLM tratadas pelo controller retornam 503. O `RestClient` do Gemini tem timeout explícito e erros sanitizados.
 
 ## 7. Análise Gemini e contrato JSON
 
-O backend monta `context_json` com jogo, odds, mercado, séries semanais dos dois times e forma recente. O prompt completo é hashado com SHA-256; `(game_id, analysis_type, prompt_hash)` identifica o cache.
+O backend monta um `context_json` canônico com jogo, odds, mercado e até três semanas elegíveis anteriores ao jogo,
+incluindo temporada/origem e qualidade COMPLETE/PARTIAL/MINIMAL. Fallback da temporada anterior é marcado como
+referência histórica. O hash SHA-256 inclui tipo, versão do prompt, contexto, modelo, `asOfDate` e `revisionKey`;
+`(game_id, analysis_type, prompt_hash)` identifica cada versão imutável.
+
+`ContextQuality` mede somente a cobertura de métricas: COMPLETE requer métricas correntes elegíveis dos dois
+times, PARTIAL representa um time ou cobertura histórica/insuficiente, e MINIMAL representa ausência de métricas
+para ambos. Mercado é metadado separado. Apenas `MarketImplied` coerente acompanhado do par completo de
+moneylines chega ao prompt; qualquer odd, spread ou moneyline parcial é retido como limitação.
 
 O Gemini deve devolver um objeto JSON com:
 
@@ -306,15 +317,17 @@ Os quatro primeiros campos, todos não vazios, formam o contrato entregue à UI.
 ### 7.1 Janelas temporais
 
 - A API de times aceita `season`, `l4` e `l6`. `l4`/`l6` retornam as últimas quatro/seis semanas registradas na temporada solicitada, em ordem crescente.
-- O contexto do Gemini inclui `recent_form_last_3_weeks`, com até três registros mais recentes.
-- Se não houver métricas na temporada do jogo, a forma recente usa a temporada anterior (`season - 1`). Com menos de três registros, usa os disponíveis.
+- O contexto editorial inclui até três registros anteriores à week do jogo; métricas da própria rodada ou posteriores são excluídas.
+- Se não houver métricas elegíveis na temporada do jogo, a forma recente usa a temporada anterior (`season - 1`) e a rotula como `HISTORICAL_REFERENCE`, nunca como momento atual. Com menos de três registros, usa os disponíveis.
+- Na postseason, o schema atual não permite associar cada métrica a fase/data. O resolver de rodadas continua
+  cronológico, mas o contexto não usa `metric.week < game.week` como prova: degrada para referência histórica
+  com `POSTSEASON_METRIC_CUTOFF_UNVERIFIABLE` até que uma evolução de schema resolva o corte sem ambiguidade.
 - O detalhe do jogo retorna a série semanal completa da temporada do jogo.
 
 ### 7.2 Limite real da validação anti-alucinação
 
-`validateCitedNumbers` coleta todos os números de `context_json` e valida, com tolerância `0.01`, somente valores numéricos presentes no objeto raiz `metricas_citadas`. Se esse objeto estiver ausente, não for objeto, contiver valores não numéricos ou se um número aparecer apenas nos textos finais sem ser repetido em `metricas_citadas`, esse número não é validado.
-
-Portanto, a implementação reduz um tipo de alucinação numérica, mas não garante que todos os números de `fator_chave`, `vantagem_tatica`, `alerta_vermelho` e `veredito` pertençam ao contexto.
+Todo número detectado nos quatro textos deve aparecer em `metricas_citadas`, e cada valor citado deve existir no
+contexto dentro da tolerância `0.01`. Resposta inválida, falha ou timeout não cria cache utilizável.
 
 ## 8. Frontend
 

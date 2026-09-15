@@ -7,6 +7,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+
+import java.time.Duration;
 
 import java.util.List;
 
@@ -18,17 +21,22 @@ import java.util.List;
  */
 @Component
 @Profile("!snapshot")
-public class GeminiClient {
+public class GeminiClient implements GeminiGateway {
 
     private final String apiKey;
     private final String url;
     private final RestClient restClient;
 
     public GeminiClient(@Value("${gemini.api-key}") String apiKey,
-                        @Value("${gemini.url}") String url) {
+                        @Value("${gemini.url}") String url,
+                        @Value("${gemini.timeout:30s}") Duration timeout) {
         this.apiKey = apiKey;
         this.url = url;
+        SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+        requestFactory.setConnectTimeout(timeout);
+        requestFactory.setReadTimeout(timeout);
         this.restClient = RestClient.builder()
+                .requestFactory(requestFactory)
                 .defaultHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
                 .build();
     }
@@ -39,12 +47,13 @@ public class GeminiClient {
                 List.of(new GeminiRequest.Content("user", List.of(new GeminiRequest.Part(userPrompt)))),
                 new GeminiRequest.GenerationConfig("application/json"));
 
-        GeminiResponse response = restClient.post()
-                .uri(url)
-                .header("x-goog-api-key", apiKey)
-                .body(request)
-                .retrieve()
-                .body(GeminiResponse.class);
+        final GeminiResponse response;
+        try {
+            response = restClient.post().uri(url).header("x-goog-api-key", apiKey)
+                    .body(request).retrieve().body(GeminiResponse.class);
+        } catch (RuntimeException failure) {
+            throw new IllegalStateException("Gemini request failed or timed out", failure);
+        }
 
         if (response == null
                 || response.candidates() == null

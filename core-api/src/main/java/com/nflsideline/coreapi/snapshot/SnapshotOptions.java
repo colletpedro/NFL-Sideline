@@ -2,16 +2,18 @@ package com.nflsideline.coreapi.snapshot;
 
 import java.nio.file.Path;
 import java.time.Clock;
+import java.time.LocalDate;
 import com.nflsideline.coreapi.service.NflSeason;
 import java.util.List;
 import java.util.TreeSet;
 
-public record SnapshotOptions(List<Integer> seasons, Path outputDirectory, boolean allowEmpty) {
+public record SnapshotOptions(List<Integer> seasons, Path outputDirectory, boolean allowEmpty, LocalDate asOfDate) {
 
     static SnapshotOptions parse(String[] args, Clock clock) {
         TreeSet<Integer> seasons = new TreeSet<>();
         Path output = null;
         boolean allowEmpty = false;
+        LocalDate asOfDate = null;
         for (int i = 0; i < args.length; i++) {
             String argument = args[i];
             if ("--allow-empty".equals(argument)) {
@@ -24,6 +26,10 @@ public record SnapshotOptions(List<Integer> seasons, Path outputDirectory, boole
                 output = Path.of(argument.substring("--output=".length()));
             } else if ("--output".equals(argument)) {
                 output = Path.of(requireValue(args, ++i, "--output"));
+            } else if (argument.startsWith("--as-of=")) {
+                asOfDate = parseAsOf(argument.substring("--as-of=".length()));
+            } else if ("--as-of".equals(argument)) {
+                asOfDate = parseAsOf(requireValue(args, ++i, "--as-of"));
             } else {
                 throw new IllegalArgumentException("Unsupported snapshot option");
             }
@@ -31,10 +37,13 @@ public record SnapshotOptions(List<Integer> seasons, Path outputDirectory, boole
         if (output == null) {
             throw new IllegalArgumentException("--output is required");
         }
+        if (asOfDate == null) {
+            throw new IllegalArgumentException("--as-of is required");
+        }
         if (seasons.isEmpty()) {
             seasons.add(currentSeason(clock));
         }
-        return new SnapshotOptions(List.copyOf(seasons), output.toAbsolutePath().normalize(), allowEmpty);
+        return new SnapshotOptions(List.copyOf(seasons), output.toAbsolutePath().normalize(), allowEmpty, asOfDate);
     }
 
     static int currentSeason(Clock clock) {
@@ -50,6 +59,14 @@ public record SnapshotOptions(List<Integer> seasons, Path outputDirectory, boole
             return season;
         } catch (NumberFormatException exception) {
             throw new IllegalArgumentException("Season must be an integer");
+        }
+    }
+
+    private static LocalDate parseAsOf(String raw) {
+        try {
+            return LocalDate.parse(raw);
+        } catch (java.time.format.DateTimeParseException exception) {
+            throw new IllegalArgumentException("--as-of must use YYYY-MM-DD");
         }
     }
 

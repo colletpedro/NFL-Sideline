@@ -30,6 +30,11 @@ public class AnalysisController {
     public ResponseEntity<?> generateMatchupAnalysis(@RequestBody @Valid AnalysisRequest request) {
         try {
             return ResponseEntity.ok(analysisService.generateMatchupAnalysis(request));
+        } catch (IllegalArgumentException ex) {
+            ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST,
+                    "Unsupported analysis type or ineligible editorial window");
+            problem.setTitle("Invalid analysis request");
+            return ResponseEntity.badRequest().body(problem);
         } catch (IllegalStateException ex) {
             // Falha de LLM (timeout, resposta malformada ou alucinação detectada):
             // degradação graciosa — 503 sem derrubar a aplicação.

@@ -22,10 +22,12 @@ O workflow semanal atualiza o PostgreSQL, mas não exporta snapshots, não os ve
    set +a
    java -jar core-api/target/core-api-0.1.0.jar snapshot-export \
      --season 2026 \
+     --as-of 2026-09-15 \
      --output web-ui/public/data
    ```
 
-   O Java não carrega `.env` sozinho.
+   O Java não carrega `.env` sozinho. Substitua `--as-of` pela data UTC de corte editorial aprovada; ela é
+   obrigatória e não é inferida de `generatedAt`.
 4. Revise `manifest.json` e os snapshots. Não publique `context_json`, prompts, hashes de prompt, segredos ou configuração interna. Preserve o contrato atômico de scores e o estado neutro para mercado ausente.
 5. Valide o build Vite e a navegação direta. A rede deve conter apenas assets e GETs de `/data/**`; são proibidos `/api/v1`, POST, localhost, Supabase e Gemini.
 6. Versione o artefato revisado e faça a publicação manual aprovada.

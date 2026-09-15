@@ -48,7 +48,7 @@ final class SnapshotFixtures {
     }
 
     static AnalysisCache analysis(long id, String gameId, String createdAt, String response) {
-        return AnalysisCache.builder().id(id).gameId(gameId).analysisType("matchup")
+        return AnalysisCache.builder().id(id).gameId(gameId).analysisType("matchup_full_v0")
                 .promptHash("internal").contextJson("{\"private\":true}").responseText(response)
                 .modelName("cached-model").createdAt(OffsetDateTime.parse(createdAt)).build();
     }

@@ -58,13 +58,15 @@ public class SnapshotAssembler {
 
         SortedMap<String, SnapshotContract.AnalysisDto> analysesByGame = new TreeMap<>();
         int rejected = 0;
-        Map<String, AnalysisCache> latest = new TreeMap<>();
+        Map<String, AnalysisCache> selected = new TreeMap<>();
         sourceAnalyses.stream()
-                .filter(analysis -> "matchup".equals(analysis.getAnalysisType()))
+                .filter(analysis -> "matchup_full_v0".equals(analysis.getAnalysisType())
+                        || "matchup_basic_v0".equals(analysis.getAnalysisType())
+                        || "matchup".equals(analysis.getAnalysisType()))
                 .filter(analysis -> gameIds.contains(analysis.getGameId()))
                 .sorted(analysisOrder())
-                .forEach(analysis -> latest.putIfAbsent(analysis.getGameId(), analysis));
-        for (Map.Entry<String, AnalysisCache> entry : latest.entrySet()) {
+                .forEach(analysis -> selected.putIfAbsent(analysis.getGameId(), analysis));
+        for (Map.Entry<String, AnalysisCache> entry : selected.entrySet()) {
             SnapshotContract.AnalysisDto analysis = parseAnalysis(entry.getValue());
             if (analysis == null) {
                 rejected++;
@@ -73,7 +75,7 @@ public class SnapshotAssembler {
             }
         }
 
-        int missing = games.size() - analysesByGame.size() - rejected;
+        int missing = games.size() - analysesByGame.size();
         SnapshotContract.SeasonSnapshot snapshot = new SnapshotContract.SeasonSnapshot(
                 SnapshotContract.SCHEMA_VERSION,
                 season,

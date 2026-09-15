@@ -35,6 +35,20 @@ Calendário independe de mercado: `market: null` e odds nulas são publicáveis.
 
 A análise pública expõe somente `gameId`, `analysisType`, `createdAt`, `fatorChave`, `vantagemTatica`, `alertaVermelho` e `veredito`. `context_json`, `prompt_hash`, nome do modelo, prompts, credenciais e configurações internas são proibidos.
 
+Uma análise só entra no snapshot quando seu `analysisCacheId` está aprovado no manifesto interno
+`editorial/analysis-selections.json`, os hashes e metadados coincidem com a linha imutável do cache e sua
+profundidade é compatível com a janela editorial. FULL é pública na rodada atual e BASIC na seguinte; rodadas
+posteriores e tipos legados `matchup` não são selecionados automaticamente. A janela exata é reconstituída na
+data de geração e na data editorial de publicação. Para jogos encerrados, uma seleção FULL/BASIC só é preservada
+se a revisão ocorreu até o gameday; aprovação retroativa posterior é rejeitada.
+
+O modo interno `LEGACY_PUBLISHED` existe exclusivamente para preservar versões legacy já presentes no snapshot
+anterior: exige seleção explícita por ID e hashes, jogo encerrado e igualdade exata de `createdAt` e dos quatro
+textos públicos com o artefato anterior. Continua projetado como `analysisType: "matchup"` no v1. Uma entrada
+individual inválida omite somente a análise, sem retirar o calendário. Em contraste, manifesto raiz ausente,
+ilegível ou estruturalmente inválido aborta antes do writer; `selections: []` é válido. O manifesto nunca é
+copiado para `web-ui/public`.
+
 ### Tipos e campos da versão 1
 
 Tipos marcados com `?` aceitam `null`. Valores decimais são números JSON e timestamps são strings ISO-8601 UTC.
@@ -67,11 +81,17 @@ source .env
 set +a
 java -jar core-api/target/core-api-0.1.0.jar snapshot-export \
   --season 2026 \
+  --as-of 2026-09-15 \
   --output web-ui/public/data
 ```
 
-`--season` pode ser repetido e aceita também `--season=2026`. Sem ele, o exportador usa a temporada NFL corrente. Uma temporada sem jogos falha, salvo quando `--allow-empty` é informado explicitamente.
+`--season` pode ser repetido e aceita também `--season=2026`. Sem ele, o exportador usa a temporada NFL
+corrente. `--as-of YYYY-MM-DD` é obrigatório e determina somente o corte editorial; `generatedAt` continua
+sendo o timestamp real/injetável da geração. Uma temporada sem jogos falha, salvo quando `--allow-empty` é
+informado explicitamente.
 
-Falhas batch emitem códigos fixos úteis para CI (`INVALID_OPTIONS`, `STARTUP_FAILED`, `DATABASE_READ_FAILED`, `OUTPUT_WRITE_FAILED`, `EMPTY_SEASON` ou `EXPORT_FAILED`) com orientações sanitizadas; mensagens de exceção, URLs de banco e payloads não são impressos.
+Falhas batch emitem códigos fixos úteis para CI (`INVALID_OPTIONS`, `STARTUP_FAILED`, `DATABASE_READ_FAILED`,
+`OUTPUT_WRITE_FAILED`, `EMPTY_SEASON`, `EDITORIAL_MANIFEST_INVALID` ou `EXPORT_FAILED`) com orientações
+sanitizadas; paths, mensagens de exceção, URLs de banco e payloads não são impressos.
 
 O snapshot público não deve ser substituído por resultados de validação local. A próxima atualização pública continua manual: após a leitura remota read-only autorizada, exporte preservando caches, revise os JSONs, versione o artefato e publique o build estático. O workflow semanal ainda não executa essas etapas automaticamente.

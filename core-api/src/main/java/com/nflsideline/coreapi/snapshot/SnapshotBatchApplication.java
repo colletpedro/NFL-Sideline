@@ -54,7 +54,7 @@ public final class SnapshotBatchApplication {
 
     static String failureSummary(String stage, Exception failure) {
         String hint = switch (stage) {
-            case "options" -> "INVALID_OPTIONS: check --season, --output and --allow-empty";
+            case "options" -> "INVALID_OPTIONS: check --season, --as-of, --output and --allow-empty";
             case "startup" -> "STARTUP_FAILED: check PostgreSQL configuration, connectivity and read-only datasource";
             default -> "EXPORT_FAILED: check requested seasons and database availability";
         };
@@ -70,6 +70,10 @@ public final class SnapshotBatchApplication {
             }
             if (cause instanceof SnapshotExporter.EmptySeasonException) {
                 hint = "EMPTY_SEASON: no games found; check season or explicitly use --allow-empty";
+                break;
+            }
+            if (cause instanceof SnapshotExporter.InvalidEditorialManifestException) {
+                hint = "EDITORIAL_MANIFEST_INVALID: restore a valid version 1 editorial manifest";
                 break;
             }
         }

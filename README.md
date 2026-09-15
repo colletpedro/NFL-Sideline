@@ -148,10 +148,34 @@ source .env
 set +a
 java -jar core-api/target/core-api-0.1.0.jar snapshot-export \
   --season 2026 \
+  --as-of 2026-09-15 \
   --output web-ui/public/data
 ```
 
 Consulte o [contrato de snapshots](docs/static-snapshot-contract.md) para formato, atomicidade e opções.
+
+### Fast track editorial manual
+
+O núcleo Java resolve rodadas pela cronologia real dos gamedays, incluindo as fases de postseason, com data UTC
+explícita. Como o schema atual das métricas não registra fase nem data, o contexto de postseason não presume que
+o número da week prove cronologia: usa apenas referência histórica e declara a limitação.
+A rodada operacional atual recebe `matchup_full_v0`, a rodada real seguinte recebe `matchup_basic_v0` e as demais
+ficam sem candidato. O comando é seguro por padrão e apenas planeja:
+
+```bash
+java -jar core-api/target/core-api-0.1.0.jar editorial-generate \
+  --season 2026 --as-of 2026-09-15 --revision-key first-review --max-analyses 32 --dry-run
+```
+
+Uma geração local exige trocar `--dry-run` por `--execute` e fornecer `GEMINI_API_KEY`. O planejamento completo e
+o teto são calculados antes da primeira chamada. Geração não publica: a seleção humana fica no manifesto
+versionado [`editorial/analysis-selections.json`](editorial/analysis-selections.json), cujo contrato está em
+[`editorial/README.md`](editorial/README.md). O exportador continua read-only, sem Gemini, e projeta BASIC/FULL
+aprovadas como `analysisType: "matchup"` no schema público v1.
+
+Este fast track editorial v0 está implementado localmente e validado offline. Ele ainda não foi integrado a uma
+execução autorizada com banco/Gemini nem publicado. O manifesto permanece vazio; nenhuma aprovação real foi
+criada nesta etapa. O `snapshot-export` exige `--as-of YYYY-MM-DD`, separado do timestamp real `generatedAt`.
 
 ### 6. Frontend
 

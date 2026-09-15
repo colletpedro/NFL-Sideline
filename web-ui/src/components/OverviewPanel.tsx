@@ -131,7 +131,7 @@ function OverviewPanel({
             )}
 
             <button className="ov-cta" onClick={onViewAnalysis}>
-              {predicao ? "View Full Analysis" : "Analysis not available yet"}
+              {predicao ? "View Analysis" : "Analysis not available yet"}
               <ArrowRight size={14} strokeWidth={2.5} aria-hidden="true" />
             </button>
           </>

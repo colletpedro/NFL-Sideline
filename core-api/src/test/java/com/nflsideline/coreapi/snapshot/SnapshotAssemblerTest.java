@@ -56,7 +56,7 @@ class SnapshotAssemblerTest {
 
         assertThat(result.snapshot().analysesByGame()).isEmpty();
         assertThat(result.rejectedAnalyses()).isOne();
-        assertThat(result.missingAnalyses()).isOne();
+        assertThat(result.missingAnalyses()).isEqualTo(2);
         String json = objectMapper.writeValueAsString(result.snapshot());
         assertThat(json).doesNotContain("contextJson", "context_json", "promptHash", "prompt_hash", "modelName");
     }
@@ -82,5 +82,17 @@ class SnapshotAssemblerTest {
         assertThat(exported.homeMoneyline()).isNull();
         assertThat(exported.awayMoneyline()).isNull();
         assertThat(exported.spreadLine()).isNull();
+    }
+
+    @Test
+    void explicitlySelectedLegacyCacheKeepsPublicSchemaV1Type() {
+        var legacy = SnapshotFixtures.analysis(9, "legacy", "2026-09-10T12:00:00Z",
+                SnapshotFixtures.validAnalysis("preserved"));
+        legacy.setAnalysisType("matchup");
+        var result = assembler.assemble(2026, time(),
+                List.of(SnapshotFixtures.game("legacy", 1, "AAA", "BBB")), List.of(), List.of(legacy));
+        assertThat(result.snapshot().analysesByGame().get("legacy").analysisType()).isEqualTo("matchup");
+        assertThat(result.snapshot().analysesByGame().get("legacy").veredito())
+                .isEqualTo("verdict preserved");
     }
 }

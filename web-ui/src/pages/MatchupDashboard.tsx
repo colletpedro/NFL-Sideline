@@ -223,7 +223,7 @@ function MatchupDashboard() {
       </div>
 
       <div className={`mobile-cta ${tab !== "analysis" && predicao ? "show" : ""}`}>
-        <button onClick={goToAnalysis}>View Full Analysis</button>
+        <button onClick={goToAnalysis}>View Analysis</button>
       </div>
 
       <p className="mu-footnote">
