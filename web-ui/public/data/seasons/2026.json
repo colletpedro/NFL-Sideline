@@ -1,7 +1,7 @@
 {
   "schemaVersion" : 1,
   "season" : 2026,
-  "generatedAt" : "2026-09-14T00:40:16.918583Z",
+  "generatedAt" : "2026-09-16T23:22:16.34332Z",
   "teams" : [ {
     "teamAbbr" : "ARI",
     "teamName" : "Arizona Cardinals",
@@ -7612,24 +7612,6 @@
       "vantagemTatica" : "O ataque aéreo letal de Los Angeles tem o caminho livre contra uma defesa de San Francisco que terminou o último ano cedendo muito espaço. Para piorar o cenário dos 49ers, tentar acompanhar o ritmo dos Rams num tiroteio aéreo será quase impossível: o jogo de passes de SF foi completamente asfixiado recentemente, falhando miseravelmente em sustentar as próprias campanhas, enquanto o braço do quarterback de LA vem despachando defesas com precisão cirúrgica.",
       "alertaVermelho" : "A implosão absoluta do jogo aéreo de San Francisco. A equipe vem de um apagão assustador nos passes, sofrendo pressão constante e matando suas próprias chances de pontuar. Como Los Angeles fechou a última temporada blindando o chão e parando o jogo terrestre adversário com excelência, a defesa de LA forçará os 49ers a passar a bola — atacando justamente o ponto mais frágil e disfuncional da equipe no momento.",
       "veredito" : "Com os Rams jogando em casa, vindo de uma sequência ofensiva de elite e munidos de um ataque aéreo avassalador, o peso nas linhas de aposta é perfeitamente justificado. San Francisco precisaria de uma mudança mágica na intertemporada para consertar seu ataque na Semana 1. Vitória confortável de Los Angeles, dominando o relógio e cobrindo a margem do mercado."
-    },
-    "2026_03_BAL_DAL" : {
-      "gameId" : "2026_03_BAL_DAL",
-      "analysisType" : "matchup",
-      "createdAt" : "2026-09-06T01:44:15.621339Z",
-      "fatorChave" : "O embate entre o ataque aéreo letal do Baltimore Ravens e uma defesa do Dallas Cowboys que tem sido uma verdadeira peneira contra passes nas últimas semanas.",
-      "vantagemTatica" : "Baltimore encontrou um ritmo avassalador passando a bola, movendo as correntes com facilidade e punindo os adversários pelo ar. Essa crescente ofensiva bate de frente com o ponto mais fraco recente de Dallas: uma defesa secundária que tem sofrido apagões e cedido jogadas explosivas com frequência. Esse desnível dá aos Ravens o poder de ditar o ritmo da partida e castigar o fundo do campo.",
-      "alertaVermelho" : "O perigo para Baltimore mora no próprio espelho, já que sua defesa também tem se mostrado bastante permissiva contra o passe. Se o ataque de Dallas conseguir esquecer o desempenho desastroso de sua última partida e resgatar o ritmo aéreo de semanas anteriores, o jogo tem tudo para virar um verdadeiro tiroteio ofensivo.",
-      "veredito" : "O momento ofensivo de Baltimore é muito mais sólido. Em um jogo com expectativa de placar alto, a consistência aérea dos Ravens deve explorar a vulnerabilidade defensiva dos donos da casa, garantindo a vitória para os visitantes e cobrindo a desvantagem de 2.5 pontos."
-    },
-    "2026_09_CIN_ATL" : {
-      "gameId" : "2026_09_CIN_ATL",
-      "analysisType" : "matchup",
-      "createdAt" : "2026-09-05T16:23:21.689063Z",
-      "fatorChave" : "O poder de fogo implacável de Cincinnati contra um ataque de Atlanta em queda livre. Os Bengals chegam como grandes favoritos porque mostraram capacidade de destruir defesas pelo ar nas últimas semanas, enquanto os Falcons perderam totalmente o ritmo ofensivo em sua última aparição, sofrendo um apagão generalizado com a posse da bola.",
-      "vantagemTatica" : "A grande assimetria deste confronto acontece quando Atlanta tenta correr com a bola. O jogo terrestre dos Falcons sofreu um colapso absoluto na última rodada, sendo completamente dominado nas trincheiras. O problema? Eles encaram uma defesa de Cincinnati que, antes de um pequeno tropeço recente, havia construído um verdadeiro muro de concreto contra o jogo corrido adversário. Sem conseguir estabelecer o chão, o ataque de Atlanta ficará previsível e vulnerável, enquanto o ataque de Cincinnati, que flertou com a perfeição aérea recentemente, terá vida mais tranquila para controlar o relógio.",
-      "alertaVermelho" : "Atenção máxima à 'ressaca' do ataque aéreo de Cincinnati. Após duas semanas consecutivas amassando secundárias e operando de forma quase letal, o braço do ataque esfriou de maneira brusca na última rodada, despencando em eficiência. Se a defesa contra o passe de Atlanta — que se manteve muito sólida e consistente ao longo das últimas três semanas — conseguir explorar essa hesitação, o jogo pode ficar perigosamente mais apertado do que as casas de apostas projetam.",
-      "veredito" : "Cincinnati vence e cobre a linha de favoritismo de 4,5 pontos. A diferença de talento e execução no ataque é gritante. A menos que a secundária de Atlanta force múltiplos turnovers, os Falcons não têm o fôlego e a potência ofensiva necessários para acompanhar os Bengals em um eventual tiroteio no placar."
     }
   }
 }

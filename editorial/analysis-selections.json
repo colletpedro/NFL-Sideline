@@ -1,4 +1,71 @@
 {
   "version": 1,
-  "selections": []
+  "selections": [
+    {
+      "gameId": "2026_01_ARI_LAC",
+      "analysisCacheId": 14,
+      "depth": "LEGACY_PUBLISHED",
+      "promptHash": "778e895677d3f278939941c760b77f6c415204d836b2e89b774a13604334a010",
+      "responseHash": "25a29ffbdfb8713b0e2683b01094f1e66a99a89bfa119a181ddf02f700635528",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-16T23:21:33Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_01_BAL_IND",
+      "analysisCacheId": 15,
+      "depth": "LEGACY_PUBLISHED",
+      "promptHash": "555b0f13b863cc5d39ce139f11ee421a47a94964016373eaa0d3bf38e7de67ef",
+      "responseHash": "e386a2eaf5e796537f51f7dc6be16c3aa57f55e3fdfb4647154f86be795174ff",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-16T23:21:33Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_01_BUF_HOU",
+      "analysisCacheId": 13,
+      "depth": "LEGACY_PUBLISHED",
+      "promptHash": "e9f9f4a1a0bc0a7fa85c09516f1c42d93448743da4097a477ec49ebe2c7ab737",
+      "responseHash": "f307e96cc78a17989e8ebbc9378ab240dcf0fa281e26634542a3706c7929c5a4",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-16T23:21:33Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_01_CLE_JAX",
+      "analysisCacheId": 24,
+      "depth": "LEGACY_PUBLISHED",
+      "promptHash": "26b77c40cc18ee3cd7fd3e41f7aebf0346746feb0176b9e1d37998c0fcb946a3",
+      "responseHash": "cd49b57125178d973cb8254907243928c70144cab61303aa03d286b4c3965d6b",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-16T23:21:33Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_01_NE_SEA",
+      "analysisCacheId": 23,
+      "depth": "LEGACY_PUBLISHED",
+      "promptHash": "ca605f405fcf6a4d79915508a72020978cd42d9134580087ad439a9a212c7193",
+      "responseHash": "cc80e8a7ed6583f9d7df781c9fd191c0dada3cb8bd4fee5139e8a43ec01d2859",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-16T23:21:33Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_01_SF_LA",
+      "analysisCacheId": 19,
+      "depth": "LEGACY_PUBLISHED",
+      "promptHash": "754fff9e050037e618c76a058c7db0572adb9e230eada9ffaef9eb47de90edb2",
+      "responseHash": "8d7350181af5d67e72ab6c22ba2ba7a27c67fe447e10e113938fe4abbbc061ac",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-16T23:21:33Z",
+      "asOfDate": "2026-09-16"
+    }
+  ]
 }
