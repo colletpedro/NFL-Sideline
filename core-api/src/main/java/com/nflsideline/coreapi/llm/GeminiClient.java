@@ -29,7 +29,7 @@ public class GeminiClient implements GeminiGateway {
 
     public GeminiClient(@Value("${gemini.api-key}") String apiKey,
                         @Value("${gemini.url}") String url,
-                        @Value("${gemini.timeout:30s}") Duration timeout) {
+                        @Value("${gemini.timeout:180s}") Duration timeout) {
         this.apiKey = apiKey;
         this.url = url;
         SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
@@ -45,25 +45,31 @@ public class GeminiClient implements GeminiGateway {
         GeminiRequest request = new GeminiRequest(
                 new GeminiRequest.SystemInstruction(List.of(new GeminiRequest.Part(systemPrompt))),
                 List.of(new GeminiRequest.Content("user", List.of(new GeminiRequest.Part(userPrompt)))),
-                new GeminiRequest.GenerationConfig("application/json"));
+                GeminiRequest.GenerationConfig.editorial());
 
         final GeminiResponse response;
         try {
             response = restClient.post().uri(url).header("x-goog-api-key", apiKey)
                     .body(request).retrieve().body(GeminiResponse.class);
         } catch (RuntimeException failure) {
-            throw new IllegalStateException("Gemini request failed or timed out", failure);
+            throw new GenerationFailure(GenerationFailure.classify(failure));
         }
 
         if (response == null
                 || response.candidates() == null
                 || response.candidates().isEmpty()
+                || response.candidates().getFirst() == null
                 || response.candidates().getFirst().content() == null
                 || response.candidates().getFirst().content().parts() == null
                 || response.candidates().getFirst().content().parts().isEmpty()) {
-            throw new IllegalStateException("Resposta do Gemini vazia ou malformada (candidates[0].content.parts[0].text ausente)");
+            throw new GenerationFailure(GenerationFailure.Category.EMPTY_RESPONSE);
         }
 
-        return response.candidates().getFirst().content().parts().getFirst().text();
+        String text = response.candidates().getFirst().content().parts().stream()
+                .filter(java.util.Objects::nonNull).map(GeminiResponse.Part::text)
+                .filter(part -> part != null && !part.isBlank())
+                .collect(java.util.stream.Collectors.joining());
+        if (text.isBlank()) throw new GenerationFailure(GenerationFailure.Category.EMPTY_RESPONSE);
+        return text;
     }
 }

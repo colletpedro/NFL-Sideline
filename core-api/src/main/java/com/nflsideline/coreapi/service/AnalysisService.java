@@ -15,6 +15,8 @@ import com.nflsideline.coreapi.editorial.EditorialPlanner;
 import com.nflsideline.coreapi.editorial.EditorialRoundResolver;
 import com.nflsideline.coreapi.editorial.Eligibility;
 import com.nflsideline.coreapi.llm.GeminiGateway;
+import com.nflsideline.coreapi.llm.GenerationFailure;
+import static com.nflsideline.coreapi.llm.GenerationFailure.Category.*;
 import com.nflsideline.coreapi.repository.AnalysisCacheRepository;
 import com.nflsideline.coreapi.repository.GameRepository;
 import com.nflsideline.coreapi.service.dto.AnalysisRequest;
@@ -125,13 +127,13 @@ public class AnalysisService {
     }
 
     private JsonNode validateAndExtract(JsonNode root, String contextJson) {
-        JsonNode target = root.isObject() && root.has("fator_chave") ? root : findPredictionObject(root);
-        if (target == null || !target.isObject()) throw new IllegalStateException("Invalid LLM response");
+        JsonNode target = root;
+        if (target == null || !target.isObject()) throw new GenerationFailure(MISSING_FIELDS);
         ObjectNode out = objectMapper.createObjectNode();
         for (String key : PREDICTION_KEYS) {
             JsonNode value = target.get(key);
             if (value == null || !value.isTextual() || value.textValue().trim().isEmpty()) {
-                throw new IllegalStateException("Invalid LLM response");
+                throw new GenerationFailure(MISSING_FIELDS);
             }
             out.set(key, value);
         }
@@ -143,7 +145,7 @@ public class AnalysisService {
         List<Double> textNumbers = new ArrayList<>();
         PREDICTION_KEYS.forEach(key -> collectTextNumbers(prediction.path(key).asText(), textNumbers));
         JsonNode cited = target.path("metricas_citadas");
-        if (!textNumbers.isEmpty() && !cited.isObject()) throw new IllegalStateException("Invalid numeric citations");
+        if (!cited.isObject()) throw new GenerationFailure(MISSING_FIELDS);
         List<Double> contextNumbers = new ArrayList<>();
         collectNumbers(context, contextNumbers);
         List<Double> citedNumbers = new ArrayList<>();
@@ -151,14 +153,14 @@ public class AnalysisService {
             Iterator<Map.Entry<String, JsonNode>> fields = cited.fields();
             while (fields.hasNext()) {
                 JsonNode value = fields.next().getValue();
-                if (!value.isNumber()) throw new IllegalStateException("Invalid numeric citations");
+                if (!value.isNumber()) throw new GenerationFailure(INVALID_NUMERIC_CITATIONS);
                 double number = value.doubleValue();
-                if (!contains(contextNumbers, number)) throw new IllegalStateException("Invalid numeric citations");
+                if (!contains(contextNumbers, number)) throw new GenerationFailure(INVALID_NUMERIC_CITATIONS);
                 citedNumbers.add(number);
             }
         }
         if (textNumbers.stream().anyMatch(number -> !contains(citedNumbers, number))) {
-            throw new IllegalStateException("Invalid numeric citations");
+            throw new GenerationFailure(INVALID_NUMERIC_CITATIONS);
         }
     }
 
@@ -168,6 +170,7 @@ public class AnalysisService {
             String token = matcher.group();
             String raw = token.replace("%", "").replace(',', '.');
             double number = Double.parseDouble(raw);
+            if (raw.matches("\\d{4}") && number >= 1999 && number <= 2100 && !token.endsWith("%")) continue;
             out.add(token.endsWith("%") ? number / 100.0 : number);
         }
     }
@@ -181,19 +184,14 @@ public class AnalysisService {
         else if (node.isContainerNode()) node.forEach(child -> collectNumbers(child, out));
     }
 
-    private JsonNode findPredictionObject(JsonNode node) {
-        if (node == null) return null;
-        if (node.isObject() && node.has("fator_chave") && node.has("vantagem_tatica")) return node;
-        if (node.isContainerNode()) for (JsonNode child : node) {
-            JsonNode found = findPredictionObject(child);
-            if (found != null) return found;
-        }
-        return null;
-    }
-
     private JsonNode parse(String value) {
-        try { return objectMapper.readTree(value); }
-        catch (JsonProcessingException e) { throw new IllegalStateException("Invalid JSON payload", e); }
+        if (value == null || value.isBlank()) throw new GenerationFailure(EMPTY_RESPONSE);
+        try {
+            JsonNode parsed = objectMapper.reader().with(com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_TRAILING_TOKENS)
+                    .readTree(value);
+            if (parsed == null || parsed.isNull()) throw new GenerationFailure(EMPTY_RESPONSE);
+            return parsed;
+        } catch (JsonProcessingException e) { throw new GenerationFailure(INVALID_JSON); }
     }
 
     private String write(JsonNode value) {

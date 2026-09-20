@@ -1,7 +1,7 @@
 {
   "schemaVersion" : 1,
   "season" : 2026,
-  "generatedAt" : "2026-09-16T23:22:16.34332Z",
+  "generatedAt" : "2026-09-20T17:43:14.453965Z",
   "teams" : [ {
     "teamAbbr" : "ARI",
     "teamName" : "Arizona Cardinals",
@@ -7612,6 +7612,177 @@
       "vantagemTatica" : "O ataque aéreo letal de Los Angeles tem o caminho livre contra uma defesa de San Francisco que terminou o último ano cedendo muito espaço. Para piorar o cenário dos 49ers, tentar acompanhar o ritmo dos Rams num tiroteio aéreo será quase impossível: o jogo de passes de SF foi completamente asfixiado recentemente, falhando miseravelmente em sustentar as próprias campanhas, enquanto o braço do quarterback de LA vem despachando defesas com precisão cirúrgica.",
       "alertaVermelho" : "A implosão absoluta do jogo aéreo de San Francisco. A equipe vem de um apagão assustador nos passes, sofrendo pressão constante e matando suas próprias chances de pontuar. Como Los Angeles fechou a última temporada blindando o chão e parando o jogo terrestre adversário com excelência, a defesa de LA forçará os 49ers a passar a bola — atacando justamente o ponto mais frágil e disfuncional da equipe no momento.",
       "veredito" : "Com os Rams jogando em casa, vindo de uma sequência ofensiva de elite e munidos de um ataque aéreo avassalador, o peso nas linhas de aposta é perfeitamente justificado. San Francisco precisaria de uma mudança mágica na intertemporada para consertar seu ataque na Semana 1. Vitória confortável de Los Angeles, dominando o relógio e cobrindo a margem do mercado."
+    },
+    "2026_02_CAR_ATL" : {
+      "gameId" : "2026_02_CAR_ATL",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:05:43.296573Z",
+      "fatorChave" : "O fator central deste duelo, avaliado unicamente por registros históricos da temporada anterior e não interpretado como forma atual, é a capacidade do ataque aéreo do Atlanta Falcons de impor seu ritmo contra a secundária do Carolina Panthers.",
+      "vantagemTatica" : "No recorte das três semanas elegíveis da temporada anterior, o ataque aéreo do Falcons demonstrou força com um EPA por passe de 0.2461. Ao mesmo tempo, a defesa do Panthers sofreu contra o passe, permitindo marcas de EPA de 0.2827 e 0.1162. No confronto terrestre, o ataque do Panthers obteve um desempenho ruim com EPA de -0.5678, mas recuperou-se para 0.1617 no último registro, o que pode explorar uma defesa terrestre de Atlanta que historicamente cedeu EPA de 0.0938 e 0.0269.",
+      "alertaVermelho" : "O principal risco para o time da casa é repetir a péssima exibição ofensiva vista no último jogo elegível da temporada anterior, quando registrou dados históricos de EPA por passe de -0.1577 e EPA terrestre de -0.3854, o que anularia sua vantagem tática.",
+      "veredito" : "Apesar das inconstâncias, os picos históricos no ataque aéreo do Falcons durante a temporada anterior indicam um desempenho superior na balança do confronto, justificando a posição do mercado que estabelece a cotação de -125 para a vitória de Atlanta."
+    },
+    "2026_02_CIN_HOU" : {
+      "gameId" : "2026_02_CIN_HOU",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:06:34.275Z",
+      "fatorChave" : "O fator central deste confronto baseia-se na forte eficiência defensiva histórica da equipe da casa contra o passe na reta final da temporada anterior, destacando-se a expressiva marca de -0.6671104297874475 de EPA defensivo por passe na respectiva semana dezenove. No entanto, o ataque aéreo visitante registrou na semana dezesseis histórica um excelente EPA ofensivo por passe de 0.5599867196004953, prometendo um embate considerável de forças opostas.",
+      "vantagemTatica" : "Ao contrapor o ataque aéreo e terrestre de cada time às defesas com base na temporada anterior, nota-se que os visitantes exibiram forte eficiência no jogo terrestre na semana dezoito histórica com 0.195914864258375 de EPA ofensivo por corrida. Por outro lado, os próprios anfitriões apresentaram imensa dificuldade pelo ar na semana vinte da temporada anterior, produzindo parcos -0.4701837940979345 de EPA ofensivo por passe, algo que a defesa visitante precisará explorar.",
+      "alertaVermelho" : "O principal risco reside na franca volatilidade ofensiva e na dependência dos mandantes quanto ao sucesso de sua unidade defensiva, conforme demonstram os registros históricos das três últimas semanas elegíveis da temporada anterior. Basear-se exclusivamente neste recorte exige cautela, pois dinâmicas passadas podem não se repetir integralmente.",
+      "veredito" : "Com base em dados puramente históricos da temporada anterior e nas cotações vigentes, a equipe da casa carrega a expectativa de sucesso refletida por uma probabilidade implícita justa de 0.5514411147165489597251383851 no mercado de ganhador. O desempenho superior de sua defesa aérea frente às qualidades adversárias guia este veredito direto em favor dos mandantes."
+    },
+    "2026_02_CLE_TB" : {
+      "gameId" : "2026_02_CLE_TB",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:07:17.250032Z",
+      "fatorChave" : "O fator central repousa na contraposicao entre a eficiencia aerea da equipe local e o solido bloqueio terrestre que aplicaram no final da temporada anterior, exigindo do adversario uma solucao quase exclusivamente pautada pelo jogo corrido historico.",
+      "vantagemTatica" : "Com base em dados historicos da temporada anterior, o ataque aereo do time mandante produziu um EPA de 0.2827351173636379, enfrentando agora uma defesa visitante que cedeu apenas -0.2973033008945197 de EPA no passe. Pelo chao, o time da casa gerou -0.15207134558223065, ao passo que o ataque terrestre visitante obteve 0.1323518406726939. Para frear o ataque aereo rival, a defesa da casa se beneficia do pessimo rendimento historico visitante, que registrou -0.3463272603852915 de EPA por passe, e contra o jogo corrido, a defesa mandante foi dominante com uma marca de -0.567876300322286.",
+      "alertaVermelho" : "O principal risco decorre da confianca em metricas historicas puras da temporada anterior, ja que nao refletem a forma atual das equipes. Com o mercado fixando uma cotacao moneyline de -285 para a vitoria simples da casa, qualquer desvio de rendimento perante o paredao contra o passe da defesa visitante pode comprometer o resultado.",
+      "veredito" : "Apoiando-se na superioridade defensiva contra as corridas por parte da equipe mandante e na completa incapacidade aerea dos visitantes observada nas ultimas amostras da temporada anterior, o cenario indica fundamentacao solida para um triunfo direto da equipe da casa."
+    },
+    "2026_02_DET_BUF" : {
+      "gameId" : "2026_02_DET_BUF",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:03:30.390233Z",
+      "fatorChave" : "O fator central deste confronto apoia-se na forte eficiencia historica do ataque aereo do time da casa na temporada anterior. Na semana dezoito elegivel, a equipe mandante registrou um impressionante Off EPA Pass de 0.7253219057381559, mantendo o bom ritmo na semana dezenove com 0.27204065763733326, o que estabelece uma vantagem expressiva contra vulnerabilidades defensivas.",
+      "vantagemTatica" : "Contrapondo os setores historicos da temporada anterior, o ataque aereo e terrestre mandante possui superioridade tatica sobre a defesa visitante. Na semana dezesseis, a defesa visitante sofreu pelo ar com Def EPA Pass de 0.1416054531546327 e pelo chao com Def EPA Rush de 0.32344915270287955. Em contraste, o ataque visitante teve alta taxa de dropback de 0.8382352941176471 na mesma semana, mas enfrentara uma defesa mandante que conteve bem os oponentes na semana dezoito com Def EPA Pass de -0.2638633197657279 e Def EPA Rush de -0.24740251723762965.",
+      "alertaVermelho" : "O principal risco recai sobre o colapso ofensivo visitante observado na semana dezessete da temporada anterior, quando o time marcou um desastroso Off EPA Play de -0.4637179825861598. Contudo, a defesa mandante tambem cedeu espacos na semana dezenove, permitindo uma taxa de sucesso defensivo de 0.5185185185185185 aos oponentes, o que exige atencao caso o ataque visitante consiga se estabilizar.",
+      "veredito" : "Avaliando estritamente os dados historicos da temporada anterior, o ataque da equipe da casa demonstrou maior resiliencia e capacidade de explorar as falhas defensivas do time visitante. O cenario aponta para um forte dominio do mandante, justificando sua posicao com base na superioridade combinada de seu ataque aereo e terrestre frente a uma defesa visitante estatisticamente fragilizada nas semanas finais."
+    },
+    "2026_02_GB_NYJ" : {
+      "gameId" : "2026_02_GB_NYJ",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:09:07.216094Z",
+      "fatorChave" : "O elemento central deste duelo reside na profunda ineficiência do ataque geral de Nova York frente à capacidade produtiva de Green Bay. Analisando os dados históricos da temporada anterior, o Green Bay Packers conseguiu sustentar eficácia no passe com um offEpaPass de 0.3827831591251052 na semana dezenove, ao passo que o New York Jets expôs uma limitação aguda, evidenciada pelo offEpaPass de -0.49505268876097813 na semana dezesseis.",
+      "vantagemTatica" : "Nos confrontos táticos baseados nos históricos da temporada anterior, o ataque aéreo do Packers com offEpaPass de 0.42111229589553895 na semana dezessete supera a vulnerável defesa contra o passe do Jets, que marcou defEpaPass de 1.081439777725677 na mesma rodada. Pelo solo, o ataque terrestre de Green Bay sofreu com offEpaRush de -0.4134935936437692 na semana dezessete, frente a uma defesa terrestre do Jets que cedeu defEpaRush de 0.03356492586488671. Em contrapartida, o ataque aéreo do Jets com offEpaPass de -0.2638633197657279 na semana dezoito apresenta forte desvantagem contra a defesa aérea do Packers de defEpaPass de 0.06465357626681878 na semana dezoito, enquanto o frágil ataque terrestre de Nova York, com offEpaRush de -0.24740251723762965 na semana dezoito, enfrenta uma defesa terrestre do Packers que cedeu defEpaRush de -0.1570366705859816 no mesmo período.",
+      "alertaVermelho" : "O risco mais severo repousa na alta variação de desempenho aéreo que o Packers demonstrou no fim da temporada anterior, ilustrada pelo drástico offEpaPass de -0.8781343495667291 na semana dezoito. Além disso, é crucial ressaltar que os dados apresentados são rigorosamente históricos e de forma alguma traduzem a forma atual das equipes.",
+      "veredito" : "Com os visitantes avaliados em -250, o cenário é inteiramente propício ao Green Bay Packers. As métricas da temporada anterior atestam a vantagem irrefutável do ataque aéreo visitante sobre a defesa de Nova York, justificando a escolha pelos visitantes em um embate onde os mandantes carecem de repertório."
+    },
+    "2026_02_IND_KC" : {
+      "gameId" : "2026_02_IND_KC",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:09:57.851277Z",
+      "fatorChave" : "O confronto apoia-se estritamente em dados históricos da temporada anterior. O fator central do duelo é a expressiva discrepância entre o forte rendimento defensivo do time mandante e a acentuada ineficiência ofensiva apresentada por ambas as equipes nas rodadas finais.",
+      "vantagemTatica" : "Analisando os confrontos táticos históricos da temporada anterior, o ataque aéreo do visitante obteve EPA por passe de -0.36426701318410504 na semana dezessete, enfrentando uma defesa mandante robusta que cedeu EPA defensivo por passe de -0.5758376824624954 na semana dezoito. Pelo chão, o ataque visitante teve EPA terrestre de -0.10911173910634327 frente a uma defesa terrestre mandante impecável que gerou -0.41266693291560186 na semana dezoito. Em contrapartida, o ataque aéreo do mandante registrou EPA de -0.579967534384047 e seu jogo terrestre -0.2786974981705577 na semana dezoito, que atuarão contra uma defesa terrestre visitante com EPA de 0.016914133407654505.",
+      "alertaVermelho" : "O principal risco para o visitante, fundamentado na temporada anterior, é a vulnerabilidade de sua contenção aérea, ilustrada pelo EPA defensivo por passe de 0.5865539642721018 concedido na semana dezesseis. Para a equipe mandante, o alerta foca no ataque improdutivo, que marcou um EPA por jogada de -0.4682060693371074 em seu último registro histórico na semana dezoito.",
+      "veredito" : "Considerando o panorama da temporada anterior, a contundência da defesa do mandante proporciona sustentação suficiente para sobrepor as próprias falhas ofensivas, configurando uma vantagem clara frente a um visitante que expôs fragilidades agudas contra o passe."
+    },
+    "2026_02_LV_LAC" : {
+      "gameId" : "2026_02_LV_LAC",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:11:07.663186Z",
+      "fatorChave" : "O fator central deste confronto apoia-se estritamente em referências da temporada anterior, sem considerar forma atual. Historicamente, a defesa do LAC mostrou eficiência contra o passe no final do ciclo passado, cedendo -0.2129 de EPA/Pass na sua respectiva décima oitava semana, enquanto o ataque aéreo do LV entrou em colapso com -0.5758 de EPA/Pass na sua correspondente décima oitava semana.",
+      "vantagemTatica" : "Analisando as unidades com base na temporada anterior, o ataque terrestre do LAC obteve 0.1591 de EPA/Rush na sua décima oitava semana histórica. Pelo ar, a defesa do LAC tem vantagem contra o passe do LV, mas o próprio ataque aéreo dos mandantes sofreu severamente, registrando -0.6807 de EPA/Pass na décima oitava semana e -0.3589 de EPA/Pass na décima nona semana.",
+      "alertaVermelho" : "O principal risco para o LAC é a sua inoperância histórica no passe. Com marcas acumuladas de -0.2404, -0.6807 e -0.3589 de EPA/Pass nas suas últimas três partidas da temporada anterior, o time ficará vulnerável se a defesa do LV replicar seu grande desempenho da décima oitava semana passada, quando permitiu fortes -0.5799 de EPA/Pass.",
+      "veredito" : "O mercado projeta um favoritismo substancial para os mandantes, com odd de -360 e probabilidade justa de 0.7508. Embora fundamentado exclusivamente no encerramento da temporada anterior, a maior confiabilidade defensiva do LAC é suficiente para superar suas próprias limitações ofensivas e bater o LV neste duelo."
+    },
+    "2026_02_MIA_SF" : {
+      "gameId" : "2026_02_MIA_SF",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:11:46.609889Z",
+      "fatorChave" : "O fator central deste confronto é o desequilíbrio evidente entre a eficiência ofensiva de San Francisco, que processou 64 jogadas totais no ataque, e o sistema defensivo de Miami fundamentado apenas em dados históricos da temporada anterior.",
+      "vantagemTatica" : "San Francisco apresenta superioridade tanto no jogo aéreo quanto no terrestre. O ataque obteve uma taxa de sucesso de 0.5625, enquanto sua defesa conteve os adversários em 56 jogadas. Por outro lado, os dados de Miami mostram vulnerabilidade contra o ataque terrestre e aéreo baseando-se na temporada anterior, onde sua defesa foi exposta em 54 jogadas durante o último compromisso.",
+      "alertaVermelho" : "O principal risco para Miami é tentar estabelecer seu jogo aéreo contra a forte defesa contra o passe de San Francisco, agravado pelo fato de que as referências táticas de Miami são estritamente históricas da temporada anterior e não representam sua capacidade no momento.",
+      "veredito" : "San Francisco detém controle tático absoluto nos confrontos de trincheiras e secundária, superando facilmente a produção defasada de Miami da temporada anterior. A vitória da equipe da casa é a projeção direta e clara para este embate."
+    },
+    "2026_02_MIN_CHI" : {
+      "gameId" : "2026_02_MIN_CHI",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:12:43.019689Z",
+      "fatorChave" : "O fator central deste confronto reside no favoritismo do mercado para a equipe da casa, refletido na probabilidade implicita justa de 0.6309403437815976 e na linha de moneyline de -192. Este cenario contrasta diretamente com o forte desempenho defensivo historico dos visitantes na temporada anterior.",
+      "vantagemTatica" : "Contrapondo os ataques e defesas com base nos registros da temporada anterior, o ataque aereo de Chicago apresentou momentos positivos com um EPA por passe de 0.24225821106358197, mas enfrentara uma defesa de Minnesota que foi dominante contra o jogo aereo, cedendo marcas de -0.9476775168718637 e -0.8781343495667291 em suas partidas finais elegiveis. Pelo solo, o ataque de Minnesota registrou EPA terrestre positivo de 0.20591379568525423 e 0.12196036300098642, demonstrando capacidade de explorar as vulnerabilidades da defesa adversaria.",
+      "alertaVermelho" : "O principal risco e a total dependencia de dados da temporada anterior, caracterizando um cenario historico e nao de forma atual. Historicamente, a defesa aerea de Chicago mostrou extrema fragilidade ao ceder um EPA de 0.3827831591251052, mas o ataque aereo de Minnesota tambem colapsou em uma de suas atuacoes recentes elegiveis com EPA de -0.7635227331901578, tornando o embate aereo altamente imprevisivel.",
+      "veredito" : "Apesar de o mercado apoiar o mandante, deixando os visitantes com uma linha de 160, o veredito direto aponta que a solidez defensiva historica de Minnesota contra o passe tem potencial para limitar a producao de Chicago, sugerindo que a precificacao atual subestima a capacidade do time visitante baseado estritamente no historico da temporada anterior."
+    },
+    "2026_02_NO_BAL" : {
+      "gameId" : "2026_02_NO_BAL",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:13:31.470135Z",
+      "fatorChave" : "O fator central deste confronto reside no desempenho do ataque aéreo histórico de Baltimore, que na semana dezoito da temporada anterior registrou um EPA por passe de 0.41427086510063293. Este forte desempenho histórico será testado contra a defesa de New Orleans, que mostrou eficiência mista contra o passe nos registros elegíveis.",
+      "vantagemTatica" : "A vantagem tática de Baltimore apoia-se no seu forte ataque terrestre da temporada anterior, marcando 0.3911340333215776 de EPA por corrida na semana dezessete, opondo-se à defesa terrestre de New Orleans que teve -0.15820535865766164 de EPA nesta mesma métrica. Por outro lado, o ataque aéreo de New Orleans na semana dezoito atingiu -0.2085878559855195 de EPA por passe, enfrentando uma defesa de passe de Baltimore que concedeu 0.15205875035574376 de EPA. No jogo terrestre, New Orleans registrou 0.02693344912684272 de EPA por corrida na semana dezoito contra -0.132528341551127 de EPA da defesa terrestre de Baltimore, sugerindo domínio geral dos mandantes nos confrontos históricos.",
+      "alertaVermelho" : "O principal risco para os mandantes é o teto que a defesa de Baltimore apresentou contra o passe na semana dezessete da temporada anterior, permitindo 0.42111229589553895 de EPA por passe. New Orleans mostrou capacidade de explorar os ares na mesma semana dezessete com 0.3896531439366538 de EPA por passe.",
+      "veredito" : "O veredito aponta para a solidez histórica de Baltimore nos confrontos terrestres e aéreos, justificando a precificação de -345 para os mandantes, enquanto New Orleans pontua com 275. A capacidade de Baltimore ditar o ritmo deve prevalecer sobre as oscilações históricas."
+    },
+    "2026_02_PHI_TEN" : {
+      "gameId" : "2026_02_PHI_TEN",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:13:54.034608Z",
+      "fatorChave" : "O confronto será ditado pelo desempenho histórico do jogo aéreo e terrestre ao final da temporada anterior, exigindo superação dos problemas ofensivos apresentados por ambas as equipes.",
+      "vantagemTatica" : "Ao término da temporada anterior, o ataque aéreo de TEN teve EPA histórico de -0.5762618024837988, enquanto a defesa cedeu 0.4005463094723589 de EPA por passe. PHI também sofreu pelo ar, com EPA ofensivo de -0.09016177361008224 e defensivo de 0.24093069325229435. No ataque terrestre, TEN obteve EPA histórico de 0.05897236782383468 contra um EPA de 0.008118857183305664 de PHI. Contudo, a defesa terrestre de PHI se mostrou capaz no passado recente, registrando EPA de -0.10087236608265453, e possui ferramentas para desafiar as corridas de TEN.",
+      "alertaVermelho" : "As estatísticas disponíveis referem-se apenas aos jogos da temporada anterior e não representam a forma atual dos times. A vulnerabilidade histórica de TEN contra o passe pode ser um risco se PHI ajustar sua execução.",
+      "veredito" : "Apoiada em um histórico defensivo superior contra as corridas e números de ataque aéreo menos negativos no encerramento da temporada anterior, a equipe de PHI reúne as condições fundamentais para superar TEN como visitante."
+    },
+    "2026_02_PIT_NE" : {
+      "gameId" : "2026_02_PIT_NE",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:14:30.388234Z",
+      "fatorChave" : "O fator central deste confronto é o desempenho aéreo instável. O time mandante apresentou eficiência de passe de -0.1283709487496106, enquanto os visitantes, em seus registros históricos da semana dezenove da temporada anterior, tiveram uma marca pior no ataque aéreo com -0.6671104297874475.",
+      "vantagemTatica" : "Contrapondo os setores, a defesa terrestre do mandante limitou oponentes a -0.06119518151085469. Pelo ar, o ataque mandante pode explorar a vulnerabilidade defensiva dos visitantes, que em dados históricos da semana dezoito da temporada anterior cederam 0.41427086510063293 contra o passe.",
+      "alertaVermelho" : "O principal risco para os visitantes é a avaliação de sua defesa terrestre, que na semana dezenove da temporada anterior cedeu 0.1738958132796876, evidenciando dificuldades históricas que podem ser exploradas pelo ataque terrestre mandante.",
+      "veredito" : "A equipe mandante possui vantagem devido à solidez atual de sua defesa contra corridas, superando o desequilíbrio histórico apresentado pelos visitantes no encerramento da temporada anterior."
+    },
+    "2026_02_SEA_ARI" : {
+      "gameId" : "2026_02_SEA_ARI",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:15:22.077074Z",
+      "fatorChave" : "O fator central desta partida reside no abismo de desempenho aéreo atual do Seattle contra os dados históricos da defesa do Arizona. Na estreia, Seattle obteve EPA por passe de 0.16801726550264592, enquanto Arizona, no encerramento da temporada anterior, cedeu EPA por passe defensivo histórico de 0.39456403715662464 na última semana elegível.",
+      "vantagemTatica" : "A vantagem tática favorece o ataque aéreo do Seattle frente ao sistema defensivo do Arizona. Historicamente, nas últimas três semanas da temporada anterior, Arizona permitiu EPA defensivo de passe de 0.2248373205402812, 0.4774462894062327 e 0.39456403715662464. No confronto invertido, o jogo terrestre do Arizona teve momentos de tração com EPA corrido de 0.093837788680712 no início dessa amostra da temporada anterior, mas enfrentará uma defesa atual do Seattle que cedeu EPA corrido de apenas -0.08786257971716564 e EPA por passe de -0.1283709487496106 em sua única partida.",
+      "alertaVermelho" : "O principal risco envolve a falta de dados recentes para o time da casa. A odd moneyline de -535 para o Seattle exige alta performance sem margem para erro, em um cenário onde o Arizona só possui dados históricos de performance, sem indicativos concretos de sua forma na temporada atual, o que limita a avaliação de sua evolução.",
+      "veredito" : "A superioridade da defesa do Seattle em conter o avanço aéreo e terrestre adversário, aliada à vulnerabilidade histórica do Arizona contra o passe, apontam para uma vitória do time visitante. A moneyline de 400 para o Arizona evidencia a percepção negativa sobre a equipe mandante, embasando a expectativa direta de triunfo do Seattle."
+    },
+    "2026_02_WAS_DAL" : {
+      "gameId" : "2026_02_WAS_DAL",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T01:15:58.054217Z",
+      "fatorChave" : "O confronto apoia-se em dados históricos da temporada anterior, destacando a inconsistência do ataque aéreo do mandante no fim daquele ano. Na semana 16, Dallas gerou eficiência de passe ofensivo de 0.41236467094902324, mas despencou para -0.260340994580656 na semana 18. A capacidade da equipe da casa em estabilizar o passe ditará o tom do jogo, sendo avaliada com uma probabilidade implícita justa de 0.6447291788002329.",
+      "vantagemTatica" : "Observando os números históricos do final da temporada anterior, o visitante pode explorar uma janela de oportunidade com seu jogo aéreo. Na semana 18, Washington registrou eficiência de passe ofensivo de 0.19333554564447733. Por outro lado, Dallas demonstrou uma resistência notável contra corridas no mesmo período, cedendo apenas 0.034828121254127625 em eficiência terrestre defensiva, o que forçará o visitante a priorizar o passe em vez de testes no chão.",
+      "alertaVermelho" : "O principal risco reside na deficiência defensiva demonstrada historicamente pelo visitante contra o jogo corrido, permitindo 0.3438824961772471 em eficiência de corridas na semana 16 da temporada anterior. A linha de mercado coloca o time de Washington com cotação de 170 e chance implícita justa de 0.355270821199767, indicando desvantagem evidente frente ao mandante que tem cotação de -205.",
+      "veredito" : "Com base nos registros históricos da temporada anterior, Dallas entra com forte favoritismo, sustentado por sua probabilidade implícita justa de 0.6447291788002329 e por uma linha de mercado de -205. A solidez de sua defesa contra a corrida limita as alternativas do visitante, fazendo com que a expectativa tática dê clara vantagem à equipe mandante na conquista da vitória."
+    },
+    "2026_03_ATL_GB" : {
+      "gameId" : "2026_03_ATL_GB",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T03:27:04.134112Z",
+      "fatorChave" : "Uma analise estritamente preliminar indica que o jogo aereo dos mandantes pode ser decisivo, assumindo que eles mantenham o padrao historico. Na semana dezenove da temporada anterior, a eficiencia de passe deles registrou 0.3827831591251052. No entanto, e absolutamente incerto se esta caracteristica historica se manifestara na forma atual.",
+      "vantagemTatica" : "Teoricamente, os visitantes podem explorar deficiencias defensivas passadas. Se os mandantes repetirem a taxa de sucesso defensivo de 0.5753424657534246 concedida na semana dezessete da temporada anterior, os visitantes poderiam capitalizar, considerando que historicamente produziram uma eficiencia de passe de 0.24617479346598267 na sua respectiva semana dezessete. A validade disto depende da manutencao das limitacoes de outrora.",
+      "alertaVermelho" : "E crucial manter cautela devido as profundas falhas ofensivas documentadas na temporada anterior para ambos os times. Os visitantes apresentaram uma queda severa no jogo terrestre, com eficiencia de -0.38541372562132326 na semana dezoito historica. Simultaneamente, os mandantes sofreram com uma taxa de sucesso ofensivo de apenas 0.3673469387755102 na mesma semana, sinalizando riscos potenciais de estagnacao.",
+      "veredito" : "O desfecho permanece altamente imprevisivel por depender de metricas exclusivas do passado. O indicador justo do mercado no momento projeta 0.7571884984025559 para os mandantes, sugerindo um vies favoravel a eles. Ainda assim, a total dependencia de dados limitados da temporada anterior exige que esta projecao seja tratada com extrema ressalva e incerteza explicita."
+    },
+    "2026_03_CAR_CLE" : {
+      "gameId" : "2026_03_CAR_CLE",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T04:21:47.498327Z",
+      "fatorChave" : "A análise deste confronto é explicitamente preliminar e carrega alta incerteza. Um aspecto possivelmente relevante, caso os padrões da temporada anterior se mantenham, é o desempenho ofensivo aéreo do Cleveland, que registrou um EPA por passe de -0.3463272603852915 no final histórico. Do outro lado, o Carolina permitiu um EPA defensivo por passe de 0.2827351173636379 no mesmo período da temporada anterior. Essa dinâmica histórica não deve ser tratada como forma atual.",
+      "vantagemTatica" : "Em uma avaliação estritamente condicionada aos dados da temporada anterior, o Cleveland poderia encontrar vantagem na sua defesa contra o passe, que obteve uma eficiência de -0.40341069898792475 no histórico. Considerando que o Carolina apresentou uma elevada taxa de recuo de passe de 0.723404255319149 na conclusão da temporada anterior, esse embate tático poderia favorecer a defesa local, embora seja impossível atestar tal cenário hoje.",
+      "alertaVermelho" : "O cenário ofensivo de ambas as equipes no encerramento da temporada anterior sugere extrema cautela. O Carolina sofreu com um EPA por jogada ofensiva de -0.5107222867168542 no registro histórico, enquanto o Cleveland teve uma taxa de sucesso ofensivo de apenas 0.3469387755102041 em momento similar. Sem métricas da forma atual, projeta-se um cenário de dúvidas.",
+      "veredito" : "Trata-se de um prognóstico frágil devido às limitações factuais de tempo. O mercado aponta o Carolina como leve favorito, com uma cotação de -122, contra a cotação de 102 do Cleveland. Devido à dependência exclusiva de registros da temporada anterior, recomenda-se desconfiança, pois a ausência de amostragem recente inviabiliza qualquer convicção sobre as probabilidades para este jogo."
+    },
+    "2026_03_CIN_PIT" : {
+      "gameId" : "2026_03_CIN_PIT",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T04:22:41.649325Z",
+      "fatorChave" : "A análise preliminar baseia-se estritamente em dados históricos da temporada anterior, exigindo cautela. O principal contraste, se mantido, reside na eficiência ofensiva: o time visitante registrou 0.3721539016830053 de EPA por jogada na semana 16 histórica, enquanto o mandante colapsou para -0.544037545822413 na semana 19 da temporada anterior.",
+      "vantagemTatica" : "Taticamente, o cenário pode favorecer o ataque visitante, condicionado à manutenção do padrão histórico. Na semana 18 da temporada anterior, a franquia alcançou a taxa de sucesso ofensivo de 0.582089552238806. Em contrapartida, a defesa mandante permitiu a marca de 0.5 em taxa de sucesso na semana 19 histórica.",
+      "alertaVermelho" : "O maior risco aponta para o desempenho aéreo do time mandante na reta final da temporada anterior. Apresentando a marca de -0.6671104297874475 em EPA por passe ofensivo na semana 19 histórica, o ataque mostrou falhas severas que precisam ser avaliadas antes de qualquer conclusão definitiva.",
+      "veredito" : "O mercado acompanha tal incerteza preliminar, definindo a moneyline do visitante em -125 e a do mandante em 105. Observando isoladamente as referências históricas da temporada anterior, o visitante sugere alicerces mais firmes, porém inexiste evidência concreta sobre a forma atual."
+    },
+    "2026_03_HOU_IND" : {
+      "gameId" : "2026_03_HOU_IND",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T04:23:11.738344Z",
+      "fatorChave" : "O confronto parece depender de como o ataque de Houston se comportará preliminarmente, considerando que na reta final da temporada anterior registraram historicamente uma taxa de sucesso ofensivo de 0.4444444444444444 na semana dezoito e de 0.5 na semana dezenove.",
+      "vantagemTatica" : "Historicamente, a defesa de Houston mostrou potencial tático de domínio, refletido no EPA defensivo por jogada de -0.544037545822413 na semana dezenove da temporada anterior, o que pode teoricamente limitar o ataque de Indianapolis, que marcou um EPA ofensivo por passe de -0.36426701318410504 na semana dezessete do ciclo passado.",
+      "alertaVermelho" : "A maior incerteza para Indianapolis repousa em sua defesa histórica. Na temporada anterior, a equipe cedeu um EPA defensivo corrido de 0.17287547231327544 na semana dezesseis, indicando vulnerabilidade condicional. Houston também apresentou instabilidade pretérita, com forte queda no EPA ofensivo por jogada para -0.4067314588650457 na semana vinte da temporada anterior.",
+      "veredito" : "Trata-se de uma projeção estritamente preliminar baseada nos registros da temporada anterior. Com Houston apresentando métricas defensivas históricas que sugerem maior robustez condicional e Indianapolis exibindo falhas passadas, o cenário hipotético aponta para um desempenho possivelmente mais consistente dos visitantes, embora a falta de dados da forma atual imponha explícita incerteza ao resultado."
+    },
+    "2026_03_NYJ_DET" : {
+      "gameId" : "2026_03_NYJ_DET",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-17T09:43:01.789104Z",
+      "fatorChave" : "Como esta analise e preliminar e baseada exclusivamente em dados historicos da temporada anterior, o fator chave condicional reside na capacidade de passe do time mandante. Na reta final da temporada anterior, o mandante registrou um EPA por passe de 0.2131793494772913, enquanto o visitante permitiu um EPA defensivo contra o passe de 1.081439777725677, sugerindo um potencial cenario favoravel se a dinamica se repetir.",
+      "vantagemTatica" : "A principal vantagem tatica, caso os padroes historicos se mantenham, pertence ao ataque aereo do mandante. Eles demonstraram uma taxa de recuo para passe de 0.8382352941176471 aliada a um EPA de passe de 0.19038248237058172 em registros da temporada anterior, o que possivelmente explorara as vulnerabilidades estruturais do visitante observadas no passado.",
+      "alertaVermelho" : "O alerta vermelho recai sobre a severa ineficiencia ofensiva historica do time visitante. Com base na temporada anterior, a equipe apresentou um EPA ofensivo por jogada de -0.3565103556337593 e um EPA de passe ofensivo de -0.49505268876097813, gerando incerteza explicita sobre sua capacidade de movimentar as correntes e pontuar neste confronto.",
+      "veredito" : "O cenario preliminar aponta vantagem para o time mandante, refletida na odd moneyline de -425, enquanto o visitante apresenta odd de 330. Devido a dependencia exclusiva de metricas historicas da temporada anterior, este veredito e estritamente condicional e carrega alta incerteza sobre o verdadeiro nivel atual das equipes, servindo apenas como uma projecao referencial."
     }
   }
 }

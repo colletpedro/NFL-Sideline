@@ -1,6 +1,6 @@
 package com.nflsideline.coreapi.editorial.batch;
 
-import com.nflsideline.coreapi.domain.AnalysisCache;
+import com.nflsideline.coreapi.llm.GenerationFailure;
 import com.nflsideline.coreapi.editorial.AnalysisContext;
 import com.nflsideline.coreapi.editorial.AnalysisContextBuilder;
 import com.nflsideline.coreapi.editorial.AnalysisDepth;
@@ -48,6 +48,7 @@ public class EditorialBatchService {
         List<Planned> calls = planned.stream().filter(item -> !item.cached()).limit(options.maxAnalyses()).toList();
         int omittedByLimit = (int) planned.stream().filter(item -> !item.cached()).count() - calls.size();
         List<String> failures = new ArrayList<>();
+        Map<GenerationFailure.Category, Integer> failureCategories = new EnumMap<>(GenerationFailure.Category.class);
         int realized = 0;
         if (!options.dryRun()) {
             for (Planned call : calls) {
@@ -56,7 +57,9 @@ public class EditorialBatchService {
                             options.asOfDate(), options.revisionKey(), call.context());
                     realized++;
                 } catch (RuntimeException failure) {
-                    failures.add("generation_failed:" + sanitize(call.candidate().game().getGameId()));
+                    var category = GenerationFailure.classify(failure);
+                    failureCategories.merge(category, 1, Integer::sum);
+                    failures.add(category.name() + ":" + sanitize(call.candidate().game().getGameId()));
                 }
             }
         }
@@ -64,7 +67,7 @@ public class EditorialBatchService {
                 .collect(java.util.stream.Collectors.groupingBy(item -> item.reason().name(),
                         java.util.TreeMap::new, java.util.stream.Collectors.counting()));
         return new Summary(Map.copyOf(eligible), reused, calls.size(), realized, omittedByLimit,
-                Map.copyOf(omissionReasons), List.copyOf(failures), options.dryRun());
+                Map.copyOf(omissionReasons), List.copyOf(failures), Map.copyOf(failureCategories), options.dryRun());
     }
 
     private Planned planned(EditorialCandidate candidate, EditorialBatchOptions options) {
@@ -81,5 +84,5 @@ public class EditorialBatchService {
     private record Planned(EditorialCandidate candidate, AnalysisContext context, String promptHash, boolean cached) { }
     public record Summary(Map<AnalysisDepth, Integer> eligible, int cachesReused, int callsPlanned,
                           int callsRealized, int omittedByLimit, Map<String, Long> omissionReasons,
-                          List<String> failures, boolean dryRun) { }
+                          List<String> failures, Map<GenerationFailure.Category, Integer> failureCategories, boolean dryRun) { }
 }

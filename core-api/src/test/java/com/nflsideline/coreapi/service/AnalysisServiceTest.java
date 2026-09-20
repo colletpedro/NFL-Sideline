@@ -75,6 +75,50 @@ class AnalysisServiceTest {
         verify(fixture.caches, never()).saveAndFlush(any());
     }
 
+    @Test
+    void validStructuredResponseStoresOnlyFourPublicFields() throws Exception {
+        Fixture f = fixture(VALID.replace("duelo central", "20 pontos na temporada anterior")
+                .replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":20}"));
+        var result = f.service.generateMatchupAnalysis(request("r1"));
+        var json = new ObjectMapper().readTree(f.saved.values().iterator().next().getResponseText());
+        assertThat(json.size()).isEqualTo(4);
+        assertThat(json.has("metricas_citadas")).isFalse();
+    }
+
+    @Test
+    void historicalYearsAreNotMetricsButUncitedMetricsAreRejected() {
+        fixture(VALID.replace("duelo central", "Histórico de 1999, 2025 e 2100")).service.generateMatchupAnalysis(request("r1"));
+        for (String output : java.util.List.of(
+                VALID.replace("duelo central", "20 pontos"),
+                VALID.replace("duelo central", "21 pontos").replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":21}"),
+                VALID.replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":{\"valor\":20}}"))) {
+            Fixture f = fixture(output);
+            assertThatThrownBy(() -> f.service.generateMatchupAnalysis(request("r1"))).hasMessage("INVALID_NUMERIC_CITATIONS");
+            assertThat(f.saved).isEmpty();
+        }
+    }
+
+    @Test
+    void allFourFieldsMustBeNonblankStringsAndCitationsObjectRequired() throws Exception {
+        for (String key : java.util.List.of("fator_chave", "vantagem_tatica", "alerta_vermelho", "veredito")) {
+            for (String value : java.util.List.of("missing", "blank", "number")) {
+                var json = (com.fasterxml.jackson.databind.node.ObjectNode) new ObjectMapper().readTree(VALID);
+                if (value.equals("missing")) json.remove(key);
+                else if (value.equals("blank")) json.put(key, "  ");
+                else json.put(key, 20);
+                Fixture f = fixture(json.toString());
+                assertThatThrownBy(() -> f.service.generateMatchupAnalysis(request("r1"))).hasMessage("MISSING_FIELDS");
+                assertThat(f.saved).isEmpty();
+            }
+        }
+        Fixture invalid = fixture("{secret");
+        assertThatThrownBy(() -> invalid.service.generateMatchupAnalysis(request("r1"))).hasMessage("INVALID_JSON");
+        Fixture empty = fixture(" ");
+        assertThatThrownBy(() -> empty.service.generateMatchupAnalysis(request("r1"))).hasMessage("EMPTY_RESPONSE");
+        Fixture missing = fixture(VALID.replace(",\"metricas_citadas\":{}", ""));
+        assertThatThrownBy(() -> missing.service.generateMatchupAnalysis(request("r1"))).hasMessage("MISSING_FIELDS");
+    }
+
     private AnalysisRequest request(String revision) {
         return new AnalysisRequest("g", "matchup_full_v0", AS_OF, revision);
     }

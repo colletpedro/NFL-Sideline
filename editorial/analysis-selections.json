@@ -66,6 +66,215 @@
       "reviewedBy": "Codex",
       "reviewedAt": "2026-09-16T23:21:33Z",
       "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_DET_BUF",
+      "analysisCacheId": 25,
+      "depth": "FULL",
+      "promptHash": "bb19c490f5ff1cb0b250847fe17da006bd2f2f34296d6eb3adb2cd0d0401657e",
+      "responseHash": "e96bdb36139d332bcf84447e7fc00d92506d1cdbe58b8d9f22463d32544c6bb4",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_CAR_ATL",
+      "analysisCacheId": 26,
+      "depth": "FULL",
+      "promptHash": "12c9f35ec8229c4d3b8c49991c54a808aad8d8e5406be6f223dee544214681a8",
+      "responseHash": "813f1ee28e87b23e15b824e8858339701cbdc232068c5dfc99e5cf2bb9eeee02",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_CIN_HOU",
+      "analysisCacheId": 27,
+      "depth": "FULL",
+      "promptHash": "28a7fed06a19ca8d51941a81593649de9dcae194b1b2ad7f711cca862fd08e72",
+      "responseHash": "f4dd7c30525f25eef5bd04f7cdf088068c66003b1e93b8cfbe475b052d81769d",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_CLE_TB",
+      "analysisCacheId": 28,
+      "depth": "FULL",
+      "promptHash": "2c8e8e2e4bd8a1b5562db01ffe55353cdf9ec1038c2bf193bb618d79e3cf458e",
+      "responseHash": "064d9eb7345826e4b7411fe9e10bb4af480cdf65c30643be67ba8c21d0698456",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_GB_NYJ",
+      "analysisCacheId": 29,
+      "depth": "FULL",
+      "promptHash": "465e9351d0fde88f49c1d39e138a9be85398b2d4e4dcd38c52da8962062cc323",
+      "responseHash": "95e0634da2cc6915fc95ca4f4ce4641e4d25e2bc2e0e048c4b52d2898e8dae83",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_IND_KC",
+      "analysisCacheId": 30,
+      "depth": "FULL",
+      "promptHash": "04ff32f093718f24e20f106963c71e439dea155ade7d6d93d35efd4adb7d1eec",
+      "responseHash": "7bc6838c03023f2cb4357382597c533e426c662116be4e50b0208bfd25d56730",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_LV_LAC",
+      "analysisCacheId": 31,
+      "depth": "FULL",
+      "promptHash": "538c6afefa343049e6913cb6b35439aafeadb8f11ad1b6a43fa4efd1c04e8e61",
+      "responseHash": "c0066fb74933861c342f57041dd6a839550d2239116b247d278e0922ccd16c19",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_MIA_SF",
+      "analysisCacheId": 32,
+      "depth": "FULL",
+      "promptHash": "8e0c8bc72390b496b4d38a4518b32d21fe6628c43faa5c50c06813eb81ae48b3",
+      "responseHash": "57ee2815a43c6e2277c115126c4d5d05af27ebeebfaf40c46de6914b66b918d4",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_MIN_CHI",
+      "analysisCacheId": 33,
+      "depth": "FULL",
+      "promptHash": "e58d5b5cffdfc2cc84802f21cb40408f58a733929c79880224107d25b64e023b",
+      "responseHash": "dbb2fad0aae7abc386cc0f38396259c5596b671e166934ab1cb22e8bdd4f226e",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_NO_BAL",
+      "analysisCacheId": 34,
+      "depth": "FULL",
+      "promptHash": "5ecb84fcf7669d8c2233bdbd13f6d885ef7b07f822b16824bcff688f10207aea",
+      "responseHash": "2eb06f7b35098a4a3a8fdd340ff627ff8bfaeb37def3550a0e7ceafcb2e4df84",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_PHI_TEN",
+      "analysisCacheId": 35,
+      "depth": "FULL",
+      "promptHash": "6a0fa6ee20c7230579c4316caa0e2fc06d3f51bac63c86dd10728f7e60b1bc6f",
+      "responseHash": "fa247254872eba4f61d903f2a473e13cf84910050eb149dfe0e5827a9c2f20a4",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_PIT_NE",
+      "analysisCacheId": 36,
+      "depth": "FULL",
+      "promptHash": "d8505089ab43b2f4a872b3a55f709879bf793662026c4e9e9e3f5f9a99a93ced",
+      "responseHash": "9b928b101a6dc1fcc7f0bb91295d5cb29ba4489ba2e61fd1d3f974eb583f3f07",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_SEA_ARI",
+      "analysisCacheId": 37,
+      "depth": "FULL",
+      "promptHash": "1f7aedd52eedab1ba7f21fd5783c2acb8fc3ad9535a98a5d83dd4008253b7e2c",
+      "responseHash": "856503408da69bc704228a6d64bc4dce96bea183d6edb45f0887db24168a0f52",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_WAS_DAL",
+      "analysisCacheId": 38,
+      "depth": "FULL",
+      "promptHash": "fbb00a6a116f847844761c31c0dec6a5a472f50b2e8837e28012e622a3509559",
+      "responseHash": "2806e5a4a42a9c44189c7052013e47233b3a7565c482a1009c90e7072c974d27",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_ATL_GB",
+      "analysisCacheId": 39,
+      "depth": "BASIC",
+      "promptHash": "347c5fd99aba0f744f57477669fd481160fcc07f7808ed09a6d286b6d2fcafaf",
+      "responseHash": "c91bf3ab45b1d5ceaae969713a802b234067afcedb1c1f8428f0041cc0f50710",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_CAR_CLE",
+      "analysisCacheId": 40,
+      "depth": "BASIC",
+      "promptHash": "c5dd0708db2ccbcd01ffca18ce718b5536932d4c111ab8c5d157b707301dfa25",
+      "responseHash": "3444a86410e5eadd32df22e36ee35951687509bf30db8327672e1ffc8d946d66",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_CIN_PIT",
+      "analysisCacheId": 41,
+      "depth": "BASIC",
+      "promptHash": "e730438da058c40d76d47960903441e9d1a54f5e18a192c55abeb7f05afd0902",
+      "responseHash": "25f4c69f9621705d28e57765f8db1b7849b8e8728c237cf079416e23624a4d69",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_HOU_IND",
+      "analysisCacheId": 42,
+      "depth": "BASIC",
+      "promptHash": "5b4c2ea6302e5db9014127ac2088eb3e22d040c9551af9159cc5724629662f76",
+      "responseHash": "5daf3047c07ed9d26b25aed4956a32a6cb9c0dc118fcab739587bfd28b6e1a2a",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_NYJ_DET",
+      "analysisCacheId": 43,
+      "depth": "BASIC",
+      "promptHash": "7c695971b73db894b319b73dc5f8fa6f271f10e67d17f77cab91c5f8adbe5e78",
+      "responseHash": "7a54bfac90dd44b294c78aba8f21a7339f6d7900b2973201b03816b8a2495bc9",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-20T17:30:36.299317Z",
+      "asOfDate": "2026-09-16"
     }
   ]
 }

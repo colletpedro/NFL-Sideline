@@ -46,6 +46,25 @@ class EditorialBatchServiceTest {
         verify(analyses, never()).generatePrepared(any(), any(), any(), any(), any());
     }
 
+    @Test
+    void reportsSanitizedCategoryCountsAndContinuesWithoutRetry() {
+        var games = mock(GameRepository.class);
+        var caches = mock(AnalysisCacheRepository.class);
+        var contexts = mock(AnalysisContextBuilder.class);
+        var analyses = mock(AnalysisService.class);
+        when(games.findAllBySeasonWithDetails(2026)).thenReturn(List.of(game("g1", 2, "2026-09-15"), game("g2", 2, "2026-09-15")));
+        when(contexts.build(any(), any())).thenReturn(new AnalysisContext("{}", ContextQuality.MINIMAL));
+        when(analyses.promptHash(any(), any(), any(), any())).thenReturn("a".repeat(64));
+        when(caches.findByGameIdAndAnalysisTypeAndPromptHash(any(), any(), any())).thenReturn(Optional.empty());
+        when(analyses.generatePrepared(any(), any(), any(), any(), any()))
+                .thenThrow(new com.nflsideline.coreapi.llm.GenerationFailure(com.nflsideline.coreapi.llm.GenerationFailure.Category.HTTP_429));
+        var summary = new EditorialBatchService(games, caches, contexts, analyses).run(
+                new EditorialBatchOptions(2026, LocalDate.parse("2026-09-15"), false, 2, "r1"));
+        assertThat(summary.failureCategories()).containsEntry(com.nflsideline.coreapi.llm.GenerationFailure.Category.HTTP_429, 2);
+        assertThat(summary.failures()).containsExactly("HTTP_429:g1", "HTTP_429:g2");
+        verify(analyses, org.mockito.Mockito.times(2)).generatePrepared(any(), any(), any(), any(), any());
+    }
+
     private Game game(String id, int week, String date) {
         return Game.builder().gameId(id).season(2026).gameType("REG").week(week)
                 .gameday(LocalDate.parse(date)).build();

@@ -27,16 +27,17 @@ public final class EditorialBatchApplication {
                     .run()) {
                 EditorialBatchService.Summary summary = context.getBean(EditorialBatchService.class).run(options);
                 System.out.printf("mode=%s eligible_full=%d eligible_basic=%d caches_reused=%d calls_planned=%d "
-                                + "calls_realized=%d omitted_by_limit=%d failures=%d omissions=%s%n",
+                                + "calls_realized=%d omitted_by_limit=%d failures=%d failure_categories=%s failed_games=%s omissions=%s%n",
                         summary.dryRun() ? "dry-run" : "execute",
                         summary.eligible().getOrDefault(AnalysisDepth.FULL, 0),
                         summary.eligible().getOrDefault(AnalysisDepth.BASIC, 0), summary.cachesReused(),
                         summary.callsPlanned(), summary.callsRealized(), summary.omittedByLimit(),
-                        summary.failures().size(), summary.omissionReasons());
+                        summary.failures().size(), summary.failureCategories(), summary.failures(), summary.omissionReasons());
+                if (!summary.failures().isEmpty()) return 1;
             }
             return 0;
         } catch (RuntimeException failure) {
-            System.err.println("Editorial batch failed: check options, local database configuration and credentials");
+            System.err.println("Editorial batch failed: " + com.nflsideline.coreapi.llm.GenerationFailure.classify(failure));
             return 1;
         }
     }
