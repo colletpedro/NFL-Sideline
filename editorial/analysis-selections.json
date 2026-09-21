@@ -275,6 +275,94 @@
       "reviewedBy": "Codex",
       "reviewedAt": "2026-09-20T17:30:36.299317Z",
       "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_02_NYG_LA",
+      "analysisCacheId": 44,
+      "depth": "FULL",
+      "promptHash": "fe7cd30fc9612b11821e8b76c3907a7c443416738a99c818aff82bacfef352c0",
+      "responseHash": "17e4958d3e35b1c49b881b95633e3fd2ffe36a395db17ed5a25870f55ccf98c9",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "analysisCacheId": 45,
+      "depth": "BASIC",
+      "promptHash": "92259187e3569771e743f877e9c53b66436035aadf40a13bec55bef0b4517bc8",
+      "responseHash": "d6d80679c034558baea6134a219508aef407a4a78aafa482eacc68af32cba082",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "analysisCacheId": 46,
+      "depth": "BASIC",
+      "promptHash": "5c367999fb8a65033aa09a0c0ce065696c9f165eae66d78c695ff4b90713af71",
+      "responseHash": "c5adf3930451a67f2eb2935ac59befc76858b753df84ed485d97cc2d8141c6e9",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "analysisCacheId": 47,
+      "depth": "BASIC",
+      "promptHash": "de01a4571b37a5b045010a8c4c146c991f3fef160920e4da3b732c43e89aa2c9",
+      "responseHash": "8b28a140cf2cc3143d4f778bc80b66e48246f7db9e2421f7cab5b093d827fe25",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_LAC_BUF",
+      "analysisCacheId": 48,
+      "depth": "BASIC",
+      "promptHash": "ad32452480447bd24f12c736e5228d17991547378bb9f45ef9c63bd588cbe741",
+      "responseHash": "c26a67c2d1a88d6035b8764456cedb72418585b9acd14df223a3ed4ac93a34c3",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_LA_DEN",
+      "analysisCacheId": 49,
+      "depth": "BASIC",
+      "promptHash": "bb79733389346776be1c5d62878ae0a8a778c79e300a694435a60d12c516a852",
+      "responseHash": "e90ef334ae817704d250966c1d895ee91ee356fbc7ad8a7d3e3d61b3c03abe75",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "analysisCacheId": 50,
+      "depth": "BASIC",
+      "promptHash": "06edb937992bce607b87e0f6b697aa518992905daec8c3b31705a78a27d25531",
+      "responseHash": "492c6745830a5d9687d3a9013ab6e51ebf95e0e07de43822b3010059be732b8c",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "analysisCacheId": 51,
+      "depth": "BASIC",
+      "promptHash": "ddbb86f538f52be1d440fcc0d48c93ced6120037f8fe89bee7d385518c9feb49",
+      "responseHash": "3b18a961334f5cd0f7b935f37b35a63b9f30b445e625112ab81dd45f46f68635",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:31:00Z",
+      "asOfDate": "2026-09-16"
     }
   ]
 }

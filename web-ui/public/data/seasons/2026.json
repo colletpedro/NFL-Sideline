@@ -1,7 +1,7 @@
 {
   "schemaVersion" : 1,
   "season" : 2026,
-  "generatedAt" : "2026-09-20T17:43:14.453965Z",
+  "generatedAt" : "2026-09-21T05:30:11.582912Z",
   "teams" : [ {
     "teamAbbr" : "ARI",
     "teamName" : "Arizona Cardinals",
@@ -7703,6 +7703,15 @@
       "alertaVermelho" : "O principal risco para os mandantes é o teto que a defesa de Baltimore apresentou contra o passe na semana dezessete da temporada anterior, permitindo 0.42111229589553895 de EPA por passe. New Orleans mostrou capacidade de explorar os ares na mesma semana dezessete com 0.3896531439366538 de EPA por passe.",
       "veredito" : "O veredito aponta para a solidez histórica de Baltimore nos confrontos terrestres e aéreos, justificando a precificação de -345 para os mandantes, enquanto New Orleans pontua com 275. A capacidade de Baltimore ditar o ritmo deve prevalecer sobre as oscilações históricas."
     },
+    "2026_02_NYG_LA" : {
+      "gameId" : "2026_02_NYG_LA",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:20:51.803078Z",
+      "fatorChave" : "O fator central desta partida envolve o desempenho ineficiente do ataque de LA em sua primeira semana e os dados estritamente historicos de NYG da temporada anterior. Na semana um atual, LA registrou um EPA ofensivo por jogada de -0.26463892335699973, indicando severas dificuldades de avanco.",
+      "vantagemTatica" : "O ataque aereo de LA apresentou um EPA de passe de -0.3938521855889121 e EPA de corrida de -0.1354256611250873. A defesa de NYG, na semana dezoito da temporada anterior, registrou EPA defensivo aereo de -0.260340994580656 e terrestre de -0.02159415489937789. O ataque terrestre historico de NYG teve um EPA de corrida de 0.4060700222783323 na semana dezessete, podendo explorar a defesa de LA, que permitiu um EPA defensivo terrestre de 0.2205165465323565 em sua estreia.",
+      "alertaVermelho" : "O principal risco para NYG reside no fato de que seus dados sao da temporada anterior, nao refletindo a forma atual. Na semana dezesseis dessa amostra historica, o ataque aereo de NYG colapsou com um EPA de passe de -0.9476775168718637, o que seria desastroso contra a defesa de LA, que registrou uma taxa de sucesso defensiva de 0.5625 e EPA defensivo de passe de 0.14193022164355665.",
+      "veredito" : "Com LA registrando problemas no avanco de bola e os dados de NYG dependendo de performances da temporada anterior, a partida indica um confronto com desafios no jogo aereo de ambos os lados, exigindo que o ataque terrestre ou a defesa ditem o ritmo do duelo de maneira direta."
+    },
     "2026_02_PHI_TEN" : {
       "gameId" : "2026_02_PHI_TEN",
       "analysisType" : "matchup",
@@ -7739,6 +7748,15 @@
       "alertaVermelho" : "O principal risco reside na deficiência defensiva demonstrada historicamente pelo visitante contra o jogo corrido, permitindo 0.3438824961772471 em eficiência de corridas na semana 16 da temporada anterior. A linha de mercado coloca o time de Washington com cotação de 170 e chance implícita justa de 0.355270821199767, indicando desvantagem evidente frente ao mandante que tem cotação de -205.",
       "veredito" : "Com base nos registros históricos da temporada anterior, Dallas entra com forte favoritismo, sustentado por sua probabilidade implícita justa de 0.6447291788002329 e por uma linha de mercado de -205. A solidez de sua defesa contra a corrida limita as alternativas do visitante, fazendo com que a expectativa tática dê clara vantagem à equipe mandante na conquista da vitória."
     },
+    "2026_03_ARI_SF" : {
+      "gameId" : "2026_03_ARI_SF",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:21:29.422424Z",
+      "fatorChave" : "Esta previa e explicitamente preliminar e incerta devido a falta de dados atuais dos visitantes. O fator chave que pode despontar e a capacidade de San Francisco sustentar campanhas, registrando 0.5625 de taxa de sucesso ofensivo, contra as incognitas defensivas que o adversario carrega da temporada anterior.",
+      "vantagemTatica" : "Taticamente, ha indicativos de que San Francisco pode ditar o ritmo no jogo terrestre, onde obteve um EPA de 0.2205165465323565. Defensivamente, a equipe da casa limitou adversarios com contundencia, cedendo um EPA de passe de -0.3938521855889121 por recuo, o que pode neutralizar eventuais investidas adversarias pelo ar.",
+      "alertaVermelho" : "O alerta vermelho incide sobre a fragilidade historica de Arizona na temporada anterior, cujos registros marcam falhas de contencao evidentes, como quando cederam 0.3402397610588282 de EPA por jogada e 0.4774462894062327 de EPA por passe em sua pior apresentacao dessa amostragem. Como os dados nao refletem a forma atual, o verdadeiro nivel dessa unidade permanece nebuloso.",
+      "veredito" : "De modo estritamente condicional, os atributos tecnicos demonstrados por San Francisco indicam um cenario possivelmente mais estavel em casa. Contudo, a analise permanece nao conclusiva, uma vez que o referencial historico de Arizona impede mensurar o real nivel de competitividade da partida neste instante."
+    },
     "2026_03_ATL_GB" : {
       "gameId" : "2026_03_ATL_GB",
       "analysisType" : "matchup",
@@ -7747,6 +7765,15 @@
       "vantagemTatica" : "Teoricamente, os visitantes podem explorar deficiencias defensivas passadas. Se os mandantes repetirem a taxa de sucesso defensivo de 0.5753424657534246 concedida na semana dezessete da temporada anterior, os visitantes poderiam capitalizar, considerando que historicamente produziram uma eficiencia de passe de 0.24617479346598267 na sua respectiva semana dezessete. A validade disto depende da manutencao das limitacoes de outrora.",
       "alertaVermelho" : "E crucial manter cautela devido as profundas falhas ofensivas documentadas na temporada anterior para ambos os times. Os visitantes apresentaram uma queda severa no jogo terrestre, com eficiencia de -0.38541372562132326 na semana dezoito historica. Simultaneamente, os mandantes sofreram com uma taxa de sucesso ofensivo de apenas 0.3673469387755102 na mesma semana, sinalizando riscos potenciais de estagnacao.",
       "veredito" : "O desfecho permanece altamente imprevisivel por depender de metricas exclusivas do passado. O indicador justo do mercado no momento projeta 0.7571884984025559 para os mandantes, sugerindo um vies favoravel a eles. Ainda assim, a total dependencia de dados limitados da temporada anterior exige que esta projecao seja tratada com extrema ressalva e incerteza explicita."
+    },
+    "2026_03_BAL_DAL" : {
+      "gameId" : "2026_03_BAL_DAL",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:22:17.103395Z",
+      "fatorChave" : "Com base estritamente em registros da temporada anterior, um fator preliminar de destaque e o confronto entre o ataque aereo de Baltimore e a defesa de Dallas. Baltimore produziu um EPA de passe de 0.41427086510063293 em sua reta final historica, o que pode explorar com exito a defesa de Dallas, que permitiu um vulneravel EPA de passe de 0.8188386754691265 em sua antepenultima atuacao.",
+      "vantagemTatica" : "Avaliando cenarios hipoteticos fundamentados apenas na temporada anterior, Baltimore pode ter uma vantagem tatica na defesa terrestre. Durante a penultima partida daquela jornada, a equipe conteve corridas adversarias com um EPA de -0.4134935936437692, demonstrando uma solidez historica que pode limitar as acoes terrestres de Dallas.",
+      "alertaVermelho" : "A completa falta de dados da forma atual e o maior risco desta projecao. Esportivamente, o perigo recai sobre a capacidade aerea de Dallas, que encerrou a temporada anterior gerando um preocupante EPA de -0.260340994580656 por passe, indicando extrema instabilidade em seu ataque.",
+      "veredito" : "Trata-se de um prognostico altamente condicional e provisorio, restrito a dados antigos. A taxa de sucesso ofensivo de Dallas de apenas 0.4339622641509434 em seu ultimo registro da temporada anterior expoe limitacoes passadas substanciais, indicando que Baltimore apresentou indicadores estruturais consideravelmente mais robustos no encerramento da ultima campanha."
     },
     "2026_03_CAR_CLE" : {
       "gameId" : "2026_03_CAR_CLE",
@@ -7775,6 +7802,42 @@
       "alertaVermelho" : "A maior incerteza para Indianapolis repousa em sua defesa histórica. Na temporada anterior, a equipe cedeu um EPA defensivo corrido de 0.17287547231327544 na semana dezesseis, indicando vulnerabilidade condicional. Houston também apresentou instabilidade pretérita, com forte queda no EPA ofensivo por jogada para -0.4067314588650457 na semana vinte da temporada anterior.",
       "veredito" : "Trata-se de uma projeção estritamente preliminar baseada nos registros da temporada anterior. Com Houston apresentando métricas defensivas históricas que sugerem maior robustez condicional e Indianapolis exibindo falhas passadas, o cenário hipotético aponta para um desempenho possivelmente mais consistente dos visitantes, embora a falta de dados da forma atual imponha explícita incerteza ao resultado."
     },
+    "2026_03_KC_MIA" : {
+      "gameId" : "2026_03_KC_MIA",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:22:52.985866Z",
+      "fatorChave" : "A disparidade de expectativas para este confronto preliminar da terceira rodada baseia-se amplamente nos números de fechamento oferecidos, onde o Kansas City Chiefs sustenta uma moneyline de -440, contrastando fortemente com a moneyline de 340 do Miami Dolphins. Tais valores podem sugerir uma possível direção para a partida, mas o cenário carrega a incerteza inerente ao início de competição.",
+      "vantagemTatica" : "Avaliando os registros históricos da décima oitava semana da temporada anterior, o ataque de Kansas City conseguiu executar 62 jogadas ofensivas, enquanto a defesa de Miami enfrentou 54 jogadas defensivas na mesma rodada. Esses volumes passados podem indicar que Kansas City possuía um ritmo mais intenso de sustentação em campo, mas qualquer projeção tática atual carrega uma incerteza explícita devido à falta de amostras recentes.",
+      "alertaVermelho" : "O alerta principal recai sobre os números históricos do ataque de Miami, que gerou somente 54 jogadas ofensivas na sua última rodada da temporada anterior. Em paralelo, a defesa de Kansas City acumulou 61 jogadas defensivas no mesmo período histórico. Como não há forma atual consolidada, existe o risco considerável de que tais padrões antigos não se repitam, o que exige tratar a análise de forma estritamente condicional.",
+      "veredito" : "Embora as cotações monetárias iniciais estabeleçam uma expectativa prévia para Kansas City, com a moneyline em -440 contra 340 de Miami, a avaliação permanece inteiramente preliminar e sujeita a variações. É plausível supor que a equipe visitante detenha condições superiores caso consiga espelhar seu volume de jogo histórico, contudo, a ausência de dados da campanha presente requer afirmar que a conclusão possui uma margem substancial de imprevisibilidade."
+    },
+    "2026_03_LAC_BUF" : {
+      "gameId" : "2026_03_LAC_BUF",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:23:33.714298Z",
+      "fatorChave" : "Nesta análise explicitamente preliminar, baseada estritamente em dados da temporada anterior, o jogo aéreo do time mandante pode ditar o ritmo. Na décima oitava semana histórica, a equipe alcançou um EPA por passe ofensivo de 0.7253219057381559, indicando uma força que, se for condicionalmente transferida para o cenário atual, representará um grande desafio para a defesa visitante.",
+      "vantagemTatica" : "Buffalo apresentou, no fim da temporada anterior, uma taxa de sucesso ofensiva que chegou a 0.6142857142857143. Em contrapartida, as métricas históricas de Los Angeles mostram dificuldades ofensivas significativas, registrando um EPA por jogada ofensiva de -0.41350366559252 na sua respectiva décima oitava rodada. Caso esses perfis sejam mantidos, a equipe da casa tende a controlar as posses de bola.",
+      "alertaVermelho" : "A maior incerteza estrutural desta prévia é a completa ausência de dados de forma atual. Observando os registros históricos condicionalmente, Los Angeles deve se preocupar muito com sua produção aérea, que marcou um trágico EPA por passe de -0.35892627937908006 na décima nona semana da temporada anterior. Se o ataque aéreo permanecer ineficiente de forma semelhante, dependerão de ajustes táticos imprevistos.",
+      "veredito" : "Considerando as limitações e os dados puramente históricos, a avaliação sugere uma potencial vantagem para Buffalo, visão alinhada à precificação de mercado para a vitória direta do mandante avaliada em -162. Não é possível traçar garantias absolutas sem amostras recentes, mas o contraste claro na eficiência ofensiva do final da temporada anterior pende fortemente a balança condicional a favor dos donos da casa."
+    },
+    "2026_03_LA_DEN" : {
+      "gameId" : "2026_03_LA_DEN",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:24:18.579118Z",
+      "fatorChave" : "Nesta análise preliminar, o desempenho ofensivo do LA parece ser a principal incógnita, tendo registrado uma marca de -0.26463892335699973 em pontos esperados adicionados por jogada ofensiva recentemente. Resta saber se o DEN conseguirá manter seu histórico da temporada anterior de defesa eficiente contra o passe, que atingiu -0.4195731604110685 em sua última amostra.",
+      "vantagemTatica" : "A vantagem tática é incerta, mas o LA pode se beneficiar caso o ataque do DEN repita o padrão histórico da temporada anterior. Naquela época, o DEN teve uma taxa de sucesso ofensivo de apenas 0.29310344827586204. Contudo, a defesa do LA também apresenta vulnerabilidades, cedendo 0.17876756143518158 em pontos esperados adicionados por jogada defensiva.",
+      "alertaVermelho" : "Um aspecto potencialmente preocupante é a taxa de sucesso defensivo do LA, que permitiu aos adversários completarem jogadas com sucesso na proporção de 0.5625 das tentativas. Isso pode ajudar o ataque do DEN, que tem um histórico fraco da temporada anterior, marcando -0.31277337395350213 em pontos esperados adicionados por jogada.",
+      "veredito" : "O cenário é altamente incerto devido à dependência de dados históricos da temporada anterior para o time da casa. O mercado sugere uma probabilidade justa de 0.5829926410466067048242027799 para a vitória do LA, indicando um leve favoritismo preliminar. No entanto, qualquer conclusão deve ser tratada como estritamente condicional neste estágio inicial."
+    },
+    "2026_03_NE_JAX" : {
+      "gameId" : "2026_03_NE_JAX",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:26:27.198462Z",
+      "fatorChave" : "Nesta analise preliminar, o fator principal e a discrepancia temporal das informacoes disponiveis, gerando alta incerteza. O ataque do NE registrou um EPA por jogada de -0.1096282705405689 na primeira semana da temporada atual, enquanto os registros do JAX sao estritamente historicos da temporada anterior, exigindo extrema cautela nas projecoes.",
+      "vantagemTatica" : "Aparentemente, os registros historicos do JAX sugerem uma possivel capacidade ofensiva, tendo terminado a semana dezenove da temporada anterior com uma taxa de sucesso no ataque de 0.5185185185185185. Pelo lado do NE, o time obteve uma taxa de sucesso ofensivo de apenas 0.417910447761194 recentemente, indicando potenciais limitacoes neste inicio de ano.",
+      "alertaVermelho" : "O maior risco preliminar reside na defesa do NE contra o passe, que permitiu um EPA defensivo aereo de 0.16801726550264592 em sua partida inaugural. Contudo, e fundamental reforcar que as informacoes do JAX refletem o passado, onde sua defesa tambem sofreu, cedendo um EPA defensivo por jogada de 0.24351304215165026 no fechamento da temporada anterior.",
+      "veredito" : "Este cenario e envolto em incerteza explicita devido a dependencia de referencias historicas para a equipe mandante. Com dados provisorios e condicionais, nao existem bases suficientes para conclusoes absolutas, restando observar as limitacoes iniciais do NE em contraste com o desempenho defasado da temporada anterior do JAX."
+    },
     "2026_03_NYJ_DET" : {
       "gameId" : "2026_03_NYJ_DET",
       "analysisType" : "matchup",
@@ -7783,6 +7846,15 @@
       "vantagemTatica" : "A principal vantagem tatica, caso os padroes historicos se mantenham, pertence ao ataque aereo do mandante. Eles demonstraram uma taxa de recuo para passe de 0.8382352941176471 aliada a um EPA de passe de 0.19038248237058172 em registros da temporada anterior, o que possivelmente explorara as vulnerabilidades estruturais do visitante observadas no passado.",
       "alertaVermelho" : "O alerta vermelho recai sobre a severa ineficiencia ofensiva historica do time visitante. Com base na temporada anterior, a equipe apresentou um EPA ofensivo por jogada de -0.3565103556337593 e um EPA de passe ofensivo de -0.49505268876097813, gerando incerteza explicita sobre sua capacidade de movimentar as correntes e pontuar neste confronto.",
       "veredito" : "O cenario preliminar aponta vantagem para o time mandante, refletida na odd moneyline de -425, enquanto o visitante apresenta odd de 330. Devido a dependencia exclusiva de metricas historicas da temporada anterior, este veredito e estritamente condicional e carrega alta incerteza sobre o verdadeiro nivel atual das equipes, servindo apenas como uma projecao referencial."
+    },
+    "2026_03_SEA_WAS" : {
+      "gameId" : "2026_03_SEA_WAS",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:27:01.011294Z",
+      "fatorChave" : "A análise preliminar sugere que a defesa de Seattle, com -0.1096282705405689 de EPA defensivo por jogada em sua partida inicial, pode tentar conter o ataque de Washington, que registrou um EPA ofensivo por jogada histórico de -0.12504454409910207 na reta final da temporada anterior.",
+      "vantagemTatica" : "Pode haver um caminho favorável para o jogo aéreo de Seattle, que obteve 0.16801726550264592 de EPA ofensivo de passe. Isso possivelmente se tornará uma vantagem se Washington repetir a vulnerabilidade histórica da temporada anterior, quando cedeu 0.2896811006046502 de EPA defensivo por jogada.",
+      "alertaVermelho" : "Os dados de Washington são estritamente históricos e não refletem o momento atual. A taxa de sucesso defensivo de 0.5230769230769231 da temporada anterior pode não ter qualquer relação com o time que entrará em campo, o que impõe grande incerteza à projeção.",
+      "veredito" : "A falta de métricas da campanha vigente para o time da casa torna o cenário amplamente imprevisível. De forma condicional, os primeiros indícios de Seattle apontam para uma base capaz de competir bem, desde que o desempenho inicial não seja um reflexo de uma amostra isolada."
     }
   }
 }
