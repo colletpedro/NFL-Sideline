@@ -148,7 +148,6 @@ public class AnalysisService {
         if (!cited.isObject()) throw new GenerationFailure(MISSING_FIELDS);
         List<Double> contextNumbers = new ArrayList<>();
         collectNumbers(context, contextNumbers);
-        List<Double> citedNumbers = new ArrayList<>();
         if (cited.isObject()) {
             Iterator<Map.Entry<String, JsonNode>> fields = cited.fields();
             while (fields.hasNext()) {
@@ -156,10 +155,9 @@ public class AnalysisService {
                 if (!value.isNumber()) throw new GenerationFailure(INVALID_NUMERIC_CITATIONS);
                 double number = value.doubleValue();
                 if (!contains(contextNumbers, number)) throw new GenerationFailure(INVALID_NUMERIC_CITATIONS);
-                citedNumbers.add(number);
             }
         }
-        if (textNumbers.stream().anyMatch(number -> !contains(citedNumbers, number))) {
+        if (textNumbers.stream().anyMatch(number -> !contains(contextNumbers, number))) {
             throw new GenerationFailure(INVALID_NUMERIC_CITATIONS);
         }
     }

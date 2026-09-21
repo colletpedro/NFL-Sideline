@@ -16,9 +16,17 @@ class EditorialBatchOptionsTest {
         assertThat(options.asOfDate()).isEqualTo(LocalDate.parse("2026-09-15"));
         assertThat(options.dryRun()).isTrue();
         assertThat(options.maxAnalyses()).isEqualTo(32);
+        assertThat(options.gameIds()).isEmpty();
         assertThat(EditorialBatchOptions.parse(new String[]{"--season=2026", "--as-of=2026-09-15",
                 "--revision-key=r", "--execute"}).dryRun()).isFalse();
         assertThatThrownBy(() -> EditorialBatchOptions.parse(new String[]{"--season=2026", "--revision-key=r"}))
                 .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void repeatedGameIdsAreDeduplicatedInFirstSeenOrder() {
+        var options = EditorialBatchOptions.parse(new String[]{"--season=2026", "--as-of=2026-09-15",
+                "--revision-key=r", "--game-id", "g2", "--game-id=g1", "--game-id", "g2"});
+        assertThat(options.gameIds()).containsExactly("g2", "g1");
     }
 }

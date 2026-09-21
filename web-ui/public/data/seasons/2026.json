@@ -1,7 +1,7 @@
 {
   "schemaVersion" : 1,
   "season" : 2026,
-  "generatedAt" : "2026-09-21T05:30:11.582912Z",
+  "generatedAt" : "2026-09-21T05:55:58.339419Z",
   "teams" : [ {
     "teamAbbr" : "ARI",
     "teamName" : "Arizona Cardinals",
@@ -7829,6 +7829,24 @@
       "alertaVermelho" : "Um aspecto potencialmente preocupante é a taxa de sucesso defensivo do LA, que permitiu aos adversários completarem jogadas com sucesso na proporção de 0.5625 das tentativas. Isso pode ajudar o ataque do DEN, que tem um histórico fraco da temporada anterior, marcando -0.31277337395350213 em pontos esperados adicionados por jogada.",
       "veredito" : "O cenário é altamente incerto devido à dependência de dados históricos da temporada anterior para o time da casa. O mercado sugere uma probabilidade justa de 0.5829926410466067048242027799 para a vitória do LA, indicando um leve favoritismo preliminar. No entanto, qualquer conclusão deve ser tratada como estritamente condicional neste estágio inicial."
     },
+    "2026_03_LV_NO" : {
+      "gameId" : "2026_03_LV_NO",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:52:47.515322Z",
+      "fatorChave" : "Avaliando o histórico da temporada anterior, a defesa do New Orleans pode ter uma leve vantagem condicional no jogo aéreo, dado que limitou os oponentes a um EPA de passe de -0.49505268876097813 na semana dezesseis. O ataque aéreo do Las Vegas registrou um EPA de passe de -0.5758376824624954 na semana dezoito da temporada anterior, mas é incerto se esse padrão persistirá no cenário atual.",
+      "vantagemTatica" : "A capacidade de passe do New Orleans no final da temporada anterior pode teoricamente representar um risco, tendo alcançado um EPA de passe ofensivo de 0.3896531439366538 na semana dezessete. Esse retrospecto poderia expor a defesa do Las Vegas, que permitiu um EPA defensivo por jogada de 0.23922356683374604 na mesma semana dezessete. Contudo, esses dados são estritamente históricos e não refletem a forma atual das equipes.",
+      "alertaVermelho" : "O colapso ofensivo do Las Vegas na última rodada da temporada anterior, exemplificado pelo EPA de passe de -0.5758376824624954, alerta para possíveis fragilidades estruturais, caso não tenham sido corrigidas. Ainda assim, sem dados contemporâneos, qualquer projeção de que isso se repetirá contra o New Orleans deve ser tratada com profunda incerteza.",
+      "veredito" : "Esta análise é explicitamente preliminar e amparada apenas em referências da temporada anterior, exigindo extrema cautela. O New Orleans parece possuir indicadores históricos ligeiramente mais sólidos, mas o cenário é incerto e qualquer desfecho permanece estritamente condicional."
+    },
+    "2026_03_MIN_TB" : {
+      "gameId" : "2026_03_MIN_TB",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:53:24.159944Z",
+      "fatorChave" : "A projeção preliminar deste confronto ainda carrega grande incerteza, mas pode girar em torno da capacidade do ataque aéreo do time da casa. No encerramento da temporada anterior, TB registrou uma eficiência de passe por jogada de 0.2827351173636379, um indicativo puramente histórico que poderia vir a ser testado caso a equipe decida manter essa mesma tendência ofensiva nesta nova fase.",
+      "vantagemTatica" : "Ao avaliarmos os dados da temporada anterior, MIN demonstrou forte contenção aérea defensiva em seu último jogo, marcando -0.8781343495667291 em eficiência contra o passe. Por outro lado, TB apresentou solidez defensiva terrestre no mesmo período, com -0.567876300322286. Essas características factuais sugerem que, se os esquemas permanecerem parecidos, MIN pode ter certa vantagem condicional em frear avanços aéreos.",
+      "alertaVermelho" : "O alerta fica para a possível estagnação ofensiva geral de MIN, que na última partida da temporada anterior registrou -0.0427276370525064 de eficiência por jogada. Ao mesmo tempo, é incerto se a taxa de recuo para passe de TB continuará baixa como a marca de 0.36363636363636365 vista no fim daquele ano, exigindo imensa cautela nesta leitura provisória.",
+      "veredito" : "Esta é uma avaliação estritamente preliminar e condicional, pois depende da transposição de números da temporada anterior para o cenário atual. A defesa de MIN apresentou uma eficiência global histórica de -0.32896393591844886 em sua apresentação derradeira daquele ano, o que talvez traga equilíbrio à partida. Como os dados são defasados, o panorama segue indefinido e qualquer conclusão carece de maiores observações."
+    },
     "2026_03_NE_JAX" : {
       "gameId" : "2026_03_NE_JAX",
       "analysisType" : "matchup",
@@ -7847,6 +7865,15 @@
       "alertaVermelho" : "O alerta vermelho recai sobre a severa ineficiencia ofensiva historica do time visitante. Com base na temporada anterior, a equipe apresentou um EPA ofensivo por jogada de -0.3565103556337593 e um EPA de passe ofensivo de -0.49505268876097813, gerando incerteza explicita sobre sua capacidade de movimentar as correntes e pontuar neste confronto.",
       "veredito" : "O cenario preliminar aponta vantagem para o time mandante, refletida na odd moneyline de -425, enquanto o visitante apresenta odd de 330. Devido a dependencia exclusiva de metricas historicas da temporada anterior, este veredito e estritamente condicional e carrega alta incerteza sobre o verdadeiro nivel atual das equipes, servindo apenas como uma projecao referencial."
     },
+    "2026_03_PHI_CHI" : {
+      "gameId" : "2026_03_PHI_CHI",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:54:23.698146Z",
+      "fatorChave" : "O principal fator historico, de carater preliminar, gira em torno da eficiencia do jogo aereo de CHI no final da temporada anterior. Na semana dezenove, a equipe registrou um EPA ofensivo de passe de 0.24225821106358197. Resta muita incerteza se essa caracteristica se mantera no cenario atual.",
+      "vantagemTatica" : "Taticamente, pode haver uma possivel vantagem condicional para a defesa de CHI se considerarmos a resiliencia demonstrada no fim da temporada anterior. Na semana vinte, a defesa limitou a taxa de sucesso adversaria a 0.3684210526315789. Contudo, sendo um dado exclusivamente historico, sua aplicacao atual e incerta.",
+      "alertaVermelho" : "O alerta mais claro para PHI e sua dificuldade ofensiva no fim da temporada anterior, com uma taxa de sucesso ofensivo muito baixa de 0.3018867924528302 na semana dezessete. Para CHI, o sinal de alerta e a vulnerabilidade historica contra o passe, permitindo um EPA defensivo de passe de 0.3827831591251052 na semana dezenove da temporada anterior.",
+      "veredito" : "Como esta analise se baseia puramente em dados da temporada anterior, qualquer conclusao e estritamente preliminar e incerta. Os numeros historicos sugerem dificuldades no jogo aereo de PHI, evidenciadas por um EPA ofensivo de passe de -0.14317976283994716 na semana dezoito da temporada anterior, enquanto CHI apresentou inconsistencias defensivas. E necessario aguardar a forma atual para qualquer validacao mais firme."
+    },
     "2026_03_SEA_WAS" : {
       "gameId" : "2026_03_SEA_WAS",
       "analysisType" : "matchup",
@@ -7855,6 +7882,15 @@
       "vantagemTatica" : "Pode haver um caminho favorável para o jogo aéreo de Seattle, que obteve 0.16801726550264592 de EPA ofensivo de passe. Isso possivelmente se tornará uma vantagem se Washington repetir a vulnerabilidade histórica da temporada anterior, quando cedeu 0.2896811006046502 de EPA defensivo por jogada.",
       "alertaVermelho" : "Os dados de Washington são estritamente históricos e não refletem o momento atual. A taxa de sucesso defensivo de 0.5230769230769231 da temporada anterior pode não ter qualquer relação com o time que entrará em campo, o que impõe grande incerteza à projeção.",
       "veredito" : "A falta de métricas da campanha vigente para o time da casa torna o cenário amplamente imprevisível. De forma condicional, os primeiros indícios de Seattle apontam para uma base capaz de competir bem, desde que o desempenho inicial não seja um reflexo de uma amostra isolada."
+    },
+    "2026_03_TEN_NYG" : {
+      "gameId" : "2026_03_TEN_NYG",
+      "analysisType" : "matchup",
+      "createdAt" : "2026-09-21T05:53:54.919451Z",
+      "fatorChave" : "Baseando-se estritamente em dados históricos da temporada anterior, esta análise é preliminar. O fator chave pode residir na eficiência da defesa do New York Giants contra o passe. Na semana dezoito da temporada anterior, a equipe registrou um EPA defensivo de passe de -0.260340994580656, indicando um possível desafio para o ataque visitante, caso esse padrão se mantenha.",
+      "vantagemTatica" : "Qualquer vantagem tática neste momento é incerta e estritamente teórica, mas os registros históricos apontam para o sucesso do jogo terrestre do Giants. Na semana dezessete da temporada anterior, o time atingiu um robusto EPA ofensivo de corrida de 0.4060700222783323. Isso pode se provar uma via condicional sólida para controlar o ritmo de jogo se a característica for mantida.",
+      "alertaVermelho" : "Um alerta vermelho preliminar recai sobre o Tennessee Titans em duas áreas críticas. Avaliando os números históricos, a equipe apresentou extrema vulnerabilidade na semana dezoito da temporada anterior, anotando um EPA ofensivo de passe de -0.5762618024837988 e simultaneamente cedendo espaço na secundária com um EPA defensivo de passe de 0.4005463094723589. Não há garantias de correção imediata neste início.",
+      "veredito" : "Considerando o cenário condicional e a total dependência de dados históricos, o mercado precifica o New York Giants com uma linha de moneyline de -166. Por não termos evidências da temporada vigente, o prognóstico carrega incerteza explícita, mas a combinação histórica de solidez defensiva e terrestre dos mandantes justifica a precaução a seu favor."
     }
   }
 }

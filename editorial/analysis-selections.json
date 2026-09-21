@@ -363,6 +363,50 @@
       "reviewedBy": "Codex",
       "reviewedAt": "2026-09-21T05:31:00Z",
       "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "analysisCacheId": 52,
+      "depth": "BASIC",
+      "promptHash": "c1800dcca772b9f5ee40c43030625e058f2f3cf1a4ded0ef315db757bf89de97",
+      "responseHash": "c23e711558c10eaca9d1013ee75cf64410736bfd598fe3242199ae3ebc4aa875",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:55:21.139929Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "analysisCacheId": 53,
+      "depth": "BASIC",
+      "promptHash": "9f65d2be4fb7aba89c01cfe2e6d448523480ec8e0de8358d1d4c5f4be2dfaced",
+      "responseHash": "98c1a43d780029d16edbc7e10559512d13c3f3601ac952527b21937b75deca6c",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:55:21.139929Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_TEN_NYG",
+      "analysisCacheId": 54,
+      "depth": "BASIC",
+      "promptHash": "388e494f459dc19cefcfc7e7c6983c775d2f2b0b727483db374a8106fccabcad",
+      "responseHash": "c353d7a5d87da3847cb675a8c5f91611362c196eb44c637c6f8d4809c0e04cb0",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:55:21.139929Z",
+      "asOfDate": "2026-09-16"
+    },
+    {
+      "gameId": "2026_03_PHI_CHI",
+      "analysisCacheId": 55,
+      "depth": "BASIC",
+      "promptHash": "f81e519eef08bb134eb419a37e988a9c2c742fc69739ea8861029466c3ad700d",
+      "responseHash": "de615113d42e7f285d0fa3028db77adff36941ae6b75f6b69124cdb6e33e9d1e",
+      "status": "APPROVED",
+      "reviewedBy": "Codex",
+      "reviewedAt": "2026-09-21T05:55:21.139929Z",
+      "asOfDate": "2026-09-16"
     }
   ]
 }

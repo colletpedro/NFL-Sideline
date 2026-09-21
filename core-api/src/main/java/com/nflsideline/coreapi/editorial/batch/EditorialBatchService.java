@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -39,6 +40,19 @@ public class EditorialBatchService {
     public Summary run(EditorialBatchOptions options) {
         List<EditorialCandidate> candidates = planner.plan(
                 games.findAllBySeasonWithDetails(options.season()), options.asOfDate());
+        if (!options.gameIds().isEmpty()) {
+            Map<String, EditorialCandidate> byGameId = new LinkedHashMap<>();
+            candidates.forEach(candidate -> byGameId.put(candidate.game().getGameId(), candidate));
+            List<EditorialCandidate> selected = new ArrayList<>();
+            for (String gameId : options.gameIds()) {
+                EditorialCandidate candidate = byGameId.get(gameId);
+                if (candidate == null || candidate.eligibility() != Eligibility.ELIGIBLE) {
+                    throw new IllegalArgumentException("Requested game is not eligible: " + sanitize(gameId));
+                }
+                selected.add(candidate);
+            }
+            candidates = List.copyOf(selected);
+        }
         List<Planned> planned = candidates.stream().filter(item -> item.eligibility() == Eligibility.ELIGIBLE)
                 .map(item -> planned(item, options)).toList();
 

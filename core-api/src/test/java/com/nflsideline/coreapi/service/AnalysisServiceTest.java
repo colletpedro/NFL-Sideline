@@ -86,16 +86,42 @@ class AnalysisServiceTest {
     }
 
     @Test
-    void historicalYearsAreNotMetricsButUncitedMetricsAreRejected() {
-        fixture(VALID.replace("duelo central", "Histórico de 1999, 2025 e 2100")).service.generateMatchupAnalysis(request("r1"));
-        for (String output : java.util.List.of(
-                VALID.replace("duelo central", "20 pontos"),
-                VALID.replace("duelo central", "21 pontos").replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":21}"),
-                VALID.replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":{\"valor\":20}}"))) {
-            Fixture f = fixture(output);
-            assertThatThrownBy(() -> f.service.generateMatchupAnalysis(request("r1"))).hasMessage("INVALID_NUMERIC_CITATIONS");
-            assertThat(f.saved).isEmpty();
-        }
+    void textualNumberInContextDoesNotNeedDuplicatedCitation() {
+        Fixture fixture = fixture(VALID.replace("duelo central", "20 pontos"));
+        fixture.service.generateMatchupAnalysis(request("r1"));
+        assertThat(fixture.saved).hasSize(1);
+    }
+
+    @Test
+    void textualNumberMissingFromContextIsRejected() {
+        Fixture fixture = fixture(VALID.replace("duelo central", "21 pontos"));
+        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
+                .hasMessage("INVALID_NUMERIC_CITATIONS");
+        assertThat(fixture.saved).isEmpty();
+    }
+
+    @Test
+    void citedNumberMissingFromContextIsRejected() {
+        Fixture fixture = fixture(VALID.replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":21}"));
+        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
+                .hasMessage("INVALID_NUMERIC_CITATIONS");
+        assertThat(fixture.saved).isEmpty();
+    }
+
+    @Test
+    void citedValuesMustRemainNumeric() {
+        Fixture fixture = fixture(VALID.replace("\"metricas_citadas\":{}",
+                "\"metricas_citadas\":{\"pontos\":{\"valor\":20}}"));
+        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
+                .hasMessage("INVALID_NUMERIC_CITATIONS");
+        assertThat(fixture.saved).isEmpty();
+    }
+
+    @Test
+    void historicalYearsAreIgnoredAsMetrics() {
+        Fixture fixture = fixture(VALID.replace("duelo central", "Histórico de 1999, 2025 e 2100"));
+        fixture.service.generateMatchupAnalysis(request("r1"));
+        assertThat(fixture.saved).hasSize(1);
     }
 
     @Test
