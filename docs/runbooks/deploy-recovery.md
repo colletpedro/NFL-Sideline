@@ -34,18 +34,18 @@ O workflow semanal atualiza o PostgreSQL, mas não exporta snapshots, não os ve
 
 ## Diagnóstico da geração editorial
 
-O prompt `editorial-matchup-v1` mantém os tipos `matchup_full_v0`/`matchup_basic_v0` e exige
-resposta estruturada com quatro textos não vazios e `metricas_citadas` como objeto de números
-escalares. Todo número métrico nos textos precisa ser citado e existir no contexto; anos de
-1999 a 2100 não são tratados como métricas. Dados históricos devem ser identificados como
-“temporada anterior”, sem representar forma atual. O cache público guarda apenas os quatro textos.
+O prompt `editorial-claims-v3` mantém os tipos `matchup_full_v0`/`matchup_basic_v0`. O Gemini
+retorna claims e referências tipadas; o Java valida evidências, comparações, períodos e papéis e redige os
+quatro textos públicos. A entrada tática não contém mercado. Caches v0/v2 continuam legíveis, mas não satisfazem
+uma nova geração v3. Veja `docs/analysis-claims-contract.md` para o contrato e seus limites.
 
 O timeout padrão é 180 segundos, substituível por `GEMINI_TIMEOUT` (por exemplo, `180s`).
 O batch não repete chamadas que falham. Seu resumo inclui `failure_categories` (contagens) e
 `failed_games` (categoria e gameId); nenhuma mensagem remota, corpo de resposta ou credencial
 é impressa. As categorias são `HTTP_400`, `HTTP_401`, `HTTP_403`, `HTTP_404`, `HTTP_429`,
-`HTTP_5XX`, `TIMEOUT`, `INVALID_JSON`, `MISSING_FIELDS`, `INVALID_NUMERIC_CITATIONS`,
-`EMPTY_RESPONSE` e `UNKNOWN`. Havendo falhas de geração, o batch termina com código 1,
+`HTTP_5XX`, `TIMEOUT`, `INVALID_JSON`, `MISSING_FIELDS`, `INVALID_REFERENCE`,
+`FALSE_COMPARISON`, `INCOMPATIBLE_PREDICATE`, `EMPTY_RESPONSE` e `UNKNOWN`. O código legado
+`INVALID_NUMERIC_CITATIONS` permanece no enum para classificação histórica, mas não é emitido pela validação v3. Havendo falhas de geração, o batch termina com código 1,
 mas preserva os caches concluídos para revisão e publicação seletiva, sem retry implícito.
 
 ### Publicação com corte editorial em 2026-09-16

@@ -23,3 +23,17 @@ web-ui/public/.data.backup-*/
 
 # Build do Maven (Java)
 target/
+
+# Arquivos de trabalho editorial arquivados apenas nesta máquina; fixtures e relatórios
+# necessários a testes e evidências selecionadas são adicionados explicitamente.
+editorial/local-integration-v1/baseline/
+editorial/operational-validation-v1/baseline/
+editorial/operational-validation-v1/reproduced-page/
+editorial/local-rules-v2/baseline-code/
+editorial/local-rules-v2/regression-development/
+editorial/local-rules-runs/development-v1/
+editorial/coverage-clarity-v1/inspection.html
+editorial/coverage-clarity-v1/known-preview.html
+editorial/operational-validation-v1/inspection.html
+editorial/operational-validation-v1/range-example.png
+editorial/**/java21-clean-verify*.log
