@@ -1,29 +1,15 @@
-import type { Game, MarketImplied, Team } from "./types";
+import type { Game, MarketImplied } from "./types";
 import { fairProbability, favoriteOf, mlToImplied, validFairPair, validProbability } from "./types";
-
-export type Confidence = "HIGH" | "MEDIUM" | "LOW";
 
 export interface RowData {
   game: Game;
-  favTeam: Team | null;
-  dogTeam: Team | null;
   favAbbr: string | null;
-  dogAbbr: string | null;
   homePct: number | null;
   awayPct: number | null;
-  /** Favorite win probability, 0–1. */
-  favPct: number | null;
-  /** Dog win probability, 0–1. */
-  dogPct: number | null;
-  /** Model edge over a coin flip, in percentage points (0–50). */
-  edge: number | null;
-  confidence: Confidence | null;
   /** "WED" */
   day: string;
   /** "SEP 09" */
   date: string;
-  /** "WED SEP 09" */
-  dayDate: string;
 }
 
 const WEEKDAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"] as const;
@@ -46,75 +32,43 @@ export function dayDateOf(iso: string | null | undefined): string {
   return `${weekdayOf(iso)} ${shortDateOf(iso)}`;
 }
 
-export function confidenceOf(favPct: number | null): Confidence | null {
-  if (!validProbability(favPct) || favPct <= .5) return null;
-  if (favPct >= 0.7) return "HIGH";
-  if (favPct >= 0.6) return "MEDIUM";
-  return "LOW";
-}
-
-/** Model edge over a coin flip, in percentage points (0–50). */
-export function edgePts(favPct: number | null): number | null {
-  if (!validProbability(favPct) || favPct <= .5) return null;
-  return (favPct - 0.5) * 100;
-}
-
-export function fmtEdge(pts: number | null | undefined): string {
-  if (pts === null || pts === undefined || Number.isNaN(pts)) return "—";
-  return `${pts >= 0 ? "+" : ""}${pts.toFixed(1)}`;
-}
-
 export function buildRow(game: Game): RowData {
   const probs = gameProbs(game, game.market ?? null);
-  const fair = { home: probs.homeModel, away: probs.awayModel };
+  const fair = { home: probs.homeFair, away: probs.awayFair };
   const fav = favoriteOf(game, fair);
-  const dog = fav ? (fav === game.homeTeam ? game.awayTeam : game.homeTeam) : null;
-  let favPct: number | null = null;
-  if (fav && fair.home !== null && fair.away !== null) {
-    favPct = fav === game.homeTeam ? fair.home : fair.away;
-  }
-  const dogPct = favPct !== null ? 1 - favPct : null;
   return {
     game,
-    favTeam: fav,
-    dogTeam: dog,
     favAbbr: fav?.teamAbbr ?? null,
-    dogAbbr: dog?.teamAbbr ?? null,
     homePct: fair.home,
     awayPct: fair.away,
-    favPct,
-    dogPct,
-    edge: edgePts(favPct),
-    confidence: confidenceOf(favPct),
     day: weekdayOf(game.gameday),
     date: shortDateOf(game.gameday),
-    dayDate: dayDateOf(game.gameday),
   };
 }
 
 export interface GameProbs {
-  homeModel: number | null;
-  awayModel: number | null;
+  homeFair: number | null;
+  awayFair: number | null;
   homeRaw: number | null;
   awayRaw: number | null;
 }
 
 /**
- * Model read = vig-free fair value (market snapshot when available,
- * moneyline fair otherwise). Market read = raw implied incl. vig.
+ * Fair market probability comes from the valid market snapshot, falling back
+ * to proportional vig removal from a valid moneyline pair. Raw includes vig.
  */
 export function gameProbs(game: Game, market: MarketImplied | null): GameProbs {
-  let homeModel: number | null = null;
-  let awayModel: number | null = null;
+  let homeFair: number | null = null;
+  let awayFair: number | null = null;
   if (
     market && validFairPair(market.homeImpliedFair, market.awayImpliedFair)
   ) {
-    homeModel = market.homeImpliedFair;
-    awayModel = market.awayImpliedFair;
+    homeFair = market.homeImpliedFair;
+    awayFair = market.awayImpliedFair;
   } else {
     const fair = fairProbability(game.homeMoneyline, game.awayMoneyline);
-    homeModel = fair?.home ?? null;
-    awayModel = fair?.away ?? null;
+    homeFair = fair?.home ?? null;
+    awayFair = fair?.away ?? null;
   }
 
   let homeRaw: number | null =
@@ -130,7 +84,7 @@ export function gameProbs(game: Game, market: MarketImplied | null): GameProbs {
     homeRaw = fair.home !== null ? mlToImplied(game.homeMoneyline) : null;
     awayRaw = fair.away !== null ? mlToImplied(game.awayMoneyline) : null;
   }
-  return { homeModel, awayModel, homeRaw, awayRaw };
+  return { homeFair, awayFair, homeRaw, awayRaw };
 }
 
 export function formatUpdated(iso: string | null | undefined): string {

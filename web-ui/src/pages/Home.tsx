@@ -1,8 +1,7 @@
 import { useMemo, useState } from "react";
 import { usePublication } from "../services/publicationContext";
-import { buildRow, weekdayOf } from "../services/model";
+import { buildRow, weekdayOf } from "../services/market";
 import WeekSelector from "../components/WeekSelector";
-import ModelSignal from "../components/ModelSignal";
 import GameRow from "../components/GameRow";
 
 function Home() {
@@ -44,12 +43,6 @@ function Home() {
     [weekGames, dayFilter]
   );
 
-  const topSignal = useMemo(() => {
-    const withEdge = rows.filter((r) => r.edge !== null);
-    if (withEdge.length === 0) return null;
-    return withEdge.reduce((max, r) => ((r.edge ?? 0) > (max.edge ?? 0) ? r : max));
-  }, [rows]);
-
   const handleSelectWeek = (week: number) => {
     selectWeek(week);
     setDayFilter("ALL");
@@ -87,14 +80,12 @@ function Home() {
         gameCount={weekGames.length}
       />
 
-      {topSignal && <ModelSignal row={topSignal} />}
-
       <section className="game-list">
         <div className="game-list-head">
           <h2 className="game-list-title">Week {String(activeWeek).padStart(2, "0")} Games</h2>
           <span className="game-list-count">
             {rows.length} Game{rows.length === 1 ? "" : "s"}
-            {dayFilter !== "ALL" ? ` · ${dayFilter}` : ""}{topSignal ? " · Market favorite in lime" : ""}
+            {dayFilter !== "ALL" ? ` · ${dayFilter}` : ""}
           </span>
         </div>
 
@@ -103,7 +94,7 @@ function Home() {
           <span className="ch-away">Away</span>
           <span className="ch-mid">{rows.some((row) => row.homePct !== null) ? "Market probability" : "Market availability"}</span>
           <span className="ch-home">Home</span>
-          <span className="ch-rail">Signal</span>
+          <span className="ch-rail">Game</span>
         </div>
 
         {rows.map((row) => (

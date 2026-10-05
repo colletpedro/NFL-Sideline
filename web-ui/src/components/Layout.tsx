@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import SportsHeader from "./SportsHeader";
 import { dataClient } from "#runtime-client";
-import { formatUpdated } from "../services/model";
+import { formatUpdated } from "../services/market";
 import type { Game } from "../services/types";
 import type { PublicationContext } from "../services/dataClient";
 import { Publication } from "../services/publicationContext";

@@ -1,81 +1,40 @@
 import type { Game, MarketImplied } from "../services/types";
-import { fmtEdge, gameProbs } from "../services/model";
+import { gameProbs } from "../services/market";
 import { fmtLine, fmtNum } from "../services/types";
 
 interface MarketComparisonProps {
   game: Game;
   market: MarketImplied | null;
-  favAbbr: string | null;
-  edge: number | null;
 }
 
-function pct(v: number | null | undefined): string {
-  if (v === null || v === undefined || Number.isNaN(v)) return "—";
-  return `${(v * 100).toFixed(1)}%`;
+function pct(value: number | null): string {
+  return value === null ? "—" : `${(value * 100).toFixed(1)}%`;
 }
 
-function MarketComparison({ game, market, favAbbr, edge }: MarketComparisonProps) {
+function MarketComparison({ game, market }: MarketComparisonProps) {
   const probs = gameProbs(game, market);
-  const homeFav = favAbbr === game.homeTeam.teamAbbr;
-  const modelPct = homeFav ? probs.homeModel : probs.awayModel;
-  const marketPct = homeFav ? probs.homeRaw : probs.awayRaw;
   const vig = market?.vigPct ?? null;
-
-  const modelWidth = modelPct !== null ? modelPct * 100 : 0;
-  const marketWidth = marketPct !== null ? marketPct * 100 : 0;
+  const hasFairMarket = probs.homeFair !== null && probs.awayFair !== null;
 
   return (
     <section className="market">
-      {probs.homeModel === null ? <p className="page-state">Market unavailable. A complete valid moneyline pair is not available for this game.</p> : favAbbr === null ? <p className="page-state">No market favorite. Both teams have equal fair probability.</p> : <>
-      <div className="mc-compare">
-        <div className="mc-cell">
-          <span className="k">Fair probability</span>
-          <span className="v">
-            {favAbbr} {pct(modelPct)}
-          </span>
-          <span className="d">Vig-free fair value</span>
-        </div>
-        <div className="mc-cell">
-          <span className="k">Market implied</span>
-          <span className="v">
-            {favAbbr} {pct(marketPct)}
-          </span>
-          <span className="d">Listed price, incl. vig</span>
-        </div>
-        <div className="mc-cell">
-          <span className="k">Market edge</span>
-          <span className="v lime">{fmtEdge(edge)} pts</span>
-          <span className="d">Fair probability vs. 50/50</span>
-        </div>
-      </div>
-
-      <div className="mc-bars">
-        <div className="mc-bar-row">
-          <div className="mc-bar-top">
-            <span>Market — fair value</span>
-            <span className="val">{pct(modelPct)}</span>
+      {hasFairMarket ? <>
+        <p className="mc-explanation">Market probability is implied probability after proportional vig removal. Listed implied probability includes vig.</p>
+        <div className="mc-compare">
+          <div className="mc-cell">
+            <span className="k">{game.awayTeam.teamAbbr} · Away</span>
+            <span className="v">{pct(probs.awayFair)}</span>
+            <span className="d">Market probability</span>
+            <span className="mc-raw">Listed implied (incl. vig) {pct(probs.awayRaw)}</span>
           </div>
-          <div className="mc-bar model">
-            <div
-              className="fill"
-              style={{ width: `${Math.min(100, modelWidth)}%` }}
-            />
+          <div className="mc-cell">
+            <span className="k">{game.homeTeam.teamAbbr} · Home</span>
+            <span className="v">{pct(probs.homeFair)}</span>
+            <span className="d">Market probability</span>
+            <span className="mc-raw">Listed implied (incl. vig) {pct(probs.homeRaw)}</span>
           </div>
         </div>
-        <div className="mc-bar-row">
-          <div className="mc-bar-top">
-            <span>Market — listed (incl. vig)</span>
-            <span className="val">{pct(marketPct)}</span>
-          </div>
-          <div className="mc-bar market">
-            <div
-              className="fill"
-              style={{ width: `${Math.min(100, marketWidth)}%` }}
-            />
-          </div>
-        </div>
-      </div>
-      </>}
+      </> : <p className="page-state">Market unavailable. A complete valid moneyline pair is not available for this game.</p>}
       <div className="mc-data">
         <div className="cell">
           <span className="k">Moneyline</span>
@@ -94,7 +53,7 @@ function MarketComparison({ game, market, favAbbr, edge }: MarketComparisonProps
         </div>
         <div className="cell">
           <span className="k">Vig</span>
-          <span className={vig !== null ? "v lime" : "v"}>{vig !== null ? `${(vig * 100).toFixed(1)}%` : "—"}</span>
+          <span className="v">{vig !== null ? `${(vig * 100).toFixed(1)}%` : "—"}</span>
         </div>
       </div>
     </section>

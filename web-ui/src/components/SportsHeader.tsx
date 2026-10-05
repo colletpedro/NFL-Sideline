@@ -21,7 +21,7 @@ function SportsHeader({ updatedLabel, season, week }: SportsHeaderProps) {
           <Link to="/" className={`sports-nav-item ${pathname === "/" ? "active" : ""}`}>
             Games
           </Link>
-          <span className="sports-nav-item inert">Predictions</span>
+          <span className="sports-nav-item inert">Analysis</span>
           <span className="sports-nav-item inert">Markets</span>
           {week !== null && <span className="sports-nav-item inert">Week {String(week).padStart(2, "0")}</span>}
         </nav>

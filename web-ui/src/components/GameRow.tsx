@@ -1,26 +1,19 @@
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import type { CSSProperties } from "react";
-import type { RowData } from "../services/model";
+import type { RowData } from "../services/market";
 import { teamColor } from "../services/teamColors";
 import { fmtLine } from "../services/types";
 import ProbabilitySplit from "./ProbabilitySplit";
-
-const CONF_DOT: Record<string, string> = {
-  HIGH: "#D7FF3F",
-  MEDIUM: "#9AA0A8",
-  LOW: "#6B7280",
-};
 
 interface GameRowProps {
   row: RowData;
 }
 
 function GameRow({ row }: GameRowProps) {
-  const { game, favAbbr, awayPct, homePct, confidence, day, date } = row;
+  const { game, favAbbr, awayPct, homePct, day, date } = row;
   const awayFav = favAbbr === game.awayTeam.teamAbbr;
   const style = favAbbr ? { "--fav-color": teamColor(favAbbr) } as CSSProperties : undefined;
-  const dotColor = confidence ? CONF_DOT[confidence] : "#6B7280";
 
   return (
     <Link to={`/game/${game.gameId}`} className="game-row" style={style}>
@@ -31,7 +24,7 @@ function GameRow({ row }: GameRowProps) {
       </span>
 
       <span className="gr-team gr-away">
-        <span className={`gr-pct ${awayFav ? "fav" : ""}`}>
+        <span className={`gr-pct ${awayFav ? "fav" : ""}`} aria-label={`${game.awayTeam.teamAbbr} market probability ${awayPct !== null ? `${(awayPct * 100).toFixed(0)} percent` : "unavailable"}`}>
           {awayPct !== null ? `${(awayPct * 100).toFixed(0)}%` : "—"}
         </span>
         <span className="gr-info">
@@ -46,6 +39,7 @@ function GameRow({ row }: GameRowProps) {
       </span>
 
       <span className="gr-mid">
+        {awayPct !== null && homePct !== null && <span className="gr-market-note">Market probability</span>}
         {awayPct !== null && homePct !== null && (
           <ProbabilitySplit
             away={{ abbr: game.awayTeam.teamAbbr, pct: awayPct }}
@@ -61,7 +55,7 @@ function GameRow({ row }: GameRowProps) {
       </span>
 
       <span className="gr-team gr-home">
-        <span className={`gr-pct ${favAbbr === game.homeTeam.teamAbbr ? "fav" : ""}`}>
+        <span className={`gr-pct ${favAbbr === game.homeTeam.teamAbbr ? "fav" : ""}`} aria-label={`${game.homeTeam.teamAbbr} market probability ${homePct !== null ? `${(homePct * 100).toFixed(0)} percent` : "unavailable"}`}>
           {homePct !== null ? `${(homePct * 100).toFixed(0)}%` : "—"}
         </span>
         <span className="gr-info">
@@ -76,12 +70,6 @@ function GameRow({ row }: GameRowProps) {
       </span>
 
       <span className="gr-rail">
-        {confidence && (
-          <span className="gr-conf">
-            <i className="dot" style={{ background: dotColor }} aria-hidden="true" />
-            {confidence}
-          </span>
-        )}
         <span className="gr-view">View Game</span>
         <ChevronRight className="gr-chev" size={16} strokeWidth={2.5} aria-hidden="true" />
       </span>

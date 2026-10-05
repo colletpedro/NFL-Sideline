@@ -3,7 +3,7 @@ interface ProbabilitySplitProps {
   away: { abbr: string; pct: number };
   /** Right segment — the home team. */
   home: { abbr: string; pct: number };
-  /** Which team the model favors — its segment gets the signal color. */
+  /** Market favorite, when the fair probabilities are valid and unequal. */
   favAbbr: string | null;
   size?: "sm" | "md" | "lg";
   showLabels?: boolean;
@@ -15,7 +15,7 @@ function pct(v: number): number {
 
 /**
  * Probability split — pure CSS comparative bar. The favorite's segment
- * renders in the model signal color, the other side stays muted.
+ * renders in the highlighted color, the other side stays muted.
  * Bar segments animate in once on mount.
  */
 function ProbabilitySplit({ away, home, favAbbr, size = "md", showLabels = true }: ProbabilitySplitProps) {

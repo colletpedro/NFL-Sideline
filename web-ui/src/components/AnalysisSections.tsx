@@ -11,7 +11,7 @@ function AnalysisSections({ predicao, analysisLoading }: AnalysisSectionsProps) 
   if (analysisLoading) {
     return (
       <section className="analysis py-12 flex flex-col items-center animate-pulse">
-        <span className="text-gray-500 text-lg mb-8">Model is crunching data...</span>
+        <span className="text-gray-500 text-lg mb-8">Loading analysis...</span>
         <div className="w-full max-w-2xl space-y-6">
           <div className="h-6 w-1/4 bg-gray-200 rounded"></div>
           <div className="h-4 w-full bg-gray-200 rounded"></div>
@@ -32,7 +32,7 @@ function AnalysisSections({ predicao, analysisLoading }: AnalysisSectionsProps) 
 
       <div className="an-section">
         <span className="an-no">02</span>
-        <h2 className="an-head">Tactical Edge</h2>
+        <h2 className="an-head">Tactical Matchup</h2>
         <p className="an-body">{predicao?.vantagem_tatica ?? FALLBACK}</p>
       </div>
 
@@ -44,7 +44,7 @@ function AnalysisSections({ predicao, analysisLoading }: AnalysisSectionsProps) 
 
       <div className="an-verdict">
         <span className="an-no">04</span>
-        <h2 className="an-head">Model Verdict</h2>
+        <h2 className="an-head">Verdict</h2>
         <p className="an-body">{predicao?.veredito ?? FALLBACK}</p>
       </div>
     </section>
