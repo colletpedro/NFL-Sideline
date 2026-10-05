@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:45.351415Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "ea0592cb77e9e2cc4a57d4916357d33a50716196bada1cce74a52040e1fb206e",
+  "contextSha256" : "56033bc7a5dd7e655b7fd8767bb3fdadf4a004aa2bfcf51c9aa07cc7b78dc394",
+  "gameId" : "2026_03_PHI_CHI",
+  "resultIdentity" : "02e3e76a15c7bbc9eb50d9ed6ea62bb2a932ea687d16f4551dda1b2efec0dbac",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

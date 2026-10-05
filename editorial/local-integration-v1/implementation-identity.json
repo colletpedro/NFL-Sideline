@@ -1,0 +1,24 @@
+{
+  "service": "local-generation-1.0.0",
+  "identitySchema": "local-result-1",
+  "artifactVersion": 3,
+  "selector": "local-descriptive-rules:2.0.0",
+  "claimsContract": 5,
+  "renderer": "controlled-claims-v5.0.1",
+  "hashes": {
+    "Spec.md": "4433764deb7f81d30ab1b085f06581653bfe41a122b99b98e46e93fbeb526d19",
+    "core-api/src/main/java/com/nflsideline/coreapi/CoreApiApplication.java": "4369646b620e343239dfeef2385a137f8dd6a76f9b2e0a6ad7f3d60fa93482e2",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalAnalysisApplication.java": "7acb7dbf01add91e21ab590a43df050056c9567146dd34ce95ad851c812dabe1",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalAnalysisServer.java": "5c1f2e35a0e077a42780f999ac2d3d403a04534e86da7f2c42c4c1d23a54f73d",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalContextCatalog.java": "a7efddda17a0b1fdb9a82a16636437b8362e3c0340043db043f4335ea6c2ca5e",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalGenerationService.java": "fc93e4c01cdebc17846ef57a80329a86fe33fb9128281dae42ed7880c0819e4d",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalResultStore.java": "e298254bfb5d3e085deb1a74eea521523a157b9ed31ad0f8d894896b8ae91d3a",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalRuleSelector.java": "dd22077f112835792a5051e748b4530d3f7e0d34e22a9bda099c1d10173a1675",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalAnalysisApplicationTest.java": "67dd917cf69abb9226326985daef2881c07da87f24f55ccb522f78b0b9b9f857",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalIntegrationTest.java": "70c8be1f6ba0cdbac526a27e9b73a74f2028d6c8fb34563982af6c29f37e68d3",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalRuleSelectorTest.java": "7e6382e6ca69801f8f385399350eeda4320fe813ff5a769e878dbe47c630bf81",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalServerTest.java": "1c783a788dfcc25e5a2fa688585f6f1e7a8c8cebd72d02d29e846b62ac534e0d",
+    "core-api/target/core-api-0.1.0.jar": "e742e8040b838356aac90a0fdbb1b0fd54df3b3ea9b763625a892bd95e6b0f7b",
+    "docs/local-editorial-api.md": "6e379b9c3a2b1d6f79e79c84d3e20d83e98f029464a51997e1f190d7aaa0cf3d"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "core-api/src/main/java/com/nflsideline/coreapi/editorial/PromptCatalog.java": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976",
+  "core-api/src/main/java/com/nflsideline/coreapi/editorial/ClaimRenderer.java": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643",
+  "core-api/src/main/java/com/nflsideline/coreapi/llm/dto/GeminiRequest.java": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d",
+  "core-api/src/main/java/com/nflsideline/coreapi/editorial/evaluation/EvaluationApplication.java": "db0558bfc643c7f851ef7d6f5a2efbe0a8f12e74659a48a4326298c316494247"
+}

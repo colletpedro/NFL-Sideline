@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:45.038047Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "05c981bac14590cf65f06d9cc296f52b2f61fd40f3c18ec96aca66b78341c7ed",
+  "contextSha256" : "6402cd44f5864ccd06b2308c801f8d3161ecaaa60c0a8b787c83a0379049d367",
+  "gameId" : "2026_03_NYJ_DET",
+  "resultIdentity" : "8f2066ff20ad8aab4bd20fe0f0be70879933f931d16dc4fe94b3656bb61052e5",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

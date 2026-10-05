@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:46.081702Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "c84caffcfc0ee855e95fe312274b621facf2dfc8b3c5152a9e186975695825a6",
+  "contextSha256" : "ae8691c74abd08b3b8390c82357722b40a0ecf8f1774cc3ed703b4530f729be7",
+  "gameId" : "2026_03_TEN_NYG",
+  "resultIdentity" : "82f4ba4f13daba27b96502969408839b4023c85d0ab57b34f2bbc0f5e147d9f3",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

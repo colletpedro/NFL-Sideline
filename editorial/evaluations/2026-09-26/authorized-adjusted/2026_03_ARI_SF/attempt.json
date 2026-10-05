@@ -1,0 +1,8 @@
+{
+  "startedAt" : "2026-09-27T12:43:38.577483Z",
+  "model" : "gemini-3.1-pro-preview",
+  "contextSha256" : "4f665ef4d6b881924f940867cb2ef3d4b4b8833cd26b4200bc5f69e6e9819995",
+  "userPromptSha256" : "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e",
+  "systemPromptSha256" : "55632a2c1bf49c2de498c3f0946df7585ecf9bc11aae1d3587b41065faa71666",
+  "retryPolicy" : "NONE; every attempted call consumes the authorized budget"
+}

@@ -1,0 +1,41 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "BAL",
+    "predicate" : "ATTACK_DEFENSE_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "BAL:OFF_EPA_PLAY",
+    "evidence_ids" : [ "rw:2025:BAL:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:4,5,6", "rw:2025:CHI:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:4,6,7" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "CHI",
+    "predicate" : "CONFLICTING_EPA_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "CHI:OFF_EPA_PLAY",
+    "evidence_ids" : [ "rw:2025:CHI:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:4,6,7", "rw:2025:BAL:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:4,5,6" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "UNEVEN_WINDOWS",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "BAL:OFF_EPA_PLAY", "CHI:OFF_EPA_PLAY" ],
+    "vantagem_tatica" : [ "BAL:OFF_EPA_PLAY", "CHI:OFF_EPA_PLAY" ],
+    "alerta_vermelho" : [ "CHI:OFF_EPA_PLAY" ],
+    "veredito" : [ "limitation", "CHI:OFF_EPA_PLAY" ]
+  },
+  "links" : [ {
+    "from" : "CHI:OFF_EPA_PLAY",
+    "to" : "CHI:OFF_EPA_PLAY",
+    "relation" : "DIRECT_CONFLICT"
+  } ],
+  "contract_version" : 4,
+  "thesis_team" : "NONE"
+}

@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:44.398901Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "3ed663a50340d0bb0a34aebbe35c6e7fb88e64229df289bf8ab257f82727fc3f",
+  "contextSha256" : "ab67234cec6039d09d7958454928d3f21e4d204ec5952496cc688296e4588a0f",
+  "gameId" : "2026_03_MIN_TB",
+  "resultIdentity" : "8fa463178b50487032c59149c53af7caf1486f053d49267538e6c1225e33f51b",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

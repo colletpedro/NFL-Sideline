@@ -1,0 +1,8 @@
+{
+  "phase": "initial",
+  "reservedCalls": 4,
+  "createdAt": "2026-09-27T12:40:05.206611+00:00",
+  "maximumTotalCalls": 10,
+  "model": "gemini-3.1-pro-preview",
+  "retries": 0
+}

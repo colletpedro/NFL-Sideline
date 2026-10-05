@@ -1,0 +1,130 @@
+[
+  {
+    "id": 56,
+    "gameId": "2026_03_ATL_GB",
+    "manifestMatches": true,
+    "responseSha256": "c01f79d4c610860acf36eb6400402d0f3ef1850f33386817b7eba38f414f0a60",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 57,
+    "gameId": "2026_03_ARI_SF",
+    "manifestMatches": true,
+    "responseSha256": "4f6f25d2d6259d35a56097f1f2bf3a5f2e183b3c7549326ecea7dc7fed646ca2",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 58,
+    "gameId": "2026_03_BAL_DAL",
+    "manifestMatches": true,
+    "responseSha256": "ae0585fe0a5439ea45bcbc812423c20ec44aa88c22c2772115ceab37e45692bd",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 59,
+    "gameId": "2026_03_CAR_CLE",
+    "manifestMatches": true,
+    "responseSha256": "d39085d003aa370ccb08e91c750aed63765d46c57be47bea063f823d59c25a8a",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 60,
+    "gameId": "2026_03_CIN_PIT",
+    "manifestMatches": true,
+    "responseSha256": "1d3f305f7279f475d8aabeb7e6d3e6289010c3f6a861b19b18268f8a612b8368",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 61,
+    "gameId": "2026_03_HOU_IND",
+    "manifestMatches": true,
+    "responseSha256": "2cbb6713acd66fc61f58048ad3b3bb8814109a7a4fc0582a0a53b45af1291803",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 62,
+    "gameId": "2026_03_KC_MIA",
+    "manifestMatches": true,
+    "responseSha256": "6c358fb0b9548b1eeec3c4d91118d15ea5501bf1468021269737e41fe0391ae5",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 63,
+    "gameId": "2026_03_LAC_BUF",
+    "manifestMatches": true,
+    "responseSha256": "cb2e7ae2371d82f7b67c4a8231c84d7291cd75d4b8906d12221e5b73d60e3967",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 64,
+    "gameId": "2026_03_LA_DEN",
+    "manifestMatches": true,
+    "responseSha256": "9827839fe203b362fc912f2edec39a3e04290124a7b964974474796b18079182",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 65,
+    "gameId": "2026_03_LV_NO",
+    "manifestMatches": true,
+    "responseSha256": "0f6901d2ccb72985d90a994db61f17bdeb39f42d8de7042eafc7be2d08e44f86",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 66,
+    "gameId": "2026_03_MIN_TB",
+    "manifestMatches": true,
+    "responseSha256": "5e72e2eceaebdaaa6fd26b29fb5a7997f6dd20969e6e87847c92839407acbaa4",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 67,
+    "gameId": "2026_03_NE_JAX",
+    "manifestMatches": true,
+    "responseSha256": "596f614af535e637b12a090123e3b02fd0fb9621504b44924ccc64523ee0e032",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 68,
+    "gameId": "2026_03_NYJ_DET",
+    "manifestMatches": true,
+    "responseSha256": "78e1ee26dd251de53dbbb8d606745b257ca93be6e0e64b5e46df68f57da22364",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 69,
+    "gameId": "2026_03_SEA_WAS",
+    "manifestMatches": true,
+    "responseSha256": "0bb08fc9f01482d073abeeceaee88f3df526e61281b2a2a9fb276c6b1b98a695",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 70,
+    "gameId": "2026_03_TEN_NYG",
+    "manifestMatches": true,
+    "responseSha256": "4813ecac52b0d626579e838963b07a54dc6c2ea0631663f6bfc74e5def459a6d",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  },
+  {
+    "id": 71,
+    "gameId": "2026_03_PHI_CHI",
+    "manifestMatches": true,
+    "responseSha256": "53fb9b7b9df9ba6eafcc2be9bccbeebb744a1e24013265560110114a49240d85",
+    "contextAsOf": "2026-09-22",
+    "publicTextsMatch": true
+  }
+]

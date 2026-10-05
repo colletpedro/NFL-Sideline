@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "id": "2026_03_ARI_SF",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "2026_03_BAL_DAL",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "2026_03_NE_JAX",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "2025_08_CHI_BAL",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "2026_03_SEA_WAS",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "2026_03_MIN_TB",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "opposing-signs",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "weekly-variation",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "tied-opportunities",
+      "status": "VALIDATED",
+      "exitCode": 0
+    },
+    {
+      "id": "both-teams",
+      "status": "VALIDATED",
+      "exitCode": 0
+    }
+  ],
+  "independentEvaluation": false,
+  "qualityEditorialProven": false
+}

@@ -1,0 +1,23 @@
+{
+  "renderer": "controlled-claims-v5.0.2",
+  "selector": "local-descriptive-rules:2.0.0",
+  "contractVersion": 5,
+  "serviceVersion": "local-generation-1.0.0",
+  "artifactVersion": 3,
+  "hashes": {
+    "Spec.md": "4ba9d62fae32f8590fef71998555ee76da70c552c7f92f700b69a86faf91a85e",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/ClaimRenderer.java": "62a858b425155b00c6b11527ad7a24bf1ee888484f8693f01a47f704808141c1",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/SignalClaimRenderer.java": "12f6c09d15a98e6308dace2ac8fe02554dd6eb2f9367b4952143a999d04bb451",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalIntegrationTest.java": "0b741f7227928b0f7e599690898c99cd5322ff62cf1f4eec26dccbd1f7844161",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/SignalEditorialTest.java": "204959cb83fba2a9cd35f2c1690501874d08fbe79e0946ee2e5a721227ac9cab",
+    "core-api/target/core-api-0.1.0.jar": "8a03bf92515876b04e5d4714543e15849bd4af9ca3a23cc8b20d41ebb22e1763",
+    "docs/analysis-claims-contract.md": "8366e31c83780bbd0dcca2c15660c7dfbab724d7dcb90ef4bec8a6cba6cd3cf3",
+    "docs/local-editorial-api.md": "7eff1760d1eea88705df744429697244da4a3da68c55869465b3bdd91a2c1d72",
+    "docs/local-rules-editorial.md": "cd225758ad43fc0e4c7db6824d2cc3462416e6418ffbbc6a04a2241d8a29ee52",
+    "scripts/build_operational_inspection.py": "0fcd970f7277de9b558d71f27197f523193a89c68bf7c65bdae43d24db28c47b",
+    "scripts/evaluate_coverage.py": "5b9495f6e7ba174fc57d440e6f287215546a51ed6ed185acb965069fece9665b",
+    "scripts/serve_editorial_inspection.py": "40e758cadd24ac16e334cb576e8e4a2fd4d61722f691f550938514be42ef9806",
+    "scripts/test_evaluate_coverage.py": "30ceb4ea77f5df7c6eb58f535a1da3627071bce5090c79ee2b40554b4c191cb3",
+    "scripts/validate_local_operation.py": "94b8d0626d4a326d5cd0b62424720bced9a08a9838ff1d0d6ca3b5d71c2008fe"
+  }
+}

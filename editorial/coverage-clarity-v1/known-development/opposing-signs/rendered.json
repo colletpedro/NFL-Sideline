@@ -1,0 +1,6 @@
+{
+  "fator_chave" : "Passe de AAA contra BBB: indicadores favoráveis ao ataque e à defesa.",
+  "vantagem_tatica" : "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,200 EPA; BBB (EPA permitido): -0,150 EPA. Ataque positivo e EPA permitido negativo em todas as semanas: indicadores favoráveis a ambos, sem estabelecer quem prevalecerá.",
+  "alerta_vermelho" : "Os recortes de passe de AAA cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+  "veredito" : "No recorte de passe do ataque de AAA contra a defesa de BBB, o ataque de AAA teve EPA positivo e a defesa de BBB permitiu EPA negativo nas semanas observadas; indicadores favoráveis a ambos, sem indicar quem prevalecerá. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+}

@@ -1,0 +1,179 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "KC",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "KC:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:KC:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:MIA:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "KC",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "FAVORABLE_ATTACK_AND_DEFENSE"
+    },
+    "claim_id" : "KC:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:KC:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:MIA:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "MIA",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "MIA:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:MIA:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:KC:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "MIA",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "MIA:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:MIA:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:KC:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "KC",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "KC:OFF_EPA_PLAY",
+    "evidence_ids" : [ "rw:2026:KC:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:MIA:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "KC",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:KC:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:KC:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:MIA:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "KC",
+    "predicate" : "SAMPLE_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:KC:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:KC:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:MIA:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "MIA",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:MIA:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:MIA:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:KC:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "MIA",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:MIA:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:MIA:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:KC:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "KC:OFF_EPA_PASS", "KC:OFF_EPA_RUSH", "MIA:OFF_EPA_PASS", "MIA:OFF_EPA_RUSH" ],
+    "vantagem_tatica" : [ "KC:OFF_EPA_PASS", "KC:OFF_EPA_RUSH", "MIA:OFF_EPA_PASS", "MIA:OFF_EPA_RUSH" ],
+    "alerta_vermelho" : [ "limit:KC:OFF_EPA_PASS", "limit:KC:OFF_EPA_RUSH", "limit:MIA:OFF_EPA_PASS", "limit:MIA:OFF_EPA_RUSH" ],
+    "veredito" : [ "KC:OFF_EPA_PASS", "KC:OFF_EPA_RUSH", "KC:OFF_EPA_PLAY", "MIA:OFF_EPA_PASS", "MIA:OFF_EPA_RUSH", "limitation", "limit:KC:OFF_EPA_PASS", "limit:KC:OFF_EPA_RUSH", "limit:MIA:OFF_EPA_PASS", "limit:MIA:OFF_EPA_RUSH" ]
+  },
+  "links" : [ {
+    "from" : "limit:KC:OFF_EPA_PASS",
+    "to" : "KC:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:KC:OFF_EPA_RUSH",
+    "to" : "KC:OFF_EPA_RUSH",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:MIA:OFF_EPA_PASS",
+    "to" : "MIA:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:MIA:OFF_EPA_RUSH",
+    "to" : "MIA:OFF_EPA_RUSH",
+    "relation" : "INTERNAL_LIMITATION"
+  } ],
+  "groupings" : [ {
+    "candidateId" : "MIA:OFF_EPA_PLAY",
+    "representedBy" : [ "MIA:OFF_EPA_RUSH" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  } ],
+  "contract_version" : 5,
+  "thesis_team" : "NONE"
+}

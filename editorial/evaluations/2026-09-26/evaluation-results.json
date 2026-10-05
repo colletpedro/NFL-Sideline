@@ -1,0 +1,102 @@
+[
+  {
+    "gameId": "2026_03_ARI_SF",
+    "split": "development",
+    "attempts": [
+      1,
+      5
+    ],
+    "status": "NO_MODEL_RESPONSE",
+    "scores": {
+      "thesis": null,
+      "counterpoint": null,
+      "explanation": null,
+      "fluency": null
+    },
+    "claimsAvailable": false,
+    "renderedTextsAvailable": false,
+    "publicationApproved": false
+  },
+  {
+    "gameId": "2026_03_BAL_DAL",
+    "split": "development",
+    "attempts": [
+      2,
+      6
+    ],
+    "status": "NO_MODEL_RESPONSE",
+    "scores": {
+      "thesis": null,
+      "counterpoint": null,
+      "explanation": null,
+      "fluency": null
+    },
+    "claimsAvailable": false,
+    "renderedTextsAvailable": false,
+    "publicationApproved": false
+  },
+  {
+    "gameId": "2026_03_NE_JAX",
+    "split": "development",
+    "attempts": [
+      3
+    ],
+    "status": "NO_MODEL_RESPONSE",
+    "scores": {
+      "thesis": null,
+      "counterpoint": null,
+      "explanation": null,
+      "fluency": null
+    },
+    "claimsAvailable": false,
+    "renderedTextsAvailable": false,
+    "publicationApproved": false
+  },
+  {
+    "gameId": "2025_08_CHI_BAL",
+    "split": "development",
+    "attempts": [
+      4
+    ],
+    "status": "NO_MODEL_RESPONSE",
+    "scores": {
+      "thesis": null,
+      "counterpoint": null,
+      "explanation": null,
+      "fluency": null
+    },
+    "claimsAvailable": false,
+    "renderedTextsAvailable": false,
+    "publicationApproved": false
+  },
+  {
+    "gameId": "2026_03_SEA_WAS",
+    "split": "holdout",
+    "attempts": [],
+    "status": "NOT_SENT",
+    "scores": {
+      "thesis": null,
+      "counterpoint": null,
+      "explanation": null,
+      "fluency": null
+    },
+    "claimsAvailable": false,
+    "renderedTextsAvailable": false,
+    "publicationApproved": false
+  },
+  {
+    "gameId": "2026_03_MIN_TB",
+    "split": "holdout",
+    "attempts": [],
+    "status": "NOT_SENT",
+    "scores": {
+      "thesis": null,
+      "counterpoint": null,
+      "explanation": null,
+      "fluency": null
+    },
+    "claimsAvailable": false,
+    "renderedTextsAvailable": false,
+    "publicationApproved": false
+  }
+]

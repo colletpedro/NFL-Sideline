@@ -1,0 +1,25 @@
+{
+  "gate": "mvn -f core-api/pom.xml -o clean verify",
+  "javaVersion": "21.0.12.1",
+  "status": "PASSED",
+  "tests": {
+    "tests": 106,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "newTests": 11,
+  "v5SyntheticPropertyIterations": 180,
+  "v4LegacyDocumentParityCases": 6,
+  "regressions": 6,
+  "syntheticExamples": 4,
+  "gitDiffCheck": "PASSED",
+  "untrackedWhitespaceCheck": "PASSED",
+  "legacyEvaluationGuard": "PASSED",
+  "protectedFilesChecked": 233,
+  "protectedFilesChanged": [],
+  "independentEvaluation": false,
+  "externalGenerationCalls": 0,
+  "remoteDatabaseAccess": false,
+  "published": false
+}

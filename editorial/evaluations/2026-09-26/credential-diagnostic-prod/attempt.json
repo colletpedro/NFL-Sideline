@@ -1,0 +1,11 @@
+{
+  "authorizedAttemptNumber": 7,
+  "phase": "technical_diagnostic_development",
+  "credentialSource": "GEMINI_API_KEY_PROD",
+  "model": "gemini-3.1-pro-preview",
+  "startedAt": "2026-09-27T16:22:29.028526+00:00",
+  "status": "ATTEMPT_RESERVED_BEFORE_SEND",
+  "editorialEvaluation": false,
+  "holdoutOpened": false,
+  "retry": false
+}

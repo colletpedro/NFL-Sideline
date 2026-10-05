@@ -1,0 +1,6 @@
+{
+  "fator_chave" : "Passe de AAA contra BBB: sinais compatíveis com uma oportunidade localizada. Corrida de BBB contra AAA: sinais compatíveis com uma oportunidade localizada.",
+  "vantagem_tatica" : "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,111 EPA; BBB (EPA permitido): +0,222 EPA.\nCorrida — BBB (ataque): +0,333 EPA; AAA (EPA permitido): +0,444 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+  "alerta_vermelho" : "Os recortes de passe de AAA e corrida de BBB cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+  "veredito" : "No recorte de passe do ataque de AAA contra a defesa de BBB, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. No recorte de corrida do ataque de BBB contra a defesa de AAA, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+}

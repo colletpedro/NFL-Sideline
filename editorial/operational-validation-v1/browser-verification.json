@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-05",
+  "browser": "Codex in-app browser",
+  "transport": "real loopback HTTP",
+  "url": "http://127.0.0.1:18082/inspection.html",
+  "renderer": "controlled-claims-v5.0.2",
+  "cards": 21,
+  "filterChecks": [
+    {
+      "count": "21 de 21 casos exibidos",
+      "expected": 21,
+      "id": "cohort",
+      "value": "",
+      "visible": 21
+    },
+    {
+      "count": "0 de 21 casos exibidos",
+      "expected": 0,
+      "id": "cohort",
+      "value": "unseen",
+      "visible": 0
+    },
+    {
+      "count": "17 de 21 casos exibidos",
+      "expected": 17,
+      "id": "cohort",
+      "value": "regression",
+      "visible": 17
+    },
+    {
+      "count": "4 de 21 casos exibidos",
+      "expected": 4,
+      "id": "cohort",
+      "value": "synthetic",
+      "visible": 4
+    },
+    {
+      "count": "0 de 21 casos exibidos",
+      "expected": 0,
+      "id": "cohort",
+      "value": "unknown",
+      "visible": 0
+    },
+    {
+      "count": "21 de 21 casos exibidos",
+      "expected": 21,
+      "id": "coverage",
+      "value": "",
+      "visible": 21
+    },
+    {
+      "count": "16 de 21 casos exibidos",
+      "expected": 16,
+      "id": "coverage",
+      "value": "adequate",
+      "visible": 16
+    },
+    {
+      "count": "5 de 21 casos exibidos",
+      "expected": 5,
+      "id": "coverage",
+      "value": "partial",
+      "visible": 5
+    },
+    {
+      "count": "0 de 21 casos exibidos",
+      "expected": 0,
+      "id": "coverage",
+      "value": "none",
+      "visible": 0
+    },
+    {
+      "count": "21 de 21 casos exibidos",
+      "expected": 21,
+      "id": "patterns",
+      "value": "",
+      "visible": 21
+    },
+    {
+      "count": "5 de 21 casos exibidos",
+      "expected": 5,
+      "id": "patterns",
+      "value": "ATTACK_NOT_DEMONSTRATED",
+      "visible": 5
+    },
+    {
+      "count": "5 de 21 casos exibidos",
+      "expected": 5,
+      "id": "patterns",
+      "value": "BOTH_NEGATIVE",
+      "visible": 5
+    },
+    {
+      "count": "5 de 21 casos exibidos",
+      "expected": 5,
+      "id": "patterns",
+      "value": "FAVORABLE_ATTACK_AND_DEFENSE",
+      "visible": 5
+    },
+    {
+      "count": "7 de 21 casos exibidos",
+      "expected": 7,
+      "id": "patterns",
+      "value": "POSITIVE_CONVERGENCE",
+      "visible": 7
+    },
+    {
+      "count": "4 de 21 casos exibidos",
+      "expected": 4,
+      "id": "patterns",
+      "value": "UNAVAILABLE",
+      "visible": 4
+    },
+    {
+      "count": "18 de 21 casos exibidos",
+      "expected": 18,
+      "id": "patterns",
+      "value": "WEEKLY_SIGN_VARIATION",
+      "visible": 18
+    },
+    {
+      "count": "21 de 21 casos exibidos",
+      "expected": 21,
+      "id": "failure",
+      "value": "",
+      "visible": 21
+    },
+    {
+      "count": "0 de 21 casos exibidos",
+      "expected": 0,
+      "id": "failure",
+      "value": "yes",
+      "visible": 0
+    },
+    {
+      "count": "21 de 21 casos exibidos",
+      "expected": 21,
+      "id": "failure",
+      "value": "no",
+      "visible": 21
+    }
+  ],
+  "combinedFilters": {
+    "synthetic": 4,
+    "syntheticPartial": 4,
+    "syntheticPartialPositive": 2,
+    "withFailure": 0,
+    "withoutFailure": 2,
+    "unseen": 0
+  },
+  "details": {
+    "desktopOpenClose": true,
+    "mobileOpenClose": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "columns": 4,
+      "pageHorizontalOverflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "columns": 1,
+      "pageHorizontalOverflow": false,
+      "visibleBlocksHorizontalOverflow": false
+    }
+  ],
+  "consoleErrors": [],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png",
+    "range-example.png"
+  ],
+  "independentEvaluation": false
+}

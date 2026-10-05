@@ -1,0 +1,26 @@
+{
+  "compared": 868,
+  "unchanged": 857,
+  "changed": [
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/ClaimRenderer.java",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/SignalClaimRenderer.java",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/SignalEditorialTest.java",
+    "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalIntegrationTest.java",
+    "scripts/evaluate_coverage.py",
+    "scripts/test_evaluate_coverage.py",
+    "docs/analysis-claims-contract.md",
+    "docs/local-rules-editorial.md",
+    "docs/local-editorial-api.md",
+    "Spec.md",
+    "core-api/target/core-api-0.1.0.jar"
+  ],
+  "missing": [],
+  "protectedFiles": 744,
+  "protectedChanged": [],
+  "syntaxChecked": [
+    "scripts/validate_local_operation.py",
+    "scripts/build_operational_inspection.py",
+    "scripts/serve_editorial_inspection.py"
+  ],
+  "whitespace": "PASSED"
+}

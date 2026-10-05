@@ -1,0 +1,182 @@
+[
+  {
+    "gameId": "2025_08_CHI_BAL",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Panorama por jogada de BAL contra CHI: ataque e EPA permitido permaneceram negativos. Panorama por jogada de CHI contra BAL: a leitura muda entre semanas observadas.",
+      "vantagem_tatica": "Médias ponderadas pelos volumes de jogadas indicados.\nPanorama por jogada — BAL (ataque): -0,247 EPA, faixa semanal de -0,336 EPA a -0,063 EPA, Temporada 2025, semanas 4, 5, 6 (3 observações por métrica), 167 jogadas; CHI (EPA permitido): -0,181 EPA, faixa semanal de -0,297 EPA a -0,064 EPA, Temporada 2025, semanas 4, 6, 7 (3 observações por métrica), 163 jogadas. O ataque produziu EPA negativo e a defesa permitiu EPA negativo em todas as semanas; isso não projeta o resultado do encontro.\nPanorama por jogada — CHI (ataque): +0,043 EPA, faixa semanal de -0,121 EPA a +0,166 EPA, Temporada 2025, semanas 4, 6, 7 (3 observações por métrica), 188 jogadas; BAL (EPA permitido): +0,216 EPA, faixa semanal de -0,033 EPA a +0,391 EPA, Temporada 2025, semanas 4, 5, 6 (3 observações por métrica), 181 jogadas. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.",
+      "alerta_vermelho": "Em panorama por jogada de BAL e panorama por jogada de CHI, as equipes têm semanas observadas diferentes; não estão cobertas todas as semanas numéricas imediatamente anteriores. Essas diferenças limitam uma leitura conjunta do momento atual; a causa de eventuais lacunas não está informada.",
+      "veredito": "BAL — passe: mudança de sinal no EPA permitido adversário; ataque negativo em todas as semanas; corrida: mudança de sinal no ataque; EPA permitido adversário negativo em todas as semanas; panorama por jogada: EPA ofensivo e permitido negativos. CHI — passe: mudança de sinal no ataque; EPA permitido adversário positivo em todas as semanas; corrida e panorama por jogada: mudança de sinal no ataque e no EPA permitido adversário. As diferenças de cobertura restringem a leitura conjunta. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Panorama por jogada de BAL contra CHI: EPA negativo no ataque de BAL e no permitido pela defesa de CHI. Panorama por jogada de CHI contra BAL: há semanas com EPA positivo e negativo no recorte.",
+      "vantagem_tatica": "Médias ponderadas pelos volumes de jogadas indicados.\nPanorama por jogada — BAL (ataque): -0,247 EPA, faixa semanal de -0,336 EPA a -0,063 EPA, Temporada 2025, semanas 4, 5, 6 (3 observações por métrica), 167 jogadas; CHI (EPA permitido): -0,181 EPA, faixa semanal de -0,297 EPA a -0,064 EPA, Temporada 2025, semanas 4, 6, 7 (3 observações por métrica), 163 jogadas. O ataque produziu EPA negativo e a defesa permitiu EPA negativo em todas as semanas; isso não projeta o resultado do encontro.\nPanorama por jogada — CHI (ataque): +0,043 EPA, faixa semanal de -0,121 EPA a +0,166 EPA, Temporada 2025, semanas 4, 6, 7 (3 observações por métrica), 188 jogadas; BAL (EPA permitido): +0,216 EPA, faixa semanal de -0,033 EPA a +0,391 EPA, Temporada 2025, semanas 4, 5, 6 (3 observações por métrica), 181 jogadas. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.",
+      "alerta_vermelho": "Em panorama por jogada de BAL e panorama por jogada de CHI, as equipes têm semanas observadas diferentes; não estão cobertas todas as semanas numéricas imediatamente anteriores. Essas diferenças limitam uma leitura conjunta do momento atual; a causa de eventuais lacunas não está informada.",
+      "veredito": "No recorte de passe do ataque de BAL contra a defesa de CHI, no EPA do ataque de BAL, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de CHI, há semanas com valores positivos e negativos. No recorte de corrida do ataque de BAL contra a defesa de CHI, no EPA do ataque de BAL, há semanas com valores positivos e negativos; no EPA permitido pela defesa de CHI, há valores negativos em todas as semanas observadas. No recorte de panorama por jogada do ataque de BAL contra a defesa de CHI, o ataque de BAL apresentou EPA negativo e a defesa de CHI permitiu EPA negativo nas semanas observadas. No recorte de passe do ataque de CHI contra a defesa de BAL, no EPA do ataque de CHI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BAL, há valores positivos em todas as semanas observadas. No recorte de corrida e panorama por jogada do ataque de CHI contra a defesa de BAL, no EPA do ataque de CHI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BAL, há semanas com valores positivos e negativos. As diferenças de cobertura restringem a leitura conjunta. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "2026_03_ARI_SF",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe e Corrida de ARI contra SF: a leitura muda entre semanas observadas. Passe e Corrida de SF contra ARI: a leitura muda entre semanas observadas.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — ARI (ataque): -0,016 EPA, faixa semanal de -0,269 EPA a +0,237 EPA; SF (EPA permitido): -0,114 EPA, faixa semanal de -0,394 EPA a +0,165 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — ARI (ataque): -0,197 EPA, faixa semanal de -0,424 EPA a +0,030 EPA; SF (EPA permitido): -0,145 EPA, faixa semanal de -0,156 EPA a -0,135 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.\nPasse — SF (ataque): +0,601 EPA, faixa semanal de +0,142 EPA a +1,060 EPA; ARI (EPA permitido): +0,204 EPA, faixa semanal de -0,187 EPA a +0,596 EPA. Ataque: positivo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — SF (ataque): +0,076 EPA, faixa semanal de -0,068 EPA a +0,221 EPA; ARI (EPA permitido): -0,252 EPA, faixa semanal de -0,325 EPA a -0,178 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.",
+      "alerta_vermelho": "As médias do ataque de ARI (passe e corrida), do EPA permitido pela defesa de SF (passe), do EPA permitido pela defesa de ARI (passe) e do ataque de SF (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+      "veredito": "ARI — passe: mudança de sinal no ataque e no EPA permitido adversário; corrida: mudança de sinal no ataque; EPA permitido adversário negativo em todas as semanas. SF — passe: mudança de sinal no EPA permitido adversário; ataque positivo em todas as semanas; corrida: mudança de sinal no ataque; EPA permitido adversário negativo em todas as semanas. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe e Corrida de ARI contra SF: há semanas com EPA positivo e negativo no recorte. Passe e Corrida de SF contra ARI: há semanas com EPA positivo e negativo no recorte.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — ARI (ataque): -0,016 EPA, faixa semanal de -0,269 EPA a +0,237 EPA; SF (EPA permitido): -0,114 EPA, faixa semanal de -0,394 EPA a +0,165 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — ARI (ataque): -0,197 EPA, faixa semanal de -0,424 EPA a +0,030 EPA; SF (EPA permitido): -0,145 EPA, faixa semanal de -0,156 EPA a -0,135 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.\nPasse — SF (ataque): +0,601 EPA, faixa semanal de +0,142 EPA a +1,060 EPA; ARI (EPA permitido): +0,204 EPA, faixa semanal de -0,187 EPA a +0,596 EPA. Ataque: positivo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — SF (ataque): +0,076 EPA, faixa semanal de -0,068 EPA a +0,221 EPA; ARI (EPA permitido): -0,252 EPA, faixa semanal de -0,325 EPA a -0,178 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.",
+      "alerta_vermelho": "As médias do ataque de ARI (passe e corrida), do EPA permitido pela defesa de SF (passe), do EPA permitido pela defesa de ARI (passe) e do ataque de SF (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+      "veredito": "No recorte de passe do ataque de ARI contra a defesa de SF, no EPA do ataque de ARI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de SF, há semanas com valores positivos e negativos. No recorte de corrida do ataque de ARI contra a defesa de SF, no EPA do ataque de ARI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de SF, há valores negativos em todas as semanas observadas. No recorte de passe do ataque de SF contra a defesa de ARI, no EPA do ataque de SF, há valores positivos em todas as semanas observadas; no EPA permitido pela defesa de ARI, há semanas com valores positivos e negativos. No recorte de corrida do ataque de SF contra a defesa de ARI, no EPA do ataque de SF, há semanas com valores positivos e negativos; no EPA permitido pela defesa de ARI, há valores negativos em todas as semanas observadas. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "2026_03_BAL_DAL",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe e Corrida de BAL contra DAL: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — BAL (ataque): +0,239 EPA, faixa semanal de +0,103 EPA a +0,376 EPA; DAL (EPA permitido): +0,371 EPA, faixa semanal de +0,035 EPA a +0,707 EPA.\nCorrida — BAL (ataque): +0,208 EPA, faixa semanal de +0,136 EPA a +0,280 EPA; DAL (EPA permitido): +0,083 EPA, faixa semanal de +0,061 EPA a +0,106 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "Nos recortes de passe e corrida de BAL, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+      "veredito": "BAL — passe e corrida: oportunidade localizada. DAL — passe: mudança de sinal no EPA permitido adversário; ataque positivo em todas as semanas; corrida: mudança de sinal no ataque e no EPA permitido adversário. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe e Corrida de BAL contra DAL: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — BAL (ataque): +0,239 EPA, faixa semanal de +0,103 EPA a +0,376 EPA; DAL (EPA permitido): +0,371 EPA, faixa semanal de +0,035 EPA a +0,707 EPA.\nCorrida — BAL (ataque): +0,208 EPA, faixa semanal de +0,136 EPA a +0,280 EPA; DAL (EPA permitido): +0,083 EPA, faixa semanal de +0,061 EPA a +0,106 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "Nos recortes de passe e corrida de BAL, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+      "veredito": "No recorte de passe e corrida do ataque de BAL contra a defesa de DAL, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. No recorte de passe do ataque de DAL contra a defesa de BAL, no EPA do ataque de DAL, há valores positivos em todas as semanas observadas; no EPA permitido pela defesa de BAL, há semanas com valores positivos e negativos. No recorte de corrida do ataque de DAL contra a defesa de BAL, no EPA do ataque de DAL, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BAL, há semanas com valores positivos e negativos. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "2026_03_MIN_TB",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe e Corrida de MIN contra TB: a leitura muda entre semanas observadas. Passe de TB contra MIN: ataque e EPA permitido permaneceram negativos. Corrida de TB contra MIN: a leitura muda entre semanas observadas.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — MIN (ataque): +0,020 EPA, faixa semanal de +0,019 EPA a +0,022 EPA; TB (EPA permitido): +0,126 EPA, faixa semanal de -0,073 EPA a +0,324 EPA. Ataque: positivo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — MIN (ataque): -0,107 EPA, faixa semanal de -0,160 EPA a -0,054 EPA; TB (EPA permitido): -0,187 EPA, faixa semanal de -0,470 EPA a +0,097 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nPasse — TB (ataque): -0,307 EPA, faixa semanal de -0,367 EPA a -0,247 EPA; MIN (EPA permitido): -0,078 EPA, faixa semanal de -0,097 EPA a -0,059 EPA. O ataque produziu EPA negativo e a defesa permitiu EPA negativo em todas as semanas; isso não projeta o resultado do encontro.\nCorrida — TB (ataque): +0,050 EPA, faixa semanal de -0,081 EPA a +0,180 EPA; MIN (EPA permitido): -0,294 EPA, faixa semanal de -0,429 EPA a -0,160 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.",
+      "alerta_vermelho": "As médias do EPA permitido pela defesa de TB (passe e corrida) e do ataque de TB (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas. Nos recortes de passe de TB, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+      "veredito": "MIN — passe: mudança de sinal no EPA permitido adversário; ataque positivo em todas as semanas; corrida: mudança de sinal no EPA permitido adversário; ataque negativo em todas as semanas. TB — passe: EPA ofensivo e permitido negativos; corrida: mudança de sinal no ataque; EPA permitido adversário negativo em todas as semanas. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe e Corrida de MIN contra TB: há semanas com EPA positivo e negativo no recorte. Passe de TB contra MIN: EPA negativo no ataque de TB e no permitido pela defesa de MIN. Corrida de TB contra MIN: há semanas com EPA positivo e negativo no recorte.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — MIN (ataque): +0,020 EPA, faixa semanal de +0,019 EPA a +0,022 EPA; TB (EPA permitido): +0,126 EPA, faixa semanal de -0,073 EPA a +0,324 EPA. Ataque: positivo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — MIN (ataque): -0,107 EPA, faixa semanal de -0,160 EPA a -0,054 EPA; TB (EPA permitido): -0,187 EPA, faixa semanal de -0,470 EPA a +0,097 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nPasse — TB (ataque): -0,307 EPA, faixa semanal de -0,367 EPA a -0,247 EPA; MIN (EPA permitido): -0,078 EPA, faixa semanal de -0,097 EPA a -0,059 EPA. O ataque produziu EPA negativo e a defesa permitiu EPA negativo em todas as semanas; isso não projeta o resultado do encontro.\nCorrida — TB (ataque): +0,050 EPA, faixa semanal de -0,081 EPA a +0,180 EPA; MIN (EPA permitido): -0,294 EPA, faixa semanal de -0,429 EPA a -0,160 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.",
+      "alerta_vermelho": "As médias do EPA permitido pela defesa de TB (passe e corrida) e do ataque de TB (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas. Nos recortes de passe de TB, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+      "veredito": "No recorte de passe do ataque de MIN contra a defesa de TB, no EPA do ataque de MIN, há valores positivos em todas as semanas observadas; no EPA permitido pela defesa de TB, há semanas com valores positivos e negativos. No recorte de corrida do ataque de MIN contra a defesa de TB, no EPA do ataque de MIN, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de TB, há semanas com valores positivos e negativos. No recorte de passe do ataque de TB contra a defesa de MIN, o ataque de TB apresentou EPA negativo e a defesa de MIN permitiu EPA negativo nas semanas observadas. No recorte de corrida do ataque de TB contra a defesa de MIN, no EPA do ataque de TB, há semanas com valores positivos e negativos; no EPA permitido pela defesa de MIN, há valores negativos em todas as semanas observadas. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "2026_03_NE_JAX",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe e Corrida de JAX contra NE: a leitura muda entre semanas observadas. Passe e Corrida de NE contra JAX: a leitura muda entre semanas observadas.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — JAX (ataque): +0,330 EPA, faixa semanal de -0,133 EPA a +0,793 EPA; NE (EPA permitido): -0,164 EPA, faixa semanal de -0,496 EPA a +0,168 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — JAX (ataque): +0,012 EPA, faixa semanal de -0,038 EPA a +0,062 EPA; NE (EPA permitido): -0,074 EPA, faixa semanal de -0,087 EPA a -0,061 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.\nPasse — NE (ataque): -0,170 EPA, faixa semanal de -0,211 EPA a -0,128 EPA; JAX (EPA permitido): -0,046 EPA, faixa semanal de -0,364 EPA a +0,272 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — NE (ataque): -0,011 EPA, faixa semanal de -0,088 EPA a +0,066 EPA; JAX (EPA permitido): -0,011 EPA, faixa semanal de -0,058 EPA a +0,037 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.",
+      "alerta_vermelho": "As médias do ataque de JAX (passe e corrida), do EPA permitido pela defesa de NE (passe), do EPA permitido pela defesa de JAX (passe e corrida) e do ataque de NE (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+      "veredito": "JAX — passe: mudança de sinal no ataque e no EPA permitido adversário; corrida: mudança de sinal no ataque; EPA permitido adversário negativo em todas as semanas. NE — passe: mudança de sinal no EPA permitido adversário; ataque negativo em todas as semanas; corrida: mudança de sinal no ataque e no EPA permitido adversário. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe e Corrida de JAX contra NE: há semanas com EPA positivo e negativo no recorte. Passe e Corrida de NE contra JAX: há semanas com EPA positivo e negativo no recorte.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — JAX (ataque): +0,330 EPA, faixa semanal de -0,133 EPA a +0,793 EPA; NE (EPA permitido): -0,164 EPA, faixa semanal de -0,496 EPA a +0,168 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — JAX (ataque): +0,012 EPA, faixa semanal de -0,038 EPA a +0,062 EPA; NE (EPA permitido): -0,074 EPA, faixa semanal de -0,087 EPA a -0,061 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.\nPasse — NE (ataque): -0,170 EPA, faixa semanal de -0,211 EPA a -0,128 EPA; JAX (EPA permitido): -0,046 EPA, faixa semanal de -0,364 EPA a +0,272 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — NE (ataque): -0,011 EPA, faixa semanal de -0,088 EPA a +0,066 EPA; JAX (EPA permitido): -0,011 EPA, faixa semanal de -0,058 EPA a +0,037 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.",
+      "alerta_vermelho": "As médias do ataque de JAX (passe e corrida), do EPA permitido pela defesa de NE (passe), do EPA permitido pela defesa de JAX (passe e corrida) e do ataque de NE (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+      "veredito": "No recorte de passe do ataque de JAX contra a defesa de NE, no EPA do ataque de JAX, há semanas com valores positivos e negativos; no EPA permitido pela defesa de NE, há semanas com valores positivos e negativos. No recorte de corrida do ataque de JAX contra a defesa de NE, no EPA do ataque de JAX, há semanas com valores positivos e negativos; no EPA permitido pela defesa de NE, há valores negativos em todas as semanas observadas. No recorte de passe do ataque de NE contra a defesa de JAX, no EPA do ataque de NE, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de JAX, há semanas com valores positivos e negativos. No recorte de corrida do ataque de NE contra a defesa de JAX, no EPA do ataque de NE, há semanas com valores positivos e negativos; no EPA permitido pela defesa de JAX, há semanas com valores positivos e negativos. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "2026_03_SEA_WAS",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe de SEA contra WAS: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — SEA (ataque): +0,382 EPA, faixa semanal de +0,168 EPA a +0,596 EPA; WAS (EPA permitido): +0,252 EPA, faixa semanal de +0,045 EPA a +0,458 EPA. O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "A leitura não se estende automaticamente a outro fundamento: Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nCorrida — SEA (ataque): -0,120 EPA, faixa semanal de -0,178 EPA a -0,061 EPA; WAS (EPA permitido): -0,017 EPA, faixa semanal de -0,136 EPA a +0,102 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas. Nos recortes de passe de SEA, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+      "veredito": "SEA — passe: oportunidade localizada; corrida: mudança de sinal no EPA permitido adversário; ataque negativo em todas as semanas. WAS — passe e corrida: indicadores favoráveis dos dois lados do encontro. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe de SEA contra WAS: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — SEA (ataque): +0,382 EPA, faixa semanal de +0,168 EPA a +0,596 EPA; WAS (EPA permitido): +0,252 EPA, faixa semanal de +0,045 EPA a +0,458 EPA. O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "A leitura não se estende automaticamente a outro fundamento: Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nCorrida — SEA (ataque): -0,120 EPA, faixa semanal de -0,178 EPA a -0,061 EPA; WAS (EPA permitido): -0,017 EPA, faixa semanal de -0,136 EPA a +0,102 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas. Nos recortes de passe de SEA, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+      "veredito": "No recorte de passe do ataque de SEA contra a defesa de WAS, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. No recorte de corrida do ataque de SEA contra a defesa de WAS, no EPA do ataque de SEA, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de WAS, há semanas com valores positivos e negativos. No recorte de passe e corrida do ataque de WAS contra a defesa de SEA, o ataque de WAS teve EPA positivo e a defesa de SEA permitiu EPA negativo nas semanas observadas; indicadores favoráveis a ambos, sem indicar quem prevalecerá. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "both-teams",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe de AAA contra BBB: sinais compatíveis com uma oportunidade localizada. Corrida de BBB contra AAA: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,111 EPA; BBB (EPA permitido): +0,222 EPA.\nCorrida — BBB (ataque): +0,333 EPA; AAA (EPA permitido): +0,444 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "Os recortes de passe de AAA e corrida de BBB cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+      "veredito": "AAA — passe: oportunidade localizada. BBB — corrida: oportunidade localizada. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe de AAA contra BBB: sinais compatíveis com uma oportunidade localizada. Corrida de BBB contra AAA: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,111 EPA; BBB (EPA permitido): +0,222 EPA.\nCorrida — BBB (ataque): +0,333 EPA; AAA (EPA permitido): +0,444 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "Os recortes de passe de AAA e corrida de BBB cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+      "veredito": "No recorte de passe do ataque de AAA contra a defesa de BBB, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. No recorte de corrida do ataque de BBB contra a defesa de AAA, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "opposing-signs",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe de AAA contra BBB: indicadores favoráveis ao ataque e à defesa.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,200 EPA; BBB (EPA permitido): -0,150 EPA. Ataque positivo e EPA permitido negativo em todas as semanas: indicadores favoráveis a ambos, sem estabelecer quem prevalecerá.",
+      "alerta_vermelho": "Os recortes de passe de AAA cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+      "veredito": "AAA — passe: indicadores favoráveis dos dois lados do encontro. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe de AAA contra BBB: indicadores favoráveis ao ataque e à defesa.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,200 EPA; BBB (EPA permitido): -0,150 EPA. Ataque positivo e EPA permitido negativo em todas as semanas: indicadores favoráveis a ambos, sem estabelecer quem prevalecerá.",
+      "alerta_vermelho": "Os recortes de passe de AAA cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+      "veredito": "No recorte de passe do ataque de AAA contra a defesa de BBB, o ataque de AAA teve EPA positivo e a defesa de BBB permitiu EPA negativo nas semanas observadas; indicadores favoráveis a ambos, sem indicar quem prevalecerá. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "tied-opportunities",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe e Corrida de AAA contra BBB: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,111 EPA; BBB (EPA permitido): +0,222 EPA.\nCorrida — AAA (ataque): +0,333 EPA; BBB (EPA permitido): +0,444 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "Os recortes de passe e corrida de AAA cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+      "veredito": "AAA — passe e corrida: oportunidade localizada. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe e Corrida de AAA contra BBB: sinais compatíveis com uma oportunidade localizada.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,111 EPA; BBB (EPA permitido): +0,222 EPA.\nCorrida — AAA (ataque): +0,333 EPA; BBB (EPA permitido): +0,444 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+      "alerta_vermelho": "Os recortes de passe e corrida de AAA cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+      "veredito": "No recorte de passe e corrida do ataque de AAA contra a defesa de BBB, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    }
+  },
+  {
+    "gameId": "weekly-variation",
+    "selectionUnchanged": true,
+    "advantageUnchanged": true,
+    "alertUnchanged": true,
+    "before": {
+      "fator_chave": "Passe de AAA contra BBB: a leitura muda entre semanas observadas.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,167 EPA, faixa semanal de -0,100 EPA a +0,400 EPA; BBB (EPA permitido): +0,200 EPA, faixa semanal de +0,100 EPA a +0,300 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: positivo em todas as semanas.",
+      "alerta_vermelho": "As médias do ataque de AAA (passe) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+      "veredito": "AAA — passe: mudança de sinal no ataque; EPA permitido adversário positivo em todas as semanas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    },
+    "after": {
+      "fator_chave": "Passe de AAA contra BBB: há semanas com EPA positivo e negativo no recorte.",
+      "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,167 EPA, faixa semanal de -0,100 EPA a +0,400 EPA; BBB (EPA permitido): +0,200 EPA, faixa semanal de +0,100 EPA a +0,300 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: positivo em todas as semanas.",
+      "alerta_vermelho": "As médias do ataque de AAA (passe) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+      "veredito": "No recorte de passe do ataque de AAA contra a defesa de BBB, no EPA do ataque de AAA, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BBB, há valores positivos em todas as semanas observadas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+    }
+  }
+]

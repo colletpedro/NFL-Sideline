@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:12:41.458496Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "1035a9a906d7b4e7779c8100f066ce30431b482b59b2a662bf6bde92e3f04577",
+  "contextSha256" : "c8a21195016e161613bc8b1b667a44ce170e87439621a15b8f2c07a8d43a6ab5",
+  "gameId" : "weekly-variation",
+  "resultIdentity" : "fe01d36c82d9f4fcab96f6ff22b49ec7f7b3ccec970ebe94134c4829193e637a",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "game_id": "2025_08_CHI_BAL",
+    "context_json": {
+      "game": {
+        "game_id": "2025_08_CHI_BAL",
+        "season": 2025,
+        "week": 8,
+        "phase": "REG",
+        "gameday": "2025-10-26",
+        "as_of_date_utc": "2025-10-23"
+      },
+      "home_team": {
+        "abbr": "BAL",
+        "historical_reference": false,
+        "recent_form_last_3_eligible_weeks": [
+          {
+            "offEpaPlay": "-0.06252122664137569",
+            "defEpaPlay": "0.2306042405934028",
+            "offEpaPass": "-0.307471222468737",
+            "offEpaRush": "0.4561964115812717",
+            "defEpaPass": "0.4260252202398136",
+            "defEpaRush": "-0.016929000292050963",
+            "offSuccessRate": "0.4528301886792453",
+            "defSuccessRate": "0.4411764705882353",
+            "earlyDownEpa": null,
+            "dropbackRate": "0.6792452830188679",
+            "explosivePlayRate": null,
+            "playsOffense": 53,
+            "playsDefense": 68,
+            "id": {
+              "season": 2025,
+              "week": 4,
+              "teamAbbr": "BAL"
+            }
+          },
+          {
+            "offEpaPlay": "-0.33574280385889443",
+            "defEpaPlay": "0.3914223138318197",
+            "offEpaPass": "-0.37595030913918603",
+            "offEpaRush": "-0.2913029296017301",
+            "defEpaPass": "0.5750551291915453",
+            "defEpaRush": "0.1959422200617892",
+            "offSuccessRate": "0.375",
+            "defSuccessRate": "0.609375",
+            "earlyDownEpa": null,
+            "dropbackRate": "0.525",
+            "explosivePlayRate": null,
+            "playsOffense": 40,
+            "playsDefense": 64,
+            "id": {
+              "season": 2025,
+              "week": 5,
+              "teamAbbr": "BAL"
+            }
+          },
+          {
+            "offEpaPlay": "-0.33207327289524907",
+            "defEpaPlay": "-0.0331867793169627",
+            "offEpaPass": "-0.4991643861307282",
+            "offEpaRush": "-0.1649821596597699",
+            "defEpaPass": "0.034265899066395225",
+            "defEpaRush": "-0.1231236838281066",
+            "offSuccessRate": "0.3918918918918919",
+            "defSuccessRate": "0.46938775510204084",
+            "earlyDownEpa": null,
+            "dropbackRate": "0.5",
+            "explosivePlayRate": null,
+            "playsOffense": 74,
+            "playsDefense": 49,
+            "id": {
+              "season": 2025,
+              "week": 6,
+              "teamAbbr": "BAL"
+            }
+          }
+        ]
+      },
+      "away_team": {
+        "abbr": "CHI",
+        "historical_reference": false,
+        "recent_form_last_3_eligible_weeks": [
+          {
+            "offEpaPlay": "-0.12057133318733107",
+            "defEpaPlay": "-0.19576072275759035",
+            "offEpaPass": "-0.02874251326415245",
+            "offEpaRush": "-0.26382429226748977",
+            "defEpaPass": "-0.48010917618758936",
+            "defEpaRush": "-0.012310107641461988",
+            "offSuccessRate": "0.421875",
+            "defSuccessRate": "0.5294117647058824",
+            "earlyDownEpa": null,
+            "dropbackRate": "0.609375",
+            "explosivePlayRate": null,
+            "playsOffense": 64,
+            "playsDefense": 51,
+            "id": {
+              "season": 2025,
+              "week": 4,
+              "teamAbbr": "CHI"
+            }
+          },
+          {
+            "offEpaPlay": "0.16552726067451567",
+            "defEpaPlay": "-0.06369690371164834",
+            "offEpaPass": "0.09926709449659193",
+            "offEpaRush": "0.24962670236188045",
+            "defEpaPass": "0.22190888058368946",
+            "defEpaRush": "-0.33978249519714154",
+            "offSuccessRate": "0.5254237288135594",
+            "defSuccessRate": "0.4406779661016949",
+            "earlyDownEpa": null,
+            "dropbackRate": "0.559322033898305",
+            "explosivePlayRate": null,
+            "playsOffense": 59,
+            "playsDefense": 59,
+            "id": {
+              "season": 2025,
+              "week": 6,
+              "teamAbbr": "CHI"
+            }
+          },
+          {
+            "offEpaPlay": "0.09379912528868677",
+            "defEpaPlay": "-0.29681739717672306",
+            "offEpaPass": "0.0796227710215886",
+            "offEpaRush": "0.10387179805741441",
+            "defEpaPass": "-0.3399707239080261",
+            "defEpaRush": "-0.2054338817457285",
+            "offSuccessRate": "0.4461538461538462",
+            "defSuccessRate": "0.39622641509433965",
+            "earlyDownEpa": null,
+            "dropbackRate": "0.4153846153846154",
+            "explosivePlayRate": null,
+            "playsOffense": 65,
+            "playsDefense": 53,
+            "id": {
+              "season": 2025,
+              "week": 7,
+              "teamAbbr": "CHI"
+            }
+          }
+        ]
+      },
+      "context_quality": "COMPLETE",
+      "data_limitations": []
+    }
+  }
+]

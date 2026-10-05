@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:42.198801Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "aa92f07bc8b22c7d69e88cd48da568a63203a969360105c02c6b4932d8cf2ced",
+  "contextSha256" : "83c7b56ebd6229f6139876dbbb573b5c650a290f625712790e9b4ee23f3cbdfd",
+  "gameId" : "2026_03_CAR_CLE",
+  "resultIdentity" : "4daa1a4c4a9d9611675e2332269a4836ea0f4ca881a00d71d00f53c1ae9a6fcb",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

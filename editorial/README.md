@@ -25,6 +25,10 @@ Em uma sessão posterior, com leitura autorizada do banco, use o snapshot públi
 5. exporte para diretório temporário com `--as-of`, confirme as seis preservações e só depois siga o runbook.
 
 O seletor aceita esse modo apenas para jogo passado e somente se `createdAt` e os quatro campos públicos forem
-idênticos ao snapshot anterior. Legacy não listado, atual ou futuro permanece invisível. O manifesto desta task
-fica vazio: nenhuma aprovação real foi inventada. Portanto, não execute o primeiro export contra a saída pública
-até concluir e revisar as seis entradas; o procedimento é o gate operacional que impede sua remoção.
+idênticos ao snapshot anterior. Legacy não listado, atual ou futuro permanece invisível. Este procedimento
+descreve a preparação histórica do primeiro rollout; o manifesto atual já contém seleções aprovadas. Confira
+sempre o manifesto e o snapshot antes de um novo export.
+
+## Avaliação interna em lote pequeno
+
+O lote de 26/09/2026 e seus contextos congelados estão em [evaluations/2026-09-26/README.md](evaluations/2026-09-26/README.md). O [estado da revisão](evaluations/2026-09-26/REVIEW.md) distingue regressão offline, tentativas de geração e aprovação editorial. Os artefatos não são consumidos pelo exportador e não alteram este manifesto.

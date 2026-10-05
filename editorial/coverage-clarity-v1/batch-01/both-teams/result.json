@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:46.403186Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+  "contextSha256" : "bc36b1a57444c9dcb3d48fec83e11b9a58aeff9782f96577ed12bea564c1b36f",
+  "gameId" : "both-teams",
+  "resultIdentity" : "a03a571c9aa98f1b0e72b58c4b8383750d5737d64960150585c1d48edc0a2b2e",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

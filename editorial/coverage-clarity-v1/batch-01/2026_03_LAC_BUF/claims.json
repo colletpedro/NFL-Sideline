@@ -1,0 +1,151 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "BUF",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "POSITIVE_CONVERGENCE"
+    },
+    "claim_id" : "BUF:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:BUF:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:LAC:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "BUF",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "BUF:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:BUF:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:LAC:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "BUF",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "BUF:OFF_EPA_PLAY",
+    "evidence_ids" : [ "rw:2026:BUF:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:LAC:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "LAC",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "ATTACK_NOT_DEMONSTRATED"
+    },
+    "claim_id" : "LAC:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:LAC:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:BUF:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "LAC",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "LAC:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:LAC:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:BUF:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "BUF",
+    "predicate" : "SAMPLE_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:BUF:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:BUF:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:LAC:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "BUF:OFF_EPA_PASS" ],
+    "vantagem_tatica" : [ "BUF:OFF_EPA_PASS" ],
+    "alerta_vermelho" : [ "limit:BUF:OFF_EPA_PASS", "BUF:OFF_EPA_RUSH", "BUF:OFF_EPA_PLAY" ],
+    "veredito" : [ "BUF:OFF_EPA_PASS", "BUF:OFF_EPA_RUSH", "BUF:OFF_EPA_PLAY", "LAC:OFF_EPA_PASS", "LAC:OFF_EPA_RUSH", "limitation", "limit:BUF:OFF_EPA_PASS" ]
+  },
+  "links" : [ {
+    "from" : "limit:BUF:OFF_EPA_PASS",
+    "to" : "BUF:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "BUF:OFF_EPA_RUSH",
+    "to" : "BUF:OFF_EPA_PASS",
+    "relation" : "ADDITIONAL_RESTRICTION"
+  }, {
+    "from" : "BUF:OFF_EPA_PLAY",
+    "to" : "BUF:OFF_EPA_PASS",
+    "relation" : "ADDITIONAL_RESTRICTION"
+  } ],
+  "groupings" : [ {
+    "candidateId" : "LAC:OFF_EPA_PLAY",
+    "representedBy" : [ "LAC:OFF_EPA_PASS" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  } ],
+  "contract_version" : 5,
+  "thesis_team" : "NONE"
+}

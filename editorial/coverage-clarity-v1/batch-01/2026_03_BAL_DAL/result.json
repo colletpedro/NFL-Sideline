@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:41.871280Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+  "contextSha256" : "c76ef882eca1ed06dfd2f233d5dafca62757dd19f78309e502f9d8bf575fca94",
+  "gameId" : "2026_03_BAL_DAL",
+  "resultIdentity" : "8d11234e91b80fa02599490d415ddc9cc0d58ccfe62fc72417adbc5d1d63fc17",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

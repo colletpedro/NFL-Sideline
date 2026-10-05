@@ -1,0 +1,519 @@
+{
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "document" : {
+    "verdict" : "INCONCLUSIVE",
+    "claims" : [ {
+      "type" : "MATCHUP",
+      "subject" : "PHI",
+      "predicate" : "SIGNAL_PROFILE",
+      "period" : "CURRENT",
+      "role" : "OPPORTUNITY",
+      "signals" : {
+        "attack" : {
+          "pattern" : "ALL_POSITIVE",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "defense" : {
+          "pattern" : "ALL_POSITIVE",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "relation" : "POSITIVE_CONVERGENCE"
+      },
+      "claim_id" : "PHI:OFF_EPA_PASS",
+      "evidence_ids" : [ "rw:2026:PHI:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CHI:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+    }, {
+      "type" : "MATCHUP",
+      "subject" : "CHI",
+      "predicate" : "SIGNAL_PROFILE",
+      "period" : "CURRENT",
+      "role" : "LIMITATION",
+      "signals" : {
+        "attack" : {
+          "pattern" : "MIXED_SIGNS",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "defense" : {
+          "pattern" : "MIXED_SIGNS",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "relation" : "WEEKLY_SIGN_VARIATION"
+      },
+      "claim_id" : "CHI:OFF_EPA_PASS",
+      "evidence_ids" : [ "rw:2026:CHI:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:PHI:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+    }, {
+      "type" : "MATCHUP",
+      "subject" : "CHI",
+      "predicate" : "SIGNAL_PROFILE",
+      "period" : "CURRENT",
+      "role" : "LIMITATION",
+      "signals" : {
+        "attack" : {
+          "pattern" : "MIXED_SIGNS",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "defense" : {
+          "pattern" : "ALL_POSITIVE",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "relation" : "WEEKLY_SIGN_VARIATION"
+      },
+      "claim_id" : "CHI:OFF_EPA_RUSH",
+      "evidence_ids" : [ "rw:2026:CHI:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:PHI:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+    }, {
+      "type" : "MATCHUP",
+      "subject" : "PHI",
+      "predicate" : "SIGNAL_PROFILE",
+      "period" : "CURRENT",
+      "role" : "LIMITATION",
+      "signals" : {
+        "attack" : {
+          "pattern" : "MIXED_SIGNS",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "defense" : {
+          "pattern" : "MIXED_SIGNS",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "relation" : "WEEKLY_SIGN_VARIATION"
+      },
+      "claim_id" : "PHI:OFF_EPA_RUSH",
+      "evidence_ids" : [ "rw:2026:PHI:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CHI:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+    }, {
+      "type" : "MATCHUP",
+      "subject" : "PHI",
+      "predicate" : "SIGNAL_PROFILE",
+      "period" : "CURRENT",
+      "role" : "LIMITATION",
+      "signals" : {
+        "attack" : {
+          "pattern" : "ALL_POSITIVE",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "defense" : {
+          "pattern" : "MIXED_SIGNS",
+          "valuesVary" : true,
+          "containsZero" : false
+        },
+        "relation" : "WEEKLY_SIGN_VARIATION"
+      },
+      "claim_id" : "PHI:OFF_EPA_PLAY",
+      "evidence_ids" : [ "rw:2026:PHI:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CHI:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+    }, {
+      "type" : "LIMITATION",
+      "subject" : "MATCHUP",
+      "predicate" : "SMALL_SAMPLE",
+      "period" : "NONE",
+      "role" : "LIMITATION",
+      "claim_id" : "limitation",
+      "evidence_ids" : [ ]
+    }, {
+      "type" : "WINDOW_LIMITATION",
+      "subject" : "PHI",
+      "predicate" : "SAMPLE_LIMIT",
+      "period" : "CURRENT",
+      "role" : "LIMITATION",
+      "claim_id" : "limit:PHI:OFF_EPA_PASS",
+      "evidence_ids" : [ "rw:2026:PHI:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CHI:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+    } ],
+    "sections" : {
+      "fator_chave" : [ "PHI:OFF_EPA_PASS" ],
+      "vantagem_tatica" : [ "PHI:OFF_EPA_PASS" ],
+      "alerta_vermelho" : [ "limit:PHI:OFF_EPA_PASS", "PHI:OFF_EPA_RUSH", "PHI:OFF_EPA_PLAY" ],
+      "veredito" : [ "CHI:OFF_EPA_PASS", "CHI:OFF_EPA_RUSH", "PHI:OFF_EPA_PASS", "PHI:OFF_EPA_RUSH", "PHI:OFF_EPA_PLAY", "limitation", "limit:PHI:OFF_EPA_PASS" ]
+    },
+    "links" : [ {
+      "from" : "limit:PHI:OFF_EPA_PASS",
+      "to" : "PHI:OFF_EPA_PASS",
+      "relation" : "INTERNAL_LIMITATION"
+    }, {
+      "from" : "PHI:OFF_EPA_RUSH",
+      "to" : "PHI:OFF_EPA_PASS",
+      "relation" : "ADDITIONAL_RESTRICTION"
+    }, {
+      "from" : "PHI:OFF_EPA_PLAY",
+      "to" : "PHI:OFF_EPA_PASS",
+      "relation" : "ADDITIONAL_RESTRICTION"
+    } ],
+    "groupings" : [ {
+      "candidateId" : "CHI:OFF_EPA_PLAY",
+      "representedBy" : [ "CHI:OFF_EPA_RUSH" ],
+      "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+    } ],
+    "contract_version" : 5,
+    "thesis_team" : "NONE"
+  },
+  "candidates" : [ {
+    "id" : "CHI:OFF_EPA_PASS",
+    "attackTeam" : "CHI",
+    "defenseTeam" : "PHI",
+    "foundation" : "OFF_EPA_PASS",
+    "attack" : {
+      "id" : "rw:2026:CHI:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "CHI",
+      "metric" : "OFF_EPA_PASS",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:CHI:OFF_EPA_PASS", "tw:2026:2:CHI:OFF_EPA_PASS" ],
+      "value" : 0.176046634543276185,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : -0.0971088150688405,
+      "maximum" : 0.44920208415539287,
+      "missingMetricWeeks" : [ ]
+    },
+    "defense" : {
+      "id" : "rw:2026:PHI:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "PHI",
+      "metric" : "DEF_EPA_PASS",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:PHI:DEF_EPA_PASS", "tw:2026:2:PHI:DEF_EPA_PASS" ],
+      "value" : 0.0520269297849231985,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : -0.004441569740513593,
+      "maximum" : 0.10849542931035999,
+      "missingMetricWeeks" : [ ]
+    },
+    "classification" : "WEEKLY_SIGN_VARIATION",
+    "pairable" : true,
+    "adequateCoverage" : true,
+    "limitations" : [ "UNAVAILABLE_DENOMINATORS", "SMALL_OBSERVED_WINDOW", "WEEKLY_VARIATION" ],
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    }
+  }, {
+    "id" : "CHI:OFF_EPA_RUSH",
+    "attackTeam" : "CHI",
+    "defenseTeam" : "PHI",
+    "foundation" : "OFF_EPA_RUSH",
+    "attack" : {
+      "id" : "rw:2026:CHI:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "CHI",
+      "metric" : "OFF_EPA_RUSH",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:CHI:OFF_EPA_RUSH", "tw:2026:2:CHI:OFF_EPA_RUSH" ],
+      "value" : 0.10888202504082405,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : -0.159965540487127,
+      "maximum" : 0.3777295905687751,
+      "missingMetricWeeks" : [ ]
+    },
+    "defense" : {
+      "id" : "rw:2026:PHI:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "PHI",
+      "metric" : "DEF_EPA_RUSH",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:PHI:DEF_EPA_RUSH", "tw:2026:2:PHI:DEF_EPA_RUSH" ],
+      "value" : 0.070265771475326186,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : 0.005223323623488402,
+      "maximum" : 0.13530821932716397,
+      "missingMetricWeeks" : [ ]
+    },
+    "classification" : "WEEKLY_SIGN_VARIATION",
+    "pairable" : true,
+    "adequateCoverage" : true,
+    "limitations" : [ "UNAVAILABLE_DENOMINATORS", "SMALL_OBSERVED_WINDOW", "WEEKLY_VARIATION" ],
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    }
+  }, {
+    "id" : "CHI:OFF_EPA_PLAY",
+    "attackTeam" : "CHI",
+    "defenseTeam" : "PHI",
+    "foundation" : "OFF_EPA_PLAY",
+    "attack" : {
+      "id" : "rw:2026:CHI:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "CHI",
+      "metric" : "OFF_EPA_PLAY",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:CHI:OFF_EPA_PLAY", "tw:2026:2:CHI:OFF_EPA_PLAY" ],
+      "value" : 0.1439399418221764787769784172661871,
+      "aggregation" : "PLAY_WEIGHTED_MEAN",
+      "volume" : 139,
+      "minimum" : -0.12534879315531705,
+      "maximum" : 0.4093816948714201,
+      "missingMetricWeeks" : [ ]
+    },
+    "defense" : {
+      "id" : "rw:2026:PHI:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "PHI",
+      "metric" : "DEF_EPA_PLAY",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:PHI:DEF_EPA_PLAY", "tw:2026:2:PHI:DEF_EPA_PLAY" ],
+      "value" : 0.06637987930521886142857142857142857,
+      "aggregation" : "PLAY_WEIGHTED_MEAN",
+      "volume" : 119,
+      "minimum" : 0.05989679134006748,
+      "maximum" : 0.07502399659208737,
+      "missingMetricWeeks" : [ ]
+    },
+    "classification" : "WEEKLY_SIGN_VARIATION",
+    "pairable" : true,
+    "adequateCoverage" : true,
+    "limitations" : [ "SMALL_OBSERVED_WINDOW", "WEEKLY_VARIATION" ],
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    }
+  }, {
+    "id" : "PHI:OFF_EPA_PASS",
+    "attackTeam" : "PHI",
+    "defenseTeam" : "CHI",
+    "foundation" : "OFF_EPA_PASS",
+    "attack" : {
+      "id" : "rw:2026:PHI:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "PHI",
+      "metric" : "OFF_EPA_PASS",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:PHI:OFF_EPA_PASS", "tw:2026:2:PHI:OFF_EPA_PASS" ],
+      "value" : 0.132326527662594145,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : 0.04547772599315103,
+      "maximum" : 0.21917532933203726,
+      "missingMetricWeeks" : [ ]
+    },
+    "defense" : {
+      "id" : "rw:2026:CHI:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "CHI",
+      "metric" : "DEF_EPA_PASS",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:CHI:DEF_EPA_PASS", "tw:2026:2:CHI:DEF_EPA_PASS" ],
+      "value" : 0.1366880618857357415,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : 0.022317555060179083,
+      "maximum" : 0.2510585687112924,
+      "missingMetricWeeks" : [ ]
+    },
+    "classification" : "OPPORTUNITY",
+    "pairable" : true,
+    "adequateCoverage" : true,
+    "limitations" : [ "UNAVAILABLE_DENOMINATORS", "SMALL_OBSERVED_WINDOW", "WEEKLY_VARIATION" ],
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "POSITIVE_CONVERGENCE"
+    }
+  }, {
+    "id" : "PHI:OFF_EPA_RUSH",
+    "attackTeam" : "PHI",
+    "defenseTeam" : "CHI",
+    "foundation" : "OFF_EPA_RUSH",
+    "attack" : {
+      "id" : "rw:2026:PHI:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "PHI",
+      "metric" : "OFF_EPA_RUSH",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:PHI:OFF_EPA_RUSH", "tw:2026:2:PHI:OFF_EPA_RUSH" ],
+      "value" : -0.04208311567938084,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : -0.18627309525982128,
+      "maximum" : 0.1021068639010596,
+      "missingMetricWeeks" : [ ]
+    },
+    "defense" : {
+      "id" : "rw:2026:CHI:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "CHI",
+      "metric" : "DEF_EPA_RUSH",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:CHI:DEF_EPA_RUSH", "tw:2026:2:CHI:DEF_EPA_RUSH" ],
+      "value" : -0.052534656512136,
+      "aggregation" : "MEAN_OF_WEEKLY_MEANS",
+      "volume" : null,
+      "minimum" : -0.16020020804509322,
+      "maximum" : 0.05513089502082122,
+      "missingMetricWeeks" : [ ]
+    },
+    "classification" : "WEEKLY_SIGN_VARIATION",
+    "pairable" : true,
+    "adequateCoverage" : true,
+    "limitations" : [ "UNAVAILABLE_DENOMINATORS", "SMALL_OBSERVED_WINDOW", "WEEKLY_VARIATION" ],
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    }
+  }, {
+    "id" : "PHI:OFF_EPA_PLAY",
+    "attackTeam" : "PHI",
+    "defenseTeam" : "CHI",
+    "foundation" : "OFF_EPA_PLAY",
+    "attack" : {
+      "id" : "rw:2026:PHI:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "PHI",
+      "metric" : "OFF_EPA_PLAY",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:PHI:OFF_EPA_PLAY", "tw:2026:2:PHI:OFF_EPA_PLAY" ],
+      "value" : 0.05226104327235618034146341463414634,
+      "aggregation" : "PLAY_WEIGHTED_MEAN",
+      "volume" : 123,
+      "minimum" : 0.038976029513433486,
+      "maximum" : 0.07101635681436469,
+      "missingMetricWeeks" : [ ]
+    },
+    "defense" : {
+      "id" : "rw:2026:CHI:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2",
+      "team" : "CHI",
+      "metric" : "DEF_EPA_PLAY",
+      "season" : 2026,
+      "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+      "weeks" : [ 1, 2 ],
+      "evidenceIds" : [ "tw:2026:1:CHI:DEF_EPA_PLAY", "tw:2026:2:CHI:DEF_EPA_PLAY" ],
+      "value" : 0.06445062283213515088495575221238938,
+      "aggregation" : "PLAY_WEIGHTED_MEAN",
+      "volume" : 113,
+      "minimum" : -0.07788827566428413,
+      "maximum" : 0.18153584578886714,
+      "missingMetricWeeks" : [ ]
+    },
+    "classification" : "WEEKLY_SIGN_VARIATION",
+    "pairable" : true,
+    "adequateCoverage" : true,
+    "limitations" : [ "SMALL_OBSERVED_WINDOW", "WEEKLY_VARIATION" ],
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    }
+  } ],
+  "decisions" : [ {
+    "candidateId" : "CHI:OFF_EPA_PASS",
+    "reason" : "PROFILE_BEHIND_OPPORTUNITY"
+  }, {
+    "candidateId" : "CHI:OFF_EPA_RUSH",
+    "reason" : "PROFILE_BEHIND_OPPORTUNITY"
+  }, {
+    "candidateId" : "CHI:OFF_EPA_PLAY",
+    "reason" : "FOUNDATION_COVERAGE_POLICY"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_PASS",
+    "reason" : "PRIMARY"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_RUSH",
+    "reason" : "PROFILE_BEHIND_OPPORTUNITY"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_PLAY",
+    "reason" : "FOUNDATION_COVERAGE_POLICY"
+  }, {
+    "candidateId" : "CHI:OFF_EPA_PLAY",
+    "reason" : "GENERAL_REDUNDANT"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_PLAY",
+    "reason" : "GENERAL_ADDS_INFORMATION"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_PASS",
+    "reason" : "INTERNAL_RESTRICTION"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_RUSH",
+    "reason" : "DISTINCT_RESTRICTION"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_PLAY",
+    "reason" : "DISTINCT_RESTRICTION"
+  }, {
+    "candidateId" : "CHI:OFF_EPA_PASS",
+    "reason" : "GROUPED_BY_TEAM"
+  }, {
+    "candidateId" : "CHI:OFF_EPA_RUSH",
+    "reason" : "GROUPED_BY_TEAM"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_PASS",
+    "reason" : "GROUPED_BY_TEAM"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_RUSH",
+    "reason" : "GROUPED_BY_TEAM"
+  }, {
+    "candidateId" : "PHI:OFF_EPA_PLAY",
+    "reason" : "GROUPED_BY_TEAM"
+  } ]
+}

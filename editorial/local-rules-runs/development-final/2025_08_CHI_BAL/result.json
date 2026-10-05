@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 1,
+  "startedAt" : "2026-10-01T01:56:03.880826Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 4,
+  "rendererVersion" : "controlled-claims-v4.0.0",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "1.0.0"
+  },
+  "sourceFileSha256" : "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+  "contextSha256" : "c476428914b36de96c6d097b7089b2e791c0a884cddafbd5199e94d156c67482",
+  "gameId" : "2025_08_CHI_BAL",
+  "resultIdentity" : "d9fffe3dc6245383a6c96c415fa277fc85d2c59e3a6488fbfb5f5ce9b4f60036",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

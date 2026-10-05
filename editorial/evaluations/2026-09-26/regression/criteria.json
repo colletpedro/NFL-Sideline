@@ -1,0 +1,114 @@
+[
+  {
+    "cacheId": 56,
+    "gameId": "2026_03_ATL_GB",
+    "asOfDate": "2026-09-22",
+    "criterion": "Não converter ataque de GB menos negativo em oportunidade comprovada; os dois ataques têm EPA de passe negativo nas duas semanas.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 57,
+    "gameId": "2026_03_ARI_SF",
+    "asOfDate": "2026-09-22",
+    "criterion": "Preservar +0,142 e +1,060 de SF; a defesa aérea de ARI muda de sinal e não sustenta convergência positiva em todas as semanas.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 58,
+    "gameId": "2026_03_BAL_DAL",
+    "asOfDate": "2026-09-22",
+    "criterion": "BAL tem ataque de passe/corrida positivo e DAL permite EPA positivo nos respectivos recortes; contraponto não deve repetir a fragilidade de DAL como se contrariasse BAL.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 59,
+    "gameId": "2026_03_CAR_CLE",
+    "asOfDate": "2026-09-22",
+    "criterion": "Defesas de CAR e CLE mudam de sinal no passe; não selecionar apenas uma semana para demonstrar exploração.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 60,
+    "gameId": "2026_03_CIN_PIT",
+    "asOfDate": "2026-09-22",
+    "criterion": "Ambos os ataques têm passe negativo nas duas semanas; defesa não transforma isso em previsão de placar.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 61,
+    "gameId": "2026_03_HOU_IND",
+    "asOfDate": "2026-09-22",
+    "criterion": "Não transformar melhora semanal do passe de IND ou ataque terrestre estável em vantagem sem defesa adversária compatível.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 62,
+    "gameId": "2026_03_KC_MIA",
+    "asOfDate": "2026-09-22",
+    "criterion": "Não chamar o passe de KC consistente com semana inicial negativa; extremo permitido por MIA não substitui o recorte completo.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 63,
+    "gameId": "2026_03_LAC_BUF",
+    "asOfDate": "2026-09-22",
+    "criterion": "Explicar o passe de BUF contra EPA permitido de LAC, com amostra de duas semanas e sem garantia de vitória.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 64,
+    "gameId": "2026_03_LA_DEN",
+    "asOfDate": "2026-09-22",
+    "criterion": "Preservar a mudança de sinal no passe de LA e DEN; não tratar a semana 2 isolada como força permanente.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 65,
+    "gameId": "2026_03_LV_NO",
+    "asOfDate": "2026-09-22",
+    "criterion": "Passe de LV e defesa aérea de NO têm sinais positivos nas duas semanas; distinguir essa oportunidade descritiva de superioridade geral.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 66,
+    "gameId": "2026_03_MIN_TB",
+    "asOfDate": "2026-09-22",
+    "criterion": "Respeitar os sinais e as semanas do contexto congelado; não acrescentar fundamento causal.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 67,
+    "gameId": "2026_03_NE_JAX",
+    "asOfDate": "2026-09-22",
+    "criterion": "Preservar a mudança de sinal do passe de JAX e da defesa aérea de NE; proibir eficiência crônica ou potencial explosivo sem suporte.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 68,
+    "gameId": "2026_03_NYJ_DET",
+    "asOfDate": "2026-09-22",
+    "criterion": "A defesa aérea de DET muda de sinal; não usar apenas o EPA permitido positivo da segunda semana.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 69,
+    "gameId": "2026_03_SEA_WAS",
+    "asOfDate": "2026-09-22",
+    "criterion": "Respeitar os sinais e as semanas do contexto congelado; não acrescentar fundamento causal.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 70,
+    "gameId": "2026_03_TEN_NYG",
+    "asOfDate": "2026-09-22",
+    "criterion": "O ataque aéreo de NYG muda de +0,707 para -0,518; média positiva não sustenta convergência em todas as semanas.",
+    "priorConversationCritiqueAvailable": false
+  },
+  {
+    "cacheId": 71,
+    "gameId": "2026_03_PHI_CHI",
+    "asOfDate": "2026-09-22",
+    "criterion": "Preservar o passe positivo de PHI e a mudança de sinal de CHI; explicitar a amostra curta.",
+    "priorConversationCritiqueAvailable": false
+  }
+]

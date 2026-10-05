@@ -1,0 +1,6 @@
+{
+  "fator_chave" : "Passe de AAA contra BBB: a leitura muda entre semanas observadas.",
+  "vantagem_tatica" : "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,167 EPA, faixa semanal de -0,100 EPA a +0,400 EPA; BBB (EPA permitido): +0,200 EPA, faixa semanal de +0,100 EPA a +0,300 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: positivo em todas as semanas.",
+  "alerta_vermelho" : "As médias do ataque de AAA (passe) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+  "veredito" : "AAA — passe: mudança de sinal no ataque; EPA permitido adversário positivo em todas as semanas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+}

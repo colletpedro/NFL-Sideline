@@ -1,0 +1,19 @@
+{
+  "credentialSource": "GEMINI_API_KEY_PROD",
+  "attemptNumber": 7,
+  "model": "gemini-3.1-pro-preview",
+  "outcome": "HTTP_REJECTED",
+  "httpStatus": 402,
+  "providerCode": 402,
+  "providerStatus": "RESOURCE_EXHAUSTED",
+  "interpretation": "O provedor informou RESOURCE_EXHAUSTED. A razão específica da restrição de recurso/cota não pode ser confirmada sem detalhe adicional; HTTP 402 não prova saldo zerado.",
+  "invalidCredentialConfirmed": false,
+  "permissionDeniedConfirmed": false,
+  "zeroBalanceConfirmed": false,
+  "editorialEvaluation": false,
+  "holdoutOpened": false,
+  "consumed": 7,
+  "remainingDevelopment": 1,
+  "remainingHoldout": 2,
+  "nextAction": "Inspecionar as configurações de acesso, cota e cobrança associadas a GEMINI_API_KEY_PROD no provedor, sem nova geração."
+}

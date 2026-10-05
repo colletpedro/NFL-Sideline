@@ -1,0 +1,45 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "BAL",
+    "predicate" : "POSITIVE_EPA_CONVERGENCE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "claim_id" : "BAL:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:BAL:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:DAL:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "BAL",
+    "predicate" : "POSITIVE_EPA_CONVERGENCE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "claim_id" : "BAL:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:BAL:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:DAL:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "BAL",
+    "predicate" : "POSITIVE_EPA_CONVERGENCE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "claim_id" : "BAL:OFF_EPA_PLAY",
+    "evidence_ids" : [ "rw:2026:BAL:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:DAL:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "BAL:OFF_EPA_PASS", "BAL:OFF_EPA_RUSH" ],
+    "vantagem_tatica" : [ "BAL:OFF_EPA_PASS", "BAL:OFF_EPA_RUSH" ],
+    "alerta_vermelho" : [ "limitation" ],
+    "veredito" : [ "limitation", "BAL:OFF_EPA_PASS", "BAL:OFF_EPA_RUSH", "BAL:OFF_EPA_PLAY" ]
+  },
+  "links" : [ ],
+  "contract_version" : 4,
+  "thesis_team" : "NONE"
+}

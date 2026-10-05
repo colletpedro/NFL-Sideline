@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-10-01T18:49:18.470210+00:00",
+  "mode": "KNOWN_REGRESSION",
+  "independentEvaluation": false,
+  "jarSha256": "1a5fd8191938f2954f9a5d11d4dd50478ee7dcc83d53a2af3a03481c0f64108d",
+  "manifestSha256": "d9c3b251086ea0f4cdacda5e83d4106f69b811bb382fdab32d5a27c260e6f942",
+  "cases": [
+    "2026_03_ARI_SF",
+    "2026_03_BAL_DAL",
+    "2026_03_NE_JAX",
+    "2025_08_CHI_BAL",
+    "2026_03_SEA_WAS",
+    "2026_03_MIN_TB"
+  ],
+  "caseSelection": "All six existing cases, no outcome-based sampling"
+}

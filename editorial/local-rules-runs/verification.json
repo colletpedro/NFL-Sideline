@@ -1,0 +1,22 @@
+{
+  "javaGate": "mvn -f core-api/pom.xml -o clean verify",
+  "javaHome": "/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home",
+  "javaVersion": "21.0.12.1",
+  "status": "PASSED",
+  "testCounts": {
+    "tests": 95,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "frozenFilesUnchangedAfterHoldout": true,
+  "publicDataUnchangedAcrossHoldout": true,
+  "additionalWhitespaceCheck": "PASSED including new files",
+  "generationCalls": 0,
+  "remoteDatabaseAccess": false,
+  "geminiAttemptsConsumed": 0,
+  "commitPushDeploy": false,
+  "gitDiffCheck": "PASSED",
+  "newTests": 14,
+  "randomizedSyntheticContexts": 180
+}

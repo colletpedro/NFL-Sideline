@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "requests": [
+    {
+      "path": "/inspection.html",
+      "status": 200
+    },
+    {
+      "path": "/before-hashes.json",
+      "status": 404
+    },
+    {
+      "path": "/narrow.html",
+      "status": 404
+    }
+  ],
+  "exitCode": -15,
+  "stopped": true,
+  "pageSha256": "df3276735eda34d6e9ad513da79093e09c270f61ba8ed115b0f813cb3f6cd455"
+}
