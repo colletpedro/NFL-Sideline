@@ -37,3 +37,15 @@ editorial/coverage-clarity-v1/known-preview.html
 editorial/operational-validation-v1/inspection.html
 editorial/operational-validation-v1/range-example.png
 editorial/**/java21-clean-verify*.log
+editorial/coverage-clarity-v1/calendar-tests.log
+editorial/coverage-clarity-v1/harness-tests.log
+editorial/coverage-clarity-v1/harness-final-tests.log
+editorial/local-integration-v1/operational/results/
+editorial/local-integration-v1/operational/server.log
+editorial/operational-validation-v1/before-hashes.json
+editorial/operational-validation-v1/http-run-01/cli/
+editorial/operational-validation-v1/http-run-01/contexts/
+editorial/operational-validation-v1/http-run-01/http/
+editorial/operational-validation-v1/http-run-01/results/
+editorial/operational-validation-v1/http-run-01/server-*.log
+editorial/operational-validation-v1/python-tests.log
