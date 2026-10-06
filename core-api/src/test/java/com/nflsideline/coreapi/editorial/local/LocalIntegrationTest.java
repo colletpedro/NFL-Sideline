@@ -62,6 +62,26 @@ class LocalIntegrationTest {
             }
         };
     }
+    @Test void historySurvivesRestartAndRetainsEarlierContextProvenance() throws Exception {
+        var entry = catalog().get("2026_03_BAL_DAL");
+        Path output = Files.createDirectory(temp.resolve("history-results"));
+        String game = "2026_03_BAL_DAL";
+        LocalResultStore.Response original;
+        try (var store = new LocalResultStore(output)) {
+            original = store.generate(game, entry, new LocalRuleSelector());
+            var altered = new LocalContextCatalog.Entry(entry.context(), "a".repeat(64));
+            store.generate(game, altered, new LocalRuleSelector());
+            assertThat(store.list("another_game").attempts()).isEmpty();
+        }
+        try (var restarted = new LocalResultStore(output)) {
+            var history = restarted.list(game);
+            assertThat(history.unavailableInStore()).isZero();
+            assertThat(history.attempts()).hasSize(2);
+            assertThat(history.attempts().get(0).sourceSha256()).isEqualTo("a".repeat(64));
+            assertThat(history.attempts().get(1).sourceSha256()).isEqualTo(entry.sourceSha256());
+            assertThat(restarted.get(game, original.attemptId())).isEqualTo(original);
+        }
+    }
     @Test void commonValidationRejectsInvalidClaimsAndKeepsFailedAttemptUnusable() throws Exception {
         var entry = catalog().get("2026_03_BAL_DAL");
         var selector = invalidSelector();

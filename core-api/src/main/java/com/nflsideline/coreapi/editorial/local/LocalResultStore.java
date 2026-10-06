@@ -65,6 +65,31 @@ public final class LocalResultStore implements AutoCloseable {
         }
     }
     private static final List<String> ARTIFACTS = List.of("context.json", "selection.json", "claims.json", "rendered.json", "result.json");
+    public record Attempt(String attemptId, String startedAt, String resultIdentity, String sourceSha256) { }
+    public record History(List<Attempt> attempts, int unavailableInStore) { }
+    /** Lists only complete, hash-checked attempts. Unavailable entries are counted across the store. */
+    public History list(String gameId) throws IOException {
+        LocalContextCatalog.requireId(gameId);
+        var attempts = new ArrayList<Attempt>();
+        int unavailable = 0;
+        try (var paths = Files.list(root)) {
+            for (Path dir : paths.filter(p -> !p.getFileName().toString().equals(".owner")).toList()) {
+                try {
+                    if (Files.isSymbolicLink(dir) || !Files.isDirectory(dir, LinkOption.NOFOLLOW_LINKS))
+                        throw new IOException("INVALID_STORE");
+                    var marker = read(dir.resolve("complete.json"));
+                    String storedGame = marker.path("response").path("gameId").asText();
+                    var response = get(storedGame, dir.getFileName().toString());
+                    if (!gameId.equals(response.gameId())) continue;
+                    var audit = read(dir.resolve("result.json"));
+                    attempts.add(new Attempt(response.attemptId(), audit.path("startedAt").asText(),
+                            response.resultIdentity(), audit.path("sourceFileSha256").asText()));
+                } catch (IOException | IllegalArgumentException | NoSuchElementException e) { unavailable++; }
+            }
+        }
+        attempts.sort(Comparator.comparing(Attempt::startedAt).reversed().thenComparing(Attempt::attemptId));
+        return new History(List.copyOf(attempts), unavailable);
+    }
     public Response get(String gameId, String attempt) throws IOException {
         LocalContextCatalog.requireId(gameId);
         if (!attempt.matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"))

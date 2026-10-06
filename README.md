@@ -59,6 +59,13 @@ Preencha `SUPABASE_DB_URL`, `SUPABASE_DB_USER` e `SUPABASE_DB_PASSWORD`. `GEMINI
 
 `VITE_API_BASE_URL` é pública e só vale em development/test local. Não a cadastre na Vercel: builds de Production usam obrigatoriamente snapshots `/data` e não podem ser desviados por variável Vite. Toda variável `VITE_*` é visível no browser e nunca deve conter secrets.
 
+## Laboratório editorial offline
+
+Para selecionar contextos congelados, gerar por regras locais e consultar tentativas preservadas,
+use a [interface editorial local](docs/local-editorial-ui.md). Ela tem entrada Vite própria
+(`npm --prefix web-ui run editorial:dev`), requer a API de loopback e não usa banco, Gemini
+ou `.env`. O frontend público e sua publicação estática seguem separados.
+
 ## Execução local
 
 ### 1. Preparar o banco

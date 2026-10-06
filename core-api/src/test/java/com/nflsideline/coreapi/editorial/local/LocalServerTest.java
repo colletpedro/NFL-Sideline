@@ -69,6 +69,37 @@ class LocalServerTest {
         }
         verify(transport).stop(0);
     }
+    @Test void catalogAndHistoryExposeOnlyMetadataAndVerifiedAttempts() throws Exception {
+        var transport = mock(HttpServer.class);
+        when(transport.getAddress()).thenReturn(new InetSocketAddress("127.0.0.1",18081));
+        Path output = Files.createDirectory(temp.resolve("results"));
+        try (var server = new LocalAnalysisServer(contexts(), output,18081,transport)) {
+            var handler = ArgumentCaptor.forClass(HttpHandler.class);
+            verify(transport).createContext(eq(LocalAnalysisServer.PREFIX),handler.capture());
+            var h = handler.getValue();
+            String prefix = LocalAnalysisServer.PREFIX, route = prefix + "2026_03_BAL_DAL";
+            var catalog = request(h,"GET",prefix,null);
+            assertThat(catalog.status()).isEqualTo(200);
+            assertThat(catalog.body().size()).isEqualTo(1);
+            assertThat(catalog.body().get(0).path("awayTeam").asText()).isEqualTo("BAL");
+            assertThat(catalog.body().get(0).path("asOfDate").asText()).isEqualTo("2026-09-22");
+            assertThat(catalog.body().toString()).doesNotContain("evidence", "canonicalJson", temp.toString());
+            assertThat(request(h,"GET",prefix,"http://evil.test").status()).isEqualTo(400);
+            assertThat(request(h,"GET",route+"/attempts",null).body().path("attempts").size()).isZero();
+            var generated = request(h,"POST",route,null).body();
+            var history = request(h,"GET",route+"/attempts",null);
+            assertThat(history.status()).isEqualTo(200);
+            assertThat(history.body().path("attempts").size()).isEqualTo(1);
+            assertThat(history.body().path("attempts").get(0).path("attemptId")).isEqualTo(generated.path("attemptId"));
+            assertThat(history.body().path("unavailableInStore").asInt()).isZero();
+            Files.writeString(output.resolve(generated.path("attemptId").asText()).resolve("rendered.json"),"{}");
+            Files.createDirectory(output.resolve("unfinished"));
+            var corrupted = request(h,"GET",route+"/attempts",null).body();
+            assertThat(corrupted.path("attempts").size()).isZero();
+            assertThat(corrupted.path("unavailableInStore").asInt()).isEqualTo(2);
+            assertThat(request(h,"POST",route+"/attempts",null).status()).isEqualTo(405);
+        }
+    }
     @Test void startupCannotLoadSpringDatasourceJpaGeminiRepositoriesOrExporter() throws Exception {
         Path input = contexts(), output = Files.createDirectory(temp.resolve("results"));
         var transport = mock(HttpServer.class);

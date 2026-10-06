@@ -11,12 +11,15 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 - Nesta organização, o gate local reconstruiu Java 21 com 116 testes, executou 43 testes frontend, lint e build, e descobriu 15 testes Python nos scripts. A diferença de 12 para 15 corresponde à inclusão dos três testes de calendário na descoberta ampla; não altera o registro histórico.
 - O manifesto editorial versionado contém 69 seleções aprovadas de entregas anteriores. O trabalho local por regras não modificou o manifesto, os snapshots públicos ou aprovações.
 
+- Entrega da interface: 118 testes Java, 48 frontend, lint/build e 21 verificações HTTP reais do proxy aprovados; geração, recuperação após reinício e apresentação desktop/mobile verificadas. Fonte: [relatório da interface](../editorial/local-interface-v1/REPORT.md).
+
 ## Limites e próximo passo
 
 - A política BASIC/FULL para o **novo motor local** ainda precisa ser definida; as regras existentes do fluxo Gemini/publicação não a definem automaticamente.
 - Registrar `asOfDate` e filtrar semanas anteriores não reconstrói todo o conhecimento disponível na data: fontes, correções, disponibilidade e contexto histórico podem ter mudado.
 - Os casos conhecidos servem a regressão mecânica e operacional. Não houve avaliação editorial independente, prova de generalização ou nova publicação dessas entregas.
-- Próxima entrega: integrar uma interface **local** de desenvolvimento à API editorial de loopback, decidindo o transporte e preservando Production estática com snapshots. A API atual recusa `Origin` e não oferece CORS; essa decisão pertence à integração, sem alterar este pacote.
+- A [interface local de desenvolvimento](local-editorial-ui.md) está implementada em uma entrada Vite separada, com catálogo, geração explícita e recuperação de tentativas. Proxy restrito em loopback; Production segue estática. A API continua recusando Origin e sem CORS.
+- Próximo passo de produto: definir a política BASIC/FULL do motor local e fechar o contrato das métricas prioritárias antes de ampliar dados ou publicar novas análises. A interface permite examinar resultados, mas não substitui a avaliação de qualidade editorial.
 
 ## Política de arquivos
 

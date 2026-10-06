@@ -470,3 +470,15 @@ A validação operacional executou 75 requisições HTTP reais em loopback, com 
 consulta após reinício nos 21 casos conhecidos. A página interna foi inspecionada em 1440/390 px,
 com filtros e evidências expansíveis. Não há integração da API local ao frontend público.
 Evidências e comandos: [relatório operacional](editorial/operational-validation-v1/REPORT.md).
+
+### Interface editorial local de desenvolvimento
+
+A entrada Vite separada `editorial:dev` conecta um laboratório em 127.0.0.1:18083 à API
+de loopback em 18081, por proxy com Host/Origin/método/rota/body restritos. A API mantém
+a rejeição de Origin e não oferece CORS. HTTP 1.1.0 acrescenta catálogo de metadados e
+histórico de tentativas completas verificadas; seleção, serviço, claims e renderer não mudam.
+A página gera apenas por ação explícita, preserva tentativas anteriores, apresenta os quatro
+textos e identifica resultados como locais, sem aprovação/publicação. Não define BASIC/FULL.
+A entrada pública e o snapshot schemaVersion 1 permanecem inalterados. A configuração
+editorial não admite build/production; o build público não inclui a interface nem seu cliente.
+Contrato, limites das datas informadas e reprodução: [interface local](docs/local-editorial-ui.md).

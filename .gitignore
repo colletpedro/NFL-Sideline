@@ -49,3 +49,6 @@ editorial/operational-validation-v1/http-run-01/http/
 editorial/operational-validation-v1/http-run-01/results/
 editorial/operational-validation-v1/http-run-01/server-*.log
 editorial/operational-validation-v1/python-tests.log
+
+# Execuções e capturas da interface local (reproduzíveis, sem dados públicos)
+editorial/local-interface-v1/runtime/

@@ -1,4 +1,4 @@
-# API editorial local restrita — 1.0.0
+# API editorial local restrita — 1.1.0
 
 `editorial-local-serve` inicia exclusivamente um HttpServer do JDK em `127.0.0.1`.
 Não inicia Spring, datasource, repositórios JPA, Gemini ou exportador. As classes locais
@@ -10,7 +10,7 @@ executa seleção, validação comum e renderização, nessa ordem. Retorna text
 seleção completa e identidade. CLI e HTTP usam esse serviço. Não há provedor automático,
 fallback ou revisão humana obrigatória.
 
-Versões: serviço/HTTP **1.0.0**, identidade **local-result-1**, artefato **3**.
+Versões: serviço **1.0.0**, HTTP **1.1.0**, identidade **local-result-1**, artefato **3**.
 Seletor **local-descriptive-rules 2.0.0**, entrada **3**, claims **5** e renderer
 **controlled-claims-v5.0.2** (correção de apresentação das faixas próximas de zero). O artefato mudou para incluir identidade
 estruturada e parâmetros, sem nova política editorial. NONE/INCONCLUSIVE, quatro textos
@@ -74,6 +74,8 @@ contextos ou seletores escolhidos pelo cliente. Query string, percent-encoding, 
 Origin e Host diferente de `127.0.0.1:PORTA` são recusados. Não há CORS nem autenticação
 entre usuários locais; é uma ferramenta restrita de desenvolvimento.
 
+- `GET /api/v1/local-analysis/`: catálogo de metadados; datas são informações da origem, sem novo filtro temporal.
+- `GET /api/v1/local-analysis/{gameId}/attempts`: histórico verificado e contagem global de entradas indisponíveis.
 - `POST /api/v1/local-analysis/{gameId}`: body vazio; 201 e Location para consulta.
 - `GET /api/v1/local-analysis/{gameId}/{attemptId}`: 200 e a resposta persistida.
 - 400: requisição inválida; 404: contexto/resultado inexistente; 405: método/rota não
@@ -139,7 +141,7 @@ Os 21 casos expostos são regressões, não avaliação independente. Aprovaçã
 comprova qualidade editorial. A validação operacional posterior verificou HTTP real, reinício e
 apresentação no navegador; a faixa com desigualdade foi corrigida no renderer 5.0.2. Repetição de
 nomes/avisos e extensão dos alertas permanecem limites editoriais, sem retuning nesta entrega.
-Sem frontend, publicação, migration, modelos, dados novos ou contextos inventados de textos.
+O pacote original não incluía frontend. A [interface local de desenvolvimento](local-editorial-ui.md) agora usa um proxy restrito; não há publicação, migration, modelos ou dados novos nesta integração.
 
 ## Reprodução da validação operacional
 
