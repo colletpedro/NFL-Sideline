@@ -1,4 +1,4 @@
-# Estado consolidado — 05/10/2026
+# Estado consolidado — 06/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -19,7 +19,7 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 - Registrar `asOfDate` e filtrar semanas anteriores não reconstrói todo o conhecimento disponível na data: fontes, correções, disponibilidade e contexto histórico podem ter mudado.
 - Os casos conhecidos servem a regressão mecânica e operacional. Não houve avaliação editorial independente, prova de generalização ou nova publicação dessas entregas.
 - A [interface local de desenvolvimento](local-editorial-ui.md) está implementada em uma entrada Vite separada, com catálogo, geração explícita e recuperação de tentativas. Proxy restrito em loopback; Production segue estática. A API continua recusando Origin e sem CORS.
-- Próximo passo de produto: definir a política BASIC/FULL do motor local e fechar o contrato das métricas prioritárias antes de ampliar dados ou publicar novas análises. A interface permite examinar resultados, mas não substitui a avaliação de qualidade editorial.
+- Próximo passo de produto: implementar a projeção visual E2 e os componentes/laboratório E3 sobre a [preparação E0/E1](plans/visual-v1/README.md). A política BASIC/FULL e o enriquecimento das métricas continuam necessários antes da publicação, mas não bloqueiam o protótipo visual local.
 
 ## Política de arquivos
 
@@ -36,3 +36,9 @@ Os snapshots públicos em `web-ui/public/data` e o manifesto de aprovações nã
 O [inventário inicial com SHA-256](initial-inventory-2026-10-05.json) foi registrado antes de editar ou fazer staging: branch `main`, HEAD `a3868af056442e073c3f180f2d4681d83bb1ed31`, 1143 caminhos alterados ou novos, nenhum staged. Ele inclui o hash de `Handoff.md` sem versionar o conteúdo. SHA-256 do próprio inventário: `616bbae33a0402dce48ad22d2160adad8ad19b640897787bb3b4e9a884c0df88`.
 
 Antes do `clean verify`, os JARs locais de baseline já estavam arquivados: integração `30c4880142f393d5314022ad5bb5ee43495757957388b1a7f805d053af2dda1c`, validação operacional `e742e8040b838356aac90a0fdbb1b0fd54df3b3ea9b763625a892bd95e6b0f7b` (SHA-256). Esses binários não integram o checkout; os hashes atestam somente as cópias locais preservadas.
+
+## Preparação visual E0/E1
+
+A interface local foi consolidada no commit `3a06bbb`. O [contrato visual interno v1](../contracts/visual-analysis/v1/README.md), schema, vocabulário, 20 fixtures sintéticas válidas e 15 inválidas estão preparados para implementação. O wireframe é estático e separado da API; E2/E3 ainda não foram implementadas. O seletor, renderer e snapshot mantêm suas versões.
+
+Cinco defeitos legados de sinal/tempo foram reproduzidos em testes expected-failure e continuam abertos. O pacote registra critérios, limites e ordens de trabalho de backend/frontend, sem abrir novas sessões ou publicar. Verificações desta preparação: [relatório estruturado](plans/visual-v1/verification.json).

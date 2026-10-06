@@ -482,3 +482,9 @@ textos e identifica resultados como locais, sem aprovação/publicação. Não d
 A entrada pública e o snapshot schemaVersion 1 permanecem inalterados. A configuração
 editorial não admite build/production; o build público não inclui a interface nem seu cliente.
 Contrato, limites das datas informadas e reprodução: [interface local](docs/local-editorial-ui.md).
+
+### Preparação do contrato visual — E0/E1
+
+O [contrato visual interno v1](contracts/visual-analysis/v1/README.md) define a próxima projeção de evidências/claims validadas para cartões e gráficos locais. Schema, vocabulário, fixtures sintéticas e wireframe são artefatos de preparação, não endpoints ou funcionalidades já implementados. As rotas, artefatos e envelopes propostos nesse contrato entram em vigor somente na entrega E2; os contratos runtime e públicos descritos acima permanecem vigentes.
+
+O primeiro experimento preserva seletor 2.0.0, claims v5 e renderer textual 5.0.2. Não prevê vencedor, não muda o ETL e não publica o documento interno como snapshot. Estado e coordenação: [preparação visual](docs/plans/visual-v1/README.md).
