@@ -31,6 +31,10 @@ class LocalVisualStoreTest {
             assertThat(a.visualIdentity()).isEqualTo(LocalGenerationService.sha256(Files.readAllBytes(dir.resolve(first.attemptId()).resolve("insights.json"))));
             assertThat(a.document().path("source").path("kind").asText()).isEqualTo("VALIDATED_LOCAL_RESULT");
             assertThat(a.document().path("game").path("gameId").asText()).isEqualTo(first.gameId());
+            assertThat(a.mode()).isEqualTo(a.document().path("mode").asText());
+            assertThat(a.publicationApproved()).isEqualTo(a.document().path("publicationApproved").asBoolean());
+            assertThat(a.gameId()).isEqualTo(a.document().path("game").path("gameId").asText());
+            assertThat(a.resultIdentity()).isEqualTo(a.document().path("source").path("resultIdentity").asText());
             assertThat(a.document().toString()).doesNotContain(first.attemptId());
             assertThat(store.get(first.gameId(), first.attemptId())).isEqualTo(first);
         }

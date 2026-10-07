@@ -125,16 +125,22 @@ public final class LocalResultStore implements AutoCloseable {
             var rendered = read(dir.resolve("rendered.json"));
             var identity = FrozenContext.MAPPER.treeToValue(result.path("identity"), LocalGenerationService.Identity.class);
             var context = FrozenContext.read(read(dir.resolve("context.json")));
+            JsonNode insights = version == 4 ? read(dir.resolve("insights.json")) : null;
             if (!"VALIDATED".equals(result.path("status").asText())
                     || !rendered.equals(marker.path("response").path("analysis"))
                     || !result.path("resultIdentity").equals(marker.path("response").path("resultIdentity"))
+                    || !"LOCAL_RULES_DEVELOPMENT".equals(marker.path("response").path("mode").asText())
+                    || marker.path("response").path("publicationApproved").asBoolean(true)
                     || !identity.hash().equals(result.path("resultIdentity").asText())
                     || !identity.contextSha256().equals(LocalGenerationService.sha256(
                             context.canonicalJson().getBytes(java.nio.charset.StandardCharsets.UTF_8)))
                     || version == 4 && (!result.path("visualIdentity").asText().equals(marker.path("hashes").path("insights.json").asText())
-                    || !"VALIDATED_LOCAL_RESULT".equals(read(dir.resolve("insights.json")).path("source").path("kind").asText())
-                    || !result.path("resultIdentity").equals(read(dir.resolve("insights.json")).path("source").path("resultIdentity"))
-                    || !result.path("identity").path("contextSha256").equals(read(dir.resolve("insights.json")).path("source").path("contextSha256"))))
+                    || !"VALIDATED_LOCAL_RESULT".equals(insights.path("source").path("kind").asText())
+                    || !result.path("resultIdentity").equals(insights.path("source").path("resultIdentity"))
+                    || !result.path("identity").path("contextSha256").equals(insights.path("source").path("contextSha256"))
+                    || !marker.path("response").path("mode").equals(insights.path("mode"))
+                    || !marker.path("response").path("publicationApproved").equals(insights.path("publicationApproved"))
+                    || !marker.path("response").path("gameId").equals(insights.path("game").path("gameId"))))
                 throw new IOException("INCOMPLETE_RESULT");
         } catch (IOException | RuntimeException e) { throw new IOException("INCOMPLETE_RESULT", e); }
         Response response = FrozenContext.MAPPER.treeToValue(marker.path("response"), Response.class);
