@@ -1,0 +1,55 @@
+{
+  "status": "NOT_COLLECTED",
+  "participantId": null,
+  "date": null,
+  "familiarityWithNFL": null,
+  "priorExposureToCases": null,
+  "assignedOrder": null,
+  "rounds": [
+    {
+      "caseId": "2026_03_BAL_DAL",
+      "condition": null,
+      "secondsToFinding": null,
+      "secondsToMainLimit": null,
+      "answers": {
+        "attackAndDefense": null,
+        "foundationAndPeriod": null,
+        "finding": null,
+        "mainLimit": null,
+        "missingOrDifferentWeeks": null,
+        "whyNoWinner": null
+      },
+      "misinterpretations": null
+    },
+    {
+      "caseId": "2025_08_CHI_BAL",
+      "condition": null,
+      "secondsToFinding": null,
+      "secondsToMainLimit": null,
+      "answers": {
+        "attackAndDefense": null,
+        "foundationAndPeriod": null,
+        "finding": null,
+        "mainLimit": null,
+        "missingOrDifferentWeeks": null,
+        "whyNoWinner": null
+      },
+      "misinterpretations": null
+    },
+    {
+      "caseId": "2026_03_NE_JAX",
+      "condition": null,
+      "secondsToFinding": null,
+      "secondsToMainLimit": null,
+      "answers": {
+        "attackAndDefense": null,
+        "foundationAndPeriod": null,
+        "finding": null,
+        "mainLimit": null,
+        "missingOrDifferentWeeks": null,
+        "whyNoWinner": null
+      },
+      "misinterpretations": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "stage": "supplemental discovery after implementation; no new tuning or holdout designation",
+  "roots": [
+    "editorial",
+    "etl-pipeline/data",
+    "core-api/src/test/resources"
+  ],
+  "includeIgnoredFiles": true,
+  "jsonFilesExamined": 945,
+  "contextFilesFound": 196,
+  "gameIds": [
+    "2025_08_CHI_BAL",
+    "2026_03_ARI_SF",
+    "2026_03_ATL_GB",
+    "2026_03_BAL_DAL",
+    "2026_03_CAR_CLE",
+    "2026_03_CIN_PIT",
+    "2026_03_HOU_IND",
+    "2026_03_KC_MIA",
+    "2026_03_LAC_BUF",
+    "2026_03_LA_DEN",
+    "2026_03_LV_NO",
+    "2026_03_MIN_TB",
+    "2026_03_NE_JAX",
+    "2026_03_NYJ_DET",
+    "2026_03_PHI_CHI",
+    "2026_03_SEA_WAS",
+    "2026_03_TEN_NYG",
+    "both-teams",
+    "opposing-signs",
+    "tied-opportunities",
+    "weekly-variation"
+  ],
+  "independentlyUnusedSupported": false,
+  "date": "2026-10-07",
+  "fullInventoryLocalPath": "/tmp/nfl-e4-20261007/supplemental-inventory.json",
+  "fullInventorySha256": "b52bff8f884c586bfd6fd74eea5d6305e3afd313a82e0cbfff0e332f70cb4e79",
+  "conclusion": "All 21 identities belong to already known evaluation or synthetic lineages; no independently unused provenance was found."
+}

@@ -19,7 +19,7 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 - Registrar `asOfDate` e filtrar semanas anteriores não reconstrói todo o conhecimento disponível na data: fontes, correções, disponibilidade e contexto histórico podem ter mudado.
 - Os casos conhecidos servem a regressão mecânica e operacional. Não houve avaliação editorial independente, prova de generalização ou nova publicação dessas entregas.
 - A [interface local de desenvolvimento](local-editorial-ui.md) está implementada em uma entrada Vite separada, com catálogo, geração explícita e recuperação de tentativas. Proxy restrito em loopback; Production segue estática. A API continua recusando Origin e sem CORS.
-- Próximo passo de produto: E4, avaliação de compreensão e densidade da leitura visual. E2/E3 estão integradas e verificadas localmente; veja o [aceite da integração](plans/visual-v1/integration-report.md). A política BASIC/FULL e o enriquecimento das métricas continuam necessários antes da publicação, mas não bloqueiam o protótipo visual local.
+- E4 de apresentação e auditoria interna concluída na branch local `codex/visual-analysis-e4`, sobre `793ac7b`: leitura rápida com papéis/períodos, limitação antes dos pontos, acesso ao histórico, foco/tabelas e ampliação de texto a 200%. Verificados 125 testes frontend (cinco falhas esperadas preservadas), 127 Java offline, contrato/lint/build, HTTP real e falhas de transporte. **Compreensão humana e amostra independente permanecem pendentes**; próximo passo: rodada curta preparada e contrato de métricas/recortes E5 antes de E6/E7. [Relatório E4](plans/visual-v1/e4/REPORT.md). BASIC/FULL e publicação não foram implementados.
 
 ## Política de arquivos
 

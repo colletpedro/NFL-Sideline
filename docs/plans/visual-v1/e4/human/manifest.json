@@ -1,0 +1,30 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "condition": "text-only frozen renderer content; exploratory comparison, presentation container differs from lab",
+  "cases": [
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "attemptId": "52ebceda-01ea-42f6-ba8a-dc92094cc6e5",
+      "resultIdentity": "2e00e1ffeb249d96a3c3e17468982bb81b8825a2a769f64a1e80a38db5e0a39e",
+      "source": "complete.json response.analysis of real E4 known-case generation",
+      "html": "2026_03_BAL_DAL.html",
+      "sha256": "0bad0b7645be10f60280eb5e243342bbf165a3c285be105e15530c2383686794"
+    },
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "attemptId": "ae734981-7659-4db0-8aa4-249c82b8ce23",
+      "resultIdentity": "1f7efcbdb49297d005e57566d4fbdb8a0d459e83063436b56466f68f4527e5b3",
+      "source": "complete.json response.analysis of real E4 known-case generation",
+      "html": "2025_08_CHI_BAL.html",
+      "sha256": "22397532094173dbdbed33edaef900684c22677161b9a22418ae1a99c62f6866"
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "attemptId": "e38aeb2b-9c5b-4316-87d5-c8e1de993113",
+      "resultIdentity": "6bfaeb5194777a1c04e1ae702337eccbb45fb6824b38b105577d16f132a20a3c",
+      "source": "complete.json response.analysis of real E4 known-case generation",
+      "html": "2026_03_NE_JAX.html",
+      "sha256": "b47c94e5544b6cafd96825904423d163365cc1a69a7f60df0c7e5473a6a268a8"
+    }
+  ]
+}

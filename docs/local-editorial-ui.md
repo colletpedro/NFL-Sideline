@@ -73,3 +73,7 @@ Evidências da implementação: [relatório](../editorial/local-interface-v1/REP
 A branch de integração `codex/visual-integration-e2-e3` incorpora E2 e E3 e acrescenta leitura visual à mesma entrada de desenvolvimento. A UI consulta `GET /api/v1/local-analysis/{gameId}/{attemptId}/insights` por tentativa, após a consulta textual. Tentativas legadas v3 exibem texto e aviso de compatibilidade. Um documento inválido ou divergente da tentativa gera erro visível; não se converte silenciosamente em análise. O modo de fixtures é rotulado como sintético e separado de resultados reais.
 
 O fluxo real catálogo → POST → GET visual → histórico → recarga e o reinício da API foram verificados em 07/10/2026. O visual precede o texto, que fica expansível. O build público continua independente. [Aceite da integração](plans/visual-v1/integration-report.md); [relatório histórico E3](plans/visual-v1/e3-report.md).
+
+## Apresentação E4 e avaliação pendente
+
+A branch local E4 acrescenta ataque/defesa e período à leitura rápida, navegação focável para encontros/histórico/texto e tabela rolável por teclado. A restrição principal precede os pontos; séries podem ficar lado a lado e se reorganizam com texto ampliado. Contrato, números, seleção e renderer permanecem iguais. A ampliação de texto a 200% foi inspecionada por CSS temporário em viewport fixo e restaurada; não equivale a zoom nativo do navegador ou certificação de acessibilidade. [Resultados e reprodução E4](plans/visual-v1/e4/REPORT.md); [rodada humana preparada, ainda pendente](plans/visual-v1/e4/human-round.md).
