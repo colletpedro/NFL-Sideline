@@ -31,7 +31,7 @@ function FixtureWorkspace() {
       {fixtureNames.map(item => <option key={item} value={item}>{item}</option>)}
     </select></div>
     {error && <div className="error" role="alert">{error}</div>}
-    {document && <VisualAnalysis document={document}/>}
+    {document && <VisualAnalysis key={name} document={document}/>}
   </section>;
 }
 
@@ -99,12 +99,13 @@ function Workspace({ context }: { context: Context }) {
       {visualStatus === 'invalid' && 'Documento visual inválido. A leitura textual foi preservada; o visual não será exibido.'}
       {visualStatus === 'error' && 'Não foi possível recuperar o documento visual. A leitura textual permanece disponível; abra a tentativa novamente para consultar.'}
     </div>}
-    {visual && <VisualAnalysis document={visual}/>}
+    <nav className="reading-nav" aria-label="Navegação da tentativa"><a href="#attempt-history">Ver tentativas salvas</a>{result && <a href="#attempt-text">Ler texto completo</a>}</nav>
+    {selected && selected.sourceSha256 !== context.sourceSha256 && <p className="error">Esta tentativa usa uma versão anterior do contexto.</p>}
+    {visual && <VisualAnalysis key={result?.attemptId} document={visual}/>}
     <div className="workspace-grid" aria-busy={!!busy}>
-      <div className="reading-panel">
+      <div className="reading-panel" id="attempt-text" tabIndex={-1}>
         <div className="panel-heading"><h3>Leitura do confronto</h3><span className="tag">NÃO PUBLICADO</span></div>
         {result ? <><Analysis key={result.attemptId} result={result} collapsed={!!visual}/>
-          {selected && selected.sourceSha256 !== context.sourceSha256 && <p className="error">Esta tentativa usa uma versão anterior do contexto.</p>}
           <details className="audit"><summary>Identificação da tentativa</summary><dl>
             <dt>ID</dt><dd>{result.attemptId}</dd><dt>Identidade do resultado</dt><dd>{result.resultIdentity}</dd>
             <dt>Modo</dt><dd>Regras locais · validação mecânica concluída</dd>
@@ -114,7 +115,7 @@ function Workspace({ context }: { context: Context }) {
           <p>Gere uma análise para explorar os gráficos e as evidências, ou abra uma tentativa do histórico.</p>
           <span>Sem chamadas a modelos externos</span></div>}
       </div>
-      <aside className="history-panel"><div className="panel-heading"><h3>Tentativas salvas</h3>
+      <aside className="history-panel" id="attempt-history" tabIndex={-1} aria-label="Tentativas salvas"><div className="panel-heading"><h3>Tentativas salvas</h3>
         <button className="icon-button" disabled={!!busy} onClick={() => void action('refresh')} aria-label="Atualizar histórico"><RefreshCw size={17} aria-hidden="true"/></button></div>
         <p className="muted history-note">Arquivos locais deste confronto. Versões anteriores são preservadas.</p>
         {!records ? <p className="history-note">{error ? 'Histórico indisponível.' : 'Carregando histórico…'}</p> : <>

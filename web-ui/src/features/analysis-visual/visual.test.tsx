@@ -103,3 +103,56 @@ describe('signed shared geometry', () => {
     expect(html).toContain('-0,0005 &lt; EPA &lt; 0');
   });
 });
+
+describe('E4 presentation preserves interpretation and geometry', () => {
+  it('puts both roles, foundation and observed period in the quick reading, with the limit before points', () => {
+    const html = renderToStaticMarkup(<VisualAnalysis document={validateDocument(fixture('opposition'), 'fixture')}/>);
+    const quick = html.slice(html.indexOf('visual-highlights'), html.indexOf('visual-legend'));
+    expect(quick).toContain('AAA ataque × BBB defesa · Passe');
+    expect(quick).toContain('Ataque e defesa: Temporada atual · 2026 · semanas 1, 2, 3');
+    expect(quick).toContain('Esta análise não estima vencedor');
+    expect(quick).toContain('a quantidade de cartões não é um placar');
+    const card = html.slice(html.indexOf('<article'), html.indexOf('</article>'));
+    expect(card.indexOf('Limitação principal')).toBeLessThan(card.indexOf('visual-plot'));
+    expect(card).toContain('tabindex="0" role="region" aria-labelledby=');
+    expect(card).toContain('scope="col"');
+    expect(card).toContain('scope="row"');
+  });
+  it('keeps distinct observed windows and historical references in the quick reading', () => {
+    const doc = validateDocument(fixture('uneven-weeks'), 'fixture');
+    const html = renderToStaticMarkup(<VisualAnalysis document={doc}/>);
+    const quick = html.slice(html.indexOf('visual-highlights'), html.indexOf('visual-legend'));
+    const encounter = doc.encounters.find(e => e.id === doc.findings[0].encounterId)!;
+    for (const id of [encounter.attackSeriesId, encounter.defenseSeriesId]) {
+      const series = doc.series.find(s => s.id === id)!;
+      const rows = series.evidenceIds.map(id => doc.evidence.find(e => e.id === id)!);
+      expect(quick).toContain(`semanas ${rows.map(e => e.week).join(', ')}`);
+    }
+    const historical = renderToStaticMarkup(<VisualAnalysis document={validateDocument(fixture('historical'), 'fixture')}/>);
+    expect(historical.slice(historical.indexOf('visual-highlights'), historical.indexOf('visual-legend'))).toContain('Referência histórica');
+  });
+  it('includes a hidden general extreme in every rendered series scale', () => {
+    const raw = structuredClone(fixture('general-represented')) as VisualAnalysisDocument;
+    const general = raw.evidence.find(e => e.metric === 'OFF_EPA_PLAY' && Number(e.value) > 0)!;
+    general.value = '3.0000001'; general.displayValue = '+3,000';
+    const doc = validateDocument(raw, 'fixture');
+    const html = renderToStaticMarkup(<VisualAnalysis document={doc}/>);
+    expect(html).toContain('≈ +3,00');
+    expect(html).not.toContain('≈ +0,400');
+    const pass = doc.evidence.find(e => e.metric === 'OFF_EPA_PASS')!;
+    expect(html).toContain(`left:${coordinate(pass.value, general.value)}%`);
+    expect(html).toContain('<details class="visual-general">');
+  });
+  it.each(['opposition', 'zero', 'tiny-sign', 'negative-tiny-sign', 'partial', 'outlier'])('renders the original coordinates and exact evidence for %s', name => {
+    const doc = validateDocument(fixture(name), 'fixture');
+    const original = structuredClone(doc);
+    const html = renderToStaticMarkup(<VisualAnalysis document={doc}/>);
+    const max = signedDomain(doc.evidence.map(e => e.value))!;
+    for (const row of doc.evidence) {
+      const position = coordinate(row.value, max);
+      if (position !== null) expect(html).toContain(`left:${position}%`);
+      expect(html).toContain(`<code>${row.value}</code>`);
+    }
+    expect(doc).toEqual(original);
+  });
+});
