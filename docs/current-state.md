@@ -6,7 +6,7 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 
 - Frontend: calendário e detalhe com linguagem de mercado sem favorito, confiança ou vantagem de modelo inventados. Production permanece um build estático que lê snapshots JSON; a API editorial local ainda não está conectada à interface principal.
 - Caminho Gemini: prompt/cache com claims v3 e renderização Java dos quatro textos. Gemini é necessário apenas ao comando de geração Gemini; testes, exportação de snapshots e motor local por regras não o exigem.
-- Motor local descritivo: seletor `local-descriptive-rules` 2.0.0, entrada 3, claims v5, renderer `controlled-claims-v5.0.2`, `LocalGenerationService` 1.0.0, CLI e servidor HTTP de loopback, artefatos internos v3. O motor não prevê vencedor, não aprova análises e não publica.
+- Motor local descritivo: seletor `local-descriptive-rules` 2.0.0, entrada 3, claims v5, renderer `controlled-claims-v5.0.2`, `LocalGenerationService` 1.1.0, CLI e servidor HTTP de loopback. Novas tentativas compatíveis com o contrato visual usam artefato interno v4; o leitor preserva v3. O motor não prevê vencedor, não aprova análises e não publica.
 - Os relatórios da última validação registram 116 testes Java e 12 Python aprovados, 75 requisições HTTP reais com CLI/API e persistência após reinício nos 21 casos conhecidos, e inspeção visual em 1440 × 1000 e 390 × 844 px. A apresentação de faixas próximas de zero foi verificada nessa inspeção. São evidências dos casos conhecidos, não avaliação editorial independente.
 - Nesta organização, o gate local reconstruiu Java 21 com 116 testes, executou 43 testes frontend, lint e build, e descobriu 15 testes Python nos scripts. A diferença de 12 para 15 corresponde à inclusão dos três testes de calendário na descoberta ampla; não altera o registro histórico.
 - O manifesto editorial versionado contém 69 seleções aprovadas de entregas anteriores. O trabalho local por regras não modificou o manifesto, os snapshots públicos ou aprovações.
@@ -19,7 +19,7 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 - Registrar `asOfDate` e filtrar semanas anteriores não reconstrói todo o conhecimento disponível na data: fontes, correções, disponibilidade e contexto histórico podem ter mudado.
 - Os casos conhecidos servem a regressão mecânica e operacional. Não houve avaliação editorial independente, prova de generalização ou nova publicação dessas entregas.
 - A [interface local de desenvolvimento](local-editorial-ui.md) está implementada em uma entrada Vite separada, com catálogo, geração explícita e recuperação de tentativas. Proxy restrito em loopback; Production segue estática. A API continua recusando Origin e sem CORS.
-- Próximo passo de produto: implementar a projeção visual E2 e os componentes/laboratório E3 sobre a [preparação E0/E1](plans/visual-v1/README.md). A política BASIC/FULL e o enriquecimento das métricas continuam necessários antes da publicação, mas não bloqueiam o protótipo visual local.
+- Próximo passo de produto: integrar os componentes/laboratório E3 à projeção E2 sobre a [preparação E0/E1](plans/visual-v1/README.md). A política BASIC/FULL e o enriquecimento das métricas continuam necessários antes da publicação, mas não bloqueiam o protótipo visual local.
 
 ## Política de arquivos
 
@@ -39,6 +39,10 @@ Antes do `clean verify`, os JARs locais de baseline já estavam arquivados: inte
 
 ## Preparação visual E0/E1
 
-A interface local foi consolidada no commit `3a06bbb`. O [contrato visual interno v1](../contracts/visual-analysis/v1/README.md), schema, vocabulário, 20 fixtures sintéticas válidas e 15 inválidas estão preparados para implementação. O wireframe é estático e separado da API; E2/E3 ainda não foram implementadas. O seletor, renderer e snapshot mantêm suas versões.
+A interface local foi consolidada no commit `3a06bbb`. O [contrato visual interno v1](../contracts/visual-analysis/v1/README.md), schema, vocabulário, 20 fixtures sintéticas válidas e 15 inválidas continuam congelados. E2 projeta documentos reais por tentativa e expõe GET `/insights`; o frontend visual E3 ainda não está integrado. O seletor, renderer e snapshot mantêm suas versões.
 
 Cinco defeitos legados de sinal/tempo foram reproduzidos em testes expected-failure e continuam abertos. O pacote registra critérios, limites e ordens de trabalho de backend/frontend, sem abrir novas sessões ou publicar. Verificações desta preparação: [relatório estruturado](plans/visual-v1/verification.json).
+
+## Projeção visual E2
+
+`visual-projector-1.0.0` consome claims v5 validadas e contexto congelado para produzir observações semanais, seis encontros, achados, restrições tipadas e relações. A API HTTP local 1.2.0 oferece o documento apenas para a tentativa consultada; `visualIdentity` é o SHA-256 dos bytes persistidos de `insights.json`. POST e GET textual permanecem. O [relatório E2](../editorial/evaluations/2026-10-06-visual-e2/README.md) contém 17 documentos reais de contextos conhecidos e a lacuna de fase pós-temporada do contrato congelado. Production e snapshots públicos não foram tocados.

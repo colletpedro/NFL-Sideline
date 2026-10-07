@@ -7,7 +7,9 @@ import java.util.*;
 
 /** Flat, startup-only snapshot. Requests never read client-supplied paths or changed input files. */
 public final class LocalContextCatalog {
-    public record Entry(AnalysisContext context, String sourceSha256) { }
+    public record Entry(AnalysisContext context, String sourceSha256, String declaredAsOfDate) {
+        public Entry(AnalysisContext context, String sourceSha256) { this(context, sourceSha256, null); }
+    }
     private final Map<String, Entry> entries;
     private final List<Summary> summaries;
     public LocalContextCatalog(Path directory) throws IOException {
@@ -24,7 +26,9 @@ public final class LocalContextCatalog {
                 var context = FrozenContext.read(source);
                 String id = FrozenContext.MAPPER.readTree(context.canonicalJson()).path("game").path("game_id").asText();
                 requireId(id);
-                if (items.putIfAbsent(id, new Entry(context, LocalGenerationService.sha256(bytes))) != null)
+                String asOf = optionalDate(source.path("game").path("as_of_date_utc").asText());
+                if (items.putIfAbsent(id, new Entry(context, LocalGenerationService.sha256(bytes),
+                        asOf.isEmpty() ? null : asOf)) != null)
                     throw new IllegalArgumentException("AMBIGUOUS_GAME_ID");
                 var game = source.path("game");
                 metadata.put(id, new Summary(id, context.homeTeam(), context.awayTeam(), game.path("season").asInt(),

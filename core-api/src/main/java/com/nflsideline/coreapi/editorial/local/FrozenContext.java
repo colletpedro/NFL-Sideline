@@ -23,7 +23,7 @@ public final class FrozenContext {
         for (var item : root.path("evidence")) {
             Evidence e = MAPPER.treeToValue(item, Evidence.class);
             Evidence previous = evidence.putIfAbsent(e.id(), e);
-            if (previous != null && !previous.equals(e)) throw new IllegalArgumentException("Conflicting evidence");
+            if (previous != null) throw new IllegalArgumentException("Duplicate evidence");
         }
         ObjectNode sanitized = MAPPER.createObjectNode().put("contract_version", 3);
         var game = sanitized.putObject("game");
@@ -67,5 +67,26 @@ public final class FrozenContext {
                     || items.stream().map(Evidence::origin).distinct().count() > 1)
                 throw new IllegalArgumentException("Frozen slice exceeds policy");
         }
+    }
+    /** The local generation boundary additionally reconciles typed rows with its canonical source. */
+    public static void checkCanonical(AnalysisContext context) {
+        try {
+            var canonical = MAPPER.readTree(context.canonicalJson());
+            var rows = MAPPER.convertValue(canonical.path("evidence"),
+                    new com.fasterxml.jackson.core.type.TypeReference<List<Evidence>>() { });
+            if (!canonical.path("home_team").asText().equals(context.homeTeam())
+                    || !canonical.path("away_team").asText().equals(context.awayTeam())
+                    || rows.size() != context.evidence().size())
+                throw new IllegalArgumentException("Canonical context mismatch");
+            for (int i = 0; i < rows.size(); i++) {
+                var a = rows.get(i); var b = context.evidence().get(i);
+                if (!Objects.equals(a.id(), b.id()) || !Objects.equals(a.team(), b.team())
+                        || a.metric() != b.metric() || a.season() != b.season() || a.week() != b.week()
+                        || a.origin() != b.origin() || a.value().compareTo(b.value()) != 0
+                        || a.unit() != b.unit() || !Objects.equals(a.volume(), b.volume())
+                        || !Objects.equals(a.sourceTable(), b.sourceTable()) || !Objects.equals(a.sourceKey(), b.sourceKey()))
+                    throw new IllegalArgumentException("Canonical context mismatch");
+            }
+        } catch (java.io.IOException e) { throw new IllegalArgumentException("Invalid canonical context", e); }
     }
 }

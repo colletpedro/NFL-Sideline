@@ -23,7 +23,7 @@ public final class LocalAnalysisApplication {
             Files.createDirectory(resolved); // Atomic reservation; never overwrite even failed attempts.
             output = resolved;
             ClaimSelector selector = new LocalRuleSelector();
-            result.put("artifactVersion", 3).put("startedAt", Instant.now().toString())
+            result.put("artifactVersion", 4).put("startedAt", Instant.now().toString())
                     .put("mode", "LOCAL_RULES_OFFLINE").put("contractVersion", 5)
                     .put("rendererVersion", ClaimRenderer.VERSION).put("publicationApproved", false);
             result.set("selector", FrozenContext.MAPPER.valueToTree(selector.identity()));
@@ -34,10 +34,18 @@ public final class LocalAnalysisApplication {
             String gameId = FrozenContext.MAPPER.readTree(context.canonicalJson()).path("game").path("game_id").asText();
             result.put("contextSha256", contextHash).put("gameId", gameId);
             write(output.resolve("context.json"), FrozenContext.MAPPER.readTree(context.canonicalJson()));
-            var generated = new LocalGenerationService().generate(context, FrozenContext.parameters(context), selector);
+            String asOf = FrozenContext.MAPPER.readTree(input).path("game").path("as_of_date_utc").asText();
+            try { asOf = java.time.LocalDate.parse(asOf).toString(); }
+            catch (java.time.format.DateTimeParseException invalid) { asOf = null; }
+            var generated = new LocalGenerationService().generate(context, FrozenContext.parameters(context), selector, asOf);
             write(output.resolve("selection.json"), FrozenContext.MAPPER.valueToTree(generated.selection()));
             write(output.resolve("claims.json"), FrozenContext.MAPPER.valueToTree(generated.selection().document()));
             write(output.resolve("rendered.json"), FrozenContext.MAPPER.valueToTree(generated.texts()));
+            if (generated.insights() == null) result.put("artifactVersion", 3);
+            else {
+                write(output.resolve("insights.json"), generated.insights());
+                result.put("visualIdentity", sha256(Files.readAllBytes(output.resolve("insights.json"))));
+            }
             result.put("resultIdentity", generated.identity().hash());
             result.set("identity", FrozenContext.MAPPER.valueToTree(generated.identity()));
             result.put("serviceVersion", LocalGenerationService.VERSION);

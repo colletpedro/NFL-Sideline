@@ -1,4 +1,4 @@
-# API editorial local restrita — 1.1.0
+# API editorial local restrita — 1.2.0
 
 `editorial-local-serve` inicia exclusivamente um HttpServer do JDK em `127.0.0.1`.
 Não inicia Spring, datasource, repositórios JPA, Gemini ou exportador. As classes locais
@@ -10,7 +10,7 @@ executa seleção, validação comum e renderização, nessa ordem. Retorna text
 seleção completa e identidade. CLI e HTTP usam esse serviço. Não há provedor automático,
 fallback ou revisão humana obrigatória.
 
-Versões: serviço **1.0.0**, HTTP **1.1.0**, identidade **local-result-1**, artefato **3**.
+Versões: serviço **1.1.0**, HTTP **1.2.0**, identidade **local-result-1**, artefato novo **4**.
 Seletor **local-descriptive-rules 2.0.0**, entrada **3**, claims **5** e renderer
 **controlled-claims-v5.0.2** (correção de apresentação das faixas próximas de zero). O artefato mudou para incluir identidade
 estruturada e parâmetros, sem nova política editorial. NONE/INCONCLUSIVE, quatro textos
@@ -78,8 +78,17 @@ entre usuários locais; é uma ferramenta restrita de desenvolvimento.
 - `GET /api/v1/local-analysis/{gameId}/attempts`: histórico verificado e contagem global de entradas indisponíveis.
 - `POST /api/v1/local-analysis/{gameId}`: body vazio; 201 e Location para consulta.
 - `GET /api/v1/local-analysis/{gameId}/{attemptId}`: 200 e a resposta persistida.
+- `GET /api/v1/local-analysis/{gameId}/{attemptId}/insights`: 200 e envelope visual v1
+  (`mode`, `publicationApproved`, `gameId`, `attemptId`, `resultIdentity`, `visualIdentity`,
+  `document`). O documento é um objeto JSON, sem UUID nem horário de tentativa.
 - 400: requisição inválida; 404: contexto/resultado inexistente; 405: método/rota não
   suportado; 409: resultado incompleto/corrompido ou falha de geração/IO; 500: falha inesperada.
+  A consulta visual de um artefato v3 íntegro retorna 409 `VISUAL_DOCUMENT_NOT_AVAILABLE`.
+  Como o contrato visual v1 aceita somente `REG`/`POST`, contextos locais válidos com
+  `WC`/`DIV`/`CON`/`SB` continuam gerando texto em um artefato v3 sem visual; a API
+  retorna o mesmo erro visual. A ampliação do enum requer revisão coordenada do contrato.
+  Uma tentativa inexistente retorna 404; uma tentativa incompleta ou com hash inválido retorna
+  409 `LOCAL_RESULT_UNAVAILABLE`. Nenhum GET gera, altera ou migra arquivos.
 
 Erros contêm somente `{"error":"CODIGO_FIXO"}`, sem caminhos ou stack traces.
 Envelope ilustrativo (não é evidência de HTTP real):
@@ -115,12 +124,14 @@ semântica igual e tentativas distintas. Não há cache, índice mutável de “
 ou sobrescrita. Seletores/versões distintos não compartilham identidade. Um lock exclusivo
 impede dois proprietários simultâneos do mesmo diretório. Executor: 2–4 threads e fila de 32.
 
-Em `results/{attemptId}/`: `context.json`, `selection.json`, `claims.json`, `rendered.json`
-e `result.json`. Este último registra versões, identidade, parâmetros, hash da origem,
-status e ausência de aprovação. `complete.json` contém resposta e hashes dos cinco arquivos;
+Em novas tentativas `results/{attemptId}/`: `context.json`, `selection.json`, `claims.json`,
+`rendered.json`, `insights.json` e `result.json`. Este último registra versões, identidade,
+parâmetros, hash da origem, identidade visual (SHA-256 dos bytes de `insights.json`),
+status e ausência de aprovação. `complete.json` contém resposta textual e hashes dos seis arquivos;
 é disponibilizado por rename atômico somente ao final. Filesystem sem ATOMIC_MOVE falha,
 sem fallback não atômico. Consulta confere hashes, status e correspondência dos textos e
-identidade. Resultados íntegros continuam consultáveis após reiniciar.
+identidade. O leitor seleciona a lista de cinco arquivos do v3 ou seis do v4 pelo
+`artifactVersion`, sem mudar arquivos antigos. Resultados íntegros continuam consultáveis após reiniciar.
 
 Falhas preservam a tentativa e, quando possível, `failure.json` com classe da exceção,
 metadados e seleção rejeitada. Falha de disco pode impedir esse diagnóstico. Interrupção

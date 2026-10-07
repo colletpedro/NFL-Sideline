@@ -12,6 +12,11 @@ import java.util.*;
 public final class LocalResultStore implements AutoCloseable {
     public record Response(String mode, boolean publicationApproved, String gameId, String attemptId,
                            String resultIdentity, LocalGenerationService.Texts analysis) { }
+    public record InsightsResponse(String mode, boolean publicationApproved, String gameId, String attemptId,
+                                   String resultIdentity, String visualIdentity, JsonNode document) { }
+    public static final class VisualDocumentNotAvailable extends IOException {
+        public VisualDocumentNotAvailable() { super("VISUAL_DOCUMENT_NOT_AVAILABLE"); }
+    }
     private final Path root;
     private final FileChannel channel;
     private final FileLock lock;
@@ -32,15 +37,20 @@ public final class LocalResultStore implements AutoCloseable {
         String attempt = UUID.randomUUID().toString();
         Path dir = root.resolve(attempt);
         Files.createDirectory(dir);
-        var audit = FrozenContext.MAPPER.createObjectNode().put("artifactVersion", 3)
+        var audit = FrozenContext.MAPPER.createObjectNode().put("artifactVersion", 4)
                 .put("startedAt", Instant.now().toString()).put("gameId", gameId).put("attemptId", attempt)
                 .put("sourceFileSha256", entry.sourceSha256()).put("serviceVersion", LocalGenerationService.VERSION);
         try {
             write(dir.resolve("context.json"), FrozenContext.MAPPER.readTree(entry.context().canonicalJson()));
-            var result = service.generate(entry.context(), FrozenContext.parameters(entry.context()), selector);
+            var result = service.generate(entry.context(), FrozenContext.parameters(entry.context()), selector, entry.declaredAsOfDate());
             write(dir.resolve("selection.json"), result.selection());
             write(dir.resolve("claims.json"), result.selection().document());
             write(dir.resolve("rendered.json"), result.texts());
+            if (result.insights() == null) audit.put("artifactVersion", 3);
+            else {
+                write(dir.resolve("insights.json"), result.insights());
+                audit.put("visualIdentity", LocalGenerationService.sha256(Files.readAllBytes(dir.resolve("insights.json"))));
+            }
             audit.set("identity", FrozenContext.MAPPER.valueToTree(result.identity()));
             audit.put("resultIdentity", result.identity().hash()).put("status", "VALIDATED")
                     .put("publicationApproved", false).put("mode", "LOCAL_RULES_DEVELOPMENT");
@@ -49,7 +59,8 @@ public final class LocalResultStore implements AutoCloseable {
             var marker = FrozenContext.MAPPER.createObjectNode();
             marker.set("response", FrozenContext.MAPPER.valueToTree(response));
             var hashes = marker.putObject("hashes");
-            for (String name : ARTIFACTS) hashes.put(name, LocalGenerationService.sha256(Files.readAllBytes(dir.resolve(name))));
+            for (String name : result.insights() == null ? ARTIFACTS_V3 : ARTIFACTS_V4)
+                hashes.put(name, LocalGenerationService.sha256(Files.readAllBytes(dir.resolve(name))));
             write(dir.resolve("complete.tmp"), marker);
             Files.move(dir.resolve("complete.tmp"), dir.resolve("complete.json"), StandardCopyOption.ATOMIC_MOVE);
             return response;
@@ -64,7 +75,8 @@ public final class LocalResultStore implements AutoCloseable {
             throw new IOException("LOCAL_GENERATION_FAILED", failure);
         }
     }
-    private static final List<String> ARTIFACTS = List.of("context.json", "selection.json", "claims.json", "rendered.json", "result.json");
+    private static final List<String> ARTIFACTS_V3 = List.of("context.json", "selection.json", "claims.json", "rendered.json", "result.json");
+    private static final List<String> ARTIFACTS_V4 = List.of("context.json", "selection.json", "claims.json", "rendered.json", "result.json", "insights.json");
     public record Attempt(String attemptId, String startedAt, String resultIdentity, String sourceSha256) { }
     public record History(List<Attempt> attempts, int unavailableInStore) { }
     /** Lists only complete, hash-checked attempts. Unavailable entries are counted across the store. */
@@ -100,23 +112,48 @@ public final class LocalResultStore implements AutoCloseable {
         JsonNode marker;
         try {
             marker = read(dir.resolve("complete.json"));
-            if (marker.path("hashes").size() != ARTIFACTS.size()) throw new IOException("INCOMPLETE_RESULT");
-            for (String name : ARTIFACTS) {
+            var result = read(dir.resolve("result.json"));
+            int version = result.path("artifactVersion").asInt(-1);
+            List<String> artifacts = version == 3 ? ARTIFACTS_V3 : version == 4 ? ARTIFACTS_V4 : null;
+            if (artifacts == null || marker.path("hashes").size() != artifacts.size()) throw new IOException("INCOMPLETE_RESULT");
+            for (String name : artifacts) {
                 Path file = dir.resolve(name);
                 if (Files.isSymbolicLink(file) || !Files.isRegularFile(file, LinkOption.NOFOLLOW_LINKS)
                         || !LocalGenerationService.sha256(Files.readAllBytes(file)).equals(marker.path("hashes").path(name).asText()))
                     throw new IOException("INCOMPLETE_RESULT");
             }
-            var result = read(dir.resolve("result.json"));
             var rendered = read(dir.resolve("rendered.json"));
+            var identity = FrozenContext.MAPPER.treeToValue(result.path("identity"), LocalGenerationService.Identity.class);
+            var context = FrozenContext.read(read(dir.resolve("context.json")));
             if (!"VALIDATED".equals(result.path("status").asText())
                     || !rendered.equals(marker.path("response").path("analysis"))
-                    || !result.path("resultIdentity").equals(marker.path("response").path("resultIdentity")))
+                    || !result.path("resultIdentity").equals(marker.path("response").path("resultIdentity"))
+                    || !identity.hash().equals(result.path("resultIdentity").asText())
+                    || !identity.contextSha256().equals(LocalGenerationService.sha256(
+                            context.canonicalJson().getBytes(java.nio.charset.StandardCharsets.UTF_8)))
+                    || version == 4 && (!result.path("visualIdentity").asText().equals(marker.path("hashes").path("insights.json").asText())
+                    || !"VALIDATED_LOCAL_RESULT".equals(read(dir.resolve("insights.json")).path("source").path("kind").asText())
+                    || !result.path("resultIdentity").equals(read(dir.resolve("insights.json")).path("source").path("resultIdentity"))
+                    || !result.path("identity").path("contextSha256").equals(read(dir.resolve("insights.json")).path("source").path("contextSha256"))))
                 throw new IOException("INCOMPLETE_RESULT");
-        } catch (IOException e) { throw new IOException("INCOMPLETE_RESULT", e); }
+        } catch (IOException | RuntimeException e) { throw new IOException("INCOMPLETE_RESULT", e); }
         Response response = FrozenContext.MAPPER.treeToValue(marker.path("response"), Response.class);
         if (!attempt.equals(response.attemptId()) || !gameId.equals(response.gameId())) throw new NoSuchElementException("RESULT_NOT_FOUND");
         return response;
+    }
+    public InsightsResponse getInsights(String gameId, String attempt) throws IOException {
+        Response response = get(gameId, attempt);
+        Path dir = root.resolve(attempt);
+        JsonNode result = read(dir.resolve("result.json"));
+        if (result.path("artifactVersion").asInt(-1) == 3) throw new VisualDocumentNotAvailable();
+        JsonNode document = read(dir.resolve("insights.json"));
+        String hash = LocalGenerationService.sha256(Files.readAllBytes(dir.resolve("insights.json")));
+        if (!hash.equals(result.path("visualIdentity").asText())
+                || !response.resultIdentity().equals(document.path("source").path("resultIdentity").asText())
+                || !response.gameId().equals(document.path("game").path("gameId").asText()))
+            throw new IOException("INCOMPLETE_RESULT");
+        return new InsightsResponse(response.mode(), response.publicationApproved(), gameId, attempt,
+                response.resultIdentity(), hash, document);
     }
     private static JsonNode read(Path path) throws IOException {
         if (Files.isSymbolicLink(path)) throw new IOException("INVALID_STORE");

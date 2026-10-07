@@ -50,7 +50,7 @@ public final class LocalAnalysisServer implements AutoCloseable {
                         || exchange.getRequestHeaders().containsKey("Transfer-Encoding")
                         || !Set.of("0", "").contains(Optional.ofNullable(exchange.getRequestHeaders().getFirst("Content-Length")).orElse(""))) throw new IllegalArgumentException("INVALID_LOCAL_REQUEST");
                 String[] parts = exchange.getRequestURI().getRawPath().substring(PREFIX.length()).split("/", -1);
-                if (parts.length < 1 || parts.length > 2) throw new IllegalArgumentException("INVALID_LOCAL_REQUEST");
+                if (parts.length < 1 || parts.length > 3) throw new IllegalArgumentException("INVALID_LOCAL_REQUEST");
                 if (parts.length == 1 && parts[0].isEmpty() && "GET".equals(exchange.getRequestMethod())) {
                     body = catalog.list(); status = 200;
                 } else {
@@ -61,10 +61,13 @@ public final class LocalAnalysisServer implements AutoCloseable {
                         exchange.getResponseHeaders().set("Location", PREFIX + parts[0] + "/" + result.attemptId());
                     } else if ("GET".equals(exchange.getRequestMethod()) && parts.length == 2) {
                         body = "attempts".equals(parts[1]) ? store.list(parts[0]) : store.get(parts[0], parts[1]); status = 200;
+                    } else if ("GET".equals(exchange.getRequestMethod()) && parts.length == 3 && "insights".equals(parts[2])) {
+                        body = store.getInsights(parts[0], parts[1]); status = 200;
                     } else { body = Map.of("error", "METHOD_OR_ROUTE_NOT_ALLOWED"); status = 405; }
                 }
             } catch (IllegalArgumentException e) { status = 400; body = Map.of("error", "INVALID_LOCAL_REQUEST"); }
             catch (NoSuchElementException e) { status = 404; body = Map.of("error", "LOCAL_RESOURCE_NOT_FOUND"); }
+            catch (LocalResultStore.VisualDocumentNotAvailable e) { status = 409; body = Map.of("error", "VISUAL_DOCUMENT_NOT_AVAILABLE"); }
             catch (IOException e) { status = 409; body = Map.of("error", "LOCAL_RESULT_UNAVAILABLE"); }
             catch (RuntimeException e) { status = 500; body = Map.of("error", "LOCAL_OPERATION_FAILED"); }
             byte[] bytes = FrozenContext.MAPPER.writeValueAsBytes(body);
