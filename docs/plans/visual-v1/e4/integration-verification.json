@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "transport": "REAL_LOOPBACK_HTTP",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "2026_03_BAL_DAL",
+      "status": 403
+    },
+    {
+      "method": "POST",
+      "path": "2026_03_BAL_DAL",
+      "status": 403
+    },
+    {
+      "method": "POST",
+      "path": "2026_03_BAL_DAL",
+      "status": 400
+    },
+    {
+      "method": "POST",
+      "path": "2026_03_BAL_DAL",
+      "status": 400
+    },
+    {
+      "method": "POST",
+      "path": "2026_03_BAL_DAL",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "2026_03_BAL_DAL/1066a2a2-3876-48f0-b045-3fe0b341c927/insights",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "2026_03_NE_JAX/attempts",
+      "status": 200
+    }
+  ],
+  "rejectedRequestsReachedBackend": false,
+  "validPostForwarded": true,
+  "successfulDroppedPostSavedOnce": true,
+  "reportScope": "orchestrator harness correction; not new human comprehension evidence",
+  "base": "793ac7b",
+  "e4Head": "c238d36",
+  "branch": "codex/visual-integration-e4",
+  "rechecked": {
+    "frontend": 125,
+    "ordinaryFrontend": 120,
+    "expectedFailures": 5,
+    "lint": "PASS",
+    "build": "PASS",
+    "contractTests": 12,
+    "validFixtures": 20,
+    "invalidRejected": 15,
+    "imageHashes": 6,
+    "javaSourceUnchanged": true,
+    "javaReportedByE4": 127,
+    "javaGateReexecutedHere": false
+  },
+  "humanComprehension": "PENDING_ZERO_PARTICIPANTS",
+  "independentSample": "NOT_AVAILABLE",
+  "publication": "NOT_PERFORMED",
+  "localReportSha256": "37e0e258a4071c3b0a4072e141e73121f06d9568342e6519be4c4ecf2b07f05d",
+  "temporaryProcessesStopped": true
+}

@@ -37,6 +37,16 @@ def main():
             self.forward()
 
         def forward(self):
+            # Keep the local API boundary: the Vite proxy removes Origin only
+            # after checking the browser request. The fault harness must not
+            # make cross-origin or body-bearing requests acceptable instead.
+            if self.headers.get('Host') != '127.0.0.1:18081' or self.headers.get('Origin') is not None:
+                self.send_error(403)
+                return
+            lengths = self.headers.get_all('Content-Length', [])
+            if self.headers.get('Transfer-Encoding') is not None or len(lengths) > 1 or lengths and lengths[0] != '0':
+                self.send_error(400)
+                return
             if not re.fullmatch(r'/api/v1/local-analysis/(?:[A-Za-z0-9_/-]*)', self.path):
                 self.send_error(400)
                 return
