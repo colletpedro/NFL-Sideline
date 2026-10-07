@@ -1,0 +1,158 @@
+{
+  "status": "REAL_LOCAL_EVALUATION_NOT_EDITORIAL_HOLDOUT",
+  "documents": [
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "sourceContext": "editorial/coverage-clarity-v1/batch-01/2025_08_CHI_BAL/context.json",
+      "sourceFileSha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+      "contextSha256": "c476428914b36de96c6d097b7089b2e791c0a884cddafbd5199e94d156c67482",
+      "resultIdentity": "1f7efcbdb49297d005e57566d4fbdb8a0d459e83063436b56466f68f4527e5b3",
+      "visualIdentity": "9ff0e4ee63f26f9729030743863ba0ebd3f96bbc8c486e095ac2dd80d9833eed",
+      "document": "documents/2025_08_CHI_BAL.json"
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_ARI_SF.json",
+      "sourceFileSha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+      "contextSha256": "0a5309d6b28aab3ba3a509d6390264fc4c5fedc58aa850f3eb7d63b6651cf644",
+      "resultIdentity": "fa76e2e8054557532dc2fd9802ae5135258cff1c0b38498f536910949eda616b",
+      "visualIdentity": "22c7add541c4f389167f7b9d6fd0190b89c5639b6febbb8080f8bd1773ca7df4",
+      "document": "documents/2026_03_ARI_SF.json"
+    },
+    {
+      "gameId": "2026_03_ATL_GB",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_ATL_GB.json",
+      "sourceFileSha256": "50e5ac9900ab101082dc838ed1b22c87c7ed18e2d0b832e3020c307994adf7d5",
+      "contextSha256": "095e148e96b21ad1925a073768135b15e6928ed0494c4ec46f81eecb7fac3347",
+      "resultIdentity": "03bf697f9444f669a0a810db89ab6662a3cdbc68b2b08d8b20ad3f15f5219b9a",
+      "visualIdentity": "df67cc12eb5c06da4ffd71e74ee1012c228b0cb5f00f4aa6eb5612d265fd82c0",
+      "document": "documents/2026_03_ATL_GB.json"
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_BAL_DAL.json",
+      "sourceFileSha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "contextSha256": "c76ef882eca1ed06dfd2f233d5dafca62757dd19f78309e502f9d8bf575fca94",
+      "resultIdentity": "2e00e1ffeb249d96a3c3e17468982bb81b8825a2a769f64a1e80a38db5e0a39e",
+      "visualIdentity": "3ab4b665571f6a472e3ef18624a04dd4d6d47544611bec3431f25ada383edb5b",
+      "document": "documents/2026_03_BAL_DAL.json"
+    },
+    {
+      "gameId": "2026_03_CAR_CLE",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_CAR_CLE.json",
+      "sourceFileSha256": "aa92f07bc8b22c7d69e88cd48da568a63203a969360105c02c6b4932d8cf2ced",
+      "contextSha256": "83c7b56ebd6229f6139876dbbb573b5c650a290f625712790e9b4ee23f3cbdfd",
+      "resultIdentity": "e746c501cacd7e36bb36a7f54f89f36aedeaab5a83c86a52e40422001773c012",
+      "visualIdentity": "ccf910caf710e17d1fda247cb5af436adb57b6e276b5cbc7e07ec2cba7c327b7",
+      "document": "documents/2026_03_CAR_CLE.json"
+    },
+    {
+      "gameId": "2026_03_CIN_PIT",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_CIN_PIT.json",
+      "sourceFileSha256": "6f1ed365ecb87a88c6fb2597fd3ee62cbcb2150e9c54dfbede1213c238e126fd",
+      "contextSha256": "d4c0331f46d3617a037b1f99d285cfe325c9f045969a992fb5cee413aa88b32f",
+      "resultIdentity": "613187bc1239e7670f4bc8a8c2357940ba36385b0c1fc47452af9e6e34160f5c",
+      "visualIdentity": "031b86cc97fc8a97c2ae8cd94bddbbc0836af53652de7d36d5a19929a41b8a73",
+      "document": "documents/2026_03_CIN_PIT.json"
+    },
+    {
+      "gameId": "2026_03_HOU_IND",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_HOU_IND.json",
+      "sourceFileSha256": "0fe5097c9614ea00f28a3463ba95575bc4511a847e6ea6631eb114c4741b8b6c",
+      "contextSha256": "b8d5a62d43000fb10dfb4d378cc7986ff21af089f3260de46c8dd6166152e7c3",
+      "resultIdentity": "ce98677bfbd86ad8b348ef776526eee6176d427a3122fbbe95f8f577d4750064",
+      "visualIdentity": "c6c3321b82d806d2c1d1de56073768e39b042b89a9cf9541edcaa76797bac5ba",
+      "document": "documents/2026_03_HOU_IND.json"
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_KC_MIA.json",
+      "sourceFileSha256": "bbf0777d9cd422d4362370dac0504a5248e405eb36218b60bcc9675716abb301",
+      "contextSha256": "f92882f0b83038db5b97503a998748bf4afc5f49e8d29ee3bc287653c6148d94",
+      "resultIdentity": "2e3a1b83b787ba85715b588d07bb751413fa0c758da48f006749c1031ce68ea8",
+      "visualIdentity": "dbae491e28c7c3a8844c2df732607b6782b8fe2297f987fdb0a394c142fb4426",
+      "document": "documents/2026_03_KC_MIA.json"
+    },
+    {
+      "gameId": "2026_03_LAC_BUF",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_LAC_BUF.json",
+      "sourceFileSha256": "d1e58898f359098b681653d338ce89ad0f7178cc154fa7a8a6018dd12ebe89d5",
+      "contextSha256": "ef7443d179bf395c0d766d70d13d75cd1814f0ad9ffc5e52c139c020d35bbdbd",
+      "resultIdentity": "a4db8cbbd533dbdb9892c964e6e31497d7ee065deb6e4d94f6505f3ac4e18daa",
+      "visualIdentity": "4f57df31513b4a1c1e3dc10b509cbaca006eb52880417020b36d863a52879b3e",
+      "document": "documents/2026_03_LAC_BUF.json"
+    },
+    {
+      "gameId": "2026_03_LA_DEN",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_LA_DEN.json",
+      "sourceFileSha256": "8e28dd4668e61e6f017ce512eaa1e951d5fc19e7961f2418b752e7e2fd06749f",
+      "contextSha256": "b99ffd94b0e44782fd555646237c39c40b5d37671843d00195a18a39a2f26a23",
+      "resultIdentity": "3ae2f3dc3ccff9618c5a69723fe0399df22d3b925070ff0ae35438d6fa4e3eb6",
+      "visualIdentity": "b2856c682cd815d9e0bd8ac3f537823909987af59f174e9343502ad8d08bcdb6",
+      "document": "documents/2026_03_LA_DEN.json"
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_LV_NO.json",
+      "sourceFileSha256": "ee6b6f9aff1c9277d6e55ace2cd254d59a3c7ecf77954a8f5dbcc61b3d898fbd",
+      "contextSha256": "6c0e5a36be0dbb375ac266a28342ed2ad4b8051a9b123461db8efa6ac672267e",
+      "resultIdentity": "75926d826296422688839469e0884c5958efcae96dc04787a90e00adfe4122ef",
+      "visualIdentity": "de2ff19033277936058e6041da65b1cd95859cbc4399ddc975b7622357ac9ce8",
+      "document": "documents/2026_03_LV_NO.json"
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_MIN_TB.json",
+      "sourceFileSha256": "3ed663a50340d0bb0a34aebbe35c6e7fb88e64229df289bf8ab257f82727fc3f",
+      "contextSha256": "ab67234cec6039d09d7958454928d3f21e4d204ec5952496cc688296e4588a0f",
+      "resultIdentity": "a8daea0802b25ee4b9d75d4953ada2651276f63867934179c7b9e661fd5ed29f",
+      "visualIdentity": "bc67cfabcacbcc35edd2d62e4e503907bda89d6cd748ad4fdbd6869ede3147a9",
+      "document": "documents/2026_03_MIN_TB.json"
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_NE_JAX.json",
+      "sourceFileSha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+      "contextSha256": "f4fe20090e905b66889f9f874a26f0471d3f1f3fb1d96b937ab511a6db0d2557",
+      "resultIdentity": "6bfaeb5194777a1c04e1ae702337eccbb45fb6824b38b105577d16f132a20a3c",
+      "visualIdentity": "cb6f9caedc3ba108d99540955953d5f73c6204ce56a24c005fd1ea6756dd02a0",
+      "document": "documents/2026_03_NE_JAX.json"
+    },
+    {
+      "gameId": "2026_03_NYJ_DET",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_NYJ_DET.json",
+      "sourceFileSha256": "05c981bac14590cf65f06d9cc296f52b2f61fd40f3c18ec96aca66b78341c7ed",
+      "contextSha256": "6402cd44f5864ccd06b2308c801f8d3161ecaaa60c0a8b787c83a0379049d367",
+      "resultIdentity": "9e5cd1c02ef8da4dd5547778ac2f92cfe79ddb674c556112a5f2a4088dbef6a2",
+      "visualIdentity": "a7ffea1b5b2983b86c3b6d0c6203131ec3b6be3c0f2c27a4c5480d9c5083164b",
+      "document": "documents/2026_03_NYJ_DET.json"
+    },
+    {
+      "gameId": "2026_03_PHI_CHI",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_PHI_CHI.json",
+      "sourceFileSha256": "ea0592cb77e9e2cc4a57d4916357d33a50716196bada1cce74a52040e1fb206e",
+      "contextSha256": "56033bc7a5dd7e655b7fd8767bb3fdadf4a004aa2bfcf51c9aa07cc7b78dc394",
+      "resultIdentity": "c4407442222723bc1955ef25cb4f5406a072b079015a1ca4bfdd6b9743688bad",
+      "visualIdentity": "3590df93fca20a837265e22fd65c1e1eda47d38f882f7f5fe387faa5f4f7fcc9",
+      "document": "documents/2026_03_PHI_CHI.json"
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_SEA_WAS.json",
+      "sourceFileSha256": "c7019c73dbd4252b375af51225f9eddff64368c9038905913256cb589c69a990",
+      "contextSha256": "bb7ce8186ce6576b24f7d9cae04cc2d9aa77344050854f0558dd833d41ed422d",
+      "resultIdentity": "27890853c7f6ad0efd058b9c2541e6fa2f819f553eaf9edd7adedb103bf90110",
+      "visualIdentity": "0dd8e52e1b05270a105ccf2a25bed0ec0c2a45aa02e92d4690d188f425608759",
+      "document": "documents/2026_03_SEA_WAS.json"
+    },
+    {
+      "gameId": "2026_03_TEN_NYG",
+      "sourceContext": "editorial/evaluations/2026-09-26/contexts/2026_03_TEN_NYG.json",
+      "sourceFileSha256": "c84caffcfc0ee855e95fe312274b621facf2dfc8b3c5152a9e186975695825a6",
+      "contextSha256": "ae8691c74abd08b3b8390c82357722b40a0ecf8f1774cc3ed703b4530f729be7",
+      "resultIdentity": "70f8bd115f96bc408a95406db0f4804ed75a1b7f236a675699fc1c64b699462e",
+      "visualIdentity": "f07ef90536309a398eb2507dc5a150a40923631d2142624b19da815e14d8e9ba",
+      "document": "documents/2026_03_TEN_NYG.json"
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "schemaVersion" : "visual-analysis-1.0.0",
+  "projectorVersion" : "visual-projector-1.0.0",
+  "mode" : "LOCAL_RULES_DEVELOPMENT",
+  "publicationApproved" : false,
+  "source" : {
+    "kind" : "VALIDATED_LOCAL_RESULT",
+    "resultIdentity" : "70f8bd115f96bc408a95406db0f4804ed75a1b7f236a675699fc1c64b699462e",
+    "contextSha256" : "ae8691c74abd08b3b8390c82357722b40a0ecf8f1774cc3ed703b4530f729be7",
+    "claimsContractVersion" : 5,
+    "selectorVersion" : "2.0.0"
+  },
+  "game" : {
+    "gameId" : "2026_03_TEN_NYG",
+    "season" : 2026,
+    "week" : 3,
+    "phase" : "REG",
+    "awayTeam" : "TEN",
+    "homeTeam" : "NYG"
+  },
+  "scope" : {
+    "moment" : "PREGAME",
+    "declaredAsOfDate" : "2026-09-22",
+    "temporalGuarantee" : "WEEK_ORDER_ONLY",
+    "expectedCurrentWeeks" : [ 1, 2 ],
+    "opponentAdjusted" : false
+  },
+  "evidence" : [ {
+    "id" : "tw:2026:1:NYG:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.3053206695459427",
+    "displayValue" : "+0,305",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:NYG:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.22067005183914892",
+    "displayValue" : "+0,221",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 52
+  }, {
+    "id" : "tw:2026:1:NYG:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.060774440615205094",
+    "displayValue" : "+0,061",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:NYG:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.7068532854290454",
+    "displayValue" : "+0,707",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:NYG:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.36887921085939385",
+    "displayValue" : "+0,369",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 65
+  }, {
+    "id" : "tw:2026:1:NYG:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.06072637816353509",
+    "displayValue" : "+0,061",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:TEN:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.4064521710191151",
+    "displayValue" : "+0,406",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:TEN:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.16835011036526987",
+    "displayValue" : "+0,168",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 60
+  }, {
+    "id" : "tw:2026:1:TEN:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.009615403262706379",
+    "displayValue" : "+0,010",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:TEN:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.21003582130091553",
+    "displayValue" : "-0,210",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:TEN:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.11862377440619905",
+    "displayValue" : "-0,119",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 49
+  }, {
+    "id" : "tw:2026:1:TEN:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.1099063428305921",
+    "displayValue" : "+0,110",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NYG:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.5955571624104895",
+    "displayValue" : "+0,596",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NYG:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.2900165578768273",
+    "displayValue" : "+0,290",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 56
+  }, {
+    "id" : "tw:2026:2:NYG:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.08885379174491391",
+    "displayValue" : "-0,089",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NYG:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.5178310023432936",
+    "displayValue" : "-0,518",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NYG:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.4291983867060681",
+    "displayValue" : "-0,429",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 55
+  }, {
+    "id" : "tw:2026:2:NYG:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "NYG",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.2856979613886553",
+    "displayValue" : "-0,286",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:TEN:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.21917532933203726",
+    "displayValue" : "+0,219",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:TEN:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.038976029513433486",
+    "displayValue" : "+0,039",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 72
+  }, {
+    "id" : "tw:2026:2:TEN:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.18627309525982128",
+    "displayValue" : "-0,186",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:TEN:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.004441569740513593",
+    "displayValue" : "-0,004",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:TEN:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.07502399659208737",
+    "displayValue" : "+0,075",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 51
+  }, {
+    "id" : "tw:2026:2:TEN:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "TEN",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.13530821932716397",
+    "displayValue" : "+0,135",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  } ],
+  "series" : [ {
+    "id" : "s:NYG:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:NYG:DEF_EPA_PLAY", "tw:2026:2:NYG:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:NYG:DEF:PASS",
+    "evidenceIds" : [ "tw:2026:1:NYG:DEF_EPA_PASS", "tw:2026:2:NYG:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:NYG:DEF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:NYG:DEF_EPA_RUSH", "tw:2026:2:NYG:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:NYG:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:NYG:OFF_EPA_PLAY", "tw:2026:2:NYG:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:NYG:OFF:PASS",
+    "evidenceIds" : [ "tw:2026:1:NYG:OFF_EPA_PASS", "tw:2026:2:NYG:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:NYG:OFF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:NYG:OFF_EPA_RUSH", "tw:2026:2:NYG:OFF_EPA_RUSH" ]
+  }, {
+    "id" : "s:TEN:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:TEN:DEF_EPA_PLAY", "tw:2026:2:TEN:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:TEN:DEF:PASS",
+    "evidenceIds" : [ "tw:2026:1:TEN:DEF_EPA_PASS", "tw:2026:2:TEN:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:TEN:DEF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:TEN:DEF_EPA_RUSH", "tw:2026:2:TEN:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:TEN:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_PLAY", "tw:2026:2:TEN:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:TEN:OFF:PASS",
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_PASS", "tw:2026:2:TEN:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:TEN:OFF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_RUSH", "tw:2026:2:TEN:OFF_EPA_RUSH" ]
+  } ],
+  "encounters" : [ {
+    "id" : "TEN:PASS",
+    "attackTeam" : "TEN",
+    "defenseTeam" : "NYG",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:TEN:OFF:PASS",
+    "defenseSeriesId" : "s:NYG:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "TEN:RUSH",
+    "attackTeam" : "TEN",
+    "defenseTeam" : "NYG",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:TEN:OFF:RUSH",
+    "defenseSeriesId" : "s:NYG:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "TEN:GENERAL",
+    "attackTeam" : "TEN",
+    "defenseTeam" : "NYG",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:TEN:OFF:GENERAL",
+    "defenseSeriesId" : "s:NYG:DEF:GENERAL",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "NYG:PASS",
+    "attackTeam" : "NYG",
+    "defenseTeam" : "TEN",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:NYG:OFF:PASS",
+    "defenseSeriesId" : "s:TEN:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "NYG:RUSH",
+    "attackTeam" : "NYG",
+    "defenseTeam" : "TEN",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:NYG:OFF:RUSH",
+    "defenseSeriesId" : "s:TEN:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "NYG:GENERAL",
+    "attackTeam" : "NYG",
+    "defenseTeam" : "TEN",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:NYG:OFF:GENERAL",
+    "defenseSeriesId" : "s:TEN:DEF:GENERAL",
+    "state" : "REPRESENTED_BY",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ "f:NYG:PASS" ]
+  } ],
+  "findings" : [ {
+    "id" : "f:TEN:PASS",
+    "claimId" : "TEN:OFF_EPA_PASS",
+    "encounterId" : "TEN:PASS",
+    "relation" : "ATTACK_NOT_DEMONSTRATED",
+    "attackPattern" : "ALL_NEGATIVE",
+    "defensePattern" : "ALL_POSITIVE",
+    "title" : "EPA positivo não demonstrado pelo ataque",
+    "summary" : "A defesa permitiu EPA positivo, mas o ataque não demonstrou produção positiva neste recorte.",
+    "primaryRestrictionId" : "r:TEN:PASS"
+  }, {
+    "id" : "f:TEN:RUSH",
+    "claimId" : "TEN:OFF_EPA_RUSH",
+    "encounterId" : "TEN:RUSH",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "ALL_POSITIVE",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:TEN:RUSH"
+  }, {
+    "id" : "f:TEN:GENERAL",
+    "claimId" : "TEN:OFF_EPA_PLAY",
+    "encounterId" : "TEN:GENERAL",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "ALL_POSITIVE",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:TEN:GENERAL"
+  }, {
+    "id" : "f:NYG:PASS",
+    "claimId" : "NYG:OFF_EPA_PASS",
+    "encounterId" : "NYG:PASS",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "ALL_POSITIVE",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:NYG:PASS"
+  }, {
+    "id" : "f:NYG:RUSH",
+    "claimId" : "NYG:OFF_EPA_RUSH",
+    "encounterId" : "NYG:RUSH",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:NYG:RUSH"
+  } ],
+  "restrictions" : [ {
+    "id" : "r:temporal",
+    "claimId" : null,
+    "code" : "TEMPORAL_AVAILABILITY_UNKNOWN",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Corte por semanas; disponibilidade histórica na data da análise não verificada."
+  }, {
+    "id" : "r:adjustment",
+    "claimId" : null,
+    "code" : "NO_OPPONENT_ADJUSTMENT",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Recortes sem ajuste por adversário. Esta análise não estima vencedor."
+  }, {
+    "id" : "r:global",
+    "claimId" : "limitation",
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ "tw:2026:1:NYG:DEF_EPA_PASS", "tw:2026:1:NYG:DEF_EPA_PLAY", "tw:2026:1:NYG:DEF_EPA_RUSH", "tw:2026:1:NYG:OFF_EPA_PASS", "tw:2026:1:NYG:OFF_EPA_PLAY", "tw:2026:1:NYG:OFF_EPA_RUSH", "tw:2026:1:TEN:DEF_EPA_PASS", "tw:2026:1:TEN:DEF_EPA_PLAY", "tw:2026:1:TEN:DEF_EPA_RUSH", "tw:2026:1:TEN:OFF_EPA_PASS", "tw:2026:1:TEN:OFF_EPA_PLAY", "tw:2026:1:TEN:OFF_EPA_RUSH", "tw:2026:2:NYG:DEF_EPA_PASS", "tw:2026:2:NYG:DEF_EPA_PLAY", "tw:2026:2:NYG:DEF_EPA_RUSH", "tw:2026:2:NYG:OFF_EPA_PASS", "tw:2026:2:NYG:OFF_EPA_PLAY", "tw:2026:2:NYG:OFF_EPA_RUSH", "tw:2026:2:TEN:DEF_EPA_PASS", "tw:2026:2:TEN:DEF_EPA_PLAY", "tw:2026:2:TEN:DEF_EPA_RUSH", "tw:2026:2:TEN:OFF_EPA_PASS", "tw:2026:2:TEN:OFF_EPA_PLAY", "tw:2026:2:TEN:OFF_EPA_RUSH" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:TEN:PASS",
+    "claimId" : "limit:TEN:OFF_EPA_PASS",
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ "TEN:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_PASS", "tw:2026:2:TEN:OFF_EPA_PASS", "tw:2026:1:NYG:DEF_EPA_PASS", "tw:2026:2:NYG:DEF_EPA_PASS" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:denominator:TEN:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "TEN:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_PASS", "tw:2026:2:TEN:OFF_EPA_PASS", "tw:2026:1:NYG:DEF_EPA_PASS", "tw:2026:2:NYG:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:TEN:RUSH",
+    "claimId" : "limit:TEN:OFF_EPA_RUSH",
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "TEN:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_RUSH", "tw:2026:2:TEN:OFF_EPA_RUSH", "tw:2026:1:NYG:DEF_EPA_RUSH", "tw:2026:2:NYG:DEF_EPA_RUSH" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:TEN:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "TEN:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_RUSH", "tw:2026:2:TEN:OFF_EPA_RUSH", "tw:2026:1:NYG:DEF_EPA_RUSH", "tw:2026:2:NYG:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:TEN:GENERAL",
+    "claimId" : null,
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "TEN:GENERAL" ],
+    "evidenceIds" : [ "tw:2026:1:TEN:OFF_EPA_PLAY", "tw:2026:2:TEN:OFF_EPA_PLAY", "tw:2026:1:NYG:DEF_EPA_PLAY", "tw:2026:2:NYG:DEF_EPA_PLAY" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:NYG:PASS",
+    "claimId" : "limit:NYG:OFF_EPA_PASS",
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "NYG:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:NYG:OFF_EPA_PASS", "tw:2026:2:NYG:OFF_EPA_PASS", "tw:2026:1:TEN:DEF_EPA_PASS", "tw:2026:2:TEN:DEF_EPA_PASS" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:NYG:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "NYG:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:NYG:OFF_EPA_PASS", "tw:2026:2:NYG:OFF_EPA_PASS", "tw:2026:1:TEN:DEF_EPA_PASS", "tw:2026:2:TEN:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:NYG:RUSH",
+    "claimId" : "limit:NYG:OFF_EPA_RUSH",
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "NYG:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:NYG:OFF_EPA_RUSH", "tw:2026:2:NYG:OFF_EPA_RUSH", "tw:2026:1:TEN:DEF_EPA_RUSH", "tw:2026:2:TEN:DEF_EPA_RUSH" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:NYG:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "NYG:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:NYG:OFF_EPA_RUSH", "tw:2026:2:NYG:OFF_EPA_RUSH", "tw:2026:1:TEN:DEF_EPA_RUSH", "tw:2026:2:TEN:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  } ],
+  "links" : [ ],
+  "presentation" : {
+    "highlightFindingIds" : [ "f:NYG:PASS", "f:NYG:RUSH", "f:TEN:PASS", "f:TEN:RUSH" ],
+    "equivalentHighlightGroups" : [ [ "f:NYG:PASS", "f:NYG:RUSH", "f:TEN:PASS", "f:TEN:RUSH" ] ],
+    "globalRestrictionIds" : [ "r:temporal", "r:adjustment", "r:global" ],
+    "chartPolicy" : "SHARED_SYMMETRIC_ZERO_V1"
+  }
+}

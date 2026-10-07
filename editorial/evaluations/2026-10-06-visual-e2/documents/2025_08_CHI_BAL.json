@@ -1,0 +1,725 @@
+{
+  "schemaVersion" : "visual-analysis-1.0.0",
+  "projectorVersion" : "visual-projector-1.0.0",
+  "mode" : "LOCAL_RULES_DEVELOPMENT",
+  "publicationApproved" : false,
+  "source" : {
+    "kind" : "VALIDATED_LOCAL_RESULT",
+    "resultIdentity" : "1f7efcbdb49297d005e57566d4fbdb8a0d459e83063436b56466f68f4527e5b3",
+    "contextSha256" : "c476428914b36de96c6d097b7089b2e791c0a884cddafbd5199e94d156c67482",
+    "claimsContractVersion" : 5,
+    "selectorVersion" : "2.0.0"
+  },
+  "game" : {
+    "gameId" : "2025_08_CHI_BAL",
+    "season" : 2025,
+    "week" : 8,
+    "phase" : "REG",
+    "awayTeam" : "CHI",
+    "homeTeam" : "BAL"
+  },
+  "scope" : {
+    "moment" : "PREGAME",
+    "declaredAsOfDate" : null,
+    "temporalGuarantee" : "WEEK_ORDER_ONLY",
+    "expectedCurrentWeeks" : [ 5, 6, 7 ],
+    "opponentAdjusted" : false
+  },
+  "evidence" : [ {
+    "id" : "tw:2025:4:BAL:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.4260252202398136",
+    "displayValue" : "+0,426",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:4:BAL:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.2306042405934028",
+    "displayValue" : "+0,231",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 68
+  }, {
+    "id" : "tw:2025:4:BAL:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.016929000292050963",
+    "displayValue" : "-0,017",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:4:BAL:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.307471222468737",
+    "displayValue" : "-0,307",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:4:BAL:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.06252122664137569",
+    "displayValue" : "-0,063",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 53
+  }, {
+    "id" : "tw:2025:4:BAL:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.4561964115812717",
+    "displayValue" : "+0,456",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:4:CHI:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.48010917618758936",
+    "displayValue" : "-0,480",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:4:CHI:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.19576072275759035",
+    "displayValue" : "-0,196",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 51
+  }, {
+    "id" : "tw:2025:4:CHI:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.012310107641461988",
+    "displayValue" : "-0,012",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:4:CHI:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.02874251326415245",
+    "displayValue" : "-0,029",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:4:CHI:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.12057133318733107",
+    "displayValue" : "-0,121",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 64
+  }, {
+    "id" : "tw:2025:4:CHI:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 4,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.26382429226748977",
+    "displayValue" : "-0,264",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:5:BAL:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 5,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.5750551291915453",
+    "displayValue" : "+0,575",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:5:BAL:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 5,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.3914223138318197",
+    "displayValue" : "+0,391",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 64
+  }, {
+    "id" : "tw:2025:5:BAL:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 5,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.1959422200617892",
+    "displayValue" : "+0,196",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:5:BAL:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 5,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.37595030913918603",
+    "displayValue" : "-0,376",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:5:BAL:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 5,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.33574280385889443",
+    "displayValue" : "-0,336",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 40
+  }, {
+    "id" : "tw:2025:5:BAL:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 5,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.2913029296017301",
+    "displayValue" : "-0,291",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:BAL:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.034265899066395225",
+    "displayValue" : "+0,034",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:BAL:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.0331867793169627",
+    "displayValue" : "-0,033",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 49
+  }, {
+    "id" : "tw:2025:6:BAL:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.1231236838281066",
+    "displayValue" : "-0,123",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:BAL:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.4991643861307282",
+    "displayValue" : "-0,499",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:BAL:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.33207327289524907",
+    "displayValue" : "-0,332",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 74
+  }, {
+    "id" : "tw:2025:6:BAL:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "BAL",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.1649821596597699",
+    "displayValue" : "-0,165",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:CHI:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.22190888058368946",
+    "displayValue" : "+0,222",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:CHI:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.06369690371164834",
+    "displayValue" : "-0,064",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 59
+  }, {
+    "id" : "tw:2025:6:CHI:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.33978249519714154",
+    "displayValue" : "-0,340",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:CHI:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.09926709449659193",
+    "displayValue" : "+0,099",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:6:CHI:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.16552726067451567",
+    "displayValue" : "+0,166",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 59
+  }, {
+    "id" : "tw:2025:6:CHI:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 6,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.24962670236188045",
+    "displayValue" : "+0,250",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:7:CHI:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 7,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.3399707239080261",
+    "displayValue" : "-0,340",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:7:CHI:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 7,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.29681739717672306",
+    "displayValue" : "-0,297",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 53
+  }, {
+    "id" : "tw:2025:7:CHI:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 7,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.2054338817457285",
+    "displayValue" : "-0,205",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:7:CHI:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 7,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.0796227710215886",
+    "displayValue" : "+0,080",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2025:7:CHI:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 7,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.09379912528868677",
+    "displayValue" : "+0,094",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 65
+  }, {
+    "id" : "tw:2025:7:CHI:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "CHI",
+    "season" : 2025,
+    "week" : 7,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.10387179805741441",
+    "displayValue" : "+0,104",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  } ],
+  "series" : [ {
+    "id" : "s:BAL:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2025:4:BAL:DEF_EPA_PLAY", "tw:2025:5:BAL:DEF_EPA_PLAY", "tw:2025:6:BAL:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:BAL:DEF:PASS",
+    "evidenceIds" : [ "tw:2025:4:BAL:DEF_EPA_PASS", "tw:2025:5:BAL:DEF_EPA_PASS", "tw:2025:6:BAL:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:BAL:DEF:RUSH",
+    "evidenceIds" : [ "tw:2025:4:BAL:DEF_EPA_RUSH", "tw:2025:5:BAL:DEF_EPA_RUSH", "tw:2025:6:BAL:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:BAL:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_PLAY", "tw:2025:5:BAL:OFF_EPA_PLAY", "tw:2025:6:BAL:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:BAL:OFF:PASS",
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_PASS", "tw:2025:5:BAL:OFF_EPA_PASS", "tw:2025:6:BAL:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:BAL:OFF:RUSH",
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_RUSH", "tw:2025:5:BAL:OFF_EPA_RUSH", "tw:2025:6:BAL:OFF_EPA_RUSH" ]
+  }, {
+    "id" : "s:CHI:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2025:4:CHI:DEF_EPA_PLAY", "tw:2025:6:CHI:DEF_EPA_PLAY", "tw:2025:7:CHI:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:CHI:DEF:PASS",
+    "evidenceIds" : [ "tw:2025:4:CHI:DEF_EPA_PASS", "tw:2025:6:CHI:DEF_EPA_PASS", "tw:2025:7:CHI:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:CHI:DEF:RUSH",
+    "evidenceIds" : [ "tw:2025:4:CHI:DEF_EPA_RUSH", "tw:2025:6:CHI:DEF_EPA_RUSH", "tw:2025:7:CHI:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:CHI:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_PLAY", "tw:2025:6:CHI:OFF_EPA_PLAY", "tw:2025:7:CHI:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:CHI:OFF:PASS",
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_PASS", "tw:2025:6:CHI:OFF_EPA_PASS", "tw:2025:7:CHI:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:CHI:OFF:RUSH",
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_RUSH", "tw:2025:6:CHI:OFF_EPA_RUSH", "tw:2025:7:CHI:OFF_EPA_RUSH" ]
+  } ],
+  "encounters" : [ {
+    "id" : "CHI:PASS",
+    "attackTeam" : "CHI",
+    "defenseTeam" : "BAL",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:CHI:OFF:PASS",
+    "defenseSeriesId" : "s:BAL:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "CHI:RUSH",
+    "attackTeam" : "CHI",
+    "defenseTeam" : "BAL",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:CHI:OFF:RUSH",
+    "defenseSeriesId" : "s:BAL:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "CHI:GENERAL",
+    "attackTeam" : "CHI",
+    "defenseTeam" : "BAL",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:CHI:OFF:GENERAL",
+    "defenseSeriesId" : "s:BAL:DEF:GENERAL",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "BAL:PASS",
+    "attackTeam" : "BAL",
+    "defenseTeam" : "CHI",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:BAL:OFF:PASS",
+    "defenseSeriesId" : "s:CHI:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "BAL:RUSH",
+    "attackTeam" : "BAL",
+    "defenseTeam" : "CHI",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:BAL:OFF:RUSH",
+    "defenseSeriesId" : "s:CHI:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "BAL:GENERAL",
+    "attackTeam" : "BAL",
+    "defenseTeam" : "CHI",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:BAL:OFF:GENERAL",
+    "defenseSeriesId" : "s:CHI:DEF:GENERAL",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  } ],
+  "findings" : [ {
+    "id" : "f:CHI:PASS",
+    "claimId" : "CHI:OFF_EPA_PASS",
+    "encounterId" : "CHI:PASS",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "ALL_POSITIVE",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:CHI:PASS"
+  }, {
+    "id" : "f:CHI:RUSH",
+    "claimId" : "CHI:OFF_EPA_RUSH",
+    "encounterId" : "CHI:RUSH",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:CHI:RUSH"
+  }, {
+    "id" : "f:CHI:GENERAL",
+    "claimId" : "CHI:OFF_EPA_PLAY",
+    "encounterId" : "CHI:GENERAL",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:CHI:GENERAL"
+  }, {
+    "id" : "f:BAL:PASS",
+    "claimId" : "BAL:OFF_EPA_PASS",
+    "encounterId" : "BAL:PASS",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "ALL_NEGATIVE",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:BAL:PASS"
+  }, {
+    "id" : "f:BAL:RUSH",
+    "claimId" : "BAL:OFF_EPA_RUSH",
+    "encounterId" : "BAL:RUSH",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "ALL_NEGATIVE",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:BAL:RUSH"
+  }, {
+    "id" : "f:BAL:GENERAL",
+    "claimId" : "BAL:OFF_EPA_PLAY",
+    "encounterId" : "BAL:GENERAL",
+    "relation" : "BOTH_NEGATIVE",
+    "attackPattern" : "ALL_NEGATIVE",
+    "defensePattern" : "ALL_NEGATIVE",
+    "title" : "EPA negativo nos dois recortes",
+    "summary" : "O ataque produziu EPA negativo e a defesa permitiu EPA negativo; isso não estima o resultado do encontro.",
+    "primaryRestrictionId" : "r:BAL:GENERAL"
+  } ],
+  "restrictions" : [ {
+    "id" : "r:temporal",
+    "claimId" : null,
+    "code" : "TEMPORAL_AVAILABILITY_UNKNOWN",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Corte por semanas; disponibilidade histórica na data da análise não verificada."
+  }, {
+    "id" : "r:adjustment",
+    "claimId" : null,
+    "code" : "NO_OPPONENT_ADJUSTMENT",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Recortes sem ajuste por adversário. Esta análise não estima vencedor."
+  }, {
+    "id" : "r:global",
+    "claimId" : "limitation",
+    "code" : "UNEVEN_WINDOWS",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ "tw:2025:4:BAL:DEF_EPA_PASS", "tw:2025:4:BAL:DEF_EPA_PLAY", "tw:2025:4:BAL:DEF_EPA_RUSH", "tw:2025:4:BAL:OFF_EPA_PASS", "tw:2025:4:BAL:OFF_EPA_PLAY", "tw:2025:4:BAL:OFF_EPA_RUSH", "tw:2025:4:CHI:DEF_EPA_PASS", "tw:2025:4:CHI:DEF_EPA_PLAY", "tw:2025:4:CHI:DEF_EPA_RUSH", "tw:2025:4:CHI:OFF_EPA_PASS", "tw:2025:4:CHI:OFF_EPA_PLAY", "tw:2025:4:CHI:OFF_EPA_RUSH", "tw:2025:5:BAL:DEF_EPA_PASS", "tw:2025:5:BAL:DEF_EPA_PLAY", "tw:2025:5:BAL:DEF_EPA_RUSH", "tw:2025:5:BAL:OFF_EPA_PASS", "tw:2025:5:BAL:OFF_EPA_PLAY", "tw:2025:5:BAL:OFF_EPA_RUSH", "tw:2025:6:BAL:DEF_EPA_PASS", "tw:2025:6:BAL:DEF_EPA_PLAY", "tw:2025:6:BAL:DEF_EPA_RUSH", "tw:2025:6:BAL:OFF_EPA_PASS", "tw:2025:6:BAL:OFF_EPA_PLAY", "tw:2025:6:BAL:OFF_EPA_RUSH", "tw:2025:6:CHI:DEF_EPA_PASS", "tw:2025:6:CHI:DEF_EPA_PLAY", "tw:2025:6:CHI:DEF_EPA_RUSH", "tw:2025:6:CHI:OFF_EPA_PASS", "tw:2025:6:CHI:OFF_EPA_PLAY", "tw:2025:6:CHI:OFF_EPA_RUSH", "tw:2025:7:CHI:DEF_EPA_PASS", "tw:2025:7:CHI:DEF_EPA_PLAY", "tw:2025:7:CHI:DEF_EPA_RUSH", "tw:2025:7:CHI:OFF_EPA_PASS", "tw:2025:7:CHI:OFF_EPA_PLAY", "tw:2025:7:CHI:OFF_EPA_RUSH" ],
+    "text" : "Os times têm semanas observadas diferentes."
+  }, {
+    "id" : "r:CHI:PASS",
+    "claimId" : null,
+    "code" : "COVERAGE_LIMIT",
+    "encounterIds" : [ "CHI:PASS" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_PASS", "tw:2025:6:CHI:OFF_EPA_PASS", "tw:2025:7:CHI:OFF_EPA_PASS", "tw:2025:4:BAL:DEF_EPA_PASS", "tw:2025:5:BAL:DEF_EPA_PASS", "tw:2025:6:BAL:DEF_EPA_PASS" ],
+    "text" : "O recorte não atende à cobertura exigida para uma oportunidade localizada."
+  }, {
+    "id" : "r:denominator:CHI:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "CHI:PASS" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_PASS", "tw:2025:6:CHI:OFF_EPA_PASS", "tw:2025:7:CHI:OFF_EPA_PASS", "tw:2025:4:BAL:DEF_EPA_PASS", "tw:2025:5:BAL:DEF_EPA_PASS", "tw:2025:6:BAL:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:uneven:CHI:PASS",
+    "claimId" : null,
+    "code" : "UNEVEN_WINDOWS",
+    "encounterIds" : [ "CHI:PASS" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_PASS", "tw:2025:6:CHI:OFF_EPA_PASS", "tw:2025:7:CHI:OFF_EPA_PASS", "tw:2025:4:BAL:DEF_EPA_PASS", "tw:2025:5:BAL:DEF_EPA_PASS", "tw:2025:6:BAL:DEF_EPA_PASS" ],
+    "text" : "Os times têm semanas observadas diferentes."
+  }, {
+    "id" : "r:CHI:RUSH",
+    "claimId" : null,
+    "code" : "COVERAGE_LIMIT",
+    "encounterIds" : [ "CHI:RUSH" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_RUSH", "tw:2025:6:CHI:OFF_EPA_RUSH", "tw:2025:7:CHI:OFF_EPA_RUSH", "tw:2025:4:BAL:DEF_EPA_RUSH", "tw:2025:5:BAL:DEF_EPA_RUSH", "tw:2025:6:BAL:DEF_EPA_RUSH" ],
+    "text" : "O recorte não atende à cobertura exigida para uma oportunidade localizada."
+  }, {
+    "id" : "r:denominator:CHI:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "CHI:RUSH" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_RUSH", "tw:2025:6:CHI:OFF_EPA_RUSH", "tw:2025:7:CHI:OFF_EPA_RUSH", "tw:2025:4:BAL:DEF_EPA_RUSH", "tw:2025:5:BAL:DEF_EPA_RUSH", "tw:2025:6:BAL:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:uneven:CHI:RUSH",
+    "claimId" : null,
+    "code" : "UNEVEN_WINDOWS",
+    "encounterIds" : [ "CHI:RUSH" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_RUSH", "tw:2025:6:CHI:OFF_EPA_RUSH", "tw:2025:7:CHI:OFF_EPA_RUSH", "tw:2025:4:BAL:DEF_EPA_RUSH", "tw:2025:5:BAL:DEF_EPA_RUSH", "tw:2025:6:BAL:DEF_EPA_RUSH" ],
+    "text" : "Os times têm semanas observadas diferentes."
+  }, {
+    "id" : "r:CHI:GENERAL",
+    "claimId" : "limit:CHI:OFF_EPA_PLAY",
+    "code" : "COVERAGE_LIMIT",
+    "encounterIds" : [ "CHI:GENERAL" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_PLAY", "tw:2025:6:CHI:OFF_EPA_PLAY", "tw:2025:7:CHI:OFF_EPA_PLAY", "tw:2025:4:BAL:DEF_EPA_PLAY", "tw:2025:5:BAL:DEF_EPA_PLAY", "tw:2025:6:BAL:DEF_EPA_PLAY" ],
+    "text" : "O recorte não atende à cobertura exigida para uma oportunidade localizada."
+  }, {
+    "id" : "r:uneven:CHI:GENERAL",
+    "claimId" : null,
+    "code" : "UNEVEN_WINDOWS",
+    "encounterIds" : [ "CHI:GENERAL" ],
+    "evidenceIds" : [ "tw:2025:4:CHI:OFF_EPA_PLAY", "tw:2025:6:CHI:OFF_EPA_PLAY", "tw:2025:7:CHI:OFF_EPA_PLAY", "tw:2025:4:BAL:DEF_EPA_PLAY", "tw:2025:5:BAL:DEF_EPA_PLAY", "tw:2025:6:BAL:DEF_EPA_PLAY" ],
+    "text" : "Os times têm semanas observadas diferentes."
+  }, {
+    "id" : "r:BAL:PASS",
+    "claimId" : null,
+    "code" : "COVERAGE_LIMIT",
+    "encounterIds" : [ "BAL:PASS" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_PASS", "tw:2025:5:BAL:OFF_EPA_PASS", "tw:2025:6:BAL:OFF_EPA_PASS", "tw:2025:4:CHI:DEF_EPA_PASS", "tw:2025:6:CHI:DEF_EPA_PASS", "tw:2025:7:CHI:DEF_EPA_PASS" ],
+    "text" : "O recorte não atende à cobertura exigida para uma oportunidade localizada."
+  }, {
+    "id" : "r:denominator:BAL:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "BAL:PASS" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_PASS", "tw:2025:5:BAL:OFF_EPA_PASS", "tw:2025:6:BAL:OFF_EPA_PASS", "tw:2025:4:CHI:DEF_EPA_PASS", "tw:2025:6:CHI:DEF_EPA_PASS", "tw:2025:7:CHI:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:uneven:BAL:PASS",
+    "claimId" : null,
+    "code" : "UNEVEN_WINDOWS",
+    "encounterIds" : [ "BAL:PASS" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_PASS", "tw:2025:5:BAL:OFF_EPA_PASS", "tw:2025:6:BAL:OFF_EPA_PASS", "tw:2025:4:CHI:DEF_EPA_PASS", "tw:2025:6:CHI:DEF_EPA_PASS", "tw:2025:7:CHI:DEF_EPA_PASS" ],
+    "text" : "Os times têm semanas observadas diferentes."
+  }, {
+    "id" : "r:BAL:RUSH",
+    "claimId" : null,
+    "code" : "COVERAGE_LIMIT",
+    "encounterIds" : [ "BAL:RUSH" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_RUSH", "tw:2025:5:BAL:OFF_EPA_RUSH", "tw:2025:6:BAL:OFF_EPA_RUSH", "tw:2025:4:CHI:DEF_EPA_RUSH", "tw:2025:6:CHI:DEF_EPA_RUSH", "tw:2025:7:CHI:DEF_EPA_RUSH" ],
+    "text" : "O recorte não atende à cobertura exigida para uma oportunidade localizada."
+  }, {
+    "id" : "r:denominator:BAL:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "BAL:RUSH" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_RUSH", "tw:2025:5:BAL:OFF_EPA_RUSH", "tw:2025:6:BAL:OFF_EPA_RUSH", "tw:2025:4:CHI:DEF_EPA_RUSH", "tw:2025:6:CHI:DEF_EPA_RUSH", "tw:2025:7:CHI:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:uneven:BAL:RUSH",
+    "claimId" : null,
+    "code" : "UNEVEN_WINDOWS",
+    "encounterIds" : [ "BAL:RUSH" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_RUSH", "tw:2025:5:BAL:OFF_EPA_RUSH", "tw:2025:6:BAL:OFF_EPA_RUSH", "tw:2025:4:CHI:DEF_EPA_RUSH", "tw:2025:6:CHI:DEF_EPA_RUSH", "tw:2025:7:CHI:DEF_EPA_RUSH" ],
+    "text" : "Os times têm semanas observadas diferentes."
+  }, {
+    "id" : "r:BAL:GENERAL",
+    "claimId" : "limit:BAL:OFF_EPA_PLAY",
+    "code" : "COVERAGE_LIMIT",
+    "encounterIds" : [ "BAL:GENERAL" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_PLAY", "tw:2025:5:BAL:OFF_EPA_PLAY", "tw:2025:6:BAL:OFF_EPA_PLAY", "tw:2025:4:CHI:DEF_EPA_PLAY", "tw:2025:6:CHI:DEF_EPA_PLAY", "tw:2025:7:CHI:DEF_EPA_PLAY" ],
+    "text" : "O recorte não atende à cobertura exigida para uma oportunidade localizada."
+  }, {
+    "id" : "r:uneven:BAL:GENERAL",
+    "claimId" : null,
+    "code" : "UNEVEN_WINDOWS",
+    "encounterIds" : [ "BAL:GENERAL" ],
+    "evidenceIds" : [ "tw:2025:4:BAL:OFF_EPA_PLAY", "tw:2025:5:BAL:OFF_EPA_PLAY", "tw:2025:6:BAL:OFF_EPA_PLAY", "tw:2025:4:CHI:DEF_EPA_PLAY", "tw:2025:6:CHI:DEF_EPA_PLAY", "tw:2025:7:CHI:DEF_EPA_PLAY" ],
+    "text" : "Os times têm semanas observadas diferentes."
+  } ],
+  "links" : [ ],
+  "presentation" : {
+    "highlightFindingIds" : [ "f:BAL:GENERAL", "f:CHI:GENERAL" ],
+    "equivalentHighlightGroups" : [ [ "f:BAL:GENERAL", "f:CHI:GENERAL" ] ],
+    "globalRestrictionIds" : [ "r:temporal", "r:adjustment", "r:global" ],
+    "chartPolicy" : "SHARED_SYMMETRIC_ZERO_V1"
+  }
+}
