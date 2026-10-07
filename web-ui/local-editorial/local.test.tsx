@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { allowedLocalRequest } from '../build/local-editorial';
-import { generate, history, retrieve, validateResult } from './client';
+import { generate, history, retrieve, retrieveVisual, validateResult, VisualUnavailableError } from './client';
 import type { Result } from './client';
 import { Analysis } from './App';
 
@@ -19,6 +19,10 @@ describe('local browser boundary', () => {
     expect(allow('GET', '')).toBe(true);
     expect(allow('GET', 'BAL_DAL/attempts')).toBe(true);
     expect(allow('GET', `BAL_DAL/${attempt}`)).toBe(true);
+    expect(allow('GET', `BAL_DAL/${attempt}/insights`)).toBe(true);
+    expect(allow('POST', `BAL_DAL/${attempt}/insights`)).toBe(false);
+    expect(allow('GET', `BAL_DAL/${attempt}/insights/extra`)).toBe(false);
+    expect(allow('GET', `BAL_DAL/${attempt}/insights?x=1`)).toBe(false);
     expect(allowedLocalRequest('POST', '/__editorial/BAL_DAL', '127.0.0.1:18083', undefined, '1', undefined, undefined)).toBe(false);
     for (const path of ['../private', 'BAL_DAL?x=1', '%2e%2e', 'BAL_DAL/attempts', '']) expect(allow('POST', path)).toBe(false);
     expect(allow('OPTIONS', '')).toBe(false);
@@ -57,6 +61,14 @@ describe('local browser boundary', () => {
     fetch.mockRejectedValue(new TypeError('Network error'));
     await expect(generate('BAL_DAL')).rejects.toThrow('pode ter sido salva');
     expect(fetch).toHaveBeenCalledTimes(2);
+  });
+  it('keeps a legacy v3 attempt textual when insights are unavailable', async () => {
+    const fetch = vi.fn().mockResolvedValue({ ok: false, status: 409, json: async () => ({ error: 'VISUAL_DOCUMENT_NOT_AVAILABLE' }) });
+    vi.stubGlobal('fetch', fetch);
+    const context = { gameId: 'BAL_DAL', homeTeam: 'DAL', awayTeam: 'BAL', season: 2026, week: 4, phase: 'REG', gameday: '', asOfDate: '', sourceSha256: 'b'.repeat(64) };
+    await expect(retrieveVisual(context, result)).rejects.toBeInstanceOf(VisualUnavailableError);
+    expect(fetch).toHaveBeenCalledWith(`/__editorial/BAL_DAL/${attempt}/insights`, expect.objectContaining({ method: 'GET' }));
+    expect(fetch).toHaveBeenCalledTimes(1);
   });
   it('rejects malformed history before displaying it', async () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: true, json: async () => ({ attempts: [{ attemptId: '../' }], unavailableInStore: 0 }) }));

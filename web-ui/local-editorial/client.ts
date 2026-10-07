@@ -1,3 +1,5 @@
+import { validateVisualEnvelope } from '../src/features/analysis-visual/validate';
+import type { VisualEnvelope } from '../src/features/analysis-visual/model';
 export interface Context {
   gameId: string; homeTeam: string; awayTeam: string; season: number; week: number;
   phase: string; gameday: string; asOfDate: string; sourceSha256: string;
@@ -27,6 +29,7 @@ export function validateResult(value: unknown, game: string, attempt?: string): 
     || !sections.every(([key]) => typeof r.analysis[key] === 'string')) throw new Error('Resposta local incompatível.');
   return r;
 }
+export class VisualUnavailableError extends Error {}
 async function request(path: string, method = 'GET'): Promise<unknown> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 15000);
@@ -36,7 +39,12 @@ async function request(path: string, method = 'GET'): Promise<unknown> {
     });
     if (!response.ok) {
       if (response.status === 404) throw new Error('Contexto ou tentativa não encontrado. Atualize a lista.');
-      if (response.status === 409) throw new Error('Tentativa incompleta ou indisponível. Consulte o histórico.');
+      if (response.status === 409) {
+        const payload = typeof response.json === 'function' ? await response.json().catch(() => null) as { error?: string } | null : null;
+        if (path.endsWith('/insights') && payload?.error === 'VISUAL_DOCUMENT_NOT_AVAILABLE')
+          throw new VisualUnavailableError('Tentativa legada sem documento visual. A leitura textual permanece disponível.');
+        throw new Error('Tentativa incompleta ou indisponível. Consulte o histórico.');
+      }
       throw new Error(method === 'POST'
         ? 'Não foi possível confirmar a geração. Confira a API e atualize o histórico antes de tentar novamente.'
         : 'API local indisponível. Confira o servidor na porta 18081.');
@@ -69,4 +77,9 @@ export async function generate(game: string) { return validateResult(await reque
 export async function retrieve(game: string, attempt: string) {
   if (!uuid.test(attempt)) throw new Error('ID de tentativa inválido.');
   return validateResult(await request(`${gamePath(game)}/${attempt}`), game, attempt);
+}
+
+export async function retrieveVisual(context: Context, result: Result): Promise<VisualEnvelope> {
+  const value = await request(`${gamePath(context.gameId)}/${result.attemptId}/insights`);
+  return validateVisualEnvelope(value, { ...context, attemptId: result.attemptId, resultIdentity: result.resultIdentity });
 }

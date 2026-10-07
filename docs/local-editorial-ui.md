@@ -67,3 +67,9 @@ python3 scripts/verify_local_editorial_ui.py \
 O script realiza 21 verificações HTTP em loopback e **gera duas tentativas** para o primeiro contexto do catálogo. Não sobrescreve o arquivo de evidência. Testes Java cobrem catálogo, integridade do histórico, reinício e proveniência entre versões, além da paridade dos 21 casos anteriores. Testes frontend verificam limites do proxy, envelopes, isolamento de jogo, recuperação, erros e escape de texto.
 
 Evidências da implementação: [relatório](../editorial/local-interface-v1/REPORT.md). Resultados e capturas em `runtime/` são arquivos locais ignorados; sua ausência num checkout novo não impede a reprodução do fluxo.
+
+## Candidata E3 em branch isolada
+
+A branch `codex/visual-analysis-e3` acrescenta leitura visual à mesma entrada de desenvolvimento. A UI consulta `GET /api/v1/local-analysis/{gameId}/{attemptId}/insights` por tentativa, após a consulta textual. Tentativas legadas v3 exibem texto e aviso de compatibilidade. Um documento inválido ou divergente da tentativa gera erro visível; não se converte silenciosamente em análise. O modo de fixtures é rotulado como sintético e separado de resultados reais.
+
+Esta extensão só terá aceite integrado quando o endpoint E2 estiver disponível e o fluxo com artefato real e recuperação após reinício for verificado. Evidências da fase de fixtures e comandos: [relatório E3](plans/visual-v1/e3-report.md). O build público continua independente.

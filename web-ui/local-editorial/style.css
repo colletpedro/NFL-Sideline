@@ -25,3 +25,11 @@ p { margin:0; }.muted {color:#acb3bd;}.context-picker { border:1px solid #353b43
 @media (max-width:850px) {.workspace-grid{grid-template-columns:minmax(0,1fr) 250px;}.context-picker{flex-wrap:wrap;gap:10px;}.context-picker select{flex-basis:70%;}.context-picker>.muted{margin-left:auto;}}
 @media (max-width:650px) {main{padding:28px 16px 20px;}.topbar{height:66px;padding:0 16px;}.brand{font-size:16px;}.brand>span{display:none;}.local-badge{font-size:9px;}.page-heading>svg{display:none;}.context-picker{padding:14px;}.context-picker label{width:100%;}.context-picker select{width:100%;flex-basis:100%;}.context-picker>.muted{margin-left:0;}.matchup-bar{align-items:flex-start;flex-direction:column;margin-top:26px;gap:18px;}.primary{width:100%;justify-content:space-between;}.workspace-grid{grid-template-columns:minmax(0,1fr);}.analysis-section{padding:20px;}.panel-heading{padding:12px 16px;}h2{font-size:40px;}.empty{padding:28px;min-height:300px;}footer{flex-direction:column;gap:8px;}.attempts{max-height:330px;}}
 @media (prefers-reduced-motion:reduce) {button{transition:none;}}
+.mode-picker { display:flex; align-items:center; gap:14px; margin-bottom:14px; padding:14px 20px; background:#202a23; border:1px solid #5a6c54; border-radius:6px; }
+.mode-picker label,.fixture-picker label { font-weight:700; white-space:nowrap; }
+.mode-picker select,.fixture-picker select { min-width:0; max-width:100%; color:#f4f5f7; background:#101714; border:1px solid #94ab90; border-radius:4px; padding:8px 10px; }
+.fixture-banner { display:flex; flex-wrap:wrap; gap:6px 18px; padding:15px 20px; margin:0 0 14px; background:#30391e; border:2px solid #d7ff3f; color:#f4ffda; border-radius:6px; }
+.fixture-banner strong { color:#e9ff90; }
+.fixture-picker { display:flex; align-items:center; gap:14px; }
+.visual-status:not(:empty) { margin-top:20px; border:1px solid #718571; border-left:4px solid #d7ff3f; padding:13px 16px; background:#202820; color:#f1f6e7; }
+@media(max-width:650px) { .mode-picker,.fixture-picker { align-items:stretch; flex-direction:column; gap:7px; } .mode-picker select,.fixture-picker select { width:100%; } }

@@ -13,7 +13,7 @@ export function allowedLocalRequest(method: string, url: string, host: string | 
   if (marker !== '1' || transfer !== undefined || (length !== undefined && length !== '0')) return false;
   const suffix = url.slice(LOCAL_PREFIX.length);
   if (method === 'POST') return requestOrigin === origin && /^[A-Za-z0-9_-]{1,128}$/.test(suffix);
-  return method === 'GET' && (suffix === '' || /^[A-Za-z0-9_-]{1,128}\/(attempts|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$/.test(suffix));
+  return method === 'GET' && (suffix === '' || /^[A-Za-z0-9_-]{1,128}\/(attempts|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}(?:\/insights)?)$/.test(suffix));
 }
 
 export function localBoundary(): Plugin {
