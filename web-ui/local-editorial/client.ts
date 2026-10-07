@@ -42,7 +42,7 @@ async function request(path: string, method = 'GET'): Promise<unknown> {
       if (response.status === 409) {
         const payload = typeof response.json === 'function' ? await response.json().catch(() => null) as { error?: string } | null : null;
         if (path.endsWith('/insights') && payload?.error === 'VISUAL_DOCUMENT_NOT_AVAILABLE')
-          throw new VisualUnavailableError('Tentativa legada sem documento visual. A leitura textual permanece disponível.');
+          throw new VisualUnavailableError('Tentativa sem documento visual compatível. A leitura textual permanece disponível.');
         throw new Error('Tentativa incompleta ou indisponível. Consulte o histórico.');
       }
       throw new Error(method === 'POST'

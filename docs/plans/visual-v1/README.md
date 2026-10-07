@@ -1,5 +1,7 @@
 # Preparação E0/E1 — coordenação da evolução visual
 
+**Atualização de 07/10/2026:** E2/E3 foram integradas e verificadas localmente. [Aceite, limites e reprodução](integration-report.md). O conteúdo abaixo preserva a preparação original; próximo passo é E4.
+
 Data: 06/10/2026. Este pacote concretiza o [plano de evolução](../2026-10-06-visual-analysis.md). A sessão atual é responsável pela integração/produto; backend e frontend serão abertos depois, em worktrees separados sobre o mesmo commit.
 
 ## Cinco ações iniciais

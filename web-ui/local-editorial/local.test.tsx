@@ -43,6 +43,14 @@ describe('local browser boundary', () => {
     expect(html).not.toContain('<script>');
     expect(html).toContain('Passe\n+0,120 EPA');
   });
+  it('keeps the full text expandable when a visual document is available', () => {
+    const collapsed = renderToStaticMarkup(<Analysis result={result} collapsed/>);
+    expect(collapsed).toContain('<details class="text-reading">');
+    expect(collapsed).not.toContain(' open');
+    expect(collapsed).toContain('Ler análise textual completa');
+    expect(collapsed).toContain('Amostra curta');
+    expect(renderToStaticMarkup(<Analysis result={result}/>)).not.toContain('<details');
+  });
   it('only generates on an explicit POST and retrieves by identity', async () => {
     const fetch = vi.fn().mockResolvedValue({ ok: true, json: async () => result });
     vi.stubGlobal('fetch', fetch);

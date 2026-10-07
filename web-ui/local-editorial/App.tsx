@@ -12,11 +12,12 @@ const fixtureNames = Object.keys(fixtures).sort();
 const message = (error: unknown) => error instanceof Error ? error.message : 'Falha na operação local.';
 const date = (value: string) => new Date(value).toLocaleString('pt-BR');
 
-export function Analysis({ result }: { result: Result }) {
-  return <div className="analysis-grid">{sections.map(([key, title], index) => <section className={`analysis-section section-${index}`} key={key}>
+export function Analysis({ result, collapsed = false }: { result: Result; collapsed?: boolean }) {
+  const content = <div className="analysis-grid">{sections.map(([key, title], index) => <section className={`analysis-section section-${index}`} key={key}>
     <div className="section-heading"><span>0{index + 1}</span><h3>{title}</h3></div>
     <p>{result.analysis[key]}</p>
   </section>)}</div>;
+  return collapsed ? <details className="text-reading"><summary>Ler análise textual completa</summary>{content}</details> : content;
 }
 
 function FixtureWorkspace() {
@@ -93,10 +94,16 @@ function Workspace({ context }: { context: Context }) {
     <p className="scope-note">Análise descritiva por regras locais. Não estima vencedor. Cada geração cria uma nova tentativa, sem aprovação ou publicação.</p>
     <div role="status" className="notice">{notice}</div>
     {error && <div role="alert" className="error">{error}</div>}
+    {result && <div className="visual-status" role="status">{visualStatus === 'loading' && 'Consultando documento visual desta tentativa…'}
+      {visualStatus === 'legacy' && 'Esta tentativa não possui documento visual compatível. A leitura textual permanece disponível.'}
+      {visualStatus === 'invalid' && 'Documento visual inválido. A leitura textual foi preservada; o visual não será exibido.'}
+      {visualStatus === 'error' && 'Não foi possível recuperar o documento visual. A leitura textual permanece disponível; abra a tentativa novamente para consultar.'}
+    </div>}
+    {visual && <VisualAnalysis document={visual}/>}
     <div className="workspace-grid" aria-busy={!!busy}>
       <div className="reading-panel">
         <div className="panel-heading"><h3>Leitura do confronto</h3><span className="tag">NÃO PUBLICADO</span></div>
-        {result ? <><Analysis result={result}/>
+        {result ? <><Analysis key={result.attemptId} result={result} collapsed={!!visual}/>
           {selected && selected.sourceSha256 !== context.sourceSha256 && <p className="error">Esta tentativa usa uma versão anterior do contexto.</p>}
           <details className="audit"><summary>Identificação da tentativa</summary><dl>
             <dt>ID</dt><dd>{result.attemptId}</dd><dt>Identidade do resultado</dt><dd>{result.resultIdentity}</dd>
@@ -104,7 +111,7 @@ function Workspace({ context }: { context: Context }) {
             <dt>Publicação</dt><dd>Não aprovada</dd>
           </dl></details>
         </> : <div className="empty"><FlaskConical size={32} aria-hidden="true"/><h3>O contexto está pronto.</h3>
-          <p>Gere uma análise para examinar os quatro blocos, ou abra uma tentativa do histórico.</p>
+          <p>Gere uma análise para explorar os gráficos e as evidências, ou abra uma tentativa do histórico.</p>
           <span>Sem chamadas a modelos externos</span></div>}
       </div>
       <aside className="history-panel"><div className="panel-heading"><h3>Tentativas salvas</h3>
@@ -122,12 +129,7 @@ function Workspace({ context }: { context: Context }) {
         </>}
       </aside>
     </div>
-    {result && <div className="visual-status" role="status">{visualStatus === 'loading' && 'Consultando documento visual desta tentativa…'}
-      {visualStatus === 'legacy' && 'Compatibilidade: esta tentativa legada v3 não possui documento visual. A leitura textual acima permanece disponível.'}
-      {visualStatus === 'invalid' && 'Documento visual inválido. A leitura textual acima foi preservada; o visual não será exibido.'}
-      {visualStatus === 'error' && 'Não foi possível recuperar o documento visual. A leitura textual permanece disponível; abra a tentativa novamente para consultar.'}
-    </div>}
-    {visual && <VisualAnalysis document={visual}/>}
+
   </>;
 }
 

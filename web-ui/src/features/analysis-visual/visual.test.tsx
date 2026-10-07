@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { coordinate, signedDomain } from './decimal';
+import { axisMagnitude, coordinate, signedDomain } from './decimal';
 import { validateDocument, validateVisualEnvelope } from './validate';
 import { VisualAnalysis } from './VisualAnalysis';
 import type { VisualAnalysisDocument } from './model';
@@ -8,6 +8,19 @@ import type { VisualAnalysisDocument } from './model';
 const valid = import.meta.glob('../../../../contracts/visual-analysis/v1/fixtures/valid/*.json', { eager: true, import: 'default' });
 const invalid = import.meta.glob('../../../../contracts/visual-analysis/v1/fixtures/invalid/*.json', { eager: true, import: 'default' });
 const fixture = (name: string) => valid[Object.keys(valid).find(path => path.endsWith(`/${name}.json`))!];
+
+const real = import.meta.glob('../../../../editorial/evaluations/2026-10-06-visual-e2/documents/*.json', { eager: true, import: 'default' });
+
+describe('E2 documents consumed by E3', () => {
+  it('has the complete backend evaluation batch', () => expect(Object.keys(real)).toHaveLength(17));
+  it.each(Object.entries(real))('validates and renders %s without fixture provenance', (_path, value) => {
+    const doc = validateDocument(value, 'real');
+    const html = renderToStaticMarkup(<VisualAnalysis document={doc}/>);
+    expect(html).toContain('RESULTADO LOCAL · NÃO PUBLICADO');
+    expect(html).not.toContain('FIXTURE SINTÉTICA');
+    expect((html.match(/class="visual-card-head"/g) ?? []).length).toBe(6);
+  });
+});
 
 describe('frozen visual contract', () => {
   it.each(Object.keys(valid).map(path => path.split('/').pop()!))('accepts and renders %s as synthetic', file => {
@@ -25,6 +38,7 @@ describe('frozen visual contract', () => {
     const partial = renderToStaticMarkup(<VisualAnalysis document={validateDocument(fixture('partial'), 'fixture')}/>);
     expect(partial).toContain('Sem observações da defesa');
     expect(partial).toContain('+0,100');
+    expect(partial).not.toContain('0 jogadas observadas');
     const missing = renderToStaticMarkup(<VisualAnalysis document={validateDocument(fixture('missing'), 'fixture')}/>);
     expect(missing).toContain('Ausência não é zero');
     const zero = renderToStaticMarkup(<VisualAnalysis document={validateDocument(fixture('zero'), 'fixture')}/>);
@@ -55,6 +69,14 @@ describe('frozen visual contract', () => {
 });
 
 describe('signed shared geometry', () => {
+  it('shortens axis labels without changing the exact domain or collapsing tiny values', () => {
+    const exact = '0.7068532854290454';
+    expect(axisMagnitude(exact)).toBe('0,707');
+    expect(signedDomain([exact])).toBe(exact);
+    expect(coordinate(exact, exact)).toBe(100);
+    expect(axisMagnitude(`0.${'0'.repeat(330)}1`)).toBe('1,00e-331');
+    expect(axisMagnitude('99999')).toBe('1,00e5');
+  });
   it('places negative, zero and positive on distinct sides', () => {
     expect(coordinate('-0.4', '0.4')).toBe(0);
     expect(coordinate('0', '0.4')).toBe(50);

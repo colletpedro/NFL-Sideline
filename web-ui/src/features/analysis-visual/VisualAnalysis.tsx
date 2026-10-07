@@ -1,4 +1,4 @@
-import { coordinate, signedDomain } from './decimal';
+import { axisMagnitude, coordinate, signedDomain } from './decimal';
 import type { Encounter, Evidence, Finding, VisualAnalysisDocument } from './model';
 import './visual.css';
 
@@ -30,10 +30,10 @@ function Coverage({ rows, expected }: { rows: Evidence[]; expected: number[] }) 
 function SeriesPlot({ label, rows, maximum, role, expected }: { label: string; rows: Evidence[]; maximum: string; role: 'attack' | 'defense'; expected: number[] }) {
   return <div className={`visual-series visual-series-${role}`}>
     <h4>{role === 'attack' ? '●' : '◆'} {label}</h4>
-    <p className="visual-period">{period(rows)} · {rows.length} {rows.length === 1 ? 'semana' : 'semanas'} · {rows.some(row => row.plays === null) ? 'volume de jogadas não informado' : `${rows.reduce((sum, row) => sum + (row.plays ?? 0), 0)} jogadas observadas`}</p>
+    <p className="visual-period">{period(rows)} · {rows.length} {rows.length === 1 ? 'semana' : 'semanas'} · {!rows.length || rows.some(row => row.plays === null) ? 'volume de jogadas não informado' : `${rows.reduce((sum, row) => sum + (row.plays ?? 0), 0)} jogadas observadas`}</p>
     <Coverage rows={rows} expected={expected}/>
     {rows.length === 0 ? <p className="visual-absent">Sem observações nesta série.</p> : <div className="visual-plot" role="img" aria-label={`${label}: ${rows.map(row => `semana ${row.week}, ${row.displayValue} EPA por jogada`).join('; ')}`}>
-      <div className="visual-axis-labels"><span>−{maximum} EPA</span><span>zero</span><span>+{maximum} EPA</span></div>
+      <div className="visual-axis-labels"><span>≈ −{axisMagnitude(maximum)}</span><span>zero</span><span>≈ +{axisMagnitude(maximum)}</span></div>
       {rows.map(row => {
         const x = coordinate(row.value, maximum);
         return <div className="visual-point-row" key={row.id}>
@@ -50,7 +50,7 @@ function SeriesPlot({ label, rows, maximum, role, expected }: { label: string; r
 
 function EvidenceTable({ attack, defense, attackTeam, defenseTeam }: { attack: Evidence[]; defense: Evidence[]; attackTeam: string; defenseTeam: string }) {
   return <details className="visual-details"><summary>Tabela de evidências e definição</summary>
-    <p>EPA por jogada classificada como passe ou corrida no recorte semanal. Na defesa, EPA permitido menor é melhor. Os valores são semanais; não há média nova de período ou ajuste por adversário. Volume “não informado” não equivale a zero.</p>
+    <p>EPA por jogada no fundamento indicado (passe, corrida ou panorama geral), no recorte semanal. Na defesa, EPA permitido menor é melhor. Os valores são semanais; não há média nova de período ou ajuste por adversário. Volume “não informado” não equivale a zero.</p>
     {attack.length || defense.length ? <div className="visual-table-wrap"><table>
       <caption>Observações semanais de {attackTeam} no ataque e {defenseTeam} na defesa</caption>
       <thead><tr><th scope="col">Papel</th><th scope="col">Time</th><th scope="col">Período</th><th scope="col">EPA por jogada</th><th scope="col">Valor exato</th><th scope="col">Jogadas</th></tr></thead>
@@ -113,7 +113,7 @@ export function VisualAnalysis({ document }: { document: VisualAnalysisDocument 
         const restriction = document.restrictions.find(r => r.id === item.primaryRestrictionId)!;
         return <li key={item.id}><strong>{encounter.attackTeam} · {foundation[encounter.foundation]}</strong><span>{item.title}</span><small>{restriction.text}</small></li>;
       })}</ul></> : <p>Não há achado destacado neste recorte. Consulte cada encontro e suas observações disponíveis.</p>}</div>
-    <div className="visual-legend" aria-label="Legenda do gráfico"><span><i className="visual-legend-attack"/> Ataque · EPA produzido</span><span><i className="visual-legend-defense"/> Defesa · EPA permitido</span><span>Esquerda: negativo · centro: zero · direita: positivo</span></div>
+    <div className="visual-legend" aria-label="Legenda do gráfico"><span><i className="visual-legend-attack"/> Ataque · EPA produzido</span><span><i className="visual-legend-defense"/> Defesa · EPA permitido</span><span>Esquerda: negativo · centro: zero · direita: positivo</span><span>Ataque: maior EPA é melhor · Defesa: menor EPA permitido é melhor</span><span>Eixo em EPA por jogada · ≈ indica rótulo arredondado</span></div>
     <div className="visual-card-grid">{cards.map(item => <EncounterCard key={item.id} document={document} encounter={item} maximum={maximum}/>)}</div>
     <details className="visual-general"><summary>Panoramas gerais · passe e corrida juntos</summary><p>Recortes adicionais acessíveis. “Agrupado” preserva o encontro e suas observações sem afirmar que seus valores sejam iguais aos de passe ou corrida.</p>
       <div className="visual-card-grid">{general.map(item => <EncounterCard key={item.id} document={document} encounter={item} maximum={maximum} compact/>)}</div></details>

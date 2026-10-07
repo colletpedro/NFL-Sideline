@@ -457,8 +457,9 @@ O renderer atual 5.0.2 acrescenta a correção de apresentação das faixas; vej
 ### Integração local restrita do motor por regras
 
 A entrada explícita `editorial-local-serve` e a CLI `editorial-local` compartilham
-`LocalGenerationService` 1.0.0. O servidor JDK usa somente loopback, catálogo local v3
-validado na inicialização e tentativas imutáveis em arquivos internos (artefato 3).
+`LocalGenerationService` 1.1.0. O servidor JDK usa somente loopback, catálogo local v3
+validado na inicialização e tentativas imutáveis em arquivos internos (v4 com visual;
+v3 preservado e usado quando o contexto não cabe no contrato visual).
 Não inicializa Spring, datasource, JPA, Gemini ou exportador; não registra endpoints
 no modo normal/snapshot. Seletor 2.0.0 e claims 5 permanecem iguais; renderer 5.0.2 corrige apenas
 a composição das faixas com desigualdade, identificando mínimo e máximo.
@@ -475,16 +476,16 @@ Evidências e comandos: [relatório operacional](editorial/operational-validatio
 
 A entrada Vite separada `editorial:dev` conecta um laboratório em 127.0.0.1:18083 à API
 de loopback em 18081, por proxy com Host/Origin/método/rota/body restritos. A API mantém
-a rejeição de Origin e não oferece CORS. HTTP 1.1.0 acrescenta catálogo de metadados e
-histórico de tentativas completas verificadas; seleção, serviço, claims e renderer não mudam.
-A página gera apenas por ação explícita, preserva tentativas anteriores, apresenta os quatro
-textos e identifica resultados como locais, sem aprovação/publicação. Não define BASIC/FULL.
+a rejeição de Origin e não oferece CORS. HTTP 1.2.0 mantém o catálogo de metadados e
+histórico de tentativas completas verificado, e acrescenta consulta visual por tentativa.
+A página gera apenas por ação explícita, preserva tentativas anteriores, prioriza os gráficos
+e mantém os quatro textos acessíveis. Identifica resultados como locais, sem aprovação/publicação. Não define BASIC/FULL.
 A entrada pública e o snapshot schemaVersion 1 permanecem inalterados. A configuração
 editorial não admite build/production; o build público não inclui a interface nem seu cliente.
 Contrato, limites das datas informadas e reprodução: [interface local](docs/local-editorial-ui.md).
 
-### Preparação do contrato visual — E0/E1
+### Contrato visual e laboratório local — E0 a E3
 
-O [contrato visual interno v1](contracts/visual-analysis/v1/README.md) define a próxima projeção de evidências/claims validadas para cartões e gráficos locais. Schema, vocabulário, fixtures sintéticas e wireframe são artefatos de preparação, não endpoints ou funcionalidades já implementados. As rotas, artefatos e envelopes propostos nesse contrato entram em vigor somente na entrega E2; os contratos runtime e públicos descritos acima permanecem vigentes.
+O [contrato visual interno v1](contracts/visual-analysis/v1/README.md) rege a projeção de evidências/claims validadas para cartões e gráficos locais. E2 persiste `insights.json` em artefatos v4 e oferece GET por tentativa; mantém leitura imutável de v3, cujo visual retorna 409. E3 consome esse envelope no laboratório de desenvolvimento, com gráficos principais e texto expansível. O contrato público de snapshots permanece em v1, sem esse documento interno. O visual aceita `REG`/`POST`; fases `WC`/`DIV`/`CON`/`SB` preservam geração textual v3, até revisão coordenada do enum. [Aceite operacional integrado](docs/plans/visual-v1/integration-report.md).
 
 O primeiro experimento preserva seletor 2.0.0, claims v5 e renderer textual 5.0.2. Não prevê vencedor, não muda o ETL e não publica o documento interno como snapshot. Estado e coordenação: [preparação visual](docs/plans/visual-v1/README.md).

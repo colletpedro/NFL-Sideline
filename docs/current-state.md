@@ -1,4 +1,4 @@
-# Estado consolidado — 06/10/2026
+# Estado consolidado — 07/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -19,7 +19,7 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 - Registrar `asOfDate` e filtrar semanas anteriores não reconstrói todo o conhecimento disponível na data: fontes, correções, disponibilidade e contexto histórico podem ter mudado.
 - Os casos conhecidos servem a regressão mecânica e operacional. Não houve avaliação editorial independente, prova de generalização ou nova publicação dessas entregas.
 - A [interface local de desenvolvimento](local-editorial-ui.md) está implementada em uma entrada Vite separada, com catálogo, geração explícita e recuperação de tentativas. Proxy restrito em loopback; Production segue estática. A API continua recusando Origin e sem CORS.
-- Próximo passo de produto: integrar os componentes/laboratório E3 à projeção E2 sobre a [preparação E0/E1](plans/visual-v1/README.md). A política BASIC/FULL e o enriquecimento das métricas continuam necessários antes da publicação, mas não bloqueiam o protótipo visual local.
+- Próximo passo de produto: E4, avaliação de compreensão e densidade da leitura visual. E2/E3 estão integradas e verificadas localmente; veja o [aceite da integração](plans/visual-v1/integration-report.md). A política BASIC/FULL e o enriquecimento das métricas continuam necessários antes da publicação, mas não bloqueiam o protótipo visual local.
 
 ## Política de arquivos
 
@@ -39,10 +39,16 @@ Antes do `clean verify`, os JARs locais de baseline já estavam arquivados: inte
 
 ## Preparação visual E0/E1
 
-A interface local foi consolidada no commit `3a06bbb`. O [contrato visual interno v1](../contracts/visual-analysis/v1/README.md), schema, vocabulário, 20 fixtures sintéticas válidas e 15 inválidas continuam congelados. E2 projeta documentos reais por tentativa e expõe GET `/insights`; o frontend visual E3 ainda não está integrado. O seletor, renderer e snapshot mantêm suas versões.
+A interface local foi consolidada no commit `3a06bbb`. O [contrato visual interno v1](../contracts/visual-analysis/v1/README.md), schema, vocabulário, 20 fixtures sintéticas válidas e 15 inválidas continuam congelados. E2 projeta documentos reais por tentativa e expõe GET `/insights`; o frontend visual E3 está integrado somente ao laboratório local. O seletor, renderer e snapshot mantêm suas versões.
 
 Cinco defeitos legados de sinal/tempo foram reproduzidos em testes expected-failure e continuam abertos. O pacote registra critérios, limites e ordens de trabalho de backend/frontend, sem abrir novas sessões ou publicar. Verificações desta preparação: [relatório estruturado](plans/visual-v1/verification.json).
 
 ## Projeção visual E2
 
 `visual-projector-1.0.0` consome claims v5 validadas e contexto congelado para produzir observações semanais, seis encontros, achados, restrições tipadas e relações. A API HTTP local 1.2.0 oferece o documento apenas para a tentativa consultada; `visualIdentity` é o SHA-256 dos bytes persistidos de `insights.json`. POST e GET textual permanecem. O [relatório E2](../editorial/evaluations/2026-10-06-visual-e2/README.md) contém 17 documentos reais de contextos conhecidos e a lacuna de fase pós-temporada do contrato congelado. Production e snapshots públicos não foram tocados.
+
+## Integração visual E2/E3
+
+Branch local `codex/visual-integration-e2-e3`: cartões e séries semanais precedem o texto, que fica expansível. Legado v3 preserva leitura textual; fixtures sintéticas têm modo separado. O frontend consome os 17 documentos E2 e mantém o build público independente.
+
+Verificados: 127 testes Java, 116 frontend (incluem cinco falhas esperadas legadas), 12 Python do contrato, lint/build e freeze E1. O roteiro HTTP executou 73 requisições de integração e 72 GETs após reinício, com identidades e bytes preservados. Browser: BAL–DAL e CHI–BAL reais, desktop/mobile, histórico/recarga, teclado e texto opcional. Nenhuma publicação ou avaliação editorial independente. [Relatório e reprodução](plans/visual-v1/integration-report.md).

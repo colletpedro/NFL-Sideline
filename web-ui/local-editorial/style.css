@@ -33,3 +33,6 @@ p { margin:0; }.muted {color:#acb3bd;}.context-picker { border:1px solid #353b43
 .fixture-picker { display:flex; align-items:center; gap:14px; }
 .visual-status:not(:empty) { margin-top:20px; border:1px solid #718571; border-left:4px solid #d7ff3f; padding:13px 16px; background:#202820; color:#f1f6e7; }
 @media(max-width:650px) { .mode-picker,.fixture-picker { align-items:stretch; flex-direction:column; gap:7px; } .mode-picker select,.fixture-picker select { width:100%; } }
+
+.visual-analysis + .workspace-grid { margin-top:20px; }
+.text-reading > summary { cursor:pointer; padding:16px 24px; min-height:48px; font-weight:650; color:#eff7e6; }

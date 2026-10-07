@@ -37,3 +37,14 @@ export function coordinate(value: string, maximum: string): number | null {
   return result === 50 ? null : Math.max(0, Math.min(100, result));
 }
 export function sign(value: string): -1 | 0 | 1 { return decimalParts(value).sign as -1 | 0 | 1; }
+
+// Display only. The domain and coordinates still use the original decimal strings.
+export function axisMagnitude(value: string): string {
+  const { digits, exponent, sign: direction } = decimalParts(value);
+  if (!direction) return '0';
+  const leading = Number(`${digits[0]}.${digits.slice(1, 17)}`);
+  if (exponent >= -3 && exponent <= 2)
+    return (leading * 10 ** exponent).toPrecision(3).replace('.', ',').replace('e+', 'e');
+  const rounded = leading.toPrecision(3);
+  return `${rounded === '10.0' ? '1,00' : rounded.replace('.', ',')}e${exponent + (rounded === '10.0' ? 1 : 0)}`;
+}
