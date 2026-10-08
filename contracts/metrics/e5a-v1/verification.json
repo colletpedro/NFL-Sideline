@@ -1,0 +1,65 @@
+{
+  "packageId": "nfl-sideline-metrics-e5a",
+  "version": "1.0.0",
+  "status": "ORCHESTRATOR_REVIEW_CANDIDATE",
+  "date": "2026-10-08",
+  "branch": "codex/metrics-contract-e5a",
+  "baseCommit": "6d99e66ccbe62861a7658dda67be51cf5773ff24",
+  "packageCommit": "2abb2ee507098f2cf5942315441d9acbc3b8b46e",
+  "worktree": "/Users/pedrocollet/.codex/worktrees/metrics-contract-e5a/NFL Sideline",
+  "productionImplemented": false,
+  "checks": [
+    {
+      "command": "python3 contracts/metrics/e5a-v1/verify.py",
+      "status": "PASS",
+      "goldenCases": 26,
+      "expectedRejections": 3
+    },
+    {
+      "command": "python3 -m unittest discover -s contracts/metrics/e5a-v1 -p 'test_*.py' -v",
+      "status": "PASS",
+      "tests": 23
+    },
+    {
+      "command": "probe_local.py --source-root <existing-origin-data>/raw --seasons 2023 2025 2026",
+      "status": "PASS",
+      "filesReadOnly": 6,
+      "dataAcquired": false
+    },
+    {
+      "command": "Python AST / JSON parse / local package links",
+      "status": "PASS"
+    },
+    {
+      "command": "git diff 6d99e66 --check and git diff --cached --check",
+      "status": "PASS"
+    }
+  ],
+  "scope": "contracts/metrics/e5a-v1 ONLY",
+  "productionSuitesRerun": false,
+  "firstE5bPackage": "E5b-1: offline adapter, calendar join and sufficient statistics by game",
+  "unproven": [
+    "historical byte availability",
+    "game completion and ordering from local time fields",
+    "game source completeness",
+    "EPA source model version",
+    "identity uniqueness outside audited partitions",
+    "human comprehension and independent editorial sample"
+  ],
+  "frozenHistoryModified": false,
+  "packageContentSha256": {
+    "CONTRACT.md": "ea38b0368bd7fc690fba6823d08e506b277f7745f1c2e78c93c43e7b9a623b05",
+    "E5B.md": "70d5cf72e4b9e824cab2e63c84dc497b3c4569eb120cfdf0ad526b19cb63dc6a",
+    "EXAMPLES.md": "4380a45064e237dc615be0a13f62a7970548e0fbfb57782ca27d245392987887",
+    "INVENTORY.md": "fdd174793747670f9bec82eec6a9877578c1c358ef34b371dbc9c2dc4025283f",
+    "PROVENANCE.md": "eae1109f96a2f2b89b821a80dc52e82f7ceeb160d092e81fa56be159590843e2",
+    "README.md": "11c336a3f0826783ea8d0d563640226c5b6d5c080d7c4d6fd0b0fd00faddb5a7",
+    "contract.json": "bdb7b13efe030a7c020218d90e19a2ae45486cb3e197b14c71ea9d6715a79ff8",
+    "fixtures/cases.json": "640dd54725c1f122975e3eacad728d9b703c7f75326b0ce43fc4fa2537e02a10",
+    "local-audit.json": "122a14e771d77285a30a496928692cee7e1eb446bbe2e5d62f7ce1f274dd5a6f",
+    "probe_local.py": "ba2ef073bc205830718c4c8d3bd88afa025002c548d61576a206cafe75af849c",
+    "test_verify.py": "9d7e9f1c015d61540a4ae2f3f0762462e4b9d9a00b0328a789d11451ac063f7d",
+    "verify.py": "c65efc11c8f5252a01175071076fa5f7b6643f7d7c6d05d41d98cf5b04792a5c"
+  },
+  "hashCoverage": "Core package files; report and this verification excluded to avoid circular hashes; commit identifies report bytes."
+}
