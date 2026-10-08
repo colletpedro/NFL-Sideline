@@ -1,0 +1,5 @@
+"""Offline metrics: no loader, environment, database or acquisition imports."""
+ADAPTER_VERSION = "1.0.0"
+ARTIFACT_VERSION = "metrics-offline-v1"
+POPULATION_VERSION = "classified-scrimmage-v1"
+DEFINITION_VERSION = "1.0.0"

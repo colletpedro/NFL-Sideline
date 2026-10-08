@@ -1,0 +1,22 @@
+{
+  "synthetic-1": {
+    "general": {"eligible_n": 7, "epa_n": 3, "epa_sum": "-0.199999", "success_n": 1, "epa_missing_n": 1, "epa_nonfinite_n": 3},
+    "classified_pass": {"eligible_n": 3, "epa_n": 2, "epa_sum": "-0.2", "success_n": 0, "epa_missing_n": 1, "epa_nonfinite_n": 0},
+    "classified_rush": {"eligible_n": 4, "epa_n": 1, "epa_sum": "0.000001", "success_n": 1, "epa_missing_n": 0, "epa_nonfinite_n": 3}
+  },
+  "synthetic-2": {
+    "general": {"eligible_n": 4, "epa_n": 4, "epa_sum": "0.5", "success_n": 2, "epa_missing_n": 0, "epa_nonfinite_n": 0},
+    "classified_pass": {"eligible_n": 2, "epa_n": 2, "epa_sum": "0", "success_n": 1, "epa_missing_n": 0, "epa_nonfinite_n": 0},
+    "classified_rush": {"eligible_n": 2, "epa_n": 2, "epa_sum": "0.5", "success_n": 1, "epa_missing_n": 0, "epa_nonfinite_n": 0}
+  },
+  "synthetic-3": {
+    "general": {"eligible_n": 3, "epa_n": 3, "epa_sum": "-0.5", "success_n": 2, "epa_missing_n": 0, "epa_nonfinite_n": 0},
+    "classified_pass": {"eligible_n": 2, "epa_n": 2, "epa_sum": "-1.5", "success_n": 1, "epa_missing_n": 0, "epa_nonfinite_n": 0},
+    "classified_rush": {"eligible_n": 1, "epa_n": 1, "epa_sum": "1", "success_n": 1, "epa_missing_n": 0, "epa_nonfinite_n": 0}
+  },
+  "synthetic-4": {
+    "general": {"eligible_n": 0, "epa_n": 0, "epa_sum": null, "success_n": 0, "epa_missing_n": 0, "epa_nonfinite_n": 0},
+    "classified_pass": {"eligible_n": 0, "epa_n": 0, "epa_sum": null, "success_n": 0, "epa_missing_n": 0, "epa_nonfinite_n": 0},
+    "classified_rush": {"eligible_n": 0, "epa_n": 0, "epa_sum": null, "success_n": 0, "epa_missing_n": 0, "epa_nonfinite_n": 0}
+  }
+}
