@@ -1,0 +1,43 @@
+{
+  "diagnostic": "E5A_RAW_PBP_BOUNDARY",
+  "candidateUnmodified": true,
+  "candidateCommit": "5e976a315a167795222061175e582148bc570c33",
+  "candidateHashesChecked": 12,
+  "synthetic": {
+    "outside_population_null_teams": "Invalid play teams",
+    "candidate_null_teams": "Invalid play teams"
+  },
+  "goldenCasesPassed": 26,
+  "localFiles": [
+    {
+      "season": 2023,
+      "sha256": "19fc2ce8abb85be47fad16ceff178c67d6581309e87d53bb70c4531373867b1e",
+      "rawRows": 49665,
+      "outsideRows": 14065,
+      "outsideNullTeams": 2638,
+      "candidateNullTeams": 0,
+      "completenessCertified": false,
+      "historicalAvailabilityCertified": false
+    },
+    {
+      "season": 2025,
+      "sha256": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "rawRows": 48771,
+      "outsideRows": 14139,
+      "outsideNullTeams": 2729,
+      "candidateNullTeams": 0,
+      "completenessCertified": false,
+      "historicalAvailabilityCertified": false
+    },
+    {
+      "season": 2026,
+      "sha256": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "rawRows": 5489,
+      "outsideRows": 1654,
+      "outsideNullTeams": 297,
+      "candidateNullTeams": 0,
+      "completenessCertified": false,
+      "historicalAvailabilityCertified": false
+    }
+  ]
+}

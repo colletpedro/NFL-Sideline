@@ -1,4 +1,4 @@
-# Estado consolidado — 07/10/2026
+# Estado consolidado — 08/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -20,6 +20,14 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 - Os casos conhecidos servem a regressão mecânica e operacional. Não houve avaliação editorial independente, prova de generalização ou nova publicação dessas entregas.
 - A [interface local de desenvolvimento](local-editorial-ui.md) está implementada em uma entrada Vite separada, com catálogo, geração explícita e recuperação de tentativas. Proxy restrito em loopback; Production segue estática. A API continua recusando Origin e sem CORS.
 - E4 de apresentação e auditoria interna incorporada à branch local `codex/visual-integration-e4`, a partir de `c238d36` da frente E4: leitura rápida com papéis/períodos, limitação antes dos pontos, acesso ao histórico, foco/tabelas e ampliação de texto a 200%. Verificados 125 testes frontend (cinco falhas esperadas preservadas), 127 Java offline, contrato/lint/build, HTTP real e falhas de transporte. **Compreensão humana e amostra independente permanecem pendentes**; próximo passo: rodada curta preparada e contrato de métricas/recortes E5 antes de E6/E7. [Relatório E4](plans/visual-v1/e4/REPORT.md) e [aceite da integração](plans/visual-v1/e4/integration-review.md). BASIC/FULL e publicação não foram implementados.
+
+## Contrato de métricas E5a
+
+O pacote candidato `metrics-core-1.0.0` foi incorporado à branch local `codex/metrics-integration-e5a`, com suas evidências originais preservadas. A revisão adotou população classificada, denominadores por fundamento, volume independente de EPA, somas por jogo/revisão e separação entre corte do evento e disponibilidade dos bytes como base de **E5b-1 offline**. **Não há métricas novas no ETL, banco, Java, visual ou Production.**
+
+O verificador sintético rejeita linhas reais fora de passe/corrida com posse/defesa nulas. O adapter deverá separar validação estrutural do conjunto bruto da validação dos candidatos, preservar auditoria e continuar rejeitando candidatos com times inválidos. A [decisão e errata obrigatória](plans/metrics/e5a-review/REVIEW.md) acompanham o [contrato candidato](../contracts/metrics/e5a-v1/README.md); não é aceite do verificador como adapter bruto. Reexecutados 26 exemplos, 23 testes e 12 hashes; o diagnóstico foi confirmado em três Parquets locais opcionais, sem aquisição.
+
+Próximo passo: join calendário/PBP e somas por jogo em CLI dry-run, sem migration ou consumidor público. Completude, encerramento, disponibilidade histórica e versão do modelo EPA seguem desconhecidos onde não há prova. E4 humano, BASIC/FULL e cinco falhas legadas permanecem pendentes.
 
 ## Política de arquivos
 
