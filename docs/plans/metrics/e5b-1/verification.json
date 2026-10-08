@@ -1,0 +1,31 @@
+{
+  "base": "2ad629831e5ff7385687841ccb93030c0fabc4ee",
+  "branch": "codex/metrics-offline-e5b1",
+  "runtime": {
+    "python": "3.11.13",
+    "polars": "1.44.1",
+    "pytest": "9.0.2"
+  },
+  "new_adapter_tests": 83,
+  "etl_offline_tests": 162,
+  "e5a_examples": 26,
+  "e5a_original_tests": 23,
+  "e5a_original_package_hashes_checked": 12,
+  "candidate_boundary_diagnostic_preserved": true,
+  "synthetic_calculation_id": "sha256:2c364020c9c5bf08c2eeaa5fd38eae161920e482cdf23d2b1dda29b4d61a245f",
+  "optional_exact_previous_calendar_and_pbp_hashes": true,
+  "optional_conversions": {
+    "2023": 126,
+    "2025": 130,
+    "2026": 5
+  },
+  "optional_outside_null_teams": {
+    "2023": 2638,
+    "2025": 2729,
+    "2026": 297
+  },
+  "database_network_env_models_used": false,
+  "java_frontend_changed_or_executed": false,
+  "implementation_commit": "d86d73b415992ab3c22183bdeeb5b5c3f1fc1686",
+  "git_diff_check": "PASSED"
+}

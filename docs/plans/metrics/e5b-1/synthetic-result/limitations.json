@@ -1,0 +1,8 @@
+[
+  "Completeness UNKNOWN unless explicitly evidenced for these input bytes.",
+  "AUDITABLE_SUBSET counts describe present content, not certified full-game volume.",
+  "Absent rows do not identify bye, source delay or ingestion failure.",
+  "Evidence assertions are supplied by the caller, not independently authenticated.",
+  "EPA model version UNKNOWN unless explicitly evidenced; adapter version is separate.",
+  "No certified temporal window, revision selection, pregame or POINT_IN_TIME guarantee."
+]

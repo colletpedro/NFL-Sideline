@@ -1,0 +1,31 @@
+{
+  "calendar_games_n": 6,
+  "calendar_raw_n": 6,
+  "calendar_without_pbp": [
+    "synthetic-5",
+    "synthetic-6"
+  ],
+  "checks": {
+    "epa_partition": true,
+    "general_equals_pass_plus_rush": true,
+    "off_equals_opponent_def": true,
+    "raw_equals_unique_plus_duplicates": true,
+    "unique_equals_eligible_plus_excluded": true
+  },
+  "duplicate_rows_ignored": 1,
+  "eligible_content_n": 14,
+  "excluded_n": 12,
+  "exclusions": {
+    "deleted": 1,
+    "kneel": 1,
+    "outside_pass_run": 5,
+    "special_teams": 1,
+    "spike": 1,
+    "two_point_conversion": 2,
+    "unknown_filter_flags": 1
+  },
+  "historical_availability_certified": false,
+  "outside_pass_run_null_teams_n": 2,
+  "pbp_raw_n": 27,
+  "pbp_unique_n": 26
+}

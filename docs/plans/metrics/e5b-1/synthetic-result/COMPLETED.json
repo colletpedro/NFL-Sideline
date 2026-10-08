@@ -1,0 +1,11 @@
+{
+  "artifactVersion": "metrics-offline-v1",
+  "calculation_id": "sha256:2c364020c9c5bf08c2eeaa5fd38eae161920e482cdf23d2b1dda29b4d61a245f",
+  "files": {
+    "game-audit.json": "55cad0226a51e79d2afa9a0b69bcf2f7f48ff559580a0869259b776190b424e7",
+    "limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+    "manifest.json": "9d62e79b79427b90f37857cf349295b46ea69f5738a32a20cde391ed684e3778",
+    "reconciliation.json": "bf3e83f394bc027de75111d5676535b436d3f0b3ea0d6bdcb7d807853fa088ea",
+    "statistics.json": "a65a40601207d5410ef66a5c2d571d743164040bc2d15a084c9ef751aa4b47f5"
+  }
+}
