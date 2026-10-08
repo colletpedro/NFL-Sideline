@@ -1,0 +1,3493 @@
+{
+  "packageVersion": "1.0.0",
+  "kind": "SYNTHETIC_HAND_LEDGER",
+  "cases": [
+    {
+      "id": "unequal_week_volumes",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "w1",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "w1-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 2
+        },
+        {
+          "game_id": "w3",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 3,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-21T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "w3-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 6
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "w1",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "w1",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 3,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 4,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 5,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 6,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": 8,
+            "epa_n": 8,
+            "epa_sum": "-1",
+            "success_n": 1,
+            "epa_mean": "-1/8",
+            "success_rate": "1/8"
+          },
+          "classified_pass": {
+            "eligible_n": 8,
+            "epa_mean": "-1/8",
+            "frequency": "1"
+          },
+          "classified_rush": {
+            "eligible_n": 0,
+            "epa_n": 0,
+            "epa_sum": null,
+            "epa_mean": null,
+            "success_rate": null,
+            "frequency": "0"
+          }
+        },
+        "coverage": {
+          "expected_games": 2,
+          "observed_complete_games": 2,
+          "metric_observed_games": 2,
+          "source_ratio": "1"
+        },
+        "weekly_states": {
+          "1": "OBSERVED",
+          "2": "BYE",
+          "3": "OBSERVED"
+        }
+      }
+    },
+    {
+      "id": "single_tiny_positive",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "single",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "single-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "single",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.000000000000000001"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": 1,
+            "epa_n": 1,
+            "epa_sum": "1/1000000000000000000",
+            "epa_mean": "1/1000000000000000000",
+            "success_rate": "1"
+          },
+          "classified_rush": {
+            "epa_mean": null
+          }
+        },
+        "coverage": {
+          "metric_observed_games": 1
+        }
+      }
+    },
+    {
+      "id": "zero_and_negative",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "zero-negative",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "zero-negative-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 2
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "zero-negative",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "zero-negative",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-1"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "epa_sum": "-1",
+            "epa_mean": "-1/2",
+            "success_n": 0,
+            "success_rate": "0"
+          },
+          "classified_pass": {
+            "epa_sum": "0",
+            "epa_mean": "0",
+            "success_rate": "0"
+          },
+          "classified_rush": {
+            "epa_mean": "-1"
+          }
+        }
+      }
+    },
+    {
+      "id": "partial_epa",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "missing",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "missing-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 7
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "missing",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "missing",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.2"
+        },
+        {
+          "game_id": "missing",
+          "play_id": 3,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": null
+        },
+        {
+          "game_id": "missing",
+          "play_id": 4,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.000001"
+        },
+        {
+          "game_id": "missing",
+          "play_id": 5,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "NaN"
+        },
+        {
+          "game_id": "missing",
+          "play_id": 6,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "Infinity"
+        },
+        {
+          "game_id": "missing",
+          "play_id": 7,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-Infinity"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": 7,
+            "epa_n": 3,
+            "epa_sum": "-199999/1000000",
+            "epa_mean": "-199999/3000000",
+            "success_rate": "1/3",
+            "epa_missing_n": 1,
+            "epa_nonfinite_n": 3
+          },
+          "classified_pass": {
+            "eligible_n": 3,
+            "epa_n": 2,
+            "epa_mean": "-1/10",
+            "success_rate": "0",
+            "frequency": "3/7"
+          },
+          "classified_rush": {
+            "eligible_n": 4,
+            "epa_n": 1,
+            "epa_mean": "1/1000000",
+            "success_rate": "1",
+            "frequency": "4/7"
+          }
+        },
+        "general_integrity_eligible": false
+      }
+    },
+    {
+      "id": "classified_pass_vs_dropback",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "classification",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "classification-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 4
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "classification",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1",
+          "qb_dropback": 1,
+          "sack": 0,
+          "qb_scramble": 0,
+          "pass_attempt": 1
+        },
+        {
+          "game_id": "classification",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-1",
+          "qb_dropback": 1,
+          "sack": 1,
+          "qb_scramble": 0,
+          "pass_attempt": 1
+        },
+        {
+          "game_id": "classification",
+          "play_id": 3,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.5",
+          "qb_dropback": 1,
+          "sack": 0,
+          "qb_scramble": 1,
+          "pass_attempt": 0
+        },
+        {
+          "game_id": "classification",
+          "play_id": 4,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0",
+          "qb_dropback": 0,
+          "sack": 0,
+          "qb_scramble": 0,
+          "pass_attempt": 0
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": 4,
+            "epa_n": 4,
+            "epa_sum": "1/2",
+            "epa_mean": "1/8",
+            "success_rate": "1/2"
+          },
+          "classified_pass": {
+            "eligible_n": 2,
+            "epa_sum": "0",
+            "epa_mean": "0",
+            "frequency": "1/2"
+          },
+          "classified_rush": {
+            "eligible_n": 2,
+            "epa_mean": "1/4",
+            "frequency": "1/2"
+          }
+        }
+      }
+    },
+    {
+      "id": "no_eligible_plays",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "empty",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "empty-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 2
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "empty",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "no_play",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "empty",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 1,
+          "epa": "2"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": 0,
+            "epa_n": 0,
+            "epa_sum": null,
+            "epa_mean": null,
+            "success_rate": null,
+            "frequency": null
+          }
+        },
+        "coverage": {
+          "expected_games": 1,
+          "observed_complete_games": 1,
+          "metric_observed_games": 0,
+          "source_ratio": "1",
+          "metric_ratio": "0"
+        },
+        "weekly_states": {
+          "1": "NO_ELIGIBLE_PLAYS"
+        }
+      }
+    },
+    {
+      "id": "all_epa_missing",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "epa-all-missing",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "epa-all-missing-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 2
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "epa-all-missing",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": null
+        },
+        {
+          "game_id": "epa-all-missing",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": null
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": 2,
+            "epa_n": 0,
+            "epa_sum": null,
+            "epa_mean": null,
+            "success_rate": null,
+            "epa_missing_n": 2
+          },
+          "classified_pass": {
+            "frequency": "1/2"
+          }
+        },
+        "coverage": {
+          "observed_complete_games": 1,
+          "metric_observed_games": 0
+        }
+      }
+    },
+    {
+      "id": "population_boundaries",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "rules",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "rules-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 11
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "rules",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-2",
+          "interception": 1
+        },
+        {
+          "game_id": "rules",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.5",
+          "penalty": 1
+        },
+        {
+          "game_id": "rules",
+          "play_id": 3,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1",
+          "qtr": 5,
+          "aborted_play": 1,
+          "wp": "0.99"
+        },
+        {
+          "game_id": "rules",
+          "play_id": 4,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 1,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "9"
+        },
+        {
+          "game_id": "rules",
+          "play_id": 5,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 1,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "9"
+        },
+        {
+          "game_id": "rules",
+          "play_id": 6,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 1,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "9"
+        },
+        {
+          "game_id": "rules",
+          "play_id": 7,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 1,
+          "two_point_attempt": 0,
+          "epa": "9"
+        },
+        {
+          "game_id": "rules",
+          "play_id": 8,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 1,
+          "epa": "9"
+        },
+        {
+          "game_id": "rules",
+          "play_id": 9,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": null,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "9"
+        },
+        {
+          "game_id": "rules",
+          "play_id": 10,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "no_play",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "9",
+          "penalty": 1
+        },
+        {
+          "game_id": "rules",
+          "play_id": 11,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "kickoff",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "9"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": 3,
+            "epa_sum": "-1/2",
+            "epa_mean": "-1/6",
+            "success_rate": "2/3"
+          },
+          "classified_pass": {
+            "epa_n": 2,
+            "epa_mean": "-3/4"
+          },
+          "classified_rush": {
+            "epa_n": 1,
+            "epa_mean": "1"
+          }
+        },
+        "excluded_plays": {
+          "qb_kneel": 1,
+          "qb_spike": 1,
+          "play_deleted": 1,
+          "special_teams_play": 1,
+          "two_point_attempt": 1,
+          "UNKNOWN_FILTER_FLAGS": 1,
+          "OUTSIDE_PLAY_TYPE": 2
+        }
+      }
+    },
+    {
+      "id": "bye_and_unknown_source_gap",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "observed",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "observed-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "unknown-gap",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 3,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-21T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "unknown-gap-r1",
+          "pbp_status": "SOURCE_UNKNOWN",
+          "expected_unique_rows": 0
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "observed",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        }
+      ],
+      "expected": {
+        "coverage": {
+          "expected_games": 2,
+          "observed_complete_games": 1,
+          "metric_observed_games": 1,
+          "source_ratio": "1/2",
+          "metric_ratio": "1/2"
+        },
+        "weekly_states": {
+          "1": "OBSERVED",
+          "2": "BYE",
+          "3": "SOURCE_UNKNOWN"
+        },
+        "stats": {
+          "general": {
+            "eligible_n": 1,
+            "epa_mean": "1"
+          }
+        }
+      }
+    },
+    {
+      "id": "only_unknown_source",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "unknown",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "unknown-r1",
+          "pbp_status": "SOURCE_UNKNOWN",
+          "expected_unique_rows": 0
+        }
+      ],
+      "plays": [],
+      "expected": {
+        "stats": {
+          "general": {
+            "eligible_n": null,
+            "epa_mean": null
+          }
+        },
+        "coverage": {
+          "expected_games": 1,
+          "observed_complete_games": 0,
+          "metric_observed_games": 0,
+          "source_ratio": "0"
+        }
+      }
+    },
+    {
+      "id": "target_future_unknown_bound",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "earlier",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "earlier-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "target",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 3,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-01T00:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "target-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "future",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-29T00:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "future-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "unknown-bound",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": null,
+          "event_bound_evidence": null,
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "unknown-bound-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "earlier",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "target",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "99"
+        },
+        {
+          "game_id": "future",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 2,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "99"
+        },
+        {
+          "game_id": "unknown-bound",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 2,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "99"
+        }
+      ],
+      "expected": {
+        "game_ids": [
+          "earlier"
+        ],
+        "stats": {
+          "general": {
+            "eligible_n": 1,
+            "epa_mean": "1"
+          }
+        },
+        "excluded_events": {
+          "target": "TARGET_GAME",
+          "future": "EVENT_NOT_BEFORE_CUT",
+          "unknown-bound": "EVENT_TIME_UNKNOWN"
+        },
+        "coverage": {
+          "expected_games": null,
+          "source_ratio": null
+        }
+      }
+    },
+    {
+      "id": "two_events_same_period",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "WEEK_OBSERVATION",
+        "observation_week": 2
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "same-week-a",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-14T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "same-week-a-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "same-week-b",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-30T00:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "same-week-b-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "same-week-a",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 2,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-1"
+        },
+        {
+          "game_id": "same-week-b",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 2,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "100"
+        }
+      ],
+      "expected": {
+        "game_ids": [
+          "same-week-a"
+        ],
+        "stats": {
+          "general": {
+            "epa_mean": "-1",
+            "epa_n": 1
+          }
+        },
+        "excluded_events": {
+          "same-week-b": "EVENT_NOT_BEFORE_CUT"
+        }
+      }
+    },
+    {
+      "id": "two_events_same_period_both_eligible",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "WEEK_OBSERVATION",
+        "observation_week": 2
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "same-week-a",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-14T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "same-week-a-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "same-week-b",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-15T00:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "same-week-b-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "same-week-a",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 2,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-1"
+        },
+        {
+          "game_id": "same-week-b",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 2,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "3"
+        }
+      ],
+      "expected": {
+        "game_ids": [
+          "same-week-a",
+          "same-week-b"
+        ],
+        "stats": {
+          "general": {
+            "epa_sum": "2",
+            "epa_n": 2,
+            "epa_mean": "1"
+          }
+        },
+        "coverage": {
+          "expected_games": 2,
+          "observed_complete_games": 2
+        }
+      }
+    },
+    {
+      "id": "identical_duplicates",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "duplicate",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "duplicate-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "duplicate",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.5"
+        },
+        {
+          "game_id": "duplicate",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.5"
+        }
+      ],
+      "expected": {
+        "duplicate_rows_ignored": 1,
+        "stats": {
+          "general": {
+            "eligible_n": 1,
+            "epa_n": 1,
+            "epa_mean": "1/2"
+          }
+        }
+      }
+    },
+    {
+      "id": "conflicting_duplicate",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "duplicate",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "duplicate-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "duplicate",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.5"
+        },
+        {
+          "game_id": "duplicate",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.6"
+        }
+      ],
+      "expected_error": "Conflicting identity"
+    },
+    {
+      "id": "conflicting_drive",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "duplicate",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "duplicate-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "duplicate",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.5"
+        },
+        {
+          "game_id": "duplicate",
+          "play_id": 1,
+          "drive": 2,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0.5"
+        }
+      ],
+      "expected_error": "Conflicting identity"
+    },
+    {
+      "id": "seasons_phases_scoped_separately",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "current",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "current-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "old",
+          "season": 2025,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "old-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "post",
+          "season": 2026,
+          "phase": "POST",
+          "round": "WC",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "post-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "current",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "old",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2025,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "100"
+        },
+        {
+          "game_id": "post",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "POST",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "100"
+        }
+      ],
+      "expected": {
+        "game_ids": [
+          "current"
+        ],
+        "stats": {
+          "general": {
+            "epa_n": 1,
+            "epa_mean": "1"
+          }
+        },
+        "origin": "CURRENT"
+      }
+    },
+    {
+      "id": "post_explicit",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "POST",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "post",
+          "season": 2026,
+          "phase": "POST",
+          "round": "WC",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "post-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "post",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "POST",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-1"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "epa_mean": "-1"
+          }
+        },
+        "game_ids": [
+          "post"
+        ]
+      }
+    },
+    {
+      "id": "historical_separate",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2025,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "HISTORICAL_REFERENCE"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "old",
+          "season": 2025,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "old-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "old",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2025,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-1"
+        }
+      ],
+      "expected": {
+        "origin": "HISTORICAL_REFERENCE",
+        "stats": {
+          "general": {
+            "epa_mean": "-1"
+          }
+        }
+      }
+    },
+    {
+      "id": "point_in_time_requires_receipts",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "POINT_IN_TIME",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "unknown-availability",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "unknown-availability-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "late-revision",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-14T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": "2026-09-29T00:00:00Z",
+          "availability_evidence": "SYNTHETIC_RECEIPT",
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "late-revision-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "known-before",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 3,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-21T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": "2026-09-22T00:00:00Z",
+          "availability_evidence": "SYNTHETIC_RECEIPT",
+          "ingested_at": "2026-09-22T00:00:00Z",
+          "source_revision_id": "known-before-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "unknown-availability",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "late-revision",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 2,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "known-before",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        }
+      ],
+      "expected": {
+        "game_ids": [
+          "known-before"
+        ],
+        "historical_availability": "PROVEN",
+        "excluded_events": {
+          "unknown-availability": "AVAILABILITY_UNKNOWN",
+          "late-revision": "NOT_AVAILABLE_BEFORE_CUT"
+        },
+        "stats": {
+          "general": {
+            "epa_n": 1
+          }
+        },
+        "coverage": {
+          "expected_games": 3,
+          "observed_complete_games": 1,
+          "source_ratio": "1/3"
+        }
+      }
+    },
+    {
+      "id": "exclusive_cut_boundary",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "equal-bound",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-28T12:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "equal-bound-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "equal-bound",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        }
+      ],
+      "expected": {
+        "game_ids": [],
+        "stats": {
+          "general": {
+            "eligible_n": null,
+            "epa_mean": null
+          }
+        },
+        "coverage": {
+          "expected_games": 0,
+          "source_ratio": null
+        }
+      }
+    },
+    {
+      "id": "season_start_empty",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 1,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [],
+      "plays": [],
+      "expected": {
+        "weekly_states": {},
+        "stats": {
+          "general": {
+            "epa_mean": null
+          }
+        },
+        "coverage": {
+          "expected_games": 0,
+          "source_ratio": null
+        }
+      }
+    },
+    {
+      "id": "calendar_unknown_not_bye",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "calendar": {
+        "complete": false,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "w1",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "w1-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 2
+        },
+        {
+          "game_id": "w3",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 3,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-21T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "w3-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 6
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "w1",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "w1",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 3,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 4,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 5,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 6,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        }
+      ],
+      "expected": {
+        "weekly_states": {
+          "1": "CALENDAR_UNKNOWN",
+          "2": "CALENDAR_UNKNOWN",
+          "3": "CALENDAR_UNKNOWN"
+        },
+        "coverage": {
+          "expected_games": null,
+          "source_ratio": null
+        }
+      }
+    },
+    {
+      "id": "last_three_games_keep_missing_event",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 5,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "LAST_3_GAMES"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "week1",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "week1-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "week2",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 2,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-14T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "week2-r1",
+          "pbp_status": "SOURCE_UNKNOWN",
+          "expected_unique_rows": 0
+        },
+        {
+          "game_id": "week3",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 3,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-21T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "week3-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        },
+        {
+          "game_id": "week4",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 4,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-27T00:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "week4-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 1
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "week1",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "week3",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "week4",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 4,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        }
+      ],
+      "expected": {
+        "game_ids": [
+          "week2",
+          "week3",
+          "week4"
+        ],
+        "observed_game_ids": [
+          "week3",
+          "week4"
+        ],
+        "coverage": {
+          "expected_games": 3,
+          "observed_complete_games": 2,
+          "source_ratio": "2/3"
+        },
+        "stats": {
+          "general": {
+            "epa_n": 2
+          }
+        }
+      }
+    },
+    {
+      "id": "play_calendar_conflict",
+      "synthetic": true,
+      "query": {
+        "team": "A",
+        "role": "off",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "w1",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "w1-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 2
+        },
+        {
+          "game_id": "w3",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 3,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-21T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "w3-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 6
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "w1",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "POST",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "w1",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 3,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 4,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 5,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        },
+        {
+          "game_id": "w3",
+          "play_id": 6,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 3,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        }
+      ],
+      "expected_error": "Play/calendar mismatch"
+    },
+    {
+      "id": "defense_is_opponent_success",
+      "synthetic": true,
+      "query": {
+        "team": "B",
+        "role": "def",
+        "season": 2026,
+        "phase": "REG",
+        "target_game_id": "target",
+        "target_season": 2026,
+        "target_week": 4,
+        "as_of_instant": "2026-09-28T12:00:00Z",
+        "temporal_mode": "EVENT_RECONSTRUCTION",
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "calendar": {
+        "complete": true,
+        "closed_weeks": [
+          1,
+          2,
+          3
+        ],
+        "available_at": "2026-09-01T00:00:00Z",
+        "receipt_evidence": "SYNTHETIC_CALENDAR_RECEIPT"
+      },
+      "games": [
+        {
+          "game_id": "symmetric",
+          "season": 2026,
+          "phase": "REG",
+          "round": "REG",
+          "week": 1,
+          "teams": [
+            "A",
+            "B"
+          ],
+          "status": "FINAL",
+          "event_upper_bound": "2026-09-07T23:00:00Z",
+          "event_bound_evidence": "SYNTHETIC_OFFICIAL_END",
+          "event_time_basis": "OFFICIAL_END",
+          "available_at": null,
+          "availability_evidence": null,
+          "ingested_at": "2026-10-08T12:00:00Z",
+          "source_revision_id": "symmetric-r1",
+          "pbp_status": "COMPLETE",
+          "expected_unique_rows": 3
+        }
+      ],
+      "plays": [
+        {
+          "game_id": "symmetric",
+          "play_id": 1,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "pass",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "1"
+        },
+        {
+          "game_id": "symmetric",
+          "play_id": 2,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "-0.5"
+        },
+        {
+          "game_id": "symmetric",
+          "play_id": 3,
+          "drive": 1,
+          "season": 2026,
+          "season_type": "REG",
+          "week": 1,
+          "posteam": "A",
+          "defteam": "B",
+          "play_type": "run",
+          "qb_kneel": 0,
+          "qb_spike": 0,
+          "play_deleted": 0,
+          "special_teams_play": 0,
+          "two_point_attempt": 0,
+          "epa": "0"
+        }
+      ],
+      "expected": {
+        "stats": {
+          "general": {
+            "epa_sum": "1/2",
+            "epa_mean": "1/6",
+            "success_n": 1,
+            "success_rate": "1/3"
+          },
+          "classified_pass": {
+            "epa_mean": "1"
+          },
+          "classified_rush": {
+            "epa_mean": "-1/4"
+          }
+        },
+        "metrics": {
+          "def.success_rate.general": "1/3",
+          "def.epa.general": "1/6"
+        }
+      }
+    }
+  ]
+}
