@@ -1,0 +1,16 @@
+{
+  "asOfInstant": "2026-09-28T12:00:00Z",
+  "derivedAt": "2026-10-09T12:00:00Z",
+  "mode": "POINT_IN_TIME",
+  "phase": "REG",
+  "season": 2026,
+  "targetGameId": "target",
+  "targetWeek": 4,
+  "team": "A",
+  "week": 3,
+  "windows": [
+    "LAST_3_CALENDAR_WEEKS",
+    "SEASON_TO_CUTOFF",
+    "WEEK_OBSERVATION"
+  ]
+}

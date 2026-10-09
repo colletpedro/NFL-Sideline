@@ -1,0 +1,33 @@
+{
+  "asOfInstant": "2026-09-28T12:00:00Z",
+  "derivedAt": "2026-10-09T12:00:00Z",
+  "mode": "EVENT_RECONSTRUCTION",
+  "phase": "REG",
+  "retrospective": {
+    "calculations": {
+      "calendar-v1/alpha": "revision:alpha-corrected",
+      "calendar-v1/beta": "revision:beta",
+      "calendar-v1/gap": null,
+      "calendar-v1/target": null
+    },
+    "calendars": {
+      "2026/REG": "calendar-v1"
+    },
+    "states": {
+      "calendar-v1/alpha": "state:alpha",
+      "calendar-v1/beta": "state:beta",
+      "calendar-v1/gap": "state:gap",
+      "calendar-v1/target": "state:target"
+    }
+  },
+  "season": 2026,
+  "targetGameId": "target",
+  "targetWeek": 4,
+  "team": "A",
+  "week": 3,
+  "windows": [
+    "LAST_3_CALENDAR_WEEKS",
+    "SEASON_TO_CUTOFF",
+    "WEEK_OBSERVATION"
+  ]
+}

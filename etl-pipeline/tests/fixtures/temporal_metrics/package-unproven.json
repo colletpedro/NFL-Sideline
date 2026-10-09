@@ -1,0 +1,1540 @@
+{
+  "calculations": [
+    {
+      "calculation_id": "calculation:alpha-old",
+      "calendar_revision_id": "calendar-v1",
+      "completeness": {
+        "evidence_id": "PBP_COMPLETE:coverage:alpha-old:COMPLETE",
+        "value": "COMPLETE"
+      },
+      "coverage_revision_id": "coverage:alpha-old",
+      "game": {
+        "away_team": "B",
+        "game_id": "alpha",
+        "home_team": "A",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 1
+      },
+      "metadata_revision_ids": [],
+      "model": {
+        "evidence_id": "METADATA:calculation:alpha-old:model-v1",
+        "value": "model-v1"
+      },
+      "pbp_revision_id": "sha256:bf78b1e8bf87a767edc532e00655f50dcdf35bd1f4a52dc434ebc9319708dca2",
+      "revision_id": "revision:alpha-old",
+      "source_models": {
+        "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6": {
+          "evidence_id": "METADATA:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:model-v1",
+          "value": "model-v1"
+        }
+      },
+      "statistics": [
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "1",
+          "foundation": "general",
+          "role": "off",
+          "success_n": 1,
+          "team": "A"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "1",
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 1,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "1",
+          "foundation": "general",
+          "role": "def",
+          "success_n": 1,
+          "team": "B"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "1",
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 1,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    },
+    {
+      "calculation_id": "calculation:alpha-corrected",
+      "calendar_revision_id": "calendar-v1",
+      "completeness": {
+        "evidence_id": "PBP_COMPLETE:coverage:alpha-corrected:COMPLETE",
+        "value": "COMPLETE"
+      },
+      "coverage_revision_id": "coverage:alpha-corrected",
+      "game": {
+        "away_team": "B",
+        "game_id": "alpha",
+        "home_team": "A",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 1
+      },
+      "metadata_revision_ids": [],
+      "model": {
+        "evidence_id": "METADATA:calculation:alpha-corrected:model-v1",
+        "value": "model-v1"
+      },
+      "pbp_revision_id": "sha256:b86dd2e24e5100a948590cc4fcaa998346496ce0ccc14ed9df7afab60c836c48",
+      "revision_id": "revision:alpha-corrected",
+      "source_models": {
+        "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0": {
+          "evidence_id": "METADATA:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:model-v1",
+          "value": "model-v1"
+        }
+      },
+      "statistics": [
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "4",
+          "foundation": "general",
+          "role": "off",
+          "success_n": 2,
+          "team": "A"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "4",
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 2,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "4",
+          "foundation": "general",
+          "role": "def",
+          "success_n": 2,
+          "team": "B"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "4",
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 2,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    },
+    {
+      "calculation_id": "calculation:beta",
+      "calendar_revision_id": "calendar-v1",
+      "completeness": {
+        "evidence_id": "PBP_COMPLETE:coverage:beta:COMPLETE",
+        "value": "COMPLETE"
+      },
+      "coverage_revision_id": "coverage:beta",
+      "game": {
+        "away_team": "B",
+        "game_id": "beta",
+        "home_team": "A",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 3
+      },
+      "metadata_revision_ids": [],
+      "model": {
+        "evidence_id": "METADATA:calculation:beta:model-v1",
+        "value": "model-v1"
+      },
+      "pbp_revision_id": "sha256:189aeae3cd0e557a060a2d493cf2e81b434bea49b4b9bb9d1300bb0bc98d363b",
+      "revision_id": "revision:beta",
+      "source_models": {
+        "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753": {
+          "evidence_id": "METADATA:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:model-v1",
+          "value": "model-v1"
+        }
+      },
+      "statistics": [
+        {
+          "eligible_n": 6,
+          "epa_missing_n": 1,
+          "epa_n": 5,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-0.5",
+          "foundation": "general",
+          "role": "off",
+          "success_n": 2,
+          "team": "A"
+        },
+        {
+          "eligible_n": 4,
+          "epa_missing_n": 1,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1",
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 1,
+          "team": "A"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.5",
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 1,
+          "team": "A"
+        },
+        {
+          "eligible_n": 6,
+          "epa_missing_n": 1,
+          "epa_n": 5,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-0.5",
+          "foundation": "general",
+          "role": "def",
+          "success_n": 2,
+          "team": "B"
+        },
+        {
+          "eligible_n": 4,
+          "epa_missing_n": 1,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1",
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 1,
+          "team": "B"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.5",
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 1,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    },
+    {
+      "calculation_id": "calculation:beta-composed",
+      "calendar_revision_id": "calendar-v1",
+      "completeness": {
+        "evidence_id": "PBP_COMPLETE:coverage:beta-composed:COMPLETE",
+        "value": "COMPLETE"
+      },
+      "coverage_revision_id": "coverage:beta-composed",
+      "game": {
+        "away_team": "B",
+        "game_id": "beta",
+        "home_team": "A",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 3
+      },
+      "metadata_revision_ids": [],
+      "model": {
+        "evidence_id": "METADATA:calculation:beta-composed:model-v1",
+        "value": "model-v1"
+      },
+      "pbp_revision_id": "sha256:45b9801bc07835f59d1249e6c131e190ba11a9f29ea9591adc3547c5a0ea1fe3",
+      "revision_id": "revision:beta-composed",
+      "source_models": {
+        "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0": {
+          "evidence_id": "METADATA:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:model-v1",
+          "value": "model-v1"
+        },
+        "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914": {
+          "evidence_id": "METADATA:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:model-v1",
+          "value": "model-v1"
+        }
+      },
+      "statistics": [
+        {
+          "eligible_n": 6,
+          "epa_missing_n": 1,
+          "epa_n": 5,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "100.5",
+          "foundation": "general",
+          "role": "off",
+          "success_n": 4,
+          "team": "A"
+        },
+        {
+          "eligible_n": 4,
+          "epa_missing_n": 1,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "100",
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 3,
+          "team": "A"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.5",
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 1,
+          "team": "A"
+        },
+        {
+          "eligible_n": 6,
+          "epa_missing_n": 1,
+          "epa_n": 5,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "100.5",
+          "foundation": "general",
+          "role": "def",
+          "success_n": 4,
+          "team": "B"
+        },
+        {
+          "eligible_n": 4,
+          "epa_missing_n": 1,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "100",
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 3,
+          "team": "B"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.5",
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 1,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "dependencies": [],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866:2026-09-01T00:00:00Z",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "unverified-manifest-reference",
+      "receipt": {
+        "archive_id": "synthetic-archive-v1",
+        "archive_root": "/synthetic/no-filesystem-dependency",
+        "locator": "blobs/sha256/09/09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866",
+        "observed_at": "2026-10-01T00:00:00Z",
+        "origin": {
+          "kind": "synthetic-materialization"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:5f9d095d34e09d051d425716830138642a59165e241675a124f001b40b0cdba3",
+        "sha256": "09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+      },
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:ARCHIVE_OBSERVATION:sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "CALENDAR_COMPLETE:calendar-v1:True",
+      "kind": "CALENDAR_COMPLETE",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:CALENDAR_COMPLETE:calendar-v1:True",
+      "subject_id": "calendar-v1",
+      "value": true
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "PERIOD_CLOSED:calendar-v1:1",
+      "kind": "PERIOD_CLOSED",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:PERIOD_CLOSED:calendar-v1:1",
+      "subject_id": "calendar-v1",
+      "value": 1
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "PERIOD_CLOSED:calendar-v1:2",
+      "kind": "PERIOD_CLOSED",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:PERIOD_CLOSED:calendar-v1:2",
+      "subject_id": "calendar-v1",
+      "value": 2
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "PERIOD_CLOSED:calendar-v1:3",
+      "kind": "PERIOD_CLOSED",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:PERIOD_CLOSED:calendar-v1:3",
+      "subject_id": "calendar-v1",
+      "value": 3
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:calendar-v1:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:calendar-v1:2026-09-01T00:00:00Z",
+      "subject_id": "calendar-v1",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:calendar-v1:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:calendar-v1:2026-09-01T00:00:00Z",
+      "subject_id": "calendar-v1",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "EVENT_END_BOUND:state:alpha:2026-09-07T23:00:00Z",
+      "kind": "EVENT_END_BOUND",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:EVENT_END_BOUND:state:alpha:2026-09-07T23:00:00Z",
+      "subject_id": "state:alpha",
+      "value": "2026-09-07T23:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:alpha:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:alpha:2026-09-01T00:00:00Z",
+      "subject_id": "state:alpha",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:alpha:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:alpha:2026-09-01T00:00:00Z",
+      "subject_id": "state:alpha",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "EVENT_END_BOUND:state:beta:2026-09-21T23:00:00Z",
+      "kind": "EVENT_END_BOUND",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:EVENT_END_BOUND:state:beta:2026-09-21T23:00:00Z",
+      "subject_id": "state:beta",
+      "value": "2026-09-21T23:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:beta:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:beta:2026-09-01T00:00:00Z",
+      "subject_id": "state:beta",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:beta:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:beta:2026-09-01T00:00:00Z",
+      "subject_id": "state:beta",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "EVENT_END_BOUND:state:gap:2026-09-21T23:00:00Z",
+      "kind": "EVENT_END_BOUND",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:EVENT_END_BOUND:state:gap:2026-09-21T23:00:00Z",
+      "subject_id": "state:gap",
+      "value": "2026-09-21T23:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:gap:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:gap:2026-09-01T00:00:00Z",
+      "subject_id": "state:gap",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:gap:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:gap:2026-09-01T00:00:00Z",
+      "subject_id": "state:gap",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:state:target:2026-09-28T16:00:00Z",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:state:target:2026-09-28T16:00:00Z",
+      "subject_id": "state:target",
+      "value": "2026-09-28T16:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "EVENT_END_BOUND:state:target:2026-09-01T00:00:00Z",
+      "kind": "EVENT_END_BOUND",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:EVENT_END_BOUND:state:target:2026-09-01T00:00:00Z",
+      "subject_id": "state:target",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:target:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:target:2026-09-01T00:00:00Z",
+      "subject_id": "state:target",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:state:target:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:state:target:2026-09-01T00:00:00Z",
+      "subject_id": "state:target",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:2026-09-01T00:00:00Z",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "unverified-manifest-reference",
+      "receipt": {
+        "archive_id": "synthetic-archive-v1",
+        "archive_root": "/synthetic/no-filesystem-dependency",
+        "locator": "blobs/sha256/50/50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6",
+        "observed_at": "2026-10-01T00:00:00Z",
+        "origin": {
+          "kind": "synthetic-materialization"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:17fe3ce2c36aeca9e72046598031166144783fa2b010c628befde076f8a586e9",
+        "sha256": "50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+      },
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:ARCHIVE_OBSERVATION:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "PBP_COMPLETE:coverage:alpha-old:COMPLETE",
+      "kind": "PBP_COMPLETE",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:PBP_COMPLETE:coverage:alpha-old:COMPLETE",
+      "subject_id": "coverage:alpha-old",
+      "value": "COMPLETE"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:calculation:alpha-old:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:calculation:alpha-old:model-v1",
+      "subject_id": "calculation:alpha-old",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:model-v1",
+      "subject_id": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:2026-10-01T00:00:00Z",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "unverified-manifest-reference",
+      "receipt": {
+        "archive_id": "synthetic-archive-v1",
+        "archive_root": "/synthetic/no-filesystem-dependency",
+        "locator": "blobs/sha256/47/47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0",
+        "observed_at": "2026-10-01T00:00:00Z",
+        "origin": {
+          "kind": "synthetic-materialization"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:b8b69d1ce4b9ba770ff4abf83125e9253b959b4678bf825c64dd2c70b4ac6f9f",
+        "sha256": "47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+      },
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:ARCHIVE_OBSERVATION:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:2026-10-01T00:00:00Z",
+      "subject_id": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0",
+      "value": "2026-10-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:2026-10-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:2026-10-01T00:00:00Z",
+      "subject_id": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0",
+      "value": "2026-10-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "PBP_COMPLETE:coverage:alpha-corrected:COMPLETE",
+      "kind": "PBP_COMPLETE",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:PBP_COMPLETE:coverage:alpha-corrected:COMPLETE",
+      "subject_id": "coverage:alpha-corrected",
+      "value": "COMPLETE"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:calculation:alpha-corrected:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:calculation:alpha-corrected:model-v1",
+      "subject_id": "calculation:alpha-corrected",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:model-v1",
+      "subject_id": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:2026-09-01T00:00:00Z",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "unverified-manifest-reference",
+      "receipt": {
+        "archive_id": "synthetic-archive-v1",
+        "archive_root": "/synthetic/no-filesystem-dependency",
+        "locator": "blobs/sha256/f4/f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753",
+        "observed_at": "2026-10-01T00:00:00Z",
+        "origin": {
+          "kind": "synthetic-materialization"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:a3d528795909569496ff523beab7303bd8d68adff14ca8ef64fd4d998f1e7cf2",
+        "sha256": "f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+      },
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:ARCHIVE_OBSERVATION:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "PBP_COMPLETE:coverage:beta:COMPLETE",
+      "kind": "PBP_COMPLETE",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:PBP_COMPLETE:coverage:beta:COMPLETE",
+      "subject_id": "coverage:beta",
+      "value": "COMPLETE"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:calculation:beta:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:calculation:beta:model-v1",
+      "subject_id": "calculation:beta",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:model-v1",
+      "subject_id": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:2026-09-01T00:00:00Z",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "unverified-manifest-reference",
+      "receipt": {
+        "archive_id": "synthetic-archive-v1",
+        "archive_root": "/synthetic/no-filesystem-dependency",
+        "locator": "blobs/sha256/f6/f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914",
+        "observed_at": "2026-10-01T00:00:00Z",
+        "origin": {
+          "kind": "synthetic-materialization"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:cf4abc84a63a5e97cdce31e1d5e6c342e4dfb7847cb9df5758ac196ae7463997",
+        "sha256": "f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+      },
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:ARCHIVE_OBSERVATION:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:2026-09-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:2026-09-01T00:00:00Z",
+      "subject_id": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914",
+      "value": "2026-09-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:2026-10-01T00:00:00Z",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "unverified-manifest-reference",
+      "receipt": {
+        "archive_id": "synthetic-archive-v1",
+        "archive_root": "/synthetic/no-filesystem-dependency",
+        "locator": "blobs/sha256/82/82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0",
+        "observed_at": "2026-10-01T00:00:00Z",
+        "origin": {
+          "kind": "synthetic-materialization"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:9f40bb91b2647a11141d015cc1b8ba65a7461f0c03ed2843dcb070e298406fd6",
+        "sha256": "82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+      },
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:ARCHIVE_OBSERVATION:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:2026-10-01T00:00:00Z",
+      "subject_id": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0",
+      "value": "2026-10-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "SYSTEM_INGESTION:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:2026-10-01T00:00:00Z",
+      "kind": "SYSTEM_INGESTION",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:SYSTEM_INGESTION:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:2026-10-01T00:00:00Z",
+      "subject_id": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0",
+      "value": "2026-10-01T00:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "PBP_COMPLETE:coverage:beta-composed:COMPLETE",
+      "kind": "PBP_COMPLETE",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:PBP_COMPLETE:coverage:beta-composed:COMPLETE",
+      "subject_id": "coverage:beta-composed",
+      "value": "COMPLETE"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:calculation:beta-composed:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:calculation:beta-composed:model-v1",
+      "subject_id": "calculation:beta-composed",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:model-v1",
+      "subject_id": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914",
+      "value": "model-v1"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "METADATA:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:model-v1",
+      "kind": "METADATA",
+      "origin": "unverified-manifest-reference",
+      "recorded_at": "2026-10-01T00:00:00Z",
+      "reference": "manual-ledger-v1:METADATA:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:model-v1",
+      "subject_id": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0",
+      "value": "model-v1"
+    }
+  ],
+  "inputVersion": "metrics-temporal-input-v1",
+  "policy": {
+    "policyVersion": "materialized-evidence-v1",
+    "trustedOrigins": [
+      "synthetic-system"
+    ]
+  },
+  "resources": [
+    {
+      "available_at": {
+        "evidence_id": "ARCHIVE_OBSERVATION:sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "Y2FsZW5kYXItY3VycmVudC12MQ==",
+        "origin": "synthetic-fixture",
+        "sha256": "09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866",
+        "source_revision_id": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+      },
+      "revision_id": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "calendar",
+        "source_set_id": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+      },
+      "revision_id": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+    },
+    {
+      "available_at": {
+        "evidence_id": "SYSTEM_INGESTION:calendar-v1:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [
+        "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+      ],
+      "ingested_at": null,
+      "kind": "CALENDAR",
+      "payload": {
+        "closed_weeks": [
+          {
+            "evidence_id": "PERIOD_CLOSED:calendar-v1:1",
+            "week": 1
+          },
+          {
+            "evidence_id": "PERIOD_CLOSED:calendar-v1:2",
+            "week": 2
+          },
+          {
+            "evidence_id": "PERIOD_CLOSED:calendar-v1:3",
+            "week": 3
+          }
+        ],
+        "complete": {
+          "evidence_id": "CALENDAR_COMPLETE:calendar-v1:True",
+          "value": true
+        },
+        "games": [
+          {
+            "away_team": "B",
+            "game_id": "alpha",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 1
+          },
+          {
+            "away_team": "B",
+            "game_id": "beta",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 3
+          },
+          {
+            "away_team": "B",
+            "game_id": "gap",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 3
+          },
+          {
+            "away_team": "B",
+            "game_id": "target",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 1
+          }
+        ],
+        "phase": "REG",
+        "season": 2026
+      },
+      "revision_id": "calendar-v1"
+    },
+    {
+      "available_at": {
+        "evidence_id": "SYSTEM_INGESTION:state:alpha:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [
+        "calendar-v1"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "calendar-v1",
+        "event_upper_bound": {
+          "evidence_id": "EVENT_END_BOUND:state:alpha:2026-09-07T23:00:00Z",
+          "value": "2026-09-07T23:00:00Z"
+        },
+        "game_id": "alpha",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "state:alpha"
+    },
+    {
+      "available_at": {
+        "evidence_id": "SYSTEM_INGESTION:state:beta:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [
+        "calendar-v1"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "calendar-v1",
+        "event_upper_bound": {
+          "evidence_id": "EVENT_END_BOUND:state:beta:2026-09-21T23:00:00Z",
+          "value": "2026-09-21T23:00:00Z"
+        },
+        "game_id": "beta",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "state:beta"
+    },
+    {
+      "available_at": {
+        "evidence_id": "SYSTEM_INGESTION:state:gap:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [
+        "calendar-v1"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "calendar-v1",
+        "event_upper_bound": {
+          "evidence_id": "EVENT_END_BOUND:state:gap:2026-09-21T23:00:00Z",
+          "value": "2026-09-21T23:00:00Z"
+        },
+        "game_id": "gap",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "state:gap"
+    },
+    {
+      "available_at": {
+        "evidence_id": "SYSTEM_INGESTION:state:target:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [
+        "calendar-v1"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "calendar-v1",
+        "event_upper_bound": {
+          "evidence_id": "EVENT_END_BOUND:state:target:2026-09-01T00:00:00Z",
+          "value": "2026-09-01T00:00:00Z"
+        },
+        "game_id": "target",
+        "kickoff": {
+          "evidence_id": "METADATA:state:target:2026-09-28T16:00:00Z",
+          "value": "2026-09-28T16:00:00Z"
+        },
+        "status": "FINAL"
+      },
+      "revision_id": "state:target"
+    },
+    {
+      "available_at": {
+        "evidence_id": "ARCHIVE_OBSERVATION:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "YWxwaGEtb2xk",
+        "origin": "synthetic-fixture",
+        "sha256": "50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6",
+        "source_revision_id": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+      },
+      "revision_id": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "pbp",
+        "source_set_id": "sha256:bf78b1e8bf87a767edc532e00655f50dcdf35bd1f4a52dc434ebc9319708dca2"
+      },
+      "revision_id": "sha256:bf78b1e8bf87a767edc532e00655f50dcdf35bd1f4a52dc434ebc9319708dca2"
+    },
+    {
+      "available_at": {
+        "evidence_id": "ARCHIVE_OBSERVATION:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:2026-10-01T00:00:00Z",
+        "value": "2026-10-01T00:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "YWxwaGEtY29ycmVjdGVk",
+        "origin": "synthetic-fixture",
+        "sha256": "47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0",
+        "source_revision_id": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+      },
+      "revision_id": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "pbp",
+        "source_set_id": "sha256:b86dd2e24e5100a948590cc4fcaa998346496ce0ccc14ed9df7afab60c836c48"
+      },
+      "revision_id": "sha256:b86dd2e24e5100a948590cc4fcaa998346496ce0ccc14ed9df7afab60c836c48"
+    },
+    {
+      "available_at": {
+        "evidence_id": "ARCHIVE_OBSERVATION:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "YmV0YQ==",
+        "origin": "synthetic-fixture",
+        "sha256": "f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753",
+        "source_revision_id": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+      },
+      "revision_id": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "pbp",
+        "source_set_id": "sha256:189aeae3cd0e557a060a2d493cf2e81b434bea49b4b9bb9d1300bb0bc98d363b"
+      },
+      "revision_id": "sha256:189aeae3cd0e557a060a2d493cf2e81b434bea49b4b9bb9d1300bb0bc98d363b"
+    },
+    {
+      "available_at": {
+        "evidence_id": "ARCHIVE_OBSERVATION:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:2026-09-01T00:00:00Z",
+        "value": "2026-09-01T00:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "Y29tcG9zZWQtZWFybHk=",
+        "origin": "synthetic-fixture",
+        "sha256": "f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914",
+        "source_revision_id": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+      },
+      "revision_id": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+    },
+    {
+      "available_at": {
+        "evidence_id": "ARCHIVE_OBSERVATION:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:2026-10-01T00:00:00Z",
+        "value": "2026-10-01T00:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "Y29tcG9zZWQtbGF0ZQ==",
+        "origin": "synthetic-fixture",
+        "sha256": "82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0",
+        "source_revision_id": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+      },
+      "revision_id": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914",
+        "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "pbp",
+        "source_set_id": "sha256:45b9801bc07835f59d1249e6c131e190ba11a9f29ea9591adc3547c5a0ea1fe3"
+      },
+      "revision_id": "sha256:45b9801bc07835f59d1249e6c131e190ba11a9f29ea9591adc3547c5a0ea1fe3"
+    }
+  ]
+}
