@@ -1,0 +1,78 @@
+{
+  "base": "8176e08668a6db4c837fb4de60f52d9b9011217e",
+  "databaseConnected": false,
+  "diffCheck": "PASSED",
+  "e5aTestsPassed": 23,
+  "e5aVerifier": {
+    "golden_cases_passed": 26,
+    "package": "nfl-sideline-metrics-e5a",
+    "production_implemented": false,
+    "version": "1.0.0"
+  },
+  "e5b1ByteRegression": {
+    "COMPLETED.json": "f4bd51634927522c8e739d4cf7e961f230dcf7680dcf2c8abfdaebd9db5a247f",
+    "game-audit.json": "55cad0226a51e79d2afa9a0b69bcf2f7f48ff559580a0869259b776190b424e7",
+    "limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+    "manifest.json": "9d62e79b79427b90f37857cf349295b46ea69f5738a32a20cde391ed684e3778",
+    "reconciliation.json": "bf3e83f394bc027de75111d5676535b436d3f0b3ea0d6bdcb7d807853fa088ea",
+    "statistics.json": "a65a40601207d5410ef66a5c2d571d743164040bc2d15a084c9ef751aa4b47f5"
+  },
+  "e5b2DryRun": {
+    "artifact_id": "sha256:711b52452a30630f6626dc13ee0c62fe169ac12bcf5519ef8e589f5160cef29d",
+    "calculation_id": "sha256:2c364020c9c5bf08c2eeaa5fd38eae161920e482cdf23d2b1dda29b4d61a245f",
+    "coverage_states": {
+      "AUDITABLE_SUBSET": 4,
+      "FULL_GAME_CONTENT": 1,
+      "NO_SOURCE_OBSERVATION": 1
+    },
+    "database_connected": false,
+    "games": 6,
+    "mode": "DRY_RUN",
+    "sources": 2,
+    "statistics": 60
+  },
+  "etlLog": "........................................................................ [ 24%]\n........................................................................ [ 49%]\n........................................................................ [ 74%]\n........................................................................ [ 98%]\n...                                                                      [100%]\n291 passed in 2.43s\n",
+  "etlTestsPassed": 291,
+  "examples": {
+    "point-in-time": {
+      "audit_id": "sha256:332dcc0dfcb308f7cf8f656c7ea1b87a0cb2138e5a1b421ff40e4d50754efb9b",
+      "result_id": "sha256:d143e83d8fab88df6d5619de1c37eabb232b842d4583b3b0532b1dac2f4fa403",
+      "sha256": "a86a88da94b54c72da6bf838ce59acc7a8785adfaeef25b1f7bcb159560b0bca"
+    },
+    "reconstruction": {
+      "audit_id": "sha256:055b3434f12bd350765ca96d8314f25bd06bb6bb14b13a36241af0c55f054403",
+      "result_id": "sha256:99c271731599bbe5d614d639dfed950fb6d035afb1cd8a7d8f110dae2cd2bbfe",
+      "sha256": "6ac7a72da2e24ba90995fc921711586c96bfecf5c6e5e981c47901212d04274c"
+    },
+    "unproven": {
+      "audit_id": "sha256:43fc8fdf4baf27a8e65d1a628bdaaa7973aeadf86875d673586cc547d54c65b4",
+      "result_id": "sha256:23cccb75554b36506b8a003078f267b39ea1835d5614f3f294e47e7401188204",
+      "sha256": "a88e29ba48c23d21928690d86c7328b05f0ddc58686973e225c88d971327f84b"
+    }
+  },
+  "frozenContractChecks": {
+    "candidateCommit": "5e976a315a167795222061175e582148bc570c33",
+    "candidateHashesChecked": 12,
+    "candidateUnmodified": true,
+    "diagnostic": "E5A_RAW_PBP_BOUNDARY",
+    "goldenCasesPassed": 26,
+    "localFiles": [],
+    "synthetic": {
+      "candidate_null_teams": "Invalid play teams",
+      "outside_population_null_teams": "Invalid play teams"
+    }
+  },
+  "protectedPathsUnchanged": [
+    "contracts/metrics/e5a-v1",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence",
+    "docs/plans/metrics/e5b-1",
+    "docs/plans/metrics/e5b-2",
+    "supabase",
+    "core-api",
+    "web-ui",
+    "Spec.md",
+    "docs/current-state.md"
+  ],
+  "scope": "OFFLINE_ONLY"
+}

@@ -3,6 +3,7 @@
 Base confirmada: `8176e08668a6db4c837fb4de60f52d9b9011217e`.
 Contrato interno `metrics-temporal-input-v1` / `metrics-temporal-result-v1`,
 algoritmo `metrics-temporal-1.0.0`, política `materialized-evidence-v1`.
+Detalhes finais e ajustes de política estão em [CONTRACT.md](CONTRACT.md).
 Nenhuma compatibilidade implícita com editorial, FrozenContext ou snapshot.
 
 ## Entrada materializada
@@ -17,7 +18,7 @@ season/phase, jogos, completude e períodos fechados. STATE congela estado e bou
 por game_id e calendar_revision_id. METADATA materializa documentos necessários.
 Cada cálculo preserva calculation_id, coverage_revision_id, calendar_revision_id,
 pbp_revision_id (SET), metadata_revision_ids, jogo congelado, completeness,
-model, versões, unknown_filter_flags_n e os 12 grupos de somas E5b-1.
+model, source_models por FILE, versões, unknown_filter_flags_n e os 12 grupos de somas E5b-1.
 Esses IDs não são aliases. O instante de derivação é separado, explícito no pedido;
 não exige existência passada do cálculo determinístico sobre fontes conhecidas.
 
@@ -34,7 +35,7 @@ explicitamente confiadas pelo chamador; essas premissas entram na saída.
 |---|---|---|
 | HASH_CHECK | nenhuma temporal; bytes FILE são rehashados | autenticidade, tempo, completude |
 | ARCHIVE_OBSERVATION | available_at conservador = recorded_at; observação local | disponibilidade anterior, ingestão, fim, completude |
-| SYSTEM_INGESTION | ingested_at = recorded_at | disponibilidade anterior ou estado do jogo |
+| SYSTEM_INGESTION | ingested_at e disponibilidade conservadora = recorded_at | disponibilidade anterior ou estado do jogo |
 | FINAL_OBSERVATION | FINAL e bound = recorded_at | encerramento exato anterior à observação |
 | EVENT_END_BOUND | bound explicitamente documentado em value | disponibilidade do documento antes de recorded_at |
 | CALENDAR_COMPLETE | completude do calendário indicado, value=true | período fechado |
@@ -47,15 +48,18 @@ Mesmo origem aceita exige kind/subject/value coerentes. PIT exige recorded_at
 < corte e dependências elegíveis para TODA evidência usada. Instantes das fontes
 exigem provas separadas de disponibilidade e ingestão. SET herda o máximo dos
 membros e preserva todos; CALENDAR/STATE/METADATA exigem seus próprios instantes
-mais as dependências. Evidência posterior nunca retrodata uma declaração.
+mais as dependências. Declarações aceitas necessárias entram no máximo de
+disponibilidade composto pelo recorded_at conservador e precisam anteceder o corte
+antes de disputar a seleção. SYSTEM_INGESTION também prova disponibilidade no mesmo
+instante, nunca anterior; FILE/SET e payloads originais permanecem preservados. Evidência posterior nunca retrodata uma declaração.
 
 ## Seleção, janelas e saída
 
 PIT: validar tudo, selecionar calendário elegível por (available_at, revision_id),
 selecionar estados por jogo na mesma ordem, filtrar FINAL/bound < corte, selecionar
 cálculos sobre o calendário escolhido e fontes inteiras elegíveis por
-(max available_at das dependências necessárias, calculation_id). Para o cálculo,
-calculation_id apenas desempata a revisão de cálculo; source_set_id identifica
+(max disponibilidade das dependências/evidências necessárias, revision_id). Para o cálculo,
+revision_id apenas desempata a revisão temporal do pacote; source_set_id identifica
 os bytes compostos usados. Nenhum recálculo cria disponibilidade retroativa.
 EVENT_RECONSTRUCTION exige mapa explícito de calendário/estados/cálculos; nunca
 escolhe revisão atual silenciosamente. Bound ainda precisa passar corte, mas
