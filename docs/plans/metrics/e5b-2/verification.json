@@ -1,0 +1,78 @@
+{
+  "base": "882c9013ec1a1cd08f2d0b7049fb74ff1cdb8491",
+  "branch": "codex/metrics-persistence-e5b2",
+  "concurrentIdenticalPersistencesNoDuplicates": true,
+  "containersCreated": [],
+  "correctionPreservesPrevious": true,
+  "date": "2026-10-09",
+  "dockerLimitation": "Docker API inspection timed out; native isolated PostgreSQL used. Existing stack not inspected successfully or modified.",
+  "e5aExamplesPassed": 26,
+  "e5aFrozenHashesChecked": 12,
+  "e5aOriginalTestsPassed": 23,
+  "envRead": false,
+  "etlOfflineTestsPassed": 199,
+  "failuresFinal": 0,
+  "firstInsertions": 102,
+  "gitDiffCheck": "PASS",
+  "historicalPointInTimeCertified": false,
+  "initialIssuesCorrected": [
+    "Harness CREATE DATABASE context transaction corrected to standalone autocommit.",
+    "FK test used existing key; changed to fresh key to exercise SQL FK rather than immutable conflict."
+  ],
+  "instance": {
+    "database": "nfl_e5b2_56ce36bfb0a8",
+    "host": "127.0.0.1",
+    "instance_id": "56ce36bf-b0a8-4c63-a79a-0b21c67936c5",
+    "port": 55482
+  },
+  "instanceStopped": true,
+  "javaFrontendExecuted": false,
+  "localRoots": [
+    "/tmp/nfl-e5b2-instance-20261009",
+    "/tmp/nfl-e5b2-instance-20261009-02",
+    "/tmp/nfl-e5b2-instance-20261009-03",
+    "/tmp/nfl-e5b2-instance-20261009-04",
+    "/tmp/nfl-e5b2-pg-runtime",
+    "/tmp/postgresql-17.6",
+    "/tmp/nfl-e5b2-proof-final",
+    "/tmp/nfl-e5b2-proof-final-04",
+    "/tmp/nfl-e5b2-original-cli-regression"
+  ],
+  "migration": "supabase/migrations/20261009180021_metrics_persistence_e5b2.sql",
+  "migrationSha256": "4634d43181d33d7dbfaa772411fdabd6a2b1a6efa867df215f72edd1bd8945e5",
+  "modelEvidenceChangesCalculationWithoutOverwritingCoverage": true,
+  "offlineCliSixFilesByteIdentical": true,
+  "port55482Released": true,
+  "postgresRealTestsPassed": 51,
+  "publicRolesAndInheritedProbeBlocked": true,
+  "realWriterLoginUsed": true,
+  "recoveryPreservesReceipts": true,
+  "remaining": [
+    "Full Supabase stack/advisors not executed because Docker API did not respond.",
+    "E5b-3 temporal revision selection and independent evidence of historical availability/event closure."
+  ],
+  "remoteDatabaseAccess": false,
+  "remoteHostAndWrongMarkerAndPrivilegedLoginRefused": true,
+  "repeatInsertions": 0,
+  "repeatReused": 102,
+  "rlsTablesEnabledAndForced": 11,
+  "rollbackCheckpoints": [
+    "after_archive",
+    "after_sources",
+    "before_commit"
+  ],
+  "runtime": {
+    "polars": "1.44.1",
+    "postgres": "17.6",
+    "psycopg2": "2.9.12",
+    "pytest": "9.0.2",
+    "python": "3.11.13",
+    "supabaseCli": "2.117.0"
+  },
+  "schemaAndDomainAndCompositePublicGrantsAbsent": true,
+  "skips": 0,
+  "sqlNumericExactRoundTrip": true,
+  "unknownPartialSubsetPreserved": true,
+  "weeklyIntegration": false,
+  "writerUpdateDeleteTruncateBlocked": true
+}

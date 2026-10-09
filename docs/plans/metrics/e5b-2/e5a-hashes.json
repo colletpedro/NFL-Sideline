@@ -1,0 +1,12 @@
+{
+  "diagnostic": "E5A_RAW_PBP_BOUNDARY",
+  "candidateUnmodified": true,
+  "candidateCommit": "5e976a315a167795222061175e582148bc570c33",
+  "candidateHashesChecked": 12,
+  "synthetic": {
+    "outside_population_null_teams": "Invalid play teams",
+    "candidate_null_teams": "Invalid play teams"
+  },
+  "goldenCasesPassed": 26,
+  "localFiles": []
+}

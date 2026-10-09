@@ -1,0 +1,28 @@
+test_a_complete_game_without_role_plays_does_not_disappear (test_verify.ContractExamples.test_a_complete_game_without_role_plays_does_not_disappear) ... ok
+test_absence_is_not_zero_and_zero_is_not_success (test_verify.ContractExamples.test_absence_is_not_zero_and_zero_is_not_success) ... ok
+test_all_hand_authored_goldens (test_verify.ContractExamples.test_all_hand_authored_goldens) ... ok
+test_attack_defense_reconcile_same_plays_every_foundation (test_verify.ContractExamples.test_attack_defense_reconcile_same_plays_every_foundation) ... ok
+test_contract_ids_and_formulas_are_explicit (test_verify.ContractExamples.test_contract_ids_and_formulas_are_explicit) ... ok
+test_descriptive_comparison_integrity_is_not_statistical_minimum (test_verify.ContractExamples.test_descriptive_comparison_integrity_is_not_statistical_minimum) ... ok
+test_future_addition_changes_no_observed_statistics (test_verify.ContractExamples.test_future_addition_changes_no_observed_statistics) ... ok
+test_general_reconciles_partition_not_average_of_foundations (test_verify.ContractExamples.test_general_reconciles_partition_not_average_of_foundations) ... ok
+test_identical_duplication_does_not_double_sample (test_verify.ContractExamples.test_identical_duplication_does_not_double_sample) ... ok
+test_metric_coverage_is_per_foundation_and_missing_epa_distinct (test_verify.ContractExamples.test_metric_coverage_is_per_foundation_and_missing_epa_distinct) ... ok
+test_mixed_seasons_or_phases_are_rejected_at_rollup_boundary (test_verify.ContractExamples.test_mixed_seasons_or_phases_are_rejected_at_rollup_boundary) ... ok
+test_named_gap_cause_requires_evidence (test_verify.ContractExamples.test_named_gap_cause_requires_evidence) ... ok
+test_pass_attempt_and_dropback_are_distinct_from_classified_pass (test_verify.ContractExamples.test_pass_attempt_and_dropback_are_distinct_from_classified_pass) ... ok
+test_permutation_every_order_of_classification_fixture (test_verify.ContractExamples.test_permutation_every_order_of_classification_fixture) ... ok
+test_permutation_larger_ledger (test_verify.ContractExamples.test_permutation_larger_ledger) ... ok
+test_pit_unavailable_revisions_remain_expected (test_verify.ContractExamples.test_pit_unavailable_revisions_remain_expected) ... ok
+test_removing_source_data_never_increases_coverage (test_verify.ContractExamples.test_removing_source_data_never_increases_coverage) ... ok
+test_split_overlapping_batches_require_deduplication (test_verify.ContractExamples.test_split_overlapping_batches_require_deduplication) ... ok
+test_split_recombine_preserves_sufficient_statistics (test_verify.ContractExamples.test_split_recombine_preserves_sufficient_statistics) ... ok
+test_temporal_precision_boundary_and_availability (test_verify.ContractExamples.test_temporal_precision_boundary_and_availability) ... ok
+test_tiny_sign_survives_exact_cancellation (test_verify.ContractExamples.test_tiny_sign_survives_exact_cancellation) ... ok
+test_unknown_flag_invalid_schema_and_calendar_collision (test_verify.ContractExamples.test_unknown_flag_invalid_schema_and_calendar_collision) ... ok
+test_weighted_sum_differs_from_weekly_average (test_verify.ContractExamples.test_weighted_sum_differs_from_weekly_average) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.020s
+
+OK
