@@ -41,7 +41,13 @@ Incorporada à branch local `codex/metrics-integration-e5b2`, sobre `95e0686`, `
 
 A revisão reproduziu **199 testes offline e 51 PostgreSQL reais**, sem falhas/skips, checks E5a e regressão byte a byte da CLI E5b-1. Prova real: 102 inserções iniciais, zero na reexecução, revisões/receipts preservados e rollback/recuperação. A instância própria da revisão na porta 55483 foi encerrada; main, banco remoto, snapshots e consumidores permanecem intactos. [Aceite e limites](plans/metrics/e5b-2/integration-review.md).
 
-**Pendência de infraestrutura:** stack Supabase completa/advisors não executados; o aceite é limitado ao PostgreSQL nativo descartável, não aplicação remota ou certificação completa da plataforma. Essa verificação deve preceder aplicação fora do ambiente descartável. Próximo passo de desenvolvimento: **E5b-3, seleção temporal e janelas puras**, preservando evidências UNKNOWN e sem alegar reconstrução histórica POINT_IN_TIME. Java, ETL semanal, backfill e visual continuam nas etapas posteriores.
+**Pendência de infraestrutura:** stack Supabase completa/advisors não executados; o aceite é limitado ao PostgreSQL nativo descartável, não aplicação remota ou certificação completa da plataforma. Essa verificação deve preceder aplicação fora do ambiente descartável. Java, ETL semanal, backfill e visual continuam nas etapas posteriores.
+
+## Seleção temporal E5b-3 — candidata em revisão
+
+O candidato `767cf7f`, branch `codex/metrics-temporal-e5b3`, implementa núcleo Python puro, CLI offline, quatro janelas e seleção temporal com auditoria. A revisão reproduziu 292 testes ETL, checks E5a, 12 hashes, regressões byte a byte e dry-run E5b-2 sem banco. **Ainda não foi incorporado nem aceito:** três contraprovas demonstraram dois problemas. SEASON_TO_CUTOFF exige fechamento da semana aberta do alvo/semanas futuras; comparison aceita parâmetros de período diferentes sob o mesmo nome de janela. [Revisão e correções exigidas](plans/metrics/e5b-3-review/REVIEW.md).
+
+Próximo passo: corrigir essas duas propriedades na frente E5b-3 e repetir o gate offline antes de E5b-4. O materializador E5b-2 → entrada temporal e o contrato Java permanecem separados e pendentes. Fixtures sintéticas não certificam conhecimento histórico real; UNKNOWN continua explícito. Main, produção, snapshots e consumidores permanecem preservados.
 
 ## Política de arquivos
 
