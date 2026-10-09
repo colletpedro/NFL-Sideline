@@ -1,4 +1,4 @@
-# Estado consolidado — 08/10/2026
+# Estado consolidado — 09/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -23,11 +23,17 @@ Esta página sucede os estados operacionais descritos em [avaliação de cobertu
 
 ## Contrato de métricas E5a
 
-O pacote candidato `metrics-core-1.0.0` foi incorporado à branch local `codex/metrics-integration-e5a`, com suas evidências originais preservadas. A revisão adotou população classificada, denominadores por fundamento, volume independente de EPA, somas por jogo/revisão e separação entre corte do evento e disponibilidade dos bytes como base de **E5b-1 offline**. **Não há métricas novas no ETL, banco, Java, visual ou Production.**
+O pacote candidato `metrics-core-1.0.0` foi incorporado à branch local `codex/metrics-integration-e5a`, com suas evidências originais preservadas. A revisão adotou população classificada, denominadores por fundamento, volume independente de EPA, somas por jogo/revisão e separação entre corte do evento e disponibilidade dos bytes como base de **E5b-1 offline**. O adapter offline agora calcula essas estatísticas; **não há integração ao ETL principal, banco, Java, visual ou Production**.
 
-O verificador sintético rejeita linhas reais fora de passe/corrida com posse/defesa nulas. O adapter deverá separar validação estrutural do conjunto bruto da validação dos candidatos, preservar auditoria e continuar rejeitando candidatos com times inválidos. A [decisão e errata obrigatória](plans/metrics/e5a-review/REVIEW.md) acompanham o [contrato candidato](../contracts/metrics/e5a-v1/README.md); não é aceite do verificador como adapter bruto. Reexecutados 26 exemplos, 23 testes e 12 hashes; o diagnóstico foi confirmado em três Parquets locais opcionais, sem aquisição.
+O verificador sintético rejeita linhas reais fora de passe/corrida com posse/defesa nulas. O adapter E5b-1 resolveu a fronteira entre conjunto bruto e candidatos, preservando auditoria e rejeição de candidatos com times inválidos. A [decisão e errata](plans/metrics/e5a-review/REVIEW.md) acompanham o [contrato candidato](../contracts/metrics/e5a-v1/README.md); o modelo congelado continua com sua limitação original. Reexecutados 26 exemplos, 23 testes e 12 hashes; o diagnóstico histórico foi preservado.
 
-Próximo passo: join calendário/PBP e somas por jogo em CLI dry-run, sem migration ou consumidor público. Completude, encerramento, disponibilidade histórica e versão do modelo EPA seguem desconhecidos onde não há prova. E4 humano, BASIC/FULL e cinco falhas legadas permanecem pendentes.
+## Adapter offline E5b-1
+
+Incorporado à branch local `codex/metrics-integration-e5b1`, sobre os commits `d86d73b` e `9dd9397`: join calendário/PBP, fase/round, dedup/conflitos, população classificada e somas/contagens exatas por jogo/time/papel/fundamento. CLI sem banco/rede/.env; artefato interno `metrics-offline-v1`, publicação atômica em destino novo, sem sobrescrita. Estados UNKNOWN/subset e jogos sem fonte permanecem explícitos.
+
+Revisão reproduziu 162 testes ETL, 26 exemplos/23 testes E5a, 12 hashes congelados, CLI determinística byte a byte, hashes/identidade do cálculo, recusa de sobrescrita e rejeição sem saída parcial. Auditoria opcional confirmou os seis hashes anteriores e contagens das três temporadas, sem aquisição. [Aceite e transição](plans/metrics/e5b-1/integration-review.md) e [uso do adapter](plans/metrics/e5b-1/README.md).
+
+Próximo passo: persistência/proveniência **E5b-2 em stack local isolada**; ainda sem migration implementada ou consumidor público. Completude, encerramento, disponibilidade histórica e versão do modelo EPA seguem desconhecidos onde não há prova. Corte/seleção de revisões ficam para E5b-3. E4 humano, BASIC/FULL e cinco falhas legadas permanecem pendentes.
 
 ## Política de arquivos
 
