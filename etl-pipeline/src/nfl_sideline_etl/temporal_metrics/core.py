@@ -53,7 +53,7 @@ def select(document, request):
     normalized_cut, date_mapping = validate_request(request)
     resources, proofs, calculations = validate(document)
     policy = Policy(resources, proofs, document['policy'], request['mode'], instant(normalized_cut))
-    decisions, used_resources, used_proofs = [], set(), set()
+    decisions, used_resources, used_proofs, used_calculations = [], set(), set(), set()
 
     def use_proof(envelope, subject, kinds):
         status, proof = policy.proof(envelope, subject, kinds)
@@ -221,6 +221,7 @@ def select(document, request):
                 continue
             c = chosen
             selected_calculations.append(c)
+            used_calculations.add(c['revision_id'])
             used_resources.update(policy.closure([c['calendar_revision_id'], c['pbp_revision_id'], *c['metadata_revision_ids']]))
             event.update(calculationRevisionId=c['revision_id'], calculationId=c['calculation_id'], coverageRevisionId=c['coverage_revision_id'], sourceSetId=c['pbp_revision_id'])
             complete_status = use_proof(c['completeness'], c['coverage_revision_id'], {'PBP_COMPLETE'})
@@ -312,6 +313,7 @@ def select(document, request):
                 'policy': document['policy'], 'request': normalized_request, 'asOfDateMapping': date_mapping,
                 'pregame': pregame, 'blocks': blocks,
                 'resourcesUsed': [resources[r] for r in sorted(used_resources)],
+                'calculationsUsed': [calculations[c] for c in sorted(used_calculations)],
                 'evidenceUsed': [proofs[e] for e in sorted(used_proofs)]}
     # Canonicalize unordered input collections within the semantic projection.
     semantic = canonical(semantic)

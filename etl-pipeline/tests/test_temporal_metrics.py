@@ -811,3 +811,12 @@ def test_temporal_metadata_decimal_strings_required(package,query):
     package['resources'].append({'revision_id':'floating-metadata','kind':'METADATA','dependencies':[],'available_at':None,'ingested_at':None,'payload':{'origin':'synthetic','document':{'value':1.25}}})
     with pytest.raises(ValueError,match='decimal strings'):
         select(package,query)
+
+
+def test_selected_calculations_preserve_per_game_audit(package,query):
+    result=select(package,query)
+    selected={c['revision_id']:c for c in result['calculationsUsed']}
+    assert set(selected)=={'revision:alpha-old','revision:beta'}
+    assert selected['revision:alpha-old']==calc(package)
+    assert selected['revision:beta']==calc(package,'beta')
+    assert sum(next(r['epa_n'] for r in c['statistics'] if (r['team'],r['role'],r['foundation'])==('A','off','general')) for c in selected.values())==aggregate(result)['sums']['epa_n']
