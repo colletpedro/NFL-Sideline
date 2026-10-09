@@ -1,8 +1,8 @@
-# Contrato interno E5b-3 v1
+# Contrato interno E5b-3 — correção 1.0.1
 
 Autoridade executável: `temporal_metrics.validation`, `evidence`, `times` e `core`.
-Entrada **metrics-temporal-input-v1**; saída **metrics-temporal-result-v1**;
-algoritmo **metrics-temporal-1.0.0**; política **materialized-evidence-v1**.
+Entrada **metrics-temporal-input-v2** (também aceita v1 fechado); saída **metrics-temporal-result-v2**;
+algoritmo **metrics-temporal-1.0.1**; política **materialized-evidence-v1**.
 É separado de metrics-offline-v1, contexto editorial e snapshot público.
 O [desenho anterior ao código](DESIGN.md) registra a intenção; este documento
 fecha os detalhes e ajustes de implementação.
@@ -154,7 +154,7 @@ Reagendamento exige ID/estado/calendário congelados; week não resolve sozinho.
 
 A expectativa parte dos jogos do calendário, filtrados por time/escopo. Fonte
 faltante não tira evento temporalmente elegível do denominador. Calendário sem
-completude, semanas abertas ou evento incerto tornam expectedGames=null e
+completude, evento incerto ou semana solicitada aberta nas janelas semanais tornam expectedGames=null e
 sourceRatio=null; IDs conhecidos/incertos continuam listados. Zero esperado tem
 razão null. BYE exige calendário completo + período fechado + ausência de evento;
 remover target não transforma a sua semana em bye. Sem fonte, causa específica
@@ -199,3 +199,61 @@ CLI JSON valida antes de criar destino final. `COMPLETED.json` conserva hashes e
 IDs. Publicação em diretório novo por rename exclusivo, limpeza de staging em erro,
 recusa de sobrescrita/symlink existente/public/data, inclusive via caminho resolvido.
 Não há leitura de .env, DB, rede, SQL, aquisição ou writer na execução temporal.
+
+## Política corrigida antes da implementação (1.0.1)
+
+SEASON_TO_CUTOFF e HISTORICAL_REFERENCE usam todos os eventos do time no
+calendário completo da temporada/fase explícita e classificam cada ID:
+1. targetGameId excluído, independentemente de semana/estado;
+2. fora do corte se há limite inferior aceito do início efetivo >= corte;
+3. elegível se FINAL com limite superior aceito de encerramento < corte;
+4. incerto em todos os demais casos (inclusive upper bound >= corte).
+Jogo elegível sem PBP continua esperado. Completude do calendário é necessária
+para afirmar que não há IDs omitidos; calendário incompleto dá UNKNOWN mesmo
+com todos os IDs conhecidos classificados. IDs incertos e motivos são auditáveis.
+
+Fechamento semanal não define o denominador destas duas janelas por evento.
+Uma semana aberta pode conter eventos já encerrados, alvo e eventos fora do corte.
+Não se declara a semana fechada nem bye por isso. PERIOD_NOT_CLOSED continua
+obrigatório para WEEK_OBSERVATION e LAST_3_CALENDAR_WEEKS; suas semanas não são
+estendidas/substituídas. requestedWeeks acumuladas é apenas inventário de semanas
+do calendário; não define o período solicitado nem sua assinatura.
+
+Novo campo opcional STATE.event_lower_bound (somente input-v2): envelope de
+instante com EVENT_START_LOWER_BOUND, sujeito STATE. Seu value é uma prova
+materializada de que o início efetivo não ocorreu antes desse limite, inclusive
+uma observação documentada de não início até aquele instante; não é kickoff
+previsto. A política exige valor/offset semanticamente igual, origem confiada,
+dependências e recorded_at >= bound. PIT exige conhecimento/bytes antes do corte.
+Assim um documento recebido antes do corte que apenas prevê kickoff futuro NÃO
+prova este bound: prova de não início até/depois do corte normalmente só existe
+retrospectivamente. Isso mantém UNKNOWN em PIT sem prova suficiente. SCHEDULED
+sozinho é incerto. Bound inferior aceito > bound superior aceito aborta como
+EVENT_BOUNDS_CONFLICT. Kickoff permanece prova separada de pregame.
+
+Reagendamento conserva calendário e estado congelados e vínculo exato por ID;
+uma revisão posterior não disputa PIT. EVENT_RECONSTRUCTION exige mapa nominal
+inclusive para eventos futuros/incertos e relata provas posteriores. Sem prova
+nova suficiente, reagendamento é incerto; week/data/placar/duração não resolvem.
+Nenhuma alteração do adapter/schema/archive/writer E5b-1/2 é necessária. Lacuna
+para futuro materializador: recuperar documento de limite inferior com origem,
+recebimento, dependências e vínculo STATE; não derivar do calendário mutável.
+
+Cada bloco v2 publica requestedPeriod: window, season, phase, origin, mode,
+cutoff UTC e selection. WEEK usa {week}; LAST_3 usa {weeks: lista ordenada única}
+(inclusive vazio); acumulada/histórica usa {eventEndBefore: cutoff}. Histórico
+conserva season/phase históricos e origin próprio, sem fallback. Não entram
+team, targetWeek fora das janelas recentes, gameIds, actualWeeks ou result_id.
+comparison recalcula a assinatura normalizada a partir do pedido e escopo,
+rejeitando MISMATCH_REQUESTED_PERIOD; preserva checks antigos e valores originais.
+Offsets equivalentes e listas de semanas semanticamente equivalentes são iguais.
+
+Versionamento: input-v1 mantém exatamente os campos/kinds anteriores; v2 aceita
+opcional lower bound. Inputs v1 ainda podem ser lidos, com futuro sem prova dando
+UNKNOWN. Resultado v2 é deliberadamente uma nova estrutura (requestedPeriod,
+outsideCutoffGameIds e auditoria de lower bound); NÃO se anuncia compatibilidade
+para consumidores result-v1. Mesmo inputs v1 geram result-v2. Política de confiança
+materialized-evidence-v1 permanece; algoritmo 1.0.1 muda seleção/expectativa e
+comparação. Exemplos/verification 1.0.0 e docs historical-1.0.0 são históricos,
+não gate atual. Versões e blocos alteram result_id; audit_id deriva do resultado,
+decisões, pacote e derivedAt, e muda também. IDs E5b-1/2 não são recalculados.
