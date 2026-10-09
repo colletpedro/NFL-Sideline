@@ -96,7 +96,8 @@ PBP não melhora cobertura. Audit_id registra alterações de entrada/execução
 
 Durante desenvolvimento houve correções dos próprios testes (nome reservado
 request, reutilização do pedido retrospectivo, ordem de array de razões e instante
-da revisão contrafactual após o máximo de evidência requerido). Os ledgers manuais,
+da revisão contrafactual após o máximo de evidência requerido e comparação da
+auditoria por chave de grupo, independentemente de ordenação). Os ledgers manuais,
 pacote E5a e estatísticas/artefatos aceitos não foram ajustados para passar testes.
 
 O núcleo aplica uma **política condicional sobre evidência materializada**. Strings

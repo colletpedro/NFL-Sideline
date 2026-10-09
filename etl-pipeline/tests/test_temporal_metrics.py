@@ -817,6 +817,9 @@ def test_selected_calculations_preserve_per_game_audit(package,query):
     result=select(package,query)
     selected={c['revision_id']:c for c in result['calculationsUsed']}
     assert set(selected)=={'revision:alpha-old','revision:beta'}
-    assert selected['revision:alpha-old']==calc(package)
-    assert selected['revision:beta']==calc(package,'beta')
+    for label in ('alpha-old','beta'):
+        actual=selected['revision:'+label]; expected=calc(package,label)
+        assert {k:v for k,v in actual.items() if k!='statistics'}=={k:v for k,v in expected.items() if k!='statistics'}
+        groups=lambda c:{(r['team'],r['role'],r['foundation']):r for r in c['statistics']}
+        assert groups(actual)==groups(expected)
     assert sum(next(r['epa_n'] for r in c['statistics'] if (r['team'],r['role'],r['foundation'])==('A','off','general')) for c in selected.values())==aggregate(result)['sums']['epa_n']

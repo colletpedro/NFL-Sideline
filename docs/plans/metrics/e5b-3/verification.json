@@ -31,23 +31,23 @@
     "sources": 2,
     "statistics": 60
   },
-  "etlLog": "........................................................................ [ 24%]\n........................................................................ [ 49%]\n........................................................................ [ 74%]\n........................................................................ [ 98%]\n...                                                                      [100%]\n291 passed in 2.43s\n",
-  "etlTestsPassed": 291,
+  "etlLog": "........................................................................ [ 24%]\n........................................................................ [ 49%]\n........................................................................ [ 73%]\n........................................................................ [ 98%]\n....                                                                     [100%]\n292 passed in 2.49s\n",
+  "etlTestsPassed": 292,
   "examples": {
     "point-in-time": {
-      "audit_id": "sha256:332dcc0dfcb308f7cf8f656c7ea1b87a0cb2138e5a1b421ff40e4d50754efb9b",
-      "result_id": "sha256:d143e83d8fab88df6d5619de1c37eabb232b842d4583b3b0532b1dac2f4fa403",
-      "sha256": "a86a88da94b54c72da6bf838ce59acc7a8785adfaeef25b1f7bcb159560b0bca"
+      "audit_id": "sha256:ddd742ea4d406bd832706eb5d922e0cd4ccaed93dc745fc45a0c7c8f24dc588a",
+      "result_id": "sha256:9c8f95abde2a66bc65e3e290dcbfe4e2a7beffb46229e81885c557a39ee2d409",
+      "sha256": "2bbf86c74a9e5430177a9f6e9db782638e6a43b355da4bde6b47f6320753ff99"
     },
     "reconstruction": {
-      "audit_id": "sha256:055b3434f12bd350765ca96d8314f25bd06bb6bb14b13a36241af0c55f054403",
-      "result_id": "sha256:99c271731599bbe5d614d639dfed950fb6d035afb1cd8a7d8f110dae2cd2bbfe",
-      "sha256": "6ac7a72da2e24ba90995fc921711586c96bfecf5c6e5e981c47901212d04274c"
+      "audit_id": "sha256:92e169d0fdb83881ec250184e296cdd6838fd75db23cd6b56de35f6c8def2b7b",
+      "result_id": "sha256:ab540773f4cb832cbb070726588dd3e4aa96f11d614821b0e7dc6d36ca02b197",
+      "sha256": "454addac803d918a6a3b924d461c307e24e16d996bbf9c13642b3d42f19e7073"
     },
     "unproven": {
-      "audit_id": "sha256:43fc8fdf4baf27a8e65d1a628bdaaa7973aeadf86875d673586cc547d54c65b4",
-      "result_id": "sha256:23cccb75554b36506b8a003078f267b39ea1835d5614f3f294e47e7401188204",
-      "sha256": "a88e29ba48c23d21928690d86c7328b05f0ddc58686973e225c88d971327f84b"
+      "audit_id": "sha256:0b430877d42939ee492e4f2cb76abfbf627b4a430d5adb6a274bc2b24335fdc9",
+      "result_id": "sha256:527a2b7f34d094626c5ed7ff4c24120d4db1457fbb68c87271393b8f6b514873",
+      "sha256": "7734a86e9196e68ea56cd9bf5364d0d9a934f67d80f111aed846055a34052484"
     }
   },
   "frozenContractChecks": {
