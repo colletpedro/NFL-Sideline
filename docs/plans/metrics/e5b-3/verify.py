@@ -30,7 +30,25 @@ def main():
     args = parser.parse_args()
     if args.output.exists():
         parser.error('Report already exists')
-    report = {'base': BASE, 'scope': 'OFFLINE_ONLY', 'databaseConnected': False}
+    report = {'base': BASE, 'scope': 'OFFLINE_ONLY', 'databaseConnected': False,
+              'algorithmVersion':'metrics-temporal-1.0.1', 'resultVersion':'metrics-temporal-result-v2',
+              'historicalEvidenceHead':'767cf7f1d15f26022a7c4a982545a6c24c125134',
+              'candidateHead':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()}
+    report['testedSourceHashes'] = {
+        str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in sorted((ROOT/'etl-pipeline/src/nfl_sideline_etl/temporal_metrics').glob('*.py'))}
+    report['testedSourceHashes'].update({
+        str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in sorted((ROOT/'etl-pipeline/tests').glob('test_temporal_metrics*.py'))})
+    report['historicalEvidenceHashes'] = {}
+    historical = ROOT/'docs/plans/metrics/e5b-3'
+    paths = [historical/'verification.json', *sorted((historical/'examples').rglob('*.json'))]
+    for path in paths:
+        relative = str(path.relative_to(ROOT))
+        old = subprocess.check_output(['git','show',report['historicalEvidenceHead']+':'+relative],cwd=ROOT)
+        if old != path.read_bytes():
+            raise RuntimeError('Historical 1.0.0 evidence changed: '+relative)
+        report['historicalEvidenceHashes'][relative] = hashlib.sha256(old).hexdigest()
     stdout, _ = python('-m', 'pytest', 'etl-pipeline', '-q', '-p', 'no:cacheprovider')
     report['etlTestsPassed'] = int(re.search(r'(\d+) passed', stdout).group(1))
     report['etlLog'] = stdout
@@ -83,12 +101,25 @@ def main():
                 command.extend(['--retrospective',str(FIXTURES/'retrospective.json')])
             python(*command)
             data = (destination/'result.json').read_bytes()
-            saved = ROOT/'docs/plans/metrics/e5b-3/examples'/name/'result.json'
+            saved = ROOT/'docs/plans/metrics/e5b-3/correction-1.0.1/examples'/name/'result.json'
             if data != saved.read_bytes():
                 raise RuntimeError('Versioned example differs: ' + name)
             result = json.loads(data)
             report['examples'][name] = {'result_id':result['result_id'],'audit_id':result['audit_id'],
                                       'sha256':hashlib.sha256(data).hexdigest()}
+            old = json.loads((ROOT/'docs/plans/metrics/e5b-3/examples'/name/'result.json').read_text())
+            report['examples'][name]['historicalResultId'] = old['result_id']
+            report['examples'][name]['historicalAuditId'] = old['audit_id']
+            completed = (destination/'COMPLETED.json').read_bytes()
+            if completed != (saved.parent/'COMPLETED.json').read_bytes():
+                raise RuntimeError('Current marker differs: '+name)
+        after = temp/'counterexamples-after.json'
+        python('docs/plans/metrics/e5b-3/correction-1.0.1/reproduce.py','--output',str(after))
+        report['counterexamplesAfter'] = json.loads(after.read_text())
+        saved_after = json.loads((ROOT/'docs/plans/metrics/e5b-3/correction-1.0.1/counterexamples-after.json').read_text())
+        if report['counterexamplesAfter']['cases'] != saved_after['cases']:
+            raise RuntimeError('Corrected counterexamples differ')
+        report['counterexamplesBeforeSha256'] = hashlib.sha256((ROOT/'docs/plans/metrics/e5b-3/correction-1.0.1/counterexamples-before.json').read_bytes()).hexdigest()
     run(['git', 'diff', '--check'])
     report['diffCheck'] = 'PASSED'
     args.output.parent.mkdir(parents=True, exist_ok=True)

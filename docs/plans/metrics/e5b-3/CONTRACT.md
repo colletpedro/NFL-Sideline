@@ -44,7 +44,7 @@ aqui se validam somas, vínculos e invariantes, sem recalcular jogadas.
 | FILE | source_revision_id, sha256, bytes_base64, origin | SHA conferido sobre bytes; revision_id=source_revision_id=sha256:hash |
 | SET | source_set_id, source_kind (calendar/pbp) | revision_id=hash canônico E5b-1 da lista ordenada de IDs FILE; dependencies são membros inteiros, preservando multiplicidade |
 | CALENDAR | season, phase, games, complete, closed_weeks | depende de SET calendar; cada game pertence à season/phase explícita |
-| STATE | game_id, calendar_revision_id, status, event_upper_bound, kickoff, source_cause? | depende do calendário indicado, game precisa existir nele |
+| STATE | game_id, calendar_revision_id, status, event_upper_bound, kickoff, source_cause?, event_lower_bound? (v2) | depende do calendário indicado, game precisa existir nele |
 | METADATA | origin, document | documento auxiliar explicitamente congelado, com dependências necessárias |
 
 `game`: game_id, season, phase, round, week, home_team, away_team.
@@ -182,15 +182,15 @@ comparisonEligible é elegibilidade conservadora para **eficiência descritiva**
 por fundamento: cobertura esperada completa conhecida, COMPLETE, EPA>=1, sem
 missing/nonfinite/flags desconhecidas, modelo conhecido compatível. Não é amostra
 mínima estatística. Valores permanecem separados quando false. `comparison()`
-também exige mesmas versões/papel/fundamento/modelo, season/phase/origin/window e
-mode/corte entre resultados, devolvendo os valores originais com razões de falha.
+também exige mesmas versões/papel/fundamento/modelo, season/phase/origin/window,
+mode/corte e assinatura normalizada do período solicitado entre resultados, devolvendo os valores originais com razões de falha.
 Volume observado, inclusive zero, continua auditável independentemente disso.
 StatisticalUncertainty é sempre NOT_ESTIMATED; sem threshold/confidence/edge.
 
 result_id é SHA da projeção semântica selecionada: pedido normalizado (sem momento
 de execução/mapa de alternativas), versões, política, blocos e fontes/evidências
 usadas. input_id inclui pacote integral; audit_id inclui decisões/alternativas e
-derivedAt. Acrescentar alternativa/jogo em calendário futuro inelegível conserva
+derivedAt. Acrescentar alternativa/jogo em uma revisão de calendário futuro inelegível conserva
 result_id; muda audit_id. Permutar coleções não muda resultado. Duplicata idêntica
 não aumenta amostra; presença da réplica fica auditável no input_id. derivedAt é
 instante explícito de derivação, sem sustentar conhecimento histórico.
@@ -257,3 +257,15 @@ materialized-evidence-v1 permanece; algoritmo 1.0.1 muda seleção/expectativa e
 comparação. Exemplos/verification 1.0.0 e docs historical-1.0.0 são históricos,
 não gate atual. Versões e blocos alteram result_id; audit_id deriva do resultado,
 decisões, pacote e derivedAt, e muda também. IDs E5b-1/2 não são recalculados.
+
+### Lacuna de exatidão no exemplo E5a
+
+O ledger congelado exclusive_cut_boundary declara event_time_basis=OFFICIAL_END.
+A antiga regressão E5b-3 descartava essa informação ao materializar apenas
+EVENT_END_BOUND. Na semântica de limite superior, bound igual ao corte não prova
+encerramento igual ao corte: o evento pode ter terminado antes. O teste temporal
+agora documenta UNKNOWN nessa materialização com perda de informação. Os 26
+exemplos/23 testes e 12 hashes E5a permanecem idênticos. Proposta mínima futura,
+se for necessário recuperar essa distinção: evidência separada EVENT_END_EXACT
+com igualdade documentada e validação de vínculo/tempo; não alterar ou promover
+silenciosamente EVENT_END_BOUND. Não implementada nesta correção.

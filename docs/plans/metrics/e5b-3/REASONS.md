@@ -1,4 +1,4 @@
-# Matriz mecânica de razões E5b-3 v1
+# Matriz mecânica de razões E5b-3 — algoritmo 1.0.1 / resultado v2
 
 Não há um booleano universal válido. Erro estrutural aborta; decisão de revisão,
 evento, cobertura, completude e comparação têm dimensões distintas.
@@ -23,7 +23,9 @@ evento, cobertura, completude e comparação têm dimensões distintas.
 | STATE_UNKNOWN_OR_INELIGIBLE | Nenhuma revisão de estado elegível: evento incerto, expectedGames=null |
 | EVENT_NOT_FINAL | Estado selecionado não é FINAL: evento fora, expectativa incerta |
 | EVENT_TIME_UNKNOWN | FINAL sem bound aceito: evento fora, expectativa incerta |
-| EVENT_NOT_BEFORE_CUTOFF | bound>=cutoff, preservando fração original: evento fora; não vira novo jogo/bye |
+| EVENT_NOT_BEFORE_CUTOFF | upper bound>=cutoff: não elegível, mas posição incerta; expectedGames=null, não prova evento futuro |
+| EVENT_PROVEN_OUTSIDE_CUTOFF | EVENT_START_LOWER_BOUND aceito >=cutoff: fora comprovado, ID em outsideCutoffGameIds; não exige fechamento da sua semana para janelas por evento |
+| EVENT_BOUNDS_CONFLICT | lower bound aceito > upper bound aceito: aborta; não escolhe prova conveniente |
 | PBP_REVISION_UNAVAILABLE_AT_CUTOFF | Evento elegível mas nenhum cálculo candidato passou política: continua no denominador esperado |
 | SOURCE_UNKNOWN | Sem observação/causa comprovada: lacuna, nunca zero nem causa inferida |
 | PBP_ABSENT / SOURCE_DELAY / INGESTION_FAILED | Só origem/kind/valor/vínculo/tempo aceitos sustentam causa específica; mantém expectativa |
@@ -31,7 +33,7 @@ evento, cobertura, completude e comparação têm dimensões distintas.
 | PREGAME_CUTOFF_AFTER_KICKOFF | Cutoff>kickoff aceito: pedido pregame falha antes da publicação |
 | CALENDAR_INELIGIBLE_OR_UNKNOWN | Calendário não selecionado: expectativa/percentual null |
 | CALENDAR_COMPLETENESS_UNPROVEN | Calendário conhecido mas completude não aceita: expectativa/percentual null |
-| PERIOD_NOT_CLOSED | Sem proof elegível das semanas pedidas: expectativa/percentual null; não é bye |
+| PERIOD_NOT_CLOSED | WEEK_OBSERVATION/LAST_3_CALENDAR_WEEKS sem proof elegível das semanas pedidas: expectativa/percentual null. Em acumulada/histórica o denominador depende da classificação temporal de todos os eventos, sem promover semana aberta a fechada/bye |
 | EVENT_EXPECTATION_UNCERTAIN | Eventos conhecidos cujo encerramento não pode ser situado: IDs incertos, expectativa null |
 | CALENDAR_UNKNOWN / NOT_YET_CLOSED | Estados semanais conservadores; não substituem byes/lacunas |
 | BYE | Calendário completo, período fechado e nenhum evento do time; não expande janela |
@@ -48,5 +50,11 @@ INCOMPLETE_SOURCE_COVERAGE, EPA_INCOMPLETE, UNKNOWN_FILTER_FLAGS,
 NO_EPA_OBSERVATIONS, EPA_MODEL_UNKNOWN, INCOMPATIBLE_EPA_MODELS_SEPARATED.
 Comparação entre dois resultados adiciona MISMATCH_<campo> para versão,
 papel/fundamento/modelo/scope, season/phase/origin/window e mode/corte.
+MISMATCH_REQUESTED_PERIOD identifica assinatura normalizada diferente (sem usar
+actualWeeks/time/IDs). WEEK exige mesma semana; recentes mesmo intervalo;
+acumulada/histórica usam season/phase/origin/mode/corte por evento.
 Valores originais permanecem disponíveis. Nenhuma razão define confiança,
 significância, favorito ou vencedor; incerteza estatística NOT_ESTIMATED.
+
+Registros 1.0.0: [matriz histórica](historical-1.0.0/REASONS.md),
+[verificação histórica](verification.json). Gate atual: [correção](correction-1.0.1/README.md).

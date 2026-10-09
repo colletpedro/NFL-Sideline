@@ -12,10 +12,14 @@ Implementação: `etl-pipeline/src/nfl_sideline_etl/temporal_metrics/`.
 `evidence.py` qualifica evidência segundo premissas explícitas e dependências;
 `core.py` seleciona revisões, eventos, quatro janelas, cobertura, razões exatas e
 comparação descritiva; `__main__.py` publica somente um destino novo offline.
-Versões: input/result v1, algoritmo 1.0.0, política materialized-evidence-v1.
+Versões atuais: input v2 (leitor v1 fechado), result v2, algoritmo 1.0.1, política materialized-evidence-v1.
+Veja [entrega da correção](correction-1.0.1/README.md), política e antes/depois.
+Result-v1 não é anunciado como compatível com a nova estrutura.
 População/definição/adapter E5b-1 permanecem intactos, sem fórmulas novas.
 
-## Exemplos completos
+## Exemplos completos históricos 1.0.0
+
+Exemplos corrigidos estão em [correction-1.0.1/examples](correction-1.0.1/examples).
 
 | Pedido em 2026-09-28T12:00:00Z | alpha | beta | Conhecimento/cobertura |
 |---|---|---|---|
@@ -76,8 +80,8 @@ python3.11 -B docs/plans/metrics/e5b-3/verify.py \
 git diff --check
 ```
 
-`verify.py` executa esses gates, regressão CLI E5b-1 byte a byte, dry-run E5b-2
-sem criar archive/conectar, regressão dos três exemplos pela CLI real e comparação
+`verify.py` é o gate **atual 1.0.1/result-v2** e executa esses gates, regressão CLI E5b-1 byte a byte, dry-run E5b-2
+sem criar archive/conectar, regressão dos três exemplos corrigidos pela CLI real, integridade dos registros históricos e comparação
 contra a base dos caminhos congelados. Usa diretórios temporários novos e os
 apaga; nenhum arquivo temporário pré-existente é dependência. Relatório também
 exige caminho novo. Não executa SQL/Java/frontend. Nesta máquina foi usado o
@@ -86,7 +90,7 @@ venv já instalado da origem, com PYTHONPATH da worktree:
 
 ## Validação e limites
 
-[verification.json](verification.json): **292 testes ETL offline**, incluindo
+Registro **histórico 1.0.0**, não gate atual: [verification.json](verification.json): **292 testes ETL offline**, incluindo
 **93 novos E5b-3**, oito regressões E5a temporais; **26 exemplos/23 testes E5a**,
 **12 hashes congelados**, seis arquivos E5b-1 iguais, dry-run E5b-2 sem DB/archive,
 três exemplos CLI completos idênticos, diff check aprovado. Sem skip/falha final.
@@ -117,3 +121,7 @@ Java precisa goldens de decimais/razões, revisão e hash novos, sem adaptar Fro
 Supabase completo/advisors continua pendente no escopo E5b-2. Não foi iniciado
 Docker/PostgreSQL, lido .env, acessada rede/banco, executado modelo, integrado
 consumidor, alterado artefato aceito/snapshot/editorial, feito push/deploy/merge.
+
+O verificador original foi conservado em historical-1.0.0/verify.py como registro
+do código (seus caminhos pertencem à localização original). Para reproduzir o gate
+antigo use o HEAD 767cf7f; para o gate atual use verify.py na raiz desta frente.

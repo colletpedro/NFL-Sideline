@@ -1,0 +1,60 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_______ test_excluded_target_open_week_does_not_change_prior_coverage[4] _______
+
+package = {'calculations': [{'calculation_id': 'calculation:alpha-old', 'calendar_revision_id': 'calendar-v1', 'completeness': {...mporal-input-v1', 'policy': {'policyVersion': 'materialized-evidence-v1', 'trustedOrigins': ['synthetic-system']}, ...}
+query = {'asOfInstant': '2026-09-28T12:00:00Z', 'derivedAt': '2026-10-09T12:00:00Z', 'mode': 'POINT_IN_TIME', 'phase': 'REG', ...}
+target_week = 4
+
+    @pytest.mark.parametrize('target_week', [1, 4, 8, 18, 30])
+    def test_excluded_target_open_week_does_not_change_prior_coverage(package, query, target_week):
+        q = {**query, 'windows': ['SEASON_TO_CUTOFF']}
+        before = season(select(package, q))
+        next(g for g in revision(package, 'calendar-v1')['payload']['games'] if g['game_id'] == 'target')['week'] = target_week
+        after = season(select(package, q))
+>       assert before['coverage']['expectedGames'] == after['coverage']['expectedGames'] == 3
+E       assert 3 == None
+
+/tmp/e5b3-reviewed-767cf7f-regressions/test_review_cases.py:45: AssertionError
+_____________________ test_review_different_recent_windows _____________________
+
+package = {'calculations': [{'calculation_id': 'calculation:alpha-old', 'calendar_revision_id': 'calendar-v1', 'completeness': {...mporal-input-v1', 'policy': {'policyVersion': 'materialized-evidence-v1', 'trustedOrigins': ['synthetic-system']}, ...}
+query = {'asOfInstant': '2026-09-28T12:00:00Z', 'derivedAt': '2026-10-09T12:00:00Z', 'mode': 'POINT_IN_TIME', 'phase': 'REG', ...}
+
+    def test_review_different_recent_windows(package, query):
+        q = {**query, 'windows': ['LAST_3_CALENDAR_WEEKS'], 'targetWeek': 2}
+        args = aggregate_pair(package, q, {**q, 'targetWeek': 3})
+        assert args[0]['epa']['exact'] == args[1]['epa']['exact'] == '1/2'
+        assert args[2]['requestedWeeks'] == [1] and args[3]['requestedWeeks'] == [1, 2]
+        result = comparison(*args)
+>       assert result['failures'] == ['MISMATCH_REQUESTED_PERIOD']
+E       AssertionError: assert [] == ['MISMATCH_REQUESTED_PERIOD']
+E         
+E         Right contains one more item: 'MISMATCH_REQUESTED_PERIOD'
+E         Use -v to get more diff
+
+/tmp/e5b3-reviewed-767cf7f-regressions/test_review_cases.py:214: AssertionError
+___________________ test_review_different_week_observations ____________________
+
+package = {'calculations': [{'calculation_id': 'calculation:alpha-old', 'calendar_revision_id': 'calendar-v1', 'completeness': {...mporal-input-v1', 'policy': {'policyVersion': 'materialized-evidence-v1', 'trustedOrigins': ['synthetic-system']}, ...}
+query = {'asOfInstant': '2026-09-28T12:00:00Z', 'derivedAt': '2026-10-09T12:00:00Z', 'mode': 'POINT_IN_TIME', 'phase': 'REG', ...}
+
+    def test_review_different_week_observations(package, query):
+        clean_beta(package)
+        q = {**query, 'windows': ['WEEK_OBSERVATION'], 'week': 1}
+        args = aggregate_pair(package, q, {**q, 'week': 3}, 'classified_pass')
+        assert args[0]['epa']['exact'] == '1/2'
+        assert args[1]['epa']['exact'] == '-1/3'
+        result = comparison(*args)
+>       assert result['failures'] == ['MISMATCH_REQUESTED_PERIOD']
+E       AssertionError: assert [] == ['MISMATCH_REQUESTED_PERIOD']
+E         
+E         Right contains one more item: 'MISMATCH_REQUESTED_PERIOD'
+E         Use -v to get more diff
+
+/tmp/e5b3-reviewed-767cf7f-regressions/test_review_cases.py:226: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../tmp/e5b3-reviewed-767cf7f-regressions/test_review_cases.py::test_excluded_target_open_week_does_not_change_prior_coverage[4]
+FAILED ../../../../tmp/e5b3-reviewed-767cf7f-regressions/test_review_cases.py::test_review_different_recent_windows
+FAILED ../../../../tmp/e5b3-reviewed-767cf7f-regressions/test_review_cases.py::test_review_different_week_observations
+3 failed in 0.13s

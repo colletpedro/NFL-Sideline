@@ -1,8 +1,8 @@
-# E5b-3 — contrato anterior ao código
+# E5b-3 — desenho e correção temporal
 
 Base confirmada: `8176e08668a6db4c837fb4de60f52d9b9011217e`.
-Contrato interno `metrics-temporal-input-v1` / `metrics-temporal-result-v1`,
-algoritmo `metrics-temporal-1.0.0`, política `materialized-evidence-v1`.
+Contrato interno atual `metrics-temporal-input-v2` (leitor v1 fechado) / `metrics-temporal-result-v2`,
+algoritmo atual `metrics-temporal-1.0.1`, política `materialized-evidence-v1`.
 Detalhes finais e ajustes de política estão em [CONTRACT.md](CONTRACT.md).
 Nenhuma compatibilidade implícita com editorial, FrozenContext ou snapshot.
 
@@ -80,8 +80,11 @@ Semanas vazias não ampliam recorte. Dois jogos na semana permanecem dois IDs.
 REG/POST/round nunca são deduzidos de week.
 
 Expectativa parte do calendário selecionado. Evento elegível sem PBP permanece
-no denominador. Completude do calendário desconhecida, período não fechado ou
-encerramento incerto => expectedGames=null, IDs certos/incertos preservados.
+no denominador. Completude do calendário desconhecida ou encerramento incerto => expectedGames=null,
+IDs certos/incertos preservados. Fechamento de todas as semanas só é obrigatório
+nas janelas semanais. Acumulada/histórica classificam todos os eventos do calendário:
+alvo excluído; lower bound de início >= corte fora comprovado; FINAL/upper bound
+< corte elegível; restante incerto. Fonte faltante continua no denominador.
 BYE exige calendário completo e período fechado, sem evento do time.
 Ausência sem causa comprovada é SOURCE_UNKNOWN. COMPLETE exige prova aceita;
 subset UNKNOWN/PARTIAL tem agregado separado. Não se trata falta como zero.
@@ -93,7 +96,9 @@ separado com limitação, não igualdade presumida. População/definição dive
 é rejeitada. comparisonEligible é por fundamento/grupo e exige fonte completa
 esperada, EPA sem missing/nonfinite, flags conhecidas, modelo conhecido e amostra
 EPA>=1 (eficiência). Incerteza estatística NOT_ESTIMATED. Comparação entre dois
-resultados exige também scope/mode/corte/versões/roles iguais.
+resultados exige também scope/mode/corte/versões/roles e requestedPeriod iguais.
+A assinatura deriva do pedido (semana explícita/intervalo fixo ou recorte por
+eventos até corte); não de byes/fontes/actualWeeks/IDs dos times.
 
 Saída: validação estrutural, seleção/rejeição de revisões e razões, jogos e
 lacunas, cobertura/fundamentos, agregados completos/subsets separados,
@@ -121,3 +126,7 @@ aceito do evento. Relações E5b-2 preservam declaração e receipt, mas não fo
 prova histórica ou estado temporal automaticamente. E5b-4 precisa materializador
 que conserve precisão/origem e documentos autenticados pela política da aplicação;
 nenhuma migration é proposta silenciosamente por esta entrega.
+
+O [desenho original 1.0.0](historical-1.0.0/DESIGN.md) fica preservado como histórico.
+A extensão lower bound é exclusivamente interna E5b-3 e é explicada no contrato,
+inclusive limites de conhecimento PIT e lacuna de encerramento exato E5a.
