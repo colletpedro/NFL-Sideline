@@ -22,7 +22,7 @@ class Policy:
         value = envelope['value']
         if evidence['kind'] in ('ARCHIVE_OBSERVATION', 'SYSTEM_INGESTION', 'FINAL_OBSERVATION'):
             matches = instant(value) == instant(evidence['recorded_at'])
-        elif evidence['kind'] == 'EVENT_END_BOUND':
+        elif evidence['kind'] in ('EVENT_END_BOUND', 'EVENT_START_LOWER_BOUND'):
             matches = instant(value) == instant(evidence['value']) and instant(value) <= instant(evidence['recorded_at'])
         else:
             matches = type(value) is type(evidence['value']) and value == evidence['value']
@@ -79,6 +79,7 @@ class Policy:
                 requirements.extend(({'value': c['week'], 'evidence_id': c['evidence_id']}, {'PERIOD_CLOSED'}) for c in payload['closed_weeks'])
             elif resource['kind'] == 'STATE':
                 requirements.append((payload['event_upper_bound'], {'FINAL_OBSERVATION', 'EVENT_END_BOUND'}))
+                requirements.append((payload.get('event_lower_bound'), {'EVENT_START_LOWER_BOUND'}))
                 requirements.append((payload.get('source_cause'), {'METADATA'}))
                 k = payload['kickoff']
                 if k is not None:

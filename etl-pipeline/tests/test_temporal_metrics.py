@@ -735,7 +735,15 @@ def test_e5a_temporal_ledgers_regressions(case_id):
         assert sorted(b['coverage']['knownEligibleGameIds'])==sorted(expected['game_ids'])
     if 'coverage' in expected:
         e=expected['coverage']
-        if 'expected_games' in e: assert b['coverage']['expectedGames']==e['expected_games']
+        if 'expected_games' in e:
+            # E5a declares OFFICIAL_END; this old materialization retains only an
+            # upper bound, losing exactness. An upper bound at cutoff cannot
+            # establish outside membership (review correction). E5a stays frozen.
+            if case_id == 'exclusive_cut_boundary':
+                assert b['coverage']['expectedGames'] is None
+                assert b['coverage']['uncertainGameIds'] == ['equal-bound']
+            else:
+                assert b['coverage']['expectedGames']==e['expected_games']
         if 'source_ratio' in e:
             got=b['coverage']['sourceRatio']
             assert (got['exact'] if got else None)==e['source_ratio']

@@ -5,7 +5,7 @@ import hashlib
 
 from ..offline_metrics.artifact import identity
 from ..offline_metrics.statistics import COUNTS, FOUNDATIONS, exact_sum
-from . import INPUT_VERSION, POLICY_VERSION
+from . import INPUT_VERSION, LEGACY_INPUT_VERSION, POLICY_VERSION
 from .times import instant, eastern_kickoff
 
 KINDS = {'FILE', 'SET', 'CALENDAR', 'STATE', 'METADATA'}
@@ -116,7 +116,7 @@ def json_values(value):
 def validate(document):
     json_values(document)
     fields(document, ('inputVersion', 'policy', 'resources', 'evidence', 'calculations'))
-    if document['inputVersion'] != INPUT_VERSION:
+    if document['inputVersion'] not in (INPUT_VERSION, LEGACY_INPUT_VERSION):
         raise ValueError('Unsupported temporal input version')
     fields(document['policy'], ('policyVersion', 'trustedOrigins'))
     if document['policy']['policyVersion'] != POLICY_VERSION or not isinstance(document['policy']['trustedOrigins'], list):
@@ -177,7 +177,9 @@ def validate(document):
             if not any(resources[d]['kind'] == 'SET' and resources[d]['payload']['source_kind'] == 'calendar' for d in r['dependencies']):
                 raise ValueError('Calendar must bind source set')
         elif r['kind'] == 'STATE':
-            fields(p, ('game_id', 'calendar_revision_id', 'status', 'event_upper_bound', 'kickoff'), ('source_cause',))
+            fields(p, ('game_id', 'calendar_revision_id', 'status', 'event_upper_bound', 'kickoff'),
+                   ('source_cause', 'event_lower_bound') if document['inputVersion'] == INPUT_VERSION else ('source_cause',))
+            envelope(p.get('event_lower_bound'), timestamp=True)
             if 'source_cause' in p:
                 envelope(p['source_cause'])
                 if p['source_cause'] is not None and p['source_cause']['value'] not in ('SOURCE_UNKNOWN', 'PBP_ABSENT', 'SOURCE_DELAY', 'INGESTION_FAILED'):
@@ -210,12 +212,13 @@ def validate(document):
         visit(rid, set())
     for e in proofs.values():
         fields(e, ('evidence_id', 'kind', 'subject_id', 'origin', 'reference', 'recorded_at', 'value', 'dependencies'), ('receipt',))
-        if e['kind'] not in EVIDENCE_KINDS or not isinstance(e['dependencies'], list):
+        allowed_kinds = EVIDENCE_KINDS | ({'EVENT_START_LOWER_BOUND'} if document['inputVersion'] == INPUT_VERSION else set())
+        if e['kind'] not in allowed_kinds or not isinstance(e['dependencies'], list):
             raise ValueError('Invalid evidence kind/dependencies')
         for key in ('subject_id', 'origin', 'reference'):
             string(e[key])
         instant(e['recorded_at'])
-        if e['kind'] in ('FINAL_OBSERVATION', 'EVENT_END_BOUND'):
+        if e['kind'] in ('FINAL_OBSERVATION', 'EVENT_END_BOUND', 'EVENT_START_LOWER_BOUND'):
             instant(e['value'])
         if e['kind'] == 'ARCHIVE_OBSERVATION':
             receipt = e.get('receipt')

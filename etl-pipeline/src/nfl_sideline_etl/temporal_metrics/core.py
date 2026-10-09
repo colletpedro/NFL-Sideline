@@ -48,6 +48,22 @@ def validate_request(request):
     return cutoff(request)
 
 
+
+def requested_period(block, request):
+    """Normalized requested scope, independent of observed games and sources."""
+    cut, _ = cutoff(request)
+    window = block['window']
+    if window == 'WEEK_OBSERVATION':
+        selection = {'week': request['week']}
+    elif window == 'LAST_3_CALENDAR_WEEKS':
+        selection = {'weeks': list(range(max(1, request['targetWeek'] - 3), request['targetWeek']))}
+    else:
+        selection = {'eventEndBefore': cut}
+    return {'window': window, 'season': block['season'], 'phase': block['phase'],
+            'origin': block['origin'], 'mode': request['mode'], 'cutoff': cut,
+            'selection': selection}
+
+
 def select(document, request):
     """No clocks, filesystem, DB, environment or network; does not mutate inputs."""
     normalized_cut, date_mapping = validate_request(request)
@@ -167,12 +183,25 @@ def select(document, request):
             event['sourceCause'] = source_cause['value'] if use_proof(source_cause, state['revision_id'], {'METADATA'}) == 'ACCEPTED_BY_POLICY' else 'SOURCE_UNKNOWN'
             event['eventUpperBound'] = p['event_upper_bound']
             bound_status = use_proof(p['event_upper_bound'], state['revision_id'], {'FINAL_OBSERVATION', 'EVENT_END_BOUND'})
+            lower = p.get('event_lower_bound')
+            lower_status = use_proof(lower, state['revision_id'], {'EVENT_START_LOWER_BOUND'})
+            if lower is not None:
+                event['eventLowerBound'] = lower
+                event['lowerBoundQualification'] = lower_status
+            if lower_status == 'ACCEPTED_BY_POLICY':
+                if (bound_status == 'ACCEPTED_BY_POLICY' and
+                        instant(lower['value']) > instant(p['event_upper_bound']['value'])):
+                    raise ValueError('EVENT_BOUNDS_CONFLICT: ' + gid)
+                if instant(lower['value']) >= policy.cut:
+                    event['reasons'].append('EVENT_PROVEN_OUTSIDE_CUTOFF')
+                    continue
             if p['status'] != 'FINAL' or bound_status != 'ACCEPTED_BY_POLICY':
                 event['eventUncertain'] = True
                 event['reasons'].append('EVENT_TIME_UNKNOWN' if p['status'] == 'FINAL' else 'EVENT_NOT_FINAL')
                 event['boundQualification'] = bound_status
                 continue
             if instant(p['event_upper_bound']['value']) >= policy.cut:
+                event['eventUncertain'] = True
                 event['reasons'].append('EVENT_NOT_BEFORE_CUTOFF')
                 continue
             event['eventEligible'] = True
@@ -244,8 +273,10 @@ def select(document, request):
         uncertain = [e['game']['game_id'] for e in events if e['eventUncertain']]
         complete = [e['game']['game_id'] for e in eligible if e['completeness'] == 'COMPLETE']
         observed = [e['game']['game_id'] for e in eligible if e['calculationId'] is not None]
-        # Open periods disallow percentage expectations even if known events passed.
-        expectation_known = cal is not None and calendar_complete and not uncertain and set(weeks) <= closed
+        # Event windows classify every calendar ID; weekly windows also require closure.
+        weekly_window = window in ('LAST_3_CALENDAR_WEEKS', 'WEEK_OBSERVATION')
+        open_required_weeks = set(weeks) - closed if weekly_window else set()
+        expectation_known = cal is not None and calendar_complete and not uncertain and not open_required_weeks
         expected = len(eligible) if expectation_known else None
         weekly = []
         for week in weeks:
@@ -276,11 +307,12 @@ def select(document, request):
             expectation_failures.append({'reason': 'CALENDAR_INELIGIBLE_OR_UNKNOWN'})
         elif not calendar_complete:
             expectation_failures.append({'reason': 'CALENDAR_COMPLETENESS_UNPROVEN'})
-        if set(weeks) - closed:
-            expectation_failures.append({'reason': 'PERIOD_NOT_CLOSED', 'weeks': sorted(set(weeks) - closed)})
+        if open_required_weeks:
+            expectation_failures.append({'reason': 'PERIOD_NOT_CLOSED', 'weeks': sorted(open_required_weeks)})
         if uncertain:
             expectation_failures.append({'reason': 'EVENT_EXPECTATION_UNCERTAIN', 'gameIds': sorted(uncertain)})
         coverage = {'expectedGames': expected, 'expectationFailures': expectation_failures, 'availabilityKnownGameIds': sorted(knowledge_known), 'metricObservedGameIds': metric_observed, 'knownEligibleGameIds': [e['game']['game_id'] for e in eligible],
+                    'outsideCutoffGameIds': sorted(e['game']['game_id'] for e in events if 'EVENT_PROVEN_OUTSIDE_CUTOFF' in e['reasons']),
                     'uncertainGameIds': uncertain, 'observedGameIds': observed, 'observedCompleteGameIds': complete,
                     'sourceRatio': ratio(len(complete), expected) if expected is not None else None,
                     'calendarComplete': calendar_complete, 'closedWeeks': sorted(closed & set(weeks)),
@@ -291,6 +323,7 @@ def select(document, request):
                        'requestedWeeks': weeks, 'actualWeeks': sorted({e['game']['week'] for e in events if e['calculationId']}),
                        'scheduledGameIds': [e['game']['game_id'] for e in events], 'events': events,
                        'coverage': coverage, 'weeklyStates': weekly, 'aggregates': aggregates})
+        blocks[-1]['requestedPeriod'] = requested_period(blocks[-1], request)
     # Availability/ingestion proofs are part of the selected lineage too.
     pending = list(used_resources)
     while pending:
@@ -414,9 +447,12 @@ def comparison(left, right, left_block, right_block, left_request, right_request
     for key in ('season', 'phase', 'origin', 'window'):
         if left_block[key] != right_block[key]:
             failures.add('MISMATCH_' + key)
-    for key in ('mode', 'asOfInstant'):
-        if left_request[key] != right_request[key]:
-            failures.add('MISMATCH_' + key)
+    if left_request['mode'] != right_request['mode']:
+        failures.add('MISMATCH_mode')
+    if cutoff(left_request)[0] != cutoff(right_request)[0]:
+        failures.add('MISMATCH_asOfInstant')
+    if requested_period(left_block, left_request) != requested_period(right_block, right_request):
+        failures.add('MISMATCH_REQUESTED_PERIOD')
     return {'comparisonEligible': not failures, 'failures': sorted(failures), 'left': left, 'right': right,
             'statisticalUncertainty': 'NOT_ESTIMATED'}
 
@@ -428,6 +464,7 @@ def qualify_evidence(e, policy, used):
         'SYSTEM_INGESTION': ['SYSTEM_INGESTION', 'CONSERVATIVE_AVAILABILITY_AT_INGESTION'],
         'FINAL_OBSERVATION': ['FINAL_STATE_OBSERVED', 'CONSERVATIVE_EVENT_UPPER_BOUND'],
         'EVENT_END_BOUND': ['DOCUMENTED_EVENT_UPPER_BOUND'],
+        'EVENT_START_LOWER_BOUND': ['DOCUMENTED_EVENT_START_LOWER_BOUND'],
         'CALENDAR_COMPLETE': ['CALENDAR_COMPLETENESS'],
         'PERIOD_CLOSED': ['CALENDAR_PERIOD_CLOSURE'],
         'PBP_COMPLETE': ['SOURCE_COMPLETENESS_DECLARATION_ACCEPTED'],
