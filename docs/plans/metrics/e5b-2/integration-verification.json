@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-09",
+  "decision": "ACCEPTED_NATIVE_POSTGRES_LOCAL_SCOPE",
+  "baseCommit": "882c9013ec1a1cd08f2d0b7049fb74ff1cdb8491",
+  "sourceCommit": "401a7ea0413d11e59e94500fc06ddf55111fb22d",
+  "runtimeChangesByOrchestrator": false,
+  "etlOfflineTestsPassed": 199,
+  "postgresRealTestsPassed": 51,
+  "failures": 0,
+  "skips": 0,
+  "e5aExamplesPassed": 26,
+  "e5aOriginalTestsPassed": 23,
+  "e5aHashesChecked": 12,
+  "offlineCliFilesByteIdentical": 6,
+  "migrationSha256": "4634d43181d33d7dbfaa772411fdabd6a2b1a6efa867df215f72edd1bd8945e5",
+  "realProofSelectedFieldsMatchDelivered": true,
+  "first": {
+    "conflicts": 0,
+    "inserted": 102,
+    "reused": 0
+  },
+  "repeat": {
+    "conflicts": 0,
+    "inserted": 0,
+    "reused": 102
+  },
+  "instance": {
+    "database": "nfl_e5b2_18c4937e3c4f",
+    "host": "127.0.0.1",
+    "instance_id": "18c4937e-3c4f-43fe-8d0a-bb44c244227a",
+    "port": 55483
+  },
+  "postgresVersion": "17.6",
+  "instanceRoot": "/tmp/nfl-e5b2-orchestrator-instance-20261009",
+  "instanceStopped": true,
+  "portReleased": 55483,
+  "newClustersCreatedByReview": 1,
+  "containersCreatedByReview": 0,
+  "existingClustersModified": false,
+  "fullSupabaseStackVerified": false,
+  "advisorsExecuted": false,
+  "nativeRolesRlsAndGrantsVerified": true,
+  "javaFrontendRerun": false,
+  "historicalPointInTimeCertified": false,
+  "remaining": [
+    "Validation in full isolated Supabase stack and advisors before applying outside native disposable environment.",
+    "Temporal revision selection and evidence qualification in E5b-3."
+  ]
+}

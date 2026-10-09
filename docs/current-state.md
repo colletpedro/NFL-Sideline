@@ -33,7 +33,15 @@ Incorporado à branch local `codex/metrics-integration-e5b1`, sobre os commits `
 
 Revisão reproduziu 162 testes ETL, 26 exemplos/23 testes E5a, 12 hashes congelados, CLI determinística byte a byte, hashes/identidade do cálculo, recusa de sobrescrita e rejeição sem saída parcial. Auditoria opcional confirmou os seis hashes anteriores e contagens das três temporadas, sem aquisição. [Aceite e transição](plans/metrics/e5b-1/integration-review.md) e [uso do adapter](plans/metrics/e5b-1/README.md).
 
-Próximo passo: persistência/proveniência **E5b-2 em stack local isolada**; ainda sem migration implementada ou consumidor público. Completude, encerramento, disponibilidade histórica e versão do modelo EPA seguem desconhecidos onde não há prova. Corte/seleção de revisões ficam para E5b-3. E4 humano, BASIC/FULL e cinco falhas legadas permanecem pendentes.
+Persistência/proveniência E5b-2 já foi implementada e verificada no PostgreSQL local descartável descrito abaixo. Completude, encerramento, disponibilidade histórica e versão do modelo EPA seguem desconhecidos onde não há prova. E4 humano, BASIC/FULL e cinco falhas legadas permanecem pendentes.
+
+## Persistência local E5b-2
+
+Incorporada à branch local `codex/metrics-integration-e5b2`, sobre `95e0686`, `c6865d7` e `401a7ea`. Migration aditiva `20261009180021_metrics_persistence_e5b2.sql`: onze tabelas privadas preservam fontes, conjuntos de partições, cálculo, cobertura, somas, artefatos e receipts. Writer separado valida hashes e recalcula a semântica antes da transação; archive content-addressed conserva os bytes. Role limitada com RLS e SELECT/INSERT, sem acesso público ou integração ao pipeline principal.
+
+A revisão reproduziu **199 testes offline e 51 PostgreSQL reais**, sem falhas/skips, checks E5a e regressão byte a byte da CLI E5b-1. Prova real: 102 inserções iniciais, zero na reexecução, revisões/receipts preservados e rollback/recuperação. A instância própria da revisão na porta 55483 foi encerrada; main, banco remoto, snapshots e consumidores permanecem intactos. [Aceite e limites](plans/metrics/e5b-2/integration-review.md).
+
+**Pendência de infraestrutura:** stack Supabase completa/advisors não executados; o aceite é limitado ao PostgreSQL nativo descartável, não aplicação remota ou certificação completa da plataforma. Essa verificação deve preceder aplicação fora do ambiente descartável. Próximo passo de desenvolvimento: **E5b-3, seleção temporal e janelas puras**, preservando evidências UNKNOWN e sem alegar reconstrução histórica POINT_IN_TIME. Java, ETL semanal, backfill e visual continuam nas etapas posteriores.
 
 ## Política de arquivos
 
