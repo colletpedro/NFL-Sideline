@@ -1,0 +1,59 @@
+{
+  "candidate": "767cf7f1d15f26022a7c4a982545a6c24c125134",
+  "cases": {
+    "different_recent_windows": {
+      "bothAggregatesEligible": true,
+      "comparisonEligible": true,
+      "expectedProperty": "Different requested periods require explicit comparison failure.",
+      "failures": [],
+      "leftEPA": "1/2",
+      "leftWeeks": [
+        1
+      ],
+      "rightEPA": "1/2",
+      "rightWeeks": [
+        1,
+        2
+      ]
+    },
+    "different_week_observations": {
+      "bothAggregatesEligible": true,
+      "comparisonEligible": true,
+      "expectedProperty": "Different requested periods require explicit comparison failure.",
+      "failures": [],
+      "leftEPA": "1/2",
+      "leftWeeks": [
+        1
+      ],
+      "rightEPA": "-1/3",
+      "rightWeeks": [
+        3
+      ]
+    },
+    "season_target_open_week": {
+      "afterExpectationFailures": [
+        {
+          "reason": "PERIOD_NOT_CLOSED",
+          "weeks": [
+            4
+          ]
+        }
+      ],
+      "afterExpectedGames": null,
+      "afterRequestedWeeks": [
+        1,
+        3,
+        4
+      ],
+      "beforeExpectedGames": 3,
+      "change": "Only excluded target week: 1 -> 4; closed prior weeks and eligible events unchanged.",
+      "expectedProperty": "Excluded target/open future week must not invalidate proven prior-event coverage.",
+      "knownEligibleGameIds": [
+        "alpha",
+        "beta",
+        "gap"
+      ]
+    }
+  },
+  "scope": "SYNTHETIC_OFFLINE_COUNTEREXAMPLES"
+}

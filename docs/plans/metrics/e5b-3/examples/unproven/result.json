@@ -1,0 +1,1204 @@
+{
+  "algorithmVersion": "metrics-temporal-1.0.0",
+  "asOfDateMapping": null,
+  "audit_id": "sha256:0b430877d42939ee492e4f2cb76abfbf627b4a430d5adb6a274bc2b24335fdc9",
+  "blocks": [
+    {
+      "actualWeeks": [],
+      "aggregates": [],
+      "calendarRevisionId": null,
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": false,
+        "closedWeeks": [],
+        "expectationFailures": [
+          {
+            "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+          }
+        ],
+        "expectedGames": null,
+        "gaps": [],
+        "knownEligibleGameIds": [],
+        "metricObservedGameIds": [],
+        "observedCompleteGameIds": [],
+        "observedGameIds": [],
+        "sourceRatio": null,
+        "uncertainGameIds": []
+      },
+      "events": [],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "requestedWeeks": [],
+      "scheduledGameIds": [],
+      "season": 2026,
+      "weeklyStates": [],
+      "window": "SEASON_TO_CUTOFF"
+    },
+    {
+      "actualWeeks": [],
+      "aggregates": [],
+      "calendarRevisionId": null,
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": false,
+        "closedWeeks": [],
+        "expectationFailures": [
+          {
+            "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+          },
+          {
+            "reason": "PERIOD_NOT_CLOSED",
+            "weeks": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "expectedGames": null,
+        "gaps": [],
+        "knownEligibleGameIds": [],
+        "metricObservedGameIds": [],
+        "observedCompleteGameIds": [],
+        "observedGameIds": [],
+        "sourceRatio": null,
+        "uncertainGameIds": []
+      },
+      "events": [],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "requestedWeeks": [
+        1,
+        2,
+        3
+      ],
+      "scheduledGameIds": [],
+      "season": 2026,
+      "weeklyStates": [
+        {
+          "gameIds": [],
+          "status": "CALENDAR_UNKNOWN",
+          "week": 1
+        },
+        {
+          "gameIds": [],
+          "status": "CALENDAR_UNKNOWN",
+          "week": 2
+        },
+        {
+          "gameIds": [],
+          "status": "CALENDAR_UNKNOWN",
+          "week": 3
+        }
+      ],
+      "window": "LAST_3_CALENDAR_WEEKS"
+    },
+    {
+      "actualWeeks": [],
+      "aggregates": [],
+      "calendarRevisionId": null,
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": false,
+        "closedWeeks": [],
+        "expectationFailures": [
+          {
+            "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+          },
+          {
+            "reason": "PERIOD_NOT_CLOSED",
+            "weeks": [
+              3
+            ]
+          }
+        ],
+        "expectedGames": null,
+        "gaps": [],
+        "knownEligibleGameIds": [],
+        "metricObservedGameIds": [],
+        "observedCompleteGameIds": [],
+        "observedGameIds": [],
+        "sourceRatio": null,
+        "uncertainGameIds": []
+      },
+      "events": [],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "requestedWeeks": [
+        3
+      ],
+      "scheduledGameIds": [],
+      "season": 2026,
+      "weeklyStates": [
+        {
+          "gameIds": [],
+          "status": "CALENDAR_UNKNOWN",
+          "week": 3
+        }
+      ],
+      "window": "WEEK_OBSERVATION"
+    }
+  ],
+  "calculationsUsed": [],
+  "derivedAt": "2026-10-09T12:00:00Z",
+  "evidenceQualifications": [
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:2026-10-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:2026-10-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "ARCHIVE_OBSERVATION:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+    },
+    {
+      "conditionalCapabilities": [
+        "CALENDAR_COMPLETENESS"
+      ],
+      "evidence_id": "CALENDAR_COMPLETE:calendar-v1:True",
+      "externallyAuthenticated": false,
+      "kind": "CALENDAR_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calendar-v1"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "EVENT_END_BOUND:state:alpha:2026-09-07T23:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:alpha"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "EVENT_END_BOUND:state:beta:2026-09-21T23:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:beta"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "EVENT_END_BOUND:state:gap:2026-09-21T23:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:gap"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "EVENT_END_BOUND:state:target:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:target"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:calculation:alpha-corrected:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calculation:alpha-corrected"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:calculation:alpha-old:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calculation:alpha-old"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:calculation:beta-composed:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calculation:beta-composed"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:calculation:beta:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calculation:beta"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:model-v1",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+    },
+    {
+      "conditionalCapabilities": [
+        "MATERIALIZED_METADATA_VALUE"
+      ],
+      "evidence_id": "METADATA:state:target:2026-09-28T16:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "METADATA",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:target"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "PBP_COMPLETE:coverage:alpha-corrected:COMPLETE",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "coverage:alpha-corrected"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "PBP_COMPLETE:coverage:alpha-old:COMPLETE",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "coverage:alpha-old"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "PBP_COMPLETE:coverage:beta-composed:COMPLETE",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "coverage:beta-composed"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "PBP_COMPLETE:coverage:beta:COMPLETE",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "coverage:beta"
+    },
+    {
+      "conditionalCapabilities": [
+        "CALENDAR_PERIOD_CLOSURE"
+      ],
+      "evidence_id": "PERIOD_CLOSED:calendar-v1:1",
+      "externallyAuthenticated": false,
+      "kind": "PERIOD_CLOSED",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calendar-v1"
+    },
+    {
+      "conditionalCapabilities": [
+        "CALENDAR_PERIOD_CLOSURE"
+      ],
+      "evidence_id": "PERIOD_CLOSED:calendar-v1:2",
+      "externallyAuthenticated": false,
+      "kind": "PERIOD_CLOSED",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calendar-v1"
+    },
+    {
+      "conditionalCapabilities": [
+        "CALENDAR_PERIOD_CLOSURE"
+      ],
+      "evidence_id": "PERIOD_CLOSED:calendar-v1:3",
+      "externallyAuthenticated": false,
+      "kind": "PERIOD_CLOSED",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calendar-v1"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:calendar-v1:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "calendar-v1"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0:2026-10-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0:2026-10-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:state:alpha:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:alpha"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:state:beta:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:beta"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:state:gap:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:gap"
+    },
+    {
+      "conditionalCapabilities": [
+        "SYSTEM_INGESTION",
+        "CONSERVATIVE_AVAILABILITY_AT_INGESTION"
+      ],
+      "evidence_id": "SYSTEM_INGESTION:state:target:2026-09-01T00:00:00Z",
+      "externallyAuthenticated": false,
+      "kind": "SYSTEM_INGESTION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-01T00:00:00Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "state:target"
+    }
+  ],
+  "evidenceUsed": [],
+  "guarantees": {
+    "historicalAvailability": "ONLY_SELECTED_SOURCES_PROVEN_BY_POLICY",
+    "knowledgeAtCutoff": "CONDITIONAL_ON_MATERIALIZED_POLICY_EVIDENCE",
+    "laterKnowledgePermitted": false,
+    "limits": [
+      "Trust origins and materialized timestamps are premises, not external authentication.",
+      "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+      "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+      "No historical local dataset certified by synthetic fixtures."
+    ],
+    "postCutoffEvidenceIds": [],
+    "postCutoffResourceIds": [],
+    "statisticalUncertainty": "NOT_ESTIMATED",
+    "temporalMode": "POINT_IN_TIME",
+    "unknownKnowledgeResourceIds": []
+  },
+  "input_id": "sha256:b35fe6f576430903634b26b0e6e7880b979bf8500a05cb9fc584745e8d91c5ec",
+  "policy": {
+    "policyVersion": "materialized-evidence-v1",
+    "trustedOrigins": [
+      "synthetic-system"
+    ]
+  },
+  "pregame": {
+    "kickoff": null,
+    "targetGameExcluded": true,
+    "timeStatus": "PREGAME_TIME_UNVERIFIED"
+  },
+  "request": {
+    "asOfInstant": "2026-09-28T12:00:00Z",
+    "mode": "POINT_IN_TIME",
+    "phase": "REG",
+    "season": 2026,
+    "targetGameId": "target",
+    "targetWeek": 4,
+    "team": "A",
+    "week": 3,
+    "windows": [
+      "LAST_3_CALENDAR_WEEKS",
+      "SEASON_TO_CUTOFF",
+      "WEEK_OBSERVATION"
+    ]
+  },
+  "resourceDecisions": [
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        }
+      ],
+      "revision_id": "calendar-v1",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        }
+      ],
+      "revision_id": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:189aeae3cd0e557a060a2d493cf2e81b434bea49b4b9bb9d1300bb0bc98d363b"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+        }
+      ],
+      "revision_id": "sha256:189aeae3cd0e557a060a2d493cf2e81b434bea49b4b9bb9d1300bb0bc98d363b",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:45b9801bc07835f59d1249e6c131e190ba11a9f29ea9591adc3547c5a0ea1fe3"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+        }
+      ],
+      "revision_id": "sha256:45b9801bc07835f59d1249e6c131e190ba11a9f29ea9591adc3547c5a0ea1fe3",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+        }
+      ],
+      "revision_id": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        }
+      ],
+      "revision_id": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+        }
+      ],
+      "revision_id": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0"
+        }
+      ],
+      "revision_id": "sha256:82a6ca8f3b1e17b65c2799e2b857a982ed73bd4f852a616be26938aac5dc61b0",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:b86dd2e24e5100a948590cc4fcaa998346496ce0ccc14ed9df7afab60c836c48"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:47917ade0cddf5a9bf09cc9e8a873aaf66fa065cb62ccffeba08ce8dd56390d0"
+        }
+      ],
+      "revision_id": "sha256:b86dd2e24e5100a948590cc4fcaa998346496ce0ccc14ed9df7afab60c836c48",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:bf78b1e8bf87a767edc532e00655f50dcdf35bd1f4a52dc434ebc9319708dca2"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:50c161e5fd7f8d11ae0e80273de9d138292c8ccd1abf97756b365e2c0aa5b3f6"
+        }
+      ],
+      "revision_id": "sha256:bf78b1e8bf87a767edc532e00655f50dcdf35bd1f4a52dc434ebc9319708dca2",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753"
+        }
+      ],
+      "revision_id": "sha256:f44e64e75f3948e9f73f8dfa94721c4ce8cbb4f265c4790c702b2d41cfbf2753",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914"
+        }
+      ],
+      "revision_id": "sha256:f69ba8ee2438ee6c1de7615f2be4ca148540b3aeb2a2191624826fedbce2e914",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "state:alpha"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "state:alpha"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "state:alpha"
+        }
+      ],
+      "revision_id": "state:alpha",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "state:beta"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "state:beta"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "state:beta"
+        }
+      ],
+      "revision_id": "state:beta",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "state:gap"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "state:gap"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "state:gap"
+        }
+      ],
+      "revision_id": "state:gap",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "state:target"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "state:target"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "state:target"
+        }
+      ],
+      "revision_id": "state:target",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    }
+  ],
+  "resourcesUsed": [],
+  "resultVersion": "metrics-temporal-result-v1",
+  "result_id": "sha256:527a2b7f34d094626c5ed7ff4c24120d4db1457fbb68c87271393b8f6b514873",
+  "revisionDecisions": [
+    {
+      "category": "calendars",
+      "key": "2026/REG",
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:4917088f4cee3fc828d086b9dfb4434fddf42e306468d1e00e4da1144252b01c"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "calendar-v1"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:09effa2b022556450affbf746c0ff4c430d6b5eb6f4f0aadd339ced0ce272866"
+        }
+      ],
+      "revision_id": "calendar-v1",
+      "selected": false,
+      "selectionOrderAvailableAtEpochSeconds": null
+    }
+  ],
+  "structuralValidation": "PASSED",
+  "temporalEligibility": [
+    {
+      "calendarEligible": false,
+      "eligibleGameIds": [],
+      "uncertainGameIds": [],
+      "window": "LAST_3_CALENDAR_WEEKS"
+    },
+    {
+      "calendarEligible": false,
+      "eligibleGameIds": [],
+      "uncertainGameIds": [],
+      "window": "SEASON_TO_CUTOFF"
+    },
+    {
+      "calendarEligible": false,
+      "eligibleGameIds": [],
+      "uncertainGameIds": [],
+      "window": "WEEK_OBSERVATION"
+    }
+  ]
+}
