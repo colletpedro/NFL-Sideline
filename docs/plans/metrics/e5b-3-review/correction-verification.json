@@ -1,0 +1,221 @@
+{
+  "algorithmVersion": "metrics-temporal-1.0.1",
+  "base": "8176e08668a6db4c837fb4de60f52d9b9011217e",
+  "candidateHead": "25ba895bd611811f0d6291c374827d2d76ed6be9",
+  "counterexamplesAfter": {
+    "candidate": "25ba895bd611811f0d6291c374827d2d76ed6be9",
+    "cases": {
+      "different_recent_windows": {
+        "bothAggregatesEligible": true,
+        "comparisonEligible": false,
+        "failures": [
+          "MISMATCH_REQUESTED_PERIOD"
+        ],
+        "leftAuditId": "sha256:b9b9176f6eea250650484150f05bf2d6e49a66d943ac43c332bf366bebe52b94",
+        "leftEPA": "1/2",
+        "leftResultId": "sha256:675af976aab000b677098abe0c77068f9ce8aeeb0e1eddc70c266101d897abc2",
+        "leftSignature": {
+          "cutoff": "2026-09-28T12:00:00Z",
+          "mode": "POINT_IN_TIME",
+          "origin": "CURRENT",
+          "phase": "REG",
+          "season": 2026,
+          "selection": {
+            "weeks": [
+              1
+            ]
+          },
+          "window": "LAST_3_CALENDAR_WEEKS"
+        },
+        "leftWeeks": [
+          1
+        ],
+        "rightAuditId": "sha256:2d677d33f1e6d67804c5d4c38a9172ed0d01233a78deb7d6686a3f3f5d69ef3d",
+        "rightEPA": "1/2",
+        "rightResultId": "sha256:f9d1c815457ce1830499937c85082fd71d909ce43fc68f21d5357a87220c2411",
+        "rightSignature": {
+          "cutoff": "2026-09-28T12:00:00Z",
+          "mode": "POINT_IN_TIME",
+          "origin": "CURRENT",
+          "phase": "REG",
+          "season": 2026,
+          "selection": {
+            "weeks": [
+              1,
+              2
+            ]
+          },
+          "window": "LAST_3_CALENDAR_WEEKS"
+        },
+        "rightWeeks": [
+          1,
+          2
+        ]
+      },
+      "different_week_observations": {
+        "bothAggregatesEligible": true,
+        "comparisonEligible": false,
+        "failures": [
+          "MISMATCH_REQUESTED_PERIOD"
+        ],
+        "leftAuditId": "sha256:2867e96a014407b489c0d059a2b81c1f46cd0d34d14421edd3333a364de7c9f1",
+        "leftEPA": "1/2",
+        "leftResultId": "sha256:19f4ea42a363430a7343b8059e5b09026463e86c4591d240a395e5b923dde043",
+        "leftSignature": {
+          "cutoff": "2026-09-28T12:00:00Z",
+          "mode": "POINT_IN_TIME",
+          "origin": "CURRENT",
+          "phase": "REG",
+          "season": 2026,
+          "selection": {
+            "week": 1
+          },
+          "window": "WEEK_OBSERVATION"
+        },
+        "leftWeeks": [
+          1
+        ],
+        "rightAuditId": "sha256:713623fc521ebe22f7294c962a83a814ca8a8510f8d691626747f2a633113f7b",
+        "rightEPA": "-1/3",
+        "rightResultId": "sha256:8492b659813dc144284ab7d78796790da3c3e1b9f570a78e090e80e9cbd97588",
+        "rightSignature": {
+          "cutoff": "2026-09-28T12:00:00Z",
+          "mode": "POINT_IN_TIME",
+          "origin": "CURRENT",
+          "phase": "REG",
+          "season": 2026,
+          "selection": {
+            "week": 3
+          },
+          "window": "WEEK_OBSERVATION"
+        },
+        "rightWeeks": [
+          3
+        ]
+      },
+      "season_target_open_week": {
+        "afterExpectationFailures": [],
+        "afterExpectedGames": 3,
+        "afterRequestedWeeks": [
+          1,
+          3,
+          4
+        ],
+        "beforeExpectedGames": 3,
+        "changedAuditId": "sha256:16257cdd0697081cd039bda4db6b0a5a40f29a84098258511949da5cafd4a2d3",
+        "changedResultId": "sha256:236698973028aa0864b0b9be0b5f3912c8411fc92ec7b57d1e683af47acbf2d3",
+        "knownEligibleGameIds": [
+          "alpha",
+          "beta",
+          "gap"
+        ],
+        "originalAuditId": "sha256:27ca5dd073f2814fb487f12d9f0fbbcca889be4b4bf51a9a95b2a2eb7ae14742",
+        "originalResultId": "sha256:1d53ddac69b72b9d68a8b5118bf06f8caa6603c1363702c34dcbb827eada8538"
+      }
+    },
+    "scope": "SYNTHETIC_OFFLINE_COUNTEREXAMPLES"
+  },
+  "counterexamplesBeforeSha256": "c0c2afa51aab9665c4021a7fd654faba3ce33a9c6bc57e86a1ca4dbd82402893",
+  "databaseConnected": false,
+  "diffCheck": "PASSED",
+  "e5aTestsPassed": 23,
+  "e5aVerifier": {
+    "golden_cases_passed": 26,
+    "package": "nfl-sideline-metrics-e5a",
+    "production_implemented": false,
+    "version": "1.0.0"
+  },
+  "e5b1ByteRegression": {
+    "COMPLETED.json": "f4bd51634927522c8e739d4cf7e961f230dcf7680dcf2c8abfdaebd9db5a247f",
+    "game-audit.json": "55cad0226a51e79d2afa9a0b69bcf2f7f48ff559580a0869259b776190b424e7",
+    "limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+    "manifest.json": "9d62e79b79427b90f37857cf349295b46ea69f5738a32a20cde391ed684e3778",
+    "reconciliation.json": "bf3e83f394bc027de75111d5676535b436d3f0b3ea0d6bdcb7d807853fa088ea",
+    "statistics.json": "a65a40601207d5410ef66a5c2d571d743164040bc2d15a084c9ef751aa4b47f5"
+  },
+  "e5b2DryRun": {
+    "artifact_id": "sha256:711b52452a30630f6626dc13ee0c62fe169ac12bcf5519ef8e589f5160cef29d",
+    "calculation_id": "sha256:2c364020c9c5bf08c2eeaa5fd38eae161920e482cdf23d2b1dda29b4d61a245f",
+    "coverage_states": {
+      "AUDITABLE_SUBSET": 4,
+      "FULL_GAME_CONTENT": 1,
+      "NO_SOURCE_OBSERVATION": 1
+    },
+    "database_connected": false,
+    "games": 6,
+    "mode": "DRY_RUN",
+    "sources": 2,
+    "statistics": 60
+  },
+  "etlLog": "........................................................................ [ 20%]\n........................................................................ [ 41%]\n........................................................................ [ 61%]\n........................................................................ [ 82%]\n..............................................................           [100%]\n350 passed in 3.46s\n",
+  "etlTestsPassed": 350,
+  "examples": {
+    "point-in-time": {
+      "audit_id": "sha256:4e3f3a07903cc14f2d3ae4662565118500af64fac4e98b77d98fa78ec003e113",
+      "historicalAuditId": "sha256:ddd742ea4d406bd832706eb5d922e0cd4ccaed93dc745fc45a0c7c8f24dc588a",
+      "historicalResultId": "sha256:9c8f95abde2a66bc65e3e290dcbfe4e2a7beffb46229e81885c557a39ee2d409",
+      "result_id": "sha256:fff0826d0965bb6d12536c54aab47c672f8586abd3de6cd133cda1ac5f7f39c0",
+      "sha256": "7f4606ec2d069e4cba41ddd787f92254dfe6e327fdd1c2ca7ae9b9faadced2bd"
+    },
+    "reconstruction": {
+      "audit_id": "sha256:f119121cb55f9a1c83a0e2b23ed05d0920a7dffc843e574835fde2d3eda76c46",
+      "historicalAuditId": "sha256:92e169d0fdb83881ec250184e296cdd6838fd75db23cd6b56de35f6c8def2b7b",
+      "historicalResultId": "sha256:ab540773f4cb832cbb070726588dd3e4aa96f11d614821b0e7dc6d36ca02b197",
+      "result_id": "sha256:8254449b5882feb41e0b2bf114af0b8f093e196bb9a34891a31e184d2748b71f",
+      "sha256": "e7524a1e34248aee003d6abfe88587693952129475b4a50b945f16ec0d6165d1"
+    },
+    "unproven": {
+      "audit_id": "sha256:d56c47e2db8dfb0dfbf54c15d4313c4051e96bbcc0c51480daed7bf56f9561ce",
+      "historicalAuditId": "sha256:0b430877d42939ee492e4f2cb76abfbf627b4a430d5adb6a274bc2b24335fdc9",
+      "historicalResultId": "sha256:527a2b7f34d094626c5ed7ff4c24120d4db1457fbb68c87271393b8f6b514873",
+      "result_id": "sha256:2297ed0729b422ea9a5ba1dece2b8330a112d26f5c1f934cfb96c9b2f2c9fc40",
+      "sha256": "08d675d32bcd03756279c8160d29a3ca197653c53984ed6e39b9d75cb25ef518"
+    }
+  },
+  "frozenContractChecks": {
+    "candidateCommit": "5e976a315a167795222061175e582148bc570c33",
+    "candidateHashesChecked": 12,
+    "candidateUnmodified": true,
+    "diagnostic": "E5A_RAW_PBP_BOUNDARY",
+    "goldenCasesPassed": 26,
+    "localFiles": [],
+    "synthetic": {
+      "candidate_null_teams": "Invalid play teams",
+      "outside_population_null_teams": "Invalid play teams"
+    }
+  },
+  "historicalEvidenceHashes": {
+    "docs/plans/metrics/e5b-3/examples/point-in-time/COMPLETED.json": "818c06cb38551f0acc6c851893c5594f73db05bce9db733cb624407aa6921e5a",
+    "docs/plans/metrics/e5b-3/examples/point-in-time/result.json": "2bbf86c74a9e5430177a9f6e9db782638e6a43b355da4bde6b47f6320753ff99",
+    "docs/plans/metrics/e5b-3/examples/reconstruction/COMPLETED.json": "305588c48663d02465d5fde3c98c05523194f2a12ce57bd88b19feb63ac03060",
+    "docs/plans/metrics/e5b-3/examples/reconstruction/result.json": "454addac803d918a6a3b924d461c307e24e16d996bbf9c13642b3d42f19e7073",
+    "docs/plans/metrics/e5b-3/examples/unproven/COMPLETED.json": "ecd92f55ec5972a7fc5fab094e3ab6cd5cd2e477b055e585f2c92a74b4f9ad14",
+    "docs/plans/metrics/e5b-3/examples/unproven/result.json": "7734a86e9196e68ea56cd9bf5364d0d9a934f67d80f111aed846055a34052484",
+    "docs/plans/metrics/e5b-3/verification.json": "69a3a9c8c9a694ef2ae810d8931425beb651f02e8f931d512e653dd20fef1333"
+  },
+  "historicalEvidenceHead": "767cf7f1d15f26022a7c4a982545a6c24c125134",
+  "protectedPathsUnchanged": [
+    "contracts/metrics/e5a-v1",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence",
+    "docs/plans/metrics/e5b-1",
+    "docs/plans/metrics/e5b-2",
+    "supabase",
+    "core-api",
+    "web-ui",
+    "Spec.md",
+    "docs/current-state.md"
+  ],
+  "resultVersion": "metrics-temporal-result-v2",
+  "scope": "OFFLINE_ONLY",
+  "testedSourceHashes": {
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/__init__.py": "27fbfb60782761fa744b065174119e62ef62cec4dd1165e22c97abbb2ba51604",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/__main__.py": "35e37dc680fb83543c1c50eaf8d2c17ad756252918b95b17a761e54fdd2c6f0f",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/core.py": "418f396e682c7e324fc4c98de888270c5412279fb3d881857cb7d1272e0d8847",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/evidence.py": "c7ba7ef7d230fe3ba7697fb12d439b7d197145b8ef389c0227d9cf2b033393ea",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/times.py": "2cfe7d8eaf02db6b1c0f8ffdc515a2e31080c22b1ffd152a455cfd077d65f2c0",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/validation.py": "8a94fc0c671e56a9ad7f7ac0885f44a02d0242e1811867c2847dc25efaf36bc7",
+    "etl-pipeline/tests/test_temporal_metrics.py": "159ec84360224d3aee8591840f8d02f27f60a6c7d5d474ab28ac741527ff82c3",
+    "etl-pipeline/tests/test_temporal_metrics_correction.py": "ca1fcea800b61aa651367083604b289ab9a0d9380dcc02ce9eafe3c51401a707"
+  }
+}

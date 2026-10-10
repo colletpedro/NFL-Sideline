@@ -43,11 +43,13 @@ A revisão reproduziu **199 testes offline e 51 PostgreSQL reais**, sem falhas/s
 
 **Pendência de infraestrutura:** stack Supabase completa/advisors não executados; o aceite é limitado ao PostgreSQL nativo descartável, não aplicação remota ou certificação completa da plataforma. Essa verificação deve preceder aplicação fora do ambiente descartável. Java, ETL semanal, backfill e visual continuam nas etapas posteriores.
 
-## Seleção temporal E5b-3 — candidata em revisão
+## Seleção temporal E5b-3 — corrigida e integrada localmente
 
-O candidato `767cf7f`, branch `codex/metrics-temporal-e5b3`, implementa núcleo Python puro, CLI offline, quatro janelas e seleção temporal com auditoria. A revisão reproduziu 292 testes ETL, checks E5a, 12 hashes, regressões byte a byte e dry-run E5b-2 sem banco. **Ainda não foi incorporado nem aceito:** três contraprovas demonstraram dois problemas. SEASON_TO_CUTOFF exige fechamento da semana aberta do alvo/semanas futuras; comparison aceita parâmetros de período diferentes sob o mesmo nome de janela. [Revisão e correções exigidas](plans/metrics/e5b-3-review/REVIEW.md).
+O candidato inicial `767cf7f` apresentou duas lacunas, registradas na [revisão histórica](plans/metrics/e5b-3-review/REVIEW.md). A correção `25ba895` foi aceita e incorporada à branch local `codex/metrics-integration-e5b3`: núcleo Python puro, CLI offline, quatro janelas, seleção de revisões e agregação exata com auditoria. Algoritmo 1.0.1, resultado v2, entrada v2 com leitura v1 preservada. Acumulada/histórica classificam os eventos e não exigem fechamento de todas as semanas; janelas semanais preservam essa exigência. Comparações recusam períodos solicitados incompatíveis.
 
-Próximo passo: corrigir essas duas propriedades na frente E5b-3 e repetir o gate offline antes de E5b-4. O materializador E5b-2 → entrada temporal e o contrato Java permanecem separados e pendentes. Fixtures sintéticas não certificam conhecimento histórico real; UNKNOWN continua explícito. Main, produção, snapshots e consumidores permanecem preservados.
+Reproduzidos 350 testes ETL, 26 exemplos/23 testes E5a, 12 hashes, regressões byte a byte, dry-run E5b-2 sem banco e as três contraprovas corrigidas. Os oito hashes de fontes/testes e o pacote integrado conferiram com o candidato testado. [Aceite e limites](plans/metrics/e5b-3-review/CORRECTION-ACCEPTANCE.md). Em PIT, calendário com jogos futuros sem prova temporal suficiente ainda pode manter expectativa UNKNOWN; kickoff previsto não prova início efetivo. Não há certificação histórica real nem compatibilidade anunciada para consumidores result-v1.
+
+Próximo passo: **E5b-4**, materializador explícito E5b-2 → entrada temporal v2 e contrato Java separado para resultado v2. Java, ETL semanal, backfill e visual ainda não consomem essas métricas. Main, produção, snapshots e aprovações permanecem preservados; rodada humana E4, BASIC/FULL e cinco falhas legadas continuam pendentes.
 
 ## Política de arquivos
 
