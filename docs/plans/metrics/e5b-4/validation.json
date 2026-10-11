@@ -1,0 +1,259 @@
+{
+  "base": "8f583c4ec9ed83f86c2229b0f1656d32403bcc31",
+  "branch": "codex/metrics-materialization-e5b4",
+  "correctedTemporalCounterexamples": 3,
+  "diffCheck": "PASS",
+  "e5a": {
+    "examples": 26,
+    "frozenHashes": 12,
+    "tests": 23
+  },
+  "e5b1RegressionFiles": 6,
+  "endToEnd": "PASS for two explicit batches with one observed game each; multi-observed-game batch refused",
+  "envRead": false,
+  "etl": {
+    "failures": 0,
+    "newMaterializerTests": 60,
+    "skips": 0,
+    "total": 410
+  },
+  "initialFailuresAndCorrections": [
+    "Java parser generic inference TreeNode\u2192JsonNode fixed",
+    "Python test used qualification instead of accepted status field, fixed",
+    "Java null-sum test initially mutated a row already null, corrected to observed EPA row",
+    "Mixed-model failure applies only to windows containing multiple models, test corrected"
+  ],
+  "java": {
+    "command": "JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home mvn -f core-api/pom.xml -o -q clean verify",
+    "errors": 0,
+    "failures": 0,
+    "logSha256": "c96144eccd43acbb2a16b960e0aca450d20f221de5ac4fbdeca02a73aef77901",
+    "readerTests": 27,
+    "skipped": 0,
+    "suites": {
+      "com.nflsideline.coreapi.config.HealthHttpIntegrationTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "com.nflsideline.coreapi.controller.PublicationControllerTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "com.nflsideline.coreapi.editorial.AnalysisContextBuilderTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 5
+      },
+      "com.nflsideline.coreapi.editorial.ClaimRendererTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 8
+      },
+      "com.nflsideline.coreapi.editorial.ClaimWindowRendererTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 11
+      },
+      "com.nflsideline.coreapi.editorial.EditorialManifestTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 6
+      },
+      "com.nflsideline.coreapi.editorial.EditorialPlannerTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "com.nflsideline.coreapi.editorial.EvidenceWindowTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 6
+      },
+      "com.nflsideline.coreapi.editorial.VisualAnalysisProjectorTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 5
+      },
+      "com.nflsideline.coreapi.editorial.batch.EditorialBatchOptionsTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "com.nflsideline.coreapi.editorial.batch.EditorialBatchServiceTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "com.nflsideline.coreapi.editorial.evaluation.EvaluationApplicationTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 5
+      },
+      "com.nflsideline.coreapi.editorial.local.LocalAnalysisApplicationTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 3
+      },
+      "com.nflsideline.coreapi.editorial.local.LocalIntegrationTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 6
+      },
+      "com.nflsideline.coreapi.editorial.local.LocalRuleSelectorTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 11
+      },
+      "com.nflsideline.coreapi.editorial.local.LocalServerTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "com.nflsideline.coreapi.editorial.local.LocalVisualStoreTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "com.nflsideline.coreapi.editorial.local.SignalEditorialTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 12
+      },
+      "com.nflsideline.coreapi.llm.GeminiClientTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 5
+      },
+      "com.nflsideline.coreapi.metrics.temporal.TemporalResultReaderTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 27
+      },
+      "com.nflsideline.coreapi.service.AnalysisServiceTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 5
+      },
+      "com.nflsideline.coreapi.snapshot.AtomicSnapshotWriterTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "com.nflsideline.coreapi.snapshot.SnapshotAssemblerTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 5
+      },
+      "com.nflsideline.coreapi.snapshot.SnapshotBatchModeTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "com.nflsideline.coreapi.snapshot.SnapshotExporterTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 5
+      },
+      "com.nflsideline.coreapi.snapshot.SnapshotFailureTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "com.nflsideline.coreapi.snapshot.SnapshotOptionsTest": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 3
+      }
+    },
+    "tests": 154,
+    "version": "21.0.12.1"
+  },
+  "knownBlocker": "E5b-3 validation treats batch calculation_id as a per-game projection; no prior contract changed",
+  "modelsCalled": false,
+  "notExecuted": [
+    "Full Supabase stack/advisors (independent pending)",
+    "Frontend/visual checks (out of scope, unchanged)"
+  ],
+  "pushDeployMerge": false,
+  "readOnlyProof": [
+    "All 11 relations including persisted_at unchanged",
+    "Blobs, receipts and archive marker unchanged",
+    "Read-only transaction rejects INSERT",
+    "CLI identical to function proof",
+    "Later unselected valid batch ignored"
+  ],
+  "realPostgreSQL": "17.6 existing native runtime, two NEW disposable instances, both stopped",
+  "remoteDatabase": false,
+  "status": "SUPPORTED_FLOW_VALIDATED_FULL_ACCEPTANCE_BLOCKED",
+  "testedCodeHead": "0178732b04f06c7e337483aecf89e5a6b09c52db",
+  "testedSourceHashes": {
+    "core-api/src/main/java/com/nflsideline/coreapi/CoreApiApplication.java": "d849acad253c85a29d921d81555814032e8404e1d95808128d866d6113f28e71",
+    "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/ExactInstant.java": "902fedf279dbc7270cb9dd33bae9d2d85c8b3b32734315eebf01ab593ce0a7ae",
+    "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/PythonJson.java": "f2a9f2d8d8e2739065a8fb20173268e4f0b251da7772e67d753968d161cc6afc",
+    "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalReadApplication.java": "61cd4414e91df1b68cba1615f017eef2fb56dc94aaa60860d670a5288e17ab56",
+    "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalResult.java": "2cafa71b0c0f05567c04d321f4c08992f44e1e2337d7f26d76b5248321de1a6b",
+    "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalResultReader.java": "5bb2e42621460a12934fde6c785f2e1e6f6f1e984c072d69dcf1a091bd56485d",
+    "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalValue.java": "d1048c3ad2d6a5ea79a2b284a7bf92ff15e6b64c29332cf2432bde961ef6e534",
+    "core-api/src/test/java/com/nflsideline/coreapi/metrics/temporal/TemporalResultReaderTest.java": "61cf7858acc0d70ddc9a776d912565cd57ea2d6e737d532eae4e7f3083367178",
+    "core-api/src/test/resources/metrics-temporal/materialized-example/COMPLETED.json": "cc7a6c771319d09ba5be7524c9347a2f4d7503fe5af826fa73aeee40ecbd18a4",
+    "core-api/src/test/resources/metrics-temporal/materialized-example/result.json": "ae45e0e98f7aae865858d6fe16a4df7538073c2a3352df3980a95b597e7f17d4",
+    "core-api/src/test/resources/metrics-temporal/python-canonical-vectors.json": "fd374565e76973fe48696f2fd9536badc6e0bc07901b4cef5a4f21961afb1b6d",
+    "core-api/src/test/resources/metrics-temporal/zero-mixed-models/COMPLETED.json": "897400de9c6404339dc54d0f7e0e758674de66961bd336eba464414b25590060",
+    "core-api/src/test/resources/metrics-temporal/zero-mixed-models/result.json": "dfff5818a06a896ed7cbf48470951a5912210034188ec79ba9895d71ea3449bd",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/__init__.py": "11e3c0e21de2b4e2698bd092ba433c69beef17023f6398785ac3601b350fbda3",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/__main__.py": "4396755b68bff28956a3068723e490030bf7daebd9e0b2a34487db0141e5b55f",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/core.py": "78364dcaa894b237d85c256075182475d19ca2f026a91a17a8f142b71d617499",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/postgres.py": "f43c9f8720dd453dcdd3ee0d6aef6b14690639ab7c069d9d74737ab34d7e8ca3",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/publication.py": "328639b4835cd56c987484893478b91ba3d712ca22b179057d7ed5d9cd00648e",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/recovery.py": "79d83765002618384aceb57990bbd3440644e2d608cc14fb02ac70d7878a91a8",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/relations.py": "fb520c3ff273f30e8395eb03032189bf98cb0cf03a0c56077db484086c11c6ee",
+    "etl-pipeline/tests/fixtures/metrics_materialization/auxiliary-empty.json": "a74a89e4339dc68e315003d6fa5df354cc0cb0c57710314b3ec0cf971e854256",
+    "etl-pipeline/tests/fixtures/metrics_materialization/calendar.json": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+    "etl-pipeline/tests/fixtures/metrics_materialization/pbp-a.json": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+    "etl-pipeline/tests/fixtures/metrics_materialization/pbp-b.json": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+    "etl-pipeline/tests/fixtures/metrics_materialization/pbp-empty.json": "16efa004332f75004fe85a263d1a3222f8c2010f8ec22bf643b1a5878d226d7a",
+    "etl-pipeline/tests/fixtures/metrics_materialization/request-pit.json": "f6a941945bf67390983918e5d974b6d4a48db0e28f1a7b4b949581ce02cd1144",
+    "etl-pipeline/tests/test_metrics_materialization.py": "597bf51f0ec0796879e8fd2becaace64227427767d04636d66f7cd9106551ba8"
+  },
+  "versions": {
+    "adapter": "1.0.0",
+    "auxiliary": "metrics-auxiliary-v1",
+    "auxiliaryDocument": "metrics-auxiliary-document-v1",
+    "materialization": "metrics-materialization-v1",
+    "offlineArtifact": "metrics-offline-v1",
+    "relations": "metrics-relations-v1",
+    "temporalAlgorithm": "metrics-temporal-1.0.1",
+    "temporalInput": "metrics-temporal-input-v2",
+    "temporalPolicy": "materialized-evidence-v1",
+    "temporalResult": "metrics-temporal-result-v2"
+  }
+}
