@@ -1,0 +1,11 @@
+{
+  "auxiliaryVersion": "metrics-auxiliary-v1",
+  "policy": {
+    "policyVersion": "materialized-evidence-v1",
+    "trustedOrigins": []
+  },
+  "archiveOrigin": "local-archive",
+  "resources": [],
+  "evidence": [],
+  "bindings": []
+}

@@ -51,23 +51,28 @@ abre transação read-only; não propõe nova migration ou amplia privilégios.
 ## Documentos auxiliares e confiança
 
 `metrics-auxiliary-v1`: {auxiliaryVersion,policy,archiveOrigin,resources,evidence,
-bindings}. policy é a política temporal aceita com trustedOrigins nominal,
+bindings,file_ingestion?}. policy é a política temporal aceita com trustedOrigins nominal,
 nunca inferida das origens presentes. archiveOrigin identifica explicitamente
 quem assume a observação local. Receipt fornece available_at conservador do FILE;
-ingested_at continua null salvo documento explícito SYSTEM_INGESTION. Receipt
+ingested_at continua null salvo file_ingestion[source_revision_id] com envelope
+SYSTEM_INGESTION de documento explícito. Esse mapa nunca é preenchido por SQL. Receipt
 não prova disponibilidade anterior, encerramento, completude nem modelo.
 
 resources/evidence têm o formato fechado E5b-3 (CALENDAR, STATE, METADATA), com
 origem, recebimento recorded_at, dependências e IDs explícitos. Provas auxiliares
 precisam depender de METADATA congelado que contém o documento recebido; não se
-acessa reference. Recursos FILE/SET são exclusivos da recuperação. CALENDAR deve
+acessa reference. METADATA.document exige {documentVersion:
+metrics-auxiliary-document-v1,origin,received_at,reference,content}; a origem deve
+coincidir com payload.origin e recorded_at da prova não pode preceder received_at.
+Isso valida vínculo e cronologia declarada, não autentica o documento. Recursos FILE/SET são exclusivos da recuperação. CALENDAR deve
 conter exatamente o inventário congelado daquela temporada/fase do cálculo e
 vincular o SET calendar. Calendar mutável games não é consultado. CALENDAR sem
 prova de completude e STATE UNKNOWN são gerados quando os documentos faltam.
 
-bindings: lista de {calculation_id,calendar_revision_id,metadata_revision_ids,
+bindings: lista de {calculation_id,calendars,metadata_revision_ids,
 completeness,model,source_models}. completeness é mapa coverage_id→envelope;
 source_models é mapa source_revision_id→envelope (todos os membros únicos).
+calendars é mapa season/phase→ID de CALENDAR, com todas as fases do lote.
 Bindings ligam explicitamente declarações aos registros; completude efetiva
 persistida não é promovida por declaração divergente. Modelo conhecido no
 manifesto deve coincidir; UNKNOWN pode receber documento separado declarado.
