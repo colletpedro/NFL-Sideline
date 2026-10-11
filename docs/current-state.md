@@ -51,6 +51,12 @@ Reproduzidos 350 testes ETL, 26 exemplos/23 testes E5a, 12 hashes, regressões b
 
 Próximo passo: **E5b-4**, materializador explícito E5b-2 → entrada temporal v2 e contrato Java separado para resultado v2. Java, ETL semanal, backfill e visual ainda não consomem essas métricas. Main, produção, snapshots e aprovações permanecem preservados; rodada humana E4, BASIC/FULL e cinco falhas legadas continuam pendentes.
 
+## E5b-4 — candidata com bloqueio de identidade (11/10/2026)
+
+Candidata `f2d9465`, branch `codex/metrics-materialization-e5b4`, implementa materializador isolado, leitura PostgreSQL explícita/read-only e leitor Java result-v2. O orquestrador reproduziu 410 testes ETL, checks/regressões E5a/E5b-1/2/3 e Java 21 clean verify com 154 testes sem falhas/skips. **Ainda não aceita nem incorporada:** E5b-2 preserva calculation_id de lote; o validador E5b-3 trata esse mesmo ID como projeção única por jogo. Uma contraprova com dois jogos observados no mesmo lote reproduziu IDENTITY_CONFLICT. [Revisão e critérios de correção](plans/metrics/e5b-4-review/REVIEW.md).
+
+O próximo passo é distinguir lote, cobertura, associação e revisão temporal no contrato E5b-3, versionar a correção e adaptar/revalidar E5b-4 com lote completo. Não dividir lote nem inventar IDs por jogo. A prova PostgreSQL desta candidata cobre o caminho representável e não foi repetida pelo orquestrador nesta revisão. E5b-5 e integrações de produto continuam pendentes; produção permanece intacta.
+
 ## Política de arquivos
 
 - **Fontes e testes:** `core-api/src`, `web-ui/src` e `scripts/` são versionados. Os scripts de avaliação e seus testes usam as fixtures abaixo sem depender de saídas ignoradas.
