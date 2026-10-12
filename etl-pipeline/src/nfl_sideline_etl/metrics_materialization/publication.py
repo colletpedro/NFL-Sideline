@@ -6,6 +6,7 @@ import tempfile
 from ..offline_metrics.artifact import ensure_destination, identity, json_bytes, rename_exclusive
 from ..offline_metrics.inputs import load_json
 from ..metrics_persistence.archive import digest
+from ..temporal_metrics import INPUT_VERSION
 from ..temporal_metrics.core import canonical
 from ..temporal_metrics.validation import validate
 from . import MATERIALIZATION_VERSION
@@ -14,6 +15,8 @@ from . import MATERIALIZATION_VERSION
 def publish(destination, temporal, lineage):
     destination = ensure_destination(destination)
     validate(temporal)
+    if temporal['inputVersion'] != INPUT_VERSION or lineage['materializationVersion'] != MATERIALIZATION_VERSION:
+        raise ValueError('Unsupported materialization/input version pair')
     if lineage['temporalInputId'] != identity(canonical(temporal)) or lineage['materialization_id'] != identity({k: v for k, v in lineage.items() if k != 'materialization_id'}):
         raise ValueError('Materialization identity mismatch')
     data = {'input.json': json_bytes(temporal), 'lineage.json': json_bytes(lineage)}
@@ -47,7 +50,8 @@ def read(destination):
             marker['files'] != {n: digest(data[n]) for n in ('input.json', 'lineage.json')}):
         raise ValueError('Materialized package hash/version mismatch')
     temporal = load_json(data['input.json']); lineage = load_json(data['lineage.json'])
-    if (marker['materialization_id'] != lineage['materialization_id'] or
+    if (temporal['inputVersion'] != INPUT_VERSION or lineage['materializationVersion'] != MATERIALIZATION_VERSION or
+            marker['materialization_id'] != lineage['materialization_id'] or
             marker['temporalInputId'] != lineage['temporalInputId'] or
             lineage['materialization_id'] != identity({k: v for k, v in lineage.items() if k != 'materialization_id'}) or
             lineage['temporalInputId'] != identity(canonical(temporal))):

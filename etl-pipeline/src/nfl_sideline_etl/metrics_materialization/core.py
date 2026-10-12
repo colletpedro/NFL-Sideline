@@ -1,4 +1,4 @@
-"""Relations + closed bytes + explicit documents -> accepted temporal input v2.
+"""Relations + closed bytes + explicit documents -> explicit temporal input v3.
 
 No driver, environment, network, clock or database. Temp files only enable the
 accepted E5b-2 semantic verifier; archive paths in receipts are never accessed.
@@ -258,19 +258,13 @@ def materialize(package, recovered, auxiliary, derived_at):
                 'metadata_revision_ids': binding['metadata_revision_ids'] if binding else [],
                 'game': {k: a[k] for k in game_fields}, 'versions': {k: m['versions'][k] for k in ('population', 'definition', 'adapter')},
                 'completeness': complete, 'model': binding['model'] if binding else None,
-                'source_models': sm, 'unknown_filter_flags_n': a['unknown_filter_flags_n'], 'statistics': rows}
+                'source_models': sm, 'unknown_filter_flags_n': a['unknown_filter_flags_n'], 'statistics': rows,
+                'original': {'manifest': deepcopy(m), 'coverage': deepcopy(a)}}
             c['revision_id'] = identity({'temporalAssociation': c})
             calculations.append(c)
     temporal = {'inputVersion': INPUT_VERSION, 'policy': aux['policy'], 'resources': resources,
                 'evidence': evidence, 'calculations': calculations}
-    # Do not silently alias batch IDs or slice games to bypass the accepted validator.
-    try:
-        validate(temporal)
-    except ValueError as error:
-        if str(error) in {'IDENTITY_CONFLICT: ' + cid for cid in {c['calculation_id'] for c in calculations}
-                          if sum(c['calculation_id'] == cid for c in calculations) > 1}:
-            raise ContractGap('E5B3_BATCH_CALCULATION_ID_CONFLICT: ' + str(error)) from error
-        raise
+    validate(temporal)
     lineage = {'materializationVersion': MATERIALIZATION_VERSION, 'derivedAt': derived_at,
                'relations': package, 'recoveredArchives': recovered, 'auxiliary': aux,
                'diagnostics': sorted_rows(diagnostics), 'temporalInputId': identity(canonical(temporal)),

@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Set;
 import static com.nflsideline.coreapi.metrics.temporal.TemporalValue.*;
 
-/** Pure result-v2 contract/integrity reader. Does not run the temporal algorithm. */
+/** Pure result-v2/v3 contract/integrity reader. Does not run the temporal algorithm. */
 public final class TemporalResultReader {
     private static final Set<String> SEMANTIC = Set.of("resultVersion", "algorithmVersion", "policy", "request",
         "asOfDateMapping", "pregame", "blocks", "resourcesUsed", "calculationsUsed", "evidenceUsed");
@@ -27,11 +27,12 @@ public final class TemporalResultReader {
         for (Path p = absolute; p != null; p = p.getParent()) check(!Files.isSymbolicLink(p), "Symlink path forbidden");
         var marker = object(PythonJson.parse(readFile(absolute.resolve("COMPLETED.json"))));
         fields(marker, Set.of("resultVersion", "result_id", "audit_id", "files"));
-        check(marker.text("resultVersion").equals("metrics-temporal-result-v2"), "Unsupported result version (v1 refused)");
+        check(Set.of("metrics-temporal-result-v2", "metrics-temporal-result-v3").contains(marker.text("resultVersion")), "Unsupported result version (v1 refused)");
         fields(marker.object("files"), Set.of("result.json"));
         byte[] bytes = readFile(absolute.resolve("result.json"));
         check(PythonJson.sha(bytes).equals(marker.object("files").text("result.json")), "Result byte hash mismatch");
         var document = object(PythonJson.parse(bytes));
+        check(document.text("resultVersion").equals(marker.text("resultVersion")), "Marker version binding mismatch");
         check(document.text("result_id").equals(marker.text("result_id")) &&
               document.text("audit_id").equals(marker.text("audit_id")), "Marker identity binding mismatch");
         return validate(document);
@@ -42,8 +43,9 @@ public final class TemporalResultReader {
     }
     public TemporalResult validate(ObjectValue d) {
         var rootKeys = new HashSet<>(SEMANTIC); rootKeys.addAll(AUDIT); fields(d, rootKeys);
-        check(d.text("resultVersion").equals("metrics-temporal-result-v2"), "Unsupported result version (v1 refused)");
-        check(d.text("algorithmVersion").equals("metrics-temporal-1.0.1"), "Unsupported algorithm version");
+        check(Set.of("metrics-temporal-result-v2", "metrics-temporal-result-v3").contains(d.text("resultVersion")), "Unsupported result version (v1 refused)");
+        boolean v3 = d.text("resultVersion").equals("metrics-temporal-result-v3");
+        check(d.text("algorithmVersion").equals(v3 ? "metrics-temporal-1.1.0" : "metrics-temporal-1.0.1"), "Unsupported algorithm version for result version");
         check(d.text("structuralValidation").equals("PASSED"), "Unvalidated temporal artifact");
         var semantic = new HashMap<String, TemporalValue>();
         for (var key : SEMANTIC) semantic.put(key, d.get(key));
@@ -80,7 +82,18 @@ public final class TemporalResultReader {
             for (var dependency : strings(e.array("dependencies"))) check(resources.containsKey(dependency), "Unresolved used evidence dependency");
             if (e.fields().containsKey("receipt")) receipt(e.object("receipt"), e);
         }
-        for (var c : calculations.values()) calculation(c, resources);
+        var batches = new HashMap<String, ObjectValue>();
+        var coverages = new HashMap<String, ObjectValue>();
+        for (var c : calculations.values()) {
+            calculation(c, resources, v3);
+            if (v3) {
+                original(c, resources);
+                immutable(batches, c.text("calculation_id"), c.object("original").object("manifest"));
+                var projection = new ObjectValue(Map.of("coverage", c.object("original").object("coverage"),
+                    "statistics", c.get("statistics"), "versions", c.get("versions")));
+                immutable(coverages, c.text("coverage_revision_id"), projection);
+            }
+        }
         var blocks = new ArrayList<TemporalResult.Block>();
         for (var value : d.array("blocks")) {
             var b = object(value);
@@ -224,9 +237,10 @@ public final class TemporalResultReader {
             default -> throw new IllegalArgumentException("Unsupported resource kind");
         }
     }
-    private static void calculation(ObjectValue c, Map<String, ObjectValue> resources) {
+    private static void calculation(ObjectValue c, Map<String, ObjectValue> resources, boolean v3) {
         fields(c, Set.of("revision_id", "calculation_id", "coverage_revision_id", "calendar_revision_id", "pbp_revision_id",
-            "metadata_revision_ids", "game", "versions", "completeness", "model", "source_models", "unknown_filter_flags_n", "statistics"), Set.of("source_cause"));
+            "metadata_revision_ids", "game", "versions", "completeness", "model", "source_models", "unknown_filter_flags_n", "statistics"), v3 ? Set.of("source_cause", "original") : Set.of("source_cause"));
+        if (v3) check(c.fields().containsKey("original"), "Original dimensions required");
         text(c.text("calculation_id")); text(c.text("coverage_revision_id")); game(c.object("game"));
         var cal = resources.get(c.text("calendar_revision_id")); var pbp = resources.get(c.text("pbp_revision_id"));
         check(cal != null && cal.text("kind").equals("CALENDAR") && cal.object("payload").array("games").contains(c.object("game")), "Calculation/calendar mismatch");
@@ -252,6 +266,71 @@ public final class TemporalResultReader {
             check(equalDecimal(row.get("epa_sum"), other.get("epa_sum")), "Off/opponent defense EPA mismatch");
             if (row.text("foundation").equals("general")) reconcile(row, groups.get(team + "/" + row.text("role") + "/classified_pass"), groups.get(team + "/" + row.text("role") + "/classified_rush"));
         }
+    }
+    private static void immutable(Map<String, ObjectValue> seen, String id, ObjectValue content) {
+        var old = seen.putIfAbsent(id, content);
+        check(old == null || old.equals(content), "IDENTITY_CONFLICT: " + id);
+    }
+    private static void original(ObjectValue c, Map<String, ObjectValue> resources) {
+        var o = c.object("original"); fields(o, Set.of("manifest", "coverage"));
+        var m = o.object("manifest"); var a = o.object("coverage");
+        fields(m, Set.of("artifactVersion", "versions", "mode", "inputs", "metadata", "source_model_versions",
+            "replica_projection", "requested_seasons", "limitations", "calculation_id"));
+        fields(a, Set.of("game_id", "season", "phase", "round", "week", "home_team", "away_team",
+            "coverage_revision_id", "pbp_content_id", "calendar_revision_id", "pbp_revision_id", "raw_n", "unique_n",
+            "duplicate_rows_ignored", "calendar_duplicate_rows_ignored", "excluded_n", "exclusions",
+            "outside_pass_run_null_teams_n", "eligible_content_n", "unknown_filter_flags_n", "declared_completeness",
+            "completeness", "expected_unique_rows", "expected_raw_unique_count_matches", "scope", "statistics_status", "provenance"));
+        check(m.text("calculation_id").equals(c.text("calculation_id")) && a.text("coverage_revision_id").equals(c.text("coverage_revision_id")), "Original identity binding mismatch");
+        check(m.text("artifactVersion").equals("metrics-offline-v1") && m.text("mode").equals("OFFLINE_DRY_RUN"), "Original batch version/mode mismatch");
+        fields(m.object("versions"), Set.of("population", "definition", "adapter", "artifact"));
+        check(m.object("versions").text("artifact").equals("metrics-offline-v1"), "Original artifact version mismatch");
+        for (var key : List.of("population", "definition", "adapter")) check(m.object("versions").get(key).equals(c.object("versions").get(key)), "Original versions mismatch");
+        for (var key : List.of("game_id", "season", "phase", "round", "week", "home_team", "away_team")) check(a.get(key).equals(c.object("game").get(key)), "Original game mismatch");
+        check(a.get("pbp_revision_id").equals(c.get("pbp_revision_id")) && a.get("unknown_filter_flags_n").equals(c.get("unknown_filter_flags_n")), "Original coverage projection mismatch");
+        var provenance = new HashMap<>(a.object("provenance").fields());
+        for (var key : List.of("available_at", "event_upper_bound", "ingested_at")) if (provenance.get(key) == NullValue.INSTANCE) provenance.remove(key);
+        var metadata = m.object("metadata"); fields(metadata, Set.of("metadataVersion", "games", "sources"));
+        check(metadata.integer("metadataVersion").equals(BigInteger.ONE), "Original metadata version mismatch");
+        check(metadata.object("games").fields().getOrDefault(a.text("game_id"), new ObjectValue(Map.of())).equals(new ObjectValue(provenance)), "Original batch/coverage provenance mismatch");
+        var projection = new ObjectValue(Map.of("game", c.get("game"), "calendar_revision", a.get("calendar_revision_id"),
+            "pbp_revision", a.get("pbp_revision_id"), "content_id", a.get("pbp_content_id"),
+            "provenance", new ObjectValue(provenance), "versions", m.get("versions")));
+        check(PythonJson.identity(projection).equals(c.text("coverage_revision_id")), "Original coverage identity mismatch");
+        for (var key : List.of("calendar", "pbp")) {
+            var set = resources.get(a.text(key + "_revision_id"));
+            check(set != null && set.text("kind").equals("SET") && set.object("payload").text("source_kind").equals(key), "Original source set missing");
+            var members = new ArrayList<String>();
+            for (var iv : m.array("inputs")) { var input = object(iv); if (input.text("kind").equals(key)) members.add(input.text("source_revision_id")); }
+            members.sort(String::compareTo); var deps = new ArrayList<>(strings(set.array("dependencies"))); deps.sort(String::compareTo);
+            check(members.equals(deps), "Original batch source members mismatch");
+        }
+        check(strings(resources.get(c.text("calendar_revision_id")).array("dependencies")).contains(a.text("calendar_revision_id")), "Auxiliary calendar must bind original SET");
+        for (var key : List.of("raw_n", "unique_n", "duplicate_rows_ignored", "calendar_duplicate_rows_ignored", "excluded_n", "outside_pass_run_null_teams_n", "eligible_content_n", "unknown_filter_flags_n")) nonnegative(a.integer(key));
+        check(a.text("scope").equals(a.text("completeness").equals("COMPLETE") ? "FULL_GAME_CONTENT" : "AUDITABLE_SUBSET") &&
+            a.text("statistics_status").equals(a.text("completeness").equals("COMPLETE") ? "COMPLETE" : "PARTIAL"), "Original observed scope/status mismatch");
+        check(a.integer("unique_n").signum() > 0 || a.text("completeness").equals("COMPLETE") && !a.isNull("expected_unique_rows") && a.integer("expected_unique_rows").signum() == 0, "Empty observation requires COMPLETE zero proof");
+        check(a.integer("raw_n").equals(a.integer("unique_n").add(a.integer("duplicate_rows_ignored"))) &&
+            a.integer("unique_n").equals(a.integer("excluded_n").add(a.integer("eligible_content_n"))), "Original population reconciliation failed");
+        BigInteger eligible = BigInteger.ZERO;
+        for (var rv : c.array("statistics")) { var r = object(rv); if (r.text("role").equals("off") && r.text("foundation").equals("general")) eligible = eligible.add(r.integer("eligible_n")); }
+        check(eligible.equals(a.integer("eligible_content_n")), "Original eligible count mismatch");
+        if (!c.isNull("completeness")) check(c.object("completeness").get("value").equals(a.get("completeness")), "Qualification rewrites original completeness");
+        var known = new HashSet<String>();
+        var sourceMap = m.object("source_model_versions");
+        var hashes = new HashSet<String>();
+        for (var sid : c.object("source_models").fields().keySet()) {
+            hashes.add(sid.substring(7));
+            var declared = sourceMap.object(sid.substring(7));
+            var storedSource = metadata.object("sources").fields().get(sid.substring(7));
+            var originalDeclaration = storedSource == null ? new ObjectValue(Map.of("value", new TextValue("UNKNOWN"), "evidence", NullValue.INSTANCE)) : object(storedSource).object("source_model_version");
+            check(declared.equals(originalDeclaration), "Original batch/source declaration mismatch");
+            String model = declared.text("value");
+            var env = c.object("source_models").get(sid);
+            if (!model.equals("UNKNOWN")) { known.add(model); check(env == NullValue.INSTANCE || object(env).text("value").equals(model), "Qualification rewrites original source model"); }
+        }
+        check(sourceMap.fields().keySet().equals(hashes), "Original source model map mismatch");
+        check(c.isNull("model") || known.isEmpty() || known.equals(Set.of(c.object("model").text("value"))), "Qualification rewrites original batch model");
     }
     private static void receipt(ObjectValue r, ObjectValue e) {
         fields(r, Set.of("receiptVersion", "receipt_id", "archive_id", "archive_root", "sha256", "locator", "observed_at", "origin"));
