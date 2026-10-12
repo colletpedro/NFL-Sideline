@@ -21,6 +21,7 @@ from nfl_sideline_etl.ingestion_runs import (
     sanitize_error_message,
     start_run,
 )
+from nfl_sideline_etl import metrics_pipeline
 from nfl_sideline_etl.seasons import add_season_arguments, seasons_from_args
 
 LOGGER = logging.getLogger("run_pipeline")
@@ -41,6 +42,7 @@ class PipelineSeasonResult:
     rows_market: int
     rows_pbp: int
     rows_metrics: int
+    metrics_attempt: str | None = None
 
 
 def _open_checked_connection() -> PgConnection:
@@ -84,10 +86,19 @@ def process_season(
     allow_missing_pbp: bool,
     skip_acquire: bool,
     connection_factory: Callable[[], PgConnection] | None = None,
+    metrics_execution: metrics_pipeline.Execution | None = None,
 ) -> PipelineSeasonResult:
     """Executa uma temporada; depois de RUNNING, toda falha é registrada e propagada."""
-    factory = connection_factory or _open_checked_connection
-    conn = factory()
+    if metrics_execution and (metrics_execution.mode != "local" or not skip_acquire or
+                              connection_factory is not None):
+        raise ValueError("Integrated execution requires local preflight and skip-acquire")
+    attempt = metrics_execution.attempt(season) if metrics_execution else None
+    if attempt:
+        attempt.freeze()
+        data_dir = attempt.data_dir
+    factory = (metrics_execution.connection if metrics_execution else
+               connection_factory or _open_checked_connection)
+    conn = None
     run_id: int | None = None
     stage = "start_run"
     rows_schedules = 0
@@ -97,7 +108,12 @@ def process_season(
     rows_pbp = 0
     rows_metrics = 0
     try:
+        conn = factory()
         run_id = start_run(conn, season)
+        if attempt:
+            attempt.run_id = run_id
+            attempt.global_status = "RUNNING"
+            attempt.event("RUNNING")
 
         stage = "acquire"
         if skip_acquire:
@@ -141,8 +157,17 @@ def process_season(
         rows_pbp = metrics_result.rows_pbp
         rows_metrics = metrics_result.rows_metrics
 
+        if attempt:
+            stage = "game_metrics"
+            attempt.run()
+
         stage = "finish_success"
+        if attempt:
+            attempt.event("FINISHING_GLOBAL")
         finish_run_succeeded(conn, run_id, rows_pbp=rows_pbp, rows_games=rows_games)
+        if attempt:
+            attempt.global_status = "SUCCEEDED"
+            attempt.event("SUCCEEDED")
         result = PipelineSeasonResult(
             season=season,
             run_id=run_id,
@@ -152,6 +177,7 @@ def process_season(
             rows_market=rows_market,
             rows_pbp=rows_pbp,
             rows_metrics=rows_metrics,
+            metrics_attempt=attempt.attempt_id if attempt else None,
         )
         LOGGER.info(
             "season=%d run_id=%d status=SUCCEEDED rows_teams=%d rows_games=%d "
@@ -166,6 +192,7 @@ def process_season(
         )
         return result
     except Exception as original_error:
+        failed_status = "NOT_STARTED" if run_id is None else "UNKNOWN"
         if run_id is not None:
             try:
                 finish_run_failed(
@@ -175,14 +202,18 @@ def process_season(
                     rows_games=rows_games,
                     error_message=sanitize_error_message(stage, original_error),
                 )
+                failed_status = "FAILED"
             except Exception as status_error:
                 LOGGER.error(
                     "Falha secundária ao registrar FAILED: %s",
                     sanitize_error_message("finish_failed", status_error),
                 )
+        if attempt:
+            attempt.failed(stage, original_error, global_status=failed_status)
         raise
     finally:
-        conn.close()
+        if conn is not None:
+            conn.close()
 
 
 def run_pipeline(
@@ -192,8 +223,11 @@ def run_pipeline(
     allow_missing_pbp: bool,
     skip_acquire: bool,
     connection_factory: Callable[[], PgConnection] | None = None,
+    metrics_execution: metrics_pipeline.Execution | None = None,
 ) -> tuple[PipelineSeasonResult, ...]:
     """Processa temporadas sequencialmente e para na primeira falha."""
+    if metrics_execution and (not skip_acquire or connection_factory is not None):
+        raise ValueError("Integrated execution requires local preflight and skip-acquire")
     results: list[PipelineSeasonResult] = []
     for season in seasons:
         results.append(
@@ -203,6 +237,7 @@ def run_pipeline(
                 allow_missing_pbp=allow_missing_pbp,
                 skip_acquire=skip_acquire,
                 connection_factory=connection_factory,
+                metrics_execution=metrics_execution,
             )
         )
     return tuple(results)
@@ -221,6 +256,7 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Usa somente Parquets locais existentes, sem nflverse e sem S3.",
     )
+    metrics_pipeline.add_arguments(parser)
     return parser
 
 
@@ -231,11 +267,16 @@ def main(argv: list[str] | None = None) -> int:
     seasons = seasons_from_args(parser, args)
     data_dir = args.data_dir or DEFAULT_DATA_DIR
     try:
+        execution = metrics_pipeline.configure(args, seasons)
+        if args.game_metrics == "plan":
+            metrics_pipeline.plan(execution, seasons)
+            return 0
         run_pipeline(
             seasons,
             data_dir=data_dir,
             allow_missing_pbp=args.allow_missing_pbp,
             skip_acquire=args.skip_acquire,
+            metrics_execution=execution,
         )
     except Exception as exc:
         LOGGER.error("Pipeline abortado: %s", sanitize_error_message("cli", exc))
