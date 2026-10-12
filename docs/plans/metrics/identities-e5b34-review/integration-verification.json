@@ -1,0 +1,24 @@
+{
+  "candidateHead": "60948abab73d575dce630cb66f9908125f2039c6",
+  "databaseInstanceStopped": true,
+  "integrationMergeHead": "6cd35408e408afc5c59def4ad932f2a68b2ae0b4",
+  "javaCleanVerify": {
+    "errors": 0,
+    "failures": 0,
+    "result": "BUILD SUCCESS",
+    "skipped": 0,
+    "tests": 170
+  },
+  "mainHead": "5096a585f0cc5455160ff9c2ee64555cfcb59fc0",
+  "protectedPathsUnchanged": [
+    "contracts/metrics/e5a-v1",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence",
+    "supabase",
+    "web-ui",
+    "Spec.md"
+  ],
+  "pythonSourceAndTestHashesMatched": 17,
+  "runtimeTestsFixturesMatchCandidate": true,
+  "untrackedHistoricalFilesPreserved": 36
+}

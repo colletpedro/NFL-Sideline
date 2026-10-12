@@ -1,4 +1,4 @@
-# Estado consolidado — 09/10/2026
+# Estado consolidado — 12/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -49,13 +49,21 @@ O candidato inicial `767cf7f` apresentou duas lacunas, registradas na [revisão 
 
 Reproduzidos 350 testes ETL, 26 exemplos/23 testes E5a, 12 hashes, regressões byte a byte, dry-run E5b-2 sem banco e as três contraprovas corrigidas. Os oito hashes de fontes/testes e o pacote integrado conferiram com o candidato testado. [Aceite e limites](plans/metrics/e5b-3-review/CORRECTION-ACCEPTANCE.md). Em PIT, calendário com jogos futuros sem prova temporal suficiente ainda pode manter expectativa UNKNOWN; kickoff previsto não prova início efetivo. Não há certificação histórica real nem compatibilidade anunciada para consumidores result-v1.
 
-Próximo passo: **E5b-4**, materializador explícito E5b-2 → entrada temporal v2 e contrato Java separado para resultado v2. Java, ETL semanal, backfill e visual ainda não consomem essas métricas. Main, produção, snapshots e aprovações permanecem preservados; rodada humana E4, BASIC/FULL e cinco falhas legadas continuam pendentes.
+Essa versão foi sucedida pela correção de identidades E5b-3/4 abaixo, mantendo o caminho histórico 1.0.1 separado. Main, produção, snapshots e aprovações permanecem preservados; rodada humana E4, BASIC/FULL e cinco falhas legadas continuam pendentes.
 
-## E5b-4 — candidata com bloqueio de identidade (11/10/2026)
+## E5b-4 — bloqueio inicial de identidade (registro de 11/10/2026)
 
 Candidata `f2d9465`, branch `codex/metrics-materialization-e5b4`, implementa materializador isolado, leitura PostgreSQL explícita/read-only e leitor Java result-v2. O orquestrador reproduziu 410 testes ETL, checks/regressões E5a/E5b-1/2/3 e Java 21 clean verify com 154 testes sem falhas/skips. **Ainda não aceita nem incorporada:** E5b-2 preserva calculation_id de lote; o validador E5b-3 trata esse mesmo ID como projeção única por jogo. Uma contraprova com dois jogos observados no mesmo lote reproduziu IDENTITY_CONFLICT. [Revisão e critérios de correção](plans/metrics/e5b-4-review/REVIEW.md).
 
-O próximo passo é distinguir lote, cobertura, associação e revisão temporal no contrato E5b-3, versionar a correção e adaptar/revalidar E5b-4 com lote completo. Não dividir lote nem inventar IDs por jogo. A prova PostgreSQL desta candidata cobre o caminho representável e não foi repetida pelo orquestrador nesta revisão. E5b-5 e integrações de produto continuam pendentes; produção permanece intacta.
+Esse bloqueio foi resolvido pela entrega de 12/10 abaixo. A prova PostgreSQL da candidata inicial cobre o caminho representável e não foi repetida pelo orquestrador naquela revisão. Os relatórios bloqueados foram preservados como história, sem declarar o caminho antigo completo.
+
+## Identidades E5b-3/4 e ponte isolada — aceitas em 12/10/2026
+
+Incorporada `60948ab` à branch local `codex/metrics-integration-e5b4`, preservando as revisões anteriores. Lote, cobertura, associação e revisão temporal têm projeções distintas; o calculation_id original admite vários jogos e cobertura compartilhada não duplica amostra. Materialization-v2 emite input-v3, algoritmo 1.1.0/result-v3 com originais explícitos. Inputs v1/v2 mantêm algoritmo 1.0.1/result-v2; Java suporta os dois pares conhecidos separadamente.
+
+O orquestrador reproduziu **434 testes ETL e 170 Java**, checks E5a/E5b-1/2/3 e fluxo PostgreSQL real próprio para três cenários, incluindo o lote antes bloqueado. CLI byte a byte, seis leituras Java, read-only e preservação integral das linhas/timestamps/archive confirmados. Instância da revisão na porta 55486 encerrada e bind livre. [Aceite e provas independentes](plans/metrics/identities-e5b34-review/ACCEPTANCE.md).
+
+**E5b-4 concluída no escopo isolado.** Próximo passo: E5b-5, integração controlada ao ETL. A coleta/persistência não certifica disponibilidade histórica, completude, encerramento ou modelo EPA onde faltam provas; UNKNOWN continua explícito. Não há ETL semanal conectado, consulta JPA/editorial, integração visual, backfill ou publicação. Supabase completo/advisors, E4 humano, BASIC/FULL, defeitos legados e avaliação com dados reais permanecem pendentes.
 
 ## Política de arquivos
 

@@ -1,0 +1,15 @@
+{
+  "allRowsIncludingPersistedAtUnchanged": true,
+  "archiveBlobsReceiptsMarkerUnchanged": true,
+  "byteParity": {
+    "materialized/COMPLETED.json": "d23d9d4d82527942a5055af7236ff7041e0d753a17bb0262e0c0617566b51e36",
+    "materialized/input.json": "886a75fd7869996953031e01fb226e5ddfa58217c0b11b39d2da7c2bc568baf2",
+    "materialized/lineage.json": "b0c3b08fb1afcdce76e1c875bdc3120c27c0ad955e23206b247f784b5067bda3",
+    "reconstruction/COMPLETED.json": "e318e3195cf0a8de5b48c74ca1426f35ca6f7c7e9017ccc1648c00b4ff8dd7b1",
+    "reconstruction/result.json": "49043938b2629167abe1fa1960c4e3631ed07617292da052d116f9b73ca450e0"
+  },
+  "instance_id": "75e2c1d1-48e5-4b0e-8a2f-d80122e5a093",
+  "java": "sha256:e1229c39cf216ed31405cea5fd8e21874f2338a35904f2a25b7976c3f78bd26a sha256:53cb85a11c35d8b6d0b326e91d04c29877d4cef0009f2f809a83c3b8984402d2 EVENT_RECONSTRUCTION\ndef/classified_pass COMPLETE EPA=null volume=0\noff/classified_pass COMPLETE EPA=null volume=0\ndef/classified_rush COMPLETE EPA=null volume=0\noff/classified_rush COMPLETE EPA=null volume=0\ndef/general COMPLETE EPA=null volume=0\noff/general COMPLETE EPA=null volume=0\ndef/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/general AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\noff/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=123456789012345678901234567890123456789/1000000000000000000000000000000000000000 volume=1\noff/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=-1123456789012345678901234567890123456789/2000000000000000000000000000000000000000 volume=2\noff/general AUDITABLE_SUBSET_UNKNOWN EPA=-1/3 volume=3",
+  "scope": "REAL_POSTGRESQL_CLI_PARITY",
+  "unselectedCalculationsPresent": 2
+}
