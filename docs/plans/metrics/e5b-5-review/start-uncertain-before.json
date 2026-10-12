@@ -1,0 +1,8 @@
+{
+  "scope": "SIMULATED_SQL_COMMIT_ACKNOWLEDGEMENT_FAILURE",
+  "runCommitSimulated": true,
+  "observedGlobalStatus": "NOT_STARTED",
+  "runIdReceived": null,
+  "expectedGlobalStatus": "UNKNOWN",
+  "originalExceptionPreserved": true
+}

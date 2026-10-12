@@ -63,7 +63,15 @@ Incorporada `60948ab` à branch local `codex/metrics-integration-e5b4`, preserva
 
 O orquestrador reproduziu **434 testes ETL e 170 Java**, checks E5a/E5b-1/2/3 e fluxo PostgreSQL real próprio para três cenários, incluindo o lote antes bloqueado. CLI byte a byte, seis leituras Java, read-only e preservação integral das linhas/timestamps/archive confirmados. Instância da revisão na porta 55486 encerrada e bind livre. [Aceite e provas independentes](plans/metrics/identities-e5b34-review/ACCEPTANCE.md).
 
-**E5b-4 concluída no escopo isolado.** Próximo passo: E5b-5, integração controlada ao ETL. A coleta/persistência não certifica disponibilidade histórica, completude, encerramento ou modelo EPA onde faltam provas; UNKNOWN continua explícito. Não há ETL semanal conectado, consulta JPA/editorial, integração visual, backfill ou publicação. Supabase completo/advisors, E4 humano, BASIC/FULL, defeitos legados e avaliação com dados reais permanecem pendentes.
+**E5b-4 concluída no escopo isolado.** A coleta/persistência não certifica disponibilidade histórica, completude, encerramento ou modelo EPA onde faltam provas; UNKNOWN continua explícito. Não há ETL semanal conectado, consulta JPA/editorial, integração visual, backfill ou publicação. Supabase completo/advisors, E4 humano, BASIC/FULL, defeitos legados e avaliação com dados reais permanecem pendentes.
+
+## ETL optativo E5b-5 — aceito em 12/10/2026
+
+Incorporada a candidata `6f2ad34` à branch local `codex/metrics-integration-e5b5`, com ajuste de revisão `8391b88`: modos off (default), plan offline e local com skip-acquire/configurações explícitas de domínio e writer. Fontes congeladas, etapa privada antes do sucesso global, journal por tentativa e recuperação idempotente. Loaders/fórmulas, contratos, schema e workflow preservados. Sem atomicidade distribuída; falha posterior não apaga conteúdo privado válido.
+
+Revisão corrigiu espaços finais no log Java e a classificação de falha inicial sem ID recebido: UNKNOWN após tentativa de start_run, NOT_STARTED antes da chamada. **498 testes ETL e 51 regressões PostgreSQL reais** aprovados; prova integrada repetida no checkout corrigido, JAR reconstruído offline e leitura temporal/Java. Zero inserções/66 reutilizações na reexecução, revisões/receipts preservados, falhas/recuperação e ausência/vazio confirmados. Todas as instâncias próprias encerradas. [Aceite, limites e evidências](plans/metrics/e5b-5-review/ACCEPTANCE.md).
+
+Próximo passo: **E5b-6, backfill limitado e auditoria com dados locais reais**, inicialmente no ambiente descartável identificado. Sem aquisição ou aplicação remota implícita. Novo caminho semanal/Production permanece desativado; integração editorial/visual e publicação continuam pendentes.
 
 ## Política de arquivos
 
