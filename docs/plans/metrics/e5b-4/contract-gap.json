@@ -1,0 +1,38 @@
+{
+  "acceptedAlgorithm": "metrics-temporal-1.0.1",
+  "acceptedValidatorFailure": "IDENTITY_CONFLICT: sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+  "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+  "associations": [
+    {
+      "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+      "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+      "game_id": "synthetic-1"
+    },
+    {
+      "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+      "coverage_revision_id": "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308",
+      "game_id": "synthetic-3"
+    },
+    {
+      "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+      "coverage_revision_id": "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+      "game_id": "synthetic-5"
+    },
+    {
+      "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+      "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+      "game_id": "synthetic-6"
+    }
+  ],
+  "base": "8f583c4ec9ed83f86c2229b0f1656d32403bcc31",
+  "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+  "failure": "E5B3_BATCH_CALCULATION_ID_CONFLICT: IDENTITY_CONFLICT: sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+  "observedGameIds": [
+    "synthetic-1",
+    "synthetic-6"
+  ],
+  "outputPublished": false,
+  "priorContractsModified": false,
+  "proposal": "Validate calculation_id as a batch manifest identity; compare the per-game projection by (calculation_id, coverage_revision_id), preserving both original IDs. Review/version the accepted temporal validator separately.",
+  "result": "BLOCKED_BY_ACCEPTED_CONTRACT"
+}

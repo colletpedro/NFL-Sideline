@@ -1,0 +1,264 @@
+{
+  "allRowsIncludingPersistedAtUnchanged": true,
+  "archiveBeforeHashes": {
+    "ARCHIVE.json": "4211ce76a524555c870b35e3a171996822ec637455ee23938f7bd062f06d35c4",
+    "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+    "blobs/sha256/16/16efa004332f75004fe85a263d1a3222f8c2010f8ec22bf643b1a5878d226d7a": "16efa004332f75004fe85a263d1a3222f8c2010f8ec22bf643b1a5878d226d7a",
+    "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+    "blobs/sha256/2e/2e3f034637ab751bc95d945a5faccf1a7d6e69054f04e4ca0f2af3a8d09bbace": "2e3f034637ab751bc95d945a5faccf1a7d6e69054f04e4ca0f2af3a8d09bbace",
+    "blobs/sha256/30/305856d09b968b7231557aec2246daef5b4b1c94db5389f25db3f3b8a58285da": "305856d09b968b7231557aec2246daef5b4b1c94db5389f25db3f3b8a58285da",
+    "blobs/sha256/43/43308338cbd80b2fc2021619197e3300f641479155aa8491f5438252e8f457f6": "43308338cbd80b2fc2021619197e3300f641479155aa8491f5438252e8f457f6",
+    "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+    "blobs/sha256/62/624d6ceaf554879ce83bc812fe95db5251a8b974b106410242ff5be78d83ed1e": "624d6ceaf554879ce83bc812fe95db5251a8b974b106410242ff5be78d83ed1e",
+    "blobs/sha256/7c/7c1a533e2df1d96d7c7086fa53ae060402c7f5a6473bf66864558614d8da6662": "7c1a533e2df1d96d7c7086fa53ae060402c7f5a6473bf66864558614d8da6662",
+    "blobs/sha256/88/88a1822398260b0cc1a6091b0505ba4f3daa1924e98370e84135cf9bec8a7965": "88a1822398260b0cc1a6091b0505ba4f3daa1924e98370e84135cf9bec8a7965",
+    "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+    "blobs/sha256/bc/bc1bacfc73d311e5a39c566bb81c6e6db87e9c95e85f0bd0753f0e1d4b47b41d": "bc1bacfc73d311e5a39c566bb81c6e6db87e9c95e85f0bd0753f0e1d4b47b41d",
+    "blobs/sha256/c5/c51ada684e7a922479936fb4e33ca25e6e0228e53f515944350cb28efea1c08e": "c51ada684e7a922479936fb4e33ca25e6e0228e53f515944350cb28efea1c08e",
+    "blobs/sha256/ea/eab4d76890d92f07eb2aa5c5e51eeb420d2156f257ce0eefb08143890f16669e": "eab4d76890d92f07eb2aa5c5e51eeb420d2156f257ce0eefb08143890f16669e",
+    "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+    "receipts/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d.json": "09b4b775c0bea7b97317cd2cfaf25e3692f41681df8e80c736ec96d3b0486c38",
+    "receipts/16efa004332f75004fe85a263d1a3222f8c2010f8ec22bf643b1a5878d226d7a.json": "f0878e697684d840bfc13370deacb4d7bde32ccf78e417a15d6e1423bd7877f5",
+    "receipts/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b.json": "fce32ad09fe34622bbffee4b2347ad2e6933683a33466afc569ebd96d09bfde1",
+    "receipts/2e3f034637ab751bc95d945a5faccf1a7d6e69054f04e4ca0f2af3a8d09bbace.json": "ac866c9040ec39092e7d4f5b6c5d94e1b917bba9544d15ac249761a9a5095452",
+    "receipts/305856d09b968b7231557aec2246daef5b4b1c94db5389f25db3f3b8a58285da.json": "8b930b7d859423e6377dcbc0db36a2c55a3aba9eee971b0a250e0132df0887aa",
+    "receipts/43308338cbd80b2fc2021619197e3300f641479155aa8491f5438252e8f457f6.json": "fa054768e019f24b38a416325dabf1ba89da8aaddbf776ceec07413cb9188f98",
+    "receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "2a82808dd72381d4da42ec116f60cc53057d4fac6b25cced1ab34f123a87683f",
+    "receipts/624d6ceaf554879ce83bc812fe95db5251a8b974b106410242ff5be78d83ed1e.json": "b610cbfd7d051ee4230a69c40d3ebf96b58a8f6ff4bc9fdedc8515af39d9bc0b",
+    "receipts/7c1a533e2df1d96d7c7086fa53ae060402c7f5a6473bf66864558614d8da6662.json": "8b0bcb0b8e122445dec9466e625996c666b0f77067b622fa186adb6671688871",
+    "receipts/88a1822398260b0cc1a6091b0505ba4f3daa1924e98370e84135cf9bec8a7965.json": "1e71f505c35ec7a3fdc1dc867a255ea26b220153ad28588ac27c021c3b07da4c",
+    "receipts/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166.json": "9bfc98fd5b4824934fb5ec244d76c87dcfa2b0bbe6e929c78b22d5aae5de1ecb",
+    "receipts/bc1bacfc73d311e5a39c566bb81c6e6db87e9c95e85f0bd0753f0e1d4b47b41d.json": "5891720b23123d0e8715a72a6bd878bea277157983874cf26adb8c8fc2d82c1a",
+    "receipts/c51ada684e7a922479936fb4e33ca25e6e0228e53f515944350cb28efea1c08e.json": "4440afba75add214b7a59ee942261f7617d0892811311d1986cf029f93295413",
+    "receipts/eab4d76890d92f07eb2aa5c5e51eeb420d2156f257ce0eefb08143890f16669e.json": "f5a78362c84e3c28d9822f3556493bd84bc58400f21bbf989489781112ce5cbe",
+    "receipts/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65.json": "2744b4c3d5646b495209c1f7e0782781c2310783ec7d8c2d56ec0ef8782687ef"
+  },
+  "archiveBlobsReceiptsMarkerUnchanged": true,
+  "base": "8f583c4ec9ed83f86c2229b0f1656d32403bcc31",
+  "batchContractGap": "E5B3_BATCH_CALCULATION_ID_CONFLICT: IDENTITY_CONFLICT: sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+  "batchReadUnchanged": true,
+  "fullDeliveryComplete": false,
+  "instance": {
+    "database": "nfl_e5b2_915927b2f24e",
+    "host": "127.0.0.1",
+    "instance_id": "915927b2-f24e-45e7-926b-3a2abf0ceb79",
+    "port": 55484
+  },
+  "java": {
+    "pit": "sha256:6fb8354858e1e4b59aa30bfed8d3b6a29d3f07bc4215e15e147597e5aec4a6ec sha256:5238f1a5a181894001255cf766f73e4cf7aa2ef1fd4115b33b0ff912daa0c541 POINT_IN_TIME",
+    "reconstruction": "sha256:c6dfeac18f06879fae3add94d62533a1b1a4d131a51256bd40bc072904de77c5 sha256:e83480f35bb746354ca383a50a0eff5fba274dfddae8f844c1288f0ecfaf3385 EVENT_RECONSTRUCTION\ndef/classified_pass COMPLETE EPA=null volume=0\noff/classified_pass COMPLETE EPA=null volume=0\ndef/classified_rush COMPLETE EPA=null volume=0\noff/classified_rush COMPLETE EPA=null volume=0\ndef/general COMPLETE EPA=null volume=0\noff/general COMPLETE EPA=null volume=0\ndef/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/general AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\noff/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=123456789012345678901234567890123456789/1000000000000000000000000000000000000000 volume=1\noff/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=-1123456789012345678901234567890123456789/2000000000000000000000000000000000000000 volume=2\noff/general AUDITABLE_SUBSET_UNKNOWN EPA=-1/3 volume=3"
+  },
+  "materialization_id": "sha256:cc2c9fa6ffce45e8a1dd3b019310ecefdd55e893d9e71de4611274ee4d8fbcaa",
+  "originalIds": [
+    {
+      "archive_id": "32a6957d-9967-49de-bede-b155f9367b00",
+      "artifact_id": "sha256:0dc2743e958cfd5892f384a9a31a041fcaee6177b96a7a4f28f7f4ac86596bb4",
+      "calculation_id": "sha256:170b8f070f9b22f87c8c7ed0713611d221531deb92d5edcb0b43097f55763d55"
+    },
+    {
+      "archive_id": "32a6957d-9967-49de-bede-b155f9367b00",
+      "artifact_id": "sha256:7206d53ded67030c74f717ba554ab1aef614e6e9ca264b2df2bf7b45fc3962ba",
+      "calculation_id": "sha256:cedafcade62331185784512f7d7a7a093bbc8794e0fb1e59f47eb2cf7968e544"
+    }
+  ],
+  "pit": {
+    "coverage": {
+      "availabilityKnownGameIds": [],
+      "calendarComplete": false,
+      "closedWeeks": [],
+      "expectationFailures": [
+        {
+          "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+        }
+      ],
+      "expectedGames": null,
+      "gaps": [],
+      "knownEligibleGameIds": [],
+      "metricObservedGameIds": [],
+      "observedCompleteGameIds": [],
+      "observedGameIds": [],
+      "outsideCutoffGameIds": [],
+      "sourceRatio": null,
+      "uncertainGameIds": []
+    },
+    "guarantees": {
+      "historicalAvailability": "ONLY_SELECTED_SOURCES_PROVEN_BY_POLICY",
+      "knowledgeAtCutoff": "CONDITIONAL_ON_MATERIALIZED_POLICY_EVIDENCE",
+      "laterKnowledgePermitted": false,
+      "limits": [
+        "Trust origins and materialized timestamps are premises, not external authentication.",
+        "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+        "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+        "No historical local dataset certified by synthetic fixtures."
+      ],
+      "postCutoffEvidenceIds": [],
+      "postCutoffResourceIds": [],
+      "statisticalUncertainty": "NOT_ESTIMATED",
+      "temporalMode": "POINT_IN_TIME",
+      "unknownKnowledgeResourceIds": []
+    },
+    "result_id": "sha256:6fb8354858e1e4b59aa30bfed8d3b6a29d3f07bc4215e15e147597e5aec4a6ec"
+  },
+  "reconstruction": {
+    "coverage": {
+      "availabilityKnownGameIds": [],
+      "calendarComplete": true,
+      "closedWeeks": [],
+      "expectationFailures": [],
+      "expectedGames": 3,
+      "gaps": [
+        {
+          "details": [
+            "SOURCE_UNKNOWN"
+          ],
+          "gameId": "synthetic-5",
+          "reason": "SOURCE_UNKNOWN"
+        }
+      ],
+      "knownEligibleGameIds": [
+        "synthetic-1",
+        "synthetic-5",
+        "synthetic-6"
+      ],
+      "metricObservedGameIds": [
+        "synthetic-1"
+      ],
+      "observedCompleteGameIds": [
+        "synthetic-6"
+      ],
+      "observedGameIds": [
+        "synthetic-1",
+        "synthetic-6"
+      ],
+      "outsideCutoffGameIds": [],
+      "sourceRatio": {
+        "denominator": 3,
+        "exact": "1/3",
+        "numerator": 1
+      },
+      "uncertainGameIds": []
+    },
+    "general": {
+      "comparisonEligible": false,
+      "comparisonFailures": [
+        "EPA_MODEL_UNKNOWN",
+        "INCOMPLETE_SOURCE_COVERAGE",
+        "SOURCE_SUBSET"
+      ],
+      "definitionVersion": "1.0.0",
+      "epa": {
+        "denominator": 3,
+        "exact": "-1/3",
+        "numerator": "-1"
+      },
+      "foundation": "general",
+      "foundationCoverage": {
+        "eligibleN": 3,
+        "epaN": 3,
+        "epaObservedGameIds": [
+          "synthetic-1"
+        ],
+        "expectedGames": 3,
+        "noEligiblePlaysGameIds": [],
+        "noEpaObservationsGameIds": [],
+        "observedSourceGames": 1,
+        "sourceRatio": null
+      },
+      "frequency": null,
+      "gameIds": [
+        "synthetic-1"
+      ],
+      "model": "UNKNOWN",
+      "populationVersion": "classified-scrimmage-v1",
+      "role": "off",
+      "scope": "AUDITABLE_SUBSET_UNKNOWN",
+      "statisticalUncertainty": "NOT_ESTIMATED",
+      "successRate": {
+        "denominator": 3,
+        "exact": "1/3",
+        "numerator": 1
+      },
+      "sums": {
+        "eligible_n": 3,
+        "epa_missing_n": 0,
+        "epa_n": 3,
+        "epa_nonfinite_n": 0,
+        "epa_sum": "-1",
+        "success_n": 1
+      },
+      "volume": 3
+    },
+    "guarantees": {
+      "historicalAvailability": "UNKNOWN_OR_NOT_PROVEN",
+      "knowledgeAtCutoff": "NOT_DEMONSTRATED",
+      "laterKnowledgePermitted": true,
+      "limits": [
+        "Trust origins and materialized timestamps are premises, not external authentication.",
+        "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+        "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+        "No historical local dataset certified by synthetic fixtures."
+      ],
+      "postCutoffEvidenceIds": [
+        "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+        "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+        "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+        "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+        "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+        "sha256:cb5281339026a6ffc535c9bf8b2afa8b0f97baa766c30d2196b3d3de6560262d"
+      ],
+      "postCutoffResourceIds": [
+        "sha256:16efa004332f75004fe85a263d1a3222f8c2010f8ec22bf643b1a5878d226d7a",
+        "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+        "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+      ],
+      "statisticalUncertainty": "NOT_ESTIMATED",
+      "temporalMode": "EVENT_RECONSTRUCTION",
+      "unknownKnowledgeResourceIds": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+        "sha256:16efa004332f75004fe85a263d1a3222f8c2010f8ec22bf643b1a5878d226d7a",
+        "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+        "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+        "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+        "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+        "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+        "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+        "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+      ]
+    },
+    "result_id": "sha256:c6dfeac18f06879fae3add94d62533a1b1a4d131a51256bd40bc072904de77c5"
+  },
+  "relationCounts": {
+    "game_metric_coverage_revision": 8,
+    "metric_archive_blob": 15,
+    "metric_archive_receipt": 15,
+    "metric_artifact": 2,
+    "metric_artifact_file": 12,
+    "metric_calculation": 2,
+    "metric_calculation_coverage": 8,
+    "metric_source_member": 5,
+    "metric_source_revision": 4,
+    "metric_source_set": 3,
+    "team_game_metric_sums": 24
+  },
+  "scope": "REAL_POSTGRESQL_AND_JAVA_SUPPORTED_PATH",
+  "snapshotAfterSha256": "sha256:aa20bc0d22098b0ccd84730bcabde646aa110f65a9d31bcfade66353eac0258b",
+  "snapshotBeforeSha256": "sha256:aa20bc0d22098b0ccd84730bcabde646aa110f65a9d31bcfade66353eac0258b",
+  "supabaseStackAndAdvisors": "PENDING_SEPARATE",
+  "temporalInputId": "sha256:089d432fa7fe670fc05df17ee486f90c8da347db029a0763accf0fcbd6d328cb",
+  "transactionReadOnlyEnforced": true,
+  "workspace": "/private/tmp/nfl-e5b4-proof-20261011-b",
+  "writerReports": [
+    {
+      "conflicts": 0,
+      "inserted": 55,
+      "reused": 0
+    },
+    {
+      "conflicts": 0,
+      "inserted": 43,
+      "reused": 7
+    }
+  ]
+}

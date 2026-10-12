@@ -1,0 +1,29 @@
+{
+  "columns": [
+    "game_id",
+    "play_id",
+    "drive",
+    "season",
+    "season_type",
+    "week",
+    "posteam",
+    "defteam",
+    "play_type",
+    "qb_kneel",
+    "qb_spike",
+    "play_deleted",
+    "special_teams_play",
+    "two_point_attempt",
+    "epa",
+    "qb_dropback",
+    "sack",
+    "qb_scramble",
+    "pass_attempt",
+    "interception",
+    "penalty",
+    "qtr",
+    "aborted_play",
+    "wp"
+  ],
+  "rows": []
+}

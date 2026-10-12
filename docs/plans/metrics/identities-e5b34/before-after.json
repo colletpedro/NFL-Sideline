@@ -1,0 +1,114 @@
+{
+  "after": {
+    "algorithmVersion": "metrics-temporal-1.1.0",
+    "associations": [
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+        "game_id": "synthetic-1"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308",
+        "game_id": "synthetic-3"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+        "game_id": "synthetic-5"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+        "game_id": "synthetic-6"
+      }
+    ],
+    "audit_id": "sha256:7ea65041fe9e76be03e494454ef8f40214a299cc88860e38cd5d65d0cc85bff1",
+    "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+    "coverage": {
+      "availabilityKnownGameIds": [],
+      "calendarComplete": true,
+      "closedWeeks": [],
+      "expectationFailures": [],
+      "expectedGames": 3,
+      "gaps": [
+        {
+          "details": [
+            "SOURCE_UNKNOWN"
+          ],
+          "gameId": "synthetic-5",
+          "reason": "SOURCE_UNKNOWN"
+        }
+      ],
+      "knownEligibleGameIds": [
+        "synthetic-1",
+        "synthetic-5",
+        "synthetic-6"
+      ],
+      "metricObservedGameIds": [
+        "synthetic-1"
+      ],
+      "observedCompleteGameIds": [
+        "synthetic-6"
+      ],
+      "observedGameIds": [
+        "synthetic-1",
+        "synthetic-6"
+      ],
+      "outsideCutoffGameIds": [],
+      "sourceRatio": {
+        "denominator": 3,
+        "exact": "1/3",
+        "numerator": 1
+      },
+      "uncertainGameIds": []
+    },
+    "input_id": "sha256:5991c83b5d276f7d6f46c0c7a207d133232d237adfc0b8610486491eef12dbcc",
+    "materialization_id": "sha256:f7d7f54649157116fc5c6fe124b8fb3a074e037723f2f0bfaba3cf6c42ffd755",
+    "observedGames": [
+      "synthetic-1",
+      "synthetic-6"
+    ],
+    "resultVersion": "metrics-temporal-result-v3",
+    "result_id": "sha256:71d4f7daa6c8d4a68083525ed83c0789b29a0a5317c32992d168ef5791b42e69",
+    "status": "PASSED"
+  },
+  "before": {
+    "acceptedAlgorithm": "metrics-temporal-1.0.1",
+    "acceptedValidatorFailure": "IDENTITY_CONFLICT: sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+    "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+    "associations": [
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+        "game_id": "synthetic-1"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308",
+        "game_id": "synthetic-3"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+        "game_id": "synthetic-5"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+        "game_id": "synthetic-6"
+      }
+    ],
+    "base": "8f583c4ec9ed83f86c2229b0f1656d32403bcc31",
+    "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+    "failure": "E5B3_BATCH_CALCULATION_ID_CONFLICT: IDENTITY_CONFLICT: sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+    "observedGameIds": [
+      "synthetic-1",
+      "synthetic-6"
+    ],
+    "outputPublished": false,
+    "priorContractsModified": false,
+    "proposal": "Validate calculation_id as a batch manifest identity; compare the per-game projection by (calculation_id, coverage_revision_id), preserving both original IDs. Review/version the accepted temporal validator separately.",
+    "result": "BLOCKED_BY_ACCEPTED_CONTRACT"
+  }
+}

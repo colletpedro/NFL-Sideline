@@ -1,0 +1,672 @@
+{
+  "algorithmVersion": "metrics-temporal-1.1.0",
+  "asOfDateMapping": null,
+  "audit_id": "sha256:ec1b91086647cbde8b1dfc24de23d224c55b0a5f2dc0d83d3b6b4c90b4bed098",
+  "blocks": [
+    {
+      "actualWeeks": [],
+      "aggregates": [],
+      "calendarRevisionId": null,
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": false,
+        "closedWeeks": [],
+        "expectationFailures": [
+          {
+            "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+          }
+        ],
+        "expectedGames": null,
+        "gaps": [],
+        "knownEligibleGameIds": [],
+        "metricObservedGameIds": [],
+        "observedCompleteGameIds": [],
+        "observedGameIds": [],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": null,
+        "uncertainGameIds": []
+      },
+      "events": [],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "requestedPeriod": {
+        "cutoff": "2026-10-01T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "eventEndBefore": "2026-10-01T12:00:00Z"
+        },
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "requestedWeeks": [],
+      "scheduledGameIds": [],
+      "season": 2026,
+      "weeklyStates": [],
+      "window": "SEASON_TO_CUTOFF"
+    }
+  ],
+  "calculationsUsed": [],
+  "derivedAt": "2026-10-11T12:00:00.000000000001Z",
+  "evidenceQualifications": [
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+      "subjectId": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "sha256:26e892803ce97804cda72807816403fc1377b141507445d78738a9f5392420fa",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-12T04:00:40.099893Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+      "subjectId": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+      "subjectId": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "sha256:4616143eafecfe17b49c60f8717c257226de8f29cd463fcfc3da702f846c891e",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-12T04:00:40.093946Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+    },
+    {
+      "conditionalCapabilities": [
+        "CALENDAR_COMPLETENESS"
+      ],
+      "evidence_id": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+      "externallyAuthenticated": false,
+      "kind": "CALENDAR_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+      "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+      "subjectId": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "sha256:9ec2b7c055396e79eac851be1209773f687ef04b78e217502b91615d61c40959",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-12T04:00:40.096840Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "sha256:cb72d286dfeac0b5e931ecbba7dcbc82864a42774ee6f3f4557a4dc80f5c5a8c",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+      "subjectId": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:ec61c2a1b5577b6922174f75558f3ff05461ab904f653cda33208c7e19a21b36",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+      "subjectId": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b"
+    }
+  ],
+  "evidenceUsed": [],
+  "guarantees": {
+    "historicalAvailability": "ONLY_SELECTED_SOURCES_PROVEN_BY_POLICY",
+    "knowledgeAtCutoff": "CONDITIONAL_ON_MATERIALIZED_POLICY_EVIDENCE",
+    "laterKnowledgePermitted": false,
+    "limits": [
+      "Trust origins and materialized timestamps are premises, not external authentication.",
+      "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+      "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+      "No historical local dataset certified by synthetic fixtures."
+    ],
+    "postCutoffEvidenceIds": [],
+    "postCutoffResourceIds": [],
+    "statisticalUncertainty": "NOT_ESTIMATED",
+    "temporalMode": "POINT_IN_TIME",
+    "unknownKnowledgeResourceIds": []
+  },
+  "input_id": "sha256:5991c83b5d276f7d6f46c0c7a207d133232d237adfc0b8610486491eef12dbcc",
+  "policy": {
+    "policyVersion": "materialized-evidence-v1",
+    "trustedOrigins": [
+      "synthetic-e5b4"
+    ]
+  },
+  "pregame": {
+    "kickoff": null,
+    "targetGameExcluded": true,
+    "timeStatus": "PREGAME_TIME_UNVERIFIED"
+  },
+  "request": {
+    "asOfInstant": "2026-10-01T12:00:00Z",
+    "mode": "POINT_IN_TIME",
+    "phase": "REG",
+    "season": 2026,
+    "targetGameId": "synthetic-3",
+    "targetWeek": 4,
+    "team": "A",
+    "windows": [
+      "SEASON_TO_CUTOFF"
+    ]
+  },
+  "resourceDecisions": [
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        }
+      ],
+      "revision_id": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        }
+      ],
+      "revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:ec61c2a1b5577b6922174f75558f3ff05461ab904f653cda33208c7e19a21b36"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        }
+      ],
+      "revision_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        }
+      ],
+      "revision_id": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    },
+    {
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "usage": "NOT_REQUIRED_OR_INELIGIBLE",
+      "used": false
+    }
+  ],
+  "resourcesUsed": [],
+  "resultVersion": "metrics-temporal-result-v3",
+  "result_id": "sha256:bab53e679a5d32310d18b669042549945cc60a6c3fff0a36f040eec2f812f834",
+  "revisionDecisions": [
+    {
+      "category": "calendars",
+      "key": "2026/REG",
+      "reasons": [
+        {
+          "reason": "AVAILABLE_AT_DECLARATION_UNPROVEN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+        },
+        {
+          "reason": "AVAILABLE_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        {
+          "reason": "EVIDENCE_NOT_KNOWN_AT_CUTOFF",
+          "subjectId": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+        },
+        {
+          "reason": "INGESTED_AT_UNKNOWN",
+          "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        }
+      ],
+      "revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "selected": false,
+      "selectionOrderAvailableAtEpochSeconds": null
+    }
+  ],
+  "structuralValidation": "PASSED",
+  "temporalEligibility": [
+    {
+      "calendarEligible": false,
+      "eligibleGameIds": [],
+      "uncertainGameIds": [],
+      "window": "SEASON_TO_CUTOFF"
+    }
+  ]
+}

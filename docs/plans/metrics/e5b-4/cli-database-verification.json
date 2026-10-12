@@ -1,0 +1,10 @@
+{
+  "allSQLRowsAndPersistedAtUnchanged": true,
+  "archiveBytesAndReceiptsUnchanged": true,
+  "identicalToFunctionProof": true,
+  "laterUnselectedBatchIgnored": true,
+  "materialization_id": "sha256:cc2c9fa6ffce45e8a1dd3b019310ecefdd55e893d9e71de4611274ee4d8fbcaa",
+  "mode": "REAL_POSTGRESQL_CLI",
+  "snapshotAfterSha256": "sha256:5ed361c31b5067f16d8c9de1e2fa668494c569e469948d32cc7135b77afb735e",
+  "snapshotBeforeSha256": "sha256:5ed361c31b5067f16d8c9de1e2fa668494c569e469948d32cc7135b77afb735e"
+}

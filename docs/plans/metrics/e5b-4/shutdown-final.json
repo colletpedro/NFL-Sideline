@@ -1,0 +1,16 @@
+{
+  "bindProbe": "PASS",
+  "evidencePreserved": true,
+  "instance": {
+    "database": "nfl_e5b2_915927b2f24e",
+    "instance_id": "915927b2-f24e-45e7-926b-3a2abf0ceb79",
+    "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+    "port": 55484,
+    "purpose": "metrics-persistence-e5b2-disposable"
+  },
+  "otherInstancesTouched": false,
+  "ownInstanceStopped": true,
+  "pgRuntimeDownloaded": false,
+  "portReleased": true,
+  "root": "/private/tmp/nfl-e5b4-instance-20261011-b"
+}

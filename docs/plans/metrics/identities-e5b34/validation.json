@@ -1,0 +1,109 @@
+{
+  "base": "f2d946593d1e6b2ed32ad1aa331c630f271c44db",
+  "current": {
+    "algorithm": "metrics-temporal-1.1.0",
+    "input": "metrics-temporal-input-v3",
+    "materializer": "metrics-materialization-v2",
+    "result": "metrics-temporal-result-v3"
+  },
+  "evidenceSha256": {
+    "before-after.json": "1a4651e0b517de867461985b35622de5c758692825a88d4103ed04e3b36e8076",
+    "cli-verification.json": "0ca2306c9acb997fc96f75f341f7694bf403750ca61036268ba1168b5ae9b2f6",
+    "database-verification.json": "1e902c9266fc913499569cc3c955bcf768a4e25e6aba41db2bd1724e9dc390e2",
+    "java-verification.json": "1a54da5455e46c359b92bb3957e2ae099d6f5ca6c065cc40f6125a881a72d6d0",
+    "offline-verification.json": "0ab3413f5357d9e66a2add481412b0a300561a72bfcf1e303486a004daa5e39a",
+    "shutdown-final.json": "5768600e6acc3e1fbc1f8ca9961a78e07b75857d63160389d6c12cdfa22cd4da",
+    "shutdown-first.json": "81aa37773569046b3052b5c9067b779928334ccea9fdbe2be38498991c3e779f"
+  },
+  "gate": {
+    "diffCheck": "PASSED",
+    "diffCheckCommand": "git diff --check f2d946593d1e6b2ed32ad1aa331c630f271c44db",
+    "e5aTests": 23,
+    "etlPassed": 434,
+    "java": {
+      "command": "JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home mvn -f core-api/pom.xml -o clean verify",
+      "errors": 0,
+      "failures": 0,
+      "jarSha256": "49755b44c9b912adea918bdaea67f7227742af0333002f962dc706da4afeba60",
+      "skipped": 0,
+      "sourceHashes": {
+        "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/ExactInstant.java": "902fedf279dbc7270cb9dd33bae9d2d85c8b3b32734315eebf01ab593ce0a7ae",
+        "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/PythonJson.java": "f2a9f2d8d8e2739065a8fb20173268e4f0b251da7772e67d753968d161cc6afc",
+        "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalReadApplication.java": "61cd4414e91df1b68cba1615f017eef2fb56dc94aaa60860d670a5288e17ab56",
+        "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalResult.java": "2cafa71b0c0f05567c04d321f4c08992f44e1e2337d7f26d76b5248321de1a6b",
+        "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalResultReader.java": "4fb9383f523f5ab14acddab7edb6f35c88c1a047fdf9aba3df194401363167f2",
+        "core-api/src/main/java/com/nflsideline/coreapi/metrics/temporal/TemporalValue.java": "d1048c3ad2d6a5ea79a2b284a7bf92ff15e6b64c29332cf2432bde961ef6e534",
+        "core-api/src/test/java/com/nflsideline/coreapi/metrics/temporal/TemporalIdentityVersionsTest.java": "4a3bc7f94697cdc37d9aa09e7e2f15bc8b89a87218ca257465cd77d0ba94921f",
+        "core-api/src/test/java/com/nflsideline/coreapi/metrics/temporal/TemporalResultReaderTest.java": "61cf7858acc0d70ddc9a776d912565cd57ea2d6e737d532eae4e7f3083367178"
+      },
+      "suiteCounts": {
+        "com.nflsideline.coreapi.config.HealthHttpIntegrationTest": 2,
+        "com.nflsideline.coreapi.controller.PublicationControllerTest": 2,
+        "com.nflsideline.coreapi.editorial.AnalysisContextBuilderTest": 5,
+        "com.nflsideline.coreapi.editorial.ClaimRendererTest": 8,
+        "com.nflsideline.coreapi.editorial.ClaimWindowRendererTest": 11,
+        "com.nflsideline.coreapi.editorial.EditorialManifestTest": 6,
+        "com.nflsideline.coreapi.editorial.EditorialPlannerTest": 4,
+        "com.nflsideline.coreapi.editorial.EvidenceWindowTest": 6,
+        "com.nflsideline.coreapi.editorial.VisualAnalysisProjectorTest": 5,
+        "com.nflsideline.coreapi.editorial.batch.EditorialBatchOptionsTest": 2,
+        "com.nflsideline.coreapi.editorial.batch.EditorialBatchServiceTest": 4,
+        "com.nflsideline.coreapi.editorial.evaluation.EvaluationApplicationTest": 5,
+        "com.nflsideline.coreapi.editorial.local.LocalAnalysisApplicationTest": 3,
+        "com.nflsideline.coreapi.editorial.local.LocalIntegrationTest": 6,
+        "com.nflsideline.coreapi.editorial.local.LocalRuleSelectorTest": 11,
+        "com.nflsideline.coreapi.editorial.local.LocalServerTest": 4,
+        "com.nflsideline.coreapi.editorial.local.LocalVisualStoreTest": 4,
+        "com.nflsideline.coreapi.editorial.local.SignalEditorialTest": 12,
+        "com.nflsideline.coreapi.llm.GeminiClientTest": 5,
+        "com.nflsideline.coreapi.metrics.temporal.TemporalIdentityVersionsTest": 16,
+        "com.nflsideline.coreapi.metrics.temporal.TemporalResultReaderTest": 27,
+        "com.nflsideline.coreapi.service.AnalysisServiceTest": 5,
+        "com.nflsideline.coreapi.snapshot.AtomicSnapshotWriterTest": 2,
+        "com.nflsideline.coreapi.snapshot.SnapshotAssemblerTest": 5,
+        "com.nflsideline.coreapi.snapshot.SnapshotBatchModeTest": 1,
+        "com.nflsideline.coreapi.snapshot.SnapshotExporterTest": 5,
+        "com.nflsideline.coreapi.snapshot.SnapshotFailureTest": 1,
+        "com.nflsideline.coreapi.snapshot.SnapshotOptionsTest": 3
+      },
+      "tests": 170,
+      "version": "openjdk version \"21.0.12.1\" 2026-08-18\nOpenJDK Runtime Environment Homebrew (build 21.0.12.1)\nOpenJDK 64-Bit Server VM Homebrew (build 21.0.12.1, mixed mode, sharing)"
+    },
+    "sourceHashesReconciledAfterCommitOrganization": true
+  },
+  "legacy": {
+    "algorithm": "metrics-temporal-1.0.1",
+    "inputs": [
+      "metrics-temporal-input-v1",
+      "metrics-temporal-input-v2"
+    ],
+    "result": "metrics-temporal-result-v2",
+    "semanticsReinterpreted": false
+  },
+  "limits": [
+    "No external authentication or historical certification",
+    "Java does not select revisions or recalculate PBP",
+    "Supabase stack/advisors independently pending",
+    "EVENT_END_EXACT not implemented",
+    "No E5b-5/product/publication/push/merge"
+  ],
+  "originalBatchCalculationId": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+  "protectedPaths": [
+    "contracts/metrics/e5a-v1",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence",
+    "docs/plans/metrics/e5b-1",
+    "docs/plans/metrics/e5b-2",
+    "supabase",
+    "web-ui",
+    "Spec.md",
+    "docs/current-state.md",
+    "etl-pipeline/tests/test_temporal_metrics.py",
+    "etl-pipeline/tests/test_temporal_metrics_correction.py",
+    "docs/plans/metrics/e5b-3",
+    "docs/plans/metrics/e5b-3-review",
+    "docs/plans/metrics/e5b-4",
+    "etl-pipeline/tests/fixtures/metrics_materialization"
+  ],
+  "scope": "CANDIDATE_FOR_ORCHESTRATOR_ACCEPTANCE"
+}

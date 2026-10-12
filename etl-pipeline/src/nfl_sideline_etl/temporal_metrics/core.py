@@ -5,7 +5,7 @@ from fractions import Fraction
 from ..offline_metrics.artifact import identity, json_bytes
 from ..offline_metrics.statistics import COUNTS, FOUNDATIONS, exact_sum
 from ..offline_metrics.validation import decimal_text
-from . import ALGORITHM_VERSION, RESULT_VERSION
+from . import result_versions, INPUT_VERSION
 from .evidence import Policy
 from .times import cutoff, instant, eastern_kickoff
 from .validation import validate, fields, integer, string, json_values
@@ -342,7 +342,8 @@ def select(document, request):
     normalized_request = {k: v for k, v in request.items() if k not in ('derivedAt', 'asOfDate', 'asOfInstant', 'retrospective')}
     normalized_request['windows'] = sorted(request['windows'])
     normalized_request['asOfInstant'] = normalized_cut
-    semantic = {'resultVersion': RESULT_VERSION, 'algorithmVersion': ALGORITHM_VERSION,
+    result_version, algorithm_version = result_versions(document['inputVersion'])
+    semantic = {'resultVersion': result_version, 'algorithmVersion': algorithm_version,
                 'policy': document['policy'], 'request': normalized_request, 'asOfDateMapping': date_mapping,
                 'pregame': pregame, 'blocks': blocks,
                 'resourcesUsed': [resources[r] for r in sorted(used_resources)],
@@ -375,12 +376,14 @@ def select(document, request):
     return result
 
 
-def canonical(value):
+def canonical(value, *, preserve_original=False):
     """These arrays are sets/bags, never meaningful event order. Keep duplicates."""
     if isinstance(value, dict):
-        return {k: canonical(v) for k, v in sorted(value.items())}
+        preserve_original = preserve_original or value.get('inputVersion') == INPUT_VERSION or value.get('resultVersion') == 'metrics-temporal-result-v3'
+        return {k: v if preserve_original and k == 'original' and isinstance(v, dict) and set(v) == {'manifest', 'coverage'}
+                else canonical(v, preserve_original=preserve_original) for k, v in sorted(value.items())}
     if isinstance(value, list):
-        return sorted((canonical(v) for v in value), key=lambda v: (type(v).__name__, v if isinstance(v, (str, int)) else json_bytes(v)))
+        return sorted((canonical(v, preserve_original=preserve_original) for v in value), key=lambda v: (type(v).__name__, v if isinstance(v, (str, int)) else json_bytes(v)))
     return value
 
 
