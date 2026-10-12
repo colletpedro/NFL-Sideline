@@ -1,8 +1,6 @@
-from copy import deepcopy
 from pathlib import Path
 from unittest.mock import Mock
 import json
-import uuid
 
 import polars as pl
 import pytest

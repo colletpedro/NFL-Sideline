@@ -3,7 +3,6 @@
 No downloads, .env or external database. Always shuts down only its own cluster.
 """
 import argparse
-from copy import deepcopy
 import hashlib
 import importlib.util
 import json
@@ -65,7 +64,7 @@ def domain_login(root, marker):
                 for table in ('teams','games','market_implied','team_week_metrics','ingestion_runs'):
                     cur.execute(sql.SQL('grant select,insert,update on public.{} to nfl_e5b5_domain').format(sql.Identifier(table)))
                     cur.execute(sql.SQL('create policy e5b5_domain_local on public.{} to nfl_e5b5_domain using (true) with check (true)').format(sql.Identifier(table)))
-                cur.execute('grant usage,select on sequence public.ingestion_runs_id_seq to nfl_e5b5_domain')
+                cur.execute('grant usage on sequence public.ingestion_runs_id_seq to nfl_e5b5_domain')
     finally:conn.close()
     config=dict(host='127.0.0.1',port=marker['port'],database=marker['database'],user='nfl_e5b5_domain',
                 password=secret,instance_id=marker['instance_id'])
