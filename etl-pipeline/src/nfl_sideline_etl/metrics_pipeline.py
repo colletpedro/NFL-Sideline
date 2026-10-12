@@ -58,7 +58,7 @@ def _spec(path, seasons):
 def _identity_check(conn, config):
     """Check actual endpoint, marker and inherited administrative capabilities."""
     with conn.cursor() as cur:
-        cur.execute('select current_database(), inet_server_addr()::text, inet_server_port()')
+        cur.execute('select current_database(), host(inet_server_addr()), inet_server_port()')
         endpoint = cur.fetchone()
         if endpoint != (config['database'], config['host'], config['port']):
             raise ValueError('Actual local endpoint mismatch')
@@ -66,7 +66,8 @@ def _identity_check(conn, config):
         if cur.fetchall() != [(config['instance_id'], 'metrics-persistence-e5b2-disposable')]:
             raise ValueError('Instance marker mismatch')
         cur.execute("select exists(select 1 from pg_roles where "
-                    "(rolsuper or rolbypassrls or rolcreatedb or rolcreaterole or rolreplication) "
+                    "(rolsuper or rolbypassrls or rolcreatedb or rolcreaterole or rolreplication "
+                    "or rolname in ('pg_read_server_files','pg_write_server_files','pg_execute_server_program','pg_signal_backend')) "
                     "and pg_has_role(current_user, oid, 'MEMBER'))")
         if cur.fetchone()[0]:
             raise ValueError('Privileged local login refused')
@@ -75,6 +76,15 @@ def _identity_check(conn, config):
 
 
 def connect_legacy(config):
+    if (not isinstance(config, dict) or
+            set(config) != {'host', 'port', 'database', 'user', 'password', 'instance_id'} or
+            config['host'] not in ('127.0.0.1', '::1') or
+            type(config['port']) is not int or not 1 <= config['port'] <= 65535 or
+            not all(isinstance(config[k], str) and config[k] for k in ('user', 'password'))):
+        raise ValueError('Explicit literal loopback configuration required')
+    instance = str(uuid.UUID(config['instance_id']))
+    if config['database'] != 'nfl_e5b2_' + instance.replace('-', '')[:12]:
+        raise ValueError('Unidentified local database')
     if any(k.startswith('PG') for k in os.environ):
         raise ValueError('Ambient PG* configuration forbidden')
     import psycopg2
@@ -95,6 +105,11 @@ def connect_legacy(config):
                                 ('public.' + table, privilege))
                     if not cur.fetchone()[0]:
                         raise ValueError('Domain login lacks required privilege: ' + table + '/' + privilege)
+            cur.execute("select pg_get_serial_sequence('public.ingestion_runs','id')")
+            sequence = cur.fetchone()[0]
+            cur.execute('select has_sequence_privilege(current_user, %s, %s)', (sequence, 'USAGE'))
+            if not cur.fetchone()[0]:
+                raise ValueError('Domain login lacks ingestion run sequence privilege')
         conn.rollback()
         return conn
     except BaseException:
