@@ -84,13 +84,25 @@ def test_two_batches_single_observed_each_are_representable(tmp_path):
     assert {a['scope'] for a in r['blocks'][0]['aggregates']}=={'COMPLETE','AUDITABLE_SUBSET_UNKNOWN'}
 
 
-def test_confirmed_batch_contract_gap_no_publication(tmp_path):
+def test_original_batch_multiple_observations_now_materializes(tmp_path):
     p,b,plan,ar=fixture.build(tmp_path/'multi',multi=True)
-    assert len({s['game_id'] for s in plan.result['statistics.json']})==2
-    output=tmp_path/'must-not-exist'
-    with pytest.raises(ContractGap,match='E5B3_BATCH_CALCULATION_ID_CONFLICT'):
-        t,l=materialize(p,b,fixture.auxiliary([plan]),DERIVED);publish(output,t,l)
-    assert not output.exists()
+    t,l=materialize(p,b,fixture.auxiliary([plan]),DERIVED)
+    output=tmp_path/'complete';publish(output,t,l)
+    assert read(output)==(t,l)
+    assert t['inputVersion']=='metrics-temporal-input-v3'
+    assert len(l['relations']['relations']['metric_calculation_coverage'])==4
+    assert {c['game']['game_id'] for c in t['calculations']}=={'synthetic-1','synthetic-6'}
+    assert {c['calculation_id'] for c in t['calculations']}=={plan.result['manifest.json']['calculation_id']}
+    assert sum(len(c['statistics']) for c in t['calculations'])==24
+    for c in t['calculations']:
+        assert c['original']['manifest']==plan.result['manifest.json']
+        assert c['original']['coverage'] in plan.result['game-audit.json']
+    r=select(t,retro(t));b=r['blocks'][0]
+    assert b['coverage']['expectedGames']==3
+    assert b['coverage']['observedGameIds']==['synthetic-1','synthetic-6']
+    assert b['coverage']['sourceRatio']['exact']=='1/3'
+    assert [g['gameId'] for g in b['coverage']['gaps']]==['synthetic-5']
+    assert {a['scope'] for a in b['aggregates']}=={'COMPLETE','AUDITABLE_SUBSET_UNKNOWN'}
 
 
 def test_receipt_now_does_not_certify_old_pit(closed):

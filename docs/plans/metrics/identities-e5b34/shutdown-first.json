@@ -1,0 +1,12 @@
+{
+  "instance": {
+    "purpose": "metrics-persistence-e5b2-disposable",
+    "instance_id": "4a0b854a-8b1b-4611-83e8-b8d8e9a13026",
+    "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+    "port": 55485,
+    "database": "nfl_e5b2_4a0b854a8b1b"
+  },
+  "stopped": true,
+  "bindProbePassed": true,
+  "portReleased": true
+}
