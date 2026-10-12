@@ -277,6 +277,32 @@ def test_integrated_order_and_legacy_counts(tmp_path,monkeypatch):
     assert events(attempt)[-1]['stage_result']=='PERSISTED'
 
 
+@pytest.mark.parametrize('start_attempted', [False, True])
+def test_initial_failure_does_not_claim_absent_sql_run(tmp_path, monkeypatch, start_attempted):
+    execution, _ = local(tmp_path, monkeypatch)
+    order = []
+    install_success_stages(monkeypatch, order)
+    attempt = execution.attempt(2026)
+    monkeypatch.setattr(execution, 'attempt', lambda season: attempt)
+    original = RuntimeError('simulated lost start acknowledgement' if start_attempted else 'connection failed')
+    if start_attempted:
+        def lost_ack(conn, season):
+            order.append(('simulated_run_committed', season))
+            raise original
+        monkeypatch.setattr(pipeline, 'start_run', lost_ack)
+    else:
+        monkeypatch.setattr(execution, 'connection', Mock(side_effect=original))
+    with pytest.raises(RuntimeError) as caught:
+        pipeline.process_season(2026, data_dir=tmp_path/'data', allow_missing_pbp=False,
+                                skip_acquire=True, metrics_execution=execution)
+    assert caught.value is original
+    report = events(attempt)[-1]
+    assert report['ingestion_run'] is None
+    assert report['global_status'] == ('UNKNOWN' if start_attempted else 'NOT_STARTED')
+    assert report['stage_result'] == 'FAILED'
+    assert order == ([('simulated_run_committed', 2026)] if start_attempted else [])
+
+
 def test_failed_status_and_journal_do_not_hide_original(tmp_path,monkeypatch):
     execution,_=local(tmp_path,monkeypatch);order=[];install_success_stages(monkeypatch,order)
     attempt=execution.attempt(2026);monkeypatch.setattr(execution,'attempt',lambda s:attempt)

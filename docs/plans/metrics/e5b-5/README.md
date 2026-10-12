@@ -120,6 +120,10 @@ status global, métricas válidas permanecem, mesmo com run FAILED. Erro de cone
 no commit pode exigir reconciliação; não é prova de rollback. Falha ao registrar
 FAILED não esconde a exceção original. Interrupção abrupta pode deixar RUNNING;
 o journal mostra somente a última fronteira confirmada.
+Na revisão do orquestrador, uma falha de `start_run` sem ID devolvido passou a
+registrar estado global UNKNOWN: a chamada SQL pode ter commitado antes da falha.
+NOT_STARTED fica reservado à falha anterior à chamada. Sem ID conhecido não se
+atualiza arbitrariamente uma linha; a recuperação requer reconciliação explícita.
 
 Reexecutar com **destino operacional novo** e mesmo archive. Nova tentativa tem
 UUID/ingestion_run novos, preservando todas as anteriores. Adapter/prepare/writer

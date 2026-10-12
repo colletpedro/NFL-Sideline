@@ -100,6 +100,7 @@ def process_season(
                connection_factory or _open_checked_connection)
     conn = None
     run_id: int | None = None
+    start_attempted = False
     stage = "start_run"
     rows_schedules = 0
     rows_teams = 0
@@ -109,6 +110,7 @@ def process_season(
     rows_metrics = 0
     try:
         conn = factory()
+        start_attempted = True
         run_id = start_run(conn, season)
         if attempt:
             attempt.run_id = run_id
@@ -192,7 +194,8 @@ def process_season(
         )
         return result
     except Exception as original_error:
-        failed_status = "NOT_STARTED" if run_id is None else "UNKNOWN"
+        # Without a returned ID, a failed start call does not prove SQL rollback.
+        failed_status = "UNKNOWN" if start_attempted else "NOT_STARTED"
         if run_id is not None:
             try:
                 finish_run_failed(
