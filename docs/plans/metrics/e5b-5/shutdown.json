@@ -1,0 +1,68 @@
+{
+  "checkedAtUTC": "2026-10-12T17:53:09.228123+00:00",
+  "ownInstances": [
+    {
+      "instance_id": "c0b3ea4c-905e-40a1-b9d9-6cfcaea2e5c7",
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 65017,
+      "portBindReleased": true,
+      "preserved": true,
+      "root": "/private/tmp/nfl-e5b5-instance-20261012-01"
+    },
+    {
+      "instance_id": "c0f509df-6997-4bb4-b55c-cbc56a2f30a6",
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 65030,
+      "portBindReleased": true,
+      "preserved": true,
+      "root": "/private/tmp/nfl-e5b5-instance-20261012-02"
+    },
+    {
+      "instance_id": "3b7f3e87-fe18-47ca-9352-8119bee90ae0",
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 65049,
+      "portBindReleased": true,
+      "preserved": true,
+      "root": "/private/tmp/nfl-e5b5-instance-20261012-03"
+    },
+    {
+      "instance_id": "2235a98d-9070-4064-9b49-a2ad48c7305b",
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 65190,
+      "portBindReleased": true,
+      "preserved": true,
+      "root": "/private/tmp/nfl-e5b5-instance-20261012-04"
+    },
+    {
+      "instance_id": "8ed1c8af-9abe-4730-b686-bf43793d4dd2",
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 49453,
+      "portBindReleased": true,
+      "preserved": true,
+      "root": "/private/tmp/nfl-e5b5-instance-20261012-05"
+    },
+    {
+      "instance_id": "6674d6dc-8d99-40ae-b198-bbf35694537a",
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 49558,
+      "portBindReleased": true,
+      "preserved": true,
+      "root": "/private/tmp/nfl-e5b5-instance-20261012-06"
+    },
+    {
+      "instance_id": "833837de-7ec5-4a83-b069-2c37ea4187e6",
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 65194,
+      "portBindReleased": true,
+      "preserved": true,
+      "root": "/private/tmp/nfl-e5b5-regressions-20261012-01"
+    }
+  ]
+}
