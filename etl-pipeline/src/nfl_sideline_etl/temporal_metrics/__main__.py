@@ -22,7 +22,7 @@ def publish(destination, result):
     try:
         (temporary / 'result.json').write_bytes(payload)
         (temporary / 'COMPLETED.json').write_bytes(json_bytes({
-            'resultVersion': RESULT_VERSION, 'result_id': result['result_id'], 'audit_id': result['audit_id'],
+            'resultVersion': result['resultVersion'], 'result_id': result['result_id'], 'audit_id': result['audit_id'],
             'files': {'result.json': hashlib.sha256(payload).hexdigest()}}))
         rename_exclusive(temporary, destination)
     finally:

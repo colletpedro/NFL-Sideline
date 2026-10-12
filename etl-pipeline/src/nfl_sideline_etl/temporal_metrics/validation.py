@@ -5,7 +5,8 @@ import hashlib
 
 from ..offline_metrics.artifact import identity
 from ..offline_metrics.statistics import COUNTS, FOUNDATIONS, exact_sum
-from . import INPUT_VERSION, LEGACY_INPUT_VERSION, POLICY_VERSION
+from . import INPUT_VERSION, LEGACY_INPUT_VERSION, PREVIOUS_INPUT_VERSION, POLICY_VERSION
+from .identities import validate_identities
 from .times import instant, eastern_kickoff
 
 KINDS = {'FILE', 'SET', 'CALENDAR', 'STATE', 'METADATA'}
@@ -116,7 +117,7 @@ def json_values(value):
 def validate(document):
     json_values(document)
     fields(document, ('inputVersion', 'policy', 'resources', 'evidence', 'calculations'))
-    if document['inputVersion'] not in (INPUT_VERSION, LEGACY_INPUT_VERSION):
+    if document['inputVersion'] not in (INPUT_VERSION, LEGACY_INPUT_VERSION, PREVIOUS_INPUT_VERSION):
         raise ValueError('Unsupported temporal input version')
     fields(document['policy'], ('policyVersion', 'trustedOrigins'))
     if document['policy']['policyVersion'] != POLICY_VERSION or not isinstance(document['policy']['trustedOrigins'], list):
@@ -178,7 +179,7 @@ def validate(document):
                 raise ValueError('Calendar must bind source set')
         elif r['kind'] == 'STATE':
             fields(p, ('game_id', 'calendar_revision_id', 'status', 'event_upper_bound', 'kickoff'),
-                   ('source_cause', 'event_lower_bound') if document['inputVersion'] == INPUT_VERSION else ('source_cause',))
+                   ('source_cause', 'event_lower_bound') if document['inputVersion'] != LEGACY_INPUT_VERSION else ('source_cause',))
             envelope(p.get('event_lower_bound'), timestamp=True)
             if 'source_cause' in p:
                 envelope(p['source_cause'])
@@ -212,7 +213,7 @@ def validate(document):
         visit(rid, set())
     for e in proofs.values():
         fields(e, ('evidence_id', 'kind', 'subject_id', 'origin', 'reference', 'recorded_at', 'value', 'dependencies'), ('receipt',))
-        allowed_kinds = EVIDENCE_KINDS | ({'EVENT_START_LOWER_BOUND'} if document['inputVersion'] == INPUT_VERSION else set())
+        allowed_kinds = EVIDENCE_KINDS | ({'EVENT_START_LOWER_BOUND'} if document['inputVersion'] != LEGACY_INPUT_VERSION else set())
         if e['kind'] not in allowed_kinds or not isinstance(e['dependencies'], list):
             raise ValueError('Invalid evidence kind/dependencies')
         for key in ('subject_id', 'origin', 'reference'):
@@ -230,7 +231,7 @@ def validate(document):
         if any(dep not in resources for dep in e['dependencies']):
             raise ValueError('Unresolved evidence dependency')
     for c in calculations.values():
-        fields(c, ('revision_id', 'calculation_id', 'coverage_revision_id', 'calendar_revision_id', 'pbp_revision_id', 'metadata_revision_ids', 'game', 'versions', 'completeness', 'model', 'source_models', 'unknown_filter_flags_n', 'statistics'), ('source_cause',))
+        fields(c, ('revision_id', 'calculation_id', 'coverage_revision_id', 'calendar_revision_id', 'pbp_revision_id', 'metadata_revision_ids', 'game', 'versions', 'completeness', 'model', 'source_models', 'unknown_filter_flags_n', 'statistics'), ('source_cause', 'original') if document['inputVersion'] == INPUT_VERSION else ('source_cause',))
         for key in ('calculation_id', 'coverage_revision_id'):
             string(c[key])
         game(c['game'])
@@ -275,6 +276,10 @@ def validate(document):
                 check_refs(v)
     check_refs(list(resources.values()))
     check_refs(list(calculations.values()))
+    if document['inputVersion'] == INPUT_VERSION:
+        validate_identities(calculations, resources, proofs)
+        return resources, proofs, calculations
+    # Legacy v1/v2 keep the declared 1.0.1 identity semantics.
     # Separate accepted identities must also be immutable across associations.
     for key, projection in (('calculation_id', lambda c: c), ('coverage_revision_id', lambda c: {k: c[k] for k in ('coverage_revision_id', 'calendar_revision_id', 'pbp_revision_id', 'game', 'statistics', 'unknown_filter_flags_n', 'completeness', 'versions')})):
         seen = {}
