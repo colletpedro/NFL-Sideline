@@ -262,11 +262,15 @@ class Attempt:
                 raise ValueError('PBP source missing; explicit allow-missing-pbp required')
             # Validate every present source, even if another partition is absent.
             inputs = read_inputs(self.paths['calendar'], self.paths['pbp'])
-            if self.missing:
-                # Still reject conflicts/invalid populations in the present subset.
-                from .offline_metrics.validation import calendar_index, reconcile_raw
-                games, _ = calendar_index(inputs[0])
-                reconcile_raw(inputs[1], games)
+            # Accepted validators apply even to an unavailable/partial set;
+            # neither metadata corruption nor conflicts become missing-data tolerance.
+            from .offline_metrics.validation import calendar_index, reconcile_raw
+            from .offline_metrics.provenance import validate_metadata
+            games, _ = calendar_index(inputs[0])
+            if any(g['season'] != self.season for g in games.values()):
+                raise ValueError('Input calendar outside selected season')
+            reconcile_raw(inputs[1], games)
+            validate_metadata(load_json(_regular(self.metadata)) if self.metadata else None, inputs[2], games)
             self.details['descriptors'] = inputs[2]
             self.details['pbp_state'] = ('MISSING' if self.missing else 'EMPTY_PRESENT' if not inputs[1] else 'PRESENT')
             if not inputs[1] and not self.missing and not self.execution.allow_missing:
@@ -277,6 +281,12 @@ class Attempt:
             raise
 
     def verify_sources(self):
+        if self.execution.mode == 'local':
+            calendar = self.execution.entries[self.season]['calendar'][0]
+            directory = calendar.parents[2] / 'pbp' / f'season={self.season}'
+            expected = {Path(r['original']) for r in self.sources if r['kind'] == 'pbp' and r['state'] == 'PRESENT'}
+            if set(directory.glob('*.parquet')) != expected:
+                raise ValueError('PBP partition inventory changed during attempt')
         for record in self.sources:
             if record['state'] == 'MISSING':
                 if Path(record['original']).exists() or Path(record['original']).is_symlink():

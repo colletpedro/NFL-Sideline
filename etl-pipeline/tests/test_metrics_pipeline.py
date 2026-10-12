@@ -393,3 +393,19 @@ def test_pipeline_refuses_plan_execution_and_acquisition_before_attempt(tmp_path
     with pytest.raises(ValueError):
         pipeline.process_season(2026,data_dir=tmp_path/'data',allow_missing_pbp=False,skip_acquire=True,metrics_execution=execution)
     assert not list(execution.output.iterdir())
+
+
+def test_new_partition_after_freeze_is_not_silently_added(tmp_path,monkeypatch):
+    execution,entry=local(tmp_path,monkeypatch);a=execution.attempt(2026);a.freeze()
+    p=Path(entry['pbp'][0]);(p.parent/'unexpected.parquet').write_bytes(p.read_bytes())
+    with pytest.raises(ValueError,match='inventory changed'):a.run()
+
+
+def test_metadata_schema_error_not_tolerated_for_missing_set(tmp_path):
+    entry=fixtures(tmp_path/'data',missing=True)
+    meta=tmp_path/'invalid-metadata.json';meta.write_bytes(b'{"invalid": true}')
+    entry['metadata']=str(meta)
+    execution=stage.configure(args(tmp_path,entry,allow=True),(2026,))
+    a=execution.attempt(2026)
+    with pytest.raises(ValueError):a.freeze()
+    assert events(a)[-1]['stage']=='FAILED' and a.plan is None
