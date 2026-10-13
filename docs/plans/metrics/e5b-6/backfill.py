@@ -70,7 +70,15 @@ def frozen(workspace):
 def artifact(report):
     path=Path(report['artifact_root']) if 'artifact_root' in report else None
     if path is None:raise ValueError('artifact root absent')
-    return {p.name:json.loads(p.read_text()) for p in path.glob('*.json')}
+    documents={p.name:json.loads(p.read_text()) for p in path.glob('*.json')}
+    canonical={k:v for k,v in documents.items() if k!='COMPLETED.json'}
+    manifest=dict(canonical['manifest.json']);cid=manifest.pop('calculation_id')
+    canonical['manifest.json']=manifest
+    assert ident(canonical)==cid==report['calculation_id']
+    hashes={p.name:sha(p) for p in path.glob('*.json')}
+    assert ident(hashes)==report['artifact_id']
+    assert documents['COMPLETED.json']['files']=={k:v for k,v in hashes.items() if k!='COMPLETED.json'}
+    return documents
 
 
 def query(domain,sql,params=()):
@@ -149,6 +157,7 @@ def main():
         report['idempotence']=dict(allPrivateRowsIncludingPersistedAtPreserved=True,blobsAndReceiptsPreserved=True,previousJournalsPreserved=True,
             privateSnapshotSha256=sha(w/'private-before.json'),archiveFileHashesId=ident(cas),journalFileHashesId=ident(journal),
             tableRows={t:len(r) for t,r in before.items()},noRealCorrectionAvailable=inventory['noAdditionalRealRevisions'])
+        report['journals']={label:{d.name:[json.loads(p.read_text())['stage'] for p in sorted(d.glob('*.json'))] for d in (w/label).iterdir() if d.is_dir()} for label in ('plan','integrated','repeat')}
         report['ingestionRuns']=query(domain,'select * from public.ingestion_runs order by id')
         choices=[{k:r[k] for k in ('calculation_id','artifact_id','archive_id')} for r in first.values()]
         relations=extract(private,choices);report['selection']=choices
@@ -169,6 +178,25 @@ def main():
                 assert (r['epa_sum'] is None and r['record_json']['epa_sum'] is None) or Decimal(r['epa_sum'])==Decimal(r['record_json']['epa_sum'])
             report['independent'][str(season)]['sqlCompleteSourceSetsAndAssociationsMatched']=True
             report['independent'][str(season)]['sqlNumericSumsExactlyMatched']=len(sql_stats)
+        assert len(rs['metric_calculation_coverage'])==sum(len(l['games']) for l in ledgers.values())
+        assert len(rs['team_game_metric_sums'])==sum(len(l['statistics']) for l in ledgers.values())
+        assert len({r['coverage_revision_id'] for r in rs['game_metric_coverage_revision']})==len(rs['game_metric_coverage_revision'])
+        report['readiness']=[]
+        previous=json.loads((ROOT/'docs/plans/metrics/e5b-1/local-audit.json').read_text())
+        for season,led in ledgers.items():
+            prior_record=next(r for r in previous['records'] if r['season']==season)
+            for k in ('calendar_games_n','pbp_raw_n','pbp_unique_n','duplicate_rows_ignored','excluded_n','eligible_content_n'):
+                assert report['independent'][str(season)][k]==prior_record['reconciliation'][k]
+            report['independent'][str(season)]['priorE5b1HashAndCountsMatch']=True
+            for ph in sorted({g['phase'] for g in led['games'].values()}):
+                gids={g for g,v in led['games'].items() if v['phase']==ph}
+                portion=dict(games={g:led['games'][g] for g in gids},audits={g:led['audits'][g] for g in gids},
+                    statistics={k:v for k,v in led['statistics'].items() if k[0] in gids},quality={g:led['quality'][g] for g in gids},calendar_raw_n=sum(1+led['audits'][g]['calendar_duplicate_rows_ignored'] for g in gids))
+                report['readiness'].append(dict(season=season,phase=ph,observed=summary(portion),
+                    calendarWeeks=sorted({led['games'][g]['week'] for g in gids}),pbpWeeks=sorted({led['games'][g]['week'] for g in gids if led['audits'][g]['unique_n']}),
+                    rounds=dict(Counter(str(led['games'][g]['round']) for g in gids)),integrity='PASSED',reconciliation='EXACT_MATCH',
+                    completeness='UNKNOWN',epaModel='UNKNOWN',historicalAvailability='UNKNOWN',historicalIngestion='UNKNOWN',eventClosure='UNKNOWN',
+                    temporalEligibility='UNKNOWN_NO_AGGREGATES',comparisonEligible=False,editorial='BLOCKED; auditable per-game subset only'))
         (w/'relations.json').write_bytes(encoded(relations))
         buffers=recover(relations,{first[2025]['archive_id']:str(w/'archive')})
         auxiliary=json.loads((ROOT/'etl-pipeline/tests/fixtures/metrics_materialization/auxiliary-empty.json').read_text())

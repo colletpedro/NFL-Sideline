@@ -116,9 +116,11 @@ def ledger(calendar_paths, pbp_paths):
             unique[key]=play
     by_game=defaultdict(list)
     for row in sorted(unique.values(),key=lambda r:(r['game_id'],Decimal(r['play_id']))):by_game[row['game_id']].append(row)
-    audits,stats={},{}
+    audits,stats,quality={},{},{}
     for gid,g in sorted(games.items()):
         rows=by_game[gid]; reasons=Counter(); outside_null=0
+        quality[gid]=dict(epa_unique=dict(Counter('missing' if r['epa'] is None else 'finite' if Decimal(r['epa']).is_finite() else 'nonfinite' for r in rows)),
+                          unknown_flags_unique={f:sum(r[f] is None for r in rows) for f in FLAGS})
         groups={(t,r,f):dict.fromkeys(COUNTS,0)|{'epa_sum':Fraction(0)} for t in (g['home_team'],g['away_team'])
                 for r in ('off','def') for f in ('general','classified_pass','classified_rush')}
         for row in rows:
@@ -145,7 +147,7 @@ def ledger(calendar_paths, pbp_paths):
             calendar_duplicate_rows_ignored=cal_duplicates[gid],exclusions=dict(reasons),excluded_n=sum(reasons.values()),
             eligible_content_n=len(rows)-sum(reasons.values()) if rows else None,unknown_filter_flags_n=reasons['unknown_filter_flags'],
             outside_pass_run_null_teams_n=outside_null,pbp_content_id=ident(rows))
-    return dict(games=games,audits=audits,statistics=stats,calendar_raw_n=calendar_raw)
+    return dict(games=games,audits=audits,statistics=stats,calendar_raw_n=calendar_raw,quality=quality)
 
 
 def compare(led, audits, statistics, manifest):
@@ -155,6 +157,8 @@ def compare(led, audits, statistics, manifest):
         expected=led['audits'][a['game_id']]
         for key,value in expected.items():assert a[key]==value,(a['game_id'],key,a[key],value)
         assert a['completeness']=='UNKNOWN' and a['expected_unique_rows'] is None
+        assert a['scope']==('AUDITABLE_SUBSET' if expected['unique_n'] else 'NO_SOURCE_OBSERVATION')
+        assert a['statistics_status']==('PARTIAL' if expected['unique_n'] else 'SOURCE_UNKNOWN')
         assert all(a['provenance'][k] is None for k in ('available_at','ingested_at','event_upper_bound'))
         assert a['calendar_revision_id']==sets['calendar'] and a['pbp_revision_id']==sets['pbp']
         revision=ident(dict(game=led['games'][a['game_id']],calendar_revision=sets['calendar'],pbp_revision=sets['pbp'],
@@ -180,7 +184,9 @@ def summary(led):
         exclusions=dict(sum((Counter(a['exclusions']) for a in audits),Counter())),statistics_records_n=len(led['statistics']),
         finite_epa_n=sum(s['epa_n'] for s in off),missing_epa_n=sum(s['epa_missing_n'] for s in off),
         nonfinite_epa_n=sum(s['epa_nonfinite_n'] for s in off),exact_epa_sum=str(sum((s['epa_sum'] for s in off),Fraction(0))),
-        unknown_filter_flags_n=sum(a['unknown_filter_flags_n'] for a in audits))
+        unknown_filter_flags_n=sum(a['unknown_filter_flags_n'] for a in audits),
+        epa_all_unique=dict(sum((Counter(q['epa_unique']) for q in led.get('quality',{}).values()),Counter())),
+        unknown_flags_all_unique=dict(sum((Counter(q['unknown_flags_unique']) for q in led.get('quality',{}).values()),Counter())))
 
 
 def legacy_ledger(paths):

@@ -62,3 +62,28 @@ def test_double_partition_preserves_content_but_counts_replicas(tmp_path):
     assert one['statistics']==two['statistics']
     for gid,a in one['audits'].items():assert a['pbp_content_id']==two['audits'][gid]['pbp_content_id']
     assert summary(two)['pbp_raw_n']==2*summary(one)['pbp_raw_n']
+
+
+def test_freeze_missing_season_preserves_inventory(tmp_path,monkeypatch):
+    import freeze
+    c,p=sources(tmp_path)
+    raw=tmp_path/'project/raw';(raw/'schedules/season=2026').mkdir(parents=True);(raw/'pbp/season=2026').mkdir(parents=True)
+    import shutil
+    shutil.copyfile(c,raw/'schedules/season=2026/schedules.parquet');shutil.copyfile(p,raw/'pbp/season=2026/pbp.parquet')
+    repo=tmp_path/'repo';history=repo/'contracts/metrics/e5a-v1';history.mkdir(parents=True)
+    (history/'local-audit.json').write_text(json.dumps({'sourceRoot':str(raw),'files':[]}))
+    monkeypatch.setattr(freeze,'ROOT',repo)
+    with pytest.raises(ValueError,match='Insufficient'):freeze.freeze(raw,tmp_path/'frozen')
+    assert (tmp_path/'frozen/inventory-before-selection.json').is_file()
+    assert not (tmp_path/'frozen/inputs.json').exists()
+
+
+def test_freeze_corruption_preserves_hash_and_failure(tmp_path,monkeypatch):
+    import freeze
+    raw=tmp_path/'raw';raw.mkdir();(raw/'bad.parquet').write_bytes(b'broken-real-source-reproduction-SYNTHETIC')
+    repo=tmp_path/'repo';history=repo/'contracts/metrics/e5a-v1';history.mkdir(parents=True)
+    (history/'local-audit.json').write_text(json.dumps({'sourceRoot':str(raw),'files':[]}))
+    monkeypatch.setattr(freeze,'ROOT',repo)
+    with pytest.raises(Exception):freeze.freeze(raw,tmp_path/'frozen')
+    failure=json.loads((tmp_path/'frozen/inventory-failed.json').read_text())
+    assert failure['executionAuthorized'] is False and len(failure['files'][0]['sha256'])==64
