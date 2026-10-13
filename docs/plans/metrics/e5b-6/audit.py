@@ -181,3 +181,38 @@ def summary(led):
         finite_epa_n=sum(s['epa_n'] for s in off),missing_epa_n=sum(s['epa_missing_n'] for s in off),
         nonfinite_epa_n=sum(s['epa_nonfinite_n'] for s in off),exact_epa_sum=str(sum((s['epa_sum'] for s in off),Fraction(0))),
         unknown_filter_flags_n=sum(a['unknown_filter_flags_n'] for a in audits))
+
+
+def legacy_ledger(paths):
+    """Legacy population separately, including conversions; raw, canonical file only."""
+    grouped=defaultdict(lambda: dict(n=0,epa=Fraction(0),success=0,passed=0,pass_epa=Fraction(0),run_epa=Fraction(0),pass_n=0,run_n=0))
+    for path in paths:
+        for r in parquet(path).to_dicts():
+            if (r['epa'] is None or r['play_type'] not in ('pass','run') or (r['qb_kneel'] or 0)!=0 or
+                    (r['qb_spike'] or 0)!=0 or r['posteam'] is None or r['defteam'] is None):continue
+            epa=decimal(r['epa']);value=Fraction(epa)
+            for role,team in [('off',r['posteam']),('def',r['defteam'])]:
+                s=grouped[r['season'],r['week'],team,role];s['n']+=1;s['epa']+=value;s['success']+=int(epa>0)
+                kind='pass' if r['play_type']=='pass' else 'run';s[kind+'_n']+=1;s[kind+'_epa']+=value;s['passed']+=int(kind=='pass')
+    return grouped
+
+
+def compare_legacy(grouped, rows):
+    keys={(s,w,t) for s,w,t,r in grouped if r=='off' and (s,w,t,'def') in grouped}
+    assert keys=={(r['season'],r['week'],r['team_abbr']) for r in rows}
+    max_error=0.0
+    for r in rows:
+        for role in ('off','def'):
+            s=grouped[r['season'],r['week'],r['team_abbr'],role]
+            assert r['plays_offense' if role=='off' else 'plays_defense']==s['n']
+            expected={role+'_epa_play':s['epa']/s['n'],role+'_success_rate':Fraction(s['success'],s['n']),
+                      role+'_epa_pass':s['pass_epa']/s['pass_n'] if s['pass_n'] else None,
+                      role+'_epa_rush':s['run_epa']/s['run_n'] if s['run_n'] else None}
+            if role=='off':expected['dropback_rate']=Fraction(s['passed'],s['n'])
+            for k,value in expected.items():
+                if value is None:assert r[k] is None
+                else:
+                    error=abs(float(value)-float(r[k]));max_error=max(max_error,error)
+                    assert error<=1e-12,(k,error)
+    return dict(rows=len(rows),volume_exact=True,legacy_float_diagnostics_max_abs_error=max_error,tolerance='1e-12 (means only; not exact sum proof)',
+                eligible_off_n=sum(s['n'] for (*_,role),s in grouped.items() if role=='off'))
