@@ -1,4 +1,4 @@
-# Estado consolidado — 12/10/2026
+# Estado consolidado — 13/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -71,7 +71,15 @@ Incorporada a candidata `6f2ad34` à branch local `codex/metrics-integration-e5b
 
 Revisão corrigiu espaços finais no log Java e a classificação de falha inicial sem ID recebido: UNKNOWN após tentativa de start_run, NOT_STARTED antes da chamada. **498 testes ETL e 51 regressões PostgreSQL reais** aprovados; prova integrada repetida no checkout corrigido, JAR reconstruído offline e leitura temporal/Java. Zero inserções/66 reutilizações na reexecução, revisões/receipts preservados, falhas/recuperação e ausência/vazio confirmados. Todas as instâncias próprias encerradas. [Aceite, limites e evidências](plans/metrics/e5b-5-review/ACCEPTANCE.md).
 
-Próximo passo: **E5b-6, backfill limitado e auditoria com dados locais reais**, inicialmente no ambiente descartável identificado. Sem aquisição ou aplicação remota implícita. Novo caminho semanal/Production permanece desativado; integração editorial/visual e publicação continuam pendentes.
+O backfill limitado foi auditado na E5b-6 abaixo, sem aquisição ou aplicação remota implícita. Novo caminho semanal/Production permanece desativado; integração editorial/visual e publicação continuam pendentes.
+
+## Backfill e auditoria real E5b-6 — aceitos em 13/10/2026
+
+Incorporada `c5bfa75` à branch local `codex/metrics-integration-e5b6`, sem alterações dos componentes aceitos. O orquestrador reproduziu **498 testes ETL, nove do auditor, checks/hashes e a carga real em PostgreSQL próprio**: quatro Parquets/14.995.734 bytes; 2025 REG 272/272 jogos e POST 13/13; 2026 REG 32/272, PBP W1–2. Reconciliação exata de **557 coberturas e 3.804 grupos**; reexecução com zero inserções/4.978 reutilizações e registros/receipts/journals preservados. Três leituras Java passaram; instância da revisão na porta 49667 encerrada. [Aceite e prova independente](plans/metrics/e5b-6-review/ACCEPTANCE.md).
+
+**Limite:** completude, modelo EPA, disponibilidade/ingestão histórica e encerramento continuam UNKNOWN. Os pedidos PIT ficaram sem agregados. Observação integral dos jogos 2025 não certifica completude; 2026 é um conjunto arquivado W1–2, não atualização corrente. Comparação certificada, integração editorial e publicação não foram liberadas.
+
+Próxima preparação: política de proveniência/completude e contrato de consumo explícito de observações auditáveis/subsets/UNKNOWN, antes de anunciar comparações certificadas. Coleta prospectiva/estados de jogo e atualização de 2026 exigem entrega própria. Supabase completo/advisors, E4 humano, BASIC/FULL, defeitos legados e rollout público permanecem pendentes.
 
 ## Política de arquivos
 
