@@ -1,0 +1,490 @@
+{
+  "evidenceVersion": "metrics-real-selected-evidence-v1",
+  "seasons": {
+    "2025": {
+      "candidateMissingEPA": 0,
+      "candidateUnknownFlags": 0,
+      "cases": {
+        "POST": {
+          "counts": {
+            "away_team": "BUF",
+            "calendar_duplicate_rows_ignored": 0,
+            "duplicate_rows_ignored": 0,
+            "eligible_content_n": 114,
+            "excluded_n": 49,
+            "exclusions": {
+              "outside_pass_run": 49
+            },
+            "game_id": "2025_19_BUF_JAX",
+            "home_team": "JAX",
+            "outside_pass_run_null_teams_n": 9,
+            "pbp_content_id": "sha256:db4c88744dc8952856cabeabb9bfab31c13f8660ea91ffcf877435ac6a59d68f",
+            "phase": "POST",
+            "raw_n": 163,
+            "round": "WC",
+            "season": 2025,
+            "unique_n": 163,
+            "unknown_filter_flags_n": 0,
+            "week": 19
+          },
+          "game": {
+            "away_team": "BUF",
+            "game_id": "2025_19_BUF_JAX",
+            "home_team": "JAX",
+            "phase": "POST",
+            "round": "WC",
+            "season": 2025,
+            "week": 19
+          },
+          "offGroups": [
+            {
+              "eligible_n": 36,
+              "epa_exact": "326448789164799883/1200000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 36,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "979346367494399649/100000000000000000",
+              "foundation": "classified_pass",
+              "frequency_exact": "3/5",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 18,
+              "success_rate_exact": "1/2",
+              "team": "BUF"
+            },
+            {
+              "eligible_n": 24,
+              "epa_exact": "240865942707750943/1200000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 24,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "240865942707750943/50000000000000000",
+              "foundation": "classified_rush",
+              "frequency_exact": "2/5",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 11,
+              "success_rate_exact": "11/24",
+              "team": "BUF"
+            },
+            {
+              "eligible_n": 60,
+              "epa_exact": "292215650581980307/1200000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 60,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "292215650581980307/20000000000000000",
+              "foundation": "general",
+              "frequency_exact": "1",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 29,
+              "success_rate_exact": "29/60",
+              "team": "BUF"
+            },
+            {
+              "eligible_n": 31,
+              "epa_exact": "185319736981017949/7750000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 31,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "185319736981017949/250000000000000000",
+              "foundation": "classified_pass",
+              "frequency_exact": "31/54",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 15,
+              "success_rate_exact": "15/31",
+              "team": "JAX"
+            },
+            {
+              "eligible_n": 23,
+              "epa_exact": "18539740970300047/575000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 23,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "18539740970300047/25000000000000000",
+              "foundation": "classified_rush",
+              "frequency_exact": "23/54",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 13,
+              "success_rate_exact": "13/23",
+              "team": "JAX"
+            },
+            {
+              "eligible_n": 54,
+              "epa_exact": "370717146684018419/13500000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 54,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "370717146684018419/250000000000000000",
+              "foundation": "general",
+              "frequency_exact": "1",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 28,
+              "success_rate_exact": "14/27",
+              "team": "JAX"
+            }
+          ]
+        },
+        "REG": {
+          "counts": {
+            "away_team": "ARI",
+            "calendar_duplicate_rows_ignored": 0,
+            "duplicate_rows_ignored": 0,
+            "eligible_content_n": 128,
+            "excluded_n": 54,
+            "exclusions": {
+              "outside_pass_run": 54
+            },
+            "game_id": "2025_01_ARI_NO",
+            "home_team": "NO",
+            "outside_pass_run_null_teams_n": 5,
+            "pbp_content_id": "sha256:b2f99089875b06f927509bf55b0aa3e6cac82f27692dd8d4d8376b6b6cc04457",
+            "phase": "REG",
+            "raw_n": 182,
+            "round": "REG",
+            "season": 2025,
+            "unique_n": 182,
+            "unknown_filter_flags_n": 0,
+            "week": 1
+          },
+          "game": {
+            "away_team": "ARI",
+            "game_id": "2025_01_ARI_NO",
+            "home_team": "NO",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2025,
+            "week": 1
+          },
+          "offGroups": [
+            {
+              "eligible_n": 34,
+              "epa_exact": "38119983146503467/850000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 34,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "38119983146503467/25000000000000000",
+              "foundation": "classified_pass",
+              "frequency_exact": "34/61",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 16,
+              "success_rate_exact": "8/17",
+              "team": "ARI"
+            },
+            {
+              "eligible_n": 27,
+              "epa_exact": "14481747534938359/337500000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 27,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "14481747534938359/12500000000000000",
+              "foundation": "classified_rush",
+              "frequency_exact": "27/61",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 9,
+              "success_rate_exact": "1/3",
+              "team": "ARI"
+            },
+            {
+              "eligible_n": 61,
+              "epa_exact": "13416695643276037/305000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 61,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "13416695643276037/5000000000000000",
+              "foundation": "general",
+              "frequency_exact": "1",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 25,
+              "success_rate_exact": "25/61",
+              "team": "ARI"
+            },
+            {
+              "eligible_n": 45,
+              "epa_exact": "-35931867015832077817/450000000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 45,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "-35931867015832077817/10000000000000000000",
+              "foundation": "classified_pass",
+              "frequency_exact": "45/67",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 20,
+              "success_rate_exact": "4/9",
+              "team": "NO"
+            },
+            {
+              "eligible_n": 22,
+              "epa_exact": "80236957411398187/2200000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 22,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "80236957411398187/100000000000000000",
+              "foundation": "classified_rush",
+              "frequency_exact": "22/67",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 9,
+              "success_rate_exact": "9/22",
+              "team": "NO"
+            },
+            {
+              "eligible_n": 67,
+              "epa_exact": "-27908171274692259117/670000000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 67,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "-27908171274692259117/10000000000000000000",
+              "foundation": "general",
+              "frequency_exact": "1",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 29,
+              "success_rate_exact": "29/67",
+              "team": "NO"
+            }
+          ]
+        }
+      },
+      "conversionExcluded": {
+        "defteam": "BAL",
+        "drive": "11.0",
+        "epa": "-0.947",
+        "game_id": "2025_01_BAL_BUF",
+        "play_deleted": "0.0",
+        "play_id": "2445.0",
+        "play_type": "pass",
+        "posteam": "BUF",
+        "qb_kneel": "0.0",
+        "qb_spike": "0.0",
+        "season": 2025,
+        "season_type": "REG",
+        "special_teams_play": "0.0",
+        "two_point_attempt": "1.0",
+        "week": 1
+      },
+      "rawMissingEPA": {
+        "defteam": null,
+        "drive": "8.0",
+        "epa": null,
+        "game_id": "2025_01_ARI_NO",
+        "play_deleted": "0.0",
+        "play_id": "2152.0",
+        "play_type": null,
+        "posteam": null,
+        "qb_kneel": "0.0",
+        "qb_spike": "0.0",
+        "season": 2025,
+        "season_type": "REG",
+        "special_teams_play": "0.0",
+        "two_point_attempt": null,
+        "week": 1
+      },
+      "rawMissingEPAByType": {
+        "None": 570
+      },
+      "rawUnknownFlag": {
+        "defteam": null,
+        "drive": null,
+        "epa": "-0.0",
+        "game_id": "2025_01_ARI_NO",
+        "play_deleted": "0.0",
+        "play_id": "1.0",
+        "play_type": null,
+        "posteam": null,
+        "qb_kneel": "0.0",
+        "qb_spike": "0.0",
+        "season": 2025,
+        "season_type": "REG",
+        "special_teams_play": "0.0",
+        "two_point_attempt": null,
+        "week": 1
+      },
+      "rawUnknownFlagByType": {
+        "None": 1445,
+        "kickoff": 1,
+        "no_play": 65
+      }
+    },
+    "2026": {
+      "candidateMissingEPA": 0,
+      "candidateUnknownFlags": 0,
+      "cases": {
+        "REG": {
+          "counts": {
+            "away_team": "ARI",
+            "calendar_duplicate_rows_ignored": 0,
+            "duplicate_rows_ignored": 0,
+            "eligible_content_n": 120,
+            "excluded_n": 53,
+            "exclusions": {
+              "outside_pass_run": 53
+            },
+            "game_id": "2026_01_ARI_LAC",
+            "home_team": "LAC",
+            "outside_pass_run_null_teams_n": 9,
+            "pbp_content_id": "sha256:11dbccca24a5b142c89f1eace3c3190f377c7388eaa13e23b1a16980ac91ec04",
+            "phase": "REG",
+            "raw_n": 173,
+            "round": "REG",
+            "season": 2026,
+            "unique_n": 173,
+            "unknown_filter_flags_n": 0,
+            "week": 1
+          },
+          "game": {
+            "away_team": "ARI",
+            "game_id": "2026_01_ARI_LAC",
+            "home_team": "LAC",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 1
+          },
+          "offGroups": [
+            {
+              "eligible_n": 38,
+              "epa_exact": "901286468515324519/3800000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 38,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "901286468515324519/100000000000000000",
+              "foundation": "classified_pass",
+              "frequency_exact": "38/69",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 21,
+              "success_rate_exact": "21/38",
+              "team": "ARI"
+            },
+            {
+              "eligible_n": 31,
+              "epa_exact": "2332490251619173861/77500000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 31,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "2332490251619173861/2500000000000000000",
+              "foundation": "classified_rush",
+              "frequency_exact": "31/69",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 13,
+              "success_rate_exact": "13/31",
+              "team": "ARI"
+            },
+            {
+              "eligible_n": 69,
+              "epa_exact": "6216162991125571709/43125000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 69,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "6216162991125571709/625000000000000000",
+              "foundation": "general",
+              "frequency_exact": "1",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 34,
+              "success_rate_exact": "34/69",
+              "team": "ARI"
+            },
+            {
+              "eligible_n": 30,
+              "epa_exact": "-140191657925606707/750000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 30,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "-140191657925606707/25000000000000000",
+              "foundation": "classified_pass",
+              "frequency_exact": "10/17",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 13,
+              "success_rate_exact": "13/30",
+              "team": "LAC"
+            },
+            {
+              "eligible_n": 21,
+              "epa_exact": "-6834242858982178987/21000000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 21,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "-6834242858982178987/1000000000000000000",
+              "foundation": "classified_rush",
+              "frequency_exact": "7/17",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 7,
+              "success_rate_exact": "1/3",
+              "team": "LAC"
+            },
+            {
+              "eligible_n": 51,
+              "epa_exact": "-12441909176006447267/51000000000000000000",
+              "epa_missing_n": 0,
+              "epa_n": 51,
+              "epa_nonfinite_n": 0,
+              "epa_sum": "-12441909176006447267/1000000000000000000",
+              "foundation": "general",
+              "frequency_exact": "1",
+              "interpretation": "AUDITABLE_SUBSET only; not comparison-certified",
+              "success_n": 20,
+              "success_rate_exact": "20/51",
+              "team": "LAC"
+            }
+          ]
+        }
+      },
+      "conversionExcluded": {
+        "defteam": "HOU",
+        "drive": "21.0",
+        "epa": "-0.947",
+        "game_id": "2026_01_BUF_HOU",
+        "play_deleted": "0.0",
+        "play_id": "4178.0",
+        "play_type": "pass",
+        "posteam": "BUF",
+        "qb_kneel": "0.0",
+        "qb_spike": "0.0",
+        "season": 2026,
+        "season_type": "REG",
+        "special_teams_play": "0.0",
+        "two_point_attempt": "1.0",
+        "week": 1
+      },
+      "rawMissingEPA": {
+        "defteam": null,
+        "drive": null,
+        "epa": null,
+        "game_id": "2026_01_ARI_LAC",
+        "play_deleted": "0.0",
+        "play_id": "1952.0",
+        "play_type": null,
+        "posteam": null,
+        "qb_kneel": "0.0",
+        "qb_spike": "0.0",
+        "season": 2026,
+        "season_type": "REG",
+        "special_teams_play": "0.0",
+        "two_point_attempt": null,
+        "week": 1
+      },
+      "rawMissingEPAByType": {
+        "None": 64
+      },
+      "rawUnknownFlag": {
+        "defteam": null,
+        "drive": null,
+        "epa": "-0.0",
+        "game_id": "2026_01_ARI_LAC",
+        "play_deleted": "0.0",
+        "play_id": "1.0",
+        "play_type": null,
+        "posteam": null,
+        "qb_kneel": "0.0",
+        "qb_spike": "0.0",
+        "season": 2026,
+        "season_type": "REG",
+        "special_teams_play": "0.0",
+        "two_point_attempt": null,
+        "week": 1
+      },
+      "rawUnknownFlagByType": {
+        "None": 165,
+        "no_play": 7
+      }
+    }
+  },
+  "selectionRule": "lexicographically first observed game/play for each condition",
+  "synthetic": false
+}

@@ -1,0 +1,335 @@
+{
+  "base": "f8a258b64116aa7f67f4d4d6253d3f00dc91f5e2",
+  "candidate": "cd753da49c752f0545d14d0dad30195af03ca44e",
+  "databaseConnected": false,
+  "diffCheck": "PASSED",
+  "e5aFrozenHashes": {
+    "candidateCommit": "5e976a315a167795222061175e582148bc570c33",
+    "candidateHashesChecked": 12,
+    "candidateUnmodified": true,
+    "diagnostic": "E5A_RAW_PBP_BOUNDARY",
+    "goldenCasesPassed": 26,
+    "localFiles": [],
+    "synthetic": {
+      "candidate_null_teams": "Invalid play teams",
+      "outside_population_null_teams": "Invalid play teams"
+    }
+  },
+  "e5aTestsPassed": 23,
+  "e5aVerifier": {
+    "golden_cases_passed": 26,
+    "package": "nfl-sideline-metrics-e5a",
+    "production_implemented": false,
+    "version": "1.0.0"
+  },
+  "e5b1ByteHashes": {
+    "COMPLETED.json": "f4bd51634927522c8e739d4cf7e961f230dcf7680dcf2c8abfdaebd9db5a247f",
+    "game-audit.json": "55cad0226a51e79d2afa9a0b69bcf2f7f48ff559580a0869259b776190b424e7",
+    "limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+    "manifest.json": "9d62e79b79427b90f37857cf349295b46ea69f5738a32a20cde391ed684e3778",
+    "reconciliation.json": "bf3e83f394bc027de75111d5676535b436d3f0b3ea0d6bdcb7d807853fa088ea",
+    "statistics.json": "a65a40601207d5410ef66a5c2d571d743164040bc2d15a084c9ef751aa4b47f5"
+  },
+  "e5b2DryRun": {
+    "artifact_id": "sha256:711b52452a30630f6626dc13ee0c62fe169ac12bcf5519ef8e589f5160cef29d",
+    "calculation_id": "sha256:2c364020c9c5bf08c2eeaa5fd38eae161920e482cdf23d2b1dda29b4d61a245f",
+    "coverage_states": {
+      "AUDITABLE_SUBSET": 4,
+      "FULL_GAME_CONTENT": 1,
+      "NO_SOURCE_OBSERVATION": 1
+    },
+    "database_connected": false,
+    "games": 6,
+    "mode": "DRY_RUN",
+    "sources": 2,
+    "statistics": 60
+  },
+  "etlLog": "........................................................................ [ 14%]\n........................................................................ [ 28%]\n........................................................................ [ 43%]\n........................................................................ [ 57%]\n........................................................................ [ 72%]\n........................................................................ [ 86%]\n..................................................................       [100%]\n498 passed in 7.50s\n",
+  "etlTestsPassed": 498,
+  "freshArchiveTemporalIdentitiesValidated": true,
+  "gateVersion": "metrics-real-backfill-gate-v1",
+  "identitiesMaterializerRegression": {
+    "algorithmVersion": "metrics-temporal-1.1.0",
+    "associations": [
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+        "game_id": "synthetic-1"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308",
+        "game_id": "synthetic-3"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+        "game_id": "synthetic-5"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+        "game_id": "synthetic-6"
+      }
+    ],
+    "audit_id": "sha256:310e96a4473c2e45f5eadc7de69db26351c92d098dd73ac7d5e42983d470eafb",
+    "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+    "coverage": {
+      "availabilityKnownGameIds": [],
+      "calendarComplete": true,
+      "closedWeeks": [],
+      "expectationFailures": [],
+      "expectedGames": 3,
+      "gaps": [
+        {
+          "details": [
+            "SOURCE_UNKNOWN"
+          ],
+          "gameId": "synthetic-5",
+          "reason": "SOURCE_UNKNOWN"
+        }
+      ],
+      "knownEligibleGameIds": [
+        "synthetic-1",
+        "synthetic-5",
+        "synthetic-6"
+      ],
+      "metricObservedGameIds": [
+        "synthetic-1"
+      ],
+      "observedCompleteGameIds": [
+        "synthetic-6"
+      ],
+      "observedGameIds": [
+        "synthetic-1",
+        "synthetic-6"
+      ],
+      "outsideCutoffGameIds": [],
+      "sourceRatio": {
+        "denominator": 3,
+        "exact": "1/3",
+        "numerator": 1
+      },
+      "uncertainGameIds": []
+    },
+    "input_id": "sha256:f94dc3b56ac483cae1709c7a8607cdb6958d0ca1f77a27112a121ee4d2ac351e",
+    "materialization_id": "sha256:ec4339546454ae76d339d5e4575113c6715ddcb5350a68164e652462f61a9711",
+    "observedGames": [
+      "synthetic-1",
+      "synthetic-6"
+    ],
+    "resultVersion": "metrics-temporal-result-v3",
+    "result_id": "sha256:b522face2cd33aa8591bcd737a2dd42972a7d14b5a3fed2e6ecfb33a19ee7f2b",
+    "status": "PASSED"
+  },
+  "independentAuditorTests": ".........                                                                [100%]\n9 passed in 0.21s\n",
+  "preservedTemporalArtifacts": {
+    "pit": {
+      "audit_id": "sha256:ec1b91086647cbde8b1dfc24de23d224c55b0a5f2dc0d83d3b6b4c90b4bed098",
+      "result_id": "sha256:bab53e679a5d32310d18b669042549945cc60a6c3fff0a36f040eec2f812f834",
+      "sha256": "ca1cdc1cc9af53cbfaa759ba1647171a7dc0ba3e0024c2752e7b0da9a5a19970"
+    },
+    "reconstruction": {
+      "audit_id": "sha256:7ea65041fe9e76be03e494454ef8f40214a299cc88860e38cd5d65d0cc85bff1",
+      "result_id": "sha256:71d4f7daa6c8d4a68083525ed83c0789b29a0a5317c32992d168ef5791b42e69",
+      "sha256": "09c131dc2c9e320ded4a09ca25132bd6295c0c70ba77dcff3c424c19d937d186"
+    }
+  },
+  "protectedPathsUnchanged": [
+    "etl-pipeline",
+    "docs/plans/metrics/e5b-5",
+    "docs/plans/metrics/e5b-5-review",
+    "contracts/metrics/e5a-v1",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/seasons.py",
+    "etl-pipeline/load_metrics.py",
+    "etl-pipeline/load_games.py",
+    "etl-pipeline/seed_teams.py",
+    "etl-pipeline/run_local.py",
+    "supabase",
+    "core-api",
+    "web-ui",
+    ".github",
+    "Spec.md",
+    "docs/current-state.md",
+    "docs/plans/metrics/e5b-1",
+    "docs/plans/metrics/e5b-2",
+    "docs/plans/metrics/e5b-3",
+    "docs/plans/metrics/e5b-3-review",
+    "docs/plans/metrics/e5b-4",
+    "docs/plans/metrics/e5b-4-review",
+    "docs/plans/metrics/identities-e5b34",
+    "docs/plans/metrics/identities-e5b34-review"
+  ],
+  "scope": "OFFLINE_ONLY",
+  "sourceHashes": {
+    "docs/plans/metrics/e5b-6/audit.py": "3ada928556bdd871e54421a926110f7094ec71df811c5d11b05d334df9056511",
+    "docs/plans/metrics/e5b-6/backfill.py": "9454687b801fc2d3d92721bfead399658faf351f51665e54f273de1ddc074404",
+    "docs/plans/metrics/e5b-6/freeze.py": "acdfa37461dc9b45b2dad3144cbfd85eacefaa151f9385bf1714709fa0de592e",
+    "docs/plans/metrics/e5b-6/instance.py": "0eaa901bc7b5256e183960fbabf8bbd6549f019ef63e6a83e5c6663e47a9cff6",
+    "docs/plans/metrics/e5b-6/test_audit.py": "bcac57e7dcce638838aefcf338e4436ac5a4bfbc9718e23477531a7cb357ccca",
+    "docs/plans/metrics/e5b-6/verify.py": "7fdb3d1b16fa37d128f4edc928987325100321752a35c52b21bcce7ce5494cc6",
+    "etl-pipeline/run_pipeline.py": "e61e232042096a5e14e6832648eb5a212479474958f8d8d767962e8eabe6d02d",
+    "etl-pipeline/src/nfl_sideline_etl/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "etl-pipeline/src/nfl_sideline_etl/extract.py": "69f22df5302eb92c78bfce150a3695999f6c7379ba088e05ba54343dd945dc80",
+    "etl-pipeline/src/nfl_sideline_etl/ingestion_runs.py": "ca51ac0350d0f397f710eaf47704c1629db6e7001ebd24470f419fd4ac121b40",
+    "etl-pipeline/src/nfl_sideline_etl/load.py": "6534af51084bff70cab5a70fe67eda7f12f0e21aff3fca1121df10aee4e66b90",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/__init__.py": "0bea94ff4a7387cd20e0f097b01170cb826a5f8e54026c12f962ba901dfcd814",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/__main__.py": "4396755b68bff28956a3068723e490030bf7daebd9e0b2a34487db0141e5b55f",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/core.py": "a93bf8a9cb7b047a4c6eed25cfe2a21c550bf3b47281d2a4ddf42b797d6755f8",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/postgres.py": "f43c9f8720dd453dcdd3ee0d6aef6b14690639ab7c069d9d74737ab34d7e8ca3",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/publication.py": "20657ba892fda3965ef34df93ffc48bdc592797bf2a840968059fe0f61da8e90",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/recovery.py": "79d83765002618384aceb57990bbd3440644e2d608cc14fb02ac70d7878a91a8",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization/relations.py": "fb520c3ff273f30e8395eb03032189bf98cb0cf03a0c56077db484086c11c6ee",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence/__init__.py": "04cc3644a18931b7f622aaec968b495b098190156a6c551e925e26d89964ab33",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence/__main__.py": "2d1d369d665df0d3cf3ccd8f386fdd942b42e3472e841b412f21de7576fda435",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence/archive.py": "1e99fbb37c7c2e020087949e176f2a8d3e87410fee947175061c8578c1364152",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence/connection.py": "73238a8cb6e4a5577f96110d9c0aa3063b077bc38d3d9c30287cbeb247625ded",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence/plan.py": "07a1cc44a41ad40eb7d2c322ebb88057e6e3d68880b09987ee63397006bc81b2",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence/writer.py": "5a17eded3a9c002745f0627124e5f6d339b115131b5c99d8a8d537d7e59fef30",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_pipeline.py": "9219f7e402bbdfd9781fa8ac8ee61240741e5de0a057ba77855b966604f09a45",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/__init__.py": "439767e5f9e3f4181f60e7644647ef3ed6b9ea47174da9490865415f8d1ddf1e",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/__main__.py": "dab327a903a1c32b5f1b7fd285ffd3feef1f2e643a8a4d25c0528ac3541652da",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/artifact.py": "b5c36caee13235283c473c599c278d543e7c3a4c87c27937a408c05a94f8799a",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/inputs.py": "fecd0247f505f80201bc659dfbd5bea1bbdc6924cc40e0f1b242fb054aaffe35",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/population.py": "b8a9949b7464f1275fb1dee05498f782fc1ca30592fb1af2b8dc1681f2d00515",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/provenance.py": "ca6a8cf4a76f9aa59cc16058a49c42ca95a7144e2f7d9dc2da7201d8a64503d5",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/statistics.py": "ea1e57d1acf63097fadb13b5afafb9f140dd1d6e441781fbb7cbfd3fff990f35",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics/validation.py": "9fbcfad1262c562d167cc7b33cc5acd6eafebaf432d19e71c5001bbdc080d4c3",
+    "etl-pipeline/src/nfl_sideline_etl/parquet.py": "b2cc9a03949682321b9f72911f7d450a161524a94a21adfd48ee4bd9a6add381",
+    "etl-pipeline/src/nfl_sideline_etl/seasons.py": "8f83ba7964199df071e22cecbe230478bee03aeaae5eda61ecac236af4dc814c",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/__init__.py": "4d7687a5cb925837918d2c07033b06531253c46b713c8ae3eca3844123046ab6",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/__main__.py": "0e2f4246202621948ad8efe21ed14cbece999949d8c55aaa47ca86826f5eed32",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/core.py": "6120ed2ac3dbbc534a2f2bb432abff65dd186e415d49d71b85955e892a83afa1",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/evidence.py": "c7ba7ef7d230fe3ba7697fb12d439b7d197145b8ef389c0227d9cf2b033393ea",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/identities.py": "86ef2b72c88e0553c5c486926e08a45ec0cb48909d94cc8ad59d1e11dc22952d",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/times.py": "2cfe7d8eaf02db6b1c0f8ffdc515a2e31080c22b1ffd152a455cfd077d65f2c0",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics/validation.py": "4b6523fa71dcbf09742ebd74076e638589161dee207a41ebbb4141a78cb97420",
+    "etl-pipeline/tests/conftest.py": "a084c0eab4bc240d53813e5db5a6b38dda916346ee4dca8bcfc7b301b2943fcd",
+    "etl-pipeline/tests/metrics_pipeline_support.py": "5eea65e597a0868efd957422d07ca0135e1794e9f5ba40ec8de1bf70bb872c88",
+    "etl-pipeline/tests/test_calendar_market.py": "670100b7d614515af476ca7eb85d23828140312ba8f08af858ea479f440cc5e9",
+    "etl-pipeline/tests/test_etl.py": "519542fef2ed5722a75884f1178d20e85da2665c03b321173282d6ce78046d28",
+    "etl-pipeline/tests/test_ingestion_runs.py": "d49e319fdddd5d6ce396d83e92045927f91fd93114c98894c731448d82666340",
+    "etl-pipeline/tests/test_metrics_identities.py": "881a39b6a80e1ab05ac987ee011291e7b2c9c8f65d7bf85731e93845d34eb4ad",
+    "etl-pipeline/tests/test_metrics_materialization.py": "db583875d1e93dad620523febbf4456738fcad35082572a1bc5f96d1d38f38cf",
+    "etl-pipeline/tests/test_metrics_persistence.py": "77853e58a9bd6c6938967b49738032d5f045fa8963a23c5e7ae173fc14bcad00",
+    "etl-pipeline/tests/test_metrics_pipeline.py": "86433646780208c7111d557bf91bae78f0f23f48a6018bed7c8256ef3abb19ba",
+    "etl-pipeline/tests/test_offline_metrics.py": "c8f43f21071f5bc1e01274eb958ba146b4eb3f7dc8140f207d0744a70ee799de",
+    "etl-pipeline/tests/test_run_pipeline.py": "62c83394365e8c5617566560d70594ed4edfb9e8c554dd64955f255229bcce13",
+    "etl-pipeline/tests/test_scores.py": "ad8a76e9fe89750f251add7dc0d59862f5a5633e489f5115c97bdba90150169f",
+    "etl-pipeline/tests/test_temporal_metrics.py": "159ec84360224d3aee8591840f8d02f27f60a6c7d5d474ab28ac741527ff82c3",
+    "etl-pipeline/tests/test_temporal_metrics_correction.py": "ca1fcea800b61aa651367083604b289ab9a0d9380dcc02ce9eafe3c51401a707"
+  },
+  "temporalCounterexamples": {
+    "different_recent_windows": {
+      "bothAggregatesEligible": true,
+      "comparisonEligible": false,
+      "failures": [
+        "MISMATCH_REQUESTED_PERIOD"
+      ],
+      "leftAuditId": "sha256:b9b9176f6eea250650484150f05bf2d6e49a66d943ac43c332bf366bebe52b94",
+      "leftEPA": "1/2",
+      "leftResultId": "sha256:675af976aab000b677098abe0c77068f9ce8aeeb0e1eddc70c266101d897abc2",
+      "leftSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "weeks": [
+            1
+          ]
+        },
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "leftWeeks": [
+        1
+      ],
+      "rightAuditId": "sha256:2d677d33f1e6d67804c5d4c38a9172ed0d01233a78deb7d6686a3f3f5d69ef3d",
+      "rightEPA": "1/2",
+      "rightResultId": "sha256:f9d1c815457ce1830499937c85082fd71d909ce43fc68f21d5357a87220c2411",
+      "rightSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "weeks": [
+            1,
+            2
+          ]
+        },
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "rightWeeks": [
+        1,
+        2
+      ]
+    },
+    "different_week_observations": {
+      "bothAggregatesEligible": true,
+      "comparisonEligible": false,
+      "failures": [
+        "MISMATCH_REQUESTED_PERIOD"
+      ],
+      "leftAuditId": "sha256:2867e96a014407b489c0d059a2b81c1f46cd0d34d14421edd3333a364de7c9f1",
+      "leftEPA": "1/2",
+      "leftResultId": "sha256:19f4ea42a363430a7343b8059e5b09026463e86c4591d240a395e5b923dde043",
+      "leftSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "week": 1
+        },
+        "window": "WEEK_OBSERVATION"
+      },
+      "leftWeeks": [
+        1
+      ],
+      "rightAuditId": "sha256:713623fc521ebe22f7294c962a83a814ca8a8510f8d691626747f2a633113f7b",
+      "rightEPA": "-1/3",
+      "rightResultId": "sha256:8492b659813dc144284ab7d78796790da3c3e1b9f570a78e090e80e9cbd97588",
+      "rightSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "week": 3
+        },
+        "window": "WEEK_OBSERVATION"
+      },
+      "rightWeeks": [
+        3
+      ]
+    },
+    "season_target_open_week": {
+      "afterExpectationFailures": [],
+      "afterExpectedGames": 3,
+      "afterRequestedWeeks": [
+        1,
+        3,
+        4
+      ],
+      "beforeExpectedGames": 3,
+      "changedAuditId": "sha256:16257cdd0697081cd039bda4db6b0a5a40f29a84098258511949da5cafd4a2d3",
+      "changedResultId": "sha256:236698973028aa0864b0b9be0b5f3912c8411fc92ec7b57d1e683af47acbf2d3",
+      "knownEligibleGameIds": [
+        "alpha",
+        "beta",
+        "gap"
+      ],
+      "originalAuditId": "sha256:27ca5dd073f2814fb487f12d9f0fbbcca889be4b4bf51a9a95b2a2eb7ae14742",
+      "originalResultId": "sha256:1d53ddac69b72b9d68a8b5118bf06f8caa6603c1363702c34dcbb827eada8538"
+    }
+  }
+}

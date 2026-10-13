@@ -1,0 +1,65 @@
+[
+  {
+    "instance": {
+      "database": "nfl_e5b2_fa0d17885fc6",
+      "instance_id": "fa0d1788-5fc6-49a4-aa8a-ed113d769476",
+      "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+      "port": 54727,
+      "purpose": "metrics-persistence-e5b2-disposable"
+    },
+    "proof": "/private/tmp/nfl-e5b6-proof-20261012-01.json",
+    "sha256": "57711f8a56912d2b441ac3dac84e337eecb137204df163670ead8044bc31c54d",
+    "shutdown": {
+      "filesPreserved": true,
+      "listenerAbsent": true,
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "portBindReleased": true
+    },
+    "success": true,
+    "testedHead": "0a026c8c91ec4d10633363b8b51bad8c74b684e0",
+    "workspace": "/private/tmp/nfl-e5b6-real-20261012-01"
+  },
+  {
+    "instance": {
+      "database": "nfl_e5b2_86ff5ac1904d",
+      "instance_id": "86ff5ac1-904d-48b7-a7fc-73d11fcd5454",
+      "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+      "port": 55436,
+      "purpose": "metrics-persistence-e5b2-disposable"
+    },
+    "proof": "/private/tmp/nfl-e5b6-proof-20261012-02.json",
+    "sha256": "fc199d930c49842af657d06abf1fc9aabb76a886cd5e8d7550eb596b1608edcd",
+    "shutdown": {
+      "filesPreserved": true,
+      "listenerAbsent": true,
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "portBindReleased": true
+    },
+    "success": true,
+    "testedHead": "2e9c5e1f663ddee83311ccb32117d50e77f639cd",
+    "workspace": "/private/tmp/nfl-e5b6-real-20261012-02"
+  },
+  {
+    "instance": {
+      "database": "nfl_e5b2_a7e3e0df45c6",
+      "instance_id": "a7e3e0df-45c6-4294-810f-9f37a882b21e",
+      "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+      "port": 55514,
+      "purpose": "metrics-persistence-e5b2-disposable"
+    },
+    "proof": "/private/tmp/nfl-e5b6-proof-20261012-03.json",
+    "sha256": "53750b3df324ffd09bbc8142ee0146d8731b7ffbaae119d483c5c7744c03048c",
+    "shutdown": {
+      "filesPreserved": true,
+      "listenerAbsent": true,
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "portBindReleased": true
+    },
+    "success": true,
+    "testedHead": "cd753da49c752f0545d14d0dad30195af03ca44e",
+    "workspace": "/private/tmp/nfl-e5b6-real-20261012-03"
+  }
+]
