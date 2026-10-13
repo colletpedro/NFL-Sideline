@@ -1,0 +1,102 @@
+{
+  "acceptedComponentsUnchanged": true,
+  "acquired": false,
+  "base": "f8a258b64116aa7f67f4d4d6253d3f00dc91f5e2",
+  "branch": "codex/metrics-backfill-e5b6",
+  "candidateForOrchestratorAcceptance": true,
+  "changedFiles": [
+    "docs/plans/metrics/e5b-6/PROTOCOL.md",
+    "docs/plans/metrics/e5b-6/README.md",
+    "docs/plans/metrics/e5b-6/audit.py",
+    "docs/plans/metrics/e5b-6/backfill.py",
+    "docs/plans/metrics/e5b-6/database-proof.json",
+    "docs/plans/metrics/e5b-6/freeze.py",
+    "docs/plans/metrics/e5b-6/instance.py",
+    "docs/plans/metrics/e5b-6/inventory-final.json",
+    "docs/plans/metrics/e5b-6/inventory.json",
+    "docs/plans/metrics/e5b-6/java-build.txt",
+    "docs/plans/metrics/e5b-6/local-attempts.json",
+    "docs/plans/metrics/e5b-6/offline-verification.json",
+    "docs/plans/metrics/e5b-6/postgres-regressions.json",
+    "docs/plans/metrics/e5b-6/selected-evidence.json",
+    "docs/plans/metrics/e5b-6/supplement.py",
+    "docs/plans/metrics/e5b-6/test_audit.py",
+    "docs/plans/metrics/e5b-6/verify.py"
+  ],
+  "codeVerifiedAt": "cd753da49c752f0545d14d0dad30195af03ca44e",
+  "deliveryVersion": "metrics-backfill-delivery-v1",
+  "diffCheckAgainstExactBase": "PASSED_INCLUDING_COMMITTED_FILES",
+  "evidenceCommit": "d48b5ddf51f282a58907c104f8ae88026a37da65",
+  "evidenceSha256": {
+    "docs/plans/metrics/e5b-6/PROTOCOL.md": "d16863afb4385af7b3876e974514af0b3db0c2a709d8096c0adf3d618f2dc30e",
+    "docs/plans/metrics/e5b-6/README.md": "9f30a97212d1fb9cc4fe71d571309c5c2a429b1feaccfe7187d6630d33a5ea30",
+    "docs/plans/metrics/e5b-6/audit.py": "3ada928556bdd871e54421a926110f7094ec71df811c5d11b05d334df9056511",
+    "docs/plans/metrics/e5b-6/backfill.py": "9454687b801fc2d3d92721bfead399658faf351f51665e54f273de1ddc074404",
+    "docs/plans/metrics/e5b-6/database-proof.json": "53750b3df324ffd09bbc8142ee0146d8731b7ffbaae119d483c5c7744c03048c",
+    "docs/plans/metrics/e5b-6/freeze.py": "acdfa37461dc9b45b2dad3144cbfd85eacefaa151f9385bf1714709fa0de592e",
+    "docs/plans/metrics/e5b-6/instance.py": "0eaa901bc7b5256e183960fbabf8bbd6549f019ef63e6a83e5c6663e47a9cff6",
+    "docs/plans/metrics/e5b-6/inventory-final.json": "861e3df478e6b380613f883f3da33e48059d95a66590029e918c3a070ef8d6e0",
+    "docs/plans/metrics/e5b-6/inventory.json": "e0feebc3ed3a85133638f991f0a9595e3c0e0b824c076b8ead3e01cdc04e6f5f",
+    "docs/plans/metrics/e5b-6/java-build.txt": "e53c8849aafb74d328f56df86405cd0b4cc1514c8d40150c9cd02cf97b6ee7e0",
+    "docs/plans/metrics/e5b-6/local-attempts.json": "afcf11fd9bfe9aa3e0834e4eba0948b2e1854ee0037565a5e701cd092601d182",
+    "docs/plans/metrics/e5b-6/offline-verification.json": "7f3f04be733cf39ab62bb6da2a95e48eeda50614587aa6041e61a5a3557972c2",
+    "docs/plans/metrics/e5b-6/postgres-regressions.json": "21030beb4bc5c44ebc0ac16b6f39da685c49c2a7fb41d13452d84e2611406dfd",
+    "docs/plans/metrics/e5b-6/selected-evidence.json": "71c21b9a0fc0ea81957a3de33f13f40dbc25d40133010a19ac7586b47eff5554",
+    "docs/plans/metrics/e5b-6/supplement.py": "33f1e13bc2ba5c5d662f211a9cbd0fd706035e8f76966d3dcb6e54b5170c89bc",
+    "docs/plans/metrics/e5b-6/test_audit.py": "bcac57e7dcce638838aefcf338e4436ac5a4bfbc9718e23477531a7cb357ccca",
+    "docs/plans/metrics/e5b-6/verify.py": "7fdb3d1b16fa37d128f4edc928987325100321752a35c52b21bcce7ce5494cc6"
+  },
+  "localOnlyArtifacts": {
+    "database": "/private/tmp/nfl-e5b6-instance-20261012-03",
+    "noHiddenOfflineTestDependency": true,
+    "workspace": "/private/tmp/nfl-e5b6-real-20261012-03"
+  },
+  "merged": false,
+  "published": false,
+  "pushed": false,
+  "scope": "ONLY docs/plans/metrics/e5b-6",
+  "shutdown": [
+    {
+      "filesPreserved": true,
+      "instance_id": "fa0d1788-5fc6-49a4-aa8a-ed113d769476",
+      "listenerAbsent": true,
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 54727,
+      "portBindReleased": true,
+      "root": "/private/tmp/nfl-e5b6-instance-20261012-01"
+    },
+    {
+      "filesPreserved": true,
+      "instance_id": "86ff5ac1-904d-48b7-a7fc-73d11fcd5454",
+      "listenerAbsent": true,
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 55436,
+      "portBindReleased": true,
+      "root": "/private/tmp/nfl-e5b6-instance-20261012-02"
+    },
+    {
+      "filesPreserved": true,
+      "instance_id": "a7e3e0df-45c6-4294-810f-9f37a882b21e",
+      "listenerAbsent": true,
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 55514,
+      "portBindReleased": true,
+      "root": "/private/tmp/nfl-e5b6-instance-20261012-03"
+    },
+    {
+      "filesPreserved": true,
+      "instance_id": "930f4f8e-eefc-4ed7-818f-1b9954bbf278",
+      "listenerAbsent": true,
+      "pgCtlStatus": 3,
+      "pidAbsent": true,
+      "port": 54777,
+      "portBindReleased": true,
+      "root": "/private/tmp/nfl-e5b6-regressions-20261012-01"
+    }
+  ],
+  "sourceHashesMatchTestedCommit": true,
+  "supabaseFullAndAdvisors": "PENDING"
+}
