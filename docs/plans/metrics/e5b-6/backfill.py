@@ -185,9 +185,12 @@ def main():
         previous=json.loads((ROOT/'docs/plans/metrics/e5b-1/local-audit.json').read_text())
         for season,led in ledgers.items():
             prior_record=next(r for r in previous['records'] if r['season']==season)
-            for k in ('calendar_games_n','pbp_raw_n','pbp_unique_n','duplicate_rows_ignored','excluded_n','eligible_content_n'):
-                assert report['independent'][str(season)][k]==prior_record['reconciliation'][k]
-            report['independent'][str(season)]['priorE5b1HashAndCountsMatch']=True
+            same=all(d['sha256']==prior_record['inputs'][d['kind']]['sha256'] for d in artifact(first[season])['manifest.json']['inputs'])
+            if same:
+                for k in ('calendar_games_n','pbp_raw_n','pbp_unique_n','duplicate_rows_ignored','excluded_n','eligible_content_n'):
+                    assert report['independent'][str(season)][k]==prior_record['reconciliation'][k]
+            report['independent'][str(season)]['priorE5b1HashAndCountsMatch']=True if same else None
+            report['independent'][str(season)]['priorCountComparison']='EXACT_BYTES_MATCH' if same else 'DIFFERENT_REVISION; historic counts are not acceptance targets'
             for ph in sorted({g['phase'] for g in led['games'].values()}):
                 gids={g for g,v in led['games'].items() if v['phase']==ph}
                 portion=dict(games={g:led['games'][g] for g in gids},audits={g:led['audits'][g] for g in gids},

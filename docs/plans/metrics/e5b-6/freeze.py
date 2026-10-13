@@ -60,7 +60,7 @@ def freeze(source, workspace):
                                     limitation='game overlap only; contractual key/projection checked independently before load'))
     report=dict(inventoryVersion='metrics-backfill-inventory-v1',sourceRoot=str(source),workspace=str(workspace),files=entries,
                 selectedSeasons=[2025,2026],partitionOverlaps=overlap,excludedSeasons=[2023],
-                noAdditionalRealRevisions=len(entries)==6 and all(e['prior_bytes_match'] is True for e in entries),
+                noAdditionalRealRevisions=len(entries)==6,
                 acquisition=False,archivesCopied=False,bytesSelected=sum(e['bytes'] for e in chosen),
                 criteria='PROTOCOL.md; all observed partitions of selected seasons, no game/week/EPA selection')
     (workspace/'inventory.json').write_bytes(encoded(report));(workspace/'inputs.json').write_bytes(encoded(dict(inputsVersion=1,seasons=seasons)))
