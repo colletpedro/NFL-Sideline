@@ -81,6 +81,14 @@ Incorporada `c5bfa75` à branch local `codex/metrics-integration-e5b6`, sem alte
 
 Próxima preparação: política de proveniência/completude e contrato de consumo explícito de observações auditáveis/subsets/UNKNOWN, antes de anunciar comparações certificadas. Coleta prospectiva/estados de jogo e atualização de 2026 exigem entrega própria. Supabase completo/advisors, E4 humano, BASIC/FULL, defeitos legados e rollout público permanecem pendentes.
 
+## Contrato de consumo E5c-1 — aceito em 13/10/2026
+
+Integrado localmente em `codex/metrics-integration-e5c1`, sobre a candidata `4c3ea453312e8696a38cc2fd0206d7e0a8edb350`, com correção `0451778905076b96d6d48f8ad7c29b4c982fb6a3`. O contrato interno `metrics-auditable-observation-v1` separa integridade, cobertura, completude, compatibilidade e conhecimento temporal. Observações arquivadas reconciliadas podem ser exibidas com UNKNOWN; volume/frequência admitem comparação amostral explícita, enquanto EPA/SR exigem os requisitos de período/completude/cobertura/modelo. Elegibilidade pregame não valida tese editorial.
+
+A revisão corrigiu três testemunhas finitas: conflito básico de compatibilidade, cortes diferentes e alvo presente entre os membros. Passaram **17 testes** (12 originais e cinco de revisão), schema, 34 observações, 17 cenários/476 decisões originais e 12 inválidos. Contraprovas antigas aceitam permissões indevidas; a correção as recusa e preserva números/linhagem. Schema e fixtures originais permanecem idênticos. [Aceite, comandos e limites](../contracts/metrics/consumption-e5c1-v1/REVIEW.md).
+
+**Somente contrato e exemplos sintéticos:** não há projeção real, consumidor, seleção PIT nova ou coleta prospectiva. Próximo passo: projetar escolhas nominais aceitas em documentos auditáveis e bundle de linhagem, antes de adaptar a apresentação no laboratório local. Coleta prospectiva tem entrega própria; os bloqueios de proveniência da E5b-6 continuam. Nenhuma alteração de ETL/SQL/Java/frontend/snapshots, banco, aquisição, modelos, publicação, merge em main, push ou deploy.
+
 ## Política de arquivos
 
 - **Fontes e testes:** `core-api/src`, `web-ui/src` e `scripts/` são versionados. Os scripts de avaliação e seus testes usam as fixtures abaixo sem depender de saídas ignoradas.

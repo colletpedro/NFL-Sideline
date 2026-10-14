@@ -1,5 +1,10 @@
 # E5c-1 — consumo de observações e política de evidências v1
 
+**Aceita após revisão local.** [Aceite e correções do orquestrador](REVIEW.md);
+gate completo corrigido reproduzível no commit `0451778905076b96d6d48f8ad7c29b4c982fb6a3`,
+antes do registro documental de estado. O relato abaixo preserva o contexto da
+candidata original; a suíte corrigida tem 17 testes.
+
 **Candidata ao aceite do orquestrador.** Base exata
 `fed166d1682a818b0cca8dd11325ff23ea672c07`, branch
 `codex/metrics-consumption-e5c1`, worktree inicial limpa. O checkout original
