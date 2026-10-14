@@ -14,6 +14,11 @@ ARCHIVED_DECLARED_PERIOD a assinatura é season/phase/origin/kind/weeks, sem
 team/gameIds/actualWeeks; se houver modo/corte, ambos precisam coincidir. Não
 comparar semanas 1 versus 3, REG versus POST ou períodos “quase iguais”. Diferentes
 jogos dos times são aceitáveis sob o mesmo período, com listas explícitas.
+O estado básico de compatibility precisa ser KNOWN em ambos; esse estado cobre
+definição/população/período, enquanto epaModel qualifica separadamente a família
+EPA/SR. UNKNOWN ou CONFLICT básico recusa B mesmo que as strings coincidam.
+Se cutoff estiver declarado, deve coincidir nos dois documentos (inclusive
+null versus corte declarado); a igualdade do período semanal não o substitui.
 
 **S-V** (volume em amostras): B + manifesto exato de seleção das amostras e
 denominadores/IDs disponíveis, sem filtro desconhecido que mude a população entre
@@ -44,6 +49,10 @@ para eventos utilizados, disponibilidade/ingestão e todas as evidências/depend
 fechadas nos modos aplicáveis preservado. Política/origens explícitas e nenhum
 conflito pendente. T é elegibilidade dos **dados** para futura regra, não autorização
 para conclusão. UNKNOWN nunca passa como true. Não há limiar estatístico.
+Na testemunha sintética PREGAME_CUTOFF, corte/alvo/kickoff precisam estar
+presentes, ambos os lados referem o mesmo alvo/kickoff e o alvo não pode constar
+em nenhum membro, inclusive ABSENT. Cortes distintos já recusam B. Essa
+testemunha não executa seleção PIT nem comprova as dependências de PIT_CHAIN.
 
 ## Matriz de operações visuais (todos os 22 IDs do catálogo)
 

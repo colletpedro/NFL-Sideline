@@ -146,7 +146,20 @@ def check_case(case, documents):
              {k:v for k,v in a["subject"].items() if k != "team"} ==
              {k:v for k,v in b["subject"].items() if k != "team"} and
              {k:v for k,v in a["request"].items() if k not in {"calendarSourceSetId", "selectionManifestId"}} ==
-             {k:v for k,v in b["request"].items() if k not in {"calendarSourceSetId", "selectionManifestId"}})
+             {k:v for k,v in b["request"].items() if k not in {"calendarSourceSetId", "selectionManifestId"}} and
+             all(d["guarantees"]["compatibility"]["state"] == "KNOWN" for d in (a, b)) and
+             a["guarantees"]["temporal"]["cutoff"] == b["guarantees"]["temporal"]["cutoff"])
+    # Finite pregame witnesses also check the target and request boundaries;
+    # KNOWN_AT_CUTOFF alone is not a witness for exclusion of the target.
+    temporal = [d["guarantees"]["temporal"] for d in (a, b)]
+    pregame_request = (
+        all(x["cutoff"] is not None and x["targetKickoff"] is not None
+            and x["targetGameId"] is not None
+            and x["cutoff"] <= x["targetKickoff"] for x in temporal)
+        and temporal[0]["targetGameId"] == temporal[1]["targetGameId"]
+        and temporal[0]["targetKickoff"] == temporal[1]["targetKickoff"]
+        and all(d["guarantees"]["temporal"]["targetGameId"] not in
+                {m["gameId"] for m in d["members"]} for d in (a, b)))
     actual = {
         "DISPLAY": all(d["guarantees"]["integrity"]["state"] == "RECONCILED" and d["totals"] is not None for d in (a,b)),
         "BASIC_MATCH": basic,
@@ -157,7 +170,7 @@ def check_case(case, documents):
         "FULL_PERIOD": all(d["guarantees"]["coverage"]["state"] == "KNOWN" and d["guarantees"]["completeness"]["state"] == "COMPLETE" for d in (a,b)),
         "MODEL_MATCH": all(d["guarantees"]["compatibility"]["epaModel"]["state"] == "KNOWN" for d in (a,b)) and a["guarantees"]["compatibility"]["epaModel"] == b["guarantees"]["compatibility"]["epaModel"],
         "PIT_CHAIN": all(d["guarantees"]["temporal"]["state"] == "KNOWN_AT_CUTOFF" for d in (a,b)),
-        "PREGAME_CUTOFF": all(d["guarantees"]["temporal"]["targetKickoff"] is not None and d["guarantees"]["temporal"]["cutoff"] <= d["guarantees"]["temporal"]["targetKickoff"] for d in (a,b))}
+        "PREGAME_CUTOFF": pregame_request}
     require(w == {k for k,v in actual.items() if v}, "WITNESS_MISMATCH: " + case["id"])
     base = {"DISPLAY", "BASIC_MATCH", "SAMPLE_SELECTION"}
     requirements = {"volume": base, "frequency": base | {"FREQUENCY_DENOMINATOR"},

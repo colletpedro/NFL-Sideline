@@ -1,0 +1,29 @@
+{
+  "scope": "FINITE_SYNTHETIC_WITNESSES_NOT_RUNTIME_PIT",
+  "counterexamples": [
+    {
+      "case": "compatibility_conflict",
+      "candidate": "4c3ea453312e8696a38cc2fd0206d7e0a8edb350",
+      "oldEPAAlign": "ALLOW",
+      "oldPregameEPA": "REFUSE",
+      "before": "ACCEPTED_OLD_PERMISSIONS",
+      "after": "REFUSED_OLD_PERMISSIONS: WITNESS_MISMATCH: descriptive_not_pregame"
+    },
+    {
+      "case": "different_cutoffs",
+      "candidate": "4c3ea453312e8696a38cc2fd0206d7e0a8edb350",
+      "oldEPAAlign": "ALLOW",
+      "oldPregameEPA": "ALLOW",
+      "before": "ACCEPTED_OLD_PERMISSIONS",
+      "after": "REFUSED_OLD_PERMISSIONS: WITNESS_MISMATCH: pregame_data_only"
+    },
+    {
+      "case": "target_included",
+      "candidate": "4c3ea453312e8696a38cc2fd0206d7e0a8edb350",
+      "oldEPAAlign": "ALLOW",
+      "oldPregameEPA": "ALLOW",
+      "before": "ACCEPTED_OLD_PERMISSIONS",
+      "after": "REFUSED_OLD_PERMISSIONS: WITNESS_MISMATCH: pregame_data_only"
+    }
+  ]
+}

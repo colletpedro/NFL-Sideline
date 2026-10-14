@@ -1,0 +1,190 @@
+{
+  "candidate": "4c3ea453312e8696a38cc2fd0206d7e0a8edb350",
+  "base": "fed166d1682a818b0cca8dd11325ff23ea672c07",
+  "gate": {
+    "schema": "Draft 2020-12",
+    "observations": 34,
+    "scenarios": 17,
+    "originalDecisions": 476,
+    "invalidCases": 12,
+    "originalTests": 12,
+    "reviewTests": 5,
+    "totalTests": 17,
+    "status": "PASS"
+  },
+  "preservedCandidateFiles": [
+    {
+      "path": "contracts/metrics/consumption-e5c1-v1/examples.json",
+      "sha256": "94654536696e0dadbd1232025e50f3b3bbfb7bdf19037ccce3ec26262f1f97cd",
+      "candidateBytesPreserved": true
+    },
+    {
+      "path": "contracts/metrics/consumption-e5c1-v1/observation.schema.json",
+      "sha256": "85928f26c74cad5873479b781f15717376540aa69b8073578565257d17dc0100",
+      "candidateBytesPreserved": true
+    },
+    {
+      "path": "contracts/metrics/consumption-e5c1-v1/test_contract.py",
+      "sha256": "846c004eb9bdc3d44aa0054974f90f6e9967eb015ef88cdcb82ea8e082273494",
+      "candidateBytesPreserved": true
+    },
+    {
+      "path": "contracts/metrics/consumption-e5c1-v1/verification.json",
+      "sha256": "57bcfc3357557ce1ccb4fcc5d3bca4c9b2ffd3e908b5ce1e40ac18c3256cf303",
+      "candidateBytesPreserved": true
+    }
+  ],
+  "protectedTrackedPathsChanged": [],
+  "historicalUntrackedFiles": [
+    {
+      "path": "Handoff.md",
+      "sha256": "b9622fbd1d5c9fa0fc345abc014b873bfc645762aab36d2668825ff7a5c40e64"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/user-prompt.txt",
+      "sha256": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/user-prompt.txt",
+      "sha256": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/user-prompt.txt",
+      "sha256": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/user-prompt.txt",
+      "sha256": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/diagnose_both_keys.py",
+      "sha256": "6cc1cd4b24bc318db90e014c081efebbcbf1e77c0730636cd8ac5f064bf5d4e5"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/diagnose_prod_key.py",
+      "sha256": "47eeb3356bf4e80749e5af3b78322ff73a883453ff201a2c5a29aad741d9742c"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/ClaimRenderer.baseline.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/PromptCatalog.baseline.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/EvaluationApplication.java.txt",
+      "sha256": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiClient.java.txt",
+      "sha256": "6b546badebbfeef7b0a177151af9a8ca7f27c79bdb9762cecb40b950dbaaecfe"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GenerationFailure.java.txt",
+      "sha256": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/EvaluationApplication.java.txt",
+      "sha256": "db0558bfc643c7f851ef7d6f5a2efbe0a8f12e74659a48a4326298c316494247"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/EvaluationApplication.java.txt",
+      "sha256": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GeminiClient.java.txt",
+      "sha256": "73889cceac497594f504594fc1242379b777ccb67dbcf9f2cb534687133b77d5"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GenerationFailure.java.txt",
+      "sha256": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/EvaluationApplication.java.txt",
+      "sha256": "2c394dd66f345051a3177d0d3059b2adc06b825d4aab587985746315f0a9f0d8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/run_authorized.py",
+      "sha256": "3cfe30c9048b7a4956ec0af561690a864e86c470340373834b439153324867a3"
+    }
+  ],
+  "limits": [
+    "synthetic premises only",
+    "no runtime PIT selection",
+    "no consumer",
+    "no database or external acquisition"
+  ]
+}
