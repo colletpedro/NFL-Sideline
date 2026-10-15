@@ -1,0 +1,73 @@
+{
+  "derivedAt": "2026-10-15T12:00:00Z",
+  "presentation": {
+    "epaDecimals": 3,
+    "ratePercentDecimals": 1,
+    "rounding": "HALF_UP"
+  },
+  "requestVersion": "metrics-observation-request-v1",
+  "requests": [
+    {
+      "associations": [
+        {
+          "archiveId": "05050505-5555-4555-8555-555555555555",
+          "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+          "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+          "coverageRevisionId": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+          "gameId": "synthetic-1",
+          "temporalRevisionId": "sha256:b2e15b6677a87769c744d0bd3ac032d44574d5c961bd37223164bf78e6948264"
+        },
+        {
+          "archiveId": "05050505-5555-4555-8555-555555555555",
+          "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+          "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+          "coverageRevisionId": "sha256:c29b617abac1bcf1716334c14d3ed81775db7660836140fd3af3ba2ee727641d",
+          "gameId": "synthetic-2",
+          "temporalRevisionId": null
+        },
+        {
+          "archiveId": "05050505-5555-4555-8555-555555555555",
+          "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+          "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+          "coverageRevisionId": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+          "gameId": "synthetic-3",
+          "temporalRevisionId": "sha256:0e116ee758c66223a1d03871560419159afd894203dc5fd2165f29f2eb7f1db6"
+        },
+        {
+          "archiveId": "05050505-5555-4555-8555-555555555555",
+          "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+          "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+          "coverageRevisionId": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+          "gameId": "synthetic-4",
+          "temporalRevisionId": "sha256:bbdf9eaafb0e0d353817caa3a2c48725710011cf2aba68981a973e995c36e088"
+        }
+      ],
+      "calendarRevisionId": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "calendarSourceSetId": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+      "foundations": [
+        "general",
+        "classified_pass",
+        "classified_rush"
+      ],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "roles": [
+        "off",
+        "def"
+      ],
+      "season": 2026,
+      "teams": [
+        "AAA"
+      ],
+      "weeks": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "source": {
+    "materializationId": "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff",
+    "temporalInputId": "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+  }
+}

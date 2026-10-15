@@ -1,0 +1,9 @@
+{
+  "files": {
+    "input.json": "6b76847e8437fbb47728c0aa61828cfc87ed447daa89898fd97c21cd32a25c1d",
+    "lineage.json": "9678e862f867e1b04c497544d45b93a22ea17cd095492c2dcf180404742823e8"
+  },
+  "materializationVersion": "metrics-materialization-v2",
+  "materialization_id": "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff",
+  "temporalInputId": "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+}

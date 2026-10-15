@@ -1,0 +1,1 @@
+Fixture totalmente SYNTHETIC, com bytes e declarações sintéticos embutidos. Não é proveniência histórica real. Regeneração: docs/plans/metrics/e5c-2/build_fixture.py e request nominal; nenhum path absoluto da fixture é dependência física.

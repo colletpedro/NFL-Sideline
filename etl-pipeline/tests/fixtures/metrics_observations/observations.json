@@ -1,0 +1,2020 @@
+[
+  {
+    "definition": {
+      "adapterVersion": "1.0.0",
+      "definitionVersion": "1.0.0",
+      "populationVersion": "classified-scrimmage-v1"
+    },
+    "derivationVersion": "metrics-observation-projection-candidate-1",
+    "derivedAt": "2026-10-15T12:00:00Z",
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "evidenceIds": [
+          "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+        ],
+        "reasonCodes": [],
+        "sourceModels": [
+          {
+            "evidenceIds": [],
+            "modelId": null,
+            "sourceRevisionId": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+            "state": "UNKNOWN"
+          }
+        ],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "evidenceIds": [
+          "sha256:140c38e5736dc6b438fc54a238b45b8f758ea653a49d642e269328ff96f7798c",
+          "sha256:db1352b5bb0c8a82b8b89b9267ee5c25f1c72a47e4240cecfe6cc12b0919bde7",
+          "sha256:e70b084cd24428d1842688d69613fc679fdc5976901dcaa4577d690413ddebd5"
+        ],
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": {
+          "denominator": 4,
+          "numerator": "3"
+        },
+        "evidenceIds": [
+          "sha256:15a146a278f27cc50c1264a2a10fb5e700239c2a6a87efcce4e881f622656bcb",
+          "sha256:397aadc8ed3ac824c0af9f9e14e73630d29c85efd0314cb85a2123d0f8da78c0",
+          "sha256:60dc46435ba418bc7605d834013c26e1b710d55226934478a47f8133f313088c",
+          "sha256:f19a00a94f8999fec11d50231ed8861d2c7c3c31ed9cb53c895380075007d566"
+        ],
+        "expectedCount": 4,
+        "expectedGameIds": [
+          "synthetic-1",
+          "synthetic-2",
+          "synthetic-3",
+          "synthetic-4"
+        ],
+        "reasonCodes": [
+          "INCOMPLETE_SOURCE_COVERAGE"
+        ],
+        "state": "PARTIAL"
+      },
+      "integrity": {
+        "evidenceIds": [
+          "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff"
+        ],
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "cutoff": null,
+        "evidenceIds": [],
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN",
+        "targetGameId": null,
+        "targetKickoff": null
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INCOMPLETE_SOURCE_COVERAGE",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_EPA_OBSERVATIONS",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_SOURCE_OBSERVATION",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-4"
+      }
+    ],
+    "members": [
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+        "gameId": "synthetic-1",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 1,
+          "epaMissingN": 1,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 3,
+          "successN": 0,
+          "unknownFilterFlagsN": 1
+        },
+        "week": 1
+      },
+      {
+        "archiveReceiptIds": [],
+        "artifactId": null,
+        "calculationId": null,
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:c29b617abac1bcf1716334c14d3ed81775db7660836140fd3af3ba2ee727641d",
+        "gameId": "synthetic-2",
+        "round": "REG",
+        "sourceRevisionIds": [],
+        "sourceState": "ABSENT",
+        "statistics": null,
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+        "gameId": "synthetic-3",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "COMPLETE",
+        "coverageRevisionId": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+        "gameId": "synthetic-4",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 3
+      }
+    ],
+    "observationId": "sha256:6293082aae6b99ef1c71bf52dc1046c4cf992f5d90934360c71b083340cab3fe",
+    "observationVersion": "metrics-auditable-observation-v1",
+    "observed": {
+      "actualWeeks": [
+        1,
+        2,
+        3
+      ],
+      "includedGameIds": [
+        "synthetic-1",
+        "synthetic-3",
+        "synthetic-4"
+      ],
+      "metricUsedGameIds": {
+        "epa": [],
+        "frequency": [
+          "synthetic-1"
+        ],
+        "successRate": [],
+        "volume": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-4"
+        ]
+      }
+    },
+    "originPath": "OFFLINE_PERSISTED_ACCEPTED",
+    "policyVersion": "metrics-consumption-policy-v1",
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "calendarSourceSetId": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1,
+          2,
+          3
+        ]
+      },
+      "phase": "REG",
+      "season": 2026,
+      "selectionManifestId": "sha256:71353aa793f68d6b8b10e8bab3aff4caba2b2b0eae473a3a988c9bc0c1133627"
+    },
+    "subject": {
+      "foundation": "classified_rush",
+      "role": "off",
+      "team": "AAA"
+    },
+    "totals": {
+      "eligibleN": 1,
+      "epaMissingN": 1,
+      "epaN": 0,
+      "epaNonfiniteN": 0,
+      "epaSum": null,
+      "generalEligibleN": 3,
+      "successN": 0,
+      "unknownFilterFlagsN": 1
+    },
+    "values": {
+      "epa": null,
+      "frequency": {
+        "denominator": 3,
+        "numerator": "1"
+      },
+      "successRate": null,
+      "volume": {
+        "denominator": 1,
+        "numerator": "1"
+      }
+    }
+  },
+  {
+    "definition": {
+      "adapterVersion": "1.0.0",
+      "definitionVersion": "1.0.0",
+      "populationVersion": "classified-scrimmage-v1"
+    },
+    "derivationVersion": "metrics-observation-projection-candidate-1",
+    "derivedAt": "2026-10-15T12:00:00Z",
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "evidenceIds": [
+          "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+        ],
+        "reasonCodes": [],
+        "sourceModels": [
+          {
+            "evidenceIds": [],
+            "modelId": null,
+            "sourceRevisionId": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+            "state": "UNKNOWN"
+          }
+        ],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "evidenceIds": [
+          "sha256:140c38e5736dc6b438fc54a238b45b8f758ea653a49d642e269328ff96f7798c",
+          "sha256:db1352b5bb0c8a82b8b89b9267ee5c25f1c72a47e4240cecfe6cc12b0919bde7",
+          "sha256:e70b084cd24428d1842688d69613fc679fdc5976901dcaa4577d690413ddebd5"
+        ],
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": {
+          "denominator": 4,
+          "numerator": "3"
+        },
+        "evidenceIds": [
+          "sha256:15a146a278f27cc50c1264a2a10fb5e700239c2a6a87efcce4e881f622656bcb",
+          "sha256:397aadc8ed3ac824c0af9f9e14e73630d29c85efd0314cb85a2123d0f8da78c0",
+          "sha256:60dc46435ba418bc7605d834013c26e1b710d55226934478a47f8133f313088c",
+          "sha256:f19a00a94f8999fec11d50231ed8861d2c7c3c31ed9cb53c895380075007d566"
+        ],
+        "expectedCount": 4,
+        "expectedGameIds": [
+          "synthetic-1",
+          "synthetic-2",
+          "synthetic-3",
+          "synthetic-4"
+        ],
+        "reasonCodes": [
+          "INCOMPLETE_SOURCE_COVERAGE"
+        ],
+        "state": "PARTIAL"
+      },
+      "integrity": {
+        "evidenceIds": [
+          "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff"
+        ],
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "cutoff": null,
+        "evidenceIds": [],
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN",
+        "targetGameId": null,
+        "targetKickoff": null
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INCOMPLETE_SOURCE_COVERAGE",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_SOURCE_OBSERVATION",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-4"
+      }
+    ],
+    "members": [
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+        "gameId": "synthetic-1",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 1,
+          "epaMissingN": 0,
+          "epaN": 1,
+          "epaNonfiniteN": 0,
+          "epaSum": "0.1",
+          "generalEligibleN": 1,
+          "successN": 1,
+          "unknownFilterFlagsN": 1
+        },
+        "week": 1
+      },
+      {
+        "archiveReceiptIds": [],
+        "artifactId": null,
+        "calculationId": null,
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:c29b617abac1bcf1716334c14d3ed81775db7660836140fd3af3ba2ee727641d",
+        "gameId": "synthetic-2",
+        "round": "REG",
+        "sourceRevisionIds": [],
+        "sourceState": "ABSENT",
+        "statistics": null,
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+        "gameId": "synthetic-3",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "COMPLETE",
+        "coverageRevisionId": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+        "gameId": "synthetic-4",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 3
+      }
+    ],
+    "observationId": "sha256:71d49a7622cbe09114522d22f42248cdc3453768cc044ad6166d787c851d9485",
+    "observationVersion": "metrics-auditable-observation-v1",
+    "observed": {
+      "actualWeeks": [
+        1,
+        2,
+        3
+      ],
+      "includedGameIds": [
+        "synthetic-1",
+        "synthetic-3",
+        "synthetic-4"
+      ],
+      "metricUsedGameIds": {
+        "epa": [
+          "synthetic-1"
+        ],
+        "frequency": [],
+        "successRate": [
+          "synthetic-1"
+        ],
+        "volume": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-4"
+        ]
+      }
+    },
+    "originPath": "OFFLINE_PERSISTED_ACCEPTED",
+    "policyVersion": "metrics-consumption-policy-v1",
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "calendarSourceSetId": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1,
+          2,
+          3
+        ]
+      },
+      "phase": "REG",
+      "season": 2026,
+      "selectionManifestId": "sha256:71353aa793f68d6b8b10e8bab3aff4caba2b2b0eae473a3a988c9bc0c1133627"
+    },
+    "subject": {
+      "foundation": "general",
+      "role": "def",
+      "team": "AAA"
+    },
+    "totals": {
+      "eligibleN": 1,
+      "epaMissingN": 0,
+      "epaN": 1,
+      "epaNonfiniteN": 0,
+      "epaSum": "0.1",
+      "generalEligibleN": 1,
+      "successN": 1,
+      "unknownFilterFlagsN": 1
+    },
+    "values": {
+      "epa": {
+        "denominator": 1,
+        "numerator": "0.1"
+      },
+      "frequency": null,
+      "successRate": {
+        "denominator": 1,
+        "numerator": "1"
+      },
+      "volume": {
+        "denominator": 1,
+        "numerator": "1"
+      }
+    }
+  },
+  {
+    "definition": {
+      "adapterVersion": "1.0.0",
+      "definitionVersion": "1.0.0",
+      "populationVersion": "classified-scrimmage-v1"
+    },
+    "derivationVersion": "metrics-observation-projection-candidate-1",
+    "derivedAt": "2026-10-15T12:00:00Z",
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "evidenceIds": [
+          "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+        ],
+        "reasonCodes": [],
+        "sourceModels": [
+          {
+            "evidenceIds": [],
+            "modelId": null,
+            "sourceRevisionId": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+            "state": "UNKNOWN"
+          }
+        ],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "evidenceIds": [
+          "sha256:140c38e5736dc6b438fc54a238b45b8f758ea653a49d642e269328ff96f7798c",
+          "sha256:db1352b5bb0c8a82b8b89b9267ee5c25f1c72a47e4240cecfe6cc12b0919bde7",
+          "sha256:e70b084cd24428d1842688d69613fc679fdc5976901dcaa4577d690413ddebd5"
+        ],
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": {
+          "denominator": 4,
+          "numerator": "3"
+        },
+        "evidenceIds": [
+          "sha256:15a146a278f27cc50c1264a2a10fb5e700239c2a6a87efcce4e881f622656bcb",
+          "sha256:397aadc8ed3ac824c0af9f9e14e73630d29c85efd0314cb85a2123d0f8da78c0",
+          "sha256:60dc46435ba418bc7605d834013c26e1b710d55226934478a47f8133f313088c",
+          "sha256:f19a00a94f8999fec11d50231ed8861d2c7c3c31ed9cb53c895380075007d566"
+        ],
+        "expectedCount": 4,
+        "expectedGameIds": [
+          "synthetic-1",
+          "synthetic-2",
+          "synthetic-3",
+          "synthetic-4"
+        ],
+        "reasonCodes": [
+          "INCOMPLETE_SOURCE_COVERAGE"
+        ],
+        "state": "PARTIAL"
+      },
+      "integrity": {
+        "evidenceIds": [
+          "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff"
+        ],
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "cutoff": null,
+        "evidenceIds": [],
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN",
+        "targetGameId": null,
+        "targetKickoff": null
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INCOMPLETE_SOURCE_COVERAGE",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_EPA_OBSERVATIONS",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_SOURCE_OBSERVATION",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-4"
+      }
+    ],
+    "members": [
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+        "gameId": "synthetic-1",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 1,
+          "successN": 0,
+          "unknownFilterFlagsN": 1
+        },
+        "week": 1
+      },
+      {
+        "archiveReceiptIds": [],
+        "artifactId": null,
+        "calculationId": null,
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:c29b617abac1bcf1716334c14d3ed81775db7660836140fd3af3ba2ee727641d",
+        "gameId": "synthetic-2",
+        "round": "REG",
+        "sourceRevisionIds": [],
+        "sourceState": "ABSENT",
+        "statistics": null,
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+        "gameId": "synthetic-3",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "COMPLETE",
+        "coverageRevisionId": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+        "gameId": "synthetic-4",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 3
+      }
+    ],
+    "observationId": "sha256:75ac664c8221f092cbab17efc8608bd2550564972f1159ba22eaf58779ee7fbf",
+    "observationVersion": "metrics-auditable-observation-v1",
+    "observed": {
+      "actualWeeks": [
+        1,
+        2,
+        3
+      ],
+      "includedGameIds": [
+        "synthetic-1",
+        "synthetic-3",
+        "synthetic-4"
+      ],
+      "metricUsedGameIds": {
+        "epa": [],
+        "frequency": [
+          "synthetic-1"
+        ],
+        "successRate": [],
+        "volume": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-4"
+        ]
+      }
+    },
+    "originPath": "OFFLINE_PERSISTED_ACCEPTED",
+    "policyVersion": "metrics-consumption-policy-v1",
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "calendarSourceSetId": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1,
+          2,
+          3
+        ]
+      },
+      "phase": "REG",
+      "season": 2026,
+      "selectionManifestId": "sha256:71353aa793f68d6b8b10e8bab3aff4caba2b2b0eae473a3a988c9bc0c1133627"
+    },
+    "subject": {
+      "foundation": "classified_rush",
+      "role": "def",
+      "team": "AAA"
+    },
+    "totals": {
+      "eligibleN": 0,
+      "epaMissingN": 0,
+      "epaN": 0,
+      "epaNonfiniteN": 0,
+      "epaSum": null,
+      "generalEligibleN": 1,
+      "successN": 0,
+      "unknownFilterFlagsN": 1
+    },
+    "values": {
+      "epa": null,
+      "frequency": {
+        "denominator": 1,
+        "numerator": "0"
+      },
+      "successRate": null,
+      "volume": {
+        "denominator": 1,
+        "numerator": "0"
+      }
+    }
+  },
+  {
+    "definition": {
+      "adapterVersion": "1.0.0",
+      "definitionVersion": "1.0.0",
+      "populationVersion": "classified-scrimmage-v1"
+    },
+    "derivationVersion": "metrics-observation-projection-candidate-1",
+    "derivedAt": "2026-10-15T12:00:00Z",
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "evidenceIds": [
+          "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+        ],
+        "reasonCodes": [],
+        "sourceModels": [
+          {
+            "evidenceIds": [],
+            "modelId": null,
+            "sourceRevisionId": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+            "state": "UNKNOWN"
+          }
+        ],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "evidenceIds": [
+          "sha256:140c38e5736dc6b438fc54a238b45b8f758ea653a49d642e269328ff96f7798c",
+          "sha256:db1352b5bb0c8a82b8b89b9267ee5c25f1c72a47e4240cecfe6cc12b0919bde7",
+          "sha256:e70b084cd24428d1842688d69613fc679fdc5976901dcaa4577d690413ddebd5"
+        ],
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": {
+          "denominator": 4,
+          "numerator": "3"
+        },
+        "evidenceIds": [
+          "sha256:15a146a278f27cc50c1264a2a10fb5e700239c2a6a87efcce4e881f622656bcb",
+          "sha256:397aadc8ed3ac824c0af9f9e14e73630d29c85efd0314cb85a2123d0f8da78c0",
+          "sha256:60dc46435ba418bc7605d834013c26e1b710d55226934478a47f8133f313088c",
+          "sha256:f19a00a94f8999fec11d50231ed8861d2c7c3c31ed9cb53c895380075007d566"
+        ],
+        "expectedCount": 4,
+        "expectedGameIds": [
+          "synthetic-1",
+          "synthetic-2",
+          "synthetic-3",
+          "synthetic-4"
+        ],
+        "reasonCodes": [
+          "INCOMPLETE_SOURCE_COVERAGE"
+        ],
+        "state": "PARTIAL"
+      },
+      "integrity": {
+        "evidenceIds": [
+          "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff"
+        ],
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "cutoff": null,
+        "evidenceIds": [],
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN",
+        "targetGameId": null,
+        "targetKickoff": null
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INCOMPLETE_SOURCE_COVERAGE",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_SOURCE_OBSERVATION",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-4"
+      }
+    ],
+    "members": [
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+        "gameId": "synthetic-1",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 2,
+          "epaMissingN": 0,
+          "epaN": 2,
+          "epaNonfiniteN": 0,
+          "epaSum": "-0.0000000000000000000000000000001",
+          "generalEligibleN": 3,
+          "successN": 0,
+          "unknownFilterFlagsN": 1
+        },
+        "week": 1
+      },
+      {
+        "archiveReceiptIds": [],
+        "artifactId": null,
+        "calculationId": null,
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:c29b617abac1bcf1716334c14d3ed81775db7660836140fd3af3ba2ee727641d",
+        "gameId": "synthetic-2",
+        "round": "REG",
+        "sourceRevisionIds": [],
+        "sourceState": "ABSENT",
+        "statistics": null,
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+        "gameId": "synthetic-3",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "COMPLETE",
+        "coverageRevisionId": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+        "gameId": "synthetic-4",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 3
+      }
+    ],
+    "observationId": "sha256:8e2c7d725965c07297a4193300fb03cc09e712f852dbd38548060c11242b8a64",
+    "observationVersion": "metrics-auditable-observation-v1",
+    "observed": {
+      "actualWeeks": [
+        1,
+        2,
+        3
+      ],
+      "includedGameIds": [
+        "synthetic-1",
+        "synthetic-3",
+        "synthetic-4"
+      ],
+      "metricUsedGameIds": {
+        "epa": [
+          "synthetic-1"
+        ],
+        "frequency": [
+          "synthetic-1"
+        ],
+        "successRate": [
+          "synthetic-1"
+        ],
+        "volume": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-4"
+        ]
+      }
+    },
+    "originPath": "OFFLINE_PERSISTED_ACCEPTED",
+    "policyVersion": "metrics-consumption-policy-v1",
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "calendarSourceSetId": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1,
+          2,
+          3
+        ]
+      },
+      "phase": "REG",
+      "season": 2026,
+      "selectionManifestId": "sha256:71353aa793f68d6b8b10e8bab3aff4caba2b2b0eae473a3a988c9bc0c1133627"
+    },
+    "subject": {
+      "foundation": "classified_pass",
+      "role": "off",
+      "team": "AAA"
+    },
+    "totals": {
+      "eligibleN": 2,
+      "epaMissingN": 0,
+      "epaN": 2,
+      "epaNonfiniteN": 0,
+      "epaSum": "-0.0000000000000000000000000000001",
+      "generalEligibleN": 3,
+      "successN": 0,
+      "unknownFilterFlagsN": 1
+    },
+    "values": {
+      "epa": {
+        "denominator": 2,
+        "numerator": "-0.0000000000000000000000000000001"
+      },
+      "frequency": {
+        "denominator": 3,
+        "numerator": "2"
+      },
+      "successRate": {
+        "denominator": 2,
+        "numerator": "0"
+      },
+      "volume": {
+        "denominator": 1,
+        "numerator": "2"
+      }
+    }
+  },
+  {
+    "definition": {
+      "adapterVersion": "1.0.0",
+      "definitionVersion": "1.0.0",
+      "populationVersion": "classified-scrimmage-v1"
+    },
+    "derivationVersion": "metrics-observation-projection-candidate-1",
+    "derivedAt": "2026-10-15T12:00:00Z",
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "evidenceIds": [
+          "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+        ],
+        "reasonCodes": [],
+        "sourceModels": [
+          {
+            "evidenceIds": [],
+            "modelId": null,
+            "sourceRevisionId": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+            "state": "UNKNOWN"
+          }
+        ],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "evidenceIds": [
+          "sha256:140c38e5736dc6b438fc54a238b45b8f758ea653a49d642e269328ff96f7798c",
+          "sha256:db1352b5bb0c8a82b8b89b9267ee5c25f1c72a47e4240cecfe6cc12b0919bde7",
+          "sha256:e70b084cd24428d1842688d69613fc679fdc5976901dcaa4577d690413ddebd5"
+        ],
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": {
+          "denominator": 4,
+          "numerator": "3"
+        },
+        "evidenceIds": [
+          "sha256:15a146a278f27cc50c1264a2a10fb5e700239c2a6a87efcce4e881f622656bcb",
+          "sha256:397aadc8ed3ac824c0af9f9e14e73630d29c85efd0314cb85a2123d0f8da78c0",
+          "sha256:60dc46435ba418bc7605d834013c26e1b710d55226934478a47f8133f313088c",
+          "sha256:f19a00a94f8999fec11d50231ed8861d2c7c3c31ed9cb53c895380075007d566"
+        ],
+        "expectedCount": 4,
+        "expectedGameIds": [
+          "synthetic-1",
+          "synthetic-2",
+          "synthetic-3",
+          "synthetic-4"
+        ],
+        "reasonCodes": [
+          "INCOMPLETE_SOURCE_COVERAGE"
+        ],
+        "state": "PARTIAL"
+      },
+      "integrity": {
+        "evidenceIds": [
+          "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff"
+        ],
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "cutoff": null,
+        "evidenceIds": [],
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN",
+        "targetGameId": null,
+        "targetKickoff": null
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INCOMPLETE_SOURCE_COVERAGE",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_SOURCE_OBSERVATION",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-4"
+      }
+    ],
+    "members": [
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+        "gameId": "synthetic-1",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 3,
+          "epaMissingN": 1,
+          "epaN": 2,
+          "epaNonfiniteN": 0,
+          "epaSum": "-0.0000000000000000000000000000001",
+          "generalEligibleN": 3,
+          "successN": 0,
+          "unknownFilterFlagsN": 1
+        },
+        "week": 1
+      },
+      {
+        "archiveReceiptIds": [],
+        "artifactId": null,
+        "calculationId": null,
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:c29b617abac1bcf1716334c14d3ed81775db7660836140fd3af3ba2ee727641d",
+        "gameId": "synthetic-2",
+        "round": "REG",
+        "sourceRevisionIds": [],
+        "sourceState": "ABSENT",
+        "statistics": null,
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+        "gameId": "synthetic-3",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "COMPLETE",
+        "coverageRevisionId": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+        "gameId": "synthetic-4",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 3
+      }
+    ],
+    "observationId": "sha256:dde834a61b844de5852f04b53a8748104414b25bfe972fdf58480c50b626ef74",
+    "observationVersion": "metrics-auditable-observation-v1",
+    "observed": {
+      "actualWeeks": [
+        1,
+        2,
+        3
+      ],
+      "includedGameIds": [
+        "synthetic-1",
+        "synthetic-3",
+        "synthetic-4"
+      ],
+      "metricUsedGameIds": {
+        "epa": [
+          "synthetic-1"
+        ],
+        "frequency": [],
+        "successRate": [
+          "synthetic-1"
+        ],
+        "volume": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-4"
+        ]
+      }
+    },
+    "originPath": "OFFLINE_PERSISTED_ACCEPTED",
+    "policyVersion": "metrics-consumption-policy-v1",
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "calendarSourceSetId": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1,
+          2,
+          3
+        ]
+      },
+      "phase": "REG",
+      "season": 2026,
+      "selectionManifestId": "sha256:71353aa793f68d6b8b10e8bab3aff4caba2b2b0eae473a3a988c9bc0c1133627"
+    },
+    "subject": {
+      "foundation": "general",
+      "role": "off",
+      "team": "AAA"
+    },
+    "totals": {
+      "eligibleN": 3,
+      "epaMissingN": 1,
+      "epaN": 2,
+      "epaNonfiniteN": 0,
+      "epaSum": "-0.0000000000000000000000000000001",
+      "generalEligibleN": 3,
+      "successN": 0,
+      "unknownFilterFlagsN": 1
+    },
+    "values": {
+      "epa": {
+        "denominator": 2,
+        "numerator": "-0.0000000000000000000000000000001"
+      },
+      "frequency": null,
+      "successRate": {
+        "denominator": 2,
+        "numerator": "0"
+      },
+      "volume": {
+        "denominator": 1,
+        "numerator": "3"
+      }
+    }
+  },
+  {
+    "definition": {
+      "adapterVersion": "1.0.0",
+      "definitionVersion": "1.0.0",
+      "populationVersion": "classified-scrimmage-v1"
+    },
+    "derivationVersion": "metrics-observation-projection-candidate-1",
+    "derivedAt": "2026-10-15T12:00:00Z",
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "evidenceIds": [
+          "sha256:13c0d206634b3b68929d20b9b7abd582b1b20d59585f6b3db42034f1e71a5701"
+        ],
+        "reasonCodes": [],
+        "sourceModels": [
+          {
+            "evidenceIds": [],
+            "modelId": null,
+            "sourceRevisionId": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+            "state": "UNKNOWN"
+          }
+        ],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "evidenceIds": [
+          "sha256:140c38e5736dc6b438fc54a238b45b8f758ea653a49d642e269328ff96f7798c",
+          "sha256:db1352b5bb0c8a82b8b89b9267ee5c25f1c72a47e4240cecfe6cc12b0919bde7",
+          "sha256:e70b084cd24428d1842688d69613fc679fdc5976901dcaa4577d690413ddebd5"
+        ],
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": {
+          "denominator": 4,
+          "numerator": "3"
+        },
+        "evidenceIds": [
+          "sha256:15a146a278f27cc50c1264a2a10fb5e700239c2a6a87efcce4e881f622656bcb",
+          "sha256:397aadc8ed3ac824c0af9f9e14e73630d29c85efd0314cb85a2123d0f8da78c0",
+          "sha256:60dc46435ba418bc7605d834013c26e1b710d55226934478a47f8133f313088c",
+          "sha256:f19a00a94f8999fec11d50231ed8861d2c7c3c31ed9cb53c895380075007d566"
+        ],
+        "expectedCount": 4,
+        "expectedGameIds": [
+          "synthetic-1",
+          "synthetic-2",
+          "synthetic-3",
+          "synthetic-4"
+        ],
+        "reasonCodes": [
+          "INCOMPLETE_SOURCE_COVERAGE"
+        ],
+        "state": "PARTIAL"
+      },
+      "integrity": {
+        "evidenceIds": [
+          "sha256:2592fdf080196eb8b8cb895e1ac4684d19000c99abe77bffde5937da0d196dff"
+        ],
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "cutoff": null,
+        "evidenceIds": [],
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN",
+        "targetGameId": null,
+        "targetKickoff": null
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INCOMPLETE_SOURCE_COVERAGE",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "NO_SOURCE_OBSERVATION",
+        "subjectId": "synthetic-2"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-3"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-4"
+      }
+    ],
+    "members": [
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+        "gameId": "synthetic-1",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 1,
+          "epaMissingN": 0,
+          "epaN": 1,
+          "epaNonfiniteN": 0,
+          "epaSum": "0.1",
+          "generalEligibleN": 1,
+          "successN": 1,
+          "unknownFilterFlagsN": 1
+        },
+        "week": 1
+      },
+      {
+        "archiveReceiptIds": [],
+        "artifactId": null,
+        "calculationId": null,
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:c29b617abac1bcf1716334c14d3ed81775db7660836140fd3af3ba2ee727641d",
+        "gameId": "synthetic-2",
+        "round": "REG",
+        "sourceRevisionIds": [],
+        "sourceState": "ABSENT",
+        "statistics": null,
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "UNKNOWN",
+        "coverageRevisionId": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+        "gameId": "synthetic-3",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 2
+      },
+      {
+        "archiveReceiptIds": [
+          "sha256:0d5f3195060758a564eddea39a1ab8efbfb61616dd453aadcb7c1f98a60f6e06",
+          "sha256:1491d958d192521da834fc3e12016705d68ae341fca66d06260de30df8d29e10",
+          "sha256:5e3b4c375fcc5441e1f0ba52ec5c5e32f1646513a3031127dd3671b380b0be45",
+          "sha256:64546bc947b4d5436e0b3a88505497f521b1e735c7b4862be56a7b0388e79cd2",
+          "sha256:8a14c7cead912b5b092c2109cca86957e9b12515aee3fc6db0dfd020d768d7c7",
+          "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+          "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+          "sha256:f33d6ef757da531f11ca7e8859b01e783a31338b2de485fd407baddded7375fb"
+        ],
+        "artifactId": "sha256:fa27ddb5dcb0423b9fd50b50a314fdd6b81e75a63a13020b36fec6a40f08bca6",
+        "calculationId": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+        "completeness": "COMPLETE",
+        "coverageRevisionId": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+        "gameId": "synthetic-4",
+        "round": "REG",
+        "sourceRevisionIds": [
+          "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+        ],
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": 0,
+          "epaMissingN": 0,
+          "epaN": 0,
+          "epaNonfiniteN": 0,
+          "epaSum": null,
+          "generalEligibleN": 0,
+          "successN": 0,
+          "unknownFilterFlagsN": 0
+        },
+        "week": 3
+      }
+    ],
+    "observationId": "sha256:fa955ad636ee3286d8c1130739befb8e22fec9190929194b54b80f1cdb70e01c",
+    "observationVersion": "metrics-auditable-observation-v1",
+    "observed": {
+      "actualWeeks": [
+        1,
+        2,
+        3
+      ],
+      "includedGameIds": [
+        "synthetic-1",
+        "synthetic-3",
+        "synthetic-4"
+      ],
+      "metricUsedGameIds": {
+        "epa": [
+          "synthetic-1"
+        ],
+        "frequency": [
+          "synthetic-1"
+        ],
+        "successRate": [
+          "synthetic-1"
+        ],
+        "volume": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-4"
+        ]
+      }
+    },
+    "originPath": "OFFLINE_PERSISTED_ACCEPTED",
+    "policyVersion": "metrics-consumption-policy-v1",
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "calendarSourceSetId": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1,
+          2,
+          3
+        ]
+      },
+      "phase": "REG",
+      "season": 2026,
+      "selectionManifestId": "sha256:71353aa793f68d6b8b10e8bab3aff4caba2b2b0eae473a3a988c9bc0c1133627"
+    },
+    "subject": {
+      "foundation": "classified_pass",
+      "role": "def",
+      "team": "AAA"
+    },
+    "totals": {
+      "eligibleN": 1,
+      "epaMissingN": 0,
+      "epaN": 1,
+      "epaNonfiniteN": 0,
+      "epaSum": "0.1",
+      "generalEligibleN": 1,
+      "successN": 1,
+      "unknownFilterFlagsN": 1
+    },
+    "values": {
+      "epa": {
+        "denominator": 1,
+        "numerator": "0.1"
+      },
+      "frequency": {
+        "denominator": 1,
+        "numerator": "1"
+      },
+      "successRate": {
+        "denominator": 1,
+        "numerator": "1"
+      },
+      "volume": {
+        "denominator": 1,
+        "numerator": "1"
+      }
+    }
+  }
+]
