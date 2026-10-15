@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "case": "RAW_EMPTY_UNKNOWN_HAS_NO_GAME_OBSERVATION",
+  "reproduce": "pytest etl-pipeline/tests/test_metrics_observations.py -k raw_empty_unknown",
+  "source": {
+    "pbpRawRows": 0,
+    "completeGameEvidence": false,
+    "gameAuditScope": "NO_SOURCE_OBSERVATION",
+    "statisticsGroups": 0
+  },
+  "abstractE5c1EmptyUnknown": {
+    "sourceState": "PRESENT",
+    "volume": 0
+  },
+  "operationalSafeResult": {
+    "sourceState": "ABSENT",
+    "totals": null,
+    "volume": null,
+    "reason": "EMPTY_SOURCE_SET_WITHOUT_GAME_OBSERVATION"
+  },
+  "proposal": "Future evidence explicitly binding an empty observation to a game and a versioned accepted origin path; no frozen contract changes in E5c-2."
+}
