@@ -1,0 +1,25 @@
+{
+  "counterexamples": [
+    {
+      "case": "invented_epa",
+      "externallyRehashed": true,
+      "outcome": "REFUSED",
+      "reason": "Observation derivation differs from accepted originals/nominal request"
+    },
+    {
+      "case": "invented_complete",
+      "externallyRehashed": true,
+      "outcome": "REFUSED",
+      "reason": "Observation derivation differs from accepted originals/nominal request"
+    },
+    {
+      "case": "invented_temporal",
+      "externallyRehashed": true,
+      "outcome": "REFUSED",
+      "reason": "Observation derivation differs from accepted originals/nominal request"
+    }
+  ],
+  "limits": "No temporal selection, authority authentication or consumer implemented",
+  "realMemberGroupsCompared": 72,
+  "uniqueCoverageTeamRoleFoundationGroups": 48
+}

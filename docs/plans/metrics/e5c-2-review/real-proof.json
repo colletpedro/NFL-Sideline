@@ -1,0 +1,111 @@
+{
+  "bundleFiles": {
+    "manifest.json": "3f4e26692c2e65d7397c1ed2a80e7d938b91dbe1c788178de7f9385886edfc62",
+    "observations.json": "ac1497ce737aec809e4e3ad38e1c437cfac279efd938f5e9b15b66962b67b0b7",
+    "request.json": "9c677ca6864fab0310f29ae45d3b2446fbe55b2d880b859af591d27146a083ec",
+    "shared-source/COMPLETED.json": "4fc1291045cc5fc1e0d80790e98088e1edc95adf74666bb4c75afe2b696162b6",
+    "shared-source/input.json": "ccd9fd5e32a9cf8419bfa0ff41a2af8d25dcc4a3fe044682a2a997164a2e5984",
+    "shared-source/lineage.json": "b97580dbcca074873edf4e9923a7b3e4f6e68874814494672b8f6438295071dd"
+  },
+  "bundleId": "sha256:8016e8dd854a3c400f05758fca61f1a13011a7e93e5169694255c87ac2bce46e",
+  "cohorts": [
+    {
+      "origin": "CURRENT",
+      "phase": "REG",
+      "season": 2026,
+      "teams": [
+        "BAL",
+        "DAL"
+      ],
+      "weeks": [
+        1
+      ]
+    },
+    {
+      "origin": "CURRENT",
+      "phase": "REG",
+      "season": 2026,
+      "teams": [
+        "BAL",
+        "DAL"
+      ],
+      "weeks": [
+        2
+      ]
+    },
+    {
+      "origin": "CURRENT",
+      "phase": "REG",
+      "season": 2026,
+      "teams": [
+        "BAL",
+        "DAL"
+      ],
+      "weeks": [
+        1,
+        2
+      ]
+    },
+    {
+      "origin": "HISTORICAL_REFERENCE",
+      "phase": "POST",
+      "season": 2025,
+      "teams": [
+        "NE"
+      ],
+      "weeks": [
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "origin": "CURRENT",
+      "phase": "REG",
+      "season": 2026,
+      "teams": [
+        "BAL"
+      ],
+      "weeks": [
+        3
+      ]
+    }
+  ],
+  "comparison": "NOT_IMPLEMENTED",
+  "copyReadPassed": true,
+  "gapGameIds": [
+    "2026_03_BAL_DAL"
+  ],
+  "kind": "REAL_LOCAL_E5B6_CONSUMPTION",
+  "memberGroupsReconciled": 72,
+  "observations": 48,
+  "operationalBundle": "/private/tmp/nfl-e5c2-orchestrator-real-20261015/copied",
+  "originalSourceFilesRequiredForRealReproduction": true,
+  "pregame": "NOT_DEMONSTRATED",
+  "source": {
+    "materializationId": "sha256:8b6c93fcc254fd074aa76f9aa47bd36d41f5ba6381123ac057988686f2dc5e5b",
+    "temporalInputId": "sha256:77e980404fa7b13b4e0f6c1f205d7e7a5a104209dac18ca5947be2e965047bed"
+  },
+  "sourceFileHashes": {
+    "COMPLETED.json": "4fc1291045cc5fc1e0d80790e98088e1edc95adf74666bb4c75afe2b696162b6",
+    "input.json": "ccd9fd5e32a9cf8419bfa0ff41a2af8d25dcc4a3fe044682a2a997164a2e5984",
+    "lineage.json": "b97580dbcca074873edf4e9923a7b3e4f6e68874814494672b8f6438295071dd"
+  },
+  "sourceFileRevisionHashes": {
+    "sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+    "sha256:56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+    "sha256:5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+    "sha256:fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d"
+  },
+  "sourceUnchanged": true,
+  "unknown": [
+    "completeness",
+    "coverageExpectation",
+    "epaModel",
+    "historicalAvailability",
+    "historicalIngestion",
+    "eventFinal"
+  ],
+  "versionedExtractIsSelfContained": false
+}

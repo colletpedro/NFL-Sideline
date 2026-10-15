@@ -1,4 +1,4 @@
-# Estado consolidado — 13/10/2026
+# Estado consolidado — 15/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -88,6 +88,14 @@ Integrado localmente em `codex/metrics-integration-e5c1`, sobre a candidata `4c3
 A revisão corrigiu três testemunhas finitas: conflito básico de compatibilidade, cortes diferentes e alvo presente entre os membros. Passaram **17 testes** (12 originais e cinco de revisão), schema, 34 observações, 17 cenários/476 decisões originais e 12 inválidos. Contraprovas antigas aceitam permissões indevidas; a correção as recusa e preserva números/linhagem. Schema e fixtures originais permanecem idênticos. [Aceite, comandos e limites](../contracts/metrics/consumption-e5c1-v1/REVIEW.md).
 
 **Somente contrato e exemplos sintéticos:** não há projeção real, consumidor, seleção PIT nova ou coleta prospectiva. Próximo passo: projetar escolhas nominais aceitas em documentos auditáveis e bundle de linhagem, antes de adaptar a apresentação no laboratório local. Coleta prospectiva tem entrega própria; os bloqueios de proveniência da E5b-6 continuam. Nenhuma alteração de ETL/SQL/Java/frontend/snapshots, banco, aquisição, modelos, publicação, merge em main, push ou deploy.
+
+## Projeção offline E5c-2 — aceita em 15/10/2026
+
+Integrada sem correção de código em `codex/metrics-integration-e5c2`, sobre a candidata `3cfccdb656cbc5caf21dcfb82c1d8cb3a064a0c7`. A CLI `metrics_observations generate/validate/inspect` consome materialization-v2/input-v3 e escolha nominal explícita. Emite bundle autocontido compartilhando linhagem; a leitura revalida originais e refaz a projeção. Não há seleção latest, comparação ou PIT novo.
+
+Reproduzidos **397 testes Python**, **17 E5c-1**, schema e validação semântica de **54 documentos**, prova real em saída nova e três adulterações com IDs/hashes externos recalculados, todas recusadas. A prova gerou o mesmo bundle da candidata: **48 observações**, 72 reconciliações por membro (48 grupos distintos, com períodos sobrepostos), BAL/DAL 2026 W1–2, NE POST2025 e a lacuna BAL W3. [Aceite e reprodução](plans/metrics/e5c-2-review/ACCEPTANCE.md).
+
+Completude, expectativa, modelo EPA e conhecimento temporal reais permanecem UNKNOWN; arquivo vazio sem vínculo por jogo continua lacuna/null. unknownFilterFlagsN é contexto do jogo, explicitado em fieldScopes/limitações. O extrato versionado não substitui o bundle completo. Próxima entrega: **E5c-3, adaptador explícito para o laboratório local**, antes da apresentação. Coleta prospectiva, E4 humano, BASIC/FULL e demais pendências continuam separadas. Sem alteração dos componentes aceitos anteriores, banco, aquisição, modelos, processo semanal, publicação, merge em main, push ou deploy.
 
 ## Política de arquivos
 

@@ -1,0 +1,264 @@
+{
+  "base": "35e3afcb52bf3aa99fbfda40401920b8c393bf24",
+  "candidate": "3cfccdb656cbc5caf21dcfb82c1d8cb3a064a0c7",
+  "tests": {
+    "etlSelectedSuite": 397,
+    "contractSuite": 17,
+    "schemaAndSemanticDocuments": 54,
+    "status": "PASS"
+  },
+  "candidateFileHashes": [
+    {
+      "path": "docs/plans/metrics/e5c-2/DESIGN.md",
+      "sha256": "2141448a0b65947b7b0912e87e6d53e420a8b0e7dfc6868aeca7268c4766aabd"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/README.md",
+      "sha256": "5be2069e151def8d58330e85e11bf9ee238524e6691fb3b0cb22d28387c2c85d"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/REPORT.md",
+      "sha256": "f2c0affad8ed7c52ae83f1bf4ff2ebf70d21a318bb37421a395c9bae82751817"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/build_fixture.py",
+      "sha256": "d5e554668a719a63564090c18bce4481e846f2b89ab7834489039409b95904bd"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/check_schema.py",
+      "sha256": "473dfd803cbf611afb2477d474de2602424b13ad6ca9ad69bb3fd65be2cf5389"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/contract-gap.json",
+      "sha256": "39eec46bacf0df56e67f2dc58b9549cd872bd3de89a108c48cddd35af1e15056"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/real-observations.json",
+      "sha256": "ac1497ce737aec809e4e3ad38e1c437cfac279efd938f5e9b15b66962b67b0b7"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/real-proof.json",
+      "sha256": "387c303fa20a0d1849ac75b14dde819385211f55893d8ecc70d59f4b4309e96b"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/real-request.json",
+      "sha256": "7e5ce77279acc6a510f9aec76d5e43dc91cd78899f48d2c8fc4d3d25b4b6fada"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/real_proof.py",
+      "sha256": "16234d0a5e6281e1340331a653d26d6c1225b6e63a126b76e16d7453753335a1"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-2/verification.json",
+      "sha256": "7533a08634afa1d3b3ffd78bf689c0dab64efb1283cb07e9edbfb7d5c4ee10c2"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_observations/__init__.py",
+      "sha256": "cc6a0de10e88b05e921536eada2607bd89d6c33fd7e54ccf513e6d2b8016e3e4"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_observations/__main__.py",
+      "sha256": "1f61aa5085d3dde9373c754c604f84ac85c59e2a00baa25ad9f7417929ceff25"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_observations/core.py",
+      "sha256": "4ca480a54c7754ba922a965e15c2184e674668e7cbd27e4b2ac941c25bfcf3a8"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_observations/lineage.py",
+      "sha256": "4578c5c3db35a4925519eb626637fb10b68520d41cf39041ce9f316cdc335f29"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_observations/publication.py",
+      "sha256": "a2f486f9145eb857a63066d7df7de5dcc1f96c489f986ae7f9f895129bdf9bf6"
+    },
+    {
+      "path": "etl-pipeline/tests/fixtures/metrics_observations/README.md",
+      "sha256": "006209f115145a8efabf3247fbfb6899d7f7703b3f692240e7b040cc7a007df3"
+    },
+    {
+      "path": "etl-pipeline/tests/fixtures/metrics_observations/materialized/COMPLETED.json",
+      "sha256": "699aa08e2aa32a7d354fd40499853197b53fa986983dd9ea05c2d733ce03c4ff"
+    },
+    {
+      "path": "etl-pipeline/tests/fixtures/metrics_observations/materialized/input.json",
+      "sha256": "6b76847e8437fbb47728c0aa61828cfc87ed447daa89898fd97c21cd32a25c1d"
+    },
+    {
+      "path": "etl-pipeline/tests/fixtures/metrics_observations/materialized/lineage.json",
+      "sha256": "9678e862f867e1b04c497544d45b93a22ea17cd095492c2dcf180404742823e8"
+    },
+    {
+      "path": "etl-pipeline/tests/fixtures/metrics_observations/observations.json",
+      "sha256": "b2385c7095c8772f09178d4692b5dfd0dce61b159033604365fc8cad26a999a1"
+    },
+    {
+      "path": "etl-pipeline/tests/fixtures/metrics_observations/request.json",
+      "sha256": "2071971c0b557f0f62f5e7c1cd359a837bb9aa72bf413b1158c43fee89fbb288"
+    },
+    {
+      "path": "etl-pipeline/tests/test_metrics_observations.py",
+      "sha256": "2a53ad7e72e21730cb9ee7199bd7db32d4199cbfbe6b26b346a2cc698ef22e5d"
+    }
+  ],
+  "candidateFilesUnchanged": true,
+  "acceptedComponentsUnchanged": [
+    "contracts",
+    "supabase",
+    "core-api",
+    "web-ui",
+    ".github",
+    "Spec.md",
+    "existing ETL modules/tests"
+  ],
+  "historicalFiles": [
+    {
+      "path": "Handoff.md",
+      "sha256": "b9622fbd1d5c9fa0fc345abc014b873bfc645762aab36d2668825ff7a5c40e64"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/user-prompt.txt",
+      "sha256": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/user-prompt.txt",
+      "sha256": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/user-prompt.txt",
+      "sha256": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/user-prompt.txt",
+      "sha256": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/diagnose_both_keys.py",
+      "sha256": "6cc1cd4b24bc318db90e014c081efebbcbf1e77c0730636cd8ac5f064bf5d4e5"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/diagnose_prod_key.py",
+      "sha256": "47eeb3356bf4e80749e5af3b78322ff73a883453ff201a2c5a29aad741d9742c"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/ClaimRenderer.baseline.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/PromptCatalog.baseline.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/EvaluationApplication.java.txt",
+      "sha256": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiClient.java.txt",
+      "sha256": "6b546badebbfeef7b0a177151af9a8ca7f27c79bdb9762cecb40b950dbaaecfe"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GenerationFailure.java.txt",
+      "sha256": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/EvaluationApplication.java.txt",
+      "sha256": "db0558bfc643c7f851ef7d6f5a2efbe0a8f12e74659a48a4326298c316494247"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/EvaluationApplication.java.txt",
+      "sha256": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GeminiClient.java.txt",
+      "sha256": "73889cceac497594f504594fc1242379b777ccb67dbcf9f2cb534687133b77d5"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GenerationFailure.java.txt",
+      "sha256": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/EvaluationApplication.java.txt",
+      "sha256": "2c394dd66f345051a3177d0d3059b2adc06b825d4aab587985746315f0a9f0d8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/run_authorized.py",
+      "sha256": "3cfe30c9048b7a4956ec0af561690a864e86c470340373834b439153324867a3"
+    }
+  ],
+  "realProofMatchesCandidate": true,
+  "workspace": "/private/tmp/nfl-e5c2-orchestrator-real-20261015",
+  "runtimeNote": "ETL venv for runtime checks; existing system Python/jsonschema for schema/semantic checks; no installation",
+  "scope": "Offline projection only; no comparison/PIT/authentication/consumer"
+}
