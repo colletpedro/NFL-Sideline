@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { observationBoundary } from './build/observations';
 import { API_PORT, LOCAL_PREFIX, UI_PORT, localBoundary } from './build/local-editorial';
 
 export default defineConfig(({ command, mode }) => {
@@ -8,7 +9,7 @@ export default defineConfig(({ command, mode }) => {
     root: decodeURIComponent(new URL('./local-editorial', import.meta.url).pathname),
     publicDir: false,
     envPrefix: [],
-    plugins: [localBoundary(), react()],
+    plugins: [localBoundary(), observationBoundary(), react()],
     server: {
       host: '127.0.0.1', port: UI_PORT, strictPort: true, cors: false,
       fs: { allow: [decodeURIComponent(new URL('.', import.meta.url).pathname)] },
