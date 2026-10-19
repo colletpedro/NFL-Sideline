@@ -157,7 +157,7 @@ grant select on e5b2_instance.identity to nfl_e5b5_domain;
 def request_for(t,l):
     # Same nominal cohort as E5c-2, with the new associations and actual derivation time.
     q=json.loads((ROOT/'docs/plans/metrics/e5c-2/real-request.json').read_bytes())
-    q['source']={'materializationId':l['materialization_id'],'temporalInputId':l['temporalInputId']};q['derivedAt']=now()
+    q['source']={'materializationId':l['materialization_id'],'temporalInputId':l['temporalInputId']};q['derivedAt']=datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     calendars={(r['payload']['season'],r['payload']['phase']):r for r in t['resources'] if r['kind']=='CALENDAR'}
     choices={a['calculation_id']:a for a in l['relations']['selection']}
     for req in q['requests']:
@@ -215,6 +215,7 @@ def run(args):
     assert len({str(p) for p in (w,backup,ops)})==3
     assert not any(p.is_relative_to(q) for p in (w,backup,ops) for q in (w,backup,ops) if p!=q)
     assert shutil.disk_usage(w.parent if w.parent.exists() else args.original).free>=2*1024**3
+    os.environ['PYTHONPATH']=str(ROOT/'etl-pipeline/src')
     code=code_inventory();image=json.loads(command(['docker','image','inspect',args.image]).stdout)[0]
     assert image['Id']==args.image, 'Use complete immutable local image ID'
     w.mkdir(parents=True);ops.parent.mkdir(parents=True,exist_ok=True)
@@ -295,6 +296,9 @@ def run(args):
         assert code_inventory()==code
         assert all(sha(args.original/'etl-pipeline/data/raw'/rel)==expected for rel,expected in SOURCES.items())
         report['success']=True
+    except Exception as exc:
+        report['failure']={'type':type(exc).__name__,'message':str(exc)}
+        raise
     finally:
         report['shutdown']=instance.stop();report['finishedAt']=now()
         save(w/'recovery-report.json',report)
