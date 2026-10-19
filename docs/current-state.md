@@ -1,4 +1,4 @@
-# Estado consolidado — 18/10/2026
+# Estado consolidado — 19/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -104,6 +104,33 @@ Integrado sem correção de código em `codex/metrics-integration-e5c3`, sobre a
 Reproduzidos **110 testes Python**, **133 frontend**, lint/build, **120 documentos sintéticos e 12 recusas em HTTP real**, congelamento após alteração em disco, revalidação no reinício e 409 à sessão antiga. Build público normal/variáveis VITE_* hostis idênticos. Servidores próprios encerrados e porta 18083 liberada. Capturas candidatas desktop/mobile inspecionadas; a sessão Chrome da candidata não foi repetida pelo orquestrador. Cinco expected-failure legados preservados. [Aceite, provas e limites](plans/metrics/e5c-3-review/ACCEPTANCE.md).
 
 **Gate com dados reais pendente:** bundles/materializações antigos não foram localizados; o extrato real não é fonte válida. Próximo passo é reconstruir e aceitar os bundles a partir dos originais preservados, guardá-los em diretório durável, configurar pins e repetir HTTP/browser com dados reais. Depois, reduzir a carga de leitura da apresentação mínima e avaliar compreensão humana. Não houve aquisição, banco, modelo, processo semanal, merge em main, push, publicação ou deploy.
+
+## Recuperação real E5c-3R — candidata em 19/10/2026
+
+Na branch isolada `codex/metrics-real-recovery-e5c3r`, sobre `ce06a629`, os quatro
+Parquets originais 2025/2026 tiveram seus hashes conferidos e foram reconstruídos
+pelo pipeline/writer aceitos em PostgreSQL 17.6 próprio, usando imagem Docker já
+local e sem tocar no stack histórico. Auditor independente reconciliou REG2025
+272/32.813, POST2025 13/1.689 e REG2026 W1–2 32/3.830; 557 associações e 3.804 grupos.
+Receipts e persistência são atuais, sem retroatividade.
+
+Materialização-v2/input-v3 e bundle completos estão em duas cópias locais duráveis
+fora de `/tmp`/web-ui (162 arquivos / 249.063.080 bytes cada). A segunda cópia foi
+lida com a primeira localização indisponível e restaurada em destino novo sem
+banco. Archive bruto conserva receipts vinculados ao path original; portabilidade
+é pelo materializado/bundle autocontido, sem reescrever receipts.
+
+Novo bundle `sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a`,
+configurado como REAL_ARCHIVE: 48 documentos reais e 72 reconciliações por membro,
+HTTP exato → DTO, Chrome desktop/mobile/teclado/reload/reinício e contraprovas
+passaram. 303 pytest, 17 testes E5c-1, 26 exemplos E5a, schema de 48 documentos e
+133 testes frontend/lint/build aprovados. Processos próprios encerrados. Código
+aceito e checkout original preservados; sem publicação/push/merge/deploy.
+
+Esta é **candidata ao aceite**, não reescrita do aceite sintético anterior.
+Completude, modelo EPA, expectativa, conhecimento/ingestão histórica e encerramento
+continuam UNKNOWN; compreensão humana e comparação/pregame não foram demonstradas.
+[Relatório, caminhos, identidades, provas e reprodução](plans/metrics/e5c-3r/REPORT.md).
 
 ## Política de arquivos
 

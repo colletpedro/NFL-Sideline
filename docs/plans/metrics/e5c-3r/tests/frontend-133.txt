@@ -1,0 +1,22 @@
+
+> web-ui@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/metrics-real-recovery-e5c3r/NFL Sideline/web-ui
+
+ ✓ src/services/runtimeClient.test.ts (2 tests) 3ms
+ ✓ src/services/calendar.test.ts (9 tests) 5ms
+ ✓ src/services/staticDataClient.test.ts (8 tests) 9ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 59ms
+ ✓ local-editorial/observations/observations.test.tsx (8 tests) 25ms
+ ✓ src/services/api.test.ts (2 tests) 2ms
+ ✓ src/services/market.test.tsx (14 tests) 31ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 12ms
+ ✓ local-editorial/local.test.tsx (7 tests) 20ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 94ms
+
+ Test Files  10 passed (10)
+      Tests  133 passed (133)
+   Start at  23:41:43
+   Duration  1.11s (transform 985ms, setup 0ms, collect 2.91s, tests 260ms, environment 4ms, prepare 872ms)

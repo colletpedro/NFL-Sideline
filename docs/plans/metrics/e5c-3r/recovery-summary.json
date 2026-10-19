@@ -1,0 +1,94 @@
+{
+  "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/20261019T024130Z-50e03b27",
+  "base": "ce06a6291d1a2e935871fef04f543a54489755f5",
+  "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+  "continuation": "Original load command exited 1 during extra relocated-archive probe after bundle/materialization passed; verify_copy continuation passed without database or new receipts.",
+  "endpointAndRoles": [
+    {
+      "address": "127.0.0.1",
+      "current_user": "nfl_e5b5_domain",
+      "port": 50101,
+      "rolbypassrls": false,
+      "rolcreatedb": false,
+      "rolcreaterole": false,
+      "rolreplication": false,
+      "rolsuper": false
+    }
+  ],
+  "fileManifest": {
+    "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024130Z-50e03b27/SHA256SUMS.json",
+    "sha256": "3ccd41b172dd23724cb6a622a05a41e22843779847073a230976d926bc627774"
+  },
+  "finishedAt": "2026-10-19T02:42:17.766735+00:00",
+  "fullReport": {
+    "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024130Z-50e03b27/recovery-report.json",
+    "sha256": "12eab9a15323021adc3a7a3b2e574614ccb29afea911a80d6cd161b02e4252f9"
+  },
+  "idempotence": {
+    "allRowsAndPersistedAtUnchanged": true,
+    "archiveAndReceiptsUnchanged": true,
+    "journalsUnchanged": true
+  },
+  "instance": {
+    "container": "nfl-e5c3r-b321d664-b54c-4d59-b56d-db30a726c1f1",
+    "database": "nfl_e5b2_b321d664b54c",
+    "image": "sha256:6942962433a569e87f228b4d4ab7e11db5deca64e43babb3a038443ad6c4f1bb",
+    "instance_id": "b321d664-b54c-4d59-b56d-db30a726c1f1",
+    "port": 50101,
+    "purpose": "metrics-persistence-e5b2-disposable"
+  },
+  "kind": "E5C3R_REAL_RECOVERY",
+  "materialization": {
+    "inputVersion": "metrics-temporal-input-v3",
+    "input_id": "sha256:9dc7e6de11af1d0e494877c82f6cc234be3cbe002ab5ee47bf29cc2cf1d3a0e6",
+    "materialization_id": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+    "version": "metrics-materialization-v2"
+  },
+  "operations": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/operations/20261019T024130Z-50e03b27",
+  "phaseTotals": [
+    {
+      "completeness": "UNKNOWN",
+      "eligible": 32813,
+      "observedGames": 272,
+      "phase": "REG",
+      "season": 2025
+    },
+    {
+      "completeness": "UNKNOWN",
+      "eligible": 1689,
+      "observedGames": 13,
+      "phase": "POST",
+      "season": 2025
+    },
+    {
+      "completeness": "UNKNOWN",
+      "eligible": 3830,
+      "observedGames": 32,
+      "phase": "REG",
+      "season": 2026
+    }
+  ],
+  "primary": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024130Z-50e03b27",
+  "projection": {
+    "gapGameIds": [
+      "2026_03_BAL_DAL"
+    ],
+    "historicalExtractNumbersEqual": true,
+    "historicalExtractUsedAsSource": false,
+    "memberGroupsReconciled": 72,
+    "observations": 48
+  },
+  "shutdown": {
+    "container": "nfl-e5c3r-b321d664-b54c-4d59-b56d-db30a726c1f1",
+    "containerRunning": false,
+    "filesPreserved": true,
+    "listenerAbsent": true,
+    "pgCtlStatus": 3,
+    "pidAbsent": true,
+    "port": 50101,
+    "portBindReleased": true
+  },
+  "startedAt": "2026-10-19T02:41:31.579231+00:00",
+  "success": true,
+  "testedHead": "7ea69981cf2f7de9fe51afe06d632dd9ac0e57fa"
+}

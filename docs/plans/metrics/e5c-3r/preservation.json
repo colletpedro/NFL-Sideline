@@ -1,0 +1,22 @@
+{
+  "base": "ce06a6291d1a2e935871fef04f543a54489755f5",
+  "acceptedFilesHashMatched": 156,
+  "additionalAcceptedCliHashes": {
+    "etl-pipeline/run_pipeline.py": "e61e232042096a5e14e6832648eb5a212479474958f8d8d767962e8eabe6d02d",
+    "etl-pipeline/load_games.py": "07d4e38b3853dde845e82335babd2f06385b4451de52633127fd3afbffcb8d02",
+    "etl-pipeline/load_metrics.py": "43a628482457391ecca271f080aad1884165507754d1178a8fc9fbd7dc3eb159",
+    "etl-pipeline/seed_teams.py": "720268828cb2bcfe83e2d9bdfff6f407f909a20e4d2f1953e38ee0146c712320",
+    "etl-pipeline/run_local.py": "24507381493962ce5ca39d27c98cc5fb73b5fde8ca4e0ecd4265acd4ccb41108"
+  },
+  "originalHeadUnchanged": true,
+  "originalTrackedFilesUnchanged": true,
+  "historicalUntrackedHashesMatched": 40,
+  "originalStatusOnlyAddsNewOperationalDirectories": true,
+  "mainUnchanged": true,
+  "acceptedContractsAndCodeDiffEmpty": true,
+  "durableFileHashesRechecked": 162,
+  "bothCopiesUnchangedAfterCounterexamples": true,
+  "distributionHasNoConnectionFiles": true,
+  "publicSnapshotsAndApprovalsUnchanged": true,
+  "wrapperSyntaxPassed": true
+}

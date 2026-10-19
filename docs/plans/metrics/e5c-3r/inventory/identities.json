@@ -1,0 +1,371 @@
+{
+  "base": "ce06a6291d1a2e935871fef04f543a54489755f5",
+  "equalityDoesNotProveHistoricalKnowledge": true,
+  "identities": [
+    {
+      "equal": true,
+      "historical": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+      "kind": "calculation_id",
+      "new": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+      "reason": "Same source bytes, definitions and canonical content; no path/clock in calculation/artifact",
+      "season": 2025
+    },
+    {
+      "equal": true,
+      "historical": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+      "kind": "artifact_id",
+      "new": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+      "reason": "Same source bytes, definitions and canonical content; no path/clock in calculation/artifact",
+      "season": 2025
+    },
+    {
+      "equal": false,
+      "historical": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+      "kind": "archive_id",
+      "new": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+      "reason": "New UUID archive/execution, never historical alias",
+      "season": 2025
+    },
+    {
+      "equal": false,
+      "historical": "4dfc557c-bbaf-48fd-8be6-3993b7fe63ea",
+      "kind": "attempt_id",
+      "new": "4c373c3b-9ead-431d-8f23-624811dcc1eb",
+      "reason": "New UUID archive/execution, never historical alias",
+      "season": 2025
+    },
+    {
+      "equal": true,
+      "historical": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+      "kind": "calculation_id",
+      "new": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+      "reason": "Same source bytes, definitions and canonical content; no path/clock in calculation/artifact",
+      "season": 2026
+    },
+    {
+      "equal": true,
+      "historical": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+      "kind": "artifact_id",
+      "new": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+      "reason": "Same source bytes, definitions and canonical content; no path/clock in calculation/artifact",
+      "season": 2026
+    },
+    {
+      "equal": false,
+      "historical": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+      "kind": "archive_id",
+      "new": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+      "reason": "New UUID archive/execution, never historical alias",
+      "season": 2026
+    },
+    {
+      "equal": false,
+      "historical": "e6a33c16-9c93-4180-a108-7f4c4ddad3d4",
+      "kind": "attempt_id",
+      "new": "726ebccd-df7f-4c67-a0cd-7ad853e33422",
+      "reason": "New UUID archive/execution, never historical alias",
+      "season": 2026
+    },
+    {
+      "equal": false,
+      "historical": "sha256:8b6c93fcc254fd074aa76f9aa47bd36d41f5ba6381123ac057988686f2dc5e5b",
+      "kind": "materializationId",
+      "new": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+      "reason": "Current receipts, SQL lineage and derivation"
+    },
+    {
+      "equal": false,
+      "historical": "sha256:77e980404fa7b13b4e0f6c1f205d7e7a5a104209dac18ca5947be2e965047bed",
+      "kind": "temporalInputId",
+      "new": "sha256:9dc7e6de11af1d0e494877c82f6cc234be3cbe002ab5ee47bf29cc2cf1d3a0e6",
+      "reason": "Current FILE availability/receipt resources; calculations remain identical"
+    },
+    {
+      "equal": false,
+      "historical": "sha256:8016e8dd854a3c400f05758fca61f1a13011a7e93e5169694255c87ac2bce46e",
+      "kind": "bundleId",
+      "new": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+      "reason": "New nominal source/derivation, current bundle pin verified"
+    }
+  ],
+  "newMaterializationDerivedAt": "2026-10-19T02:42:01.759837+00:00",
+  "newPersistedAtMax": "2026-10-19T02:41:46.918344+00:00",
+  "newPersistedAtMin": "2026-10-19T02:41:44.324570+00:00",
+  "newProjectionDerivedAt": "2026-10-19T02:42:06Z",
+  "nominalAssociations": [
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2025_19_LAC_NE",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:c9f63f816457e0b92c1808877ac3c6549ee3a6a50c1ecf10f41acea4bb46bad0",
+        "gameId": "2025_19_LAC_NE",
+        "temporalRevisionId": "sha256:3527b42f6ee3464d5879e35b66f670a59ed7f4090cfc53986c8192ef92634603"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:c9f63f816457e0b92c1808877ac3c6549ee3a6a50c1ecf10f41acea4bb46bad0",
+        "gameId": "2025_19_LAC_NE",
+        "temporalRevisionId": "sha256:3527b42f6ee3464d5879e35b66f670a59ed7f4090cfc53986c8192ef92634603"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2025_20_HOU_NE",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:220863ca97f86c5eb3ccc70939be1e4a263da98282851a14b803ed262068e0eb",
+        "gameId": "2025_20_HOU_NE",
+        "temporalRevisionId": "sha256:8cdfd4bbd9ceced993d222bb580d08457e0f7bbd48db46637e2ac4478e1aa04d"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:220863ca97f86c5eb3ccc70939be1e4a263da98282851a14b803ed262068e0eb",
+        "gameId": "2025_20_HOU_NE",
+        "temporalRevisionId": "sha256:8cdfd4bbd9ceced993d222bb580d08457e0f7bbd48db46637e2ac4478e1aa04d"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2025_21_NE_DEN",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:8554755ccc0f7b0cddbb9d536986ceb58fa7b3b5ff03a9add6c6c54fe4beae06",
+        "gameId": "2025_21_NE_DEN",
+        "temporalRevisionId": "sha256:6969013dcc42af8685f13c7fae9ab28b04de494c088deb1177756856be516878"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:8554755ccc0f7b0cddbb9d536986ceb58fa7b3b5ff03a9add6c6c54fe4beae06",
+        "gameId": "2025_21_NE_DEN",
+        "temporalRevisionId": "sha256:6969013dcc42af8685f13c7fae9ab28b04de494c088deb1177756856be516878"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2025_22_SEA_NE",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:747c5c8877a32ba48b0706157365683fffea1d0ddf5e7757acfd18b1b2b826a9",
+        "gameId": "2025_22_SEA_NE",
+        "temporalRevisionId": "sha256:61a6c3fb594e3a26a226324ac0f64c1d8765c7ebd56ebf8a0710ce67f053e9af"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+        "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+        "coverageRevisionId": "sha256:747c5c8877a32ba48b0706157365683fffea1d0ddf5e7757acfd18b1b2b826a9",
+        "gameId": "2025_22_SEA_NE",
+        "temporalRevisionId": "sha256:61a6c3fb594e3a26a226324ac0f64c1d8765c7ebd56ebf8a0710ce67f053e9af"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2026_01_BAL_IND",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:62a0a307a79537dd424bacfb668cd9e17452f584c4fba7a6c54abd59dce84506",
+        "gameId": "2026_01_BAL_IND",
+        "temporalRevisionId": "sha256:0370e6ef0f45cfccc75ec26e64812811a834faa094d8589c21cf619419fdbf53"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:62a0a307a79537dd424bacfb668cd9e17452f584c4fba7a6c54abd59dce84506",
+        "gameId": "2026_01_BAL_IND",
+        "temporalRevisionId": "sha256:0370e6ef0f45cfccc75ec26e64812811a834faa094d8589c21cf619419fdbf53"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2026_01_DAL_NYG",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:a6096af3fba11306015120f371b569b74c24af3079eeb4375b75aa5ed7a55d35",
+        "gameId": "2026_01_DAL_NYG",
+        "temporalRevisionId": "sha256:af0dffd18884f6591d437bc28fcdb9b6963b29df0caa472f73c15717d6b67d6f"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:a6096af3fba11306015120f371b569b74c24af3079eeb4375b75aa5ed7a55d35",
+        "gameId": "2026_01_DAL_NYG",
+        "temporalRevisionId": "sha256:af0dffd18884f6591d437bc28fcdb9b6963b29df0caa472f73c15717d6b67d6f"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2026_02_NO_BAL",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:85e7ff69a13850aaceae8aee9d51ebc6dd83da931fe27e707d5c4052d0276d5b",
+        "gameId": "2026_02_NO_BAL",
+        "temporalRevisionId": "sha256:b672814eb7a386a7141523f9b61ed8306d4a770c8733d921737f401fe685935e"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:85e7ff69a13850aaceae8aee9d51ebc6dd83da931fe27e707d5c4052d0276d5b",
+        "gameId": "2026_02_NO_BAL",
+        "temporalRevisionId": "sha256:b672814eb7a386a7141523f9b61ed8306d4a770c8733d921737f401fe685935e"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2026_02_WAS_DAL",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:0f7e513118bce910b2302f24d50557995f30961d058fbffecdde59d88dad3ce7",
+        "gameId": "2026_02_WAS_DAL",
+        "temporalRevisionId": "sha256:1c9d2ffb73a5355db2f2f3112360e0bdd1dd665ec7c2f3a9abba85b624f415b5"
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:0f7e513118bce910b2302f24d50557995f30961d058fbffecdde59d88dad3ce7",
+        "gameId": "2026_02_WAS_DAL",
+        "temporalRevisionId": "sha256:1c9d2ffb73a5355db2f2f3112360e0bdd1dd665ec7c2f3a9abba85b624f415b5"
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    },
+    {
+      "equalFields": [
+        "artifactId",
+        "calculationId",
+        "coverageRevisionId",
+        "gameId",
+        "temporalRevisionId"
+      ],
+      "gameId": "2026_03_BAL_DAL",
+      "historical": {
+        "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:1eed60cca19626d8eb4e00067cffdc0fe967eb06bcd07cedb614ba7b234b4467",
+        "gameId": "2026_03_BAL_DAL",
+        "temporalRevisionId": null
+      },
+      "new": {
+        "archiveId": "de4a91c9-3c53-444d-8656-0b8789cdad4e",
+        "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+        "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+        "coverageRevisionId": "sha256:1eed60cca19626d8eb4e00067cffdc0fe967eb06bcd07cedb614ba7b234b4467",
+        "gameId": "2026_03_BAL_DAL",
+        "temporalRevisionId": null
+      },
+      "temporalIdentityReason": "Association projection excludes archive receipts and SQL timestamps; original calculation, coverage and auxiliary facts are unchanged"
+    }
+  ],
+  "receipts": {
+    "historicalArchive": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+    "historicalCount": 15,
+    "historicalIndividualIds": "NOT_RECOVERED; summary records count only",
+    "newCount": 15,
+    "newIds": [
+      "sha256:18eb0c61395bbd37d85dd943873bc50a60d2d958fd2b7833ce2b2ecabd5b22e6",
+      "sha256:230e38fc99e3cdbfdfb1efe60d4a062a8ff089f4d4b3f2c4fc63d7513dac0405",
+      "sha256:2a71ab618243cb608be7ca032ee04334fc5121613611dc766f4502f232baafde",
+      "sha256:410780734d4da7bf76ad31e7356c978552d8107742a50ebe6b3e8e5f7ecb7c5c",
+      "sha256:60ee535b90fce0d58f3f23e06e355665c90cd78653c188187e49c9955c5d285b",
+      "sha256:6a1329297b4eb925215f68a33b77ac8988f30192d47857c28c78078ebbab8721",
+      "sha256:763f9d75959cf44c6720e8db21618c6f3fdbc2e2cfb0dc3a86e73cbd48a141b0",
+      "sha256:8c730d7d675925daea7d91690ea7e0e9f6d60a6fc4b4083b5a753a183c770b97",
+      "sha256:921b3b04d17bdf7bd8b0001a3c624a9987da0d96e1eaba74307cd4708d664733",
+      "sha256:9fc5804d79ff5b98ee1f2ba751cb4d76be46ce35eb2f6d84808a20cba3208cda",
+      "sha256:c43f7287d45cb601b8861ca74146de450e1efde861abbc8db3f8423b2833492c",
+      "sha256:c5a16fec673ec7e5534e35bec92d830f08af05e1319daf6adff01c44447c32f7",
+      "sha256:d9a86f975eaa6ac82800e48c37ab4c96e71c5be79af8b28407acf42569d14471",
+      "sha256:db42f238a298cbc3d7cd746452f834b5d681af968709f42bd4b63cd265d937e1",
+      "sha256:efe81b54b53ca491ddafeec2dd40f8d8578adabd5200a745face8c822dba5346"
+    ],
+    "newObservedAtMax": "2026-10-19T02:41:46.562885Z",
+    "newObservedAtMin": "2026-10-19T02:41:44.250637Z"
+  },
+  "sourceRevisionIds": [
+    "sha256:5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+    "sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+    "sha256:56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+    "sha256:fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d"
+  ]
+}
