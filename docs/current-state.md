@@ -105,7 +105,7 @@ Reproduzidos **110 testes Python**, **133 frontend**, lint/build, **120 document
 
 **Gate com dados reais pendente:** bundles/materializações antigos não foram localizados; o extrato real não é fonte válida. Próximo passo é reconstruir e aceitar os bundles a partir dos originais preservados, guardá-los em diretório durável, configurar pins e repetir HTTP/browser com dados reais. Depois, reduzir a carga de leitura da apresentação mínima e avaliar compreensão humana. Não houve aquisição, banco, modelo, processo semanal, merge em main, push, publicação ou deploy.
 
-## Recuperação real E5c-3R — candidata em 19/10/2026
+## Recuperação real E5c-3R — aceita em 19/10/2026
 
 Na branch isolada `codex/metrics-real-recovery-e5c3r`, sobre `ce06a629`, os quatro
 Parquets originais 2025/2026 tiveram seus hashes conferidos e foram reconstruídos
@@ -127,7 +127,18 @@ passaram. 303 pytest, 17 testes E5c-1, 26 exemplos E5a, schema de 48 documentos 
 133 testes frontend/lint/build aprovados. Processos próprios encerrados. Código
 aceito e checkout original preservados; sem publicação/push/merge/deploy.
 
-Esta é **candidata ao aceite**, não reescrita do aceite sintético anterior.
+Aceita na branch local `codex/metrics-integration-e5c3r` após revisão independente.
+Corrigido o preflight de restore.py (`23a48e8`): destinos/config/relatório devem
+ser disjuntos também do backup, sem symlinks ou `..`; nove testes novos passaram.
+O orquestrador revalidou as duas cópias (162 arquivos/249.063.080 bytes cada),
+restaurou uma terceira sem banco e repetiu auditoria exata das 557 associações/
+3.804 grupos, HTTP real de 48 documentos/11 recusas, Chrome desktop/mobile nos
+48 recortes e ciclo reinício/409 sobre cópia descartável. Reproduzidos 303 pytest
+existentes, nove novos, 17 E5c-1, 26 exemplos E5a, schema dos 48 reais e 133 frontend,
+lint/build. PIDs próprios encerrados e porta liberada; não houve nova carga SQL.
+**Gate real local E5c-3 fechado.** Próxima frente: apresentação visual com menos
+texto/detalhes técnicos antes dos números e avaliação de compreensão usando os
+recortes reais. [Aceite e evidências independentes](plans/metrics/e5c-3r-review/ACCEPTANCE.md).
 Completude, modelo EPA, expectativa, conhecimento/ingestão histórica e encerramento
 continuam UNKNOWN; compreensão humana e comparação/pregame não foram demonstradas.
 [Relatório, caminhos, identidades, provas e reprodução](plans/metrics/e5c-3r/REPORT.md).

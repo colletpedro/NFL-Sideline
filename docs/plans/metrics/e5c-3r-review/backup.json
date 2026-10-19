@@ -1,0 +1,18 @@
+{
+  "primary": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024130Z-50e03b27",
+  "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/20261019T024130Z-50e03b27",
+  "filesPerCopy": 162,
+  "bytesPerCopy": 249063080,
+  "fullHashesEqual": true,
+  "manifestSha256": "3ccd41b172dd23724cb6a622a05a41e22843779847073a230976d926bc627774",
+  "materializationId": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+  "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+  "observations": 48,
+  "associations": 557,
+  "groups": 3804,
+  "backupReadWithPrimaryFileReadsForbidden": "PASS",
+  "forbiddenReadsAttempted": 0,
+  "bothCopiesUnchanged": true,
+  "databaseStarted": false,
+  "newReceipts": false
+}

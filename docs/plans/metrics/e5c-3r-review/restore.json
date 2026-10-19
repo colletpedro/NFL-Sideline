@@ -1,0 +1,14 @@
+{
+  "allFileHashesEqual": true,
+  "archiveRootRestriction": "Raw copied archive receipts remain bound to their recorded original root; use the self-contained materialization/bundle at any safe physical path.",
+  "at": "2026-10-19T04:02:04.586310+00:00",
+  "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/20261019T024130Z-50e03b27",
+  "backupUnchanged": true,
+  "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+  "config": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/operations/review-20261019-orchestrator/lab-config.json",
+  "destination": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/review-20261019-orchestrator",
+  "materializationAndBundlePublicReadersPassed": true,
+  "newReceipts": false,
+  "observations": 48,
+  "proof": "RESTORE_FROM_DURABLE_BACKUP_NO_DATABASE"
+}

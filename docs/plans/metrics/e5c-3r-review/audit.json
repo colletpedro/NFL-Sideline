@@ -1,0 +1,26 @@
+{
+  "databaseReexecuted": false,
+  "scope": "Independent Parquet auditor against preserved SQL extraction and artifacts",
+  "results": [
+    {
+      "season": 2025,
+      "associations": 285,
+      "groups": 3420,
+      "reconciliation": "EXACT",
+      "sourceSets": {
+        "calendar": "sha256:5729647d468e8561f79f23021d36dbbff874d38ca4381cfb46783c750333733b",
+        "pbp": "sha256:7e72c4808a253e3d67cef50b7d5711f4c71cb2e1600bc5715d8e2a04aa971dae"
+      }
+    },
+    {
+      "season": 2026,
+      "associations": 272,
+      "groups": 384,
+      "reconciliation": "EXACT",
+      "sourceSets": {
+        "calendar": "sha256:fc69cfc398e94506dad74affcd343681aba34d9e7b192a4413bfc4bb4f5564bc",
+        "pbp": "sha256:56d79c9f822cb8910a6255e025078ac44d499d1e76942abe70af74cf3439745e"
+      }
+    }
+  ]
+}

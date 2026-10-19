@@ -1,0 +1,30 @@
+{
+  "proof": "REAL_HTTP_DISPOSABLE_REAL_BUNDLE_FREEZE_RESTART",
+  "temporaryCopy": "/private/tmp/nfl-e5c3r-freeze-hFDx5Q",
+  "preservedBundleModified": false,
+  "success": true,
+  "changedRestart": {
+    "previousSession": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+    "newSession": "sha256:aaecc52ec35a34ca25a733487c66a2c927c7483daf8cbd18b68e52ad84a7541f",
+    "oldSessionStatus": 409,
+    "errorCode": "BUNDLE_VALIDATION_FAILED",
+    "previousChoiceRemovedWithoutFallback": true
+  },
+  "restoredRestart": {
+    "sessionId": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+    "exactDocumentBytesEqual": true,
+    "choicePersistenceAfterRestart": true,
+    "revalidatedThroughReader": true
+  },
+  "initialSession": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+  "frozenCatalogSha256": "1b76ce1820e758bd7355cab4fd4b259343d9896d052c13cf7f28534b94b6bbd1",
+  "frozenDocumentSha256": "c0186e76967324a11e59e84234f1530a3e2a3a9f7806907f69a22bc031d47f2e",
+  "sameBytesDuringDiskMutation": true,
+  "serverPids": [
+    92915,
+    92957,
+    92960
+  ],
+  "ownServersStopped": true,
+  "browserClosed": true
+}
