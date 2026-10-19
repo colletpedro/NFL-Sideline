@@ -52,3 +52,8 @@ editorial/operational-validation-v1/python-tests.log
 
 # Execuções e capturas da interface local (reproduzíveis, sem dados públicos)
 editorial/local-interface-v1/runtime/
+
+# Artefatos completos E5c-3R, preservados localmente; scripts/evidências em docs/.
+/editorial/local-artifacts/real-recovery/
+/editorial/local-artifacts/backups/
+/editorial/local-artifacts/operations/

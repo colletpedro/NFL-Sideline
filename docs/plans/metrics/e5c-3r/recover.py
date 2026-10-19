@@ -208,6 +208,34 @@ def reconcile_docs(t,docs,manifest):
                 historicalExtractUsedAsSource=False,gapGameIds=sorted({m['gameId'] for d in docs for m in d['members'] if m['sourceState']=='ABSENT'}))
 
 
+def verify_copy(w, backup):
+    before=hashes(w);assert before==hashes(backup)
+    frozen=json.loads((backup/'SHA256SUMS.json').read_bytes())
+    assert frozen=={k:v for k,v in before.items() if k!='SHA256SUMS.json'}
+    hidden=w.with_name(w.name+'.copy-proof-hidden');assert not hidden.exists()
+    w.rename(hidden)
+    try:
+        copied=json.loads((backup/'recovery-report.json').read_bytes())
+        relocated=None
+        if copied['success']:
+            td,ld=read_materialized(backup/'materialized');ds,m=read(backup/'bundle')
+            assert m['bundleId']==copied['bundleId'] and len(ds)==48
+            # Receipts intentionally bind their recorded archive_root. Never rewrite them.
+            rr=json.loads((backup/'relations.json').read_bytes())
+            try:recover(rr,{copied['first']['2025']['archive_id']:str(backup/'archive')})
+            except ValueError as e:
+                assert str(e)=='Archive receipt integrity mismatch';relocated=str(e)
+            else:raise AssertionError('Expected path-bound archive receipt rejection')
+            for blob in (backup/'archive/blobs/sha256').glob('*/*'):assert sha(blob)==blob.name
+        proof=dict(primaryTemporarilyUnavailable=True,fullFileHashesEqual=True,
+            materializationAndBundleRead=bool(copied['success']),archiveBlobHashesChecked=bool(copied['success']),
+            relocatedArchiveReceiptRefusal=relocated,archiveRecoveryAtDifferentPath='NOT_SUPPORTED_BY_ACCEPTED_RECEIPT_CONTRACT',
+            backup=str(backup),primary=str(w),at=now(),sameDisk=True,disasterRecovery=False)
+    finally:hidden.rename(w)
+    assert hashes(w)==before==hashes(backup)
+    return proof
+
+
 def run(args):
     w,backup,ops=args.primary,args.backup,args.operations
     for p in (w,backup,ops):
@@ -305,18 +333,7 @@ def run(args):
         save(w/'SHA256SUMS.json',hashes(w))
         backup.parent.mkdir(parents=True,exist_ok=True);shutil.copytree(w,backup)
         assert hashes(w)==hashes(backup)
-        # The first physical location is unavailable; preserved historical paths untouched.
-        hidden=w.with_name(w.name+'.copy-proof-hidden');assert not hidden.exists()
-        w.rename(hidden)
-        try:
-            copied=json.loads((backup/'recovery-report.json').read_bytes())
-            if copied['success']:
-                td,ld=read_materialized(backup/'materialized');ds,m=read(backup/'bundle')
-                assert m['bundleId']==copied['bundleId'] and len(ds)==48
-                rr=json.loads((backup/'relations.json').read_bytes());buf=recover(rr,{copied['first']['2025']['archive_id']:str(backup/'archive')})
-                assert buf
-            proof=dict(primaryTemporarilyUnavailable=True,fullFileHashesEqual=True,materializationAndBundleRead=bool(copied['success']),archiveRecovery=bool(copied['success']),backup=str(backup),primary=str(w),at=now(),sameDisk=True,disasterRecovery=False)
-        finally:hidden.rename(w)
+        proof=verify_copy(w,backup)
         save(args.report,report|{'backupProof':proof,'fileManifestSha256':sha(w/'SHA256SUMS.json')})
     print(json.dumps({'success':report['success'],'bundleId':report.get('bundleId'),'primary':str(w),'backup':str(backup)}),flush=True)
 
