@@ -1,0 +1,164 @@
+{
+  "transportVersion": "metrics-lab-response-v1",
+  "sessionId": "sha256:a9c839a6e35f753ef446a66ec82a3f4d1c5a29747dc91801b2276f7a13b474c9",
+  "document": {
+    "bundleId": "sha256:7d6e3c71116935e42fe01e3cad1c2161dff89b4776f679d1ec2d629d96b9778c",
+    "dtoId": "sha256:64a2fc682d20045d150adc7762de3aef9c7150224010d0a08784a7cbb1d15015",
+    "dtoVersion": "metrics-lab-observation-v1",
+    "entryId": "synthetic",
+    "fieldScopes": {
+      "eligibleN,epaN,successN,epaMissingN,epaNonfiniteN,epaSum": "original selected game/team/role/foundation statistics",
+      "generalEligibleN": "same game/team/role/revisions: statistics foundation=general",
+      "unknownFilterFlagsN": "GAME_CONTEXT: original.coverage.unknown_filter_flags_n; not measured by team/role/foundation; sum once per distinct game within one observation; never sum across observations/groups"
+    },
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "reasonCodes": [],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "expectedCount": "1",
+        "reasonCodes": [],
+        "state": "KNOWN"
+      },
+      "integrity": {
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "AAA"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS",
+        "subjectId": "synthetic-1"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "synthetic-1"
+      }
+    ],
+    "members": [
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "synthetic-1",
+        "round": "REG",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "3",
+          "epaMissingN": "1",
+          "epaN": "2",
+          "epaNonfiniteN": "0",
+          "epaSum": "-0.0000000000000000000000000000001",
+          "generalEligibleN": "3",
+          "successN": "0",
+          "unknownFilterFlagsN": "1"
+        },
+        "week": 1
+      }
+    ],
+    "observationId": "sha256:776461c274372648796f95fd8314b27d757c36c1ac980165e47f9c14a1d176a7",
+    "observed": {
+      "actualWeeks": [
+        1
+      ],
+      "includedGameIds": [
+        "synthetic-1"
+      ]
+    },
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1
+        ]
+      },
+      "phase": "REG",
+      "season": 2026
+    },
+    "scope": {
+      "aggregation": "SINGLE_GAME",
+      "population": "OBSERVED_SAMPLE"
+    },
+    "subject": {
+      "foundation": "general",
+      "role": "off",
+      "team": "AAA"
+    },
+    "totals": {
+      "eligibleN": "3",
+      "epaMissingN": "1",
+      "epaN": "2",
+      "epaNonfiniteN": "0",
+      "epaSum": "-0.0000000000000000000000000000001",
+      "generalEligibleN": "3",
+      "successN": "0",
+      "unknownFilterFlagsN": "1"
+    },
+    "values": {
+      "epa": {
+        "denominator": "2",
+        "numerator": "-0.0000000000000000000000000000001"
+      },
+      "frequency": null,
+      "successRate": {
+        "denominator": "2",
+        "numerator": "0"
+      },
+      "volume": {
+        "denominator": "1",
+        "numerator": "3"
+      }
+    }
+  }
+}

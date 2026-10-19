@@ -1,0 +1,12 @@
+{
+  "configVersion": "metrics-lab-config-v1",
+  "bundles": [
+    {
+      "entryId": "accepted-archive",
+      "label": "Arquivo aceito 2026 W1 e W2 e refer\u00eancia POST2025",
+      "dataKind": "REAL_ARCHIVE",
+      "path": "/caminho/absoluto/fora-de-web-ui/bundle-completo",
+      "expectedBundleId": "sha256:8016e8dd854a3c400f05758fca61f1a13011a7e93e5169694255c87ac2bce46e"
+    }
+  ]
+}
