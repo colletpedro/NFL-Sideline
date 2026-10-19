@@ -78,6 +78,8 @@ def freeze(original, w):
 
 def code_inventory():
     paths=command(['git','ls-files','contracts/metrics','etl-pipeline/src/nfl_sideline_etl','etl-pipeline/tests',
+                   'etl-pipeline/run_pipeline.py','etl-pipeline/load_games.py','etl-pipeline/load_metrics.py',
+                   'etl-pipeline/seed_teams.py','etl-pipeline/run_local.py',
                    'docs/plans/metrics/e5b-6','docs/plans/metrics/e5b-5/proof.py','web-ui/build','web-ui/local-editorial',
                    'supabase/migrations']).stdout.decode().splitlines()
     result={}
