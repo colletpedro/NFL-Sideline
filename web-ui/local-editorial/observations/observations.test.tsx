@@ -8,6 +8,7 @@ import { observationDocument } from './client';
 import { countText, formatRatio } from './format';
 import { prepareSnapshot } from '../../build/observations-process.mjs';
 import { ObservationReading } from './Observations';
+import { proportionWidth, readingPeriod } from './presentation';
 import { chooseAvailable } from './selection';
 
 const clone = <T,>(v: T): T => JSON.parse(JSON.stringify(v)) as T;
@@ -96,5 +97,40 @@ describe('exact single observation reading', () => {
     for (const phrase of ['Desconhecido', 'Sem denominador', 'zero conhecido', 'Fonte ausente', 'Observação vazia sustentada', 'Referência histórica', 'modelo não identificado', 'Cobertura esperada desconhecida', 'contexto do jogo inteiro']) expect(texts.some(t => t.includes(phrase))).toBe(true);
     expect(texts.every(t => t.includes('Conhecimento no corte não demonstrado'))).toBe(true);
     expect(texts.every(t => t.match(/aria-label="Observação selecionada"/g)?.length === 1)).toBe(true);
+  });
+});
+
+
+describe('E5c-4 presentation semantics', () => {
+  it('bounds chart geometry using exact integers, including unsafe Number counts', () => {
+    expect(proportionWidth({ numerator: '1', denominator: '3' })).toBe('33.33%');
+    expect(proportionWidth({ numerator: '0', denominator: '19' })).toBe('0.00%');
+    expect(proportionWidth({ numerator: '900719925474099300000', denominator: '1801439850948198600000' })).toBe('50.00%');
+    expect(proportionWidth({ numerator: '1', denominator: '9999999999999999999999' })).toBe('0.00%');
+  });
+  it('keeps precise fractions in disclosure and all interpretation limits outside it', () => {
+    const d = sample();
+    const html = renderToStaticMarkup(<ObservationReading d={d} entry={{ label: 'Test archive', dataKind: 'SYNTHETIC' }}/>);
+    const immediate = html.split('<details')[0];
+    expect(immediate).not.toContain(`${d.values.epa!.numerator} / ${d.values.epa!.denominator}`);
+    expect(html).toContain(`${d.values.epa!.numerator} / ${d.values.epa!.denominator}`);
+    for (const text of ['Dados sintéticos', 'modelo não identificado', 'Conhecimento no corte não demonstrado', 'previsão de vencedor', 'jogadas com EPA']) expect(immediate).toContain(text);
+    expect(html).toContain('role="img"');
+    expect(readingPeriod(d)).not.toContain('sha256');
+  });
+  it('does not draw zero or invent a minimum area for a tiny positive rate', () => {
+    const d = sample(); d.values.successRate = { numerator: '1', denominator: '9999999999999999999999' };
+    const html = renderToStaticMarkup(<ObservationReading d={d} entry={{ label: 'Synthetic', dataKind: 'SYNTHETIC' }}/>);
+    expect(html).toContain('&lt;0,1%');
+    expect(html).toContain('Proporção positiva, menor que 0,01%');
+  });
+  it('uses a source gap without a metric, zero bar, or false sample', () => {
+    const d = raw.entries.flatMap(e => e.documents.map(validateDTO)).find(d => d.totals === null)!;
+    const html = renderToStaticMarkup(<ObservationReading d={validateDTO(d)} entry={{ label: 'Synthetic', dataKind: 'SYNTHETIC' }}/>).split('<details')[0];
+    expect(html).toContain('Fonte ausente');
+    expect(html).toContain('desconhecidas, não zero');
+    expect(html).not.toContain('obs-value');
+    expect(html).not.toContain('obs-track');
+    expect(html).not.toContain('Amostra do arquivo');
   });
 });

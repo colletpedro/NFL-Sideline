@@ -136,7 +136,7 @@ function Workspace({ context }: { context: Context }) {
 }
 
 export default function App() {
-  const [mode, setMode] = useState<'real' | 'fixture' | 'observations'>(() => { try { return sessionStorage.getItem('metrics-lab-mode') === 'observations' ? 'observations' : 'real'; } catch { return 'real'; } });
+  const [mode, setMode] = useState<'real' | 'fixture' | 'observations'>(() => { try { const stored = sessionStorage.getItem('metrics-lab-mode'); return stored === 'real' || stored === 'fixture' ? stored : 'observations'; } catch { return 'observations'; } });
   const [contexts, setContexts] = useState<Context[]>([]);
   const [selected, setSelected] = useState('');
   const [error, setError] = useState('');
@@ -152,13 +152,14 @@ export default function App() {
     return () => { cancelled = true; };
   }, [reload, mode]);
   const context = contexts.find(item => item.gameId === selected);
+  const modePicker = <details className="lab-modes" open={mode !== 'observations'}><summary>Outras leituras do laboratório</summary><div className="mode-picker"><label htmlFor="mode">Fonte da leitura</label><select id="mode" value={mode} onChange={event => { setMode(event.target.value as 'real' | 'fixture' | 'observations'); try { sessionStorage.setItem('metrics-lab-mode', event.target.value); } catch { /* preference only */ } }}>
+        <option value="observations">Métricas · arquivo de jogadas</option><option value="real">API local · resultados reais</option><option value="fixture">Fixtures sintéticas · prévia do contrato</option>
+      </select></div></details>;
   return <><a className="skip" href="#workspace">Pular para o laboratório</a>
     <header className="topbar"><div className="brand">NFL <strong>SIDELINE</strong><span> / EDITORIAL</span></div><span className="local-badge"><span/>AMBIENTE LOCAL</span></header>
-    <main id="workspace"><div className="page-heading"><div><p className="eyebrow">LABORATÓRIO EDITORIAL</p><h1>{mode === 'observations' ? 'Observações auditáveis.' : 'Do contexto à análise.'}</h1>
-      <p className="muted">{mode === 'observations' ? 'Leia números arquivados, denominadores e limites de uma observação por vez.' : 'Explore a geração offline e as tentativas preservadas.'}</p></div><Database size={30} aria-hidden="true"/></div>
-      <div className="mode-picker"><label htmlFor="mode">Fonte da leitura</label><select id="mode" value={mode} onChange={event => { setMode(event.target.value as 'real' | 'fixture' | 'observations'); try { sessionStorage.setItem('metrics-lab-mode', event.target.value); } catch { /* preference only */ } }}>
-        <option value="observations">Observações auditáveis · bundles validados</option><option value="real">API local · resultados reais</option><option value="fixture">Fixtures sintéticas · prévia do contrato</option>
-      </select></div>
+    <main id="workspace" className={mode === 'observations' ? 'metrics-main' : undefined}><div className="page-heading"><div><p className="eyebrow">LABORATÓRIO EDITORIAL</p><h1>{mode === 'observations' ? 'Leitura de jogo.' : 'Do contexto à análise.'}</h1>
+      <p className="muted">{mode === 'observations' ? 'Explore o que aconteceu nas jogadas do arquivo.' : 'Explore a geração offline e as tentativas preservadas.'}</p></div><Database size={30} aria-hidden="true"/></div>
+      {mode !== 'observations' && modePicker}
       {mode === 'observations' ? <Observations/> : mode === 'fixture' ? <FixtureWorkspace/> : <>
         <div className="context-picker"><label htmlFor="context">Contexto de avaliação</label>
           <select id="context" value={selected} disabled={loading || !contexts.length} onChange={event => setSelected(event.target.value)}>
@@ -170,6 +171,7 @@ export default function App() {
         {!loading && !error && !context && <p>O catálogo não contém contextos para geração.</p>}
         {context && <Workspace key={context.gameId} context={context}/>}
       </>}
+      {mode === 'observations' && modePicker}
       <footer>{mode === 'observations' ? 'Observações arquivadas · Sem comparação ou pregame' : 'Regras locais · Dados congelados · Sem publicação'} <span>A validação mecânica não comprova qualidade editorial.</span></footer>
     </main></>;
 }
