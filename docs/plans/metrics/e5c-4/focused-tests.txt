@@ -1,0 +1,16 @@
+
+> web-ui@0.0.0 test
+> vitest run local-editorial/observations/observations.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/visual-reading-e5c4/NFL Sideline/web-ui
+
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 2006ms
+   ✓ observation restricted transport > validates operational synthetic DTOs and refuses missing scopes/limits/IDs/unknown versions 328ms
+   ✓ exact single observation reading > shows defensive meaning, periods, unknowns, zero, denominator zero, absent source and complete empty distinctly 1110ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  13:16:37
+   Duration  66.15s (transform 11.04s, setup 0ms, collect 15.07s, tests 2.01s, environment 1ms, prepare 4.20s)
+

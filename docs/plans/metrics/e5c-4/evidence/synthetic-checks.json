@@ -1,0 +1,15 @@
+{
+  "proof": "CUA_BROWSER_INTERCEPTED_EXISTING_SYNTHETIC_FIXTURES",
+  "fixtures": [
+    "web-ui/local-editorial/observations/test-fixtures/session.json",
+    "docs/plans/metrics/e5c-3/prepare_demo.py helpers().source_fixture()"
+  ],
+  "checks": [
+    "zero conhecido",
+    "volume positivo sem denominador EPA",
+    "população declarada completa vazia",
+    "−<0,001 preservado",
+    "SYNTHETIC identificado"
+  ],
+  "realBundlesModified": false
+}
