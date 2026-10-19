@@ -4,14 +4,20 @@ from pathlib import Path
 import json
 import shutil
 from recover import hashes,save,now
-from nfl_sideline_etl.metrics_observations.publication import read
+from nfl_sideline_etl.metrics_observations.publication import read,safe_path
 from nfl_sideline_etl.metrics_materialization.publication import read as read_materialized
 
 
 def restore(backup,destination,config,report):
+    if not backup.is_absolute() or not backup.is_dir():
+        raise ValueError('Absolute existing backup required')
+    safe_path(backup)
     for p in (destination,config,report):
+        safe_path(p)
         if not p.is_absolute() or p.exists():raise ValueError('Absolute new destinations required')
         if 'web-ui' in p.parts:raise ValueError('Operational output must stay outside web-ui')
+        if p==backup or p.is_relative_to(backup) or backup.is_relative_to(p):
+            raise ValueError('Output destinations must be disjoint from backup')
     if any(a==b or a.is_relative_to(b) or b.is_relative_to(a) for a,b in ((destination,config),(destination,report),(config,report))):
         raise ValueError('Output destinations must be disjoint')
     before=hashes(backup);declared=json.loads((backup/'SHA256SUMS.json').read_bytes())

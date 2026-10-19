@@ -51,6 +51,9 @@ bundle completos pelo reader aceito, verifica que o backup não mudou e cria uma
 **configuração externa nova** com path restaurado/pin conferido. A configuração
 congelada dentro da cópia é registro da execução original; não é usada para
 resolver o path novo. Não há banco, rede, novos receipts ou nova derivação.
+Os três destinos devem ser disjuntos entre si e também do backup: nunca coloque
+a cópia, a configuração ou o relatório dentro da árvore preservada. O preflight
+recusa essa situação antes de ler/copiar, além de recusar symlinks e `..`.
 O reader do bundle funciona em paths físicos diferentes, sem symlinks.
 [backup-verification.json](backup-verification.json) também demonstra leitura
 integral com a primeira localização temporariamente inexistente.
