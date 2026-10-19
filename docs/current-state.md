@@ -1,4 +1,4 @@
-# Estado consolidado — 15/10/2026
+# Estado consolidado — 18/10/2026
 
 Esta página sucede os estados operacionais descritos em [avaliação de cobertura](../editorial/coverage-clarity-v1/REPORT.md), [integração local](../editorial/local-integration-v1/REPORT.md) e [validação operacional](../editorial/operational-validation-v1/REPORT.md). Esses relatórios são registros históricos das respectivas entregas; suas pendências e contagens não são afirmações sobre o estado atual.
 
@@ -96,6 +96,14 @@ Integrada sem correção de código em `codex/metrics-integration-e5c2`, sobre a
 Reproduzidos **397 testes Python**, **17 E5c-1**, schema e validação semântica de **54 documentos**, prova real em saída nova e três adulterações com IDs/hashes externos recalculados, todas recusadas. A prova gerou o mesmo bundle da candidata: **48 observações**, 72 reconciliações por membro (48 grupos distintos, com períodos sobrepostos), BAL/DAL 2026 W1–2, NE POST2025 e a lacuna BAL W3. [Aceite e reprodução](plans/metrics/e5c-2-review/ACCEPTANCE.md).
 
 Completude, expectativa, modelo EPA e conhecimento temporal reais permanecem UNKNOWN; arquivo vazio sem vínculo por jogo continua lacuna/null. unknownFilterFlagsN é contexto do jogo, explicitado em fieldScopes/limitações. O extrato versionado não substitui o bundle completo. Próxima entrega: **E5c-3, adaptador explícito para o laboratório local**, antes da apresentação. Coleta prospectiva, E4 humano, BASIC/FULL e demais pendências continuam separadas. Sem alteração dos componentes aceitos anteriores, banco, aquisição, modelos, processo semanal, publicação, merge em main, push ou deploy.
+
+## Laboratório E5c-3 — integração sintética aceita em 18/10/2026
+
+Integrado sem correção de código em `codex/metrics-integration-e5c3`, sobre a candidata `b39120b15254b6fa56da17483cbce603a1633637`. Adaptador Python chama o reader E5c-2 e reduz documentos; o Vite congela catálogo/respostas na inicialização, com rotas GET locais restritas e seleção de uma observação por vez. Valores exatos, denominadores, períodos, UNKNOWN e escopo de jogo das flags acompanham os dados. Sem comparação ou conclusão pregame.
+
+Reproduzidos **110 testes Python**, **133 frontend**, lint/build, **120 documentos sintéticos e 12 recusas em HTTP real**, congelamento após alteração em disco, revalidação no reinício e 409 à sessão antiga. Build público normal/variáveis VITE_* hostis idênticos. Servidores próprios encerrados e porta 18083 liberada. Capturas candidatas desktop/mobile inspecionadas; a sessão Chrome da candidata não foi repetida pelo orquestrador. Cinco expected-failure legados preservados. [Aceite, provas e limites](plans/metrics/e5c-3-review/ACCEPTANCE.md).
+
+**Gate com dados reais pendente:** bundles/materializações antigos não foram localizados; o extrato real não é fonte válida. Próximo passo é reconstruir e aceitar os bundles a partir dos originais preservados, guardá-los em diretório durável, configurar pins e repetir HTTP/browser com dados reais. Depois, reduzir a carga de leitura da apresentação mínima e avaliar compreensão humana. Não houve aquisição, banco, modelo, processo semanal, merge em main, push, publicação ou deploy.
 
 ## Política de arquivos
 

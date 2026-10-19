@@ -1,0 +1,338 @@
+{
+  "base": "152313edf7d74c2175f5b3727c521e69bb71b30d",
+  "candidate": "b39120b15254b6fa56da17483cbce603a1633637",
+  "candidateFileHashes": [
+    {
+      "path": "docs/local-editorial-ui.md",
+      "sha256": "f08b8a40934bb580abc5494bf2fd379d5e0674e3a56629a9e6bee8dc7e1d4cc2"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/DESIGN.md",
+      "sha256": "fde87623b0360dff984a26f4a0a54afe39dab9d491fa58d37c413a32e0fecb47"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/README.md",
+      "sha256": "0dfdfbd72adcfa57279089a910ed03780f7524d73f995e8a202187732cb66789"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/REPORT.md",
+      "sha256": "467a627ede2dfbcbb0fd679355cc8472da5434bb8966fe263ce11cf0e471588e"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/TRANSPORT.md",
+      "sha256": "58afe25dfff9016c43d3ed28af0fc7049ac2cac1f91ed44b749852862e70057b"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/SHA256SUMS.json",
+      "sha256": "1403b9c03e4c8dced109a6276f7d0c1c06e5b515b17a1e0f64be625ebaf14b66"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/browser.json",
+      "sha256": "00a2a78d0d56e679a0cb1e273b3d68c5a413136eb5a325e8df60e009076cd776"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/desktop-unknown.png",
+      "sha256": "af616a86bf90bcb2a643598e744ac3e042f9f0f3050ceccf1f253f34ad4d3377"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/freeze.txt",
+      "sha256": "2706a44f0d240e145d7b6aeddf09633562f7ebc823f44e9584d0390af86ebabb"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/http.json",
+      "sha256": "05e4f687b1fbfc8b63d9d3ee40fae5bbb617eaf647d29e1b579cd9b6074e9755"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/mobile-complete-empty.png",
+      "sha256": "091784e89ce488ef17cb4ecab15dcdaf2462089509267aee63a2d5c7781d91a1"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/mobile-history.png",
+      "sha256": "eedf06cb3071215cf60d68d4799b6d816f7fdbbc5e9f3f1ee37c48552e6a7907"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/production.json",
+      "sha256": "9112f160dd1b9f467deb79398e1187f95c2e4b5cb6401ed77f256df10a1e79df"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/evidence/transport-example.synthetic.json",
+      "sha256": "9268d10411f6c69c26310fb82772dab1faa105375d625e8ee750905997c090df"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/operator-config.example.json",
+      "sha256": "9492d55cf95a38738eedcd61ebd2706f71f3ecbd434b2ce8d24cc5b9edfbb0e8"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/prepare_demo.py",
+      "sha256": "4000d3a73406919a6cb9cb8995fe78aaf23665259c566adb2de63f06b7ec84e3"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/verify_browser.cjs",
+      "sha256": "a722df3a2b347beef1aae557f337f441d792073a05c27bdfd7d285d42b11f302"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/verify_freeze.py",
+      "sha256": "8555d8f1ae593dc7c672b83188651c63f3f750f793b688fb9635a18cde0906da"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/verify_http.py",
+      "sha256": "1e6be6fb7217729131c51acdd2749b813e4f73c2b7063d3ac3a57398fd33ccfd"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/verify_preservation.py",
+      "sha256": "2f0c9d74023a5b911a87e230aea4dbdc715ba1ea2e98a51c2dc2c467f6763fea"
+    },
+    {
+      "path": "docs/plans/metrics/e5c-3/verify_production.py",
+      "sha256": "b32bfdbbc06ab33338d285885b72a37def11b7975ff9c6f3fa496d4cbac571b4"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_lab/__init__.py",
+      "sha256": "d475dd7b7b2c55ade18ad0c42ef27f1c49ea3c10e1fdc18f059ed924d522c15b"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_lab/__main__.py",
+      "sha256": "d12cbaf857d3680388c9fe519daaa40ceccd036ceaacd5629d9efbe26978879a"
+    },
+    {
+      "path": "etl-pipeline/src/nfl_sideline_etl/metrics_lab/adapter.py",
+      "sha256": "0b5e1e0c969fd128f4fb439d01d3b84176a81269177ecd99c5a25b6590452452"
+    },
+    {
+      "path": "etl-pipeline/tests/test_metrics_lab.py",
+      "sha256": "4f2169c61cff0b1a8bd8847ee135368c51354c67a1fb868111156f2635b2322b"
+    },
+    {
+      "path": "web-ui/build/observations-process.d.mts",
+      "sha256": "fb4f6323ff414cfa6ba1aa43ed530d78b7143ed38f820b75fe0e1fbc296b9d9b"
+    },
+    {
+      "path": "web-ui/build/observations-process.mjs",
+      "sha256": "15816123fa95e4883a67c9b8d08045ef4228201aa355521fd998bd97a0a37a90"
+    },
+    {
+      "path": "web-ui/build/observations.ts",
+      "sha256": "8eab1d61936417f0730d2ede622108f1c11f311d4d0bdcdbc48fe533d85de81a"
+    },
+    {
+      "path": "web-ui/local-editorial/App.tsx",
+      "sha256": "e64d634cd4f115ef480896ccf8ed7899b119bdee6ed8554680b56f6149e78b57"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/Observations.tsx",
+      "sha256": "acdae8337ea2b5264c9d7677e2cd130afdea8d5cf0f7cccf0f7dc4700c2954ec"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/client.ts",
+      "sha256": "906485929cac14fed6459693a130d5ea46af146ddc68e5d5f54ba02766e006df"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/format.ts",
+      "sha256": "9b23d7813a46f2f24c4c687df8fcaa5769aa1a7bf216aec525809dc19b113142"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/model.ts",
+      "sha256": "ccba2cddb269a704eee4bab4b649e1a08d82ad8d8e97eda6cc3b7bcc404ecc04"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/observations.css",
+      "sha256": "392b6f58faf352c551f3cdc3262914e8ffd2a319853951ce7496d0c382d85f27"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/observations.test.tsx",
+      "sha256": "0a42cc8428129a87af3928683b10ca681947901de57c07daae6cbe9ca8974bde"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/selection.ts",
+      "sha256": "a7b74c95ac38768fe13f62264ffb2a5f1537929059f4b3d461ad9e0dae39956f"
+    },
+    {
+      "path": "web-ui/local-editorial/observations/test-fixtures/session.json",
+      "sha256": "20b974827a3f3658a9147ca750e04b9898308f335cd5b26295b910cb673b3f4c"
+    },
+    {
+      "path": "web-ui/vite.editorial.config.ts",
+      "sha256": "4cbf7e7863ff1eef472d2d1af54826bc93601153b801afb0c0017b04a66bedba"
+    }
+  ],
+  "candidateSourceUnchanged": true,
+  "validation": {
+    "pythonDistinctTests": 110,
+    "frontendTestsIncludingFiveExpectedFailures": 133,
+    "lint": "PASS",
+    "build": "PASS",
+    "hostileViteBuildByteIdentical": "PASS",
+    "httpSyntheticDocuments": 120,
+    "httpRefusals": 12,
+    "freezeAndRestart": "PASS",
+    "realDataProof": "PENDING",
+    "humanComprehension": "NOT_EVALUATED",
+    "independentBrowserSession": "NOT_REPEATED",
+    "candidateScreenshots": "desktop and mobile opened and inspected"
+  },
+  "integratedAdapterSessionId": "sha256:a9c839a6e35f753ef446a66ec82a3f4d1c5a29747dc91801b2276f7a13b474c9",
+  "historicalFiles": [
+    {
+      "path": "Handoff.md",
+      "sha256": "b9622fbd1d5c9fa0fc345abc014b873bfc645762aab36d2668825ff7a5c40e64"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/user-prompt.txt",
+      "sha256": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/user-prompt.txt",
+      "sha256": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/user-prompt.txt",
+      "sha256": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/user-prompt.txt",
+      "sha256": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/user-prompt.txt",
+      "sha256": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/user-prompt.txt",
+      "sha256": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/diagnose_both_keys.py",
+      "sha256": "6cc1cd4b24bc318db90e014c081efebbcbf1e77c0730636cd8ac5f064bf5d4e5"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/diagnose_prod_key.py",
+      "sha256": "47eeb3356bf4e80749e5af3b78322ff73a883453ff201a2c5a29aad741d9742c"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/ClaimRenderer.baseline.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/PromptCatalog.baseline.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/EvaluationApplication.java.txt",
+      "sha256": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiClient.java.txt",
+      "sha256": "6b546badebbfeef7b0a177151af9a8ca7f27c79bdb9762cecb40b950dbaaecfe"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GenerationFailure.java.txt",
+      "sha256": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/EvaluationApplication.java.txt",
+      "sha256": "db0558bfc643c7f851ef7d6f5a2efbe0a8f12e74659a48a4326298c316494247"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/EvaluationApplication.java.txt",
+      "sha256": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GeminiClient.java.txt",
+      "sha256": "73889cceac497594f504594fc1242379b777ccb67dbcf9f2cb534687133b77d5"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/GenerationFailure.java.txt",
+      "sha256": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/ClaimRenderer.java.txt",
+      "sha256": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/EvaluationApplication.java.txt",
+      "sha256": "2c394dd66f345051a3177d0d3059b2adc06b825d4aab587985746315f0a9f0d8"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/GeminiRequest.java.txt",
+      "sha256": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/PromptCatalog.java.txt",
+      "sha256": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/run_authorized.py",
+      "sha256": "3cfe30c9048b7a4956ec0af561690a864e86c470340373834b439153324867a3"
+    },
+    {
+      "path": "reports/Compet\u00eancias profissionais no NFL Sideline.md",
+      "sha256": "6388328969fc46426cb988ab8bb3a742a59d02c19c2259bdfe6f18b55039ed3b"
+    },
+    {
+      "path": "research_notes/Compet\u00eancias profissionais no NFL Sideline/backend_ai.md",
+      "sha256": "8f9bdec3d76aa96a284c4811af805b83b9df49f1e2a241fcaa526f276eadb5e0"
+    },
+    {
+      "path": "research_notes/Compet\u00eancias profissionais no NFL Sideline/data_engineering.md",
+      "sha256": "ab11c5f7b7f2897e6874c5b139bd70b1de6f68d6625b8e6e802d0a6bbf4e8b1e"
+    },
+    {
+      "path": "research_notes/Compet\u00eancias profissionais no NFL Sideline/frontend_ops.md",
+      "sha256": "3a761ec2723324fe2a6839e5cff3d7ecd5834b0d588b9fbf5e4caa0e0ac41499"
+    }
+  ],
+  "runtime": "existing ETL venv; existing Node/Vite dependencies; no installs",
+  "scope": "Synthetic integration accepted; actual archived data gate still pending"
+}
