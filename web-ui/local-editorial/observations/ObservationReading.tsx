@@ -57,6 +57,14 @@ export function ObservationReading({ d, entry }: { d: DTO; entry: Pick<Entry, 'l
     <aside className="obs-limits" aria-label="Limites essenciais"><h3>Até onde esta leitura vai</h3>
       <p>{completeness === 'COMPLETE' ? 'Completude demonstrada para a população declarada.' : completeness === 'PARTIAL' ? 'A fonte contém uma amostra parcial.' : 'Não sabemos se a fonte contém todas as jogadas.'} {d.guarantees.coverage.expectedCount === null ? 'Cobertura esperada desconhecida.' : `${d.observed.includedGameIds.length} jogo(s) com fonte de ${countText(d.guarantees.coverage.expectedCount)} esperado(s).`} Conhecimento no corte não demonstrado: este arquivo não comprova o que se sabia antes dos jogos. Sem comparação entre times ou previsão de vencedor.</p>
     </aside>
+    <ObservationInspection d={d} entry={entry}/>
+  </article>;
+}
+
+export function ObservationInspection({ d, entry }: { d: DTO; entry: Pick<Entry, 'label' | 'dataKind'> }) {
+  const t = d.totals; const def = d.subject.role === 'def';
+  const metricLabels = { epa: def ? 'EPA permitido' : 'EPA ofensivo', successRate: def ? 'Sucesso permitido' : 'Taxa de sucesso', volume: 'Jogadas observadas', frequency: 'Frequência' };
+  return (
     <div className="obs-inspection">
       <details className="obs-details"><summary>Precisão e contagens <span>Valores originais e denominadores</span></summary>
         <dl className="obs-counts">{Object.entries(d.values).map(([key, value]) => <div key={key}><dt>{metricLabels[key as keyof typeof metricLabels]} · fração exata</dt><dd>{value ? exact(value) : 'Desconhecido / não definido'}</dd></div>)}</dl>
@@ -73,5 +81,5 @@ export function ObservationReading({ d, entry }: { d: DTO; entry: Pick<Entry, 'l
         <p>O DTO é uma projeção de apresentação; seu hash não identifica os bytes originais. A verificação do browser é estrutural e não autentica a origem. A linhagem integral e os receipts permanecem no bundle local validado.</p>
       </details>
     </div>
-  </article>;
+  );
 }
