@@ -58,7 +58,7 @@ function EssentialLimits({ d }: { d: DTO }) {
 function FieldScene() {
   return <div className="field-scene" aria-hidden="true"><span/><span/><span/><span/><span/><span/><span/></div>;
 }
-export function DirectionReading({ d, entry, direction, controls }: { d: DTO; entry: Pick<Entry, 'label' | 'dataKind'>; direction: Exclude<Direction, 'original'>; controls: ReactNode }) {
+export function DirectionReading({ d, entry, direction, controls }: { d: DTO; entry: Pick<Entry, 'label' | 'dataKind'>; direction: Exclude<Direction, 'original' | 'D'>; controls: ReactNode }) {
   const team = teams[d.subject.team] ?? { city: '', name: d.subject.team }; const parts = successParts(d); const def = d.subject.role === 'def';
   const empty = d.totals?.eligibleN === '0';
   return <article className={`direction-reading scene-${direction}`} aria-label="Observação selecionada" data-observation-id={d.observationId}>
