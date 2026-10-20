@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "zero",
+    "positiveSegments": 0,
+    "text": "AAAAAAAAADefesaContra passe2026 · Temporada regular · Semana 1Dados sintéticos · demonstraçãoSeu recorte  / 3 opçõesAlterar recorteTimeSelecioneAAALado da bolaSelecioneDefesaFundamentoSelecionePassePeríodoSelecione2026 · Temporada regular · Semana 12026 · Temporada regular · Semana 22026 · Temporada regular · Semana 3DefesaPasseSucesso permitido ao adversário0,0%0 de 1 jogadas com EPA positivoEPA positivo1 com EPA zero ou negativoEPA e sucesso são valores permitidos ao ataque adversário.EPA permitido0,000Pontos esperados / jogada · base 1Mudança nos pontos esperados.Zero é a referência numérica.Jogadas observadas1Jogos com fonte1Amostra deste recorte, não o total da temporada.EPA da fonte, modelo não identificado. A taxa de sucesso depende desse EPA.Limites da leituraNão sabemos se todas as jogadas estão na fonte. Jogos esperados: 1. O arquivo não comprova o que era conhecido antes dos jogos. Sem comparação entre times ou previsão de vencedor."
+  },
+  {
+    "kind": "no-epa",
+    "text": "AAAAAAAAADefesaContra passe2026 · Temporada regular · Semana 1Dados sintéticos · demonstraçãoSeu recorte  / 3 opçõesAlterar recorteTimeSelecioneAAALado da bolaSelecioneDefesaFundamentoSelecionePassePeríodoSelecione2026 · Temporada regular · Semana 12026 · Temporada regular · Semana 22026 · Temporada regular · Semana 3DefesaPasseHá jogadas, mas não há base EPA—Nenhuma jogada com EPA disponível. Denominador zero não é uma taxa de sucesso de 0%.EPA e sucesso são valores permitidos ao ataque adversário.EPA permitido—Indisponível · denominador EPA zeroMudança nos pontos esperados.Zero é a referência numérica.Jogadas observadas1Jogos com fonte1Amostra deste recorte, não o total da temporada.EPA da fonte, modelo não identificado. A taxa de sucesso depende desse EPA. Fora da base EPA: 1 ausentes e 0 não finitos.Limites da leituraNão sabemos se todas as jogadas estão na fonte. Jogos esperados: 1. O arquivo não comprova o que era conhecido antes dos jogos. Sem comparação entre times ou previsão de vencedor.",
+    "tracks": 0
+  },
+  {
+    "kind": "tiny",
+    "text": "AAAAAAAAAAtaquePasse + corrida2026 · Temporada regular · Semanas 1, 2, 3Dados sintéticos · demonstraçãoSeu recorte  / 6 opçõesAlterar recorteTimeSelecioneAAALado da bolaSelecioneAtaqueDefesaFundamentoSelecionePasse + corridaPasseCorridaPeríodoSelecione2026 · Temporada regular · Semanas 1, 2, 3AtaqueDefesaPasse + corridaPasseCorridaJogadas com EPA positivo0,0%0 de 2 jogadas com EPA positivoEPA positivo2 com EPA zero ou negativoEPA por jogada−<0,001Pontos esperados / jogada · base 2Mudança nos pontos esperados.Zero é a referência numérica.Jogadas observadas3Jogos com fonte3Amostra deste recorte, não o total da temporada.EPA da fonte, modelo não identificado. A taxa de sucesso depende desse EPA. Fora da base EPA: 1 ausentes e 0 não finitos.Limites da leituraNão sabemos se todas as jogadas estão na fonte. Jogos esperados: 4. O arquivo não comprova o que era conhecido antes dos jogos. Sem comparação entre times ou previsão de vencedor."
+  }
+]

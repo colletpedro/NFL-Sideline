@@ -1,0 +1,68 @@
+[
+  {
+    "selector": ".barlow .light h2",
+    "fonts": [
+      {
+        "familyName": "Barlow Condensed",
+        "glyphCount": 16,
+        "isCustomFont": true,
+        "postScriptName": "BarlowCondensed-Bold"
+      }
+    ]
+  },
+  {
+    "selector": ".barlow .light h3",
+    "fonts": [
+      {
+        "familyName": "Barlow Semi Condensed",
+        "glyphCount": 14,
+        "isCustomFont": true,
+        "postScriptName": "BarlowSemiCondensed-SemiBold"
+      }
+    ]
+  },
+  {
+    "selector": ".barlow .stat strong",
+    "fonts": [
+      {
+        "familyName": "Barlow",
+        "glyphCount": 6,
+        "isCustomFont": true,
+        "postScriptName": "Barlow-Bold"
+      }
+    ]
+  },
+  {
+    "selector": ".plex .light h2",
+    "fonts": [
+      {
+        "familyName": "IBM Plex Sans Cond",
+        "glyphCount": 16,
+        "isCustomFont": true,
+        "postScriptName": "IBMPlexSansCond-Bold"
+      }
+    ]
+  },
+  {
+    "selector": ".plex .stat strong",
+    "fonts": [
+      {
+        "familyName": "IBM Plex Sans",
+        "glyphCount": 6,
+        "isCustomFont": true,
+        "postScriptName": "IBMPlexSans-Bold"
+      }
+    ]
+  },
+  {
+    "selector": ".plex article p",
+    "fonts": [
+      {
+        "familyName": "IBM Plex Sans",
+        "glyphCount": 17,
+        "isCustomFont": true,
+        "postScriptName": "IBMPlexSans"
+      }
+    ]
+  }
+]
