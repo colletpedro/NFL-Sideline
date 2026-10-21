@@ -1,0 +1,611 @@
+{
+  "date": "2026-10-21",
+  "responsive": [
+    {
+      "board": {
+        "bottom": 784.640625,
+        "height": 593.640625,
+        "left": 12,
+        "right": 378,
+        "top": 191,
+        "width": 366,
+        "x": 12,
+        "y": 191
+      },
+      "height": 844,
+      "logos": [
+        {
+          "complete": true,
+          "height": 500,
+          "rect": {
+            "bottom": 368.5,
+            "height": 95.15625,
+            "left": 55.921875,
+            "right": 151.078125,
+            "top": 273.34375,
+            "width": 95.15625,
+            "x": 55.921875,
+            "y": 273.34375
+          },
+          "width": 500
+        },
+        {
+          "complete": true,
+          "height": 500,
+          "rect": {
+            "bottom": 397.78125,
+            "height": 153.71875,
+            "left": 209.640625,
+            "right": 363.359375,
+            "top": 244.0625,
+            "width": 153.71875,
+            "x": 209.640625,
+            "y": 244.0625
+          },
+          "width": 500
+        }
+      ],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "board": {
+        "bottom": 727.734375,
+        "height": 536.734375,
+        "left": 12,
+        "right": 308,
+        "top": 191,
+        "width": 296,
+        "x": 12,
+        "y": 191
+      },
+      "fonts": [
+        "20.128px",
+        "20.128px",
+        "20px",
+        "20px",
+        "20px",
+        "20px"
+      ],
+      "height": 844,
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "board": {
+        "bottom": 730.734375,
+        "height": 536.734375,
+        "left": 12,
+        "right": 308,
+        "top": 194,
+        "width": 296,
+        "x": 12,
+        "y": 194
+      },
+      "height": 844,
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "board": {
+        "bottom": 787.640625,
+        "height": 593.640625,
+        "left": 12,
+        "right": 378,
+        "top": 194,
+        "width": 366,
+        "x": 12,
+        "y": 194
+      },
+      "height": 844,
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "board": {
+        "bottom": 873.53125,
+        "height": 740.734375,
+        "left": 460,
+        "right": 980,
+        "top": 132.796875,
+        "width": 520,
+        "x": 460,
+        "y": 132.796875
+      },
+      "height": 900,
+      "scroll": 1440,
+      "width": 1440
+    }
+  ],
+  "fonts": [
+    {
+      "selector": ".recap-header h1",
+      "css": {
+        "font": "\"Pilot Archivo\", Arial, sans-serif",
+        "size": "31.11px",
+        "stretch": "100%",
+        "weight": "700"
+      },
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 14,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Bold"
+        }
+      ]
+    },
+    {
+      "selector": ".recap-header p",
+      "css": {
+        "font": "\"Pilot Archivo\", Arial, sans-serif",
+        "size": "17.568px",
+        "stretch": "100%",
+        "weight": "400"
+      },
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 18,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Regular"
+        }
+      ]
+    },
+    {
+      "selector": ".recap-name strong",
+      "css": {
+        "font": "\"Pilot Archivo\", Arial, sans-serif",
+        "size": "24.888px",
+        "stretch": "100%",
+        "weight": "700"
+      },
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 7,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Bold"
+        }
+      ]
+    },
+    {
+      "selector": ".recap-name span",
+      "css": {
+        "font": "\"Pilot Archivo\", Arial, sans-serif",
+        "size": "17.202px",
+        "stretch": "100%",
+        "weight": "400"
+      },
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 6,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Regular"
+        }
+      ]
+    },
+    {
+      "selector": ".recap-headline",
+      "css": {
+        "font": "\"Pilot Archivo\", Arial, sans-serif",
+        "size": "23.424px",
+        "stretch": "100%",
+        "weight": "700"
+      },
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 48,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Bold"
+        }
+      ]
+    },
+    {
+      "selector": ".recap-fact",
+      "css": {
+        "font": "\"Pilot Roboto Condensed\", \"Arial Narrow\", sans-serif",
+        "size": "23.058px",
+        "stretch": "100%",
+        "weight": "600"
+      },
+      "fonts": [
+        {
+          "familyName": "Roboto Condensed",
+          "glyphCount": 50,
+          "isCustomFont": true,
+          "postScriptName": "RobotoCondensed-SemiBold"
+        }
+      ]
+    },
+    {
+      "selector": ".pilot-topbar nav a",
+      "css": {
+        "font": "\"Pilot Archivo\", Arial, sans-serif",
+        "size": "13px",
+        "stretch": "100%",
+        "weight": "400"
+      },
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 9,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Regular"
+        }
+      ]
+    }
+  ],
+  "navigation": {
+    "priorObservation": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+    "version42Observation": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b"
+  },
+  "errors": [],
+  "text200": {
+    "headline": "40px",
+    "overflow": [],
+    "scroll": 305,
+    "width": 320
+  },
+  "pilotRequests": [
+    "http://127.0.0.1:18083/",
+    "http://127.0.0.1:18083/@vite/client",
+    "http://127.0.0.1:18083/main.tsx",
+    "http://127.0.0.1:18083/@react-refresh",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/Downloads/NFL%20Sideline/web-ui/node_modules/vite/dist/client/env.mjs",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=170d8d3b",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/node_modules/.vite/deps/react.js?v=170d8d3b",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/node_modules/.vite/deps/react-dom_client.js?v=170d8d3b",
+    "http://127.0.0.1:18083/App.tsx",
+    "http://127.0.0.1:18083/style.css",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/node_modules/.vite/deps/chunk-6KWZ6EMY.js?v=170d8d3b",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/node_modules/.vite/deps/chunk-4VSOUGEQ.js?v=170d8d3b",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/attack-not-demonstrated.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/both-negative.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/both-sides.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/complete-matchup.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/coverage-gap.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/general-represented.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/historical.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/independent-opportunity.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/missing.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/negative-tiny-sign.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/opportunity.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/opposition.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/outlier.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/partial.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/tie.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/tiny-sign.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/two-weeks.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/uneven-weeks.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/variation.json?import",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/fixtures/valid/zero.json?import",
+    "http://127.0.0.1:18083/observations/Observations.tsx",
+    "http://127.0.0.1:18083/matchup/MatchupPilot.tsx",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/node_modules/.vite/deps/lucide-react.js?v=170d8d3b",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/src/features/analysis-visual/VisualAnalysis.tsx",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/src/features/analysis-visual/validate.ts",
+    "http://127.0.0.1:18083/client.ts",
+    "http://127.0.0.1:18083/observations/client.ts",
+    "http://127.0.0.1:18083/observations/ObservationReading.tsx",
+    "http://127.0.0.1:18083/observations/presentation.ts",
+    "http://127.0.0.1:18083/observations/selection.ts",
+    "http://127.0.0.1:18083/observations/observations.css",
+    "http://127.0.0.1:18083/observations/DirectionReading.tsx",
+    "http://127.0.0.1:18083/observations/directionData.ts",
+    "http://127.0.0.1:18083/observations/directions.css",
+    "http://127.0.0.1:18083/broadcast/RefinedBroadcastReading.tsx",
+    "http://127.0.0.1:18083/broadcast/BroadcastReading.tsx",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/schema.json?import&raw",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/contracts/visual-analysis/v1/copy-catalog.json?import&raw",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/src/features/analysis-visual/decimal.ts",
+    "http://127.0.0.1:18083/matchup/fixture.ts",
+    "http://127.0.0.1:18083/matchup/RecapBoard.tsx",
+    "http://127.0.0.1:18083/matchup/pilot.css",
+    "http://127.0.0.1:18083/@fs/Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL%20Sideline/web-ui/src/features/analysis-visual/visual.css",
+    "http://127.0.0.1:18083/observations/model.ts",
+    "http://127.0.0.1:18083/observations/format.ts",
+    "http://127.0.0.1:18083/broadcast/refinementThemes.ts",
+    "http://127.0.0.1:18083/broadcast/refinement.css",
+    "http://127.0.0.1:18083/broadcast/themes.ts",
+    "http://127.0.0.1:18083/broadcast/broadcast.css",
+    "http://127.0.0.1:18083/broadcast/assets/dal.png?import",
+    "http://127.0.0.1:18083/broadcast/assets/ne.png?import",
+    "http://127.0.0.1:18083/broadcast/assets/bal.png?import",
+    "http://127.0.0.1:18083/broadcast/assets/dal.png",
+    "http://127.0.0.1:18083/broadcast/assets/ne.png",
+    "http://127.0.0.1:18083/matchup/assets/Archivo-Variable.ttf",
+    "http://127.0.0.1:18083/matchup/assets/RobotoCondensed-Variable.ttf"
+  ],
+  "realDataRequests": [],
+  "keyboard": {
+    "active": "Confronto",
+    "outline": "solid",
+    "outlineColor": "rgb(215, 255, 63)",
+    "rect": {
+      "bottom": 95,
+      "height": 45.8984375,
+      "left": 16,
+      "right": 74.0078125,
+      "top": 49.1015625,
+      "width": 58.0078125,
+      "x": 16,
+      "y": 49.1015625
+    }
+  },
+  "reducedMotion": {
+    "animations": 0,
+    "matches": true
+  },
+  "proofFonts": [
+    {
+      "selector": ".type-archivo .recap-header h1",
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 14,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Bold"
+        }
+      ],
+      "css": {
+        "size": "38.7564px",
+        "stretch": "100%",
+        "weight": "700"
+      }
+    },
+    {
+      "selector": ".type-archivo .recap-header p",
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 18,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Regular"
+        }
+      ],
+      "css": {
+        "size": "26.1381px",
+        "stretch": "100%",
+        "weight": "400"
+      }
+    },
+    {
+      "selector": ".type-archivo .recap-fact",
+      "fonts": [
+        {
+          "familyName": "Roboto Condensed",
+          "glyphCount": 50,
+          "isCustomFont": true,
+          "postScriptName": "RobotoCondensed-Bold"
+        }
+      ],
+      "css": {
+        "size": "29.7433px",
+        "stretch": "100%",
+        "weight": "700"
+      }
+    },
+    {
+      "selector": ".type-archivo .pilot-glyphs",
+      "fonts": [
+        {
+          "familyName": "Archivo SemiBold",
+          "glyphCount": 46,
+          "isCustomFont": true,
+          "postScriptName": "ArchivoRoman-Regular"
+        }
+      ],
+      "css": {
+        "size": "12px",
+        "stretch": "100%",
+        "weight": "400"
+      }
+    },
+    {
+      "selector": ".type-plex .recap-header h1",
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "glyphCount": 14,
+          "isCustomFont": true,
+          "postScriptName": "IBMPlexSans-Bold"
+        }
+      ],
+      "css": {
+        "size": "38.7564px",
+        "stretch": "100%",
+        "weight": "700"
+      }
+    },
+    {
+      "selector": ".type-plex .recap-header p",
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "glyphCount": 18,
+          "isCustomFont": true,
+          "postScriptName": "IBMPlexSans"
+        }
+      ],
+      "css": {
+        "size": "26.1381px",
+        "stretch": "100%",
+        "weight": "400"
+      }
+    },
+    {
+      "selector": ".type-plex .recap-fact",
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans Cond",
+          "glyphCount": 50,
+          "isCustomFont": true,
+          "postScriptName": "IBMPlexSansCond-Bold"
+        }
+      ],
+      "css": {
+        "size": "29.7433px",
+        "stretch": "100%",
+        "weight": "700"
+      }
+    },
+    {
+      "selector": ".type-plex .pilot-glyphs",
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "glyphCount": 46,
+          "isCustomFont": true,
+          "postScriptName": "IBMPlexSans"
+        }
+      ],
+      "css": {
+        "size": "12px",
+        "stretch": "100%",
+        "weight": "400"
+      }
+    },
+    {
+      "selector": ".type-barlow .recap-header h1",
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "glyphCount": 14,
+          "isCustomFont": true,
+          "postScriptName": "Barlow-Bold"
+        }
+      ],
+      "css": {
+        "size": "38.7564px",
+        "stretch": "100%",
+        "weight": "700"
+      }
+    },
+    {
+      "selector": ".type-barlow .recap-header p",
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "glyphCount": 18,
+          "isCustomFont": true,
+          "postScriptName": "Barlow-Regular"
+        }
+      ],
+      "css": {
+        "size": "26.1381px",
+        "stretch": "100%",
+        "weight": "400"
+      }
+    },
+    {
+      "selector": ".type-barlow .recap-fact",
+      "fonts": [
+        {
+          "familyName": "Barlow Condensed",
+          "glyphCount": 50,
+          "isCustomFont": true,
+          "postScriptName": "BarlowCondensed-Bold"
+        }
+      ],
+      "css": {
+        "size": "29.7433px",
+        "stretch": "100%",
+        "weight": "700"
+      }
+    },
+    {
+      "selector": ".type-barlow .pilot-glyphs",
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "glyphCount": 46,
+          "isCustomFont": true,
+          "postScriptName": "Barlow-Regular"
+        }
+      ],
+      "css": {
+        "size": "12px",
+        "stretch": "100%",
+        "weight": "400"
+      }
+    }
+  ],
+  "finalResponsive": [
+    {
+      "height": 844,
+      "scroll": 320,
+      "touchTargets": [
+        {
+          "height": 44,
+          "text": "NFL SIDELINE"
+        },
+        {
+          "height": 45.5,
+          "text": "Confronto"
+        },
+        {
+          "height": 45.5,
+          "text": "Outras propostas"
+        },
+        {
+          "height": 44,
+          "text": "Laboratório"
+        },
+        {
+          "height": 44,
+          "text": "Prova tipográfica"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "height": 844,
+      "scroll": 375,
+      "touchTargets": [
+        {
+          "height": 44,
+          "text": "NFL SIDELINE"
+        },
+        {
+          "height": 45.5,
+          "text": "Confronto"
+        },
+        {
+          "height": 45.5,
+          "text": "Outras propostas"
+        },
+        {
+          "height": 44,
+          "text": "Laboratório"
+        },
+        {
+          "height": 44,
+          "text": "Prova tipográfica"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "height": 900,
+      "scroll": 1440,
+      "width": 1440
+    },
+    {
+      "body": 320,
+      "height": 844,
+      "scroll": 320,
+      "width": 320,
+      "mobileEmulation": true
+    },
+    {
+      "body": 390,
+      "height": 844,
+      "scroll": 390,
+      "width": 390,
+      "mobileEmulation": true
+    }
+  ]
+}

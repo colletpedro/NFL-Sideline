@@ -1,0 +1,20 @@
+{
+  "base": "92cda64b3680f8b621bc0e77361db2adfcd67257",
+  "protectedPaths": [
+    "core-api",
+    "etl-pipeline",
+    "supabase",
+    "contracts",
+    "web-ui/src",
+    "web-ui/public",
+    "web-ui/build",
+    "web-ui/local-editorial/observations",
+    "web-ui/local-editorial/broadcast"
+  ],
+  "diff": [],
+  "assets": {
+    "docs/plans/metrics/broadcast-matchup-pilot/evidence/reference-original.png": "6cb8523be5189c214d4a1734a9d7990ac9e3891a9cdd39cd16b1da756ddb5bde",
+    "web-ui/local-editorial/broadcast/assets/dal.png": "f4ea9a2ec7d7d500f08db94c8c6f1b23f75361ffe39c4d4b480a684a511ce61e",
+    "web-ui/local-editorial/broadcast/assets/ne.png": "dac19aa9a573dcf9075e2422bee3e35a4955b9ab494bb3191ab3bacfd3609729"
+  }
+}

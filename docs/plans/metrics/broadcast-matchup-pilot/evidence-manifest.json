@@ -1,0 +1,142 @@
+{
+  "desktop-1440.png": {
+    "width": 1440,
+    "height": 900,
+    "sha256": "131b49bea43f6598a0a9ccb4294aa9410ad0cb83b1ed770228a90297a981f14a"
+  },
+  "desktop-full.png": {
+    "width": 1425,
+    "height": 957,
+    "sha256": "d852858ff4afd280c84713abfdca9160205a15f45219fcc8e8eea4f0186117b0"
+  },
+  "keyboard-focus-mobile.png": {
+    "width": 390,
+    "height": 844,
+    "sha256": "fbcf8db805243d255e8ffbb72da2314491602edb202061ddf37996f09b020e8d"
+  },
+  "laboratory-return-mobile.png": {
+    "width": 375,
+    "height": 1668,
+    "sha256": "25f136e4f4e8f833fc16149a8446b44f7b8ee5f4893e3aa51e21c33a89598f60"
+  },
+  "mobile-320.png": {
+    "width": 320,
+    "height": 844,
+    "sha256": "5e9bc9e0d08d78c46b783cb3d850d9e629b84cf6b3f50ca20e3e6d1e3662af70"
+  },
+  "mobile-390-viewport.png": {
+    "width": 390,
+    "height": 844,
+    "sha256": "cec3534e4780638111c6430c9e35974c62ef84a709833064f4efb8317a463c07"
+  },
+  "mobile-390.png": {
+    "width": 390,
+    "height": 844,
+    "sha256": "4a0e08d1b9d4ca7880bc51074395c7e132e9790d2cdfbb4f1278ea7bb6dac6d7"
+  },
+  "reference-original.png": {
+    "width": 772,
+    "height": 1090,
+    "sha256": "6cb8523be5189c214d4a1734a9d7990ac9e3891a9cdd39cd16b1da756ddb5bde"
+  },
+  "round1-after-board.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "131520414eeec8350db487d94b984a490d592c33c4360e87df1aaf3dbad64df3"
+  },
+  "round1-after-comparison.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "e3d8207668a44bb98503a234a71e7b2b26964411419abae1339698708d59247b"
+  },
+  "round1-after-desktop.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "617afbbb5e1dade2939f85f0c62c628ccdb349d59efcca7d099c2d656a7a0514"
+  },
+  "round1-before-board.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "15828e1111c552cbc50378acf905b573a592bf719248d6724de35da5baa26755"
+  },
+  "round1-before-comparison.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "136f0bcc9a52a95a2937a74b52fc04f8024558775389cb71e04f07dd7244b39f"
+  },
+  "round1-before-desktop.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "6f9057e98bd12231ed195cb5b2ce058b6d0af1a593b1d821cab7d364ba93f324"
+  },
+  "round2-after-board.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "be4ee3c73d4839462f4a2be8cfcf81979db4023e4f8914012e2ee0483960a199"
+  },
+  "round2-after-comparison.png": {
+    "width": 1440,
+    "height": 900,
+    "sha256": "0871bf68e69692c17b0305774741ecd638e65a80e2aa853391e89957f03eeed8"
+  },
+  "round2-after-desktop.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "56bd848422fb771b549d357b7f72101653e5645e0bce9f2d74e4833258ea659e"
+  },
+  "round2-before-board.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "131520414eeec8350db487d94b984a490d592c33c4360e87df1aaf3dbad64df3"
+  },
+  "round2-before-comparison.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "e3d8207668a44bb98503a234a71e7b2b26964411419abae1339698708d59247b"
+  },
+  "round2-before-desktop.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "617afbbb5e1dade2939f85f0c62c628ccdb349d59efcca7d099c2d656a7a0514"
+  },
+  "round3-after-board.png": {
+    "width": 520,
+    "height": 740,
+    "sha256": "ab1a761528035b57af2f9af2b417858bdc4378c3c8536850e2bff6b9950d77ba"
+  },
+  "round3-after-comparison.png": {
+    "width": 1440,
+    "height": 900,
+    "sha256": "f99662047dbe973ca20388b88e6c9424d9d867a0a0bcd7c6edc2bbcc87853c30"
+  },
+  "round3-before-board.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "be4ee3c73d4839462f4a2be8cfcf81979db4023e4f8914012e2ee0483960a199"
+  },
+  "round3-before-comparison.png": {
+    "width": 1440,
+    "height": 900,
+    "sha256": "0871bf68e69692c17b0305774741ecd638e65a80e2aa853391e89957f03eeed8"
+  },
+  "round3-before-mobile.png": {
+    "width": 390,
+    "height": 870,
+    "sha256": "c79a6f242b74bb4ac29b03ec61b32d598116f3692dcb140bb6a3b78d81c49ea8"
+  },
+  "text-200-mobile.png": {
+    "width": 305,
+    "height": 2125,
+    "sha256": "9b875e08bcb071d89a332016bc69d9bd2844a4839cfe84098d198733a7c4442b"
+  },
+  "type-proof-before.png": {
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "6ccf65fce8ef72e445c4e05b75b74ac703e535dd83a00945db759c3e031a21fc"
+  },
+  "type-proof-final.png": {
+    "width": 1425,
+    "height": 1023,
+    "sha256": "c8708ac4e0313e8e0d2e71bd6d57360025c159f32cacc8379671dfdf43cf2227"
+  }
+}

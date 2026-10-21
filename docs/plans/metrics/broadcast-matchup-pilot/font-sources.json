@@ -1,0 +1,30 @@
+[
+  {
+    "path": "web-ui/local-editorial/matchup/assets/Archivo-Variable.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/archivo/Archivo%5Bwdth%2Cwght%5D.ttf",
+    "revision": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+    "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053",
+    "bytes": 658596
+  },
+  {
+    "path": "web-ui/local-editorial/matchup/assets/archivo-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/archivo/OFL.txt",
+    "revision": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+    "sha256": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b",
+    "bytes": 4388
+  },
+  {
+    "path": "web-ui/local-editorial/matchup/assets/robotocondensed-OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/robotocondensed/OFL.txt",
+    "revision": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+    "sha256": "0e4cc6ece88573545be2ed25835363662a6182ba4a4c1b5c8feda52add30e8a6",
+    "bytes": 4393
+  },
+  {
+    "path": "web-ui/local-editorial/matchup/assets/RobotoCondensed-Variable.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/robotocondensed/RobotoCondensed%5Bwght%5D.ttf",
+    "revision": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+    "sha256": "dace262afcee68a5276f200d8026c57221735c0118ab5fda8c2c0d3dc409a8d0",
+    "bytes": 371616
+  }
+]

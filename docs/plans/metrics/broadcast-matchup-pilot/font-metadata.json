@@ -1,0 +1,36 @@
+[
+  {
+    "path": "web-ui/local-editorial/matchup/assets/RobotoCondensed-Variable.ttf",
+    "family": "Roboto Condensed",
+    "version": "Version 3.008; 2023",
+    "postscript": "RobotoCondensed-Regular",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "default": 400.0,
+        "max": 900.0
+      }
+    ]
+  },
+  {
+    "path": "web-ui/local-editorial/matchup/assets/Archivo-Variable.ttf",
+    "family": "Archivo SemiBold",
+    "version": "Version 2.001",
+    "postscript": "Archivo-SemiBold",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "default": 600.0,
+        "max": 900.0
+      },
+      {
+        "tag": "wdth",
+        "min": 62.0,
+        "default": 100.0,
+        "max": 125.0
+      }
+    ]
+  }
+]
