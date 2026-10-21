@@ -1,0 +1,112 @@
+[
+  {
+    "action": "round6",
+    "url": "http://127.0.0.1:18086/?round=6",
+    "headline": "O chão dita o ritmo."
+  },
+  {
+    "action": "second-rush-details",
+    "url": "http://127.0.0.1:18086/confronto/baltimore-dallas?round=6&period=second&play=rush&details=open",
+    "context": "2º tempo / Corrida\nBAL: 19 jogadas · DAL: 10 jogadas",
+    "epa": [
+      "BAL+0,240",
+      "DAL−0,080"
+    ],
+    "missing": "Situações de jogo\n\nRecorte: 2º tempo · todos os fundamentos. Red zone = touchdowns / posses que chegaram à linha de 20 jardas.\n\nAtaque\t3ª descida\tRed zone\nBAL\t4/7\tNão disponível\nDAL\t2/6\t1/2"
+  },
+  {
+    "action": "reload",
+    "period": "second",
+    "selection": "true",
+    "expanded": "true"
+  },
+  {
+    "action": "back-context",
+    "url": "http://127.0.0.1:18086/?round=6",
+    "selected": "true"
+  },
+  {
+    "action": "third-matchup",
+    "url": "http://127.0.0.1:18086/confronto/new-england-baltimore?round=8",
+    "headline": "Uma posse faz a diferença."
+  },
+  {
+    "action": "1024-matchup",
+    "h": 2166,
+    "scroll": 1009,
+    "w": 1024
+  },
+  {
+    "action": "1024-home",
+    "scroll": 1009,
+    "w": 1024
+  },
+  {
+    "action": "visual-zoom200",
+    "layoutWidth": 1440,
+    "scale": 2,
+    "visualWidth": 712.5
+  },
+  {
+    "action": "text200-desktop",
+    "font": "32px",
+    "scroll": 1425,
+    "w": 1440
+  },
+  {
+    "action": "text200-mobile",
+    "font": "32px",
+    "overflow": [
+      "primary-link"
+    ],
+    "scroll": 427,
+    "w": 390
+  },
+  {
+    "action": "text200-mobile-after",
+    "font": "32px",
+    "scroll": 375,
+    "w": 390
+  },
+  {
+    "action": "text200-mobile-matchup",
+    "scroll": 376,
+    "w": 390
+  },
+  {
+    "action": "keyboard-skip",
+    "focus": "main"
+  },
+  {
+    "action": "keyboard-focus",
+    "outline": "rgb(23, 70, 106) solid 3px",
+    "rect": {
+      "bottom": 654.46875,
+      "height": 40,
+      "left": 39,
+      "right": 136,
+      "top": 614.46875,
+      "width": 97,
+      "x": 39,
+      "y": 614.46875
+    },
+    "text": "Todos",
+    "visible": true
+  },
+  {
+    "action": "keyboard-selection-details",
+    "url": "http://127.0.0.1:18086/confronto/new-england-baltimore?round=8&play=pass&details=open",
+    "expanded": "true"
+  },
+  {
+    "action": "reduced-motion",
+    "reduce": true,
+    "transition": "0s"
+  },
+  {
+    "action": "resources",
+    "origins": [
+      "http://127.0.0.1:18086"
+    ]
+  }
+]
