@@ -134,4 +134,8 @@ html{scroll-padding-top:100px}
 .source-note,.detail-table caption,.definition-grid p,.situational p{color:var(--muted)}
 .success-track{background:var(--chart-remainder);outline:1px solid var(--chart-line);outline-offset:-1px}
 .stat-table td small{font-size:.6875rem}
+.game-link-copy .muted,.game-link p{color:var(--muted)}
+.play-select button{min-height:44px}
+.period-label select{border-color:var(--chart-line)}
+@media(max-width:580px){.header-inner nav a{min-height:44px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
