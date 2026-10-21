@@ -1,0 +1,27 @@
+import { ChevronDown } from 'lucide-react';
+import { countPair, format, mean, pair, periodLabels, playLabels, rate, signed, summarize, teams, type Game, type Period, type PlayType } from './fixtures';
+import { recoverySlices, type Reading } from './editorial';
+
+export function SliceReading({ reading, game, recover }: { reading: Reading; game: Game; recover: (p: Period, f: PlayType) => void }) {
+  const choices = reading.decision === 'unavailable' || reading.decision === 'insufficient' ? recoverySlices(game, reading.context.period, reading.context.play) : [];
+  return <section className="slice-reading" aria-live="polite" aria-atomic="true" data-decision={reading.decision}>
+    <div className="reading-label"><span className="section-kicker">Leitura do recorte</span><p>{reading.context.label}</p></div>
+    <div className="reading-body"><h3>{reading.title}</h3><p>{reading.text}</p>
+      {reading.evidence.length > 0 && <ul className="reading-evidence">{reading.evidence.map(e => <li key={e.metric}><strong>{format(e.value, e.unit === 'p.p.' ? 1 : 3)} <small>{e.unit}</small></strong><span>{e.label}</span></li>)}</ul>}
+      {choices.length > 0 && <div className="recovery-actions"><span>Recortes com fonte completa</span>{choices.map(([p, f]) => <button key={`${p}-${f}`} onClick={() => recover(p, f)}>{periodLabels[p]} · {playLabels[f]}</button>)}</div>}
+    </div>
+  </section>;
+}
+export function StatSummary({ reading }: { reading: Reading }) {
+  return <section className="stats-section"><div className="stats-title"><h3>Volume do recorte</h3><p>Jardas e número de jogadas.</p></div><table className="stat-table"><caption className="sr-only">Estatísticas de ataque · {reading.context.label}</caption><thead><tr><th scope="col">Ataque</th>{reading.samples.map(s => <th scope="col" key={s.team}><span className="team-dot" style={{ background: teams[s.team].color }}/>{teams[s.team].city}</th>)}</tr></thead><tbody>
+    <tr><th scope="row">Jogadas</th>{reading.samples.map(s => <td key={s.team}>{s.plays ?? <span className="table-missing">Sem fonte</span>}</td>)}</tr>
+    <tr><th scope="row">Jardas produzidas</th>{reading.samples.map(s => <td key={s.team}>{s.yards === null ? <span className="table-missing">Sem fonte</span> : format(s.yards)}</td>)}</tr>
+    <tr><th scope="row">Jardas por jogada</th>{reading.samples.map(s => <td key={s.team}>{s.yards !== null && s.plays ? format(s.yards / s.plays, 1) : <span className="table-missing">{s.plays === 0 ? 'Sem amostra' : 'Sem fonte'}</span>}</td>)}</tr>
+    </tbody></table><p className="defense-definition"><b>Na defesa, a leitura se inverte:</b> a produção de um ataque corresponde aos valores permitidos pela defesa adversária.</p></section>;
+}
+export function AnalysisDetails({ game, period, play, open, toggle }: { game: Game; period: Period; play: PlayType; open: boolean; toggle: () => void }) {
+  return <section className={`details-section ${open ? 'is-open' : ''}`}><button className="details-toggle" aria-expanded={open} aria-controls="analysis-details" onClick={toggle}><span><b>Ver contagens e definições</b><span>Tabela dos gráficos, situações de jogo e composição da amostra</span></span><ChevronDown size={20} aria-hidden="true"/></button>{open && <div id="analysis-details" className="details-content"><div className="data-table-wrap"><table className="detail-table"><caption>Valores dos gráficos · {periodLabels[period]}</caption><thead><tr><th scope="col">Time / fundamento</th><th scope="col">Jogadas</th><th scope="col">Sucesso</th><th scope="col">EPA/jogada</th></tr></thead><tbody>{game.sides.flatMap(s => (play === 'all' ? ['pass', 'rush'] as const : [play]).map(p => {
+    const stat = summarize(s, period, p), average = mean(stat);
+    return <tr key={`${s.team}-${p}`}><th scope="row">{s.team} · {playLabels[p]}</th><td>{stat?.plays ?? 'Sem fonte'}</td><td>{stat ? stat.plays ? `${stat.success}/${stat.plays} · ${rate(stat)}` : 'Sem amostra' : 'Sem fonte'}</td><td>{average === null ? stat ? 'Sem amostra' : 'Sem fonte' : signed(average)}</td></tr>;
+  }))}</tbody></table></div><div className="definition-grid"><div><h3>EPA e sucesso medem coisas distintas</h3><p>EPA por jogada divide os pontos esperados adicionados pela amostra. Sucesso é a parcela de jogadas com EPA positivo. Uma média maior pode coexistir com uma frequência menor de sucesso.</p></div><div><h3>O que entra na amostra</h3><p>Passe inclui sacks. Corrida não inclui ajoelhadas ou spikes. Special teams ficam fora. Sem fonte completa para um componente, o agregado do recorte permanece indisponível; outro tempo não o substitui.</p></div></div><div className="situational"><h3>Situações de jogo</h3><p>{periodLabels[period]} · todos os fundamentos. Red zone = touchdowns / posses dentro da linha de 20 jardas.</p><table><thead><tr><th scope="col">Ataque</th><th scope="col">3ª descida</th><th scope="col">Red zone</th></tr></thead><tbody>{game.sides.map(s => <tr key={s.team}><th scope="row">{s.team}</th><td>{pair(countPair(s, period, 'third'))}</td><td>{pair(countPair(s, period, 'redzone'))}</td></tr>)}</tbody></table></div><p className="source-note">Dados sintéticos locais. Não descrevem uma partida ocorrida, não são previsão nem análise publicada. As sínteses são descritivas: mínimo de 10 jogadas por ataque; proximidade de até 0,010 EPA/jogada e 2 pontos percentuais de sucesso. Não são limites de significância estatística.</p></div>}</section>;
+}

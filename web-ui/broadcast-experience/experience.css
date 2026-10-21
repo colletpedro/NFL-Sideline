@@ -139,3 +139,143 @@ html{scroll-padding-top:100px}
 .period-label select{border-color:var(--chart-line)}
 @media(max-width:580px){.header-inner nav a{min-height:44px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* v2: preserve the broadcast materials; refine tracks, reading order and state. */
+.epa-track>span{min-width:0}
+.opening{grid-template-columns:minmax(0,1fr) clamp(280px,23vw,320px)}
+.opening-story{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 24px;align-content:start}
+.opening-story>.section-kicker{grid-column:1 / -1}
+.opening-story h2{grid-column:1;margin:0;align-self:center}
+.opening-story>.primary-link{grid-column:2;align-self:center}
+.opening-story>.opening-deck{grid-column:1 / -1}
+.opening-story .opening-bottom{grid-column:1 / -1;margin-top:8px;padding-top:18px;justify-content:flex-start}
+.game-status-score{display:flex;flex-direction:column;align-items:flex-end;gap:4px;margin-left:auto;flex-shrink:0}
+.game-status-score>span{font-size:.6875rem;color:var(--muted)}
+.game-status-score .mini-score{margin:0;flex-basis:auto;font-weight:650}
+.kickoff-time{font-family:'Roboto Condensed';font-size:1.125rem;font-weight:600;text-align:right}
+.round-games .archive-games{grid-template-columns:1fr}
+.round-games .game-link+.game-link{border-left:0;border-top:1px solid #8ca2af66}
+.round-games .game-link{padding-top:18px;padding-bottom:18px}
+.round-games .game-link-copy{flex:1}
+.metric-absent .epa-track{background:transparent}
+.metric-absent strong,.table-missing,.success-label>.missing-rate{font:500 .8125rem Archivo,sans-serif;color:var(--muted)}
+.missing-series{border-top:1px solid #859ca86b;padding-top:12px;min-height:38px;line-height:1.6}
+.slice-reading{display:grid;grid-template-columns:190px minmax(0,1fr);gap:36px;margin:0 36px;padding:28px 0 26px;border-top:1px solid #ffffff99}
+.reading-label>.section-kicker{color:var(--muted);font-size:.6875rem}
+.reading-label>p{font-size:.8125rem;color:var(--muted);line-height:1.6;margin-top:8px;max-width:20ch}
+.reading-body>h3{font-size:1.875rem;font-weight:700;letter-spacing:-.6px;line-height:1.12;max-width:36ch;text-wrap:balance}
+.reading-body>p{font-size:1rem;line-height:1.65;color:#2c4657;margin-top:12px;max-width:68ch}
+.reading-evidence{display:flex;gap:36px;list-style:none;margin:18px 0 0;padding:0}
+.reading-evidence>li{display:flex;flex-direction:column;gap:3px}
+.reading-evidence strong{font-family:'Roboto Condensed';font-size:1.875rem;font-weight:600;line-height:1.2}
+.reading-evidence small{font:400 .75rem Archivo;margin-left:7px;color:var(--muted)}
+.reading-evidence li>span{font-size:.6875rem;color:var(--muted)}
+.stats-section{grid-template-columns:190px minmax(0,1fr);gap:14px 36px;margin:0 36px;padding:24px 0 28px;border-top:1px solid #97aeba66}
+.stats-title h3{font-size:1.25rem}
+.stats-title p{font-size:.8125rem}
+.defense-definition{grid-column:2;font-size:.75rem;color:var(--muted);line-height:1.6;padding-top:6px;max-width:80ch}
+.defense-definition b{font-weight:600}
+.detail-table caption{padding-top:0}
+.definition-grid{margin-top:28px}
+.recovery-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;align-items:center}
+.recovery-actions>span{flex-basis:100%;font-size:.75rem;color:var(--muted);margin-bottom:2px}
+.recovery-actions>button{border:1px solid var(--chart-line);padding:10px 14px;background:#e6edf1;color:var(--ink);font-size:.8125rem;min-height:44px}
+.recovery-actions>button:hover{background:#f0f5f7}
+.pregame-agenda{display:flex;flex-direction:column;padding-left:24px;border-left:1px solid #8ba1ae66;gap:8px}
+.pregame-agenda>span{font-size:.75rem;color:var(--muted)}
+.pregame-agenda>strong{font-family:'Roboto Condensed';font-size:2rem;font-weight:600}
+.pregame-content{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:32px 36px 40px;border-top:1px solid #ffffff80}
+.pregame-content h2{font-size:1.875rem;letter-spacing:-.6px;line-height:1.15;margin-top:8px;max-width:20ch}
+.pregame-content p{font-size:.9375rem;line-height:1.7;margin-top:16px;color:var(--muted)}
+.pregame-content dl{margin:0}
+.pregame-content dl>div{padding:12px 0;border-bottom:1px solid #ffffff88}
+.pregame-content dt{font-size:.75rem;color:var(--muted)}
+.pregame-content dd{font-size:1rem;margin:4px 0 0;font-weight:500}
+.pregame-band .band-center{font-size:1.25rem;padding:12px 10px}
+.pregame-band .band-center>span{font-size:.6875rem}
+@media(min-width:801px){
+ .opening-band .team-wing{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);min-width:0}
+ .opening-band .wing-1{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+ .opening-band .team-logo{max-width:100%;object-fit:contain}
+ .opening-band .team-name{min-width:0;grid-column:1 / -1}
+ .opening-band .team-name>span,.opening-band .team-name>strong{overflow-wrap:anywhere}
+ .analysis-board .team-wing{grid-template-columns:minmax(0,150px) minmax(0,1fr) auto;min-width:0}
+ .analysis-board .wing-1{grid-template-columns:auto minmax(0,1fr) minmax(0,150px)}
+ .analysis-board .team-logo{max-width:100%}
+ .analysis-board .team-name>span,.analysis-board .team-name>strong{overflow-wrap:anywhere}
+ .analysis-board .pregame-band .team-wing{grid-template-columns:minmax(0,150px) minmax(0,1fr)}
+ .analysis-board .pregame-band .wing-1{grid-template-columns:minmax(0,1fr) minmax(0,150px)}
+ .pregame-band .wing-1 .team-logo{grid-column:2}
+ .pregame-band .wing-1 .team-name{grid-column:1}
+}
+@media(max-width:1100px){
+ .slice-reading{grid-template-columns:150px minmax(0,1fr);gap:28px;margin:0 26px}
+ .stats-section{grid-template-columns:150px minmax(0,1fr);gap:14px 28px;margin:0 26px}
+ .reading-body>h3{font-size:1.65rem}
+ .game-status-score{flex-basis:calc(100% - 92px);margin-left:92px;align-items:flex-start}
+ .round-games .game-status-score{flex-basis:auto;margin-left:auto;align-items:flex-end}
+ .round-games .game-link>svg{position:static}
+ .pregame-content{gap:32px;padding:28px 26px 36px}
+}
+@media(max-width:800px){
+ .opening{grid-template-columns:1fr}
+ .opening-story{grid-template-columns:minmax(0,1fr) auto}
+ .game-status-score{flex-basis:auto;margin-left:auto;align-items:flex-end}
+ .slice-reading{grid-template-columns:1fr;gap:12px}
+ .reading-label{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+ .reading-label>p{margin:0;max-width:none}
+ .reading-body>h3{font-size:1.75rem;max-width:28ch}
+ .reading-body>p{font-size:.9375rem}
+ .stats-section{grid-template-columns:1fr;gap:20px}
+ .defense-definition{grid-column:1}
+ .pregame-content{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:580px){
+ .opening-story{display:flex;flex-direction:column;gap:0;align-items:stretch}
+ .opening-story h2{align-self:stretch;margin:8px 0 16px}
+ .opening-story>.primary-link{align-self:stretch;margin:0 0 18px}
+ .opening-story .opening-bottom{margin-top:22px;padding-top:18px;display:grid}
+ .opening-aside>.section-kicker{max-width:32ch}
+ .opening-aside h2{font-size:1.7rem}
+ .game-status-score,.round-games .game-status-score{grid-column:2;grid-row:2;align-items:flex-start;flex-basis:auto;margin:4px 0 0}
+ .game-status-score>span{font-size:.625rem}
+ .kickoff-time{text-align:left;font-size:1.125rem}
+ .round-games .game-link{padding:18px 16px}
+ .slice-reading{margin:0 20px;padding:24px 0}
+ .reading-label{display:block}
+ .reading-label>p{margin-top:6px;font-size:.75rem}
+ .reading-body>h3{font-size:1.625rem;line-height:1.16;letter-spacing:-.5px}
+ .reading-body>p{font-size:.9375rem;line-height:1.65}
+ .reading-evidence{gap:18px;flex-wrap:wrap}
+ .reading-evidence strong{font-size:1.75rem}
+ .reading-evidence small{font-size:.6875rem}
+ .stats-section{display:block;margin:0 20px;padding:24px 0}
+ .defense-definition{margin-top:20px;font-size:.75rem}
+ .detail-table{min-width:100%}
+ .metric-absent strong{font-size:.6875rem}
+ .success-label>.missing-rate{font-size:1rem}
+ .missing-series{font-size:.8125rem}
+ .pregame-agenda{padding:16px 0 0;border-left:0;border-top:1px solid #91a7b466}
+ .pregame-agenda>strong{font-size:1.75rem}
+ .pregame-content{padding:24px 20px 32px}
+ .pregame-content h2{font-size:1.625rem}
+ .pregame-content p{font-size:.875rem}
+ .pregame-content dd{font-size:.9375rem}
+ .pregame-band .team-wing{min-height:190px}
+ .pregame-band .team-logo{flex:0 1 100%;max-width:calc(116px * var(--optical));height:96px;margin:auto}
+}
+@media(max-width:360px){
+ .slice-reading,.stats-section{margin-left:18px;margin-right:18px}
+ .round-games .game-link{padding:18px 12px}
+ .reading-body>h3{font-size:1.5rem}
+ .reading-evidence strong{font-size:1.6rem}
+ .pregame-content{padding-left:18px;padding-right:18px}
+}
+/* Intrinsic wrapping also accommodates text enlargement without compressing the logo. */
+@media(min-width:801px){
+ .opening-band .team-wing{display:flex;flex-wrap:wrap;align-content:space-between;align-items:center;justify-content:space-between;gap:8px 20px}
+ .opening-band .wing-1{flex-direction:row-reverse}
+ .opening-band .team-logo{flex:1 1 6rem;min-width:min(100%,6rem);max-width:calc(216px * var(--optical,1))}
+ .opening-band .team-score{flex:0 0 auto;order:1}
+ .opening-band .team-name{flex:0 0 100%;order:3}
+}

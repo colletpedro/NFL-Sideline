@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   publicDir: false,
   server: {
-    host: '127.0.0.1', port: 18086, strictPort: true,
+    host: '127.0.0.1', port: 18087, strictPort: true,
     fs: { allow: [decodeURIComponent(new URL('.', import.meta.url).pathname)] },
   },
   build: { outDir: '../experience-dist', emptyOutDir: true },
