@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Observations from './observations/Observations';
+import MatchupPilot from './matchup/MatchupPilot';
 import { ArrowRight, Check, Database, FlaskConical, RefreshCw } from 'lucide-react';
 import { VisualAnalysis } from '../src/features/analysis-visual/VisualAnalysis';
 import { validateDocument } from '../src/features/analysis-visual/validate';
@@ -135,7 +136,7 @@ function Workspace({ context }: { context: Context }) {
   </>;
 }
 
-export default function App() {
+function Laboratory() {
   const [mode, setMode] = useState<'real' | 'fixture' | 'observations'>(() => { try { const stored = sessionStorage.getItem('metrics-lab-mode'); return stored === 'real' || stored === 'fixture' ? stored : 'observations'; } catch { return 'observations'; } });
   const [contexts, setContexts] = useState<Context[]>([]);
   const [selected, setSelected] = useState('');
@@ -156,7 +157,7 @@ export default function App() {
         <option value="observations">Métricas · arquivo de jogadas</option><option value="real">API local · resultados reais</option><option value="fixture">Fixtures sintéticas · prévia do contrato</option>
       </select></div></details>;
   return <><a className="skip" href="#workspace">Pular para o laboratório</a>
-    <header className="topbar"><div className="brand">NFL <strong>SIDELINE</strong><span> / EDITORIAL</span></div><span className="local-badge"><span/>AMBIENTE LOCAL</span></header>
+    <header className="topbar"><div className="brand">NFL <strong>SIDELINE</strong><span> / EDITORIAL</span></div><a className="lab-pilot-return" href="/">Abrir piloto Dallas × Patriots</a><span className="local-badge"><span/>AMBIENTE LOCAL</span></header>
     <main id="workspace" className={mode === 'observations' ? 'metrics-main' : undefined}><div className="page-heading"><div><p className="eyebrow">LABORATÓRIO EDITORIAL</p><h1>{mode === 'observations' ? 'Leitura de jogo.' : 'Do contexto à análise.'}</h1>
       <p className="muted">{mode === 'observations' ? 'Explore o que aconteceu nas jogadas do arquivo.' : 'Explore a geração offline e as tentativas preservadas.'}</p></div><Database size={30} aria-hidden="true"/></div>
       {mode !== 'observations' && modePicker}
@@ -174,4 +175,9 @@ export default function App() {
       {mode === 'observations' && modePicker}
       <footer>{mode === 'observations' ? 'Observações arquivadas · Sem comparação ou pregame' : 'Regras locais · Dados congelados · Sem publicação'} <span>A validação mecânica não comprova qualidade editorial.</span></footer>
     </main></>;
+}
+
+// Separate, explicit view: entering the visual pilot never mounts a real-data reader.
+export default function App() {
+  return new URLSearchParams(window.location.search).get('screen') === 'lab' ? <Laboratory/> : <MatchupPilot/>;
 }
