@@ -1,0 +1,53 @@
+{
+  "base": "0609db55cdbc830db661ad99b9b643781eff0ba5",
+  "previousAndAcceptedFiles": {
+    "web-ui/local-editorial/broadcast/BroadcastReading.tsx": "5f2743ba52ee73b26fff8666c1da70670e9105ac2318e7ae7f59db1b4b497b99",
+    "web-ui/local-editorial/broadcast/broadcast.css": "10b7a7041a9cd932bd8a8d951c20df387e5b3d3c43189dee3d66a679bf948d97",
+    "web-ui/local-editorial/broadcast/themes.ts": "e9a9e022976ea1b4ab53d58243f1a60d1bc49cc3d16bd7aab304fe2a995940f5",
+    "web-ui/local-editorial/broadcast/fonts.css": "df2613fe2971040f606a0514776cb73f55689bc6f4fc272e3554815af7aa4b93",
+    "web-ui/local-editorial/broadcast/type-proof.html": "94cd43eef07c524439fc2481a97c8ade7aaf7ad80f2faa44156478e7820323ed",
+    "web-ui/local-editorial/observations/format.ts": "9b23d7813a46f2f24c4c687df8fcaa5769aa1a7bf216aec525809dc19b113142",
+    "web-ui/local-editorial/observations/model.ts": "ccba2cddb269a704eee4bab4b649e1a08d82ad8d8e97eda6cc3b7bcc404ecc04",
+    "web-ui/local-editorial/observations/client.ts": "906485929cac14fed6459693a130d5ea46af146ddc68e5d5f54ba02766e006df",
+    "web-ui/build/observations.ts": "8eab1d61936417f0730d2ede622108f1c11f311d4d0bdcdbc48fe533d85de81a",
+    "web-ui/build/local-editorial.ts": "343b45f1992face90c57474084f8dbc87a2248d48379ac1357792929845bdc1c"
+  },
+  "protectedTreesUnchanged": [
+    "contracts",
+    "etl-pipeline",
+    "core-api",
+    "supabase",
+    "web-ui/public",
+    "docs/static-snapshot-contract.md"
+  ],
+  "referenceInputs": {
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/DESIGN.md": "9961d0b77ae03b46c9e0ee15eef4b1cf2e93b0e633ab9c83275082c98f725ef5",
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/refinement-4.3/HANDOFF.md": "922e34b08608658f71d3c52967ff0d117a731a2692d244da5f35392e01cb1f8a",
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/refinement-4.3/references.json": "a7d5122ad7c1c56eedc755679de513bfb86900968e1922d5c315b2c11d97a501",
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/refinement-4.3/references/01-current-ravens-panel.png": "95079086322a0df0923ff6ed4be3a64fff9385c12ceeeb129dcc5245acfe5dc4",
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/refinement-4.3/references/02-current-expanded-volume.png": "a2292116e075b8313ade30c07c3b568713aaf2f71417d69cc6671f01e617db6d",
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/refinement-4.3/references/03-current-type-proof.png": "4b7f58cf9acf31b814b0f991f073c979e2d17a8659e392db77e7586fa6f5c8bd",
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/refinement-4.3/references/04-target-headline-type.png": "c5da55d4d769c0ea4c68fb449f42284267d868b14e2866d3f7ca4f72fd4aeb13",
+    "/Users/pedrocollet/Downloads/NFL Sideline/docs/plans/visual-broadcast/2026-10-20/refinement-4.3/references/05-target-list-type.png": "2ea9262b8cc5bffd5e9fa4e4e9d48cc24365ee96854389e4882a10cebbbd9fcf"
+  },
+  "fontFiles": {
+    "Barlow-Regular.woff2": "2904d763039d78176366e8e32c2c8cebecf2da19e249a7c077cd8c8a736c5cd4",
+    "BarlowCondensed-Bold.woff2": "2a68cbc9b65c87d7805b4e912545dc8f2426f9134affc0f07bec252782bd0bd0",
+    "BarlowSemiCondensed-SemiBold.woff2": "bae9a20f1461da5276b405097cfd4ad72a888632b65780ca3a0b996cb4aab3ad",
+    "IBMPlexSans-Bold.woff2": "fa7130d854a660b39a7fc9e6e0f2dc23dba5f1346e2adea3e1fe37b6d884133d",
+    "IBMPlexSans-Regular.woff2": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+    "IBMPlexSansCondensed-Bold.woff2": "e1481c7a925b4bfb31bcbff09182b43d5f1c1eab7834a2b6ac51ac75b8c3f9a1",
+    "Barlow-Bold.woff2": "5c5c34f0624bf0b164412db94dac2aee11defccc6f374d426501218ab097a01c",
+    "Barlow-SemiBold.woff2": "444b951177325b7a2f1ee61412a0d66c04d0e1ee438ef14430025f1b128d557f"
+  },
+  "textContrast": {
+    "ink/paper": 11.55,
+    "muted/paper": 5.79,
+    "muted/limits": 5.18,
+    "controls": 6.8,
+    "BAL/name": 13.18,
+    "DAL/name": 8.59,
+    "NE/name": 14.51,
+    "context": 9.19
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "errors": [],
+  "cases": [
+    {
+      "name": "theme-BAL",
+      "observationId": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+      "subject": {
+        "foundation": "general",
+        "role": "off",
+        "team": "BAL"
+      },
+      "request": {
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        },
+        "phase": "REG",
+        "season": 2026
+      },
+      "plates": {
+        "name": "rgb(36, 23, 115)",
+        "logo": "rgb(20, 19, 25)"
+      }
+    },
+    {
+      "name": "theme-DAL",
+      "observationId": "sha256:78721fc2a2c63e4d89205b414c422fd8d4da404d627aa4804c8eaa61b8a84509",
+      "subject": {
+        "foundation": "general",
+        "role": "off",
+        "team": "DAL"
+      },
+      "request": {
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        },
+        "phase": "REG",
+        "season": 2026
+      },
+      "plates": {
+        "name": "rgb(182, 191, 199)",
+        "logo": "rgb(0, 34, 68)"
+      }
+    },
+    {
+      "name": "theme-NE",
+      "observationId": "sha256:ad890fc8e4b41cba0c623bd3d20bfc363e2519146d9bd8589c4b799a0aa74302",
+      "subject": {
+        "foundation": "general",
+        "role": "off",
+        "team": "NE"
+      },
+      "request": {
+        "origin": "HISTORICAL_REFERENCE",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            19,
+            20,
+            21,
+            22
+          ]
+        },
+        "phase": "POST",
+        "season": 2025
+      },
+      "plates": {
+        "name": "rgb(0, 34, 68)",
+        "logo": "rgb(198, 12, 48)"
+      }
+    },
+    {
+      "name": "dal-defense",
+      "observationId": "sha256:f02add308d9a10eb6be139305c60d2327edf703ea109bd572f9dca06bac4116d",
+      "values": {
+        "epa": {
+          "denominator": "35",
+          "numerator": "1.212177313656378383"
+        },
+        "frequency": {
+          "denominator": "67",
+          "numerator": "35"
+        },
+        "successRate": {
+          "denominator": "35",
+          "numerator": "17"
+        },
+        "volume": {
+          "denominator": "1",
+          "numerator": "35"
+        }
+      },
+      "totals": {
+        "eligibleN": "35",
+        "epaMissingN": "0",
+        "epaN": "35",
+        "epaNonfiniteN": "0",
+        "epaSum": "1.212177313656378383",
+        "generalEligibleN": "67",
+        "successN": "17",
+        "unknownFilterFlagsN": "0"
+      }
+    },
+    {
+      "name": "ne-defense",
+      "observationId": "sha256:f83bb3b85ce7546bcefe4c05b2363304137242d740a47fb80265387cb8256e25",
+      "values": {
+        "epa": {
+          "denominator": "160",
+          "numerator": "-51.903274194399585267"
+        },
+        "frequency": {
+          "denominator": "260",
+          "numerator": "160"
+        },
+        "successRate": {
+          "denominator": "160",
+          "numerator": "56"
+        },
+        "volume": {
+          "denominator": "1",
+          "numerator": "160"
+        }
+      },
+      "totals": {
+        "eligibleN": "160",
+        "epaMissingN": "0",
+        "epaN": "160",
+        "epaNonfiniteN": "0",
+        "epaSum": "-51.903274194399585267",
+        "generalEligibleN": "260",
+        "successN": "56",
+        "unknownFilterFlagsN": "0"
+      }
+    },
+    {
+      "name": "bal-no-source",
+      "observationId": "sha256:31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+      "values": {
+        "epa": null,
+        "frequency": null,
+        "successRate": null,
+        "volume": null
+      },
+      "totals": null
+    }
+  ],
+  "responsive": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "body": 320
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "body": 390
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "body": 768
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "body": 1024
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "body": 1440
+    }
+  ],
+  "fonts": [
+    {
+      "selector": ".barlow article h3",
+      "css": {
+        "family": "\"Sideline Barlow\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "postScriptName": "Barlow-Bold",
+          "isCustomFont": true,
+          "glyphCount": 30
+        }
+      ]
+    },
+    {
+      "selector": ".barlow .subtitle",
+      "css": {
+        "family": "\"Sideline Barlow\", Arial, sans-serif",
+        "weight": "400",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "postScriptName": "Barlow-Regular",
+          "isCustomFont": true,
+          "glyphCount": 37
+        }
+      ]
+    },
+    {
+      "selector": ".barlow .stat strong",
+      "css": {
+        "family": "\"Sideline Barlow\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "postScriptName": "Barlow-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "selector": ".plex article h3",
+      "css": {
+        "family": "\"Sideline Plex\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "postScriptName": "IBMPlexSans-Bold",
+          "isCustomFont": true,
+          "glyphCount": 30
+        }
+      ]
+    },
+    {
+      "selector": ".plex .subtitle",
+      "css": {
+        "family": "\"Sideline Plex\", Arial, sans-serif",
+        "weight": "400",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "postScriptName": "IBMPlexSans",
+          "isCustomFont": true,
+          "glyphCount": 37
+        }
+      ]
+    },
+    {
+      "selector": ".plex .stat strong",
+      "css": {
+        "family": "\"Sideline Plex\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "postScriptName": "IBMPlexSans-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "name": "denominator-zero",
+      "values": {
+        "epa": null,
+        "successRate": null,
+        "volume": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "frequency": {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      }
+    },
+    {
+      "name": "complete-empty",
+      "values": {
+        "epa": null,
+        "successRate": null,
+        "volume": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "frequency": null
+      }
+    },
+    {
+      "name": "exact-zero",
+      "values": {
+        "epa": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "successRate": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "volume": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "frequency": {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      }
+    },
+    {
+      "name": "near-zero",
+      "values": {
+        "epa": {
+          "numerator": "-0.000001",
+          "denominator": "1"
+        },
+        "successRate": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "volume": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "frequency": {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      }
+    }
+  ],
+  "catalog": {
+    "sessionId": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+    "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+    "count": 48
+  },
+  "text200": {
+    "width": 390,
+    "scroll": 390,
+    "controlsDoNotOverlap": true
+  },
+  "reducedMotion": {
+    "matches": true,
+    "animations": 0
+  },
+  "keyboard": {
+    "active": "Defesa",
+    "outline": "solid",
+    "rect": {
+      "x": 252.609375,
+      "y": 318.109375,
+      "width": 64.96875,
+      "height": 44,
+      "top": 318.109375,
+      "right": 317.578125,
+      "bottom": 362.109375,
+      "left": 252.609375
+    }
+  },
+  "preservation": {
+    "versionSwitchNoFetch": true,
+    "reloadId": "sha256:dd9601e6444ca559a112914a7bd828ba4429d5df673e23db22fadeed0903af5a"
+  },
+  "fontResources": [
+    "http://127.0.0.1:18084/broadcast/assets/Barlow-Regular.woff2",
+    "http://127.0.0.1:18084/broadcast/assets/IBMPlexSans-Bold.woff2",
+    "http://127.0.0.1:18084/broadcast/assets/IBMPlexSans-Regular.woff2",
+    "http://127.0.0.1:18084/broadcast/assets/Barlow-Bold.woff2"
+  ]
+}
