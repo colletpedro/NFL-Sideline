@@ -24,7 +24,7 @@ export function RefinedBroadcastReading({ d, entry, controls }: { d: DTO; entry:
  const parts = successParts(d); const width = parts ? proportionWidth(parts.ratio) : null;
  const tiny = parts && parts.positive !== '0' && width === '0.00%';
  const completeness = d.guarantees.completeness.state === 'COMPLETE' ? 'População declarada completa.' : d.guarantees.completeness.state === 'PARTIAL' ? 'Fonte parcial.' : 'Completude desconhecida.';
- const style = { '--name-plate': theme.namePlate, '--name-ink': theme.nameInk, '--logo-plate': theme.logoPlate, '--context-plate': theme.contextPlate, '--identity-accent': theme.accent, '--team-scene': theme.scene, '--logo-scale': theme.logoScale } as CSSProperties;
+ const style = { '--name-plate': theme.namePlate, '--name-ink': theme.nameInk, '--logo-plate': theme.logoPlate, '--context-plate': theme.contextPlate, '--identity-accent': theme.accent, '--team-scene': theme.scene, '--logo-scale': theme.logoScale, '--logo-share': theme.logoShare, '--compact-logo-share': theme.compactLogoShare } as CSSProperties;
  return <article className="r43-reading" data-observation-id={d.observationId} data-team={d.subject.team} aria-label="Observação selecionada" style={style}>
   <div className="r43-stage"><div className="r43-board">
    <header className="r43-identity"><div className="r43-name"><p>{theme.city}</p><h2>{theme.name}</h2><span>{d.subject.team}</span></div><Logo key={d.subject.team} src={theme.logo} team={d.subject.team}/></header>

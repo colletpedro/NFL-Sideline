@@ -7,7 +7,7 @@
 .r43-reading :is(h2,h3,p,figure,dl){margin:0}
 .r43-stage{padding:20px 44px 24px;background:radial-gradient(ellipse at top left,var(--team-scene),#211f1d 75%)}
 .r43-board{max-width:1120px;margin:auto;background:var(--r43-paper);box-shadow:0 10px 24px #0004;border-top:3px solid var(--identity-accent)}
-.r43-identity{display:grid;grid-template-columns:minmax(0,1fr) 25%;color:var(--name-ink);background:var(--name-plate)}
+.r43-identity{display:grid;grid-template-columns:minmax(0,1fr) var(--logo-share);color:var(--name-ink);background:var(--name-plate)}
 .r43-name{padding:14px 30px;align-self:center;min-width:0}
 .r43-name p{font-size:1.2rem;line-height:1.2}
 .r43-name h2{display:inline;font:700 clamp(2rem,4cqw,3.25rem)/1.1 'Sideline Barlow',Arial,sans-serif;text-transform:uppercase;letter-spacing:0}
