@@ -1,0 +1,35 @@
+[
+  {
+    "selector": ".team-name strong",
+    "fonts": [
+      {
+        "familyName": "Archivo SemiBold",
+        "glyphCount": 7,
+        "isCustomFont": true,
+        "postScriptName": "Archivo-SemiBold_wght2EE0000_wdth"
+      }
+    ]
+  },
+  {
+    "selector": ".reading-body p",
+    "fonts": [
+      {
+        "familyName": "Archivo SemiBold",
+        "glyphCount": 88,
+        "isCustomFont": true,
+        "postScriptName": "ArchivoRoman-Regular"
+      }
+    ]
+  },
+  {
+    "selector": ".epa-row strong",
+    "fonts": [
+      {
+        "familyName": "Roboto Condensed",
+        "glyphCount": 6,
+        "isCustomFont": true,
+        "postScriptName": "RobotoCondensed-SemiBold"
+      }
+    ]
+  }
+]

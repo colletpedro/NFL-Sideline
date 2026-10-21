@@ -1,0 +1,32 @@
+[
+  {
+    "href": "/confronto/baltimore-pittsburgh?round=7",
+    "url": "http://127.0.0.1:18087/confronto/baltimore-pittsburgh?round=7",
+    "title": "Produção e regularidade se dividem.",
+    "menu": "/confronto/baltimore-pittsburgh?round=7"
+  },
+  {
+    "href": "/confronto/green-bay-chicago?round=7",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "title": "Green Bay recebe Chicago.",
+    "menu": "/confronto/green-bay-chicago?round=7"
+  },
+  {
+    "href": "/confronto/kansas-city-buffalo?round=7",
+    "url": "http://127.0.0.1:18087/confronto/kansas-city-buffalo?round=7",
+    "title": "Buffalo por três pontos.",
+    "menu": "/confronto/kansas-city-buffalo?round=7"
+  },
+  {
+    "href": "/confronto/baltimore-dallas?round=7",
+    "url": "http://127.0.0.1:18087/confronto/baltimore-dallas?round=7",
+    "title": "O chão dita o ritmo.",
+    "menu": "/confronto/baltimore-dallas?round=7"
+  },
+  {
+    "href": "/confronto/new-england-baltimore?round=7",
+    "url": "http://127.0.0.1:18087/confronto/new-england-baltimore?round=7",
+    "title": "Uma posse faz a diferença.",
+    "menu": "/confronto/new-england-baltimore?round=7"
+  }
+]

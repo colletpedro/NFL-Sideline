@@ -1,0 +1,173 @@
+[
+  {
+    "width": 1100,
+    "identities": [
+      {
+        "fits": true,
+        "logo": [
+          104.1484375,
+          186.2265625
+        ],
+        "team": "DALDallasCowboys27",
+        "wing": [
+          40,
+          402.5
+        ]
+      },
+      {
+        "fits": true,
+        "logo": [
+          602.8828125,
+          721.6796875
+        ],
+        "team": "NENew EnglandPatriots24",
+        "wing": [
+          402.5,
+          765
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1200,
+    "identities": [
+      {
+        "fits": true,
+        "logo": [
+          78.453125,
+          242.609375
+        ],
+        "team": "DALDallasCowboys27",
+        "wing": [
+          40,
+          452.5
+        ]
+      },
+      {
+        "fits": true,
+        "logo": [
+          656.875,
+          837
+        ],
+        "team": "NENew EnglandPatriots24",
+        "wing": [
+          452.5,
+          865
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1280,
+    "identities": [
+      {
+        "fits": true,
+        "logo": [
+          87.4765625,
+          251.6328125
+        ],
+        "team": "DALDallasCowboys27",
+        "wing": [
+          40,
+          485.296875
+        ]
+      },
+      {
+        "fits": true,
+        "logo": [
+          704.4296875,
+          902.6015625
+        ],
+        "team": "NENew EnglandPatriots24",
+        "wing": [
+          485.296875,
+          930.6015625
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1366,
+    "identities": [
+      {
+        "fits": true,
+        "logo": [
+          93.3203125,
+          257.4765625
+        ],
+        "team": "DALDallasCowboys27",
+        "wing": [
+          35.5,
+          518.40625
+        ]
+      },
+      {
+        "fits": true,
+        "logo": [
+          754.4609375,
+          973.3203125
+        ],
+        "team": "NENew EnglandPatriots24",
+        "wing": [
+          518.40625,
+          1001.3203125
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "identities": [
+      {
+        "fits": true,
+        "logo": [
+          129.515625,
+          293.671875
+        ],
+        "team": "DALDallasCowboys27",
+        "wing": [
+          72.5,
+          552.5
+        ]
+      },
+      {
+        "fits": true,
+        "logo": [
+          787.25,
+          1004.5
+        ],
+        "team": "NENew EnglandPatriots24",
+        "wing": [
+          552.5,
+          1032.5
+        ]
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "access": {
+      "bottom": 718.8984375,
+      "height": 48,
+      "left": 36,
+      "right": 354,
+      "top": 670.8984375,
+      "width": 318,
+      "x": 36,
+      "y": 670.8984375
+    }
+  },
+  {
+    "width": 320,
+    "access": {
+      "bottom": 680.46875,
+      "height": 48,
+      "left": 30,
+      "right": 290,
+      "top": 632.46875,
+      "width": 260,
+      "x": 30,
+      "y": 632.46875
+    }
+  }
+]

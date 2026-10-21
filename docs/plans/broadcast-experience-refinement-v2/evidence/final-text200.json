@@ -1,0 +1,15 @@
+{
+  "logos": [
+    {
+      "overlap": false,
+      "team": "DallasCowboys"
+    },
+    {
+      "overlap": false,
+      "team": "New EnglandPatriots"
+    }
+  ],
+  "rootFont": "32px",
+  "scroll": 1440,
+  "width": 1440
+}

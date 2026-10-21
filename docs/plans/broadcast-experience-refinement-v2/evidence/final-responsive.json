@@ -1,0 +1,135 @@
+[
+  {
+    "actionY": 562.6328125,
+    "logos": [
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "DALDallasCowboys27"
+      },
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "NENew EnglandPatriots24"
+      }
+    ],
+    "scrollWidth": 1100,
+    "width": 1100
+  },
+  {
+    "actionY": 655.6015625,
+    "logos": [
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "DALDallasCowboys27"
+      },
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "NENew EnglandPatriots24"
+      }
+    ],
+    "scrollWidth": 1200,
+    "width": 1200
+  },
+  {
+    "actionY": 655.6015625,
+    "logos": [
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "DALDallasCowboys27"
+      },
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "NENew EnglandPatriots24"
+      }
+    ],
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  {
+    "actionY": 655.6015625,
+    "logos": [
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "DALDallasCowboys27"
+      },
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "NENew EnglandPatriots24"
+      }
+    ],
+    "scrollWidth": 1366,
+    "width": 1366
+  },
+  {
+    "actionY": 655.6015625,
+    "logos": [
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "DALDallasCowboys27"
+      },
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "NENew EnglandPatriots24"
+      }
+    ],
+    "scrollWidth": 1440,
+    "width": 1440
+  },
+  {
+    "actionY": 670.8984375,
+    "logos": [
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "DALDallasCowboys27"
+      },
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "NENew EnglandPatriots24"
+      }
+    ],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "actionY": 632.46875,
+    "logos": [
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "DALDallasCowboys27"
+      },
+      {
+        "contained": true,
+        "overlapsScore": false,
+        "sameRow": true,
+        "team": "NENew EnglandPatriots24"
+      }
+    ],
+    "scrollWidth": 320,
+    "width": 320
+  }
+]

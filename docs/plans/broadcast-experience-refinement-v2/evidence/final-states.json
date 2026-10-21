@@ -1,0 +1,83 @@
+[
+  {
+    "controls": 1,
+    "reading": "Leitura do recorte2º tempo · CorridaNE soma valor; DAL perde.New England produziu EPA positivo na corrida; Dallas perdeu valor nesse fundamento.0,160 EPA/jogadaDiferença entre médias",
+    "scores": 2,
+    "scrollWidth": 1440,
+    "title": "O passe abre o caminho.",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 1440
+  },
+  {
+    "controls": 1,
+    "reading": "Leitura do recorte2º tempo · CorridaNE soma valor; DAL perde.New England produziu EPA positivo na corrida; Dallas perdeu valor nesse fundamento.0,160 EPA/jogadaDiferença entre médias",
+    "scores": 2,
+    "scrollWidth": 390,
+    "title": "O passe abre o caminho.",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 390
+  },
+  {
+    "controls": 1,
+    "reading": "Leitura do recorte2º tempo · CorridaNE soma valor; DAL perde.New England produziu EPA positivo na corrida; Dallas perdeu valor nesse fundamento.0,160 EPA/jogadaDiferença entre médias",
+    "scores": 2,
+    "scrollWidth": 320,
+    "title": "O passe abre o caminho.",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 320
+  },
+  {
+    "controls": 0,
+    "reading": null,
+    "scores": 0,
+    "scrollWidth": 1440,
+    "title": "Green Bay recebe Chicago.",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "width": 1440
+  },
+  {
+    "controls": 0,
+    "reading": null,
+    "scores": 0,
+    "scrollWidth": 390,
+    "title": "Green Bay recebe Chicago.",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "width": 390
+  },
+  {
+    "controls": 0,
+    "reading": null,
+    "scores": 0,
+    "scrollWidth": 320,
+    "title": "Green Bay recebe Chicago.",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "width": 320
+  },
+  {
+    "controls": 1,
+    "reading": "Leitura do recorte2º tempo · PasseFalta uma parte deste recorte.Buffalo sem fonte para passe neste período. Os valores disponíveis continuam visíveis; não há comparação completa.Recortes com fonte completa2º tempo · Corrida1º tempo · Passe",
+    "scores": 2,
+    "scrollWidth": 1440,
+    "title": "Buffalo por três pontos.",
+    "url": "http://127.0.0.1:18087/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "width": 1440
+  },
+  {
+    "controls": 1,
+    "reading": "Leitura do recorte2º tempo · PasseFalta uma parte deste recorte.Buffalo sem fonte para passe neste período. Os valores disponíveis continuam visíveis; não há comparação completa.Recortes com fonte completa2º tempo · Corrida1º tempo · Passe",
+    "scores": 2,
+    "scrollWidth": 390,
+    "title": "Buffalo por três pontos.",
+    "url": "http://127.0.0.1:18087/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "width": 390
+  },
+  {
+    "controls": 1,
+    "reading": "Leitura do recorte2º tempo · PasseFalta uma parte deste recorte.Buffalo sem fonte para passe neste período. Os valores disponíveis continuam visíveis; não há comparação completa.Recortes com fonte completa2º tempo · Corrida1º tempo · Passe",
+    "scores": 2,
+    "scrollWidth": 320,
+    "title": "Buffalo por três pontos.",
+    "url": "http://127.0.0.1:18087/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "width": 320
+  }
+]

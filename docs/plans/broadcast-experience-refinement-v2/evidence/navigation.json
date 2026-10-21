@@ -1,0 +1,24 @@
+[
+  {
+    "case": "archive-menu",
+    "url": "http://127.0.0.1:18087/confronto/baltimore-dallas?round=7&period=second&play=rush&details=open",
+    "href": "/confronto/baltimore-dallas?round=7&period=second&play=rush&details=open",
+    "breadcrumb": "Central · rodada 7\nDuelo da rodada 6 · Baltimore × Dallas"
+  },
+  {
+    "case": "menu-reload",
+    "url": "http://127.0.0.1:18087/confronto/baltimore-dallas?round=7&period=second&play=rush&details=open",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Corrida\n\nBAL soma valor; DAL perde.\n\nBaltimore produziu EPA positivo na corrida; Dallas perdeu valor nesse fundamento.\n\n0,320EPA/jogada\nDiferença entre médias",
+    "details": "true"
+  },
+  {
+    "case": "return",
+    "url": "http://127.0.0.1:18087/?round=7",
+    "selected": "true"
+  },
+  {
+    "case": "direct-without-origin",
+    "back": "/?round=6",
+    "menu": "/confronto/baltimore-dallas?round=6&period=first&play=pass"
+  }
+]
