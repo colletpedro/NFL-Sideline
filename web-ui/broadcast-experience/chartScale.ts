@@ -7,3 +7,8 @@ export function epaScale(values: (number | null)[]) {
   const ticks = Array.from({ length: Math.round((max - min) / .2) + 1 }, (_, i) => Number((min + i * .2).toFixed(3)));
   return { min, max, ticks, position: (value: number) => (value - min) / (max - min) * 100 };
 }
+
+// Label only the domain bounds and zero; retain every grid tick and bar position.
+export function epaAxisLabels(scale: ReturnType<typeof epaScale>) {
+  return scale.ticks.filter(value => value === scale.min || value === 0 || value === scale.max);
+}

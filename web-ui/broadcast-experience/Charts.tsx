@@ -1,11 +1,12 @@
 import { format, mean, playLabels, rate, scoreboard, signed, summarize, teams, type Game, type Period, type PlayType } from './fixtures';
-import { epaScale } from './chartScale';
+import { epaAxisLabels, epaScale } from './chartScale';
 
 export function EfficiencyChart({ game, period, play }: { game: Game; period: Period; play: PlayType }) {
   const kinds: ('pass' | 'rush')[] = play === 'all' ? ['pass', 'rush'] : [play];
   const scale = epaScale(kinds.flatMap(kind => game.sides.map(s => mean(summarize(s, period, kind)))));
+  const labels = epaAxisLabels(scale);
   return <figure className="efficiency-chart"><figcaption><span className="section-kicker">Eficiência</span><h3>Valor por jogada</h3><p>EPA médio · pontos esperados adicionados por jogada</p></figcaption>
-    <div className="epa-plot"><div className="epa-axis">{scale.ticks.map((t, i) => <span key={t} style={{ left: `${scale.position(t)}%`, transform: i === 0 ? 'none' : i === scale.ticks.length - 1 ? 'translateX(-100%)' : 'translateX(-50%)' }}>{t === 0 ? '0' : `${t < 0 ? '−' : '+'}${format(Math.abs(t), 2)}`}</span>)}</div>
+    <div className="epa-plot"><div className="epa-axis">{labels.map((t, i) => <span key={t} style={{ left: `${scale.position(t)}%`, transform: i === 0 ? 'none' : i === labels.length - 1 ? 'translateX(-100%)' : 'translateX(-50%)' }}>{t === 0 ? '0' : `${t < 0 ? '−' : '+'}${format(Math.abs(t), 2)}`}</span>)}</div>
       {kinds.map(kind => <div className="epa-group" key={kind}><h4>{playLabels[kind]}</h4>{game.sides.map(s => {
         const stat = summarize(s, period, kind), value = mean(stat), team = teams[s.team];
         return <div className={`epa-row ${value === null ? 'metric-absent' : ''}`} key={team.id}><b>{team.id}</b><div className="epa-track" aria-hidden="true">{scale.ticks.map(t => <i className={t === 0 ? 'zero-line' : 'grid-line'} key={t} style={{ left: `${scale.position(t)}%` }}/>) }{value !== null && <span style={{ background: team.color, left: `${scale.position(Math.min(value, 0))}%`, width: `${Math.abs(value) / (scale.max - scale.min) * 100}%` }}/>}</div><strong>{value === null ? stat ? 'Sem jogadas' : 'Sem fonte' : signed(value)}</strong></div>;
