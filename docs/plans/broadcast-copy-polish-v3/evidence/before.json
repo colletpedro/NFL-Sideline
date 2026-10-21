@@ -1,0 +1,47 @@
+[
+  {
+    "chartNote": "Zero separa ganho e perda de valor. A escala se amplia em passos de 0,20 quando o recorte excede o intervalo inicial de −0,20 a +0,40.",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Corrida\n\nNE soma valor; DAL perde.\n\nNew England produziu EPA positivo na corrida; Dallas perdeu valor nesse fundamento.\n\n0,160 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 1440,
+    "summary": "RESUMO DA PARTIDA\nO passe abre o caminho.\n\nDallas constrói a vantagem pelo alto. New England reage depois do intervalo, mas fica a três pontos de mudar o desfecho.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nDAL\t7\t10\t3\t7\t27\nNE\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 1440
+  },
+  {
+    "chartNote": "Zero separa ganho e perda de valor. A escala se amplia em passos de 0,20 quando o recorte excede o intervalo inicial de −0,20 a +0,40.",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Corrida\n\nNE soma valor; DAL perde.\n\nNew England produziu EPA positivo na corrida; Dallas perdeu valor nesse fundamento.\n\n0,160 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 390,
+    "summary": "RESUMO DA PARTIDA\nO passe abre o caminho.\n\nDallas constrói a vantagem pelo alto. New England reage depois do intervalo, mas fica a três pontos de mudar o desfecho.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nDAL\t7\t10\t3\t7\t27\nNE\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 390
+  },
+  {
+    "chartNote": "Zero separa ganho e perda de valor. A escala se amplia em passos de 0,20 quando o recorte excede o intervalo inicial de −0,20 a +0,40.",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Corrida\n\nNE soma valor; DAL perde.\n\nNew England produziu EPA positivo na corrida; Dallas perdeu valor nesse fundamento.\n\n0,160 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 320,
+    "summary": "RESUMO DA PARTIDA\nO passe abre o caminho.\n\nDallas constrói a vantagem pelo alto. New England reage depois do intervalo, mas fica a três pontos de mudar o desfecho.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nDAL\t7\t10\t3\t7\t27\nNE\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 320
+  },
+  {
+    "pregame": "ANTES DO KICKOFF\nSem estatísticas desta partida.\n\nAinda sem jogadas, não há recortes de período ou fundamento para selecionar.\n\nLocal\nGreen Bay · Wisconsin\nDados oferecidos\nAgenda e identidade dos times\nSérie histórica\nNão oferecida nesta demonstração",
+    "scrollWidth": 1440,
+    "summary": "PRÉ-JOGO\nGreen Bay recebe Chicago.\n\nDuelo ainda não iniciado. A agenda desta edição é demonstrativa, sem resultado antecipado ou histórico de outro jogo.\n\nPróximo kickoff\nDomingo · 19h25\nRodada 7 · agenda demonstrativa",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "width": 1440
+  },
+  {
+    "pregame": "ANTES DO KICKOFF\nSem estatísticas desta partida.\n\nAinda sem jogadas, não há recortes de período ou fundamento para selecionar.\n\nLocal\nGreen Bay · Wisconsin\nDados oferecidos\nAgenda e identidade dos times\nSérie histórica\nNão oferecida nesta demonstração",
+    "scrollWidth": 390,
+    "summary": "PRÉ-JOGO\nGreen Bay recebe Chicago.\n\nDuelo ainda não iniciado. A agenda desta edição é demonstrativa, sem resultado antecipado ou histórico de outro jogo.\n\nPróximo kickoff\nDomingo · 19h25\nRodada 7 · agenda demonstrativa",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "width": 390
+  },
+  {
+    "pregame": "ANTES DO KICKOFF\nSem estatísticas desta partida.\n\nAinda sem jogadas, não há recortes de período ou fundamento para selecionar.\n\nLocal\nGreen Bay · Wisconsin\nDados oferecidos\nAgenda e identidade dos times\nSérie histórica\nNão oferecida nesta demonstração",
+    "scrollWidth": 320,
+    "summary": "PRÉ-JOGO\nGreen Bay recebe Chicago.\n\nDuelo ainda não iniciado. A agenda desta edição é demonstrativa, sem resultado antecipado ou histórico de outro jogo.\n\nPróximo kickoff\nDomingo · 19h25\nRodada 7 · agenda demonstrativa",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "width": 320
+  }
+]

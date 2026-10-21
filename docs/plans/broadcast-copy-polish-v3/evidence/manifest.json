@@ -1,0 +1,273 @@
+[
+  {
+    "file": "after-divergence-1440.png",
+    "bytes": 899511,
+    "sha256": "db712481d908188e69d9cd6749340c971cec6acf7a173554112574b239aa4fc3",
+    "dimensions": [
+      1440,
+      1821
+    ]
+  },
+  {
+    "file": "after-divergence-320.png",
+    "bytes": 458322,
+    "sha256": "2fd650e1443415cf25e01d561327bba82517bbc3badb44cba88876372f0d0a0f",
+    "dimensions": [
+      320,
+      2876
+    ]
+  },
+  {
+    "file": "after-divergence-390.png",
+    "bytes": 516959,
+    "sha256": "d977aaad4b717de10a0d9a480231666b11cc447b838c1bd9b9730d133c675e18",
+    "dimensions": [
+      390,
+      2789
+    ]
+  },
+  {
+    "file": "after-expanded-scale-1440.png",
+    "bytes": 886980,
+    "sha256": "07aa0ef961f4701b6920ec097022807fc7b96c30a477a35f8f5a71ba9089f512",
+    "dimensions": [
+      1440,
+      1821
+    ]
+  },
+  {
+    "file": "after-expanded-scale-320.png",
+    "bytes": 445533,
+    "sha256": "1397152ebd0b6d74357916179218d11fb71f6f084aeae2cc1cc3dd428645e26d",
+    "dimensions": [
+      320,
+      2841
+    ]
+  },
+  {
+    "file": "after-expanded-scale-390.png",
+    "bytes": 502417,
+    "sha256": "f3a3d1fedfbe08c6791734d022caa835ed700a3c6168a5eb863dd1a214943c19",
+    "dimensions": [
+      390,
+      2751
+    ]
+  },
+  {
+    "file": "after-pregame-1440.png",
+    "bytes": 334023,
+    "sha256": "f4382e644ec920054531b781b9b6d640b713108e7e9460fba6b77a4ca8d726df",
+    "dimensions": [
+      1440,
+      589
+    ]
+  },
+  {
+    "file": "after-pregame-320.png",
+    "bytes": 138197,
+    "sha256": "3107d4ee7e9c2917db9d780ad8e974c4633d13b13d7016b6a79d77dc4b368b5a",
+    "dimensions": [
+      320,
+      730
+    ]
+  },
+  {
+    "file": "after-pregame-390.png",
+    "bytes": 160766,
+    "sha256": "527ca53bed2f1c47db7f2de49efe96a532b9bb310000e1d1c90b197bde029bb6",
+    "dimensions": [
+      390,
+      719
+    ]
+  },
+  {
+    "file": "after-pregame-full-390.png",
+    "bytes": 382602,
+    "sha256": "d8bf290de51b630959dcd877c71fb081bac7f6502d55ee82ca32923702d761c9",
+    "dimensions": [
+      390,
+      1942
+    ]
+  },
+  {
+    "file": "after-reading-detail.png",
+    "bytes": 249294,
+    "sha256": "277274914b84f0d34ab557a7e4bbf1321b2ba5f31c7a88d9664e44e0116df2c9",
+    "dimensions": [
+      1280,
+      684
+    ]
+  },
+  {
+    "file": "after-slice-1440.png",
+    "bytes": 895191,
+    "sha256": "8f7001263006c0cf24bfebd2f25939cf470cf9ed12900cf8328d664dbd20edaf",
+    "dimensions": [
+      1440,
+      1828
+    ]
+  },
+  {
+    "file": "after-slice-320.png",
+    "bytes": 448192,
+    "sha256": "d73f822b18d78a80813a20f04d1b7d42649bbde3669296feef91676cddec1922",
+    "dimensions": [
+      320,
+      2885
+    ]
+  },
+  {
+    "file": "after-slice-390.png",
+    "bytes": 503707,
+    "sha256": "7bc9cf33d53d16f220d1dbab832c7569b22be7558479a374f66e332e07e9392e",
+    "dimensions": [
+      390,
+      2732
+    ]
+  },
+  {
+    "file": "after.json",
+    "bytes": 8227,
+    "sha256": "8f000870ba3ed205c1774825bd89e0a5165aa22d73e857bfa451f380ae9cdc94"
+  },
+  {
+    "file": "axis-320-comparison.json",
+    "bytes": 935,
+    "sha256": "ecf924f64d6bae8c206c3adfc5a6e996b39e83bfdb332620cd8d49f86cb84b5b"
+  },
+  {
+    "file": "before-expanded-scale-320.png",
+    "bytes": 449929,
+    "sha256": "85536ec57638f83e54dc57e4197dfc9b49cb15e95c43e58f9595db4d82395ab3",
+    "dimensions": [
+      320,
+      2861
+    ]
+  },
+  {
+    "file": "before-pregame-1440.png",
+    "bytes": 507107,
+    "sha256": "3d463bf3b1924c52177695a8929d185ddd8e94387b92743b0f391f9946d99a0f",
+    "dimensions": [
+      1440,
+      900
+    ]
+  },
+  {
+    "file": "before-pregame-320.png",
+    "bytes": 229945,
+    "sha256": "c8f499c9e4115ca356cfd63bab8f13fb59ff4e703e7cd7ed6cb4b7822d6f7df2",
+    "dimensions": [
+      320,
+      1276
+    ]
+  },
+  {
+    "file": "before-pregame-390.png",
+    "bytes": 261630,
+    "sha256": "986faa7d6183ecdf43c10b12ba347c041f47de50f80100ae7d30bc162f061812",
+    "dimensions": [
+      390,
+      1240
+    ]
+  },
+  {
+    "file": "before-slice-1440.png",
+    "bytes": 882913,
+    "sha256": "9384855b61b91ef5458efe4113e109afe3487048edbbc03fd9f7e4e7118fe713",
+    "dimensions": [
+      1440,
+      1795
+    ]
+  },
+  {
+    "file": "before-slice-320.png",
+    "bytes": 446575,
+    "sha256": "b7b96c2fa308a869fef4365c7b9054891476cdcb0c73e3a916c3d432afc28930",
+    "dimensions": [
+      320,
+      2877
+    ]
+  },
+  {
+    "file": "before-slice-390.png",
+    "bytes": 503137,
+    "sha256": "a4895da8fee6c712548a7bb103c87f8d7e73098ca8a0460f1c5826a3f8725a46",
+    "dimensions": [
+      390,
+      2746
+    ]
+  },
+  {
+    "file": "before.json",
+    "bytes": 4497,
+    "sha256": "252e0ba30c2ea84e09ca8953cd129135105a36a96e9988f448a12db189ae7878"
+  },
+  {
+    "file": "browser-checks.json",
+    "bytes": 610,
+    "sha256": "384b792dda15911b0581f1aa8dca810d31c046f85d6ce18e8c3d0867e15105ed"
+  },
+  {
+    "file": "controlled-negative-preview-1440.png",
+    "bytes": 397031,
+    "sha256": "dbeeace77fe94b47885a071f6e6b2d7d044a658261fbd3cc512107e651c84078",
+    "dimensions": [
+      1440,
+      804
+    ]
+  },
+  {
+    "file": "controlled-negative-preview-320.png",
+    "bytes": 220532,
+    "sha256": "247630abbc18d85144e4f114f4742a3bb82f865731f0ebb3f1dcb05f1679b686",
+    "dimensions": [
+      320,
+      1343
+    ]
+  },
+  {
+    "file": "controlled-negative-preview-390.png",
+    "bytes": 240690,
+    "sha256": "8b03cf893f0897259f5a7fa186a96686b02484f19dc02057bb108a6b6ddbf60a",
+    "dimensions": [
+      390,
+      1241
+    ]
+  },
+  {
+    "file": "experimental-build.txt",
+    "bytes": 1297,
+    "sha256": "3c8fecc6c198c599c783e461d90af8a663f85bb0da15756066bfdfc167fd3f98"
+  },
+  {
+    "file": "invariance.json",
+    "bytes": 50218,
+    "sha256": "1457400f5ae3323c807b15ea8baac282100cbc05939ce9f8e47ddab76323724e"
+  },
+  {
+    "file": "isolation.json",
+    "bytes": 294,
+    "sha256": "16066f8cd0d8c3f1ecc09992acdc8dee6eb7e6368b4787604df424a18c5f2f92"
+  },
+  {
+    "file": "lint.txt",
+    "bytes": 33,
+    "sha256": "641c64460ce9b9774b97f0b04757c343632359ba26305241b53ae272cb6ace53"
+  },
+  {
+    "file": "negative-preview.json",
+    "bytes": 1459,
+    "sha256": "f4b0c22288862bcc75b8ade8002e00cd30f6ef76e66bc01004961b2476cd10d8"
+  },
+  {
+    "file": "public-build.txt",
+    "bytes": 377,
+    "sha256": "1d5754e2aefa7f36f081ea27006d31fd4ec4e41955ad675c1c97b002acfe65df"
+  },
+  {
+    "file": "tests.txt",
+    "bytes": 1213,
+    "sha256": "3df94bbe9fac2d8d3f0b63b7a5dae277c01c95c63927e4a4713ca6bc556b8b67"
+  }
+]

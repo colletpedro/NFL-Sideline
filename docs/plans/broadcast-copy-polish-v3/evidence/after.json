@@ -1,0 +1,92 @@
+[
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Corrida\n\nCorrida: EPA positivo para NE, negativo para DAL.\n\nNew England produziu EPA positivo na corrida; Dallas teve EPA negativo na corrida.\n\n0,160 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 1440,
+    "summary": "RESUMO DA PARTIDA\nO passe abre o caminho.\n\nDallas constrói a vantagem pelo alto. New England reage depois do intervalo, mas fica a três pontos de mudar o desfecho.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nDAL\t7\t10\t3\t7\t27\nNE\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18088/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 1440
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Corrida\n\nCorrida: EPA positivo para NE, negativo para DAL.\n\nNew England produziu EPA positivo na corrida; Dallas teve EPA negativo na corrida.\n\n0,160 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 390,
+    "summary": "RESUMO DA PARTIDA\nO passe abre o caminho.\n\nDallas constrói a vantagem pelo alto. New England reage depois do intervalo, mas fica a três pontos de mudar o desfecho.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nDAL\t7\t10\t3\t7\t27\nNE\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18088/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 390
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Corrida\n\nCorrida: EPA positivo para NE, negativo para DAL.\n\nNew England produziu EPA positivo na corrida; Dallas teve EPA negativo na corrida.\n\n0,160 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 320,
+    "summary": "RESUMO DA PARTIDA\nO passe abre o caminho.\n\nDallas constrói a vantagem pelo alto. New England reage depois do intervalo, mas fica a três pontos de mudar o desfecho.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nDAL\t7\t10\t3\t7\t27\nNE\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18088/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 320
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\nJogo completo · Passe\n\nMaior EPA, menor frequência de sucesso.\n\nBaltimore teve o maior EPA por jogada; Pittsburgh teve sucesso em uma parcela maior das jogadas.\n\n0,149 EPA/jogada\nDiferença entre médias\n9,7 p.p.\nDiferença de sucesso",
+    "scrollWidth": 1440,
+    "summary": "RESUMO DA PARTIDA\nProdução e regularidade se dividem.\n\nBaltimore tem o maior EPA por passe. Pittsburgh reúne uma parcela maior de passes com sucesso e produz mais EPA por corrida.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nBAL\t7\t3\t7\t7\t24\nPIT\t7\t7\t0\t7\t21",
+    "url": "http://127.0.0.1:18088/confronto/baltimore-pittsburgh?round=7&play=pass",
+    "width": 1440
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\nJogo completo · Passe\n\nMaior EPA, menor frequência de sucesso.\n\nBaltimore teve o maior EPA por jogada; Pittsburgh teve sucesso em uma parcela maior das jogadas.\n\n0,149 EPA/jogada\nDiferença entre médias\n9,7 p.p.\nDiferença de sucesso",
+    "scrollWidth": 390,
+    "summary": "RESUMO DA PARTIDA\nProdução e regularidade se dividem.\n\nBaltimore tem o maior EPA por passe. Pittsburgh reúne uma parcela maior de passes com sucesso e produz mais EPA por corrida.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nBAL\t7\t3\t7\t7\t24\nPIT\t7\t7\t0\t7\t21",
+    "url": "http://127.0.0.1:18088/confronto/baltimore-pittsburgh?round=7&play=pass",
+    "width": 390
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\nJogo completo · Passe\n\nMaior EPA, menor frequência de sucesso.\n\nBaltimore teve o maior EPA por jogada; Pittsburgh teve sucesso em uma parcela maior das jogadas.\n\n0,149 EPA/jogada\nDiferença entre médias\n9,7 p.p.\nDiferença de sucesso",
+    "scrollWidth": 320,
+    "summary": "RESUMO DA PARTIDA\nProdução e regularidade se dividem.\n\nBaltimore tem o maior EPA por passe. Pittsburgh reúne uma parcela maior de passes com sucesso e produz mais EPA por corrida.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nBAL\t7\t3\t7\t7\t24\nPIT\t7\t7\t0\t7\t21",
+    "url": "http://127.0.0.1:18088/confronto/baltimore-pittsburgh?round=7&play=pass",
+    "width": 320
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n1º tempo · Passe\n\nKC tem maior EPA por jogada.\n\nKansas City teve a maior média de EPA no passe, considerando apenas o período selecionado.\n\n0,250 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 1440,
+    "summary": "RESUMO DA PARTIDA\nBuffalo por três pontos.\n\nO placar está disponível. Os passes de Buffalo no segundo tempo estão sem fonte; corrida e primeiro tempo podem ser explorados.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nKC\t7\t7\t0\t7\t21\nBUF\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18088/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "width": 1440
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n1º tempo · Passe\n\nKC tem maior EPA por jogada.\n\nKansas City teve a maior média de EPA no passe, considerando apenas o período selecionado.\n\n0,250 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 390,
+    "summary": "RESUMO DA PARTIDA\nBuffalo por três pontos.\n\nO placar está disponível. Os passes de Buffalo no segundo tempo estão sem fonte; corrida e primeiro tempo podem ser explorados.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nKC\t7\t7\t0\t7\t21\nBUF\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18088/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "width": 390
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n1º tempo · Passe\n\nKC tem maior EPA por jogada.\n\nKansas City teve a maior média de EPA no passe, considerando apenas o período selecionado.\n\n0,250 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 320,
+    "summary": "RESUMO DA PARTIDA\nBuffalo por três pontos.\n\nO placar está disponível. Os passes de Buffalo no segundo tempo estão sem fonte; corrida e primeiro tempo podem ser explorados.\n\nPlacar da partida · todos os quartos\nTime\t1º\t2º\t3º\t4º\tFinal\nKC\t7\t7\t0\t7\t21\nBUF\t3\t7\t7\t7\t24",
+    "url": "http://127.0.0.1:18088/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "width": 320
+  },
+  {
+    "scrollWidth": 1440,
+    "summary": "PRÉ-JOGO\nGreen Bay recebe Chicago.\n\nAinda não há estatísticas desta partida.\n\nKickoff demonstrativo\nDomingo · 19h25",
+    "url": "http://127.0.0.1:18088/confronto/green-bay-chicago?round=7",
+    "width": 1440
+  },
+  {
+    "scrollWidth": 390,
+    "summary": "PRÉ-JOGO\nGreen Bay recebe Chicago.\n\nAinda não há estatísticas desta partida.\n\nKickoff demonstrativo\nDomingo · 19h25",
+    "url": "http://127.0.0.1:18088/confronto/green-bay-chicago?round=7",
+    "width": 390
+  },
+  {
+    "scrollWidth": 320,
+    "summary": "PRÉ-JOGO\nGreen Bay recebe Chicago.\n\nAinda não há estatísticas desta partida.\n\nKickoff demonstrativo\nDomingo · 19h25",
+    "url": "http://127.0.0.1:18088/confronto/green-bay-chicago?round=7",
+    "width": 320
+  }
+]

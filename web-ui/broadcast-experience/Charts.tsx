@@ -10,7 +10,7 @@ export function EfficiencyChart({ game, period, play }: { game: Game; period: Pe
         const stat = summarize(s, period, kind), value = mean(stat), team = teams[s.team];
         return <div className={`epa-row ${value === null ? 'metric-absent' : ''}`} key={team.id}><b>{team.id}</b><div className="epa-track" aria-hidden="true">{scale.ticks.map(t => <i className={t === 0 ? 'zero-line' : 'grid-line'} key={t} style={{ left: `${scale.position(t)}%` }}/>) }{value !== null && <span style={{ background: team.color, left: `${scale.position(Math.min(value, 0))}%`, width: `${Math.abs(value) / (scale.max - scale.min) * 100}%` }}/>}</div><strong>{value === null ? stat ? 'Sem jogadas' : 'Sem fonte' : signed(value)}</strong></div>;
       })}</div>)}
-    </div><p className="chart-note">Zero separa ganho e perda de valor. A escala se amplia em passos de 0,20 quando o recorte excede o intervalo inicial de −0,20 a +0,40.</p>
+    </div><p className="chart-note">EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.</p>
   </figure>;
 }
 export function SuccessChart({ game, period, play }: { game: Game; period: Period; play: PlayType }) {

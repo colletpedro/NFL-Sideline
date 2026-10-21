@@ -1,0 +1,2076 @@
+{
+  "fixtureSelections": 54,
+  "controlledEdgeCases": 8,
+  "immutableFiles": [
+    "fixtures.ts",
+    "chartScale.ts",
+    "state.ts",
+    "experience.css",
+    "editorial.test.ts",
+    "fixtures.test.ts"
+  ],
+  "bothNegativeFixtureSelections": [],
+  "bothNegativePreview": {
+    "before": {
+      "decision": "efficiency",
+      "title": "DAL perde menos valor.",
+      "text": "Os dois ataques tiveram EPA negativo no passe; a média de Dallas foi menos negativa.",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 20,
+          "epa": -0.1,
+          "success": 0.5,
+          "yards": 120
+        },
+        {
+          "team": "NE",
+          "plays": 20,
+          "epa": -0.2,
+          "success": 0.5,
+          "yards": 120
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.1,
+          "unit": "EPA/jogada"
+        }
+      ]
+    },
+    "after": {
+      "decision": "efficiency",
+      "title": "DAL tem EPA menos negativo.",
+      "text": "Os dois ataques tiveram EPA negativo no passe; a média de Dallas foi menos negativa.",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 20,
+          "epa": -0.1,
+          "success": 0.5,
+          "yards": 120
+        },
+        {
+          "team": "NE",
+          "plays": 20,
+          "epa": -0.2,
+          "success": 0.5,
+          "yards": 120
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.1,
+          "unit": "EPA/jogada"
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "game": "dallas-new-england",
+      "period": "game",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "game",
+        "play": "all",
+        "label": "Jogo completo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 64,
+          "epa": 0.095625,
+          "success": 0.5,
+          "yards": 413
+        },
+        {
+          "team": "NE",
+          "plays": 64,
+          "epa": 0.05062499999999999,
+          "success": 0.46875,
+          "yards": 379
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.16392603129445238,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.12883190883190881,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "DAL no passe; NE na corrida.",
+      "afterTitle": "Maior EPA: DAL no passe; NE na corrida."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "game",
+      "play": "pass",
+      "decision": "efficiency",
+      "context": {
+        "period": "game",
+        "play": "pass",
+        "label": "Jogo completo · Passe"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 38,
+          "epa": 0.21473684210526317,
+          "success": 0.5526315789473685,
+          "yards": 312
+        },
+        {
+          "team": "NE",
+          "plays": 37,
+          "epa": 0.0508108108108108,
+          "success": 0.4864864864864865,
+          "yards": 266
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.16392603129445238,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "DAL tem maior EPA por jogada.",
+      "afterTitle": "DAL tem maior EPA por jogada."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "game",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "rush",
+        "label": "Jogo completo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 26,
+          "epa": -0.07846153846153846,
+          "success": 0.4230769230769231,
+          "yards": 101
+        },
+        {
+          "team": "NE",
+          "plays": 27,
+          "epa": 0.050370370370370364,
+          "success": 0.4444444444444444,
+          "yards": 113
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.12883190883190881,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE soma valor; DAL perde.",
+      "afterTitle": "Corrida: EPA positivo para NE, negativo para DAL."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "first",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "first",
+        "play": "all",
+        "label": "1º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 34,
+          "epa": 0.15176470588235294,
+          "success": 0.5294117647058824,
+          "yards": 239
+        },
+        {
+          "team": "NE",
+          "plays": 30,
+          "epa": -0.07333333333333333,
+          "success": 0.4,
+          "yards": 156
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.45999999999999996,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.1,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "DAL no passe; NE na corrida.",
+      "afterTitle": "Maior EPA: DAL no passe; NE na corrida."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "first",
+      "play": "pass",
+      "decision": "split",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 20,
+          "epa": 0.3,
+          "success": 0.6,
+          "yards": 184
+        },
+        {
+          "team": "NE",
+          "plays": 17,
+          "epa": -0.16,
+          "success": 0.4117647058823529,
+          "yards": 104
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.45999999999999996,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "DAL soma valor; NE perde.",
+      "afterTitle": "Passe: EPA positivo para DAL, negativo para NE."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "first",
+      "play": "rush",
+      "decision": "divergence",
+      "context": {
+        "period": "first",
+        "play": "rush",
+        "label": "1º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 14,
+          "epa": -0.06,
+          "success": 0.42857142857142855,
+          "yards": 55
+        },
+        {
+          "team": "NE",
+          "plays": 13,
+          "epa": 0.04,
+          "success": 0.38461538461538464,
+          "yards": 52
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.1,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "successGap",
+          "label": "Diferença de sucesso",
+          "value": 4.395604395604391,
+          "unit": "p.p."
+        }
+      ],
+      "beforeTitle": "Maior EPA, menos sucesso.",
+      "afterTitle": "Maior EPA, menor frequência de sucesso."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "second",
+      "play": "all",
+      "decision": "efficiency",
+      "context": {
+        "period": "second",
+        "play": "all",
+        "label": "2º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 30,
+          "epa": 0.03200000000000001,
+          "success": 0.4666666666666667,
+          "yards": 174
+        },
+        {
+          "team": "NE",
+          "plays": 34,
+          "epa": 0.15999999999999998,
+          "success": 0.5294117647058824,
+          "yards": 223
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.12799999999999997,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE tem maior EPA por jogada.",
+      "afterTitle": "NE tem maior EPA por jogada."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "second",
+      "play": "pass",
+      "decision": "efficiency",
+      "context": {
+        "period": "second",
+        "play": "pass",
+        "label": "2º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 18,
+          "epa": 0.12000000000000001,
+          "success": 0.5,
+          "yards": 128
+        },
+        {
+          "team": "NE",
+          "plays": 20,
+          "epa": 0.22999999999999998,
+          "success": 0.55,
+          "yards": 162
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.10999999999999997,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE tem maior EPA por jogada.",
+      "afterTitle": "NE tem maior EPA por jogada."
+    },
+    {
+      "game": "dallas-new-england",
+      "period": "second",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "second",
+        "play": "rush",
+        "label": "2º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "DAL",
+          "plays": 12,
+          "epa": -0.09999999999999999,
+          "success": 0.4166666666666667,
+          "yards": 46
+        },
+        {
+          "team": "NE",
+          "plays": 14,
+          "epa": 0.06,
+          "success": 0.5,
+          "yards": 61
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.15999999999999998,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE soma valor; DAL perde.",
+      "afterTitle": "Corrida: EPA positivo para NE, negativo para DAL."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "game",
+      "play": "all",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "all",
+        "label": "Jogo completo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 66,
+          "epa": 0.15030303030303027,
+          "success": 0.5606060606060606,
+          "yards": 425
+        },
+        {
+          "team": "DAL",
+          "plays": 61,
+          "epa": -0.02098360655737705,
+          "success": 0.4426229508196721,
+          "yards": 346
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.17128663686040732,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; DAL perde.",
+      "afterTitle": "Recorte: EPA positivo para BAL, negativo para DAL."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "game",
+      "play": "pass",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "pass",
+        "label": "Jogo completo · Passe"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 29,
+          "epa": 0.060689655172413794,
+          "success": 0.5172413793103449,
+          "yards": 205
+        },
+        {
+          "team": "DAL",
+          "plays": 39,
+          "epa": -0.0030769230769230795,
+          "success": 0.46153846153846156,
+          "yards": 269
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.06376657824933687,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; DAL perde.",
+      "afterTitle": "Passe: EPA positivo para BAL, negativo para DAL."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "game",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "rush",
+        "label": "Jogo completo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 37,
+          "epa": 0.22054054054054054,
+          "success": 0.5945945945945946,
+          "yards": 220
+        },
+        {
+          "team": "DAL",
+          "plays": 22,
+          "epa": -0.052727272727272734,
+          "success": 0.4090909090909091,
+          "yards": 77
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.27326781326781324,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; DAL perde.",
+      "afterTitle": "Corrida: EPA positivo para BAL, negativo para DAL."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "first",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "first",
+        "play": "all",
+        "label": "1º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 33,
+          "epa": 0.14545454545454545,
+          "success": 0.5454545454545454,
+          "yards": 214
+        },
+        {
+          "team": "DAL",
+          "plays": 31,
+          "epa": 0.06193548387096774,
+          "success": 0.4838709677419355,
+          "yards": 185
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.039999999999999994,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.23,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "DAL no passe; BAL na corrida.",
+      "afterTitle": "Maior EPA: DAL no passe; BAL na corrida."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "first",
+      "play": "pass",
+      "decision": "efficiency",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 15,
+          "epa": 0.08,
+          "success": 0.5333333333333333,
+          "yards": 112
+        },
+        {
+          "team": "DAL",
+          "plays": 19,
+          "epa": 0.12,
+          "success": 0.5263157894736842,
+          "yards": 143
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.039999999999999994,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "DAL tem maior EPA por jogada.",
+      "afterTitle": "DAL tem maior EPA por jogada."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "first",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "first",
+        "play": "rush",
+        "label": "1º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 18,
+          "epa": 0.2,
+          "success": 0.5555555555555556,
+          "yards": 102
+        },
+        {
+          "team": "DAL",
+          "plays": 12,
+          "epa": -0.03,
+          "success": 0.4166666666666667,
+          "yards": 42
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.23,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; DAL perde.",
+      "afterTitle": "Corrida: EPA positivo para BAL, negativo para DAL."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "second",
+      "play": "all",
+      "decision": "split",
+      "context": {
+        "period": "second",
+        "play": "all",
+        "label": "2º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 33,
+          "epa": 0.15515151515151512,
+          "success": 0.5757575757575758,
+          "yards": 211
+        },
+        {
+          "team": "DAL",
+          "plays": 30,
+          "epa": -0.10666666666666667,
+          "success": 0.4,
+          "yards": 161
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.2618181818181818,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; DAL perde.",
+      "afterTitle": "Recorte: EPA positivo para BAL, negativo para DAL."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "second",
+      "play": "pass",
+      "decision": "split",
+      "context": {
+        "period": "second",
+        "play": "pass",
+        "label": "2º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 14,
+          "epa": 0.04,
+          "success": 0.5,
+          "yards": 93
+        },
+        {
+          "team": "DAL",
+          "plays": 20,
+          "epa": -0.12,
+          "success": 0.4,
+          "yards": 126
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.16,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; DAL perde.",
+      "afterTitle": "Passe: EPA positivo para BAL, negativo para DAL."
+    },
+    {
+      "game": "baltimore-dallas",
+      "period": "second",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "second",
+        "play": "rush",
+        "label": "2º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 19,
+          "epa": 0.24,
+          "success": 0.631578947368421,
+          "yards": 118
+        },
+        {
+          "team": "DAL",
+          "plays": 10,
+          "epa": -0.08,
+          "success": 0.4,
+          "yards": 35
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.32,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; DAL perde.",
+      "afterTitle": "Corrida: EPA positivo para BAL, negativo para DAL."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "game",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "game",
+        "play": "all",
+        "label": "Jogo completo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 60,
+          "epa": 0.07949999999999999,
+          "success": 0.5,
+          "yards": 377
+        },
+        {
+          "team": "BAL",
+          "plays": 65,
+          "epa": 0.03076923076923077,
+          "success": 0.47692307692307695,
+          "yards": 368
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.19583193277310926,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.13753548387096776,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE no passe; BAL na corrida.",
+      "afterTitle": "Maior EPA: NE no passe; BAL na corrida."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "game",
+      "play": "pass",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "pass",
+        "label": "Jogo completo · Passe"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 35,
+          "epa": 0.16171428571428573,
+          "success": 0.5714285714285714,
+          "yards": 287
+        },
+        {
+          "team": "BAL",
+          "plays": 34,
+          "epa": -0.03411764705882353,
+          "success": 0.4411764705882353,
+          "yards": 210
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.19583193277310926,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE soma valor; BAL perde.",
+      "afterTitle": "Passe: EPA positivo para NE, negativo para BAL."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "game",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "rush",
+        "label": "Jogo completo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 25,
+          "epa": -0.0356,
+          "success": 0.4,
+          "yards": 90
+        },
+        {
+          "team": "BAL",
+          "plays": 31,
+          "epa": 0.10193548387096775,
+          "success": 0.5161290322580645,
+          "yards": 158
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.13753548387096776,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; NE perde.",
+      "afterTitle": "Corrida: EPA positivo para BAL, negativo para NE."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "first",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "first",
+        "play": "all",
+        "label": "1º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 30,
+          "epa": 0.034999999999999996,
+          "success": 0.4666666666666667,
+          "yards": 174
+        },
+        {
+          "team": "BAL",
+          "plays": 33,
+          "epa": 0.037575757575757575,
+          "success": 0.48484848484848486,
+          "yards": 189
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.15,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.16999999999999998,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE no passe; BAL na corrida.",
+      "afterTitle": "Maior EPA: NE no passe; BAL na corrida."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "first",
+      "play": "pass",
+      "decision": "split",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 17,
+          "epa": 0.09999999999999999,
+          "success": 0.5294117647058824,
+          "yards": 130
+        },
+        {
+          "team": "BAL",
+          "plays": 16,
+          "epa": -0.05,
+          "success": 0.4375,
+          "yards": 99
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.15,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE soma valor; BAL perde.",
+      "afterTitle": "Passe: EPA positivo para NE, negativo para BAL."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "first",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "first",
+        "play": "rush",
+        "label": "1º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 13,
+          "epa": -0.05,
+          "success": 0.38461538461538464,
+          "yards": 44
+        },
+        {
+          "team": "BAL",
+          "plays": 17,
+          "epa": 0.12,
+          "success": 0.5294117647058824,
+          "yards": 90
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.16999999999999998,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; NE perde.",
+      "afterTitle": "Corrida: EPA positivo para BAL, negativo para NE."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "second",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "second",
+        "play": "all",
+        "label": "2º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 30,
+          "epa": 0.12399999999999999,
+          "success": 0.5333333333333333,
+          "yards": 203
+        },
+        {
+          "team": "BAL",
+          "plays": 32,
+          "epa": 0.023750000000000004,
+          "success": 0.46875,
+          "yards": 179
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.24,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.1,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE no passe; BAL na corrida.",
+      "afterTitle": "Maior EPA: NE no passe; BAL na corrida."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "second",
+      "play": "pass",
+      "decision": "split",
+      "context": {
+        "period": "second",
+        "play": "pass",
+        "label": "2º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 18,
+          "epa": 0.22,
+          "success": 0.6111111111111112,
+          "yards": 157
+        },
+        {
+          "team": "BAL",
+          "plays": 18,
+          "epa": -0.02,
+          "success": 0.4444444444444444,
+          "yards": 111
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.24,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "NE soma valor; BAL perde.",
+      "afterTitle": "Passe: EPA positivo para NE, negativo para BAL."
+    },
+    {
+      "game": "new-england-baltimore",
+      "period": "second",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "second",
+        "play": "rush",
+        "label": "2º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "NE",
+          "plays": 12,
+          "epa": -0.02,
+          "success": 0.4166666666666667,
+          "yards": 46
+        },
+        {
+          "team": "BAL",
+          "plays": 14,
+          "epa": 0.08,
+          "success": 0.5,
+          "yards": 68
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.1,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL soma valor; NE perde.",
+      "afterTitle": "Corrida: EPA positivo para BAL, negativo para NE."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "game",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "game",
+        "play": "all",
+        "label": "Jogo completo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 60,
+          "epa": 0.11933333333333333,
+          "success": 0.5,
+          "yards": 390
+        },
+        {
+          "team": "PIT",
+          "plays": 61,
+          "epa": 0.11098360655737706,
+          "success": 0.5737704918032787,
+          "yards": 381
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.1494285714285714,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.155,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL no passe; PIT na corrida.",
+      "afterTitle": "Maior EPA: BAL no passe; PIT na corrida."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "game",
+      "play": "pass",
+      "decision": "divergence",
+      "context": {
+        "period": "game",
+        "play": "pass",
+        "label": "Jogo completo · Passe"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 32,
+          "epa": 0.25,
+          "success": 0.53125,
+          "yards": 277
+        },
+        {
+          "team": "PIT",
+          "plays": 35,
+          "epa": 0.10057142857142859,
+          "success": 0.6285714285714286,
+          "yards": 243
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.1494285714285714,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "successGap",
+          "label": "Diferença de sucesso",
+          "value": 9.732142857142856,
+          "unit": "p.p."
+        }
+      ],
+      "beforeTitle": "Maior EPA, menos sucesso.",
+      "afterTitle": "Maior EPA, menor frequência de sucesso."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "game",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "rush",
+        "label": "Jogo completo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 28,
+          "epa": -0.03,
+          "success": 0.4642857142857143,
+          "yards": 113
+        },
+        {
+          "team": "PIT",
+          "plays": 26,
+          "epa": 0.125,
+          "success": 0.5,
+          "yards": 138
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.155,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "PIT soma valor; BAL perde.",
+      "afterTitle": "Corrida: EPA positivo para PIT, negativo para BAL."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "first",
+      "play": "all",
+      "decision": "cross",
+      "context": {
+        "period": "first",
+        "play": "all",
+        "label": "1º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 30,
+          "epa": 0.13666666666666666,
+          "success": 0.5,
+          "yards": 202
+        },
+        {
+          "team": "PIT",
+          "plays": 31,
+          "epa": 0.13258064516129034,
+          "success": 0.5806451612903226,
+          "yards": 201
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "passGap",
+          "label": "Diferença no passe",
+          "value": 0.18,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "rushGap",
+          "label": "Diferença na corrida",
+          "value": 0.19999999999999998,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BAL no passe; PIT na corrida.",
+      "afterTitle": "Maior EPA: BAL no passe; PIT na corrida."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "first",
+      "play": "pass",
+      "decision": "divergence",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 16,
+          "epa": 0.3,
+          "success": 0.5625,
+          "yards": 150
+        },
+        {
+          "team": "PIT",
+          "plays": 18,
+          "epa": 0.12000000000000001,
+          "success": 0.6111111111111112,
+          "yards": 129
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.18,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "successGap",
+          "label": "Diferença de sucesso",
+          "value": 4.861111111111116,
+          "unit": "p.p."
+        }
+      ],
+      "beforeTitle": "Maior EPA, menos sucesso.",
+      "afterTitle": "Maior EPA, menor frequência de sucesso."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "first",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "first",
+        "play": "rush",
+        "label": "1º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 14,
+          "epa": -0.049999999999999996,
+          "success": 0.42857142857142855,
+          "yards": 52
+        },
+        {
+          "team": "PIT",
+          "plays": 13,
+          "epa": 0.15,
+          "success": 0.5384615384615384,
+          "yards": 72
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.19999999999999998,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "PIT soma valor; BAL perde.",
+      "afterTitle": "Corrida: EPA positivo para PIT, negativo para BAL."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "second",
+      "play": "all",
+      "decision": "divergence",
+      "context": {
+        "period": "second",
+        "play": "all",
+        "label": "2º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 30,
+          "epa": 0.10200000000000001,
+          "success": 0.5,
+          "yards": 188
+        },
+        {
+          "team": "PIT",
+          "plays": 30,
+          "epa": 0.08866666666666667,
+          "success": 0.5666666666666667,
+          "yards": 180
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.013333333333333336,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "successGap",
+          "label": "Diferença de sucesso",
+          "value": 6.666666666666665,
+          "unit": "p.p."
+        }
+      ],
+      "beforeTitle": "Maior EPA, menos sucesso.",
+      "afterTitle": "Maior EPA, menor frequência de sucesso."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "second",
+      "play": "pass",
+      "decision": "divergence",
+      "context": {
+        "period": "second",
+        "play": "pass",
+        "label": "2º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 16,
+          "epa": 0.2,
+          "success": 0.5,
+          "yards": 127
+        },
+        {
+          "team": "PIT",
+          "plays": 17,
+          "epa": 0.08,
+          "success": 0.6470588235294118,
+          "yards": 114
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.12000000000000001,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "successGap",
+          "label": "Diferença de sucesso",
+          "value": 14.70588235294118,
+          "unit": "p.p."
+        }
+      ],
+      "beforeTitle": "Maior EPA, menos sucesso.",
+      "afterTitle": "Maior EPA, menor frequência de sucesso."
+    },
+    {
+      "game": "baltimore-pittsburgh",
+      "period": "second",
+      "play": "rush",
+      "decision": "divergence",
+      "context": {
+        "period": "second",
+        "play": "rush",
+        "label": "2º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "BAL",
+          "plays": 14,
+          "epa": -0.01,
+          "success": 0.5,
+          "yards": 61
+        },
+        {
+          "team": "PIT",
+          "plays": 13,
+          "epa": 0.1,
+          "success": 0.46153846153846156,
+          "yards": 66
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.11,
+          "unit": "EPA/jogada"
+        },
+        {
+          "metric": "successGap",
+          "label": "Diferença de sucesso",
+          "value": 3.8461538461538436,
+          "unit": "p.p."
+        }
+      ],
+      "beforeTitle": "Maior EPA, menos sucesso.",
+      "afterTitle": "Maior EPA, menor frequência de sucesso."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "game",
+      "play": "all",
+      "decision": "pregame",
+      "context": {
+        "period": "game",
+        "play": "all",
+        "label": "Jogo completo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "game",
+      "play": "pass",
+      "decision": "pregame",
+      "context": {
+        "period": "game",
+        "play": "pass",
+        "label": "Jogo completo · Passe"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "game",
+      "play": "rush",
+      "decision": "pregame",
+      "context": {
+        "period": "game",
+        "play": "rush",
+        "label": "Jogo completo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "first",
+      "play": "all",
+      "decision": "pregame",
+      "context": {
+        "period": "first",
+        "play": "all",
+        "label": "1º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "first",
+      "play": "pass",
+      "decision": "pregame",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "first",
+      "play": "rush",
+      "decision": "pregame",
+      "context": {
+        "period": "first",
+        "play": "rush",
+        "label": "1º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "second",
+      "play": "all",
+      "decision": "pregame",
+      "context": {
+        "period": "second",
+        "play": "all",
+        "label": "2º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "second",
+      "play": "pass",
+      "decision": "pregame",
+      "context": {
+        "period": "second",
+        "play": "pass",
+        "label": "2º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "green-bay-chicago",
+      "period": "second",
+      "play": "rush",
+      "decision": "pregame",
+      "context": {
+        "period": "second",
+        "play": "rush",
+        "label": "2º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "GB",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        },
+        {
+          "team": "CHI",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "A bola ainda não está em jogo.",
+      "afterTitle": "A bola ainda não está em jogo."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "game",
+      "play": "all",
+      "decision": "unavailable",
+      "context": {
+        "period": "game",
+        "play": "all",
+        "label": "Jogo completo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 67,
+          "epa": 0.05,
+          "success": 0.4925373134328358,
+          "yards": 392
+        },
+        {
+          "team": "BUF",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "Falta uma parte deste recorte.",
+      "afterTitle": "Falta uma parte deste recorte."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "game",
+      "play": "pass",
+      "decision": "unavailable",
+      "context": {
+        "period": "game",
+        "play": "pass",
+        "label": "Jogo completo · Passe"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 42,
+          "epa": 0.08095238095238096,
+          "success": 0.5238095238095238,
+          "yards": 301
+        },
+        {
+          "team": "BUF",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "Falta uma parte deste recorte.",
+      "afterTitle": "Falta uma parte deste recorte."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "game",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "game",
+        "play": "rush",
+        "label": "Jogo completo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 25,
+          "epa": -0.0020000000000000018,
+          "success": 0.44,
+          "yards": 91
+        },
+        {
+          "team": "BUF",
+          "plays": 27,
+          "epa": 0.055925925925925934,
+          "success": 0.5185185185185185,
+          "yards": 126
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.057925925925925936,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BUF soma valor; KC perde.",
+      "afterTitle": "Corrida: EPA positivo para BUF, negativo para KC."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "first",
+      "play": "all",
+      "decision": "efficiency",
+      "context": {
+        "period": "first",
+        "play": "all",
+        "label": "1º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 32,
+          "epa": 0.33125,
+          "success": 0.59375,
+          "yards": 224
+        },
+        {
+          "team": "BUF",
+          "plays": 31,
+          "epa": 0.15774193548387097,
+          "success": 0.5483870967741935,
+          "yards": 206
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.17350806451612902,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "KC tem maior EPA por jogada.",
+      "afterTitle": "KC tem maior EPA por jogada."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "first",
+      "play": "pass",
+      "decision": "efficiency",
+      "context": {
+        "period": "first",
+        "play": "pass",
+        "label": "1º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 20,
+          "epa": 0.5,
+          "success": 0.65,
+          "yards": 175
+        },
+        {
+          "team": "BUF",
+          "plays": 18,
+          "epa": 0.25,
+          "success": 0.6111111111111112,
+          "yards": 149
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.25,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "KC tem maior EPA por jogada.",
+      "afterTitle": "KC tem maior EPA por jogada."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "first",
+      "play": "rush",
+      "decision": "efficiency",
+      "context": {
+        "period": "first",
+        "play": "rush",
+        "label": "1º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 12,
+          "epa": 0.049999999999999996,
+          "success": 0.5,
+          "yards": 49
+        },
+        {
+          "team": "BUF",
+          "plays": 13,
+          "epa": 0.030000000000000002,
+          "success": 0.46153846153846156,
+          "yards": 57
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.019999999999999993,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "KC tem maior EPA por jogada.",
+      "afterTitle": "KC tem maior EPA por jogada."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "second",
+      "play": "all",
+      "decision": "unavailable",
+      "context": {
+        "period": "second",
+        "play": "all",
+        "label": "2º tempo · Todas as jogadas"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 35,
+          "epa": -0.20714285714285716,
+          "success": 0.4,
+          "yards": 168
+        },
+        {
+          "team": "BUF",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "Falta uma parte deste recorte.",
+      "afterTitle": "Falta uma parte deste recorte."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "second",
+      "play": "pass",
+      "decision": "unavailable",
+      "context": {
+        "period": "second",
+        "play": "pass",
+        "label": "2º tempo · Passe"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 22,
+          "epa": -0.3,
+          "success": 0.4090909090909091,
+          "yards": 126
+        },
+        {
+          "team": "BUF",
+          "plays": null,
+          "epa": null,
+          "success": null,
+          "yards": null
+        }
+      ],
+      "evidence": [],
+      "beforeTitle": "Falta uma parte deste recorte.",
+      "afterTitle": "Falta uma parte deste recorte."
+    },
+    {
+      "game": "kansas-city-buffalo",
+      "period": "second",
+      "play": "rush",
+      "decision": "split",
+      "context": {
+        "period": "second",
+        "play": "rush",
+        "label": "2º tempo · Corrida"
+      },
+      "samples": [
+        {
+          "team": "KC",
+          "plays": 13,
+          "epa": -0.05,
+          "success": 0.38461538461538464,
+          "yards": 42
+        },
+        {
+          "team": "BUF",
+          "plays": 14,
+          "epa": 0.08,
+          "success": 0.5714285714285714,
+          "yards": 69
+        }
+      ],
+      "evidence": [
+        {
+          "metric": "epaGap",
+          "label": "Diferença entre médias",
+          "value": 0.13,
+          "unit": "EPA/jogada"
+        }
+      ],
+      "beforeTitle": "BUF soma valor; KC perde.",
+      "afterTitle": "Corrida: EPA positivo para BUF, negativo para KC."
+    }
+  ]
+}

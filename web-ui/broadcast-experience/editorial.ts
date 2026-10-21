@@ -35,7 +35,7 @@ export function readSlice(game: Game, period: Period, play: PlayType): Reading {
   if (epaOrder * successOrder < 0) {
     const signs = rounded(a.epa!, 3) * rounded(b.epa!, 3) < 0;
     const efficiency = signs ? `${names[lead]} produziu EPA positivo e ${names[other]}, negativo` : `${names[lead]} teve o maior EPA por jogada`;
-    return result('divergence', 'Maior EPA, menos sucesso.', `${efficiency}; ${names[other]} teve sucesso em uma parcela maior das jogadas.`, [...epaEvidence, ...successEvidence]);
+    return result('divergence', 'Maior EPA, menor frequência de sucesso.', `${efficiency}; ${names[other]} teve sucesso em uma parcela maior das jogadas.`, [...epaEvidence, ...successEvidence]);
   }
 
   if (play === 'all') {
@@ -44,7 +44,7 @@ export function readSlice(game: Game, period: Period, play: PlayType): Reading {
       const pd = direction(mean(pass[0])!, mean(pass[1])!, EPA_CLOSE, 3), rd = direction(mean(rush[0])!, mean(rush[1])!, EPA_CLOSE, 3);
       if (pd * rd < 0) {
         const p = pd > 0 ? 0 : 1, r = 1 - p;
-        return result('cross', `${game.sides[p].team} no passe; ${game.sides[r].team} na corrida.`, `${names[p]} teve maior EPA por passe; ${names[r]}, maior EPA por corrida.`, [
+        return result('cross', `Maior EPA: ${game.sides[p].team} no passe; ${game.sides[r].team} na corrida.`, `${names[p]} teve maior EPA por passe; ${names[r]}, maior EPA por corrida.`, [
           { metric: 'passGap', label: 'Diferença no passe', value: Math.abs(mean(pass[0])! - mean(pass[1])!), unit: 'EPA/jogada' },
           { metric: 'rushGap', label: 'Diferença na corrida', value: Math.abs(mean(rush[0])! - mean(rush[1])!), unit: 'EPA/jogada' },
         ]);
@@ -60,13 +60,13 @@ export function readSlice(game: Game, period: Period, play: PlayType): Reading {
   }
   if (rounded(a.epa!, 3) * rounded(b.epa!, 3) < 0) {
     const positive = a.epa! > 0 ? 0 : 1, negative = 1 - positive;
-    return result('split', `${game.sides[positive].team} soma valor; ${game.sides[negative].team} perde.`, `${names[positive]} produziu EPA positivo ${foundation}; ${names[negative]} perdeu valor nesse fundamento.`, epaEvidence);
+    return result('split', `${play === 'all' ? 'Recorte' : playLabels[play]}: EPA positivo para ${game.sides[positive].team}, negativo para ${game.sides[negative].team}.`, `${names[positive]} produziu EPA positivo ${foundation}; ${names[negative]} teve EPA negativo ${foundation}.`, epaEvidence);
   }
-  if (rounded(samples[other].epa!, 3) === 0) return result('efficiency', `${game.sides[lead].team} soma valor; ${game.sides[other].team} fica em zero.`, `${names[lead]} produziu EPA positivo ${foundation}; a média de ${names[other]} ficou em zero na precisão exibida.`, epaEvidence);
-  if (rounded(samples[lead].epa!, 3) === 0) return result('efficiency', `${game.sides[lead].team} fica em zero; ${game.sides[other].team} perde.`, `${names[lead]} ficou em zero na precisão exibida; ${names[other]} produziu EPA negativo ${foundation}.`, epaEvidence);
+  if (rounded(samples[other].epa!, 3) === 0) return result('efficiency', `${game.sides[lead].team}: EPA positivo; ${game.sides[other].team}: EPA zero.`, `${names[lead]} produziu EPA positivo ${foundation}; a média de ${names[other]} ficou em zero na precisão exibida.`, epaEvidence);
+  if (rounded(samples[lead].epa!, 3) === 0) return result('efficiency', `${game.sides[lead].team}: EPA zero; ${game.sides[other].team}: EPA negativo.`, `${names[lead]} ficou em zero na precisão exibida; ${names[other]} produziu EPA negativo ${foundation}.`, epaEvidence);
   const bothNegative = a.epa! < 0 && b.epa! < 0;
   const volumeText = samples[other].plays! - samples[lead].plays! >= 5 ? ` ${names[other]} executou mais jogadas, sem ter a maior média de EPA.` : '';
-  return result('efficiency', bothNegative ? `${game.sides[lead].team} perde menos valor.` : `${game.sides[lead].team} tem maior EPA por jogada.`,
+  return result('efficiency', bothNegative ? `${game.sides[lead].team} tem EPA menos negativo.` : `${game.sides[lead].team} tem maior EPA por jogada.`,
     (bothNegative ? `Os dois ataques tiveram EPA negativo ${foundation}; a média de ${names[lead]} foi menos negativa.` : `${names[lead]} teve a maior média de EPA ${foundation}, considerando apenas o período selecionado.`) + volumeText, epaEvidence);
 }
 

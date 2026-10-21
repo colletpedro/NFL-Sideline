@@ -52,9 +52,6 @@ function Home() {
 function AnalysisControls({ period, play, change }: { period: Period; play: PlayType; change: (key: string, value: string) => void }) {
   return <div className="analysis-controls"><div className="analysis-intro"><span className="section-kicker">Mesa de análise</span><h2>Produção dos ataques</h2></div><div className="control-fields"><label className="period-label">Período<span className="select-wrap"><select value={period} onChange={e => change('period', e.target.value)}>{Object.entries(periodLabels).map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select><ChevronDown aria-hidden="true" size={16}/></span></label><div className="play-select"><span>Fundamento</span><div role="group" aria-label="Fundamento">{(['all', 'pass', 'rush'] as const).map(p => <button key={p} aria-pressed={p === play} onClick={() => change('play', p)}>{p === 'all' ? 'Todos' : playLabels[p]}</button>)}</div></div></div></div>;
 }
-function Pregame({ game }: { game: Game }) {
-  return <section className="pregame-content"><div><span className="section-kicker">Antes do kickoff</span><h2>Sem estatísticas desta partida.</h2><p>Ainda sem jogadas, não há recortes de período ou fundamento para selecionar.</p></div><dl><div><dt>Local</dt><dd>{game.venue}</dd></div><div><dt>Dados oferecidos</dt><dd>Agenda e identidade dos times</dd></div><div><dt>Série histórica</dt><dd>Não oferecida nesta demonstração</dd></div></dl></section>;
-}
 function Matchup() {
   const { id } = useParams(), game = gameForId(id), location = useLocation();
   const [params, setParams] = useSearchParams(), state = readState(params.toString()), nav = navigationContext(location.pathname, location.search);
@@ -63,8 +60,8 @@ function Matchup() {
   if (!game) return <main id="main" tabIndex={-1} className="page not-found"><h1>Confronto fora desta edição.</h1><p>Escolha um dos jogos disponíveis pela central.</p><ExploreLink to={nav.centralHref}>Voltar à central</ExploreLink></main>;
   const [a, b] = game.sides.map(s => teams[s.team]), reading = readSlice(game, state.period, state.play);
   return <main id="main" tabIndex={-1} className="page matchup-page"><div className="breadcrumb"><Link to={nav.centralHref}><ArrowLeft size={16} aria-hidden="true"/>Central · rodada {nav.originRound}</Link><ChevronRight size={14} aria-hidden="true"/><span>Duelo da rodada {game.round} · {a.city} × {b.city}</span></div><article className="analysis-board"><div className="segment-header"><span>Rodada {game.round} · {game.venue}</span><span>{game.status === 'pregame' ? 'Pré-jogo' : 'Encerrado · simulação'}</span></div><MatchupBand game={game}/>
-    <div className="matchup-summary"><div><span className="section-kicker">{game.status === 'pregame' ? 'Pré-jogo' : 'Resumo da partida'}</span><h1>{game.title}</h1><p>{game.deck}</p></div>{game.status === 'final' ? <ScoreTimeline game={game}/> : <div className="pregame-agenda"><span>Próximo kickoff</span><strong>{game.kickoff}</strong><span>Rodada {game.round} · agenda demonstrativa</span></div>}</div>
-    {game.status === 'pregame' ? <Pregame game={game}/> : <>
+    <div className="matchup-summary"><div><span className="section-kicker">{game.status === 'pregame' ? 'Pré-jogo' : 'Resumo da partida'}</span><h1>{game.title}</h1><p>{game.status === 'pregame' ? 'Ainda não há estatísticas desta partida.' : game.deck}</p></div>{game.status === 'final' ? <ScoreTimeline game={game}/> : <div className="pregame-agenda"><span>Kickoff demonstrativo</span><strong>{game.kickoff}</strong></div>}</div>
+    {game.status === 'final' && <>
       <AnalysisControls period={state.period} play={state.play} change={change}/>
       <div className="analysis-context"><span>{periodLabels[state.period]} <span>/</span> {playLabels[state.play]}</span><span>{game.sides.map(s => { const stat = summarize(s, state.period, state.play); return `${s.team}: ${stat ? `${stat.plays} jogadas` : 'amostra sem fonte'}`; }).join(' · ')}</span></div>
       <div className="chart-grid"><EfficiencyChart game={game} period={state.period} play={state.play}/><SuccessChart game={game} period={state.period} play={state.play}/></div>

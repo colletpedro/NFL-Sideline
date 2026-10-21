@@ -1,0 +1,32 @@
+[
+  {
+    "absenceMessages": 1,
+    "case": "pregame",
+    "charts": 0,
+    "controls": 0,
+    "kickoff": "Kickoff demonstrativo\nDomingo · 19h25",
+    "notice": "Demonstração · dados simulados",
+    "otherGames": 3,
+    "scores": 0,
+    "venue": "Rodada 7 · Green Bay · Wisconsin\nPré-jogo"
+  },
+  {
+    "bars": [
+      {
+        "left": "25%",
+        "width": "62.5%"
+      },
+      {
+        "left": "25%",
+        "width": "31.25%"
+      }
+    ],
+    "case": "expanded-axis",
+    "ticks": "−0,20\n0\n+0,20\n+0,40\n+0,60",
+    "values": [
+      "+0,500",
+      "+0,250"
+    ],
+    "zeros": 2
+  }
+]
