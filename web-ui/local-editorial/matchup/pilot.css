@@ -6,7 +6,7 @@
 .matchup-pilot a:focus-visible {outline:2px solid #d7ff3f;outline-offset:4px;}
 .matchup-pilot a:hover {color:#fff;text-decoration:underline;text-underline-offset:5px;}
 .pilot-topbar {height:58px;border-bottom:1px solid #56626a;display:flex;align-items:center;padding:0 40px;gap:44px;background:linear-gradient(#2d3a44,#24313a);}
-.pilot-brand {font-size:1.1875rem;letter-spacing:-.7px;font-weight:800;white-space:nowrap;}
+.pilot-brand {display:inline-flex;align-items:center;gap:.2em;min-height:44px;font-size:1.1875rem;letter-spacing:-.7px;font-weight:800;white-space:nowrap;}
 .pilot-brand strong {color:#d7ff3f;}
 .pilot-topbar nav {display:flex;align-self:stretch;gap:28px;font-size:.8125rem;}
 .pilot-topbar nav a {display:flex;align-items:center;border-bottom:2px solid transparent;}
@@ -53,11 +53,11 @@ main.pilot-proof {width:min(100% - 48px,1640px);}
 .pilot-type-options .recap-fact {font-weight:700;}
 .pilot-type-options .pilot-glyphs {font-family:var(--recap-sans);margin-top:16px;}
 @media(max-width:600px) {
- .pilot-topbar {height:auto;min-height:96px;padding:12px 16px 0;gap:8px 20px;flex-wrap:wrap;}
- .pilot-brand {font-size:1.125rem;}
+ .pilot-topbar {height:auto;min-height:96px;padding:4px 16px 0;gap:0 20px;flex-wrap:wrap;}
+ .pilot-brand {display:inline-flex;align-items:center;gap:.2em;min-height:44px;font-size:1.125rem;}
  .pilot-local {font-size:.75rem;}
  .pilot-topbar nav {order:3;flex-basis:100%;gap:26px;}
- .pilot-topbar nav a {min-height:42px;}
+ .pilot-topbar nav a {min-height:44px;}
  main.pilot-main {width:calc(100% - 24px);padding-bottom:16px;}
  .pilot-context {font-size:.75rem;gap:4px;}
  .pilot-notice {font-size:.75rem;max-width:32ch;margin:4px auto 14px;line-height:1.5;}
