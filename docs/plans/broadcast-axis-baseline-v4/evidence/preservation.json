@@ -1,0 +1,16 @@
+{
+  "base": "9c43b06c91c146357009f28774c693ddfd78a306",
+  "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f",
+  "unchangedSourceHashes": {
+    "web-ui/broadcast-experience/fixtures.ts": "e183e78596d4609b2dfd55d4ccb42f6161729624c899d53d93696c7bd0fb29de",
+    "web-ui/broadcast-experience/editorial.ts": "0400af0422596055b291845964d8ab5f55daad71b59957aba059ff951f1ebdc0",
+    "web-ui/broadcast-experience/state.ts": "bcc5d242da168631a48168d937f5670a6c780d579e3f87d1f2ba536d8567d491",
+    "web-ui/broadcast-experience/App.tsx": "12b7357446c054c0c215dd37546430a16d421d6a2f98579778ce248a7f7193c1",
+    "web-ui/broadcast-experience/AnalysisReading.tsx": "99673f7e22e854f9105d8b1b87504713958ce58fcaae1b99dda574c0e5d92a56",
+    "web-ui/broadcast-experience/ui.tsx": "8a262d7433b9f079003257ced271d6780d476f8c68f65d7f33284653520cfa6f",
+    "web-ui/broadcast-experience/experience.css": "ce976087a80bc5abc411f823704e87a85075268e891e8ffc5619470a0f009419"
+  },
+  "originalScaleFunctionUnchanged": true,
+  "problemSliceSeriesValuesUnchanged": true,
+  "problemSliceBarPositionsAndWidthsUnchanged": true
+}

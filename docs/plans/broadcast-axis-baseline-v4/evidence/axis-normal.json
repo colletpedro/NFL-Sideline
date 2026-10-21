@@ -1,0 +1,714 @@
+[
+  {
+    "case": "initial",
+    "axis": [
+      {
+        "left": 68.3984375,
+        "right": 97.0859375,
+        "text": "−0,20"
+      },
+      {
+        "left": 114.60546875,
+        "right": 120.86328125,
+        "text": "0"
+      },
+      {
+        "left": 187.71875,
+        "right": 216.40625,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "16.6667%",
+        "width": "16.6667%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "10%"
+      }
+    ],
+    "gaps": [
+      17.51953125,
+      66.85546875
+    ],
+    "pageWidth": 320,
+    "plotViewport": 260,
+    "plotWidth": 260,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "values": [
+      "−0,100",
+      "+0,060"
+    ],
+    "width": 320
+  },
+  {
+    "case": "initial",
+    "axis": [
+      {
+        "left": 74.3984375,
+        "right": 103.0859375,
+        "text": "−0,20"
+      },
+      {
+        "left": 134.93359375,
+        "right": 141.19140625,
+        "text": "0"
+      },
+      {
+        "left": 236.71875,
+        "right": 265.40625,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "16.6667%",
+        "width": "16.6667%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "10%"
+      }
+    ],
+    "gaps": [
+      31.84765625,
+      95.52734375
+    ],
+    "pageWidth": 375,
+    "plotViewport": 303,
+    "plotWidth": 303,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "values": [
+      "−0,100",
+      "+0,060"
+    ],
+    "width": 390
+  },
+  {
+    "case": "initial",
+    "axis": [
+      {
+        "left": 104,
+        "right": 132.6875,
+        "text": "−0,20"
+      },
+      {
+        "left": 212.94921875,
+        "right": 219.20703125,
+        "text": "0"
+      },
+      {
+        "left": 411.5625,
+        "right": 440.25,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "16.6667%",
+        "width": "16.6667%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "10%"
+      }
+    ],
+    "gaps": [
+      80.26171875,
+      192.35546875
+    ],
+    "pageWidth": 1009,
+    "plotViewport": 456,
+    "plotWidth": 456,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "values": [
+      "−0,100",
+      "+0,060"
+    ],
+    "width": 1024
+  },
+  {
+    "case": "initial",
+    "axis": [
+      {
+        "left": 146.5,
+        "right": 175.1875,
+        "text": "−0,20"
+      },
+      {
+        "left": 312.33203125,
+        "right": 318.58984375,
+        "text": "0"
+      },
+      {
+        "left": 624.6953125,
+        "right": 653.3828125,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "16.6667%",
+        "width": "16.6667%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "10%"
+      }
+    ],
+    "gaps": [
+      137.14453125,
+      306.10546875
+    ],
+    "pageWidth": 1425,
+    "plotViewport": 627,
+    "plotWidth": 627,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "values": [
+      "−0,100",
+      "+0,060"
+    ],
+    "width": 1440
+  },
+  {
+    "case": "positive",
+    "axis": [
+      {
+        "left": 68.3984375,
+        "right": 97.0859375,
+        "text": "−0,20"
+      },
+      {
+        "left": 102.26953125,
+        "right": 108.52734375,
+        "text": "0"
+      },
+      {
+        "left": 187.71875,
+        "right": 216.40625,
+        "text": "+0,60"
+      }
+    ],
+    "bars": [
+      {
+        "left": "25%",
+        "width": "62.5%"
+      },
+      {
+        "left": "25%",
+        "width": "31.25%"
+      }
+    ],
+    "gaps": [
+      5.18359375,
+      79.19140625
+    ],
+    "pageWidth": 320,
+    "plotViewport": 260,
+    "plotWidth": 260,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "values": [
+      "+0,500",
+      "+0,250"
+    ],
+    "width": 320
+  },
+  {
+    "case": "positive",
+    "axis": [
+      {
+        "left": 74.3984375,
+        "right": 103.0859375,
+        "text": "−0,20"
+      },
+      {
+        "left": 119.01953125,
+        "right": 125.27734375,
+        "text": "0"
+      },
+      {
+        "left": 236.71875,
+        "right": 265.40625,
+        "text": "+0,60"
+      }
+    ],
+    "bars": [
+      {
+        "left": "25%",
+        "width": "62.5%"
+      },
+      {
+        "left": "25%",
+        "width": "31.25%"
+      }
+    ],
+    "gaps": [
+      15.93359375,
+      111.44140625
+    ],
+    "pageWidth": 375,
+    "plotViewport": 303,
+    "plotWidth": 303,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "values": [
+      "+0,500",
+      "+0,250"
+    ],
+    "width": 390
+  },
+  {
+    "case": "positive",
+    "axis": [
+      {
+        "left": 104,
+        "right": 132.6875,
+        "text": "−0,20"
+      },
+      {
+        "left": 184.93359375,
+        "right": 191.19140625,
+        "text": "0"
+      },
+      {
+        "left": 411.5625,
+        "right": 440.25,
+        "text": "+0,60"
+      }
+    ],
+    "bars": [
+      {
+        "left": "25%",
+        "width": "62.5%"
+      },
+      {
+        "left": "25%",
+        "width": "31.25%"
+      }
+    ],
+    "gaps": [
+      52.24609375,
+      220.37109375
+    ],
+    "pageWidth": 1009,
+    "plotViewport": 456,
+    "plotWidth": 456,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "values": [
+      "+0,500",
+      "+0,250"
+    ],
+    "width": 1024
+  },
+  {
+    "case": "positive",
+    "axis": [
+      {
+        "left": 146.5,
+        "right": 175.1875,
+        "text": "−0,20"
+      },
+      {
+        "left": 270.08984375,
+        "right": 276.34765625,
+        "text": "0"
+      },
+      {
+        "left": 624.6953125,
+        "right": 653.3828125,
+        "text": "+0,60"
+      }
+    ],
+    "bars": [
+      {
+        "left": "25%",
+        "width": "62.5%"
+      },
+      {
+        "left": "25%",
+        "width": "31.25%"
+      }
+    ],
+    "gaps": [
+      94.90234375,
+      348.34765625
+    ],
+    "pageWidth": 1425,
+    "plotViewport": 627,
+    "plotWidth": 627,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "values": [
+      "+0,500",
+      "+0,250"
+    ],
+    "width": 1440
+  },
+  {
+    "case": "negative-missing",
+    "axis": [
+      {
+        "left": 68.3984375,
+        "right": 97.0859375,
+        "text": "−0,40"
+      },
+      {
+        "left": 139.26953125,
+        "right": 145.52734375,
+        "text": "0"
+      },
+      {
+        "left": 187.71875,
+        "right": 216.40625,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "12.5%",
+        "width": "37.5%"
+      }
+    ],
+    "gaps": [
+      42.18359375,
+      42.19140625
+    ],
+    "pageWidth": 320,
+    "plotViewport": 260,
+    "plotWidth": 260,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "values": [
+      "−0,300",
+      "Sem fonte"
+    ],
+    "width": 320
+  },
+  {
+    "case": "negative-missing",
+    "axis": [
+      {
+        "left": 74.3984375,
+        "right": 103.0859375,
+        "text": "−0,40"
+      },
+      {
+        "left": 166.76953125,
+        "right": 173.02734375,
+        "text": "0"
+      },
+      {
+        "left": 236.71875,
+        "right": 265.40625,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "12.5%",
+        "width": "37.5%"
+      }
+    ],
+    "gaps": [
+      63.68359375,
+      63.69140625
+    ],
+    "pageWidth": 375,
+    "plotViewport": 303,
+    "plotWidth": 303,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "values": [
+      "−0,300",
+      "Sem fonte"
+    ],
+    "width": 390
+  },
+  {
+    "case": "negative-missing",
+    "axis": [
+      {
+        "left": 104,
+        "right": 132.6875,
+        "text": "−0,40"
+      },
+      {
+        "left": 268.99609375,
+        "right": 275.25390625,
+        "text": "0"
+      },
+      {
+        "left": 411.5625,
+        "right": 440.25,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "12.5%",
+        "width": "37.5%"
+      }
+    ],
+    "gaps": [
+      136.30859375,
+      136.30859375
+    ],
+    "pageWidth": 1009,
+    "plotViewport": 456,
+    "plotWidth": 456,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "values": [
+      "−0,300",
+      "Sem fonte"
+    ],
+    "width": 1024
+  },
+  {
+    "case": "negative-missing",
+    "axis": [
+      {
+        "left": 146.5,
+        "right": 175.1875,
+        "text": "−0,40"
+      },
+      {
+        "left": 396.80859375,
+        "right": 403.06640625,
+        "text": "0"
+      },
+      {
+        "left": 624.6953125,
+        "right": 653.3828125,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "12.5%",
+        "width": "37.5%"
+      }
+    ],
+    "gaps": [
+      221.62109375,
+      221.62890625
+    ],
+    "pageWidth": 1425,
+    "plotViewport": 627,
+    "plotWidth": 627,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "values": [
+      "−0,300",
+      "Sem fonte"
+    ],
+    "width": 1440
+  },
+  {
+    "case": "initial-missing",
+    "axis": [
+      {
+        "left": 68.3984375,
+        "right": 97.0859375,
+        "text": "−0,20"
+      },
+      {
+        "left": 114.60546875,
+        "right": 120.86328125,
+        "text": "0"
+      },
+      {
+        "left": 187.71875,
+        "right": 216.40625,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "33.3333%",
+        "width": "13.4921%"
+      },
+      {
+        "left": "33%",
+        "width": "0.333333%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "9.32099%"
+      }
+    ],
+    "gaps": [
+      17.51953125,
+      66.85546875
+    ],
+    "pageWidth": 320,
+    "plotViewport": 260,
+    "plotWidth": 260,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7",
+    "values": [
+      "+0,081",
+      "Sem fonte",
+      "−0,002",
+      "+0,056"
+    ],
+    "width": 320
+  },
+  {
+    "case": "initial-missing",
+    "axis": [
+      {
+        "left": 74.3984375,
+        "right": 103.0859375,
+        "text": "−0,20"
+      },
+      {
+        "left": 134.93359375,
+        "right": 141.19140625,
+        "text": "0"
+      },
+      {
+        "left": 236.71875,
+        "right": 265.40625,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "33.3333%",
+        "width": "13.4921%"
+      },
+      {
+        "left": "33%",
+        "width": "0.333333%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "9.32099%"
+      }
+    ],
+    "gaps": [
+      31.84765625,
+      95.52734375
+    ],
+    "pageWidth": 375,
+    "plotViewport": 303,
+    "plotWidth": 303,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7",
+    "values": [
+      "+0,081",
+      "Sem fonte",
+      "−0,002",
+      "+0,056"
+    ],
+    "width": 390
+  },
+  {
+    "case": "initial-missing",
+    "axis": [
+      {
+        "left": 104,
+        "right": 132.6875,
+        "text": "−0,20"
+      },
+      {
+        "left": 212.94921875,
+        "right": 219.20703125,
+        "text": "0"
+      },
+      {
+        "left": 411.5625,
+        "right": 440.25,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "33.3333%",
+        "width": "13.4921%"
+      },
+      {
+        "left": "33%",
+        "width": "0.333333%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "9.32099%"
+      }
+    ],
+    "gaps": [
+      80.26171875,
+      192.35546875
+    ],
+    "pageWidth": 1009,
+    "plotViewport": 456,
+    "plotWidth": 456,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7",
+    "values": [
+      "+0,081",
+      "Sem fonte",
+      "−0,002",
+      "+0,056"
+    ],
+    "width": 1024
+  },
+  {
+    "case": "initial-missing",
+    "axis": [
+      {
+        "left": 146.5,
+        "right": 175.1875,
+        "text": "−0,20"
+      },
+      {
+        "left": 312.33203125,
+        "right": 318.58984375,
+        "text": "0"
+      },
+      {
+        "left": 624.6953125,
+        "right": 653.3828125,
+        "text": "+0,40"
+      }
+    ],
+    "bars": [
+      {
+        "left": "33.3333%",
+        "width": "13.4921%"
+      },
+      {
+        "left": "33%",
+        "width": "0.333333%"
+      },
+      {
+        "left": "33.3333%",
+        "width": "9.32099%"
+      }
+    ],
+    "gaps": [
+      137.14453125,
+      306.10546875
+    ],
+    "pageWidth": 1425,
+    "plotViewport": 627,
+    "plotWidth": 627,
+    "rootFont": "16px",
+    "url": "http://127.0.0.1:18089/confronto/kansas-city-buffalo?round=7",
+    "values": [
+      "+0,081",
+      "Sem fonte",
+      "−0,002",
+      "+0,056"
+    ],
+    "width": 1440
+  }
+]

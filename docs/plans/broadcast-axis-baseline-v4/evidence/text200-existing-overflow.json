@@ -1,0 +1,17 @@
+{
+  "beforeV3": {
+    "overflow": [],
+    "pageWidth": 362,
+    "rootFont": "32px",
+    "width": 320
+  },
+  "afterV4": {
+    "pageWidth": 362,
+    "region": ".stats-title p",
+    "right": 290,
+    "rootFont": "32px",
+    "text": "Jardas e número de jogadas.",
+    "whiteSpace": "nowrap",
+    "width": 320
+  }
+}
