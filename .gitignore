@@ -1,5 +1,6 @@
 # Ambiente virtual
 .venv/
+web-ui/experience-dist/
 
 # Dados locais gerados pela extração (Fase 1)
 etl-pipeline/data/
