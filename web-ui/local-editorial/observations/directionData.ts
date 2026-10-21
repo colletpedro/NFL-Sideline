@@ -1,6 +1,6 @@
 import type { DTO } from './model';
 import { formatRatio } from './format';
-export type Direction = 'A' | 'B' | 'C' | 'D' | 'original';
+export type Direction = 'A' | 'B' | 'C' | 'D' | 'E' | 'original';
 export const directionNames = { A: 'Estádio', B: 'Transmissão', C: 'Prancheta' };
 export function successParts(d: DTO) {
   if (!d.values.successRate || !d.totals) return null;

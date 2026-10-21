@@ -9,6 +9,7 @@ import './observations.css';
 import { DirectionReading } from './DirectionReading';
 import { type Direction, directionNames } from './directionData';
 import './directions.css';
+import { RefinedBroadcastReading } from '../broadcast/RefinedBroadcastReading';
 import { BroadcastReading } from '../broadcast/BroadcastReading';
 const roleName = { off: 'Ataque', def: 'Defesa' };
 const foundationName = { general: 'Passe + corrida', classified_pass: 'Passe', classified_rush: 'Corrida' };
@@ -21,7 +22,7 @@ export default function Observations() {
   function rememberFocus() {
     pendingFocus.current = (document.activeElement as HTMLElement | null)?.dataset.selectionFocus;
   }
-  const [direction, setDirection] = useState<Direction>(() => { try { const v = sessionStorage.getItem('metrics-lab-presentation-v2'); return v === 'A' || v === 'B' || v === 'C' || v === 'original' ? v : 'D'; } catch { return 'D'; } });
+  const [direction, setDirection] = useState<Direction>(() => { try { const v = sessionStorage.getItem('metrics-lab-presentation-v2'); return v === 'A' || v === 'B' || v === 'C' || v === 'D' || v === 'E' || v === 'original' ? v : 'E'; } catch { return 'E'; } });
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [choice, setChoice] = useState(() => saved());
   const [doc, setDoc] = useState<{ session: string; value: DTO } | null>(null);
@@ -95,7 +96,7 @@ export default function Observations() {
     </div>}
   </div>;
   return <section ref={workspace} className={`observations-workspace direction-workspace direction-${direction}`} aria-label="Observações auditáveis">
-    <nav className="proposal-picker" aria-label="Proposta visual"><div><strong>Fundação de transmissão</strong><span>E5c-4.2 · tela piloto</span></div><button className="proposal-current" aria-pressed={direction === 'D'} onClick={() => { setDirection('D'); try { sessionStorage.setItem('metrics-lab-presentation-v2','D'); } catch { /* preference only */ } }}>Transmissão 4.2</button><details className="proposal-archive"><summary>Versões anteriores</summary><div className="proposal-options">{(['A','B','C','original'] as const).map(v => <button key={v} aria-pressed={direction === v} onClick={() => { setDirection(v); try { sessionStorage.setItem('metrics-lab-presentation-v2',v); } catch { /* preference only */ } }}>{v === 'original' ? 'E5c-4 anterior' : `${v} ${directionNames[v]}`}</button>)}</div></details><a className="type-proof-link" href="/broadcast/type-proof.html">Prova tipográfica</a></nav>
+    <nav className="proposal-picker" aria-label="Proposta visual"><div><strong>Mesa de análise</strong><span>E5c-4.3 · refinamento local</span></div><button className="proposal-current" aria-pressed={direction === 'E'} onClick={() => { setDirection('E'); try { sessionStorage.setItem('metrics-lab-presentation-v2','E'); } catch { /* preference only */ } }}>Transmissão 4.3</button><details className="proposal-archive"><summary>Versões anteriores</summary><div className="proposal-options">{(['D','A','B','C','original'] as const).map(v => <button key={v} aria-pressed={direction === v} onClick={() => { setDirection(v); try { sessionStorage.setItem('metrics-lab-presentation-v2',v); } catch { /* preference only */ } }}>{v === 'D' ? 'Transmissão 4.2' : v === 'original' ? 'E5c-4 anterior' : `${v} ${directionNames[v]}`}</button>)}</div></details><a className="type-proof-link" href={direction === 'D' ? '/broadcast/type-proof.html' : '/broadcast/type-proof-4.3.html'}>Prova tipográfica</a></nav>
     {(direction === 'original' || !visible) && controls}
     <div className="notice" role="status">{notice}</div>
     {(loading || docLoading || error) && <div className="obs-loading" role={error ? undefined : 'status'} aria-busy={loading || docLoading}>
@@ -109,7 +110,7 @@ export default function Observations() {
     {error && <div className="error" role="alert"><p>{error}</p><button onClick={() => setReload(n => n + 1)}>Recarregar catálogo da sessão</button></div>}
     {!loading && !catalog?.errorCode && !entry && <div className="obs-empty"><h2>Escolha um arquivo para começar.</h2><p>Abra “Arquivo e sessão” abaixo e selecione uma fonte. Nenhum recorte foi carregado.</p></div>}
     {entry?.status === 'READY' && options.length === 0 && <p>Nenhuma observação disponível neste arquivo.</p>}
-    {visible && entry && (direction === 'original' ? <ObservationReading key={visible.observationId} d={visible} entry={entry}/> : direction === 'D' ? <BroadcastReading key={visible.observationId} d={visible} entry={entry} controls={controls}/> : <DirectionReading key={visible.observationId} d={visible} entry={entry} direction={direction} controls={controls}/>)}
+    {visible && entry && (direction === 'original' ? <ObservationReading key={visible.observationId} d={visible} entry={entry}/> : direction === 'E' ? <RefinedBroadcastReading key={visible.observationId} d={visible} entry={entry} controls={controls}/> : direction === 'D' ? <BroadcastReading key={visible.observationId} d={visible} entry={entry} controls={controls}/> : <DirectionReading key={visible.observationId} d={visible} entry={entry} direction={direction} controls={controls}/>)}
     <details className="obs-details obs-session"><summary>Arquivo e sessão <span>Trocar fonte ou recarregar catálogo</span></summary>
       <label>Arquivo<select aria-label="Arquivo" value={choice.entryId ?? ''} disabled={loading} onChange={e => {
         const next = catalog?.bundles.find(x => x.entryId === e.target.value); setNotice('');
