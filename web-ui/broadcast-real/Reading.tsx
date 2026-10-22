@@ -6,12 +6,13 @@ import { Logo } from '../broadcast-experience/TeamLogo';
 import { presentObservation } from './adapter';
 import { teamIdentity } from './identity';
 
-type ReadingProps = { d: DTO; entry: Entry; memberLabels?: Record<string, string>; detailsOpen?: boolean; compositionOpen?: boolean; onDetailsChange?: (open: boolean) => void; onCompositionChange?: (open: boolean) => void };
-export function Reading({ d, entry, memberLabels, detailsOpen, compositionOpen, onDetailsChange, onCompositionChange }: ReadingProps) {
+type ReadingProps = { guided?: boolean; d: DTO; entry: Entry; memberLabels?: Record<string, string>; detailsOpen?: boolean; compositionOpen?: boolean; onDetailsChange?: (open: boolean) => void; onCompositionChange?: (open: boolean) => void };
+export function Reading({ guided = false, d, entry, memberLabels, detailsOpen, compositionOpen, onDetailsChange, onCompositionChange }: ReadingProps) {
   const p = presentObservation(d), team = teamIdentity(d.subject.team), t = d.totals;
   const [localChartDetail, setChartDetail] = useState(false);
   const chartDetail = compositionOpen ?? localChartDetail;
   const count = d.observed.includedGameIds.length;
+  const compact = guided && t !== null && t.eligibleN !== '0';
   return <article className="real-reading" aria-label="Observação real selecionada" style={{ '--team': team.color, '--team-dark': team.dark, '--optical': team.optical } as CSSProperties}>
     <header className="real-identity">
       <span className="real-watermark" aria-hidden="true">{team.id}</span>
@@ -20,11 +21,11 @@ export function Reading({ d, entry, memberLabels, detailsOpen, compositionOpen, 
       <div className="real-period"><span>Período solicitado</span><p>{p.period}</p></div>
     </header>
     <div className="real-context"><strong>{t ? 'Amostra observada' : 'Nenhuma fonte observada'}</strong><span>{count} {count === 1 ? 'jogo com fonte' : 'jogos com fonte'} · Semanas observadas: {d.observed.actualWeeks.join(', ') || 'nenhuma'}</span></div>
-    <section className="real-story" aria-label="Fato da amostra">
-      <div><p className="real-label">{p.factContext}</p><h2>{p.fact}</h2>{p.defensive && <p>EPA e sucesso descrevem o que a defesa permitiu ao ataque adversário; os sinais são os da fonte.</p>}
+    <section className={`real-story${compact ? ' real-story-guided' : ''}`} aria-label={compact ? 'Medidas da amostra' : 'Fato da amostra'}>
+      {!compact && <div><p className="real-label">{p.factContext}</p><h2>{p.fact}</h2>{p.defensive && <p>EPA e sucesso descrevem o que a defesa permitiu ao ataque adversário; os sinais são os da fonte.</p>}
       {p.sourceState === 'absent' && <p>O play-by-play não está disponível neste recorte. Volume e eficiência são desconhecidos. Ausência de fonte não é zero.</p>}
       {p.sourceState === 'empty' && <p>{d.guarantees.completeness.state === 'COMPLETE' ? 'População declarada completa sem jogadas elegíveis.' : 'Zero jogadas elegíveis nos bytes observados; completude não confirmada.'}</p>}
-      <a className="real-detail-link" href="#real-details">Ver contagens e origem <span aria-hidden="true">↘</span></a></div>
+      <a className="real-detail-link" href="#real-details">Ver contagens e origem <span aria-hidden="true">↘</span></a></div>}
       {t && <div className="real-numbers"><div><h3>{p.epaLabel}</h3><strong data-value="epa">{p.epa ?? 'Sem denominador'}</strong><p>pontos esperados / jogada</p><p>{countText(t.epaN)} jogadas com EPA finito</p><p>{p.modelNote}. EPA da fonte.</p></div><div><h3>Volume {p.defensive ? 'enfrentado' : 'observado'}</h3><strong data-value="volume">{p.volume}</strong><p>jogadas elegíveis {d.subject.foundation !== 'general' ? `de ${d.subject.foundation === 'classified_pass' ? 'passe' : 'corrida'}` : 'de passe + corrida'}</p>{d.subject.foundation !== 'general' && <p>Frequência: <b>{p.frequency ?? 'Sem denominador'}</b><br/>{countText(t.eligibleN)} / {countText(t.generalEligibleN)} jogadas gerais</p>}</div></div>}
     </section>
     {t && <section className="real-chart-section" aria-labelledby="real-chart-title">
