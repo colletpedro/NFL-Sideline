@@ -12,6 +12,7 @@ import { dateLabel, gameState, relation, relationText, title } from './relations
 import { calendarChange, gameChange, journeyHref } from './state';
 import { ObservationChoice } from './ObservationChoice';
 import { readChoice } from './choice';
+import { Discovery } from './Discovery';
 const calendar: NflDataClient = new StaticNflDataClient(window.fetch.bind(window));
 const message = (e: unknown) => e instanceof Error ? e.message : 'Fonte indisponível.';
 function Identity({ team, onSelect, selected }: { team: Team; onSelect?: (team: string) => void; selected?: boolean }) {
@@ -70,17 +71,6 @@ export default function App() {
   const selected = archive?.documents.find(x => x.d.observationId === observationId && x.entry.entryId === entryId);
   const selectedRelation = game && selected ? relation(game, selected.d) : null;
   const calendarHref = journeyHref(q, calendarChange), matchupHref = journeyHref(q, gameChange);
-  const ready = !!archive;
-  const relevant = (g: Game) => archive?.documents.filter(x => [g.homeTeam.teamAbbr, g.awayTeam.teamAbbr].includes(x.d.subject.team)) ?? [];
-  function availability(g: Game) {
-    if (archiveError) return 'Arquivo de leituras indisponível';
-    if (!archive) return 'Disponibilidade de leituras em conferência';
-    const relations = relevant(g).map(x => relation(g, x.d));
-    return relations.includes('individual') ? 'Leituras arquivadas deste jogo' : relations.includes('includes') ? 'Períodos arquivados incluem este jogo' : relations.includes('gap') ? 'Lacuna deste jogo; outros recortes no arquivo' : relations.includes('archive') || relations.includes('other') ? 'Outros recortes do participante no arquivo' : 'Nenhuma leitura dos participantes neste arquivo';
-  }
-  const weekGames = games?.filter(g => g.week === week) ?? [];
-  const filtered = q.get('filter') === 'participants' ? weekGames.filter(g => ready && relevant(g).length > 0) : weekGames;
-  const focus = filtered.find(g => relevant(g).some(({ d }) => relation(g, d) === 'individual')) ?? filtered[0];
   const observationHref = (entry: string, observation: string) => journeyHref(q, { entry, observation, details: null, composition: null });
   const choose = (change: Record<string, string>) => setQ(new URLSearchParams(journeyHref(q, change).slice(2)));
   const choice = game && archive ? <ObservationChoice key={game.gameId} game={game} archive={archive} q={q} selected={selected?.d} teamPicker={readingRoute} onChoice={choose} href={observationHref}/> : null;
@@ -90,24 +80,11 @@ export default function App() {
     <header className="site-header real-header"><div className="real-header-inner"><Link className="brand" to={calendarHref}>NFL <strong>SIDELINE</strong><i className="brand-rule"/></Link><nav aria-label="Navegação principal"><Link to={calendarHref}>Central do calendário</Link>{game && <Link to={matchupHref}>Confronto</Link>}</nav><p>Local · fontes preservadas<br/><span>Sem atualização ao vivo</span></p></div></header>
     <main id="journey-main" className="real-page journey-page">
       <nav className="journey-breadcrumb" aria-label="Caminho"><Link to={calendarHref}>Calendário · {season || 'arquivo'} · semana {week ?? '…'}</Link>{gameId && <><span>/</span><Link to={matchupHref}>{game ? `${game.awayTeam.teamAbbr} × ${game.homeTeam.teamAbbr}` : 'Confronto'}</Link></>}{readingRoute && <><span>/</span><span>Leitura do arquivo</span></>}</nav>
-      <div className={`real-intro${readingRoute || gameId ? ' journey-reading-intro' : ''}`}><div><p>{readingRoute ? 'Uma observação por vez' : gameId ? 'Confronto identificado' : 'Jogos e leituras arquivadas'}</p><h1 ref={heading} tabIndex={-1}>{readingRoute ? 'O recorte, em seu contexto.' : game ? title(game) : gameId ? 'Confronto indisponível' : 'Central do calendário'}</h1></div></div>
+      <div className={`real-intro${readingRoute || gameId ? ' journey-reading-intro' : ''}`}><div><p>{readingRoute ? 'Uma observação por vez' : gameId ? 'Confronto identificado' : 'Jogos e leituras arquivadas'}</p><h1 ref={heading} tabIndex={-1}>{readingRoute ? 'O recorte, em seu contexto.' : game ? title(game) : gameId ? 'Confronto indisponível' : 'Encontre seu jogo.'}</h1></div></div>
       {calError && <section className="real-state" role="alert"><h2>Calendário indisponível.</h2><p>{calError} Nenhum jogo ou resultado foi substituído.</p><button onClick={() => { calendar.clearCache(); setCalRetry(v => v + 1); }}>Recarregar calendário</button></section>}
       {!games && !calError && <section className="real-state" role="status">Carregando calendário preservado…</section>}
       {(archiveError || !archive) && <section className="journey-source" role={archiveError ? 'alert' : 'status'}><h2>{archiveError ? 'Leituras indisponíveis nesta sessão.' : 'Conferindo a disponibilidade das leituras…'}</h2><p>{archiveError || 'Catálogo e documentos são conferidos na mesma sessão antes de anunciar relações.'}</p>{archiveError && <button onClick={retryArchive}>Recarregar arquivo de leituras</button>}</section>}
-      {!gameId && !readingRoute && games && <>
-        <section className="journey-controls" aria-label="Seleção do calendário">
-          <label>Temporada disponível<select aria-label="Temporada disponível" value={season} onChange={e => setQ(new URLSearchParams({ season: e.target.value }))}><option value={publication!.defaultSeason}>{publication!.defaultSeason}</option></select></label>
-          <label>Semana<select aria-label="Semana" value={week ?? ''} onChange={e => setQ(new URLSearchParams(journeyHref(q, { ...calendarChange, week: e.target.value }).slice(2)))}>{[...new Set(games.map(g => g.week))].map(w => <option key={w} value={w}>{w}</option>)}</select></label>
-          <label>Exibir jogos<select aria-label="Exibir jogos" value={q.get('filter') ?? 'all'} onChange={e => setQ(new URLSearchParams(journeyHref(q, { filter: e.target.value }).slice(2)))}><option value="all">Todos os jogos</option><option value="participants">Com recortes dos participantes</option></select></label>
-          <p>“Com recortes” inclui outros períodos e lacunas; não garante leitura deste jogo.</p>
-        </section>
-        {q.get('filter') === 'participants' && !ready ? <p role="status">O filtro aguarda a conferência do arquivo. Selecione “Todos os jogos” para explorar o calendário.</p> : <>
-          <div className="journey-list-heading"><h2>Semana {week}</h2><span>{filtered.length} de {weekGames.length} jogos da semana</span></div>
-          {focus && <section className="journey-feature"><Band game={focus}/><div><h2 className="journey-visually-hidden">{title(focus)}</h2><p>{dateLabel(focus.gameday)} · {availability(focus)}</p><Link className="journey-action" to={journeyHref(q, { game: focus.gameId })}>Explorar confronto</Link></div></section>}
-          {filtered.length > 1 && <h2 className="journey-remaining-title">Outros jogos da semana</h2>}<ul className="journey-games">{filtered.filter(g => g.gameId !== focus?.gameId).map(g => <li key={g.gameId}><div className="journey-mini"><b>{g.awayTeam.teamAbbr}</b><span>×</span><b>{g.homeTeam.teamAbbr}</b></div><div><h3>{title(g)}</h3><p>{dateLabel(g.gameday)} · {gameState(g).label}</p><p>{availability(g)}</p>{gameState(g).score && <strong>{gameState(g).score}</strong>}</div><Link className="journey-action" aria-label={`Abrir confronto ${g.awayTeam.teamAbbr} ${g.homeTeam.teamAbbr}`} to={journeyHref(q, { game: g.gameId })}>Abrir confronto</Link></li>)}</ul>
-          {!filtered.length && <section className="real-state"><h2>Nenhum jogo nesta seleção.</h2><p>Altere a semana ou volte a todos os jogos.</p><Link to={journeyHref(q, { filter: 'all' })}>Mostrar todos os jogos</Link></section>}
-        </>}
-      </>}
+      {!gameId && !readingRoute && games && <Discovery games={games} archive={archive} archiveError={archiveError} q={q} season={season} week={week} onChange={setQ}/>}
       {gameId && games && !game && <section className="real-state" role="alert"><h2>Jogo não encontrado nesta temporada.</h2><p>A origem não pode ser validada; nenhuma associação foi concedida.</p><Link to={calendarHref}>Voltar ao calendário</Link></section>}
       {game && !readingRoute && <>
         <Band game={game} selectedTeam={readChoice(game, q).team} onSelect={team => choose({ team })}/><section className="journey-match-context journey-match-compact"><p>{dateLabel(game.gameday)} · {game.season} {game.gameType} · Semana {game.week}</p><details><summary>Sobre o jogo e o arquivo</summary><p>{game.gameId}</p><p>{game.homeTeam.teamName} como mandante. Estádio e horário não disponíveis neste arquivo.</p>{game.roof && <p>Cobertura: {game.roof}</p>}{game.surface && <p>Superfície: {game.surface}</p>}</details></section>

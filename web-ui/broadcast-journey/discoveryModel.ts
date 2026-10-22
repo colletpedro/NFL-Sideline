@@ -1,0 +1,33 @@
+import type { Game, Team } from '../src/services/types';
+import { teamIdentity } from '../broadcast-real/identity';
+import { relation, type Relation } from './relations';
+import type { Archive } from './sources';
+export const normalizeSearch = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
+function words(team: Team) {
+  const visual = teamIdentity(team.teamAbbr);
+  return normalizeSearch([team.teamAbbr, team.teamName, visual.city, visual.name, ...(visual.aliases ?? [])].join(' ')).split(' ');
+}
+export function searchGames(games: Game[], query: string) {
+  const tokens = normalizeSearch(query).split(' ').filter(t => t && !['x', 'vs', 'v', 'versus', 'contra', 'at'].includes(t));
+  if (!tokens.length) return [];
+  return games.filter(game => {
+    const terms = [...words(game.awayTeam), ...words(game.homeTeam)];
+    return tokens.every(token => terms.some(term => token.length <= 3 ? term === token : term.startsWith(token)));
+  });
+}
+const priority: Relation[] = ['individual', 'includes', 'gap', 'other', 'archive'];
+export function gameAvailability(game: Game, archive: Archive | null): Relation | null {
+  const relations = archive?.documents.map(({ d }) => relation(game, d)) ?? [];
+  return priority.find(kind => relations.includes(kind)) ?? null;
+}
+export function selectGames(games: Game[], archive: Archive | null) {
+  // Calendar order breaks ties. Availability is not sporting merit.
+  const ranked = games.map((game, index) => ({ game, index, kind: gameAvailability(game, archive) }))
+    .sort((a, b) => (a.kind ? priority.indexOf(a.kind) : 99) - (b.kind ? priority.indexOf(b.kind) : 99) || a.index - b.index);
+  const useful = ranked.filter(x => x.kind);
+  const selected = (useful.length ? useful.slice(0, 3) : ranked.slice(0, 1)).map(x => x.game);
+  const ids = new Set(selected.map(x => x.gameId));
+  return { selected, remaining: games.filter(x => !ids.has(x.gameId)) };
+}
+export const availabilityLabel = (kind: Relation | null) => kind === 'individual' ? 'Leitura deste jogo' : kind === 'includes' ? 'Período que inclui o jogo' : kind === 'gap' ? 'Lacuna deste jogo' : kind === 'other' || kind === 'archive' ? 'Outros recortes do participante' : 'Sem leitura dos participantes';
+export const availabilityAction = (kind: Relation | null) => kind === 'individual' ? 'Escolher leitura' : kind === 'includes' ? 'Explorar período' : kind === 'gap' ? 'Ver lacuna' : kind === 'other' || kind === 'archive' ? 'Explorar outros recortes' : 'Abrir confronto';
