@@ -1,0 +1,11 @@
+Observações: validando bundles configurados; aguardando a sessão congelada.
+Re-optimizing dependencies because vite config has changed
+Leitura local de arquivo real · PID 21282
+  ➜  Local:   http://127.0.0.1:18090/
+11:12:05 PM [vite] hmr update /App.tsx
+11:15:33 PM [vite] hmr update /real.css
+11:15:33 PM [vite] hmr update /App.tsx
+11:17:31 PM [vite] hmr update /real.css
+11:18:17 PM [vite] hmr update /real.css
+11:20:51 PM [vite] hmr update /Reading.tsx
+11:20:51 PM [vite] hmr update /Reading.tsx

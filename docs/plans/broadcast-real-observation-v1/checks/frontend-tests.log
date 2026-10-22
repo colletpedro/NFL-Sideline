@@ -1,0 +1,30 @@
+
+> web-ui@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-real-observation-v1/NFL Sideline/web-ui
+
+ ✓ src/services/staticDataClient.test.ts (8 tests) 7ms
+ ✓ broadcast-experience/fixtures.test.ts (4 tests) 16ms
+ ✓ broadcast-experience/editorial.test.ts (10 tests) 4ms
+ ✓ broadcast-real/adapter.test.ts (8 tests) 3ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 15ms
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 30ms
+ ✓ src/services/market.test.tsx (14 tests) 22ms
+ ✓ local-editorial/local.test.tsx (7 tests) 6ms
+ ✓ local-editorial/observations/directions.test.tsx (4 tests) 32ms
+ ✓ broadcast-real/reading.test.tsx (4 tests) 24ms
+ ✓ local-editorial/broadcast/refinement.test.tsx (5 tests) 40ms
+ ✓ local-editorial/broadcast/broadcast.test.tsx (5 tests) 36ms
+ ✓ broadcast-experience/chartScale.test.ts (2 tests) 5ms
+ ✓ src/services/calendar.test.ts (9 tests) 4ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 20ms
+ ✓ src/services/runtimeClient.test.ts (2 tests) 2ms
+ ✓ src/services/api.test.ts (2 tests) 1ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 127ms
+
+ Test Files  18 passed (18)
+      Tests  179 passed (179)
+   Start at  23:21:23
+   Duration  979ms (transform 1.00s, setup 0ms, collect 3.01s, tests 395ms, environment 2ms, prepare 828ms)

@@ -1,0 +1,134 @@
+{
+  "implementationCommit": "cc0ad2a42ee0df2e4035675ab70e7824236e22e8",
+  "screens": [
+    {
+      "path": "evidence/absent-1440.png",
+      "width": 1440,
+      "height": 1533,
+      "sha256": "f85f25d5b2f0c4fa1034f43d4ec5fc138a5fff69dc463fa19bf883be5655394e",
+      "observationId": "sha256:31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/absent-320.png",
+      "width": 320,
+      "height": 2060,
+      "sha256": "cd3d6b31ec9c4f65308d3a5ff7c0237982c90c8518ffb31624a6b6487545aefc",
+      "observationId": "sha256:31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/absent-390.png",
+      "width": 390,
+      "height": 1939,
+      "sha256": "8f83ca316d7e14c3d85362ed5df02d76c89fe5178cb038917a6922a622f3bfb7",
+      "observationId": "sha256:31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/absent-900.png",
+      "width": 900,
+      "height": 1689,
+      "sha256": "d57d46cf844eb385018e5804fea84796f876e8781dfb4c662da75488a717d790",
+      "observationId": "sha256:31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/available-1440.png",
+      "width": 1440,
+      "height": 1947,
+      "sha256": "97e5d37b4f3ae0e9b8ecec7b539615a5845685431dc388fdac7afbdf47ef21f2",
+      "observationId": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/available-320.png",
+      "width": 320,
+      "height": 2815,
+      "sha256": "06278de6690157f55d1bb1c8dfb4a2130709db1de8838068416cda3b432e43dc",
+      "observationId": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/available-390.png",
+      "width": 390,
+      "height": 2721,
+      "sha256": "08a359eb59754f3124f7cb331ce78b16942370a35d67f17db2b058f91cf0794d",
+      "observationId": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/available-900.png",
+      "width": 900,
+      "height": 2315,
+      "sha256": "92d246b53d04867876008f9fe1309f4aae467f3967bb8ac3f5b2a7a76ae755a8",
+      "observationId": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/defense-pass-1440.png",
+      "width": 1440,
+      "height": 1934,
+      "sha256": "d0e4b1a3d71375b8263bf57c6ed684b07eb7e02a44304101b73455170da8e6e6",
+      "observationId": "sha256:f02add308d9a10eb6be139305c60d2327edf703ea109bd572f9dca06bac4116d",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/mobile-loading.png",
+      "width": 390,
+      "height": 1228,
+      "sha256": "3e936e3af5ca4023b611f509a684e8bfb32b3f6dedf65df997a68158fca85663",
+      "observationId": null,
+      "kind": "REAL_HTTP_TRANSPORT_STATE_TEST"
+    },
+    {
+      "path": "evidence/mobile-network-error.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "d15a84f51bef1f97388ffcbafef5b03502fa7872cf119361f252620e69f47ed2",
+      "observationId": null,
+      "kind": "REAL_HTTP_TRANSPORT_STATE_TEST"
+    },
+    {
+      "path": "evidence/mobile-session-error.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "7b3134d16ab833be775cd2dfac5ef3f29a74b51dd25888301ae535448d848579",
+      "observationId": null,
+      "kind": "REAL_HTTP_TRANSPORT_STATE_TEST"
+    },
+    {
+      "path": "evidence/postseason-rush-390.png",
+      "width": 390,
+      "height": 3084,
+      "sha256": "3742753d4aa53ac441761dbfce3c22820a5c9c084754a9bcb8b6fdf78b2c841e",
+      "observationId": "sha256:d4af4e3e200c4009fc9057bee52f527e38539b0d28cc0a8b559d53a04ca02f95",
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/reflow-isolated-fix-320-text200.png",
+      "width": 320,
+      "height": 1000,
+      "sha256": "ad99e97d5fb8dec8e490ce56dd7d8e998a47901df6f3f683f45a327a0ec4ae88",
+      "observationId": null,
+      "kind": "SYNTHETIC_REFERENCE_REFLOW_ONLY"
+    },
+    {
+      "path": "evidence/reflow-real-320-text200.png",
+      "width": 320,
+      "height": 6694,
+      "sha256": "659b62daa22a7d0a765e1e6f23be741161493230b99867aef61afc9c939fe800",
+      "observationId": null,
+      "kind": "REAL_HTTP"
+    },
+    {
+      "path": "evidence/reflow-reference-before-320-text200.png",
+      "width": 320,
+      "height": 1000,
+      "sha256": "b58b3451f2b8d4b25a2e3dccad33f64b1b1aea53717a08d3b38af30577717c9c",
+      "observationId": null,
+      "kind": "SYNTHETIC_REFERENCE_REFLOW_ONLY"
+    }
+  ],
+  "preliminaryCaptures": "evidence/attempts; not acceptance screens"
+}
