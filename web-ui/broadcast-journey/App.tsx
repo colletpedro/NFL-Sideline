@@ -13,6 +13,7 @@ import { calendarChange, gameChange, journeyHref } from './state';
 import { ObservationChoice } from './ObservationChoice';
 import { readChoice } from './choice';
 import { Discovery } from './Discovery';
+import { MediaGallery } from './media/MediaGallery';
 const calendar: NflDataClient = new StaticNflDataClient(window.fetch.bind(window));
 const message = (e: unknown) => e instanceof Error ? e.message : 'Fonte indisponível.';
 function Identity({ team, onSelect, selected }: { team: Team; onSelect?: (team: string) => void; selected?: boolean }) {
@@ -41,6 +42,7 @@ export default function App() {
   const heading = useRef<HTMLHeadingElement>(null);
   const gameId = q.get('game'), observationId = q.get('observation'), entryId = q.get('entry');
   const readingRoute = observationId !== null || entryId !== null;
+  const galleryRoute = q.get('view') === 'media';
   useEffect(() => {
     let active = true;
     setGames(null); setPublication(null); setCalError('');
@@ -66,11 +68,11 @@ export default function App() {
       setQ(next, { replace: true });
     }
   }, [games, publication, q, season, week, setQ]);
-  useEffect(() => { heading.current?.focus(); window.scrollTo(0, 0); }, [gameId, readingRoute]);
+  useEffect(() => { heading.current?.focus(); window.scrollTo(0, 0); }, [gameId, readingRoute, galleryRoute]);
   const game = games?.find(g => g.gameId === gameId);
   const selected = archive?.documents.find(x => x.d.observationId === observationId && x.entry.entryId === entryId);
   const selectedRelation = game && selected ? relation(game, selected.d) : null;
-  const calendarHref = journeyHref(q, calendarChange), matchupHref = journeyHref(q, gameChange);
+  const calendarHref = journeyHref(q, { ...calendarChange, view: null }), matchupHref = journeyHref(q, gameChange);
   const observationHref = (entry: string, observation: string) => journeyHref(q, { entry, observation, details: null, composition: null });
   const choose = (change: Record<string, string>) => setQ(new URLSearchParams(journeyHref(q, change).slice(2)));
   const choice = game && archive ? <ObservationChoice key={game.gameId} game={game} archive={archive} q={q} selected={selected?.d} teamPicker={readingRoute} onChoice={choose} href={observationHref}/> : null;
@@ -80,7 +82,9 @@ export default function App() {
     <header className="site-header real-header"><div className="real-header-inner"><Link className="brand" to={calendarHref}>NFL <strong>SIDELINE</strong><i className="brand-rule"/></Link><nav aria-label="Navegação principal"><Link to={calendarHref}>Central do calendário</Link>{game && <Link to={matchupHref}>Confronto</Link>}</nav><p>Local · fontes preservadas<br/><span>Sem atualização ao vivo</span></p></div></header>
     <main id="journey-main" className="real-page journey-page">
       <nav className="journey-breadcrumb" aria-label="Caminho"><Link to={calendarHref}>Calendário · {season || 'arquivo'} · semana {week ?? '…'}</Link>{gameId && <><span>/</span><Link to={matchupHref}>{game ? `${game.awayTeam.teamAbbr} × ${game.homeTeam.teamAbbr}` : 'Confronto'}</Link></>}{readingRoute && <><span>/</span><span>Leitura do arquivo</span></>}</nav>
-      <div className={`real-intro${readingRoute || gameId ? ' journey-reading-intro' : ''}`}><div><p>{readingRoute ? 'Uma observação por vez' : gameId ? 'Confronto identificado' : 'Jogos e leituras arquivadas'}</p><h1 ref={heading} tabIndex={-1}>{readingRoute ? 'O recorte, em seu contexto.' : game ? title(game) : gameId ? 'Confronto indisponível' : 'Encontre seu jogo.'}</h1></div></div>
+      <div className={`real-intro${readingRoute || gameId ? ' journey-reading-intro' : ''}`}><div><p>{readingRoute ? 'Uma observação por vez' : gameId ? 'Confronto identificado' : 'Jogos e leituras arquivadas'}</p><h1 ref={heading} tabIndex={-1}>{galleryRoute ? 'Acervo visual local.' : readingRoute ? 'O recorte, em seu contexto.' : game ? title(game) : gameId ? 'Confronto indisponível' : 'Encontre seu jogo.'}</h1></div></div>
+      <nav className="media-local-nav" aria-label="Avaliação local de mídia"><Link to={galleryRoute ? calendarHref : journeyHref(q, { view: 'media' })}>{galleryRoute ? 'Voltar ao calendário' : 'Galeria de mídia'}</Link>{!galleryRoute && !gameId && !readingRoute && season === '2026' && week === 1 && !q.get('q') && <fieldset><legend>Abertura BAL × IND</legend><Link aria-current={q.get('media') !== 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: null })}>Logos</Link><Link aria-current={q.get('media') === 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: 'helmets' })}>Capacetes · estudo local</Link></fieldset>}</nav>
+      {galleryRoute ? <MediaGallery q={q}/> : <>
       {calError && <section className="real-state" role="alert"><h2>Calendário indisponível.</h2><p>{calError} Nenhum jogo ou resultado foi substituído.</p><button onClick={() => { calendar.clearCache(); setCalRetry(v => v + 1); }}>Recarregar calendário</button></section>}
       {!games && !calError && <section className="real-state" role="status">Carregando calendário preservado…</section>}
       {(archiveError || !archive) && <section className="journey-source" role={archiveError ? 'alert' : 'status'}><h2>{archiveError ? 'Leituras indisponíveis nesta sessão.' : 'Conferindo a disponibilidade das leituras…'}</h2><p>{archiveError || 'Catálogo e documentos são conferidos na mesma sessão antes de anunciar relações.'}</p>{archiveError && <button onClick={retryArchive}>Recarregar arquivo de leituras</button>}</section>}
@@ -101,6 +105,7 @@ export default function App() {
           {choice && <details className="journey-switch"><summary>Escolher outra leitura</summary>{choice}</details>}
           <Link className="journey-back" to={calendarHref}>Voltar ao calendário · semana {week}</Link>
         </>}
+      </>}
       </>}
       <details className="journey-publication"><summary>Fontes e atualização do arquivo</summary><p>Calendário: {publication?.generatedAt ? `publicado em ${new Date(publication.generatedAt).toLocaleString('pt-BR', { timeZone: 'UTC' })} UTC` : calError ? 'indisponível' : 'carregando publicação…'}. Arquivo preservado, sem placar ao vivo.</p><p>Leituras: arquivo independente, com períodos e cobertura próprios. A publicação do calendário não data nem atualiza as métricas.</p></details>
     </main><footer className="real-footer"><span className="brand">NFL <strong>SIDELINE</strong></span><p>Futebol americano, sob outra perspectiva.</p><span>Experiência local · sem previsão ou comparação entre times</span></footer>

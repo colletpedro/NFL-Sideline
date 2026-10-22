@@ -6,6 +6,7 @@ import { teamIdentity } from '../broadcast-real/identity';
 import type { Archive } from './sources';
 import { calendarChange, journeyHref } from './state';
 import { dateLabel, gameState, title } from './relations';
+import { PilotDuel } from './media/PilotDuel';
 import { availabilityAction, availabilityDescription, availabilityTeams, gameAvailability, searchGames, selectGames } from './discoveryModel';
 
 type Props = { games: Game[]; archive: Archive | null; archiveError: string; q: URLSearchParams; season: string; week: number | null; onChange: (q: URLSearchParams) => void };
@@ -28,6 +29,7 @@ export function Discovery({ games, archive, archiveError, q, season, week, onCha
   const requestedPage = Number(q.get('page'));
   const page = Math.min(pages, Math.max(1, Number.isInteger(requestedPage) ? requestedPage : 1));
   const { selected, remaining } = selectGames(filtered, archive);
+  const helmetPilot = q.get('media') === 'helmets' && selected[0]?.gameId === '2026_01_BAL_IND';
   const change = (values: Record<string, string | null>, replaceQuery = false) => onChange(new URLSearchParams(journeyHref(q, { ...calendarChange, ...values, ...(replaceQuery ? { q: draft.trim() || null, page: null } : {}) }).slice(2)));
   const status = (g: Game) => archiveError ? 'Arquivo de leituras indisponível' : !archive ? 'Conferindo leituras' : availabilityDescription(g, archive);
   const action = (g: Game) => {
@@ -64,8 +66,9 @@ export function Discovery({ games, archive, archiveError, q, season, week, onCha
         <article className="discovery-main" data-game={selected[0].gameId}>
           <div className="discovery-main-meta"><span>{status(selected[0])}</span><span>{dateLabel(selected[0].gameday)}</span></div>
           <h3 className="journey-visually-hidden">{title(selected[0])}</h3>
-          <div className="discovery-duel"><Participant large team={selected[0].awayTeam}/><Participant large team={selected[0].homeTeam}/></div>
+          {helmetPilot ? <PilotDuel game={selected[0]}/> : <div className="discovery-duel"><Participant large team={selected[0].awayTeam}/><Participant large team={selected[0].homeTeam}/></div>}
           <div className="discovery-main-action"><div><strong>{gameState(selected[0]).score ?? `${selected[0].awayTeam.teamAbbr} × ${selected[0].homeTeam.teamAbbr}`}</strong><p>{gameState(selected[0]).label}</p></div><Link className="journey-action" to={href(selected[0])}>{action(selected[0])}</Link></div>
+          {helmetPilot && <p className="pilot-credit">Estudo local · Fotografias de produto Riddell. Candidatas sem autorização de redistribuição comprovada. Variante do jogo não verificada. <Link to={journeyHref(q, { view: 'media' })}>Procedência e limites</Link></p>}
         </article>
         {selected.length > 1 && <div className="discovery-support" aria-label="Mais acessos no arquivo">{selected.slice(1).map(g => <article key={g.gameId} data-game={g.gameId}>
           <p className="discovery-status">{status(g)}</p><h3 className="journey-visually-hidden">{title(g)}</h3><div className="discovery-support-teams"><Participant team={g.awayTeam}/><Participant team={g.homeTeam}/></div><p>{dateLabel(g.gameday)} · {gameState(g).score ?? gameState(g).label}</p><Link className="journey-secondary-action" to={href(g)}>{action(g)}</Link>
