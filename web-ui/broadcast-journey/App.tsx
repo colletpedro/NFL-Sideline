@@ -3,7 +3,6 @@ import { Link, useSearchParams } from 'react-router-dom';
 import type { NflDataClient, PublicationContext } from '../src/services/dataClient';
 import { StaticNflDataClient } from '../src/services/staticDataClient';
 import type { Game, Team } from '../src/services/types';
-import { initialWeek } from '../src/services/calendar';
 import { Reading } from '../broadcast-real/Reading';
 import { Logo } from '../broadcast-experience/TeamLogo';
 import { teamIdentity } from '../broadcast-real/identity';
@@ -59,7 +58,7 @@ export default function App() {
     loadArchive(c.signal).then(a => { if (active) { setArchive(a); setLoadedArchiveRevision(archiveRetry); } }).catch(e => { if (active) setArchiveError(message(e)); });
     return () => { active = false; c.abort(); };
   }, [archiveRetry]);
-  const week = q.has('week') ? Number(q.get('week')) : games ? initialWeek(games, new Date()) : null;
+  const week = q.has('week') ? Number(q.get('week')) : games ? 1 : null;
   const season = requestedSeason ?? String(publication?.defaultSeason ?? '');
   useEffect(() => {
     if (!games || !publication) return;
@@ -79,11 +78,11 @@ export default function App() {
   const retryArchive = () => setArchiveRetry(v => v + 1);
   return <>
     <a href="#journey-main" className="skip-link">Ir ao conteúdo</a>
-    <header className="site-header real-header"><div className="real-header-inner"><Link className="brand" to={calendarHref}>NFL <strong>SIDELINE</strong><i className="brand-rule"/></Link><nav aria-label="Navegação principal"><Link to={calendarHref}>Central do calendário</Link>{game && <Link to={matchupHref}>Confronto</Link>}</nav><p>Local · fontes preservadas<br/><span>Sem atualização ao vivo</span></p></div></header>
+    <header className="site-header real-header"><div className="real-header-inner"><Link className="brand" to={calendarHref}>NFL <strong>SIDELINE</strong><i className="brand-rule"/></Link><nav aria-label="Navegação principal"><Link to={calendarHref}>Central do calendário</Link>{game && <Link to={matchupHref}>Confronto</Link>}</nav><p>Local · fontes preservadas<br/><span>Arquivo de leituras 2026 W1–2</span></p></div></header>
     <main id="journey-main" className="real-page journey-page">
       <nav className="journey-breadcrumb" aria-label="Caminho"><Link to={calendarHref}>Calendário · {season || 'arquivo'} · semana {week ?? '…'}</Link>{gameId && <><span>/</span><Link to={matchupHref}>{game ? `${game.awayTeam.teamAbbr} × ${game.homeTeam.teamAbbr}` : 'Confronto'}</Link></>}{readingRoute && <><span>/</span><span>Leitura do arquivo</span></>}</nav>
       <div className={`real-intro${readingRoute || gameId ? ' journey-reading-intro' : ''}`}><div><p>{readingRoute ? 'Uma observação por vez' : gameId ? 'Confronto identificado' : 'Jogos e leituras arquivadas'}</p><h1 ref={heading} tabIndex={-1}>{galleryRoute ? 'Acervo visual local.' : readingRoute ? 'O recorte, em seu contexto.' : game ? title(game) : gameId ? 'Confronto indisponível' : 'Encontre seu jogo.'}</h1></div></div>
-      <nav className="media-local-nav" aria-label="Avaliação local de mídia"><Link to={galleryRoute ? calendarHref : journeyHref(q, { view: 'media' })}>{galleryRoute ? 'Voltar ao calendário' : 'Galeria de mídia'}</Link>{!galleryRoute && !gameId && !readingRoute && season === '2026' && week === 1 && !q.get('q') && <fieldset><legend>Abertura BAL × IND</legend><Link aria-current={q.get('media') !== 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: null })}>Logos</Link><Link aria-current={q.get('media') === 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: 'helmets' })}>Capacetes · estudo local</Link></fieldset>}</nav>
+      <nav className="media-local-nav" aria-label="Avaliação local de mídia"><Link to={galleryRoute ? calendarHref : journeyHref(q, { view: 'media' })}>{galleryRoute ? 'Voltar ao calendário' : 'Galeria de mídia'}</Link>{!galleryRoute && !gameId && !readingRoute && season === '2026' && week === 1 && !q.get('q') && <fieldset><legend>Abertura do confronto</legend><Link aria-current={q.get('media') !== 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: null })}>Logos</Link><Link aria-current={q.get('media') === 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: 'helmets' })}>Capacetes · estudo local</Link></fieldset>}</nav>
       {galleryRoute ? <MediaGallery q={q}/> : <>
       {calError && <section className="real-state" role="alert"><h2>Calendário indisponível.</h2><p>{calError} Nenhum jogo ou resultado foi substituído.</p><button onClick={() => { calendar.clearCache(); setCalRetry(v => v + 1); }}>Recarregar calendário</button></section>}
       {!games && !calError && <section className="real-state" role="status">Carregando calendário preservado…</section>}

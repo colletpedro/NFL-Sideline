@@ -174,3 +174,13 @@ body:has(.discovery) .real-header nav{display:none}
 .journey-page>.journey-band .journey-score{position:static;grid-column:1/-1;padding:16px 20px;background:#2b414e}
 .journey-page>.journey-band .journey-team{min-height:140px;padding-bottom:24px}
 @media(max-width:600px){.journey-page>.journey-band .journey-team,.journey-page>.journey-band .journey-team:nth-child(2){min-height:105px;padding-bottom:18px}}
+
+/* Paired helmet study uses logos until original masks face each other. */
+.pilot-logo { display: grid; place-items: center; min-height: 10rem; }
+.pilot-logo .team-logo { width: min(100%, 11rem); height: 9rem; object-fit: contain; }
+
+/* A logo must not squeeze the reading title when text is enlarged. */
+@media(max-width: 360px) {
+  .journey-page .real-identity { grid-template-columns: 1fr; }
+  .journey-page .real-identity > .team-logo { width: 4.5rem; height: 3.5rem; }
+}

@@ -62,3 +62,6 @@ editorial/local-interface-v1/runtime/
 web-ui/real-dist/
 
 web-ui/journey-dist/
+
+# Complete private W1–2 observation bundles; reproducible selection in docs/plans.
+/editorial/local-artifacts/broadcast-w12-expansion-v1/

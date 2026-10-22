@@ -1,0 +1,58 @@
+Full operational materialization readers: primary and backup...
+{"expectedIndividual": 384, "expectedInclusive": 192, "expectedExpansion": 576, "expectedActive": 588}
+sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a
+{
+  "kind": "REAL_ARCHIVE_INDEPENDENT_RAW_LEDGER",
+  "games": 32,
+  "teams": 32,
+  "documents": 588,
+  "categories": {
+    "individual": 384,
+    "inclusive": 192,
+    "retained": 12
+  },
+  "originalGroupsFromRaw": 3804,
+  "memberGroupsReconciled": 792,
+  "roundedValuesChecked": 1552,
+  "source": {
+    "materializationId": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+    "temporalInputId": "sha256:9dc7e6de11af1d0e494877c82f6cc234be3cbe002ab5ee47bf29cc2cf1d3a0e6"
+  },
+  "bundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a",
+  "bundlePath": "/private/tmp/nfl-w12-final-reproduction-20261022/bundle",
+  "portablePath": "/private/tmp/nfl-w12-final-reproduction-20261022-portable",
+  "portableFreshReaderWithOriginalRootsDenied": {
+    "count": 588,
+    "bundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a"
+  },
+  "bundleHashes": {
+    "COMPLETED.json": "18f22ca4f49e305fae700094312932d2b90d06243dcb277676af9fb97cf36f4e",
+    "manifest.json": "e15e03995713645af2ea2077267fa389d04de8ff0336803371528109503f83d7",
+    "observations.json": "3ef59a286468283fcdc524ce59fc2e4eba5e221196cda340dfe1436657f580eb",
+    "request.json": "9e2f39960d4904aa77400767a33545292654e6974c0c1bf6da9740ffd8f807f4",
+    "shared-source/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+    "shared-source/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+    "shared-source/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1"
+  },
+  "rawFileHashes": {
+    "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+    "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+    "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+    "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d"
+  },
+  "preservedCopiesUnchanged": true,
+  "retainedLegacyDocumentsSameSemanticIdentity": 12,
+  "activeUniqueScopes": 588,
+  "expectationDifference": 0,
+  "overlapPolicy": "Sum distinct original games only within one nominal observation; never sum observations; raw Fraction ledger independent of projector.",
+  "sampleMissingEpa": 0,
+  "unknown": [
+    "completeness",
+    "coverageExpectation",
+    "epaModel",
+    "historicalAvailability",
+    "historicalIngestion",
+    "eventFinal"
+  ],
+  "humanAcceptance": "PENDING"
+}

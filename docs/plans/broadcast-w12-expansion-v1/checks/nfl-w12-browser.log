@@ -1,0 +1,57 @@
+{
+  "matrix": {
+    "participants": 64,
+    "relationships": 768,
+    "documents": 588,
+    "roundedValues": 1552
+  },
+  "layouts": 22,
+  "screens": [
+    "min-individual-1440.png",
+    "min-inclusive-1440.png",
+    "calendar-1440.png",
+    "matchup-1440.png",
+    "individual-1440.png",
+    "week2-390.png",
+    "matchup-390.png",
+    "individual-390.png",
+    "inclusive-320.png",
+    "gap-320.png",
+    "reading-320-text200.png",
+    "helmet-pending-logos-1440.png"
+  ],
+  "flows": {
+    "defaultWeek": 1,
+    "MIN": {
+      "individual": "http://127.0.0.1:18096/?season=2026&week=1&game=2026_01_GB_MIN&team=MIN&side=off&play=general&entry=w12-expansion-v1&observation=sha256%3A34eab6d267d579885b61dc27381c7c0f5535522b4efb292bcb64eb9ca3b18363",
+      "reload": true,
+      "side": "off",
+      "play": "general",
+      "inclusive": "http://127.0.0.1:18096/?season=2026&week=1&game=2026_01_GB_MIN&team=MIN&side=off&play=general&entry=w12-expansion-v1&observation=sha256%3Afb42e6228083ea8d1aa1233c86bea4666a51fe30d4b082a2b1d51fa6bd8f1a35"
+    },
+    "SF": {
+      "individual": "http://127.0.0.1:18096/?season=2026&week=1&game=2026_01_SF_LA&team=SF&side=def&play=classified_pass&entry=w12-expansion-v1&observation=sha256%3A49d492bfedd956094f8324768027b4498f9d2c6b972420d9bc715ad93a8c888c",
+      "reload": true,
+      "side": "def",
+      "play": "classified_pass"
+    },
+    "LAC": {
+      "individual": "http://127.0.0.1:18096/?season=2026&week=2&game=2026_02_LV_LAC&team=LAC&side=off&play=classified_rush&entry=w12-expansion-v1&observation=sha256%3A86a5c47eb61ade385712f81b680abc11cdec6bac7af1749108e4d52f832d6488",
+      "reload": true,
+      "side": "off",
+      "play": "classified_rush"
+    },
+    "MIA": {
+      "individual": "http://127.0.0.1:18096/?season=2026&week=2&game=2026_02_MIA_SF&team=MIA&side=def&play=classified_rush&entry=w12-expansion-v1&observation=sha256%3Ab2dbe48ee8b4c505f3acec413122fb39b34b8919d196789a28367c4933bae203",
+      "reload": true,
+      "side": "def",
+      "play": "classified_rush"
+    },
+    "searchExplicitHistoryReturn": true,
+    "gapNoValues": true,
+    "neArchiveSeparate": true,
+    "helmetPairFallbackLogos": true,
+    "catalogFailureNoFallback": true,
+    "nominalMissingNoFallback": true
+  }
+}
