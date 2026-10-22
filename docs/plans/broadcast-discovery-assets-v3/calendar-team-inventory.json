@@ -1,0 +1,274 @@
+{
+  "season": 2026,
+  "gameCount": 272,
+  "usedAbbreviations": [
+    "ARI",
+    "ATL",
+    "BAL",
+    "BUF",
+    "CAR",
+    "CHI",
+    "CIN",
+    "CLE",
+    "DAL",
+    "DEN",
+    "DET",
+    "GB",
+    "HOU",
+    "IND",
+    "JAX",
+    "KC",
+    "LA",
+    "LAC",
+    "LV",
+    "MIA",
+    "MIN",
+    "NE",
+    "NO",
+    "NYG",
+    "NYJ",
+    "PHI",
+    "PIT",
+    "SEA",
+    "SF",
+    "TB",
+    "TEN",
+    "WAS"
+  ],
+  "teams": [
+    {
+      "teamAbbr": "ARI",
+      "teamName": "Arizona Cardinals",
+      "conference": "NFC",
+      "division": "NFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png"
+    },
+    {
+      "teamAbbr": "ATL",
+      "teamName": "Atlanta Falcons",
+      "conference": "NFC",
+      "division": "NFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png"
+    },
+    {
+      "teamAbbr": "BAL",
+      "teamName": "Baltimore Ravens",
+      "conference": "AFC",
+      "division": "AFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png"
+    },
+    {
+      "teamAbbr": "BUF",
+      "teamName": "Buffalo Bills",
+      "conference": "AFC",
+      "division": "AFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png"
+    },
+    {
+      "teamAbbr": "CAR",
+      "teamName": "Carolina Panthers",
+      "conference": "NFC",
+      "division": "NFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/car.png"
+    },
+    {
+      "teamAbbr": "CHI",
+      "teamName": "Chicago Bears",
+      "conference": "NFC",
+      "division": "NFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png"
+    },
+    {
+      "teamAbbr": "CIN",
+      "teamName": "Cincinnati Bengals",
+      "conference": "AFC",
+      "division": "AFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png"
+    },
+    {
+      "teamAbbr": "CLE",
+      "teamName": "Cleveland Browns",
+      "conference": "AFC",
+      "division": "AFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png"
+    },
+    {
+      "teamAbbr": "DAL",
+      "teamName": "Dallas Cowboys",
+      "conference": "NFC",
+      "division": "NFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png"
+    },
+    {
+      "teamAbbr": "DEN",
+      "teamName": "Denver Broncos",
+      "conference": "AFC",
+      "division": "AFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png"
+    },
+    {
+      "teamAbbr": "DET",
+      "teamName": "Detroit Lions",
+      "conference": "NFC",
+      "division": "NFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png"
+    },
+    {
+      "teamAbbr": "GB",
+      "teamName": "Green Bay Packers",
+      "conference": "NFC",
+      "division": "NFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png"
+    },
+    {
+      "teamAbbr": "HOU",
+      "teamName": "Houston Texans",
+      "conference": "AFC",
+      "division": "AFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png"
+    },
+    {
+      "teamAbbr": "IND",
+      "teamName": "Indianapolis Colts",
+      "conference": "AFC",
+      "division": "AFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png"
+    },
+    {
+      "teamAbbr": "JAX",
+      "teamName": "Jacksonville Jaguars",
+      "conference": "AFC",
+      "division": "AFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png"
+    },
+    {
+      "teamAbbr": "KC",
+      "teamName": "Kansas City Chiefs",
+      "conference": "AFC",
+      "division": "AFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png"
+    },
+    {
+      "teamAbbr": "LA",
+      "teamName": "Los Angeles Rams",
+      "conference": "NFC",
+      "division": "NFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png"
+    },
+    {
+      "teamAbbr": "LAC",
+      "teamName": "Los Angeles Chargers",
+      "conference": "AFC",
+      "division": "AFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png"
+    },
+    {
+      "teamAbbr": "LV",
+      "teamName": "Las Vegas Raiders",
+      "conference": "AFC",
+      "division": "AFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png"
+    },
+    {
+      "teamAbbr": "MIA",
+      "teamName": "Miami Dolphins",
+      "conference": "AFC",
+      "division": "AFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png"
+    },
+    {
+      "teamAbbr": "MIN",
+      "teamName": "Minnesota Vikings",
+      "conference": "NFC",
+      "division": "NFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png"
+    },
+    {
+      "teamAbbr": "NE",
+      "teamName": "New England Patriots",
+      "conference": "AFC",
+      "division": "AFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png"
+    },
+    {
+      "teamAbbr": "NO",
+      "teamName": "New Orleans Saints",
+      "conference": "NFC",
+      "division": "NFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png"
+    },
+    {
+      "teamAbbr": "NYG",
+      "teamName": "New York Giants",
+      "conference": "NFC",
+      "division": "NFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png"
+    },
+    {
+      "teamAbbr": "NYJ",
+      "teamName": "New York Jets",
+      "conference": "AFC",
+      "division": "AFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png"
+    },
+    {
+      "teamAbbr": "PHI",
+      "teamName": "Philadelphia Eagles",
+      "conference": "NFC",
+      "division": "NFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png"
+    },
+    {
+      "teamAbbr": "PIT",
+      "teamName": "Pittsburgh Steelers",
+      "conference": "AFC",
+      "division": "AFC North",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png"
+    },
+    {
+      "teamAbbr": "SEA",
+      "teamName": "Seattle Seahawks",
+      "conference": "NFC",
+      "division": "NFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png"
+    },
+    {
+      "teamAbbr": "SF",
+      "teamName": "San Francisco 49ers",
+      "conference": "NFC",
+      "division": "NFC West",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png"
+    },
+    {
+      "teamAbbr": "TB",
+      "teamName": "Tampa Bay Buccaneers",
+      "conference": "NFC",
+      "division": "NFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png"
+    },
+    {
+      "teamAbbr": "TEN",
+      "teamName": "Tennessee Titans",
+      "conference": "AFC",
+      "division": "AFC South",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png"
+    },
+    {
+      "teamAbbr": "WAS",
+      "teamName": "Washington Commanders",
+      "conference": "NFC",
+      "division": "NFC East",
+      "logoUrl": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png"
+    }
+  ],
+  "reused": {
+    "DAL": "web-ui/local-editorial/broadcast/assets/dal.png",
+    "BAL": "web-ui/local-editorial/broadcast/assets/bal.png",
+    "NE": "web-ui/local-editorial/broadcast/assets/ne.png",
+    "GB": "web-ui/broadcast-experience/assets/gb.png",
+    "KC": "web-ui/broadcast-experience/assets/kc.png",
+    "BUF": "web-ui/broadcast-experience/assets/buf.png",
+    "PIT": "web-ui/broadcast-experience/assets/pit.png",
+    "CHI": "web-ui/broadcast-experience/assets/chi.png"
+  }
+}
