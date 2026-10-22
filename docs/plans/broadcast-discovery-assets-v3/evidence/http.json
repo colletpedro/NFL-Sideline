@@ -1,0 +1,1155 @@
+{
+  "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+  "sessionId": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+  "materializationId": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+  "temporalInputId": "sha256:9dc7e6de11af1d0e494877c82f6cc234be3cbe002ab5ee47bf29cc2cf1d3a0e6",
+  "completeReaderValidated": true,
+  "backupCompleteReaderValidated": true,
+  "pinMatched": true,
+  "expectedCohortMatched": true,
+  "documents": 48,
+  "reconciledProjection": 48,
+  "http": {
+    "origin": "http://127.0.0.1:18094",
+    "documentsExactlyMatched": 48,
+    "refusals": [
+      {
+        "path": "/__observations/",
+        "headers": {
+          "Origin": "http://evil.invalid"
+        },
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {
+          "Origin": "http://127.0.0.1:18083"
+        },
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {
+          "Host": "localhost:18094"
+        },
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {
+          "Host": "evil.invalid"
+        },
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {
+          "Host": "127.0.0.1:18083"
+        },
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {
+          "X-Local-Observations": "0"
+        },
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {},
+        "method": "POST",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {},
+        "method": "HEAD",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {},
+        "method": "OPTIONS",
+        "status": 403
+      },
+      {
+        "path": "/__observations/",
+        "headers": {},
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/?path=/etc/passwd",
+        "headers": {},
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/../config.json",
+        "headers": {},
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/%2e%2e/config.json",
+        "headers": {},
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__observations/real-recovery/1131b60d134c8a58f1b53232ffd727fe37dbd01fe1f6e17b51c27458bfa5f25f",
+        "headers": {},
+        "method": "GET",
+        "status": 409
+      },
+      {
+        "path": "/__observations/real-recovery/1131b60d134c8a58f1b53232ffd727fe37dbd01fe1f6e17b51c27458bfa5f25f",
+        "headers": {
+          "X-Observation-Session": "stale"
+        },
+        "method": "GET",
+        "status": 409
+      },
+      {
+        "path": "/__observations/missing/0000000000000000000000000000000000000000000000000000000000000000",
+        "headers": {
+          "X-Observation-Session": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c"
+        },
+        "method": "GET",
+        "status": 404
+      }
+    ],
+    "sessionRequired": true,
+    "noCorsWildcard": true
+  },
+  "sourceHashes": {
+    "COMPLETED.json": "892ae4b8f1b4f5ddb7dfacc9a38e319fe63302ab9192c28455d255bf7d8c05ee",
+    "manifest.json": "48b0bf238c543c6369c739f529dc18e9e49be606bf6dc0eb09c55d03eeecf6e7",
+    "observations.json": "7084ee10e0cc51233ed7568a9436f7710872576648f0b248a73a6840fd538551",
+    "request.json": "2415bb2fc282ac7497dd195bbedd21e1c8bcd807f68ffc082fb3812396db133b",
+    "shared-source/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+    "shared-source/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+    "shared-source/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1"
+  },
+  "states": {
+    "OBSERVED": 42,
+    "ABSENT": 6
+  },
+  "guarantees": {
+    "integrity": [
+      "RECONCILED"
+    ],
+    "completeness": [
+      "UNKNOWN"
+    ],
+    "coverage": [
+      "UNKNOWN"
+    ],
+    "temporal": [
+      "UNKNOWN"
+    ]
+  },
+  "epaModelStates": [
+    "UNKNOWN"
+  ],
+  "identities": [
+    {
+      "observationId": "sha256:1131b60d134c8a58f1b53232ffd727fe37dbd01fe1f6e17b51c27458bfa5f25f",
+      "dtoId": "sha256:44a7dc844eff3457dd631db24a6f606914add452232664954d33f7e2d2349b96",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:1216d77dbf4ff2e683caef6cbf3d3abb1e6530130481c896189575df18ec32d8",
+      "dtoId": "sha256:45f70a850fb753f6b78512240dd379d617e5ad0d640ba3b8c89479401ba4d3fc",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+      "dtoId": "sha256:88431d09ad9a9a39176a71aa67c29d429be8342185afc20165511dbc7f6c50a4",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:285673f9fd5db21cbb81426081eba2d6de582828382a964ff41dca5c2f9e864d",
+      "dtoId": "sha256:99772faf5636bc01d4b5b15c2a78285344f4dbc2315ee764d88a3f4b3f34f4d5",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:2edbb87fabfa0174a0ab483c51a81fe21cfa26a97a37f804c043ee75ef9e4d27",
+      "dtoId": "sha256:17f325c41663018ab35fe17dc641433899a715010b62a1cf7bceb8a06172e4d1",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:2ff6c50f45890adee538c7e192cb789f0ae2512cd63cac4a4ab36916c9f84f3b",
+      "dtoId": "sha256:840e33d443d87e87fcc27a26adb7e496312ac04dd1a686a90deb884f2bb2172e",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+      "dtoId": "sha256:fb2f9ce336578a0d5336428850b4f682166ab2f76929b6d71c9c6858a5ad8b69",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:35003e275fe5cd19408120db21b5cef7f6bb924041069c1e6b346184ee322f0a",
+      "dtoId": "sha256:cd5f023df254d6afd2d45462038b149b689f7f8ec276894c8b33fc1d5dca2288",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:35da735ddcbf0bb800d10cb2d34290d1febd86349e970fe34a2e3f72b0144614",
+      "dtoId": "sha256:c94b23d29ef218af48abe14877e88e1753b54e5c452896ecec9564f4737b81ba",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:3728b967465613361258b5103888884aac3e17cfbbd4b518ada543fe086988f1",
+      "dtoId": "sha256:a625930537b8679408240bf25a59eab46ff3dc6265d1e1f8ae919236da804a95",
+      "subject": {
+        "team": "NE",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2025,
+        "phase": "POST",
+        "origin": "HISTORICAL_REFERENCE",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            19,
+            20,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:3c0a2a09de136d66b4a9c6744cf08045630e9d388c32d082bd2311e9395711ba",
+      "dtoId": "sha256:c3cae339b75daecf8ba51ba8ac1fadae15226c396bb59d9393864311c8be25ca",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:4ca20c40c3b492b520e496309c11a2bec7207cd6c8038faf07d1e19c66248820",
+      "dtoId": "sha256:bd46c127705574aa6c8e2fdcfde3192b8abc5483398aaf02f39d19d48eb48b86",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:4f536dfe25247064a2bb29b161e06bd341c98717bea2b923e77340426eb76e73",
+      "dtoId": "sha256:fe665cffc081f0e2d89501cd8ef7c365f8ba914c94f861ec125e678509a7c125",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:52706216cb8973647537a7b4b9152c127bc316fad100b8caa3f62279202afaf7",
+      "dtoId": "sha256:9c052a2c6c16c45aae0597168327e0f4ce68f6e44d2787eb480d0d98ab20226e",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:52d6eee3062dbd399aaf24e06f1b619c76643cb0d14f7f2a643f2936acf00a87",
+      "dtoId": "sha256:c2b5ad405e78691500c83438c9b545557e70e3182b51194636e0e944778273da",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:66ae71a78c285a2af6b31cd4a9c0ba87a04a9a058642cb951fce65ee4ec45d0c",
+      "dtoId": "sha256:e9623743e162b1cd5da779d61b9f132721f7fbeb3d3bb2fb95c13a0ff044cbc7",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:68d08b232744467f65d4eec3ce6adf53dc55405dfc5d6f4952163959e8af1471",
+      "dtoId": "sha256:e99e2e34217a21b0b345449444b14297ff09abf326428223773320771a48987d",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:709b1567bd0f899b6ddd0d5588f3de4fa1e1f1b4ab30aac48bf5e31eccffc119",
+      "dtoId": "sha256:fbca66466adb082a51cb6a04280396584f5dfd201f21c61b87e31e3de88aeeba",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:738678fb0c3f565e8121ece526dca575f1860fc1cb117073821239dbb4a4d7d8",
+      "dtoId": "sha256:780fed57b2f955daa7f74eb2d51b5b4cd260f8a3265a75f814cf425fed8744be",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:78721fc2a2c63e4d89205b414c422fd8d4da404d627aa4804c8eaa61b8a84509",
+      "dtoId": "sha256:64514bd7029ba7027ec911a285e99dbf1d8139bbdd85b02cbcaaa228449c153b",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:7c0ebe18d04ad717b708d6697d3523a854f33f9092bbb415b777bef02bd83cfb",
+      "dtoId": "sha256:b1a5f84fbea63ff1042090898bfa11ad37595d54378060c64e466b979a6b2509",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:8c913de08140cbd638eb4d9fec541b5c3d357e00d675b35fd2ceac7ac6a25e36",
+      "dtoId": "sha256:d8d579b492e878aa045358bdce59ceb21a19d88cc2acc4e8e5d84ba36a689990",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:97709cf311279e156f8cac0794f76ec5287ee509a0cfc1a993226c480a79b923",
+      "dtoId": "sha256:fdaf4edf3d1c00fa3c3dbda199b923c5da36024d984288eca6aebaa17d9006e6",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:9a0c914649c5c86547d441c7400ace54b5cb5d149493f222a3116f9d97885333",
+      "dtoId": "sha256:c90c3df4c70cc6e27f416e99cc32c147effd44c52660beb73b691e9390969d76",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:a06eb4752149432d973a6ce562780585e643f86ef04413c73261182eeeddd5a6",
+      "dtoId": "sha256:c323f44be01b6bc019ed6dbf843b118a3eb03888d8552a11da1b8b154d6bdcf0",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:a51c87b43002cd4c3eb0a4359ca81563343de1c89ebbc436caab0a9d88c4cbfd",
+      "dtoId": "sha256:bb635e006d6c17e76a08da63be83112d9db489b18ed252389af6c376ed8a57ea",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:ad1c93ed6ff2af8d8c56065e1e1739c2e06a4e98254ecd5a47d55abad7c6eee5",
+      "dtoId": "sha256:21b49cfe66096ab5980888fa75a12f7d0247ef137687c1cd25e46d1959bccdd2",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:ad890fc8e4b41cba0c623bd3d20bfc363e2519146d9bd8589c4b799a0aa74302",
+      "dtoId": "sha256:70f5667c1b60f1a50b04ca294ab3c9e5b1f59a216f87159eaa3bb68793608aa6",
+      "subject": {
+        "team": "NE",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2025,
+        "phase": "POST",
+        "origin": "HISTORICAL_REFERENCE",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            19,
+            20,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:b69593b155cde581c58c790d2e29bd4ec9b22fc07a1215b0458fba572ef61103",
+      "dtoId": "sha256:f55a4d718de731ab6eb0c68e2dd17e4adb49351199cdcb8b9c78d73d5538199c",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:b746ac338db2ad58d1c1aa84c63201e0b8591e1d7da2372366ecf313c32f7504",
+      "dtoId": "sha256:be805c53387f199292ab335aa529f3170126720624dbfa72781a1a30ad1a0127",
+      "subject": {
+        "team": "NE",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2025,
+        "phase": "POST",
+        "origin": "HISTORICAL_REFERENCE",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            19,
+            20,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:bc4461ee8e881a3bd92dc1402a11cb511bc1c1239bb9dab9a0337b5d6c5c5d1d",
+      "dtoId": "sha256:2bec1bea224830e9b7d8ecf8249cfc2cfbe01ac3287d19a8ee11819cce8fe5a6",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:c15138a0a5e3c3588efcd4e257b814e1388cbb61e926de768499918637b55a56",
+      "dtoId": "sha256:ef25135aa6e0155e5de7a310b92970aea94ec990deb9b0dc72a09824bd99cef4",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:cbd7c41072386044ec653ed437bcb14894e019f5268904302877c9535eb3d3d1",
+      "dtoId": "sha256:bfd22efa7067b07003e127e8fb5743610ee26a36fdc869a76d7d99b78010786b",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:cdab1203292c2f9a35ac1075de43e59765574a0c3677a84e01d10a954e56ee95",
+      "dtoId": "sha256:adfd6062670eab81cc68ab723f1252e889763c3908d65136e30307779fa5499f",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:cdd231a9f87a822798b508dee6e3a4828195f03a8ca9f50b94ad441bfa765c39",
+      "dtoId": "sha256:8a586915ebaa943049f24dfcb3363f97ce26730e481fe379b633607c5e2ed27c",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:d00696cf1758038427da0f7cc43ae7efa2abc6c292d1d8578b096f717f471764",
+      "dtoId": "sha256:da66d34ec636c82ddddb5b871efc1ec46af61ccf33a5346be1106d91614223d1",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:d4af4e3e200c4009fc9057bee52f527e38539b0d28cc0a8b559d53a04ca02f95",
+      "dtoId": "sha256:87b2be47cd51a6d4947f07b0fa53f5bf5f963abd6ddc2f6697012ade4e00d645",
+      "subject": {
+        "team": "NE",
+        "role": "def",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2025,
+        "phase": "POST",
+        "origin": "HISTORICAL_REFERENCE",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            19,
+            20,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:d63dade8804ef1f832f91b636f704f765c2c3e0646092556e8330062cea50f73",
+      "dtoId": "sha256:9341664f96ee10a6c2ccedb1a8c0eeedc5123c7ce7e89c4f89cc73e64b366cd2",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:db2df19c8173818c8ccb9f34f7a863c61987fecc66b32ad7839c5d72487bc3ce",
+      "dtoId": "sha256:f86e64c0fe7022896a6b438d9843f2b8245acdf3ef9f7373139700bae1a9cea4",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:dd9601e6444ca559a112914a7bd828ba4429d5df673e23db22fadeed0903af5a",
+      "dtoId": "sha256:a7aa229fd9bf5ffa4532ecddfce99134d6409de3796ed0b789d48b00cde56dbd",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:df158d87be71dc4ed1d403767fc443bfd6631f5a7f280e5debc7bd735cdf623f",
+      "dtoId": "sha256:2606da3bb65b0da2df0ee796826dd1e83ed3ccf666c81da4bef4f2e4db190d8b",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:e7d18d1bf68399179bdd4af1fc35d33641afdb16048515b51c4ef67e4866948b",
+      "dtoId": "sha256:258fe731e72fa275d5091d002c794124b4885cfe68c3e5916d53cb5240a9b05d",
+      "subject": {
+        "team": "DAL",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:f02add308d9a10eb6be139305c60d2327edf703ea109bd572f9dca06bac4116d",
+      "dtoId": "sha256:c7afc7a4108e74a896ac5cd0e7dc5902162ef442068e4a07a76f8d0337f7b249",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:f2d9ea40e680c236bd7a44ea50ac193f9dfdba5c7985fa057cc1c636a511359e",
+      "dtoId": "sha256:3e429b4cc7cb2b5dce57538d9a21bdfa5e8208fc114ee134254e657426081031",
+      "subject": {
+        "team": "DAL",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:f3d5d4eb1ad64b92bd2a2926c663ca0b2006bd310a2488be95b0a9a686b9b679",
+      "dtoId": "sha256:3d7b24f08409a90e6a17bc8e634354289c4b85b1b07b7b210c80230131075b1d",
+      "subject": {
+        "team": "BAL",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:f401dc36bc5df8acc8ff35e2d12e0d339b7652e97f3a9b674b27a34525e25b81",
+      "dtoId": "sha256:311cf1d1d16eea31ac5af00c0ec4adf3df3aa6c23b8a94289f00b7f9a735af3d",
+      "subject": {
+        "team": "NE",
+        "role": "off",
+        "foundation": "classified_rush"
+      },
+      "request": {
+        "season": 2025,
+        "phase": "POST",
+        "origin": "HISTORICAL_REFERENCE",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            19,
+            20,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:f83bb3b85ce7546bcefe4c05b2363304137242d740a47fb80265387cb8256e25",
+      "dtoId": "sha256:23e92a88257f9f6a7c60428b27b0bab4e960552d4816e14be9171740b7704e8d",
+      "subject": {
+        "team": "NE",
+        "role": "def",
+        "foundation": "classified_pass"
+      },
+      "request": {
+        "season": 2025,
+        "phase": "POST",
+        "origin": "HISTORICAL_REFERENCE",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            19,
+            20,
+            21,
+            22
+          ]
+        }
+      }
+    },
+    {
+      "observationId": "sha256:fde397283676c4ab5f7c828ce19b141ff2243dc6f63d9ae1051b49546b3c0cbd",
+      "dtoId": "sha256:8076ec9b1de62e1c2eaaa53caa65e620d2b2896d0ca4fd4bedbe35b916ab3660",
+      "subject": {
+        "team": "BAL",
+        "role": "def",
+        "foundation": "general"
+      },
+      "request": {
+        "season": 2026,
+        "phase": "REG",
+        "origin": "CURRENT",
+        "period": {
+          "kind": "DECLARED_WEEKS",
+          "weeks": [
+            3
+          ]
+        }
+      }
+    }
+  ],
+  "primaryAndBackupUnchanged": true
+}

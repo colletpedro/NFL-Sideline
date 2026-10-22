@@ -1,0 +1,26 @@
+{
+  "worktree": "/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL Sideline",
+  "branch": "codex/broadcast-discovery-assets-v3",
+  "base": "4f6095fd205da9230abc8c82e8a3a457a47bbaba",
+  "implementationCommits": [
+    "4e5b1d500d97d1421403ae6eafc3973540893332",
+    "bd25dfa9c2ae8c098fdb5f4a72e75a00a9a30144"
+  ],
+  "server": {
+    "host": "127.0.0.1",
+    "port": 18094,
+    "pid": 55895
+  },
+  "previous": {
+    "head": "4f6095fd205da9230abc8c82e8a3a457a47bbaba",
+    "worktreeClean": true,
+    "port": 18093,
+    "pid": 39598,
+    "serverPreserved": true
+  },
+  "merge": false,
+  "push": false,
+  "deploy": false,
+  "humanVisualAcceptance": false,
+  "physicalTouchTest": false
+}

@@ -1,0 +1,28 @@
+{
+  "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&explore=open",
+  "open": true,
+  "selected": [
+    "2026_01_BAL_IND",
+    "2026_01_DAL_NYG",
+    "2026_01_NE_SEA"
+  ],
+  "remaining": [
+    "2026_01_SF_LA",
+    "2026_01_ARI_LAC",
+    "2026_01_ATL_PIT",
+    "2026_01_BUF_HOU",
+    "2026_01_CHI_CAR",
+    "2026_01_CLE_JAX",
+    "2026_01_GB_MIN",
+    "2026_01_MIA_LV",
+    "2026_01_NO_DET",
+    "2026_01_NYJ_TEN",
+    "2026_01_TB_CIN",
+    "2026_01_WAS_PHI",
+    "2026_01_DEN_KC"
+  ],
+  "returnAfterReload": {
+    "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&explore=open",
+    "open": true
+  }
+}

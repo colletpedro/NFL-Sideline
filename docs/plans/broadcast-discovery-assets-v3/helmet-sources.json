@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-22",
+  "catalogue": "https://www.riddell.com/collectibles",
+  "usage": "https://news.riddell.com/multimedia/usage",
+  "candidates": [
+    {
+      "team": "BAL",
+      "description": "Baltimore Ravens Authentic Speed",
+      "imageUrl": "https://www.riddell.com/medias/sys_master/images/images/hb6/h54/8802957426718/-515Wx515H-000000000003001626-1.png",
+      "productUrl": "https://www.riddell.com/riddell/en/Open-Catalogue/Collectibles/NFL/Authentic-Full-Size/Baltimore-Ravens-Authentic-Speed/p/000000000003001626",
+      "catalogue": "https://www.riddell.com/riddell/en/search?q=%3aname-asc%3afootballTeam%3abaltimore_ravens&text=Baltimore+Ravens&isCollectible=true",
+      "imageDownloaded": false,
+      "rights": "Pressroom policy does not license retail photography. No reuse permission established."
+    },
+    {
+      "team": "DAL",
+      "description": "Dallas Cowboys Authentic Speed",
+      "imageUrl": "https://www.riddell.com/medias/sys_master/images/images/he4/h4e/8802959720478/-515Wx515H-000000000003001632-1.png",
+      "productUrl": "https://www.riddell.com/riddell/en/Open-Catalogue/Collectibles/NFL/Authentic-Full-Size/Dallas-Cowboys-Authentic-Speed/p/000000000003001632",
+      "catalogue": "https://www.riddell.com/riddell/en/search?q=%3aname-asc%3afootballTeam%3adallas_cowboys&text=Dallas+Cowboys&isCollectible=true",
+      "imageDownloaded": false,
+      "rights": "Pressroom policy does not license retail photography. No reuse permission established."
+    },
+    {
+      "team": "IND",
+      "description": "Indianapolis Colts Authentic Speed",
+      "imageUrl": "https://www.riddell.com/medias/sys_master/images/images/h68/hfb/8803221667870/-515Wx515H-000000000008056537-1.png",
+      "productUrl": "https://www.riddell.com/riddell/en/Open-Catalogue/Collectibles/NFL/Authentic-Full-Size/Indianapolis-Colts-Authentic-Speed/p/000000000008056537",
+      "catalogue": "https://www.riddell.com/riddell/en/search?q=%3aname-asc%3afootballTeam%3aindianapolis_colts&text=Indianapolis+Colts&isCollectible=true",
+      "imageDownloaded": false,
+      "rights": "Pressroom policy does not license retail photography. No reuse permission established."
+    },
+    {
+      "team": "NE",
+      "description": "New England Patriots Authentic Speed",
+      "imageUrl": "https://www.riddell.com/medias/sys_master/images/images/hc6/h8a/8802962014238/-515Wx515H-000000000003001642-1.png",
+      "productUrl": "https://www.riddell.com/riddell/en/Open-Catalogue/Collectibles/NFL/Authentic-Full-Size/New-England-Patriots-Authentic-Speed/p/000000000003001642",
+      "catalogue": "https://www.riddell.com/riddell/en/search?q=%3aname-asc%3afootballTeam%3anew_england_patriots&text=New+England+Patriots&isCollectible=true",
+      "imageDownloaded": false,
+      "rights": "Pressroom policy does not license retail photography. No reuse permission established."
+    }
+  ],
+  "rosters": "https://nflreadr.nflverse.com/articles/dictionary_rosters.html"
+}

@@ -1,0 +1,5 @@
+{
+  "failure": "<span class=\"logo-fallback \" aria-hidden=\"true\">FAIL</span><strong>FAIL</strong>",
+  "recovery": "<img class=\"team-logo \" src=\"/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/ind.png\" alt=\"\" width=\"500\" height=\"500\"><strong>IND</strong>",
+  "loaded": 500
+}

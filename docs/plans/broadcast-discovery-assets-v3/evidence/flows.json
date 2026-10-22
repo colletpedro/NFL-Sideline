@@ -1,0 +1,101 @@
+[
+  {
+    "query": "DAL",
+    "observed": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&q=DAL",
+      "games": [
+        "2026_01_DAL_NYG"
+      ],
+      "empty": false
+    }
+  },
+  {
+    "query": "Cowboys",
+    "observed": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&q=Cowboys",
+      "games": [
+        "2026_01_DAL_NYG"
+      ],
+      "empty": false
+    }
+  },
+  {
+    "query": "  DÁLLÁS  ",
+    "observed": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&q=D%C3%81LL%C3%81S",
+      "games": [
+        "2026_01_DAL_NYG"
+      ],
+      "empty": false
+    }
+  },
+  {
+    "query": "zzzinexistente",
+    "observed": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&q=zzzinexistente",
+      "games": [],
+      "empty": true
+    }
+  },
+  {
+    "clear": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all",
+      "focused": "game-search",
+      "stage": true
+    }
+  },
+  {
+    "season": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&scope=season&q=BAL",
+      "status": "17 jogos · temporada 2026",
+      "rows": 8
+    }
+  },
+  {
+    "pagination": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&scope=season&q=BAL&page=2",
+      "focused": "Resultados para “BAL”",
+      "rows": 8
+    }
+  },
+  {
+    "open": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&scope=season&q=BAL+%C3%97+IND&game=2026_01_BAL_IND"
+  },
+  {
+    "noObservation": "IND · Ataque · Passe + corridaSem leitura exclusiva deste jogoO arquivo não oferece essa combinação para a partida. Tente o outro time ou volte ao calendário."
+  },
+  {
+    "reading": {
+      "url": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&scope=season&q=BAL+%C3%97+IND&game=2026_01_BAL_IND&team=BAL&side=def&play=classified_pass&entry=real-recovery&observation=sha256%3Abc4461ee8e881a3bd92dc1402a11cb511bc1c1239bb9dab9a0337b5d6c5c5d1d",
+      "relation": "individual",
+      "values": [
+        [
+          "epa",
+          "−0,462"
+        ],
+        [
+          "volume",
+          "33"
+        ],
+        [
+          "success",
+          "36,4%"
+        ]
+      ]
+    }
+  },
+  {
+    "reload": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&scope=season&q=BAL+%C3%97+IND&game=2026_01_BAL_IND&team=BAL&side=def&play=classified_pass&entry=real-recovery&observation=sha256%3Abc4461ee8e881a3bd92dc1402a11cb511bc1c1239bb9dab9a0337b5d6c5c5d1d"
+  },
+  {
+    "return": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&scope=season&q=BAL+%C3%97+IND&team=BAL&side=def&play=classified_pass"
+  },
+  {
+    "finalSearch": {
+      "before": "http://127.0.0.1:18094/?season=2026&week=3&filter=participants&scope=season&q=BAL+%C3%97+IND",
+      "game": "http://127.0.0.1:18094/?season=2026&week=3&filter=participants&scope=season&q=BAL+%C3%97+IND&game=2026_01_BAL_IND",
+      "after": "http://127.0.0.1:18094/?season=2026&week=3&filter=participants&scope=season&q=BAL+%C3%97+IND",
+      "scope": "Semana 3 · 2026Busca na temporada · com recortesAjustar seleção e busca"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "touchBox": {
+    "x": 328.55078125,
+    "y": 254.703125,
+    "width": 58.8984375,
+    "height": 48
+  },
+  "touchResult": {
+    "url": "http://127.0.0.1:18094/?season=2026&week=3&filter=participants&q=zzzinexistente&scope=season",
+    "input": "zzzinexistente",
+    "stage": false,
+    "maxTouchPoints": 1,
+    "coarse": true
+  },
+  "limitation": "Touch device emulation enabled; supported click action exercised. Native touch event dispatch is unavailable in the in-app browser. No physical-device test claimed."
+}
