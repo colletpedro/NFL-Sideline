@@ -87,7 +87,7 @@ export default function App() {
       {!gameId && !readingRoute && games && <Discovery games={games} archive={archive} archiveError={archiveError} q={q} season={season} week={week} onChange={setQ}/>}
       {gameId && games && !game && <section className="real-state" role="alert"><h2>Jogo não encontrado nesta temporada.</h2><p>A origem não pode ser validada; nenhuma associação foi concedida.</p><Link to={calendarHref}>Voltar ao calendário</Link></section>}
       {game && !readingRoute && <>
-        <Band game={game} selectedTeam={readChoice(game, q).team} onSelect={team => choose({ team })}/><section className="journey-match-context journey-match-compact"><p>{dateLabel(game.gameday)} · {game.season} {game.gameType} · Semana {game.week}</p><details><summary>Sobre o jogo e o arquivo</summary><p>{game.gameId}</p><p>{game.homeTeam.teamName} como mandante. Estádio e horário não disponíveis neste arquivo.</p>{game.roof && <p>Cobertura: {game.roof}</p>}{game.surface && <p>Superfície: {game.surface}</p>}</details></section>
+        <Band game={game} selectedTeam={readChoice(game, q, undefined, archive).team} onSelect={team => choose({ team })}/><section className="journey-match-context journey-match-compact"><p>{dateLabel(game.gameday)} · {game.season} {game.gameType} · Semana {game.week}</p><details><summary>Sobre o jogo e o arquivo</summary><p>{game.gameId}</p><p>{game.homeTeam.teamName} como mandante. Estádio e horário não disponíveis neste arquivo.</p>{game.roof && <p>Cobertura: {game.roof}</p>}{game.surface && <p>Superfície: {game.surface}</p>}</details></section>
         {choice}
         <Link className="journey-back" to={calendarHref}>Voltar ao calendário · semana {week}</Link>
       </>}

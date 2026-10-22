@@ -11,7 +11,7 @@ import { choiceGroups, readChoice, sides, foundations, type Choice } from './cho
 
 type Props = { teamPicker?: boolean; game: Game; archive: Archive; q: URLSearchParams; selected?: DTO; onChoice: (change: Record<string, string>) => void; href: (entry: string, observation: string) => string };
 export function ObservationChoice({ teamPicker = true, game, archive, q, selected, onChoice, href }: Props) {
-  const choice = readChoice(game, q, selected), grouped = choiceGroups(game, archive, choice);
+  const choice = readChoice(game, q, selected, archive), grouped = choiceGroups(game, archive, choice);
   const teams = [game.awayTeam, game.homeTeam];
   const context = `${choice.team} · ${sides[choice.side]} · ${foundations[choice.play]}`;
   function recuts(items: Archive['documents'], group: 'includes' | 'other' | 'archive', label: string) {

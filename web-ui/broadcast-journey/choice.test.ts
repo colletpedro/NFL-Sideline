@@ -60,3 +60,49 @@ describe('explicit choice without changing the nominal observation', () => {
     expect(calendar.get('game')).toBeNull(); expect(calendar.get('week')).toBe('2'); expect(calendar.get('filter')).toBe('participants'); expect(calendar.get('play')).toBe('classified_pass');
   });
 });
+
+describe('available participant orientation, independent of calendar position', () => {
+  const noBal = { ...game, gameId: '2026_02_NO_BAL', week: 2, awayTeam: { teamAbbr: 'NO' }, homeTeam: { teamAbbr: 'BAL' } } as Game;
+  const inGame = (team: string, g: Game = noBal) => { const d = sample(); d.subject.team = team; d.members[0].gameId = g.gameId; d.members[0].week = g.week; d.request.period.weeks = [g.week]; d.observed.includedGameIds = [g.gameId]; return d; };
+  it('orients NO × BAL to the only participant with an individual document', () => {
+    expect(readChoice(noBal, new URLSearchParams(), undefined, archive(inGame('BAL'))).team).toBe('BAL');
+  });
+  it('orients to an available visitor too', () => {
+    expect(readChoice(game, new URLSearchParams(), undefined, archive(inGame('BAL', game))).team).toBe('BAL');
+  });
+  it('breaks equal availability by literal abbreviation, independent of home/away or document order', () => {
+    const a = archive(inGame('NO'),inGame('BAL'));
+    expect(readChoice(noBal, new URLSearchParams(), undefined, a).team).toBe('BAL');
+    expect(readChoice({ ...noBal, homeTeam: noBal.awayTeam, awayTeam: noBal.homeTeam },new URLSearchParams(),undefined,a).team).toBe('BAL');
+    expect(a.documents[0].d.subject.team).toBe('NO');
+  });
+  it('respects an explicit participant without a reading and retains dimensions', () => {
+    expect(readChoice(noBal, new URLSearchParams('team=NO&side=def&play=classified_rush'),undefined,archive(inGame('BAL')))).toEqual({team:'NO',side:'def',play:'classified_rush'});
+  });
+  it('does not establish availability from an unavailable archive', () => {
+    const c=readChoice(noBal,new URLSearchParams(),undefined,null);
+    expect(c.team).toBe('BAL'); // lexical fallback only, no document opened
+    expect(choiceGroups(noBal,archive(),c)).toEqual({primary:[],includes:[],other:[],archive:[]});
+  });
+  it('prefers an individual relation over inclusive and never promotes the latter', () => {
+    const inclusive=inGame('NO'); inclusive.members.push({...inclusive.members[0],gameId:'another',week:1});inclusive.scope.aggregation='MULTI_GAME';inclusive.request.period.weeks=[1,2];
+    const a=archive(inclusive,inGame('BAL'));
+    expect(readChoice(noBal,new URLSearchParams(),undefined,a).team).toBe('BAL');
+    const groups=choiceGroups(noBal,a,{team:'NO',side:'off',play:'general'});
+    expect(groups.primary).toHaveLength(0);expect(groups.includes[0].d).toBe(inclusive);
+  });
+  it('keeps gap, another period and incompatible nominal IDs separate', () => {
+    const gap=inGame('BAL');gap.members[0].sourceState='ABSENT';gap.observed.includedGameIds=[];gap.scope.aggregation='NO_OBSERVATION';
+    const incompatible=inGame('IND');
+    const a=archive(gap,incompatible);
+    expect(readChoice(noBal,new URLSearchParams(),incompatible,a).team).toBe('BAL');
+    expect(choiceGroups(noBal,a,{team:'BAL',side:'off',play:'general'}).primary.map(x=>x.d)).toEqual([gap]);
+    expect(incompatible.subject.team).toBe('IND');
+  });
+  it('preserves search origin in another week through nominal reading and return, including media selection', () => {
+    const q=new URLSearchParams('season=2026&week=3&scope=season&q=BAL&filter=participants&page=2&explore=open&media=helmets');
+    const reading=new URLSearchParams(journeyHref(q,{game:noBal.gameId,entry:'real',observation:'nominal'}).slice(2));
+    const returned=new URLSearchParams(journeyHref(reading,calendarChange).slice(2));
+    for(const [key,value] of q)expect(returned.get(key)).toBe(value);
+  });
+});

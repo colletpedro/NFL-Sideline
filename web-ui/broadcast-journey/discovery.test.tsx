@@ -5,7 +5,7 @@ import snapshot from '../public/data/seasons/2026.json';
 import type { Game } from '../src/services/types';
 import type { Archive } from './sources';
 import type { DTO } from '../local-editorial/observations/model';
-import { availabilityLabel, gameAvailability, normalizeSearch, searchGames, selectGames } from './discoveryModel';
+import { availabilityDescription, availabilityLabel, gameAvailability, normalizeSearch, searchGames, selectGames } from './discoveryModel';
 import { teamIdentities, teamIdentity } from '../broadcast-real/identity';
 import { Logo } from '../broadcast-experience/TeamLogo';
 import { Discovery } from './Discovery';
@@ -77,4 +77,14 @@ describe('discovery of existing calendar games', () => {
     const html = renderToStaticMarkup(<Logo team={{ id: 'UNKNOWN', logo: '' }}/>);
     expect(html).not.toContain('<img'); expect(html).toContain('logo-fallback'); expect(html).toContain('UNKNOWN');
   });
+});
+
+it('names BAL by the search action for NO × BAL and makes no confirmed claim with an unavailable archive',()=>{
+  const g=games.find(g=>g.gameId==='2026_02_NO_BAL')!;const d=doc(g);d.subject.team='BAL';
+  expect(availabilityDescription(g,archive(d))).toBe('Leitura deste jogo · BAL');
+  const props={games:[g],archive:archive(d),archiveError:'',q:new URLSearchParams('q=BAL&scope=season&week=3'),season:'2026',week:3,onChange:()=>{}};
+  const html=renderToStaticMarkup(<MemoryRouter><Discovery {...props}/></MemoryRouter>);
+  expect(html).toContain('Leitura deste jogo · BAL');expect(html).toContain('game=2026_02_NO_BAL');
+  const unavailable=renderToStaticMarkup(<MemoryRouter><Discovery {...props} archive={null} archiveError="Falha"/></MemoryRouter>);
+  expect(unavailable).toContain('Arquivo de leituras indisponível');expect(unavailable).not.toContain('Leitura deste jogo');
 });

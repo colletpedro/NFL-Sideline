@@ -20,6 +20,16 @@ export function gameAvailability(game: Game, archive: Archive | null): Relation 
   const relations = archive?.documents.map(({ d }) => relation(game, d)) ?? [];
   return priority.find(kind => relations.includes(kind)) ?? null;
 }
+// Literal abbreviation order is stable and carries no sporting meaning.
+export function availabilityTeams(game: Game, archive: Archive | null): string[] {
+  const kind = gameAvailability(game, archive);
+  return kind ? [...new Set(archive?.documents.filter(({ d }) => relation(game, d) === kind).map(({ d }) => d.subject.team))].sort() : [];
+}
+export function availabilityDescription(game: Game, archive: Archive | null) {
+  const label = availabilityLabel(gameAvailability(game, archive));
+  const teams = availabilityTeams(game, archive);
+  return teams.length === 1 ? `${label} · ${teams[0]}` : label;
+}
 export function selectGames(games: Game[], archive: Archive | null) {
   // Calendar order breaks ties. Availability is not sporting merit.
   const ranked = games.map((game, index) => ({ game, index, kind: gameAvailability(game, archive) }))

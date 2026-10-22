@@ -6,7 +6,7 @@ import { teamIdentity } from '../broadcast-real/identity';
 import type { Archive } from './sources';
 import { calendarChange, journeyHref } from './state';
 import { dateLabel, gameState, title } from './relations';
-import { availabilityAction, availabilityLabel, gameAvailability, searchGames, selectGames } from './discoveryModel';
+import { availabilityAction, availabilityDescription, availabilityTeams, gameAvailability, searchGames, selectGames } from './discoveryModel';
 
 type Props = { games: Game[]; archive: Archive | null; archiveError: string; q: URLSearchParams; season: string; week: number | null; onChange: (q: URLSearchParams) => void };
 function Participant({ team, large = false }: { team: Team; large?: boolean }) {
@@ -29,8 +29,11 @@ export function Discovery({ games, archive, archiveError, q, season, week, onCha
   const page = Math.min(pages, Math.max(1, Number.isInteger(requestedPage) ? requestedPage : 1));
   const { selected, remaining } = selectGames(filtered, archive);
   const change = (values: Record<string, string | null>, replaceQuery = false) => onChange(new URLSearchParams(journeyHref(q, { ...calendarChange, ...values, ...(replaceQuery ? { q: draft.trim() || null, page: null } : {}) }).slice(2)));
-  const status = (g: Game) => archiveError ? 'Arquivo de leituras indisponível' : !archive ? 'Conferindo leituras' : availabilityLabel(gameAvailability(g, archive));
-  const action = (g: Game) => archive ? availabilityAction(gameAvailability(g, archive)) : 'Abrir confronto';
+  const status = (g: Game) => archiveError ? 'Arquivo de leituras indisponível' : !archive ? 'Conferindo leituras' : availabilityDescription(g, archive);
+  const action = (g: Game) => {
+    const teams = availabilityTeams(g, archive);
+    return archive ? `${availabilityAction(gameAvailability(g, archive))}${teams.length === 1 ? ` · ${teams[0]}` : ''}` : 'Abrir confronto';
+  };
   const href = (g: Game) => journeyHref(q, { game: g.gameId });
   function clear() { setDraft(''); change({ q: null, page: null }); searchInput.current?.focus(); }
   const row = (g: Game) => <li key={g.gameId} data-game={g.gameId}>
