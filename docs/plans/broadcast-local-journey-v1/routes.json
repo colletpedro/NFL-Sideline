@@ -1,0 +1,11 @@
+{
+  "origin": "http://127.0.0.1:18092",
+  "calendar": "/?season=2026&week=1&filter=all",
+  "balIndividual": "/?season=2026&week=1&filter=all&game=2026_01_BAL_IND&entry=real-recovery&observation=sha256%3Acbd7c41072386044ec653ed437bcb14894e019f5268904302877c9535eb3d3d1",
+  "noBalW2": "/?season=2026&week=2&filter=all&game=2026_02_NO_BAL&entry=real-recovery&observation=sha256%3Aa06eb4752149432d973a6ce562780585e643f86ef04413c73261182eeeddd5a6",
+  "noBalAggregate": "/?season=2026&week=2&filter=all&game=2026_02_NO_BAL&entry=real-recovery&observation=sha256%3A1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+  "balDalGap": "/?season=2026&week=3&filter=all&game=2026_03_BAL_DAL&entry=real-recovery&observation=sha256%3A31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+  "noReadings": "/?season=2026&week=1&filter=all&game=2026_01_GB_MIN",
+  "neArchive": "/?season=2026&week=3&filter=all&game=2026_03_NE_JAX&entry=real-recovery&observation=sha256%3Aad890fc8e4b41cba0c623bd3d20bfc363e2519146d9bd8589c4b799a0aa74302",
+  "incompatible": "/?season=2026&week=1&filter=all&game=2026_01_BAL_IND&entry=real-recovery&observation=sha256%3Acdab1203292c2f9a35ac1075de43e59765574a0c3677a84e01d10a954e56ee95"
+}

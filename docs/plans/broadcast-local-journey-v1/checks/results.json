@@ -1,0 +1,35 @@
+{
+  "frontendTests": 205,
+  "newRelationshipTests": 26,
+  "legacyExpectedFailuresPreserved": 5,
+  "lint": "PASS",
+  "builds": {
+    "journey": "PASS",
+    "real": "PASS",
+    "experience": "PASS",
+    "public": "PASS"
+  },
+  "isolation": "PASS",
+  "diffCheck": "PASS",
+  "browser": {
+    "version": "155.0.8059.85",
+    "documents": 48,
+    "layouts": 24,
+    "cases": 12,
+    "errors": [],
+    "initialWeekUTC": "7"
+  },
+  "ownServer": {
+    "origin": "http://127.0.0.1:18092",
+    "pid": 27714
+  },
+  "priorServersPreserved": {
+    "18086": 69029,
+    "18087": 770,
+    "18088": 4041,
+    "18089": 15045,
+    "18090": 21282
+  },
+  "referenceHead": "c193bb8116e347a76ac31f8fbe78cdbf57cda8a6",
+  "javaOrEtlFullSuiteRun": false
+}

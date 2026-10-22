@@ -1,0 +1,70 @@
+{
+  "base": "c193bb8116e347a76ac31f8fbe78cdbf57cda8a6",
+  "manifest": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-09-22T05:13:34.372884Z",
+    "defaultSeason": 2026,
+    "seasons": [
+      2026
+    ]
+  },
+  "games": 272,
+  "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "public2025Exists": false,
+  "scoresAtomicComplete": 32,
+  "balDalW3": {
+    "gameId": "2026_03_BAL_DAL",
+    "season": 2026,
+    "week": 3,
+    "gameType": "REG",
+    "gameday": "2026-09-27",
+    "homeTeamAbbr": "DAL",
+    "awayTeamAbbr": "BAL",
+    "homeScore": null,
+    "awayScore": null,
+    "result": null,
+    "spreadLine": -3.0,
+    "totalLine": 52.5,
+    "homeMoneyline": 130,
+    "awayMoneyline": -155,
+    "homeSpreadOdds": null,
+    "awaySpreadOdds": null,
+    "overOdds": null,
+    "underOdds": null,
+    "roof": null,
+    "surface": null,
+    "divisionGame": null,
+    "updatedAt": "2026-09-22T04:43:57.395081Z",
+    "market": {
+      "homeImpliedRaw": 0.43478260869565216,
+      "awayImpliedRaw": 0.6078431372549019,
+      "homeImpliedFair": 0.4170073589533933,
+      "awayImpliedFair": 0.5829926410466068,
+      "vigPct": 0.042625745950554135,
+      "computedAt": "2026-09-22T04:43:57.395081Z"
+    }
+  },
+  "hashes": {
+    "web-ui/public/data/manifest.json": "deca3888625d74dd2ac81e4b500a0c1f767251387dd38a60f016be04f81dc71d",
+    "web-ui/public/data/seasons/2026.json": "9c378a2951c3333015d02b083e9a450424becc0bf1083fdffd34694cf08d867d"
+  }
+}
