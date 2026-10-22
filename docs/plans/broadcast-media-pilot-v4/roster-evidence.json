@@ -1,0 +1,51 @@
+{
+  "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+  "obtainedAt": "2026-10-22T16:42:43.707255+00:00",
+  "sha256": "8b04283c108b3eb8ebd6788ce5143424b67a8f3e3594de1fa9d0359bee1735c9",
+  "rows": [
+    {
+      "season": "2026",
+      "team": "BAL",
+      "full_name": "Derrick Henry",
+      "gsis_id": "00-0032764",
+      "espn_id": "3043078",
+      "headshot_url": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/tm79x0iknqg6hms3ypyt",
+      "week": "7",
+      "game_type": "REG",
+      "status": "ACT"
+    },
+    {
+      "season": "2026",
+      "team": "DAL",
+      "full_name": "Dak Prescott",
+      "gsis_id": "00-0033077",
+      "espn_id": "2577417",
+      "headshot_url": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/yvscmqq1qki8zfsemmcd",
+      "week": "7",
+      "game_type": "REG",
+      "status": "ACT"
+    },
+    {
+      "season": "2026",
+      "team": "NE",
+      "full_name": "Hunter Henry",
+      "gsis_id": "00-0033090",
+      "espn_id": "3046439",
+      "headshot_url": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/hfbzcsv4v7fdpohl42mk",
+      "week": "7",
+      "game_type": "REG",
+      "status": "ACT"
+    },
+    {
+      "season": "2026",
+      "team": "IND",
+      "full_name": "DeForest Buckner",
+      "gsis_id": "00-0032378",
+      "espn_id": "2971282",
+      "headshot_url": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/sracvriikwkhdfa47cdn",
+      "week": "7",
+      "game_type": "REG",
+      "status": "ACT"
+    }
+  ]
+}

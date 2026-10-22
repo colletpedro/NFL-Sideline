@@ -1,0 +1,729 @@
+{
+  "flows": {
+    "noBal": {
+      "selected": "BAL · Selecionado\nBaltimore Ravens",
+      "url": "http://127.0.0.1:18095/?season=2026&week=3&scope=season&filter=participants&explore=open&q=BAL&game=2026_02_NO_BAL",
+      "automaticallyOpened": false
+    },
+    "explicitNoAfterReload": true,
+    "nominalIdOverridesChooser": true,
+    "returnToOtherWeek": "http://127.0.0.1:18095/?season=2026&week=3&scope=season&filter=participants&explore=open&q=BAL&team=NO",
+    "paginationReturn": true,
+    "incompatibleNominalBlocked": true,
+    "gap": {
+      "relation": "gap",
+      "values": 0
+    },
+    "includesNotPromoted": true,
+    "unavailableDoesNotConfirm": true,
+    "mediaUrlPreserved": true,
+    "galleryFallbackRecovery": true,
+    "realMediaErrorRecovery": true,
+    "portraitErrorRecovery": {
+      "reservedWidth": 287,
+      "reservedHeight": 206.796875,
+      "unchangedAfterFailure": true
+    },
+    "logoRecovery": true
+  },
+  "layouts": [
+    {
+      "view": "logos",
+      "width": 1440,
+      "text": 100,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "helmets",
+      "width": 1440,
+      "text": 100,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "search",
+      "width": 1440,
+      "text": 100,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "matchup",
+      "width": 1440,
+      "text": 100,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "reading",
+      "width": 1440,
+      "text": 100,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "gallery",
+      "width": 1440,
+      "text": 100,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "logos",
+      "width": 1440,
+      "text": 200,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "helmets",
+      "width": 1440,
+      "text": 200,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "search",
+      "width": 1440,
+      "text": 200,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "matchup",
+      "width": 1440,
+      "text": 200,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "reading",
+      "width": 1440,
+      "text": 200,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "gallery",
+      "width": 1440,
+      "text": 200,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyWidth": 1440
+    },
+    {
+      "view": "logos",
+      "width": 900,
+      "text": 100,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "helmets",
+      "width": 900,
+      "text": 100,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "search",
+      "width": 900,
+      "text": 100,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "matchup",
+      "width": 900,
+      "text": 100,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "reading",
+      "width": 900,
+      "text": 100,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "gallery",
+      "width": 900,
+      "text": 100,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "logos",
+      "width": 900,
+      "text": 200,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "helmets",
+      "width": 900,
+      "text": 200,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "search",
+      "width": 900,
+      "text": 200,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "matchup",
+      "width": 900,
+      "text": 200,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "reading",
+      "width": 900,
+      "text": 200,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "gallery",
+      "width": 900,
+      "text": 200,
+      "innerWidth": 900,
+      "scrollWidth": 900,
+      "bodyWidth": 900
+    },
+    {
+      "view": "logos",
+      "width": 390,
+      "text": 100,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "helmets",
+      "width": 390,
+      "text": 100,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "search",
+      "width": 390,
+      "text": 100,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "matchup",
+      "width": 390,
+      "text": 100,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "reading",
+      "width": 390,
+      "text": 100,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "gallery",
+      "width": 390,
+      "text": 100,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "logos",
+      "width": 390,
+      "text": 200,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "helmets",
+      "width": 390,
+      "text": 200,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "search",
+      "width": 390,
+      "text": 200,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "matchup",
+      "width": 390,
+      "text": 200,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "reading",
+      "width": 390,
+      "text": 200,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "gallery",
+      "width": 390,
+      "text": 200,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyWidth": 390
+    },
+    {
+      "view": "logos",
+      "width": 320,
+      "text": 100,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "helmets",
+      "width": 320,
+      "text": 100,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "search",
+      "width": 320,
+      "text": 100,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "matchup",
+      "width": 320,
+      "text": 100,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "reading",
+      "width": 320,
+      "text": 100,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "gallery",
+      "width": 320,
+      "text": 100,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "logos",
+      "width": 320,
+      "text": 200,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "helmets",
+      "width": 320,
+      "text": 200,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "search",
+      "width": 320,
+      "text": 200,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "matchup",
+      "width": 320,
+      "text": 200,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "reading",
+      "width": 320,
+      "text": 200,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    },
+    {
+      "view": "gallery",
+      "width": 320,
+      "text": 200,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "bodyWidth": 320
+    }
+  ],
+  "media": [
+    {
+      "alt": "Capacete DAL, Riddell Authentic Speed padrão do catálogo",
+      "src": "/media/candidates/DAL-helmet.png",
+      "width": 515,
+      "height": 515,
+      "complete": true
+    },
+    {
+      "alt": "Retrato de Dak Prescott, associado a DAL no roster 2026",
+      "src": "/media/candidates/DAL-portrait.png",
+      "width": 3400,
+      "height": 2450,
+      "complete": true
+    },
+    {
+      "alt": "Capacete NE, Riddell Authentic Speed padrão do catálogo",
+      "src": "/media/candidates/NE-helmet.png",
+      "width": 515,
+      "height": 515,
+      "complete": true
+    },
+    {
+      "alt": "Retrato de Hunter Henry, associado a NE no roster 2026",
+      "src": "/media/candidates/NE-portrait.png",
+      "width": 3400,
+      "height": 2450,
+      "complete": true
+    },
+    {
+      "alt": "Capacete BAL, Riddell Authentic Speed padrão do catálogo",
+      "src": "/media/candidates/BAL-helmet.png",
+      "width": 515,
+      "height": 515,
+      "complete": true
+    },
+    {
+      "alt": "Retrato de Derrick Henry, associado a BAL no roster 2026",
+      "src": "/media/candidates/BAL-portrait.png",
+      "width": 3400,
+      "height": 2450,
+      "complete": true
+    },
+    {
+      "alt": "Capacete IND, Riddell Authentic Speed padrão do catálogo",
+      "src": "/media/candidates/IND-helmet.png",
+      "width": 515,
+      "height": 515,
+      "complete": true
+    },
+    {
+      "alt": "Retrato de DeForest Buckner, associado a IND no roster 2026",
+      "src": "/media/candidates/IND-portrait.png",
+      "width": 3400,
+      "height": 2450,
+      "complete": true
+    }
+  ],
+  "network": [
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/bal.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/dal.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/ne.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/jax.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/ind.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/no.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/ten.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/atl.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/cle.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/cin.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/buf.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/lac.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/car.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/hou.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/tb.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/pit.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/gb.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/min.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/sea.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/sf.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/la.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/ari.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/chi.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/nyg.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/mia.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/lv.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/det.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/nyj.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/was.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/phi.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/den.png",
+    "http://127.0.0.1:18095/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/kc.png",
+    "http://127.0.0.1:18095/media/candidates/BAL-helmet.png",
+    "http://127.0.0.1:18095/media/candidates/IND-helmet.png",
+    "http://127.0.0.1:18095/media/candidates/DAL-helmet.png",
+    "http://127.0.0.1:18095/media/candidates/NE-helmet.png",
+    "http://127.0.0.1:18095/media/candidates/DAL-portrait.png",
+    "http://127.0.0.1:18095/media/candidates/NE-portrait.png",
+    "http://127.0.0.1:18095/media/candidates/BAL-portrait.png",
+    "http://127.0.0.1:18095/media/candidates/IND-portrait.png",
+    "http://127.0.0.1:18095/missing-logo-proof.png"
+  ],
+  "keyboard": {
+    "traversed": [
+      {
+        "tag": "A",
+        "text": "Galeria de mídia",
+        "id": "",
+        "outline": "3px"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "id": "game-search",
+        "outline": "3px"
+      }
+    ],
+    "enterSearch": true,
+    "routeHeadingFocused": true
+  },
+  "logos": [
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/ari.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/atl.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/bal.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/buf.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/car.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/chi.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/cin.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/cle.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/dal.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/den.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/det.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/gb.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/hou.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/ind.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/jax.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/kc.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/la.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/lac.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/lv.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/mia.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/min.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/ne.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/no.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/nyg.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/nyj.png",
+      "width": 4096,
+      "height": 4096,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/phi.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-experience/assets/pit.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/sea.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/sf.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/tb.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/ten.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    },
+    {
+      "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-media-pilot-v4/NFL%20Sideline/web-ui/broadcast-real/assets/was.png",
+      "width": 500,
+      "height": 500,
+      "complete": true
+    }
+  ],
+  "reducedMotion": true
+}
