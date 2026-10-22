@@ -1,14 +1,12 @@
-import { useState, type CSSProperties } from 'react';
+import { type CSSProperties } from 'react';
 import { ArrowUpRight, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { scoreboard, summarize, teams, type Game, type Team } from './fixtures';
 import { matchupHref } from './state';
 
 const theme = (team: Team): CSSProperties => ({ '--team': team.color, '--team-dark': team.dark, '--optical': team.optical } as CSSProperties);
-export function Logo({ team, className = '' }: { team: Team; className?: string }) {
-  const [failed, setFailed] = useState(false);
-  return failed ? <span className={`logo-fallback ${className}`}>{team.id}</span> : <img className={`team-logo ${className}`} src={team.logo} alt="" width="500" height="500" onError={() => setFailed(true)}/>;
-}
+import { Logo } from './TeamLogo';
+export { Logo } from './TeamLogo';
 export function MatchupBand({ game, home = false }: { game: Game; home?: boolean }) {
   const scores = scoreboard(game);
   return <div className={`matchup-band ${home ? 'opening-band' : ''} ${game.status === 'pregame' ? 'pregame-band' : ''}`}>

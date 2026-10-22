@@ -58,3 +58,5 @@ editorial/local-interface-v1/runtime/
 /editorial/local-artifacts/real-recovery/
 /editorial/local-artifacts/backups/
 /editorial/local-artifacts/operations/
+
+web-ui/real-dist/

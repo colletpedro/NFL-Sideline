@@ -11,7 +11,9 @@
     "preview": "vite preview",
     "editorial:dev": "node scripts/editorial-dev.mjs",
     "experience:dev": "vite --config vite.experience.config.ts",
-    "experience:build": "tsc -p tsconfig.experience.json && vite build --config vite.experience.config.ts"
+    "experience:build": "tsc -p tsconfig.experience.json && vite build --config vite.experience.config.ts",
+    "real:dev": "node scripts/real-dev.mjs",
+    "real:build": "tsc -p tsconfig.real.json && vite build --config vite.real.config.ts"
   },
   "dependencies": {
     "axios": "^1.20.0",

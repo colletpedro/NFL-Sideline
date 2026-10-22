@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": { "tsBuildInfoFile": "./node_modules/.tmp/real.tsbuildinfo" },
+  "include": ["broadcast-real", "src/vite-env.d.ts"]
+}

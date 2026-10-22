@@ -5,11 +5,15 @@ import { check, HASH, validateCatalog, validateDTO } from '../local-editorial/ob
 import type { Catalog, DTO, Entry } from '../local-editorial/observations/model';
 
 export const PREFIX = '/__observations/';
-const origin = `http://127.0.0.1:${UI_PORT}`;
+export function observationPort(port: number = UI_PORT) {
+  if (!Number.isSafeInteger(port) || port < 1024 || port > 65535) throw new Error('Invalid loopback observation port');
+  return port;
+}
 const EMPTY_ID = `sha256:${'0'.repeat(64)}`;
-export function allowedObservationRequest(method: string, url: string, headers: Record<string, string | string[] | undefined>) {
-  return method === 'GET' && headers.host === `127.0.0.1:${UI_PORT}` &&
-    (headers.origin === undefined || headers.origin === origin) && headers['x-local-observations'] === '1' &&
+export function allowedObservationRequest(method: string, url: string, headers: Record<string, string | string[] | undefined>, port = UI_PORT) {
+  observationPort(port);
+  return method === 'GET' && headers.host === `127.0.0.1:${port}` &&
+    (headers.origin === undefined || headers.origin === `http://127.0.0.1:${port}`) && headers['x-local-observations'] === '1' &&
     headers['transfer-encoding'] === undefined && (headers['content-length'] === undefined || headers['content-length'] === '0') &&
     (url === PREFIX || /^\/__observations\/[a-z0-9_-]{1,48}\/[0-9a-f]{64}$/.test(url));
 }
@@ -47,7 +51,8 @@ async function prepare(): Promise<Frozen> {
     return freezeSnapshot(value);
   } catch { return unavailable('OBSERVATION_STARTUP_FAILED'); }
 }
-export function observationBoundary(): Plugin {
+export function observationBoundary(port = UI_PORT): Plugin {
+  observationPort(port);
   return {
     name: 'local-validated-observations',
     async configureServer(server) {
@@ -57,7 +62,7 @@ export function observationBoundary(): Plugin {
         if (!incoming.url?.startsWith(PREFIX.slice(0, -1))) { next(); return; }
         res.setHeader('Content-Type', 'application/json'); res.setHeader('Cache-Control', 'no-store'); res.setHeader('X-Content-Type-Options', 'nosniff');
         const fail = (status: number, error: string) => { res.statusCode = status; res.end(JSON.stringify({ error })); };
-        if (!allowedObservationRequest(incoming.method ?? '', incoming.url, incoming.headers)) { fail(403, 'OBSERVATION_REQUEST_REJECTED'); return; }
+        if (!allowedObservationRequest(incoming.method ?? '', incoming.url, incoming.headers, port)) { fail(403, 'OBSERVATION_REQUEST_REJECTED'); return; }
         if (incoming.url === PREFIX) { res.end(frozen.catalog); return; }
         if (incoming.headers['x-observation-session'] !== frozen.sessionId) { fail(409, 'OBSERVATION_SESSION_CHANGED'); return; }
         const key = incoming.url.slice(PREFIX.length);
