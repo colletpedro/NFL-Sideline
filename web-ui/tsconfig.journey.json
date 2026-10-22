@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/journey.tsbuildinfo"
+  },
+  "include": [
+    "broadcast-journey",
+    "src/vite-env.d.ts"
+  ]
+}

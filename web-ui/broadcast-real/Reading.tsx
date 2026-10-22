@@ -6,9 +6,11 @@ import { Logo } from '../broadcast-experience/TeamLogo';
 import { presentObservation } from './adapter';
 import { teamIdentity } from './identity';
 
-export function Reading({ d, entry }: { d: DTO; entry: Entry }) {
+type ReadingProps = { d: DTO; entry: Entry; memberLabels?: Record<string, string>; detailsOpen?: boolean; compositionOpen?: boolean; onDetailsChange?: (open: boolean) => void; onCompositionChange?: (open: boolean) => void };
+export function Reading({ d, entry, memberLabels, detailsOpen, compositionOpen, onDetailsChange, onCompositionChange }: ReadingProps) {
   const p = presentObservation(d), team = teamIdentity(d.subject.team), t = d.totals;
-  const [chartDetail, setChartDetail] = useState(false);
+  const [localChartDetail, setChartDetail] = useState(false);
+  const chartDetail = compositionOpen ?? localChartDetail;
   const count = d.observed.includedGameIds.length;
   return <article className="real-reading" aria-label="Observação real selecionada" style={{ '--team': team.color, '--team-dark': team.dark, '--optical': team.optical } as CSSProperties}>
     <header className="real-identity">
@@ -32,14 +34,14 @@ export function Reading({ d, entry }: { d: DTO; entry: Entry }) {
         {p.tiny && <p>Proporção positiva menor que 0,01%; pequena demais para a barra.</p>}
         <div className="real-scale" aria-hidden="true"><span>0%</span><span>50%</span><span>100%</span></div>
       </div><div className="real-chart-key"><p><i aria-hidden="true"/><b>{countText(t.successN)} / {countText(t.epaN)}</b> com EPA positivo</p><p><i aria-hidden="true"/><b>{countText(p.complement!.numerator)} / {countText(t.epaN)}</b> com EPA zero ou negativo <span>({p.complementPercent})</span></p></div>
-      <button className="real-chart-button" onClick={() => setChartDetail(v => !v)} aria-expanded={chartDetail} aria-controls="chart-counts">{chartDetail ? 'Fechar composição' : 'Explorar composição'}</button>
+      <button className="real-chart-button" onClick={() => { setChartDetail(!chartDetail); onCompositionChange?.(!chartDetail); }} aria-expanded={chartDetail} aria-controls="chart-counts">{chartDetail ? 'Fechar composição' : 'Explorar composição'}</button>
       {chartDetail && <div id="chart-counts" className="real-chart-detail"><p>EPA positivo: {exact(d.values.successRate)}. EPA zero ou negativo: {exact(p.complement!)}. A unidade é a jogada com EPA finito, neste mesmo recorte.</p><p>Fora do denominador: {countText(t.epaMissingN)} com EPA ausente e {countText(t.epaNonfiniteN)} com EPA não finito. Volume elegível: {countText(t.eligibleN)}.</p></div>}</> : <p className="real-empty">Denominador EPA zero. A proporção é indisponível; isso não significa 0% de sucesso.</p>}
       <p className="real-model">{p.modelNote}. A proporção de sucesso depende desse mesmo EPA.{p.defensive && ' Valores permitidos ao ataque adversário.'}</p>
       {(t.epaMissingN !== '0' || t.epaNonfiniteN !== '0') && <p className="real-model">Fora da base EPA: {countText(t.epaMissingN)} ausentes e {countText(t.epaNonfiniteN)} não finitos. Esses valores não entram na média nem na proporção.</p>}
     </section>}
     <aside className="real-limits" aria-label="Limitações essenciais"><h2>Até onde a amostra permite ler</h2><ul><li>{p.completenessNote}</li><li>{p.coverageNote}</li><li>Conhecimento anterior ao jogo não demonstrado</li>{!t && <li>{p.modelNote}</li>}</ul><p>{t === null ? 'Nenhuma amostra de jogadas observada neste período.' : d.scope.population === 'OBSERVED_SAMPLE' ? 'Amostra do arquivo, sem garantia de representar todo o período.' : 'População declarada neste recorte.'} O arquivo não demonstra o que se sabia antes dos jogos.</p>
       {d.members.some(m => m.sourceState === 'ABSENT') && t && <p>Há jogo sem fonte neste período. As lacunas não foram preenchidas.</p>}</aside>
-    <section className="real-members" aria-label="Jogos desta observação"><div className="stats-title"><h2>Volume por jogo</h2><p>{t ? 'Jogadas elegíveis da mesma observação.' : 'Contagens indisponíveis para o período solicitado.'}</p></div><ul>{d.members.map(m => <li key={m.gameId}><div><strong>{m.gameId}</strong><span>Semana {m.week}{m.round && ` / ${m.round}`}</span></div><b>{m.statistics ? countText(m.statistics.eligibleN) : 'Sem fonte'}</b><span>{m.sourceState === 'ABSENT' ? 'Contagem desconhecida' : 'Fonte presente'}</span></li>)}</ul><p>Contagens dos bytes observados; não indicam tendência ou ritmo.</p></section>
-    <section id="real-details" className="real-details" tabIndex={-1}><h2>Verificar a leitura</h2><ObservationInspection d={d} entry={entry}/></section>
+    <section className="real-members" aria-label="Jogos desta observação"><div className="stats-title"><h2>Volume por jogo</h2><p>{t ? 'Jogadas elegíveis da mesma observação.' : 'Contagens indisponíveis para o período solicitado.'}</p></div><ul>{d.members.map(m => <li key={m.gameId}><div><strong>{memberLabels?.[m.gameId] ?? m.gameId}</strong><span>Semana {m.week}{m.round && ` / ${m.round}`}</span></div><b>{m.statistics ? countText(m.statistics.eligibleN) : 'Sem fonte'}</b><span>{m.sourceState === 'ABSENT' ? 'Contagem desconhecida' : 'Fonte presente'}</span></li>)}</ul><p>Contagens dos bytes observados; não indicam tendência ou ritmo.</p></section>
+    <section id="real-details" className="real-details" tabIndex={-1}><h2>Verificar a leitura</h2><ObservationInspection d={d} entry={entry} precisionOpen={detailsOpen} onPrecisionChange={onDetailsChange}/></section>
   </article>;
 }

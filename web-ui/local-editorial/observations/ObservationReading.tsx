@@ -61,12 +61,12 @@ export function ObservationReading({ d, entry }: { d: DTO; entry: Pick<Entry, 'l
   </article>;
 }
 
-export function ObservationInspection({ d, entry }: { d: DTO; entry: Pick<Entry, 'label' | 'dataKind'> }) {
+export function ObservationInspection({ d, entry, precisionOpen, onPrecisionChange }: { d: DTO; entry: Pick<Entry, 'label' | 'dataKind'>; precisionOpen?: boolean; onPrecisionChange?: (open: boolean) => void }) {
   const t = d.totals; const def = d.subject.role === 'def';
   const metricLabels = { epa: def ? 'EPA permitido' : 'EPA ofensivo', successRate: def ? 'Sucesso permitido' : 'Taxa de sucesso', volume: 'Jogadas observadas', frequency: 'Frequência' };
   return (
     <div className="obs-inspection">
-      <details className="obs-details"><summary>Precisão e contagens <span>Valores originais e denominadores</span></summary>
+      <details className="obs-details" open={precisionOpen} onToggle={e => { if (onPrecisionChange && e.currentTarget.open !== precisionOpen) onPrecisionChange(e.currentTarget.open); }}><summary>Precisão e contagens <span>Valores originais e denominadores</span></summary>
         <dl className="obs-counts">{Object.entries(d.values).map(([key, value]) => <div key={key}><dt>{metricLabels[key as keyof typeof metricLabels]} · fração exata</dt><dd>{value ? exact(value) : 'Desconhecido / não definido'}</dd></div>)}</dl>
         {t && <dl className="obs-counts">{Object.entries(t).map(([key, value]) => <div key={key}><dt>{({ eligibleN: 'Jogadas elegíveis do fundamento', epaN: 'Denominador EPA', epaSum: 'Soma EPA exata', successN: 'Sucessos (EPA > 0)', epaMissingN: 'EPA ausente', epaNonfiniteN: 'EPA não finito', generalEligibleN: 'Jogadas gerais do mesmo contexto', unknownFilterFlagsN: 'Flags desconhecidas · contexto dos jogos' } as Record<string, string>)[key]}</dt><dd>{value ?? 'Não disponível'}</dd></div>)}</dl>}
         <p>Flags desconhecidas são contexto do jogo inteiro, não contagem medida por time ou fundamento. Não somar entre grupos ou períodos sobrepostos.</p>
