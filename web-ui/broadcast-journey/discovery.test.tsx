@@ -62,16 +62,16 @@ describe('discovery of existing calendar games', () => {
       for (const [key, value] of q) expect(returned.get(key)).toBe(value);
     }
   });
-  it('starts the full archive closed, exposes explicit actions, and paginates season searches', () => {
+  it('shows the entire selected week and all weeks without a collapsed archive, and paginates searches', () => {
     const html = renderToStaticMarkup(<MemoryRouter><Discovery games={games} archive={archive(doc(bal))} archiveError="" q={new URLSearchParams()} season="2026" week={1} onChange={() => {}}/></MemoryRouter>);
-    expect(html).toContain('<details class="discovery-archive">'); expect(html).toContain('role="search"'); expect(html).toContain('Escolher leitura');
+    expect(html).not.toContain('discovery-archive'); expect(html).toContain('role="search"'); expect(html).toContain('Leitura deste jogo'); expect(html.match(/data-game=/g)).toHaveLength(16); expect(html.match(/aria-label="Semana [0-9]+"/g)).toHaveLength(18);
     const search = renderToStaticMarkup(<MemoryRouter><Discovery games={games} archive={null} archiveError="" q={new URLSearchParams('q=New&scope=season')} season="2026" week={1} onChange={() => {}}/></MemoryRouter>);
-    expect(search.match(/<li /g)).toHaveLength(8); expect(search).toContain('Próxima página'); expect(search).not.toContain('discovery-stage');
+    expect(search.match(/data-game=/g)).toHaveLength(12); expect(search).toContain('Próxima página'); expect(search).not.toContain('discovery-stage');
   });
   it('does not label an unscored past game as scheduled', () => {
     const game = { ...bal, gameday: '2026-09-13', homeScore: null, awayScore: null, result: null };
     const html = renderToStaticMarkup(<MemoryRouter><Discovery games={[game]} archive={null} archiveError="" q={new URLSearchParams()} season="2026" week={1} onChange={() => {}}/></MemoryRouter>);
-    expect(html).toContain('BAL × IND'); expect(html).toContain('Resultado não disponível neste arquivo'); expect(html).not.toContain('Confronto agendado');
+    expect(html).toContain('BAL IND'); expect(html).toContain('Resultado não disponível neste arquivo'); expect(html).not.toContain('Confronto agendado');
   });
   it('uses a reserved fallback without an img request for an empty source', () => {
     const html = renderToStaticMarkup(<Logo team={{ id: 'UNKNOWN', logo: '' }}/>);

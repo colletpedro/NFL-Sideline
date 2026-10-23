@@ -8,12 +8,23 @@ function words(team: Team) {
   return normalizeSearch([team.teamAbbr, team.teamName, visual.city, visual.name, ...(visual.aliases ?? [])].join(' ')).split(' ');
 }
 export function searchGames(games: Game[], query: string) {
-  const tokens = normalizeSearch(query).split(' ').filter(t => t && !['x', 'vs', 'v', 'versus', 'contra', 'at'].includes(t));
+  const raw = normalizeSearch(query).split(' ').filter(Boolean);
+  const tokens = raw.length > 1 ? raw.filter(t => !['x', 'vs', 'v', 'versus', 'contra', 'at'].includes(t)) : raw.filter(t => !['x', 'vs', 'versus', 'contra', 'at'].includes(t));
   if (!tokens.length) return [];
+  const codes = new Set(games.flatMap(g => [g.awayTeam.teamAbbr.toLowerCase(),g.homeTeam.teamAbbr.toLowerCase()]));
   return games.filter(game => {
     const terms = [...words(game.awayTeam), ...words(game.homeTeam)];
-    return tokens.every(token => terms.some(term => token.length <= 3 ? term === token : term.startsWith(token)));
+    return tokens.every(token => terms.some(term => codes.has(token) ? term === token : term.startsWith(token)));
   });
+}
+export function suggestGames(games: Game[], query: string, week: number | null, limit = 4) {
+  if (!normalizeSearch(query)) return [];
+  return searchGames(games, query).map((game,index) => ({game,index}))
+    .sort((a,b) => Number(b.game.week === week) - Number(a.game.week === week) || a.index-b.index)
+    .slice(0,limit).map(({game}) => {
+      const matched = [game.awayTeam,game.homeTeam].filter(team => searchGames([{...game,awayTeam:team,homeTeam:team}],query).length > 0);
+      return {game,team:matched.length === 1 ? matched[0].teamAbbr : null};
+    });
 }
 const priority: Relation[] = ['individual', 'includes', 'gap', 'other', 'archive'];
 export function gameAvailability(game: Game, archive: Archive | null): Relation | null {

@@ -9,7 +9,8 @@ import { teamIdentity } from '../broadcast-real/identity';
 import { loadArchive, type Archive } from './sources';
 import { dateLabel, gameState, relation, relationText, title } from './relations';
 import { calendarChange, gameChange, journeyHref } from './state';
-import { ObservationChoice } from './ObservationChoice';
+import { LiveReading } from './LiveReading';
+import { nextReadingQuery } from './liveSelection';
 import { readChoice } from './choice';
 import { Discovery } from './Discovery';
 import { MediaGallery } from './media/MediaGallery';
@@ -67,14 +68,15 @@ export default function App() {
       setQ(next, { replace: true });
     }
   }, [games, publication, q, season, week, setQ]);
-  useEffect(() => { heading.current?.focus(); window.scrollTo(0, 0); }, [gameId, readingRoute, galleryRoute]);
+  useEffect(() => { heading.current?.focus(); window.scrollTo(0, 0); }, [gameId, galleryRoute]);
   const game = games?.find(g => g.gameId === gameId);
   const selected = archive?.documents.find(x => x.d.observationId === observationId && x.entry.entryId === entryId);
   const selectedRelation = game && selected ? relation(game, selected.d) : null;
   const calendarHref = journeyHref(q, { ...calendarChange, view: null }), matchupHref = journeyHref(q, gameChange);
-  const observationHref = (entry: string, observation: string) => journeyHref(q, { entry, observation, details: null, composition: null });
-  const choose = (change: Record<string, string>) => setQ(new URLSearchParams(journeyHref(q, change).slice(2)));
-  const choice = game && archive ? <ObservationChoice key={game.gameId} game={game} archive={archive} q={q} selected={selected?.d} teamPicker={readingRoute} onChoice={choose} href={observationHref}/> : null;
+  const choose = (change: Record<string, string>) => {
+    if (game && archive) setQ(nextReadingQuery(game, archive, q, change));
+    else if (game) setQ(new URLSearchParams(journeyHref(q, { ...change, entry: null, observation: null }).slice(2)));
+  };
   const retryArchive = () => setArchiveRetry(v => v + 1);
   return <>
     <a href="#journey-main" className="skip-link">Ir ao conteúdo</a>
@@ -82,30 +84,30 @@ export default function App() {
     <main id="journey-main" className="real-page journey-page">
       <nav className="journey-breadcrumb" aria-label="Caminho"><Link to={calendarHref}>Calendário · {season || 'arquivo'} · semana {week ?? '…'}</Link>{gameId && <><span>/</span><Link to={matchupHref}>{game ? `${game.awayTeam.teamAbbr} × ${game.homeTeam.teamAbbr}` : 'Confronto'}</Link></>}{readingRoute && <><span>/</span><span>Leitura do arquivo</span></>}</nav>
       <div className={`real-intro${readingRoute || gameId ? ' journey-reading-intro' : ''}`}><div><p>{readingRoute ? 'Uma observação por vez' : gameId ? 'Confronto identificado' : 'Jogos e leituras arquivadas'}</p><h1 ref={heading} tabIndex={-1}>{galleryRoute ? 'Acervo visual local.' : readingRoute ? 'O recorte, em seu contexto.' : game ? title(game) : gameId ? 'Confronto indisponível' : 'Encontre seu jogo.'}</h1></div></div>
-      <nav className="media-local-nav" aria-label="Avaliação local de mídia"><Link to={galleryRoute ? calendarHref : journeyHref(q, { view: 'media' })}>{galleryRoute ? 'Voltar ao calendário' : 'Galeria de mídia'}</Link>{!galleryRoute && !gameId && !readingRoute && season === '2026' && week === 1 && !q.get('q') && <fieldset><legend>Abertura do confronto</legend><Link aria-current={q.get('media') !== 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: null })}>Logos</Link><Link aria-current={q.get('media') === 'helmets' ? 'true' : undefined} to={journeyHref(q, { media: 'helmets' })}>Capacetes · estudo local</Link></fieldset>}</nav>
+      {galleryRoute && <nav className="media-local-nav"><Link to={calendarHref}>Voltar ao calendário</Link></nav>}
       {galleryRoute ? <MediaGallery q={q}/> : <>
       {calError && <section className="real-state" role="alert"><h2>Calendário indisponível.</h2><p>{calError} Nenhum jogo ou resultado foi substituído.</p><button onClick={() => { calendar.clearCache(); setCalRetry(v => v + 1); }}>Recarregar calendário</button></section>}
       {!games && !calError && <section className="real-state" role="status">Carregando calendário preservado…</section>}
       {(archiveError || !archive) && <section className="journey-source" role={archiveError ? 'alert' : 'status'}><h2>{archiveError ? 'Leituras indisponíveis nesta sessão.' : 'Conferindo a disponibilidade das leituras…'}</h2><p>{archiveError || 'Catálogo e documentos são conferidos na mesma sessão antes de anunciar relações.'}</p>{archiveError && <button onClick={retryArchive}>Recarregar arquivo de leituras</button>}</section>}
       {!gameId && !readingRoute && games && <Discovery games={games} archive={archive} archiveError={archiveError} q={q} season={season} week={week} onChange={setQ}/>}
       {gameId && games && !game && <section className="real-state" role="alert"><h2>Jogo não encontrado nesta temporada.</h2><p>A origem não pode ser validada; nenhuma associação foi concedida.</p><Link to={calendarHref}>Voltar ao calendário</Link></section>}
-      {game && !readingRoute && <>
-        <Band game={game} selectedTeam={readChoice(game, q, undefined, archive).team} onSelect={team => choose({ team })}/><section className="journey-match-context journey-match-compact"><p>{dateLabel(game.gameday)} · {game.season} {game.gameType} · Semana {game.week}</p><details><summary>Sobre o jogo e o arquivo</summary><p>{game.gameId}</p><p>{game.homeTeam.teamName} como mandante. Estádio e horário não disponíveis neste arquivo.</p>{game.roof && <p>Cobertura: {game.roof}</p>}{game.surface && <p>Superfície: {game.surface}</p>}</details></section>
-        {choice}
+      {game && <>
+        <Band game={game} selectedTeam={readChoice(game, q, selected?.d, archive).team} onSelect={team => choose({ team })}/><section className="journey-match-context journey-match-compact"><p>{dateLabel(game.gameday)} · {game.season} {game.gameType} · Semana {game.week}</p><details><summary>Sobre o jogo e o arquivo</summary><p>{game.gameId}</p><p>{game.homeTeam.teamName} como mandante. Estádio e horário não disponíveis neste arquivo.</p>{game.roof && <p>Cobertura: {game.roof}</p>}{game.surface && <p>Superfície: {game.surface}</p>}</details></section>
+        {archive && <LiveReading game={game} archive={archive} q={q} memberLabels={Object.fromEntries((games ?? []).map(g => [g.gameId, title(g)]))} onChoice={choose} onQuery={next => setQ(next, { replace: true })}/>}
         <Link className="journey-back" to={calendarHref}>Voltar ao calendário · semana {week}</Link>
       </>}
-      {readingRoute && archive && <>
+      {readingRoute && !game && archive && <>
         {!selected ? <section className="real-state" role="alert"><h2>Observação não encontrada.</h2><p>Confira o arquivo e o recorte na URL. Nenhuma preferência anterior foi usada.</p><Link to={matchupHref}>Voltar ao confronto</Link></section> : <>
           <section className="journey-reading-context journey-relation-compact" aria-label="Relação com o confronto">
-            <div><p>{game ? `${game.awayTeam.teamAbbr} × ${game.homeTeam.teamAbbr} · ${game.season} ${game.gameType} · Semana ${game.week}` : 'Origem do jogo não validada'}</p><strong role="status" aria-live="polite" data-relation={selectedRelation ?? 'unverified'}>{selectedRelation ? relationText(selectedRelation, selected.d) : 'Relação não conferida; calendário indisponível ou jogo não identificado'}</strong></div>
+            <div><p>{'Origem do jogo não validada'}</p><strong role="status" aria-live="polite" data-relation={selectedRelation ?? 'unverified'}>{selectedRelation ? relationText(selectedRelation, selected.d) : 'Relação não conferida; calendário indisponível ou jogo não identificado'}</strong></div>
             <Link className="journey-secondary-action" to={matchupHref}>Voltar ao confronto</Link>
           </section>
           {selectedRelation === 'incompatible' ? <section className="real-state" role="alert"><h2>Esta observação não corresponde ao participante ou ao contexto do confronto.</h2><p>Abra uma leitura pelas opções do confronto. Nenhum vínculo válido foi atribuído.</p><Link to={matchupHref}>Escolher leitura no confronto</Link></section> : <Reading guided key={`${archive.catalog.sessionId}|${entryId}|${observationId}`} d={selected.d} entry={selected.entry} memberLabels={Object.fromEntries((games ?? []).map(g => [g.gameId, title(g)]))} detailsOpen={q.get('details') === 'open'} compositionOpen={q.get('composition') === 'open'} onDetailsChange={open => setQ(new URLSearchParams(journeyHref(q, { details: open ? 'open' : null }).slice(2)), { replace: true })} onCompositionChange={open => setQ(new URLSearchParams(journeyHref(q, { composition: open ? 'open' : null }).slice(2)), { replace: true })}/>}
-          {choice && <details className="journey-switch"><summary>Escolher outra leitura</summary>{choice}</details>}
           <Link className="journey-back" to={calendarHref}>Voltar ao calendário · semana {week}</Link>
         </>}
       </>}
       </>}
+      {!galleryRoute && <details className="journey-publication"><summary>Acervo visual local</summary><Link className="journey-secondary-action" to={journeyHref(q,{view:'media'})}>Abrir galeria de mídia</Link></details>}
       <details className="journey-publication"><summary>Fontes e atualização do arquivo</summary><p>Calendário: {publication?.generatedAt ? `publicado em ${new Date(publication.generatedAt).toLocaleString('pt-BR', { timeZone: 'UTC' })} UTC` : calError ? 'indisponível' : 'carregando publicação…'}. Arquivo preservado, sem placar ao vivo.</p><p>Leituras: arquivo independente, com períodos e cobertura próprios. A publicação do calendário não data nem atualiza as métricas.</p></details>
     </main><footer className="real-footer"><span className="brand">NFL <strong>SIDELINE</strong></span><p>Futebol americano, sob outra perspectiva.</p><span>Experiência local · sem previsão ou comparação entre times</span></footer>
   </>;
