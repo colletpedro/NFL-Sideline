@@ -1,0 +1,578 @@
+{
+  "base": "d410cc5ad9749255b241797a0f8c91a273b6a560",
+  "flows": [
+    {
+      "name": "NYJ third W1 before/after",
+      "charts": [
+        "<figure class=\"sit-distance\"><figcaption><h3>Conversões por distância necessária</h3><p>Barras na mesma escala de tentativas: 0 a 5. Definição de faixas do projeto.</p></figcaption><div class=\"sit-chart-legend\"><span>■ Conversões</span><span>□ Tentativas</span></div><div class=\"sit-distance-row\"><strong>1–3 jardas</strong><div class=\"sit-attempts\" role=\"img\" aria-label=\"1–3 jardas: 1 conversões em 3 tentativas; 33,3%. Escala 0 a 5.\"><span style=\"width: 60%;\"><i style=\"width: 33.3333%;\"></i></span></div><span>1 / 3<small>33,3%</small></span></div><div class=\"sit-distance-row\"><strong>4–6 jardas</strong><div class=\"sit-attempts\" role=\"img\" aria-label=\"4–6 jardas: 0 conversões em 2 tentativas; 0,0%. Escala 0 a 5.\"><span style=\"width: 40%;\"><i style=\"width: 0%;\"></i></span></div><span>0 / 2<small>0,0%</small></span></div><div class=\"sit-distance-row\"><strong>7+ jardas</strong><div class=\"sit-attempts\" role=\"img\" aria-label=\"7+ jardas: 1 conversões em 5 tentativas; 20,0%. Escala 0 a 5.\"><span style=\"width: 100%;\"><i style=\"width: 20%;\"></i></span></div><span>1 / 5<small>20,0%</small></span></div><p class=\"sit-caption\">Cada razão mostra conversões / tentativas, sem média entre faixas.</p></figure>"
+      ],
+      "controls": [
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Resumo",
+          "width": 104.5234375
+        },
+        {
+          "height": 50,
+          "pressed": "true",
+          "text": "Terceiras descidas",
+          "width": 182.9375
+        },
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Red zone",
+          "width": 111.578125
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Ataque",
+          "width": 80.4140625
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Defesa",
+          "width": 79.4921875
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Deste jogo",
+          "width": 103.1953125
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Semanas 1–2",
+          "width": 120.578125
+        }
+      ],
+      "details": "Como esta leitura foi calculadaRegras da leituraUma tentativa é uma terceira descida de passe ou corrida mantida, com flags de conversão complementares. Passe inclui sacks; corrida inclui scrambles. Não representa a divisão entre passes lançados e dropbacks.Ajoelhadas, spikes, abortadas, deletadas, extra points, dois pontos e no_play ficam fora. First down por penalidade não é adicionado à conversão; uma jogada mantida segue a flag da fonte.Faixas do projeto: 1–3, 4–6 e 7 ou mais jardas, limites inclusivos. Distância desconhecida conserva seu próprio grupo.3 registros candidatos excluídos. ABORTED: 1; KNEEL: 1; NO_PLAY: 1Procedência e garantiasCompletude não demonstrada (UNKNOWN); cobertura esperada desconhecida (UNKNOWN). Conhecimento anterior ao jogo desconhecido (UNKNOWN). Modelo EPA não identificado (UNKNOWN); estas análises de terceiras descidas e red zone não usam EPA.Razão exata: 2/10. Estado: AVAILABLE; denominador POSITIVE. 0 unidades ambíguas. Definições 1.0.0; cálculo 1.0.0.Fonte PBP preservada: sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895eArtefato: sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339cLedger auditável: sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063dDicionário primário nflverse. Reconciliação independente dos registros brutos documentada nesta entrega local.",
+      "fact": "5 das 10 tentativas exigiam 7 ou mais jardas; 1 dessas 5 foi convertida.",
+      "family": "third",
+      "id": "NYJ/off/1",
+      "main": "O contexto da amostra1 jogo observado. 10 tentativas elegíveis. Contagem da amostra, sem avaliação isolada de quarterback.NYJ × TEN · Semana 1 · Ataque de NYJ contra TENCompletude e cobertura esperada não demonstradas. Leitura descritiva dos jogos observados, sem ranking ou previsão.",
+      "note": "Taxa pelas regras do projeto: tentativas elegíveis de passe e corrida, sem ajoelhadas, spikes ou jogadas anuladas ou abortadas. Exclusões e penalidades nos detalhes; não é uma estatística oficial da NFL.",
+      "rate": "20,0%",
+      "ratio": "2 / 10",
+      "valuesChartsControlsIdentical": true
+    },
+    {
+      "name": "NYJ redzone W1 before/after",
+      "charts": [
+        "<figure class=\"sit-drives\"><figcaption><h3>Uma marca, uma campanha</h3><p>2 touchdowns ofensivos em 3 oportunidades confirmadas.</p></figcaption><div class=\"sit-drive-marks\" role=\"img\" aria-label=\"2 de 3 campanhas terminaram em touchdown ofensivo. 1 tiveram outros desfechos.\"><span class=\"sit-td\" aria-hidden=\"true\">TD</span><span class=\"sit-td\" aria-hidden=\"true\">TD</span><span class=\"\" aria-hidden=\"true\">—</span></div><p class=\"sit-caption\">TD = touchdown ofensivo. — = outro desfecho. Marcas agrupadas por resultado; não indicam sequência.</p><dl class=\"sit-outcomes\"><div><dt>Field goal</dt><dd>1</dd></div><div><dt>Touchdown ofensivo</dt><dd>2</dd></div></dl></figure>"
+      ],
+      "controls": [
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Resumo",
+          "width": 104.5234375
+        },
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Terceiras descidas",
+          "width": 182.9375
+        },
+        {
+          "height": 50,
+          "pressed": "true",
+          "text": "Red zone",
+          "width": 111.578125
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Ataque",
+          "width": 80.4140625
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Defesa",
+          "width": 79.4921875
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Deste jogo",
+          "width": 103.1953125
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Semanas 1–2",
+          "width": 120.578125
+        }
+      ],
+      "details": "Como esta leitura foi calculadaRegras da leituraEntrada observada: posição antes de um evento de scrimmage entre a linha de 20 jardas, inclusive, e a end zone adversária (0 < yardline_100 ≤ 20). Inclui posição de penalidade, ajoelhada ou field goal; timeout isolado não cria entrada.Uma campanha identificada por jogo + fixed_drive conta uma vez, mesmo com várias jogadas ou reentrada. Somente touchdown ofensivo confirmado nessa posse converte. TD de fora da região não cria entrada por causa de extra point ou dois pontos.Fim de quarto 1/3 não encerra posse. Desfechos exigem evento e resultado de campanha coerentes; campanha incompleta ou contraditória bloqueia a taxa.8 campanhas fora do denominador. NO_ENTRY: 8Procedência e garantiasCompletude não demonstrada (UNKNOWN); cobertura esperada desconhecida (UNKNOWN). Conhecimento anterior ao jogo desconhecido (UNKNOWN). Modelo EPA não identificado (UNKNOWN); estas análises de terceiras descidas e red zone não usam EPA.Razão exata: 2/3. Estado: AVAILABLE; denominador POSITIVE. 0 unidades ambíguas. Definições 1.0.0; cálculo 1.0.0.Fonte PBP preservada: sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895eArtefato: sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339cLedger auditável: sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063dDicionário primário nflverse. Reconciliação independente dos registros brutos documentada nesta entrega local.",
+      "fact": "Além dos 2 touchdowns ofensivos, 1 campanha terminou em field goal.",
+      "family": "redzone",
+      "id": "NYJ/off/1",
+      "main": "O contexto da amostra1 jogo observado. 3 campanhas confirmadas. A unidade é a campanha, não o número de jogadas dentro da região.NYJ × TEN · Semana 1 · Ataque de NYJ contra TENCompletude e cobertura esperada não demonstradas. Leitura descritiva dos jogos observados, sem ranking ou previsão.",
+      "note": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra.",
+      "rate": "66,7%",
+      "ratio": "2 / 3",
+      "valuesChartsControlsIdentical": true
+    },
+    {
+      "name": "defense inclusive W1–2",
+      "charts": [
+        "<figure class=\"sit-drives\"><figcaption><h3>Uma marca, uma campanha</h3><p>3 touchdowns ofensivos em 5 oportunidades confirmadas.</p></figcaption><div class=\"sit-drive-marks\" role=\"img\" aria-label=\"3 de 5 campanhas terminaram em touchdown ofensivo. 2 tiveram outros desfechos.\"><span class=\"sit-td\" aria-hidden=\"true\">TD</span><span class=\"sit-td\" aria-hidden=\"true\">TD</span><span class=\"sit-td\" aria-hidden=\"true\">TD</span><span class=\"\" aria-hidden=\"true\">—</span><span class=\"\" aria-hidden=\"true\">—</span></div><p class=\"sit-caption\">TD = touchdown ofensivo. — = outro desfecho. Marcas agrupadas por resultado; não indicam sequência.</p><dl class=\"sit-outcomes\"><div><dt>Field goal</dt><dd>2</dd></div><div><dt>Touchdown ofensivo</dt><dd>3</dd></div></dl></figure>"
+      ],
+      "controls": [
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Resumo",
+          "width": 104.5234375
+        },
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Terceiras descidas",
+          "width": 182.9375
+        },
+        {
+          "height": 50,
+          "pressed": "true",
+          "text": "Red zone",
+          "width": 111.578125
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Ataque",
+          "width": 80.4140625
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Defesa",
+          "width": 79.4921875
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Deste jogo",
+          "width": 103.1953125
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Semanas 1–2",
+          "width": 120.578125
+        }
+      ],
+      "details": "Como esta leitura foi calculadaRegras da leituraEntrada observada: posição antes de um evento de scrimmage entre a linha de 20 jardas, inclusive, e a end zone adversária (0 < yardline_100 ≤ 20). Inclui posição de penalidade, ajoelhada ou field goal; timeout isolado não cria entrada.Uma campanha identificada por jogo + fixed_drive conta uma vez, mesmo com várias jogadas ou reentrada. Somente touchdown ofensivo confirmado nessa posse converte. TD de fora da região não cria entrada por causa de extra point ou dois pontos.Fim de quarto 1/3 não encerra posse. Desfechos exigem evento e resultado de campanha coerentes; campanha incompleta ou contraditória bloqueia a taxa.16 campanhas fora do denominador. NO_ENTRY: 16Procedência e garantiasCompletude não demonstrada (UNKNOWN); cobertura esperada desconhecida (UNKNOWN). Conhecimento anterior ao jogo desconhecido (UNKNOWN). Modelo EPA não identificado (UNKNOWN); estas análises de terceiras descidas e red zone não usam EPA.Razão exata: 3/5. Estado: AVAILABLE; denominador POSITIVE. 0 unidades ambíguas. Definições 1.0.0; cálculo 1.0.0.Fonte PBP preservada: sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895eArtefato: sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339cLedger auditável: sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063dDicionário primário nflverse. Reconciliação independente dos registros brutos documentada nesta entrega local.",
+      "fact": "Nas campanhas do ataque adversário, além dos 3 touchdowns ofensivos, 2 campanhas terminaram em field goal.",
+      "family": "redzone",
+      "id": "NYJ/def/1-2",
+      "main": "O contexto da amostra2 jogos observados. 5 campanhas confirmadas. A unidade é a campanha, não o número de jogadas dentro da região.NYJ × TEN · Semana 1 · Ataque de TEN contra NYJGB × NYJ · Semana 2 · Ataque de GB contra NYJCompletude e cobertura esperada não demonstradas. Leitura descritiva dos jogos observados, sem ranking ou previsão.",
+      "note": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra.",
+      "rate": "60,0%",
+      "ratio": "3 / 5"
+    },
+    {
+      "name": "reload same document and composition",
+      "id": "NYJ/def/1-2",
+      "fact": "Nas tentativas do ataque adversário, 11 das 21 tentativas exigiam 7 ou mais jardas; 1 dessas 11 foi convertida.",
+      "rate": "23,8%",
+      "url": "http://127.0.0.1:18099/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&analysis=third&reading=2026%2FREG%2F1%2C2"
+    },
+    {
+      "name": "back restores redzone",
+      "family": "redzone"
+    },
+    {
+      "name": "forward restores third",
+      "family": "third"
+    },
+    {
+      "name": "keyboard opens sports method and provenance in same details",
+      "headings": [
+        "Regras da leitura",
+        "Procedência e garantias"
+      ],
+      "mainEPA": false,
+      "open": true,
+      "unknownCount": 4
+    },
+    {
+      "name": "MIN W2 single opportunity",
+      "charts": [
+        "<figure class=\"sit-drives\"><figcaption><h3>Uma marca, uma campanha</h3><p>0 touchdowns ofensivos em 1 oportunidades confirmadas.</p></figcaption><div class=\"sit-drive-marks\" role=\"img\" aria-label=\"0 de 1 campanhas terminaram em touchdown ofensivo. 1 tiveram outros desfechos.\"><span class=\"\" aria-hidden=\"true\">—</span></div><p class=\"sit-caption\">TD = touchdown ofensivo. — = outro desfecho. Marcas agrupadas por resultado; não indicam sequência.</p><dl class=\"sit-outcomes\"><div><dt>Field goal</dt><dd>1</dd></div></dl></figure>"
+      ],
+      "controls": [
+        {
+          "height": 48,
+          "pressed": "false",
+          "text": "Resumo",
+          "width": 87.1953125
+        },
+        {
+          "height": 48,
+          "pressed": "false",
+          "text": "Terceiras descidas",
+          "width": 155.8046875
+        },
+        {
+          "height": 48,
+          "pressed": "true",
+          "text": "Red zone",
+          "width": 249
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Ataque",
+          "width": 72.4140625
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Defesa",
+          "width": 71.4921875
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Deste jogo",
+          "width": 95.1953125
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Semanas 1–2",
+          "width": 112.578125
+        }
+      ],
+      "details": "Como esta leitura foi calculadaRegras da leituraEntrada observada: posição antes de um evento de scrimmage entre a linha de 20 jardas, inclusive, e a end zone adversária (0 < yardline_100 ≤ 20). Inclui posição de penalidade, ajoelhada ou field goal; timeout isolado não cria entrada.Uma campanha identificada por jogo + fixed_drive conta uma vez, mesmo com várias jogadas ou reentrada. Somente touchdown ofensivo confirmado nessa posse converte. TD de fora da região não cria entrada por causa de extra point ou dois pontos.Fim de quarto 1/3 não encerra posse. Desfechos exigem evento e resultado de campanha coerentes; campanha incompleta ou contraditória bloqueia a taxa.8 campanhas fora do denominador. NO_ENTRY: 8Procedência e garantiasCompletude não demonstrada (UNKNOWN); cobertura esperada desconhecida (UNKNOWN). Conhecimento anterior ao jogo desconhecido (UNKNOWN). Modelo EPA não identificado (UNKNOWN); estas análises de terceiras descidas e red zone não usam EPA.Razão exata: 0/1. Estado: AVAILABLE; denominador POSITIVE. 0 unidades ambíguas. Definições 1.0.0; cálculo 1.0.0.Fonte PBP preservada: sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895eArtefato: sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339cLedger auditável: sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063dDicionário primário nflverse. Reconciliação independente dos registros brutos documentada nesta entrega local.",
+      "fact": "A única campanha terminou em field goal.",
+      "family": "redzone",
+      "id": "MIN/off/2",
+      "main": "O contexto da amostra1 jogo observado. 1 campanhas confirmadas. A unidade é a campanha, não o número de jogadas dentro da região.MIN × CHI · Semana 2 · Ataque de MIN contra CHICompletude e cobertura esperada não demonstradas. Leitura descritiva dos jogos observados, sem ranking ou previsão.",
+      "note": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra.",
+      "rate": "0,0%",
+      "ratio": "0 / 1"
+    },
+    {
+      "name": "ATL present no opportunities",
+      "charts": [],
+      "controls": [
+        {
+          "height": 48,
+          "pressed": "false",
+          "text": "Resumo",
+          "width": 80.7109375
+        },
+        {
+          "height": 48,
+          "pressed": "false",
+          "text": "Terceiras descidas",
+          "width": 149.3203125
+        },
+        {
+          "height": 48,
+          "pressed": "true",
+          "text": "Red zone",
+          "width": 86.875
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Ataque",
+          "width": 72.4140625
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Defesa",
+          "width": 71.4921875
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Deste jogo",
+          "width": 95.1953125
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Semanas 1–2",
+          "width": 112.578125
+        }
+      ],
+      "details": "Como esta leitura foi calculadaRegras da leituraEntrada observada: posição antes de um evento de scrimmage entre a linha de 20 jardas, inclusive, e a end zone adversária (0 < yardline_100 ≤ 20). Inclui posição de penalidade, ajoelhada ou field goal; timeout isolado não cria entrada.Uma campanha identificada por jogo + fixed_drive conta uma vez, mesmo com várias jogadas ou reentrada. Somente touchdown ofensivo confirmado nessa posse converte. TD de fora da região não cria entrada por causa de extra point ou dois pontos.Fim de quarto 1/3 não encerra posse. Desfechos exigem evento e resultado de campanha coerentes; campanha incompleta ou contraditória bloqueia a taxa.13 campanhas fora do denominador. NO_ENTRY: 13Procedência e garantiasCompletude não demonstrada (UNKNOWN); cobertura esperada desconhecida (UNKNOWN). Conhecimento anterior ao jogo desconhecido (UNKNOWN). Modelo EPA não identificado (UNKNOWN); estas análises de terceiras descidas e red zone não usam EPA.Razão exata: 0/0. Estado: NO_OPPORTUNITIES; denominador ZERO. 0 unidades ambíguas. Definições 1.0.0; cálculo 1.0.0.Fonte PBP preservada: sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895eArtefato: sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339cLedger auditável: sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063dDicionário primário nflverse. Reconciliação independente dos registros brutos documentada nesta entrega local.",
+      "fact": "A fonte está presente, mas não há oportunidades elegíveis. Denominador zero não é taxa de 0%.",
+      "family": "redzone",
+      "id": "ATL/off/1",
+      "main": "O contexto da amostra1 jogo observado. 0 campanhas confirmadas. A unidade é a campanha, não o número de jogadas dentro da região.ATL × PIT · Semana 1 · Ataque de ATL contra PITCompletude e cobertura esperada não demonstradas. Leitura descritiva dos jogos observados, sem ranking ou previsão.",
+      "note": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra.",
+      "rate": "Sem taxa",
+      "ratio": "0 / 0"
+    },
+    {
+      "name": "W3 source absent",
+      "numericPanels": 0,
+      "factCount": 0,
+      "message": "Sem fonte situacional deste jogo.\n\nO PBP preservado desta entrega contém somente 2026 REG W1–2. Este calendário não demonstra fonte para a semana 3. Ausência de fonte não é zero oportunidades."
+    }
+  ],
+  "layouts": [
+    {
+      "name": "defense-inclusive-redzone-390",
+      "fontSize": "16px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "14px",
+        "text": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra."
+      },
+      "overflow": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "name": "defense-inclusive-third-320",
+      "fontSize": "16px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "14px",
+        "text": "Taxa pelas regras do projeto: tentativas elegíveis de passe e corrida, sem ajoelhadas, spikes ou jogadas anuladas ou abortadas. Exclusões e penalidades nos detalhes; não é uma estatística oficial da NFL."
+      },
+      "overflow": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "third-320-text200",
+      "fontSize": "32px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "28px",
+        "text": "Taxa pelas regras do projeto: tentativas elegíveis de passe e corrida, sem ajoelhadas, spikes ou jogadas anuladas ou abortadas. Exclusões e penalidades nos detalhes; não é uma estatística oficial da NFL."
+      },
+      "overflow": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "method-320-text200",
+      "fontSize": "32px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "28px",
+        "text": "Taxa pelas regras do projeto: tentativas elegíveis de passe e corrida, sem ajoelhadas, spikes ou jogadas anuladas ou abortadas. Exclusões e penalidades nos detalhes; não é uma estatística oficial da NFL."
+      },
+      "overflow": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "redzone-320-text200",
+      "fontSize": "32px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "28px",
+        "text": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra."
+      },
+      "overflow": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "single-opportunity-390",
+      "fontSize": "16px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "14px",
+        "text": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra."
+      },
+      "overflow": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "name": "zero-opportunities-390",
+      "fontSize": "16px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "14px",
+        "text": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra."
+      },
+      "overflow": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "name": "source-absent-320",
+      "fontSize": "16px",
+      "height": 844,
+      "note": null,
+      "overflow": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "nyj-third-390",
+      "fontSize": "16px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "14px",
+        "text": "Taxa pelas regras do projeto: tentativas elegíveis de passe e corrida, sem ajoelhadas, spikes ou jogadas anuladas ou abortadas. Exclusões e penalidades nos detalhes; não é uma estatística oficial da NFL."
+      },
+      "overflow": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "name": "nyj-redzone-390",
+      "fontSize": "16px",
+      "height": 844,
+      "note": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(64, 88, 102)",
+        "font": "14px",
+        "text": "A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra."
+      },
+      "overflow": [],
+      "scrollWidth": 375,
+      "width": 390
+    }
+  ],
+  "before": {
+    "redzone": {
+      "charts": [
+        "<figure class=\"sit-drives\"><figcaption><h3>Uma marca, uma campanha</h3><p>2 touchdowns ofensivos em 3 oportunidades confirmadas.</p></figcaption><div class=\"sit-drive-marks\" role=\"img\" aria-label=\"2 de 3 campanhas terminaram em touchdown ofensivo. 1 tiveram outros desfechos.\"><span class=\"sit-td\" aria-hidden=\"true\">TD</span><span class=\"sit-td\" aria-hidden=\"true\">TD</span><span class=\"\" aria-hidden=\"true\">—</span></div><p class=\"sit-caption\">TD = touchdown ofensivo. — = outro desfecho. Marcas agrupadas por resultado; não indicam sequência.</p><dl class=\"sit-outcomes\"><div><dt>Field goal</dt><dd>1</dd></div><div><dt>Touchdown ofensivo</dt><dd>2</dd></div></dl></figure>"
+      ],
+      "controls": [
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Resumo",
+          "width": 104.5234375
+        },
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Terceiras descidas",
+          "width": 182.9375
+        },
+        {
+          "height": 50,
+          "pressed": "true",
+          "text": "Red zone",
+          "width": 111.578125
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Ataque",
+          "width": 80.4140625
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Defesa",
+          "width": 79.4921875
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Deste jogo",
+          "width": 103.1953125
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Semanas 1–2",
+          "width": 120.578125
+        }
+      ],
+      "details": "Como esta leitura foi calculadaEntrada observada: posição antes de um evento de scrimmage entre a linha de 20 jardas, inclusive, e a end zone adversária (0 < yardline_100 ≤ 20). Inclui posição de penalidade, ajoelhada ou field goal; timeout isolado não cria entrada.Uma campanha identificada por jogo + fixed_drive conta uma vez, mesmo com várias jogadas ou reentrada. Somente touchdown ofensivo confirmado nessa posse converte. TD de fora da região não cria entrada por causa de extra point ou dois pontos.Fim de quarto 1/3 não encerra posse. Desfechos exigem evento e resultado de campanha coerentes; campanha incompleta ou contraditória bloqueia a taxa.8 campanhas fora do denominador. NO_ENTRY: 8Razão exata: 2/3. Estado: AVAILABLE; denominador POSITIVE. 0 unidades ambíguas. Definições 1.0.0; cálculo 1.0.0.Fonte PBP preservada: sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895eArtefato: sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339cLedger auditável: sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063dDicionário primário nflverse. Reconciliação independente dos registros brutos documentada nesta entrega local.",
+      "fact": "NYJ registrou 2 touchdowns ofensivos em 3 campanhas que alcançaram a red zone neste recorte.",
+      "family": "redzone",
+      "id": "NYJ/off/1",
+      "main": "O contexto da amostra1 jogo observado. 3 campanhas confirmadas. A unidade é a campanha, não o número de jogadas dentro da região.NYJ × TEN · Semana 1 · Ataque de NYJ contra TENCompletude e cobertura esperada não demonstradas. Conhecimento anterior ao jogo desconhecido; modelo EPA não identificado. Este recorte não sustenta ranking ou previsão.",
+      "rate": "66,7%",
+      "ratio": "2 / 3"
+    },
+    "third": {
+      "charts": [
+        "<figure class=\"sit-distance\"><figcaption><h3>Conversões por distância necessária</h3><p>Barras na mesma escala de tentativas: 0 a 5. Definição de faixas do projeto.</p></figcaption><div class=\"sit-chart-legend\"><span>■ Conversões</span><span>□ Tentativas</span></div><div class=\"sit-distance-row\"><strong>1–3 jardas</strong><div class=\"sit-attempts\" role=\"img\" aria-label=\"1–3 jardas: 1 conversões em 3 tentativas; 33,3%. Escala 0 a 5.\"><span style=\"width: 60%;\"><i style=\"width: 33.3333%;\"></i></span></div><span>1 / 3<small>33,3%</small></span></div><div class=\"sit-distance-row\"><strong>4–6 jardas</strong><div class=\"sit-attempts\" role=\"img\" aria-label=\"4–6 jardas: 0 conversões em 2 tentativas; 0,0%. Escala 0 a 5.\"><span style=\"width: 40%;\"><i style=\"width: 0%;\"></i></span></div><span>0 / 2<small>0,0%</small></span></div><div class=\"sit-distance-row\"><strong>7+ jardas</strong><div class=\"sit-attempts\" role=\"img\" aria-label=\"7+ jardas: 1 conversões em 5 tentativas; 20,0%. Escala 0 a 5.\"><span style=\"width: 100%;\"><i style=\"width: 20%;\"></i></span></div><span>1 / 5<small>20,0%</small></span></div><p class=\"sit-caption\">Cada razão mostra conversões / tentativas, sem média entre faixas.</p></figure>"
+      ],
+      "controls": [
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Resumo",
+          "width": 104.5234375
+        },
+        {
+          "height": 50,
+          "pressed": "true",
+          "text": "Terceiras descidas",
+          "width": 182.9375
+        },
+        {
+          "height": 50,
+          "pressed": "false",
+          "text": "Red zone",
+          "width": 111.578125
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Ataque",
+          "width": 80.4140625
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Defesa",
+          "width": 79.4921875
+        },
+        {
+          "height": 46,
+          "pressed": "true",
+          "text": "Deste jogo",
+          "width": 103.1953125
+        },
+        {
+          "height": 46,
+          "pressed": "false",
+          "text": "Semanas 1–2",
+          "width": 120.578125
+        }
+      ],
+      "details": "Como esta leitura foi calculadaUma tentativa é uma terceira descida de passe ou corrida mantida, com flags de conversão complementares. Passe inclui sacks; corrida inclui scrambles. Não representa a divisão entre passes lançados e dropbacks.Ajoelhadas, spikes, abortadas, deletadas, extra points, dois pontos e no_play ficam fora. First down por penalidade não é adicionado à conversão; uma jogada mantida segue a flag da fonte.Faixas do projeto: 1–3, 4–6 e 7 ou mais jardas, limites inclusivos. Distância desconhecida conserva seu próprio grupo.3 registros candidatos excluídos. ABORTED: 1; KNEEL: 1; NO_PLAY: 1Razão exata: 2/10. Estado: AVAILABLE; denominador POSITIVE. 0 unidades ambíguas. Definições 1.0.0; cálculo 1.0.0.Fonte PBP preservada: sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895eArtefato: sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339cLedger auditável: sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063dDicionário primário nflverse. Reconciliação independente dos registros brutos documentada nesta entrega local.",
+      "fact": "NYJ registrou 2 conversões em 10 terceiras elegíveis neste recorte.",
+      "family": "third",
+      "id": "NYJ/off/1",
+      "main": "O contexto da amostra1 jogo observado. 10 tentativas elegíveis. Contagem da amostra, sem avaliação isolada de quarterback.NYJ × TEN · Semana 1 · Ataque de NYJ contra TENCompletude e cobertura esperada não demonstradas. Conhecimento anterior ao jogo desconhecido; modelo EPA não identificado. Este recorte não sustenta ranking ou previsão.",
+      "rate": "20,0%",
+      "ratio": "2 / 10"
+    }
+  },
+  "humanAcceptance": "PENDING"
+}

@@ -1,0 +1,15 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/situational
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-situational-copy-v2/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/situational/compositionCopy.test.tsx (13 tests) 29ms
+ ✓ broadcast-journey/situational/situational.test.tsx (8 tests) 35ms
+ ✓ broadcast-journey/situational/real-acceptance.test.tsx (1 test) 64ms
+
+ Test Files  3 passed (3)
+      Tests  22 passed (22)
+   Start at  17:57:25
+   Duration  402ms (transform 90ms, setup 0ms, collect 240ms, tests 127ms, environment 0ms, prepare 176ms)
