@@ -1,0 +1,44 @@
+{
+  "colored": [
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "filter": "brightness(0) invert(1)",
+      "padding": "0px",
+      "team": "LA"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "filter": "brightness(0) invert(1)",
+      "padding": "0px",
+      "team": "NYG"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "filter": "brightness(0) invert(1)",
+      "padding": "0px",
+      "team": "NYJ"
+    }
+  ],
+  "search": [
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "filter": "none",
+      "padding": "0px"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "filter": "none",
+      "padding": "0px"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "filter": "none",
+      "padding": "0px"
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "filter": "none",
+      "padding": "0px"
+    }
+  ]
+}

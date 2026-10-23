@@ -45,3 +45,7 @@ Worktree: `/Users/pedrocollet/.codex/worktrees/broadcast-live-hub-v1/NFL Sidelin
 Os dados ativos continuam 588 documentos (576 expansão W1–2 + 12 históricos/lacuna), com pin `sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a`. A config depende do bundle preservado na worktree da expansão. Não arquive essa fonte enquanto ela for referenciada. As semanas 3–18 exibem calendário e somente os vínculos de arquivo realmente existentes, sem inventar leituras individuais.
 
 Sem aquisição, novas métricas, coleta de imagens, banco, Gemini, Supabase, publicação, merge, push ou deploy. Aceite visual e de uso humano pendente. HEAD completo final é apresentado no chat, sem hash autorreferente neste arquivo.
+
+## Correção posterior · 2026-10-23
+
+As placas claras de LA/NYG/NYJ foram substituídas por marcas brancas transparentes sobre os painéis coloridos. A busca mantém a cor original sem placa. Esta correção modifica somente o tratamento visual do Logo compartilhado e o CSS local; [detalhes e capturas atuais](LOGO-CONTRAST.md). As capturas anteriores neste relatório preservam o estado anterior à correção.

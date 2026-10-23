@@ -16,7 +16,8 @@ def git(*args):return subprocess.check_output(['git',*args],cwd=ROOT)
 def main():
     changed=git('diff','--name-only',BASE).decode().splitlines()
     untracked=git('ls-files','--others','--exclude-standard').decode().splitlines()
-    assert all(p=='.gitignore' or p.startswith('docs/plans/broadcast-live-hub-v1/') or p.startswith('web-ui/broadcast-journey/') for p in changed+untracked),(changed,untracked)
+    # User-authorized logo contrast correction: only this shared visual component is added.
+    assert all(p in ('.gitignore','web-ui/broadcast-experience/TeamLogo.tsx') or p.startswith('docs/plans/broadcast-live-hub-v1/') or p.startswith('web-ui/broadcast-journey/') for p in changed+untracked),(changed,untracked)
     protected=['web-ui/src','web-ui/public','web-ui/broadcast-real','web-ui/local-editorial','web-ui/build','web-ui/scripts',
                'web-ui/vite.config.ts','web-ui/vite.real.config.ts','web-ui/vite.experience.config.ts',
                'web-ui/vite.editorial.config.ts','web-ui/vite.journey.config.ts','web-ui/package-lock.json',

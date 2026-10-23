@@ -50,3 +50,7 @@
 .live-reading .real-identity{min-height:0;grid-template-columns:64px minmax(0,1fr) minmax(180px,.65fr);padding:18px 32px;gap:18px}.live-reading .real-identity .team-logo{width:60px;height:60px}.live-reading .real-team>span{font-size:.8125rem}.live-reading .real-team>strong{font-size:1.6rem}.live-reading .real-team h1{font-size:1.125rem;margin-top:6px}.live-reading .real-period{grid-column:auto;border-top:0;border-left:1px solid #ffffff66;padding:0 0 0 18px}.live-reading .real-period p{font-size:.875rem}.live-reading .real-watermark{font-size:6rem}
 @media(max-width:760px){.live-reading .real-identity{grid-template-columns:48px minmax(0,1fr);padding:16px 20px;gap:12px}.live-reading .real-identity .team-logo{width:44px;height:48px}.live-reading .real-team>strong{font-size:1.35rem}.live-reading .real-team h1{font-size:1rem}.live-reading .real-period{grid-column:1/-1;border-left:0;border-top:1px solid #ffffff55;padding:10px 0 0}.live-reading .real-period p{margin-top:3px}.live-control-heading p{display:none}}
 @media(max-width:360px){.live-reading .real-identity{padding:16px;grid-template-columns:1fr}.live-reading .real-identity .team-logo{width:44px;height:44px}}
+
+/* Contrast variants: no plates in this entry; white marks on team-colored surfaces. */
+.journey-page { --logo-plate-background: transparent; --logo-plate-padding: 0px; }
+.journey-page :is(.hub-duel, .journey-band, .real-identity, .pilot-team, .media-team header, .journey-pick-team button[aria-pressed=true]) { --logo-contrast-filter: brightness(0) invert(1); }
