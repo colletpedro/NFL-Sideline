@@ -1,0 +1,27 @@
+{
+  "base": "3f4335691c9d4d126561ed03df4b775640cae7ed",
+  "authorizedExactEdits": [
+    ".gitignore",
+    "etl-pipeline/src/nfl_sideline_etl/situational.py",
+    "etl-pipeline/tests/test_situational.py",
+    "web-ui/broadcast-journey/App.tsx",
+    "web-ui/broadcast-journey/main.tsx",
+    "web-ui/build/situational-process.d.mts",
+    "web-ui/build/situational-process.mjs",
+    "web-ui/build/situational.ts",
+    "web-ui/vite.journey.config.ts"
+  ],
+  "allOtherHistoricalFilesUnchanged": true,
+  "publicJsCssHashes": {
+    ".css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+    ".js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5"
+  },
+  "fiveExpectedFailuresUnchanged": true,
+  "sourceAndBackupFiles": 162,
+  "sourceAndBackupUnchanged": true,
+  "accepted588BundleUnchanged": true,
+  "referenceCleanAtExactHead": true,
+  "durablePrimaryAndCopyIdentical": true,
+  "noPrivateArtifactTracked": true,
+  "historicalGatesUnchanged": true
+}

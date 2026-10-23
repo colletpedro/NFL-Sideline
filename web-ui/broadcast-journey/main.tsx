@@ -5,3 +5,4 @@ import App from './App';
 import './journey.css';
 import './live-hub.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><App/></BrowserRouter></React.StrictMode>);
+import './situational/situational.css';

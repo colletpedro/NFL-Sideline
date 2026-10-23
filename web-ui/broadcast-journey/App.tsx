@@ -9,6 +9,8 @@ import { teamIdentity } from '../broadcast-real/identity';
 import { loadArchive, type Archive } from './sources';
 import { dateLabel, gameState, relation, relationText, title } from './relations';
 import { calendarChange, gameChange, journeyHref } from './state';
+import { SituationalReading } from './situational/SituationalReading';
+import { liveSelection } from './liveSelection';
 import { LiveReading } from './LiveReading';
 import { nextReadingQuery } from './liveSelection';
 import { readChoice } from './choice';
@@ -73,8 +75,15 @@ export default function App() {
   const selected = archive?.documents.find(x => x.d.observationId === observationId && x.entry.entryId === entryId);
   const selectedRelation = game && selected ? relation(game, selected.d) : null;
   const calendarHref = journeyHref(q, { ...calendarChange, view: null }), matchupHref = journeyHref(q, gameChange);
+  const analysis = q.get('analysis') ?? 'summary';
   const choose = (change: Record<string, string>) => {
-    if (game && archive) setQ(nextReadingQuery(game, archive, q, change));
+    if (game && ((change.analysis ?? analysis) !== 'summary')) {
+      const next = new URLSearchParams(q);
+      if (!next.has('reading') && archive) next.set('reading', liveSelection(game, archive, q).period);
+      for (const [key,value] of Object.entries(change)) next.set(key,value);
+      next.delete('entry'); next.delete('observation'); setQ(next); return;
+    }
+    if (game && archive) { const next=nextReadingQuery(game, archive, q, change); if (change.analysis) next.set('analysis',change.analysis); setQ(next); }
     else if (game) setQ(new URLSearchParams(journeyHref(q, { ...change, entry: null, observation: null }).slice(2)));
   };
   const retryArchive = () => setArchiveRetry(v => v + 1);
@@ -93,7 +102,8 @@ export default function App() {
       {gameId && games && !game && <section className="real-state" role="alert"><h2>Jogo não encontrado nesta temporada.</h2><p>A origem não pode ser validada; nenhuma associação foi concedida.</p><Link to={calendarHref}>Voltar ao calendário</Link></section>}
       {game && <>
         <Band game={game} selectedTeam={readChoice(game, q, selected?.d, archive).team} onSelect={team => choose({ team })}/><section className="journey-match-context journey-match-compact"><p>{dateLabel(game.gameday)} · {game.season} {game.gameType} · Semana {game.week}</p><details><summary>Sobre o jogo e o arquivo</summary><p>{game.gameId}</p><p>{game.homeTeam.teamName} como mandante. Estádio e horário não disponíveis neste arquivo.</p>{game.roof && <p>Cobertura: {game.roof}</p>}{game.surface && <p>Superfície: {game.surface}</p>}</details></section>
-        {archive && <LiveReading game={game} archive={archive} q={q} memberLabels={Object.fromEntries((games ?? []).map(g => [g.gameId, title(g)]))} onChoice={choose} onQuery={next => setQ(next, { replace: true })}/>}
+        <nav className="sit-analysis-nav" aria-label="Tipo de análise">{[['summary','Resumo'],['third','Terceiras descidas'],['redzone','Red zone']].map(([key,label])=><button type="button" key={key} aria-pressed={analysis===key} onClick={()=>choose({analysis:key})}>{label}</button>)}</nav>
+        {!['summary','third','redzone'].includes(analysis) ? <section className="real-state" role="alert"><h2>Tipo de análise inválido na URL.</h2><p>Escolha uma análise acima para continuar.</p></section> : analysis !== 'summary' ? <SituationalReading game={game} q={q} defaultTeam={readChoice(game,q,selected?.d,archive).team} onChoice={choose}/> : archive && <LiveReading game={game} archive={archive} q={q} memberLabels={Object.fromEntries((games ?? []).map(g => [g.gameId, title(g)]))} onChoice={choose} onQuery={next => setQ(next, { replace: true })}/>}
         <Link className="journey-back" to={calendarHref}>Voltar ao calendário · semana {week}</Link>
       </>}
       {readingRoute && !game && archive && <>

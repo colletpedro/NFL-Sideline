@@ -1,0 +1,69 @@
+{
+  "bundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a",
+  "documentsExactlyMatched": 588,
+  "fullOperationalReader": true,
+  "origin": "http://127.0.0.1:18098",
+  "refusals": [
+    {
+      "error": "OBSERVATION_REQUEST_REJECTED",
+      "method": "GET",
+      "path": "/__observations/",
+      "status": 403
+    },
+    {
+      "error": "OBSERVATION_REQUEST_REJECTED",
+      "method": "GET",
+      "path": "/__observations/",
+      "status": 403
+    },
+    {
+      "error": "OBSERVATION_REQUEST_REJECTED",
+      "method": "GET",
+      "path": "/__observations/",
+      "status": 403
+    },
+    {
+      "error": "OBSERVATION_REQUEST_REJECTED",
+      "method": "POST",
+      "path": "/__observations/",
+      "status": 403
+    },
+    {
+      "error": "OBSERVATION_REQUEST_REJECTED",
+      "method": "GET",
+      "path": "/__observations/",
+      "status": 403
+    },
+    {
+      "error": "OBSERVATION_REQUEST_REJECTED",
+      "method": "GET",
+      "path": "/__observations/?path=/etc/passwd",
+      "status": 403
+    },
+    {
+      "error": "OBSERVATION_REQUEST_REJECTED",
+      "method": "GET",
+      "path": "/__observations/%2e%2e/config.json",
+      "status": 403
+    },
+    {
+      "error": "OBSERVATION_SESSION_CHANGED",
+      "method": "GET",
+      "path": "/__observations/w12-expansion-v1/00b3afb30b6aa2393fc794c873a824e13aa53e7613049ae8a5a4846f42618220",
+      "status": 409
+    },
+    {
+      "error": "OBSERVATION_SESSION_CHANGED",
+      "method": "GET",
+      "path": "/__observations/w12-expansion-v1/00b3afb30b6aa2393fc794c873a824e13aa53e7613049ae8a5a4846f42618220",
+      "status": 409
+    },
+    {
+      "error": "OBSERVATION_UNAVAILABLE",
+      "method": "GET",
+      "path": "/__observations/missing/0000000000000000000000000000000000000000000000000000000000000000",
+      "status": 404
+    }
+  ],
+  "sessionId": "sha256:3a44b54b2c711324d4d1726412d5385fce5b3838ba1930336a25b256a234ca12"
+}

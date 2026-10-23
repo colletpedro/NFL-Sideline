@@ -65,3 +65,6 @@ web-ui/journey-dist/
 
 # Complete private W1–2 observation bundles; reproducible selection in docs/plans.
 /editorial/local-artifacts/broadcast-w12-expansion-v1/
+
+# Complete private situational-v1 artifacts; active durable path is operator-configured.
+/editorial/local-artifacts/broadcast-situational-w12-v1/

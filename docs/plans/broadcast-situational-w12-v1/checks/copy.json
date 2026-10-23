@@ -1,0 +1,15 @@
+{
+  "bundleId": "sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339c",
+  "documents": 192,
+  "files": {
+    "provenance.json": "sha256:b9e92f57729ef4b5feff793b00053affaab5a8492bfb550ff141b2299bd7904c",
+    "situational.json": "sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339c",
+    "COMPLETED.json": "sha256:4b9cd98f0113e6ed50888bf5ae5a9ee0b6beb8347a52a2c22fcea9fb74858192",
+    "pbp.parquet": "sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+    "ledger.json": "sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063d"
+  },
+  "freshProcessSourceAccessDenied": true,
+  "primary": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-situational-w12-v1/20261023-v1/bundle-reconciled",
+  "copy": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-situational-w12-v1/20261023-v1/verified-copy",
+  "physicalNoSymlinks": true
+}
