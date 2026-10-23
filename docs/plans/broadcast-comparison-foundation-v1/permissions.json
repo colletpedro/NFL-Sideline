@@ -1,0 +1,811 @@
+{
+  "bundleId": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "operations": [
+    {
+      "subject": "NYJ com a bola",
+      "metric": "redZone",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/redZone"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "NYJ com a bola",
+      "metric": "third",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/third"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "NYJ com a bola",
+      "metric": "thirdLong",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/third/long"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "NYJ com a bola",
+      "metric": "general",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:f4e7f3e8fc05b55c3a05ea901f7045a0e650504710553ddfe6557a2c73a4081f"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "NYJ com a bola",
+      "metric": "classified_pass",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:1987eb0ee2af3d5790bc86a6803a4e686d157e568734110f5f3f8b1cbb8f0667"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "NYJ com a bola",
+      "metric": "classified_rush",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:54c05c212aada77430eb62c12d65722662fd80115cf45d7adf7efeed7e308635"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "TEN com a bola",
+      "metric": "redZone",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "TEN/off/1/redZone"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "TEN com a bola",
+      "metric": "third",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "TEN/off/1/third"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "TEN com a bola",
+      "metric": "thirdLong",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "TEN/off/1/third/long"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "TEN com a bola",
+      "metric": "general",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:22d6d9ebe83fb3f1708e49d1a5879f8e2ee7eafb69dd40f5edd2878a9ac62be3"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "TEN com a bola",
+      "metric": "classified_pass",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:17301ded2ba1d20e9b9652005a79fc29a13073d4b478d1e3512d593306f77bcd"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "TEN com a bola",
+      "metric": "classified_rush",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:74ddaf6a534183c435816878127377005f83beccb34b230bdfd131e765de6686"
+        ],
+        "operation": "display",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "classified_pass",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:1987eb0ee2af3d5790bc86a6803a4e686d157e568734110f5f3f8b1cbb8f0667",
+          "sha256:17301ded2ba1d20e9b9652005a79fc29a13073d4b478d1e3512d593306f77bcd"
+        ],
+        "operation": "sideBySide",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": null
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "classified_pass",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:1987eb0ee2af3d5790bc86a6803a4e686d157e568734110f5f3f8b1cbb8f0667",
+          "sha256:17301ded2ba1d20e9b9652005a79fc29a13073d4b478d1e3512d593306f77bcd"
+        ],
+        "operation": "difference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": {
+        "denominator": 21000000000000000000,
+        "numerator": "12946247838720642083"
+      }
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "classified_rush",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:54c05c212aada77430eb62c12d65722662fd80115cf45d7adf7efeed7e308635",
+          "sha256:74ddaf6a534183c435816878127377005f83beccb34b230bdfd131e765de6686"
+        ],
+        "operation": "sideBySide",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": null
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "classified_rush",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:54c05c212aada77430eb62c12d65722662fd80115cf45d7adf7efeed7e308635",
+          "sha256:74ddaf6a534183c435816878127377005f83beccb34b230bdfd131e765de6686"
+        ],
+        "operation": "difference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": {
+        "denominator": 63000000000000000000,
+        "numerator": "-6318329192776800649"
+      }
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "general",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:f4e7f3e8fc05b55c3a05ea901f7045a0e650504710553ddfe6557a2c73a4081f",
+          "sha256:22d6d9ebe83fb3f1708e49d1a5879f8e2ee7eafb69dd40f5edd2878a9ac62be3"
+        ],
+        "operation": "sideBySide",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": null
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "general",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "sha256:f4e7f3e8fc05b55c3a05ea901f7045a0e650504710553ddfe6557a2c73a4081f",
+          "sha256:22d6d9ebe83fb3f1708e49d1a5879f8e2ee7eafb69dd40f5edd2878a9ac62be3"
+        ],
+        "operation": "difference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": {
+        "denominator": 612500000000000000,
+        "numerator": "175771504422524699"
+      }
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "redZone",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/redZone",
+          "TEN/off/1/redZone"
+        ],
+        "operation": "sideBySide",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": null
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "redZone",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/redZone",
+          "TEN/off/1/redZone"
+        ],
+        "operation": "difference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": {
+        "denominator": 3,
+        "numerator": "-1"
+      }
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "third",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/third",
+          "TEN/off/1/third"
+        ],
+        "operation": "sideBySide",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": null
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "third",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/third",
+          "TEN/off/1/third"
+        ],
+        "operation": "difference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": {
+        "denominator": 15,
+        "numerator": "-2"
+      }
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "thirdLong",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/third/long",
+          "TEN/off/1/third/long"
+        ],
+        "operation": "sideBySide",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": null
+    },
+    {
+      "subject": "NYJ e TEN",
+      "metric": "thirdLong",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_NYJ_TEN"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "NYJ/off/1/third/long",
+          "TEN/off/1/third/long"
+        ],
+        "operation": "difference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      },
+      "differenceAminusB": {
+        "denominator": 1,
+        "numerator": "0"
+      }
+    },
+    {
+      "subject": "2026 REG W1",
+      "metric": "redZone",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_ARI_LAC",
+          "2026_01_BAL_IND",
+          "2026_01_BUF_HOU",
+          "2026_01_CHI_CAR",
+          "2026_01_CLE_JAX",
+          "2026_01_DAL_NYG",
+          "2026_01_DEN_KC",
+          "2026_01_GB_MIN",
+          "2026_01_MIA_LV",
+          "2026_01_NE_SEA",
+          "2026_01_NO_DET",
+          "2026_01_NYJ_TEN",
+          "2026_01_SF_LA",
+          "2026_01_TB_CIN",
+          "2026_01_WAS_PHI"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "ARI/off/1/redZone",
+          "BAL/off/1/redZone",
+          "BUF/off/1/redZone",
+          "CAR/off/1/redZone",
+          "CHI/off/1/redZone",
+          "CIN/off/1/redZone",
+          "CLE/off/1/redZone",
+          "DAL/off/1/redZone",
+          "DEN/off/1/redZone",
+          "DET/off/1/redZone",
+          "GB/off/1/redZone",
+          "HOU/off/1/redZone",
+          "IND/off/1/redZone",
+          "JAX/off/1/redZone",
+          "KC/off/1/redZone",
+          "LA/off/1/redZone",
+          "LAC/off/1/redZone",
+          "LV/off/1/redZone",
+          "MIA/off/1/redZone",
+          "MIN/off/1/redZone",
+          "NE/off/1/redZone",
+          "NO/off/1/redZone",
+          "NYG/off/1/redZone",
+          "NYJ/off/1/redZone",
+          "PHI/off/1/redZone",
+          "PIT/off/1/redZone",
+          "SEA/off/1/redZone",
+          "SF/off/1/redZone",
+          "TB/off/1/redZone",
+          "TEN/off/1/redZone",
+          "WAS/off/1/redZone"
+        ],
+        "operation": "leagueReference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    },
+    {
+      "subject": "2026 REG W1",
+      "metric": "third",
+      "permission": {
+        "allowed": true,
+        "commonGameIds": [
+          "2026_01_ARI_LAC",
+          "2026_01_ATL_PIT",
+          "2026_01_BAL_IND",
+          "2026_01_BUF_HOU",
+          "2026_01_CHI_CAR",
+          "2026_01_CLE_JAX",
+          "2026_01_DAL_NYG",
+          "2026_01_DEN_KC",
+          "2026_01_GB_MIN",
+          "2026_01_MIA_LV",
+          "2026_01_NE_SEA",
+          "2026_01_NO_DET",
+          "2026_01_NYJ_TEN",
+          "2026_01_SF_LA",
+          "2026_01_TB_CIN",
+          "2026_01_WAS_PHI"
+        ],
+        "commonUnitIds": [],
+        "independence": "NOT_ASSERTED",
+        "interpretation": "OBSERVED_SAMPLE_DESCRIPTIVE",
+        "limitations": [
+          "OBSERVED_SAMPLE_ONLY",
+          "COMPLETENESS_UNKNOWN",
+          "EXPECTED_COVERAGE_UNKNOWN",
+          "HISTORICAL_AVAILABILITY_UNKNOWN",
+          "NO_QUALITY_CAUSAL_OR_PREDICTIVE_INFERENCE"
+        ],
+        "observationIds": [
+          "ARI/off/1/third",
+          "ATL/off/1/third",
+          "BAL/off/1/third",
+          "BUF/off/1/third",
+          "CAR/off/1/third",
+          "CHI/off/1/third",
+          "CIN/off/1/third",
+          "CLE/off/1/third",
+          "DAL/off/1/third",
+          "DEN/off/1/third",
+          "DET/off/1/third",
+          "GB/off/1/third",
+          "HOU/off/1/third",
+          "IND/off/1/third",
+          "JAX/off/1/third",
+          "KC/off/1/third",
+          "LA/off/1/third",
+          "LAC/off/1/third",
+          "LV/off/1/third",
+          "MIA/off/1/third",
+          "MIN/off/1/third",
+          "NE/off/1/third",
+          "NO/off/1/third",
+          "NYG/off/1/third",
+          "NYJ/off/1/third",
+          "PHI/off/1/third",
+          "PIT/off/1/third",
+          "SEA/off/1/third",
+          "SF/off/1/third",
+          "TB/off/1/third",
+          "TEN/off/1/third",
+          "WAS/off/1/third"
+        ],
+        "operation": "leagueReference",
+        "policyVersion": "broadcast-comparison-policy-1.0.0",
+        "reasonCodes": []
+      }
+    }
+  ],
+  "unavailable": [
+    {
+      "operation": "epaLeagueReference",
+      "reason": "OUT_OF_SCOPE_AND_MODEL_UNKNOWN"
+    },
+    {
+      "operation": "qualitySuperiority",
+      "reason": "COUNTS_DO_NOT_ESTABLISH_ABILITY"
+    },
+    {
+      "operation": "prediction",
+      "reason": "NO_MODEL_OR_TEMPORAL_GUARANTEE"
+    },
+    {
+      "operation": "causalScoreExplanation",
+      "reason": "NO_CAUSAL_EVIDENCE"
+    },
+    {
+      "operation": "preKickoffOrClosingMarket",
+      "reason": "QUOTE_TEMPORAL_EVIDENCE_UNKNOWN"
+    }
+  ]
+}

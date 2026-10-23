@@ -1,0 +1,8 @@
+{
+  "pid": 95101,
+  "host": "127.0.0.1",
+  "port": 18101,
+  "strictPort": true,
+  "bundleId": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "runtimeLog": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comparison-foundation-v1/20261023-v1/server.log"
+}

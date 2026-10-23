@@ -1,0 +1,227 @@
+{
+  "bundleId": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "independent": true,
+  "projectorOrPolicyImported": false,
+  "previousIndependentLedgerAudit": "reconciliation-situational.json",
+  "rawW1Rows": 2756,
+  "rawW1Games": 16,
+  "marksChecked": 26,
+  "entryEvidenceChecked": 12,
+  "jointDistribution": {
+    "NYJ": [
+      {
+        "denominator": 0,
+        "distance": "short",
+        "kind": "pass",
+        "numerator": 0,
+        "unitIds": []
+      },
+      {
+        "denominator": 3,
+        "distance": "short",
+        "kind": "run",
+        "numerator": 1,
+        "unitIds": [
+          "2026_01_NYJ_TEN:1118",
+          "2026_01_NYJ_TEN:1398",
+          "2026_01_NYJ_TEN:3113"
+        ]
+      },
+      {
+        "denominator": 1,
+        "distance": "medium",
+        "kind": "pass",
+        "numerator": 0,
+        "unitIds": [
+          "2026_01_NYJ_TEN:1510"
+        ]
+      },
+      {
+        "denominator": 1,
+        "distance": "medium",
+        "kind": "run",
+        "numerator": 0,
+        "unitIds": [
+          "2026_01_NYJ_TEN:1292"
+        ]
+      },
+      {
+        "denominator": 4,
+        "distance": "long",
+        "kind": "pass",
+        "numerator": 1,
+        "unitIds": [
+          "2026_01_NYJ_TEN:251",
+          "2026_01_NYJ_TEN:1649",
+          "2026_01_NYJ_TEN:2735",
+          "2026_01_NYJ_TEN:3322"
+        ]
+      },
+      {
+        "denominator": 1,
+        "distance": "long",
+        "kind": "run",
+        "numerator": 0,
+        "unitIds": [
+          "2026_01_NYJ_TEN:3637"
+        ]
+      },
+      {
+        "denominator": 0,
+        "distance": "unknown",
+        "kind": "pass",
+        "numerator": 0,
+        "unitIds": []
+      },
+      {
+        "denominator": 0,
+        "distance": "unknown",
+        "kind": "run",
+        "numerator": 0,
+        "unitIds": []
+      }
+    ],
+    "TEN": [
+      {
+        "denominator": 2,
+        "distance": "short",
+        "kind": "pass",
+        "numerator": 0,
+        "unitIds": [
+          "2026_01_NYJ_TEN:1766",
+          "2026_01_NYJ_TEN:2516"
+        ]
+      },
+      {
+        "denominator": 2,
+        "distance": "short",
+        "kind": "run",
+        "numerator": 2,
+        "unitIds": [
+          "2026_01_NYJ_TEN:411",
+          "2026_01_NYJ_TEN:491"
+        ]
+      },
+      {
+        "denominator": 3,
+        "distance": "medium",
+        "kind": "pass",
+        "numerator": 1,
+        "unitIds": [
+          "2026_01_NYJ_TEN:2191",
+          "2026_01_NYJ_TEN:2904",
+          "2026_01_NYJ_TEN:3507"
+        ]
+      },
+      {
+        "denominator": 0,
+        "distance": "medium",
+        "kind": "run",
+        "numerator": 0,
+        "unitIds": []
+      },
+      {
+        "denominator": 5,
+        "distance": "long",
+        "kind": "pass",
+        "numerator": 1,
+        "unitIds": [
+          "2026_01_NYJ_TEN:694",
+          "2026_01_NYJ_TEN:1029",
+          "2026_01_NYJ_TEN:3008",
+          "2026_01_NYJ_TEN:3227",
+          "2026_01_NYJ_TEN:3910"
+        ]
+      },
+      {
+        "denominator": 0,
+        "distance": "long",
+        "kind": "run",
+        "numerator": 0,
+        "unitIds": []
+      },
+      {
+        "denominator": 0,
+        "distance": "unknown",
+        "kind": "pass",
+        "numerator": 0,
+        "unitIds": []
+      },
+      {
+        "denominator": 0,
+        "distance": "unknown",
+        "kind": "run",
+        "numerator": 0,
+        "unitIds": []
+      }
+    ]
+  },
+  "epaRawRationals": {
+    "NYJ/general": {
+      "eligible": 60,
+      "finite": 60,
+      "sumNumerator": "252525165547904787",
+      "sumDenominator": 25000000000000000
+    },
+    "NYJ/classified_pass": {
+      "eligible": 24,
+      "finite": 24,
+      "sumNumerator": "243871302611469049",
+      "sumDenominator": 25000000000000000
+    },
+    "NYJ/classified_rush": {
+      "eligible": 36,
+      "finite": 36,
+      "sumNumerator": "4326931468217869",
+      "sumDenominator": 12500000000000000
+    },
+    "TEN/general": {
+      "eligible": 49,
+      "finite": 49,
+      "sumNumerator": "-2906282472951876439",
+      "sumDenominator": 500000000000000000
+    },
+    "TEN/classified_pass": {
+      "eligible": 35,
+      "finite": 35,
+      "sumNumerator": "-183781343638301057",
+      "sumDenominator": 25000000000000000
+    },
+    "TEN/classified_rush": {
+      "eligible": 14,
+      "finite": 14,
+      "sumNumerator": "769344399814144701",
+      "sumDenominator": 500000000000000000
+    }
+  },
+  "league": {
+    "redZone": {
+      "points": 31,
+      "pooled": {
+        "numerator": 70,
+        "denominator": 108
+      },
+      "arithmeticMeanOfTeamRates": {
+        "numerator": "593",
+        "denominator": 930
+      },
+      "uniqueUnits": 108
+    },
+    "third": {
+      "points": 32,
+      "pooled": {
+        "numerator": 154,
+        "denominator": 377
+      },
+      "arithmeticMeanOfTeamRates": {
+        "numerator": "9195677",
+        "denominator": 23063040
+      },
+      "uniqueUnits": 377
+    }
+  },
+  "factsChecked": 3,
+  "offenseDefenseSameEvidence": true,
+  "unknownsPreserved": true,
+  "divergences": []
+}
