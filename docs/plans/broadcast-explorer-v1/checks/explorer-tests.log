@@ -1,0 +1,14 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/explorer/explorer.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-explorer-v1/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/explorer/explorer.test.tsx (11 tests) 277ms
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  19:26:19
+   Duration  660ms (transform 63ms, setup 0ms, collect 120ms, tests 277ms, environment 0ms, prepare 44ms)
+

@@ -1,0 +1,790 @@
+{
+  "source": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-situational-w12-v1/20261023-v1/bundle-reconciled",
+  "bundleId": "sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339c",
+  "contractVersion": "situational-v1",
+  "definitionsVersion": "1.0.0",
+  "calculationVersion": "1.0.0",
+  "guarantees": {
+    "completeness": "UNKNOWN",
+    "epaModel": "UNKNOWN",
+    "expectedCoverage": "UNKNOWN",
+    "temporalKnowledge": "UNKNOWN"
+  },
+  "provenance": {
+    "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/20261019T024130Z-50e03b27",
+    "backupHashes": {
+      "SHA256SUMS.json": "3ccd41b172dd23724cb6a622a05a41e22843779847073a230976d926bc627774",
+      "accepted-code-hashes.json": "5db346a23520a02860b09899662f269920a5bbc25a35ab608aee4a8da9ba291f",
+      "archive/ARCHIVE.json": "08e4b61e9d44d6b3ca9a23a70b912fea0ccfee960d44b8184fec20bb063ca0d1",
+      "archive/blobs/sha256/0a/0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "archive/blobs/sha256/0d/0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "archive/blobs/sha256/23/23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "archive/blobs/sha256/2a/2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "archive/blobs/sha256/31/317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "archive/blobs/sha256/45/450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "archive/blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "archive/blobs/sha256/4e/4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "archive/blobs/sha256/56/56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "archive/blobs/sha256/5c/5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "archive/blobs/sha256/5e/5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "archive/blobs/sha256/64/64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "archive/blobs/sha256/b8/b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "archive/blobs/sha256/db/db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "archive/blobs/sha256/fe/fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "archive/receipts/0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015.json": "2b95b254e95bbc6eb8ae23c852a037fe2eeaf1d90a2c23603e1e3b5cc9cf77b0",
+      "archive/receipts/0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672.json": "f78456de305a7bb1fd05e0c3186e3232e512796ae9bc753adc3ad3b4474916d1",
+      "archive/receipts/23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85.json": "ad17f003ea2dcdde957a3ebf589c52bf54cf64076c9dfea0b9d1b659c7a6364a",
+      "archive/receipts/2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394.json": "6934a52d01231f15ddd809a1d529167d07dfba03dcb6602e8964d6f6294e5e3f",
+      "archive/receipts/317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9.json": "29d8bb56df6bc2313a89748e0f79053103dd6cfe98c179fb7a0d8f515d65935f",
+      "archive/receipts/450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0.json": "ced9b0c39b7a47158dae248e922e6eac83986c2b4bd1b532cf7363d72e62d1d7",
+      "archive/receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "d4e507d4c8700021d27e953b9fef2c159edde611cc31da2079299569166c829d",
+      "archive/receipts/4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e.json": "10b40b42f25fa495431632fe28389137384e392dd55a7c0dbef36dfbac9011da",
+      "archive/receipts/56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91.json": "d561095c4ba7ee81c997a4cc6c8fe5affa17f0d8c528ec2f8e3207999166dc4e",
+      "archive/receipts/5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b.json": "e926c5257e005354104c7c752f3a1402b15048d18e6bf55e552cb3c9f6ca658f",
+      "archive/receipts/5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef.json": "003737233878b6de907ec0f56a11bd4e6aee3044f8d4e8ad6d0b81441f353fb9",
+      "archive/receipts/64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb.json": "28aef55ac03030b7b74f5327441444eea1275a679ccec520488ae6f088a66cb0",
+      "archive/receipts/b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703.json": "9b31c714c0715992f8d56931973ec33d52a170a18d7d93eba43bf2de9b6fbbb9",
+      "archive/receipts/db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48.json": "e12c136c5dd4f3d98656d15de3c24da2254569fd5e245e323ba930a5327d1776",
+      "archive/receipts/fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d.json": "d83170bb718b523e4f72d0decca51de933c2c50556048b826949e7fdb9149fd7",
+      "before-load.json": "224dc5917fd32bb40b96532c6eb122ed5ce23bb023dc43c1affa5c18ca010237",
+      "bundle/COMPLETED.json": "892ae4b8f1b4f5ddb7dfacc9a38e319fe63302ab9192c28455d255bf7d8c05ee",
+      "bundle/manifest.json": "48b0bf238c543c6369c739f529dc18e9e49be606bf6dc0eb09c55d03eeecf6e7",
+      "bundle/observations.json": "7084ee10e0cc51233ed7568a9436f7710872576648f0b248a73a6840fd538551",
+      "bundle/request.json": "2415bb2fc282ac7497dd195bbedd21e1c8bcd807f68ffc082fb3812396db133b",
+      "bundle/shared-source/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+      "bundle/shared-source/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+      "bundle/shared-source/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1",
+      "data/raw/pbp/season=2025/pbp.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "data/raw/pbp/season=2026/pbp.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "data/raw/schedules/season=2025/schedules.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "data/raw/schedules/season=2026/schedules.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "ingestion-runs.json": "2ab1eb1f75a40045989642d8f2b76fccbeb6e172988ed2bca2a5dc48bf717da2",
+      "inputs.json": "64487738faea6ab31d6a8abef50ab9141c96e085a8c9408b290c978e1e909faf",
+      "integrated.log": "9d76e4a3830ff2572e947903969e30d809a266746ecc65a25475b9d17e800f5b",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0000-FROZEN.json": "08a888c456b00cc860ed7747f773f3da926b3fdcde12d43c6aea51ead16eff35",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0001-RUNNING.json": "23db758b04a0d06e3e043b2315c89633747dd8413762f28f81371cec02fb2405",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0002-CALCULATING.json": "953e367e230942171eaca6f4df9e1366eac1741b2124c638d1e932a141beeba2",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0003-VALIDATED.json": "619f8ff35829c736a7a83089d376707f745fb8c701c6724c850cfe2f6323c665",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0004-PERSISTING.json": "e8a317595827234dc27d1f4f53e14ef885d6ed4f60c8b28fc0703c07d833e91a",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0005-ARCHIVED.json": "4df57488a5673d06ed2a585983bacf26a6312a4447422fc4663f50eedb4645d3",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0006-PRIVATE_COMMITTED.json": "3a14bbf9fe49afa9e859e5d3a377f9f2b384d9e7b151bfbb32b2100f5b5d2313",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0007-FINISHING_GLOBAL.json": "d9cbd2dc002dbc50e0a7c10c19029843d31fb33c9e66a4154432a99e0ae7b32c",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0008-SUCCEEDED.json": "7d15759d36136634fa0180c28ffc5350bf9f69160a3e0d4d7ca87fce299d0c06",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/COMPLETED.json": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/game-audit.json": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/manifest.json": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/reconciliation.json": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/statistics.json": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/legacy-data/raw/pbp/season=2025/pbp.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/legacy-data/raw/schedules/season=2025/schedules.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/sources/calendar-0.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/sources/pbp-0.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0000-FROZEN.json": "368c5a3c1079b33b35d046cb76c7aad88bb14f43342c4d6ed2fc06f5ea590ddc",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0001-RUNNING.json": "76ec9f535ec915cfddc9b27b74ae6de5b738e1a1fbd306cfd1b61ad733672115",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0002-CALCULATING.json": "4d927d547f0afb2a80420ceb218d6cead4b43a00a20440964a6f618baa52d0df",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0003-VALIDATED.json": "9b34ab4a897981b916936f3a81a8b29646d6b08a4bc0232a155f12cccf456811",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0004-PERSISTING.json": "1a106c7b44d11575bb1b647aaef0204f8f12f9ab0e6e24d4061a3081846a822f",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0005-ARCHIVED.json": "06435fa12ad435190a22250956adaddcbf388691234efb8b3853abec6bd1c6b0",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0006-PRIVATE_COMMITTED.json": "e626a15dfc9bc9992ccd7c8cac720cc7513fd9db93acdab5af82a014f1501eae",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0007-FINISHING_GLOBAL.json": "604f9ddde9bba98593b1cb6aab792db14ee95e3161d30f0706b636a3f590ce07",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0008-SUCCEEDED.json": "3c981504d2f2b57cc16311978a20344604bafa0ba177241bf250fa519003d60d",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/COMPLETED.json": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/game-audit.json": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/manifest.json": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/reconciliation.json": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/statistics.json": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/legacy-data/raw/pbp/season=2026/pbp.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/legacy-data/raw/schedules/season=2026/schedules.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/sources/calendar-0.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/sources/pbp-0.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "inventory.json": "caefa5ef20c1fffc0f733024aa50f333c41e6cd1269c61a7771266c27bde7ea9",
+      "lab-config.json": "2a84785f8f0390d7d246e5d1dcca92ffeb5314c5bdecf50dcf40a8adffcb8817",
+      "materialized/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+      "materialized/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+      "materialized/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1",
+      "plan.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0000-FROZEN.json": "1958c20764bf216210757c971374d8da9d7340a884d493c852815370407879eb",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0001-CALCULATING.json": "a290b0dd169c1b2d003f0268d1526eb07613ba3a13d3b74468860c95e5003bcf",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0002-VALIDATED.json": "90d44af1b64a0b6a75e92f723d38fc5e48d0d2bd714385b975e5edf536b5b744",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0003-PLANNED.json": "638f04ad3c2c0aba15f58c380029bc5e30bd0ccd72dca5e2cedf5ffb26cbc1cd",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/COMPLETED.json": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/game-audit.json": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/manifest.json": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/reconciliation.json": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/statistics.json": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/sources/calendar-0.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/sources/pbp-0.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0000-FROZEN.json": "6b0d081874c0c55cb8a6a3375b4130f699f96408d5f73c267c36f37602801b07",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0001-CALCULATING.json": "a957fdaf76b9c221bae6a09252f6f434290560222e25e647588150035508ee36",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0002-VALIDATED.json": "ab140c0842fa62c0aaa519398cfcc3389f8ab392d945d7b284cb718f6b0cc994",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0003-PLANNED.json": "66b6d9b5aa3aa16b293581e8ca83404796c776e52ffd5d4392736670387ee777",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/COMPLETED.json": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/game-audit.json": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/manifest.json": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/reconciliation.json": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/statistics.json": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/sources/calendar-0.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/sources/pbp-0.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "preflight.json": "f415a6610dbfe40d4062e5fcd98e141e462636a74e7fe8d4dd2cf11cdcc13485",
+      "private-snapshot.json": "1021488f0c91285fa2b8028f7fb4f30ffd864f3a97b471283ed4cfa4ddaf940d",
+      "recovery-report.json": "12eab9a15323021adc3a7a3b2e574614ccb29afea911a80d6cd161b02e4252f9",
+      "relations.json": "f9f40cd90a14a17fa0c17ed1679890fc01d5531e23d095df76ae97f872cdcd82",
+      "repeat.log": "ed847a41e8f2714009b8cbaaada563475a5fad08c23cbc46e6379bb32ced486f",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0000-FROZEN.json": "c641f3c3d7dfb35e0283a3b12588ff2becd04241e5703f77c004928071017cd8",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0001-RUNNING.json": "4708a695928b509c01b1aa26cfb26d100aed75c37cd6a5ac56a583f39863fbd5",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0002-CALCULATING.json": "a33220d0ba769be6f7ec4f10c4576235ddc8919dd68a7d78e60f9637823d912a",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0003-VALIDATED.json": "b7aa767ca6d1ee50debf76f13a5f50c8570feac10ed582cce71e116eb0f3a330",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0004-PERSISTING.json": "04cfe2c384ec7dbf1764ed4d22a1562f041190bcf295ada557b5444ba8d1306c",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0005-ARCHIVED.json": "43d519f06de7b3a29512388f95a4ac06607ce261770a0e663d61547a54f50a54",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0006-PRIVATE_COMMITTED.json": "4386f6109586ff9d8223a2413d5ac8859120f4c4ca84f78639320caf9cdd5eb2",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0007-FINISHING_GLOBAL.json": "cfa2dcfa10b7c8497841a504ef87123c645f0040347ad72be4eb3a8aa14e21d2",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0008-SUCCEEDED.json": "7aa33a882cb191b9f1b7e7f70c7b330ed5d06200aeddb0a54435ecbb2481e8e3",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/COMPLETED.json": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/game-audit.json": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/manifest.json": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/reconciliation.json": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/statistics.json": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/legacy-data/raw/pbp/season=2025/pbp.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/legacy-data/raw/schedules/season=2025/schedules.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/sources/calendar-0.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/sources/pbp-0.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0000-FROZEN.json": "a09c2f40931c8203d7dd738ecce1b4fde59b4a295b4bddf7c8cbbcaebe5a7035",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0001-RUNNING.json": "d0453336a6dd0f4c6a829bc08b0ceced711229f95f2d40aa6345914fdb94d73a",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0002-CALCULATING.json": "28bf20d3b59b9345baeba089b64b1e66eda83cdd9ba510ea72867ca057578e04",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0003-VALIDATED.json": "85333312e4caea83898987d8a4541f7dae86d0bdccc07bffe0ecf731abe0cad9",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0004-PERSISTING.json": "56f3b5551d4956afc4c9965f81c6eff751e33216e6be343b789dc99d0ed6a572",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0005-ARCHIVED.json": "65772662c65de171044264d3bb31cdb08ead80305e900a20505b726e60c254fe",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0006-PRIVATE_COMMITTED.json": "bebbef45d1238e4d61aa36adb3755bad652122697d7f1d18093c055c903db9e3",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0007-FINISHING_GLOBAL.json": "94cbdf0a54933cb6c6e071e6ebc38a4b7e20feafa191437abd13537bf91d7e74",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0008-SUCCEEDED.json": "b8dc10df7980b6b69173cb8995256b80cbfa32776a8979e4444cb7be45caa9db",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/COMPLETED.json": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/game-audit.json": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/manifest.json": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/reconciliation.json": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/statistics.json": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/legacy-data/raw/pbp/season=2026/pbp.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/legacy-data/raw/schedules/season=2026/schedules.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/sources/calendar-0.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/sources/pbp-0.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "request.json": "5e8d5f39ac627e228ae257853b3ff1b74198e815273aa6c82da9b0dbf75c73dd",
+      "review-observations.json": "7084ee10e0cc51233ed7568a9436f7710872576648f0b248a73a6840fd538551",
+      "selection.json": "45a8052a1d716946a38300bad71f69f6c41de8e64cf3f77e8c29d58b7e89bad2"
+    },
+    "fullOperationalReaders": 3,
+    "inputId": "sha256:9dc7e6de11af1d0e494877c82f6cc234be3cbe002ab5ee47bf29cc2cf1d3a0e6",
+    "materializationId": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+    "oldBundleHashes": {
+      "COMPLETED.json": "5f777b2f82c4147930450d2454e0e0d2c4ca9b969ecb4c293a3259301296007a",
+      "manifest.json": "e15e03995713645af2ea2077267fa389d04de8ff0336803371528109503f83d7",
+      "observations.json": "d48831e3b619c184baeda70b20b6ee5a64a8d088555da763b3c38be63de21410",
+      "request.json": "a6752dba04296f85a0f0e87a4783e694883345b367d4f309043bfec3eff5e224",
+      "shared-source/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+      "shared-source/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+      "shared-source/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1"
+    },
+    "oldBundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a",
+    "oldBundlePath": "/Users/pedrocollet/.codex/worktrees/broadcast-w12-expansion-v1/NFL Sideline/editorial/local-artifacts/broadcast-w12-expansion-v1/20261022-v1/bundle",
+    "rawHash": "sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+    "rawRelativePath": "data/raw/pbp/season=2026/pbp.parquet",
+    "source": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024130Z-50e03b27",
+    "sourceHashes": {
+      "SHA256SUMS.json": "3ccd41b172dd23724cb6a622a05a41e22843779847073a230976d926bc627774",
+      "accepted-code-hashes.json": "5db346a23520a02860b09899662f269920a5bbc25a35ab608aee4a8da9ba291f",
+      "archive/ARCHIVE.json": "08e4b61e9d44d6b3ca9a23a70b912fea0ccfee960d44b8184fec20bb063ca0d1",
+      "archive/blobs/sha256/0a/0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "archive/blobs/sha256/0d/0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "archive/blobs/sha256/23/23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "archive/blobs/sha256/2a/2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "archive/blobs/sha256/31/317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "archive/blobs/sha256/45/450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "archive/blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "archive/blobs/sha256/4e/4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "archive/blobs/sha256/56/56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "archive/blobs/sha256/5c/5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "archive/blobs/sha256/5e/5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "archive/blobs/sha256/64/64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "archive/blobs/sha256/b8/b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "archive/blobs/sha256/db/db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "archive/blobs/sha256/fe/fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "archive/receipts/0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015.json": "2b95b254e95bbc6eb8ae23c852a037fe2eeaf1d90a2c23603e1e3b5cc9cf77b0",
+      "archive/receipts/0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672.json": "f78456de305a7bb1fd05e0c3186e3232e512796ae9bc753adc3ad3b4474916d1",
+      "archive/receipts/23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85.json": "ad17f003ea2dcdde957a3ebf589c52bf54cf64076c9dfea0b9d1b659c7a6364a",
+      "archive/receipts/2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394.json": "6934a52d01231f15ddd809a1d529167d07dfba03dcb6602e8964d6f6294e5e3f",
+      "archive/receipts/317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9.json": "29d8bb56df6bc2313a89748e0f79053103dd6cfe98c179fb7a0d8f515d65935f",
+      "archive/receipts/450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0.json": "ced9b0c39b7a47158dae248e922e6eac83986c2b4bd1b532cf7363d72e62d1d7",
+      "archive/receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "d4e507d4c8700021d27e953b9fef2c159edde611cc31da2079299569166c829d",
+      "archive/receipts/4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e.json": "10b40b42f25fa495431632fe28389137384e392dd55a7c0dbef36dfbac9011da",
+      "archive/receipts/56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91.json": "d561095c4ba7ee81c997a4cc6c8fe5affa17f0d8c528ec2f8e3207999166dc4e",
+      "archive/receipts/5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b.json": "e926c5257e005354104c7c752f3a1402b15048d18e6bf55e552cb3c9f6ca658f",
+      "archive/receipts/5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef.json": "003737233878b6de907ec0f56a11bd4e6aee3044f8d4e8ad6d0b81441f353fb9",
+      "archive/receipts/64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb.json": "28aef55ac03030b7b74f5327441444eea1275a679ccec520488ae6f088a66cb0",
+      "archive/receipts/b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703.json": "9b31c714c0715992f8d56931973ec33d52a170a18d7d93eba43bf2de9b6fbbb9",
+      "archive/receipts/db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48.json": "e12c136c5dd4f3d98656d15de3c24da2254569fd5e245e323ba930a5327d1776",
+      "archive/receipts/fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d.json": "d83170bb718b523e4f72d0decca51de933c2c50556048b826949e7fdb9149fd7",
+      "before-load.json": "224dc5917fd32bb40b96532c6eb122ed5ce23bb023dc43c1affa5c18ca010237",
+      "bundle/COMPLETED.json": "892ae4b8f1b4f5ddb7dfacc9a38e319fe63302ab9192c28455d255bf7d8c05ee",
+      "bundle/manifest.json": "48b0bf238c543c6369c739f529dc18e9e49be606bf6dc0eb09c55d03eeecf6e7",
+      "bundle/observations.json": "7084ee10e0cc51233ed7568a9436f7710872576648f0b248a73a6840fd538551",
+      "bundle/request.json": "2415bb2fc282ac7497dd195bbedd21e1c8bcd807f68ffc082fb3812396db133b",
+      "bundle/shared-source/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+      "bundle/shared-source/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+      "bundle/shared-source/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1",
+      "data/raw/pbp/season=2025/pbp.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "data/raw/pbp/season=2026/pbp.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "data/raw/schedules/season=2025/schedules.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "data/raw/schedules/season=2026/schedules.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "ingestion-runs.json": "2ab1eb1f75a40045989642d8f2b76fccbeb6e172988ed2bca2a5dc48bf717da2",
+      "inputs.json": "64487738faea6ab31d6a8abef50ab9141c96e085a8c9408b290c978e1e909faf",
+      "integrated.log": "9d76e4a3830ff2572e947903969e30d809a266746ecc65a25475b9d17e800f5b",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0000-FROZEN.json": "08a888c456b00cc860ed7747f773f3da926b3fdcde12d43c6aea51ead16eff35",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0001-RUNNING.json": "23db758b04a0d06e3e043b2315c89633747dd8413762f28f81371cec02fb2405",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0002-CALCULATING.json": "953e367e230942171eaca6f4df9e1366eac1741b2124c638d1e932a141beeba2",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0003-VALIDATED.json": "619f8ff35829c736a7a83089d376707f745fb8c701c6724c850cfe2f6323c665",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0004-PERSISTING.json": "e8a317595827234dc27d1f4f53e14ef885d6ed4f60c8b28fc0703c07d833e91a",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0005-ARCHIVED.json": "4df57488a5673d06ed2a585983bacf26a6312a4447422fc4663f50eedb4645d3",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0006-PRIVATE_COMMITTED.json": "3a14bbf9fe49afa9e859e5d3a377f9f2b384d9e7b151bfbb32b2100f5b5d2313",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0007-FINISHING_GLOBAL.json": "d9cbd2dc002dbc50e0a7c10c19029843d31fb33c9e66a4154432a99e0ae7b32c",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/0008-SUCCEEDED.json": "7d15759d36136634fa0180c28ffc5350bf9f69160a3e0d4d7ca87fce299d0c06",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/COMPLETED.json": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/game-audit.json": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/manifest.json": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/reconciliation.json": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/artifact/statistics.json": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/legacy-data/raw/pbp/season=2025/pbp.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/legacy-data/raw/schedules/season=2025/schedules.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/sources/calendar-0.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "integrated/2025-4c373c3b-9ead-431d-8f23-624811dcc1eb/sources/pbp-0.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0000-FROZEN.json": "368c5a3c1079b33b35d046cb76c7aad88bb14f43342c4d6ed2fc06f5ea590ddc",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0001-RUNNING.json": "76ec9f535ec915cfddc9b27b74ae6de5b738e1a1fbd306cfd1b61ad733672115",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0002-CALCULATING.json": "4d927d547f0afb2a80420ceb218d6cead4b43a00a20440964a6f618baa52d0df",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0003-VALIDATED.json": "9b34ab4a897981b916936f3a81a8b29646d6b08a4bc0232a155f12cccf456811",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0004-PERSISTING.json": "1a106c7b44d11575bb1b647aaef0204f8f12f9ab0e6e24d4061a3081846a822f",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0005-ARCHIVED.json": "06435fa12ad435190a22250956adaddcbf388691234efb8b3853abec6bd1c6b0",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0006-PRIVATE_COMMITTED.json": "e626a15dfc9bc9992ccd7c8cac720cc7513fd9db93acdab5af82a014f1501eae",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0007-FINISHING_GLOBAL.json": "604f9ddde9bba98593b1cb6aab792db14ee95e3161d30f0706b636a3f590ce07",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/0008-SUCCEEDED.json": "3c981504d2f2b57cc16311978a20344604bafa0ba177241bf250fa519003d60d",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/COMPLETED.json": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/game-audit.json": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/manifest.json": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/reconciliation.json": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/artifact/statistics.json": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/legacy-data/raw/pbp/season=2026/pbp.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/legacy-data/raw/schedules/season=2026/schedules.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/sources/calendar-0.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "integrated/2026-726ebccd-df7f-4c67-a0cd-7ad853e33422/sources/pbp-0.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "inventory.json": "caefa5ef20c1fffc0f733024aa50f333c41e6cd1269c61a7771266c27bde7ea9",
+      "lab-config.json": "2a84785f8f0390d7d246e5d1dcca92ffeb5314c5bdecf50dcf40a8adffcb8817",
+      "materialized/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+      "materialized/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+      "materialized/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1",
+      "plan.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0000-FROZEN.json": "1958c20764bf216210757c971374d8da9d7340a884d493c852815370407879eb",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0001-CALCULATING.json": "a290b0dd169c1b2d003f0268d1526eb07613ba3a13d3b74468860c95e5003bcf",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0002-VALIDATED.json": "90d44af1b64a0b6a75e92f723d38fc5e48d0d2bd714385b975e5edf536b5b744",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/0003-PLANNED.json": "638f04ad3c2c0aba15f58c380029bc5e30bd0ccd72dca5e2cedf5ffb26cbc1cd",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/COMPLETED.json": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/game-audit.json": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/manifest.json": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/reconciliation.json": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/artifact/statistics.json": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/sources/calendar-0.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "plan/2025-227f0046-e516-47ed-8ff2-02262e0ccc7f/sources/pbp-0.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0000-FROZEN.json": "6b0d081874c0c55cb8a6a3375b4130f699f96408d5f73c267c36f37602801b07",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0001-CALCULATING.json": "a957fdaf76b9c221bae6a09252f6f434290560222e25e647588150035508ee36",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0002-VALIDATED.json": "ab140c0842fa62c0aaa519398cfcc3389f8ab392d945d7b284cb718f6b0cc994",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/0003-PLANNED.json": "66b6d9b5aa3aa16b293581e8ca83404796c776e52ffd5d4392736670387ee777",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/COMPLETED.json": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/game-audit.json": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/manifest.json": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/reconciliation.json": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/artifact/statistics.json": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/sources/calendar-0.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "plan/2026-c2411ca6-3c53-4692-a574-dac3f8474c43/sources/pbp-0.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "preflight.json": "f415a6610dbfe40d4062e5fcd98e141e462636a74e7fe8d4dd2cf11cdcc13485",
+      "private-snapshot.json": "1021488f0c91285fa2b8028f7fb4f30ffd864f3a97b471283ed4cfa4ddaf940d",
+      "recovery-report.json": "12eab9a15323021adc3a7a3b2e574614ccb29afea911a80d6cd161b02e4252f9",
+      "relations.json": "f9f40cd90a14a17fa0c17ed1679890fc01d5531e23d095df76ae97f872cdcd82",
+      "repeat.log": "ed847a41e8f2714009b8cbaaada563475a5fad08c23cbc46e6379bb32ced486f",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0000-FROZEN.json": "c641f3c3d7dfb35e0283a3b12588ff2becd04241e5703f77c004928071017cd8",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0001-RUNNING.json": "4708a695928b509c01b1aa26cfb26d100aed75c37cd6a5ac56a583f39863fbd5",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0002-CALCULATING.json": "a33220d0ba769be6f7ec4f10c4576235ddc8919dd68a7d78e60f9637823d912a",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0003-VALIDATED.json": "b7aa767ca6d1ee50debf76f13a5f50c8570feac10ed582cce71e116eb0f3a330",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0004-PERSISTING.json": "04cfe2c384ec7dbf1764ed4d22a1562f041190bcf295ada557b5444ba8d1306c",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0005-ARCHIVED.json": "43d519f06de7b3a29512388f95a4ac06607ce261770a0e663d61547a54f50a54",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0006-PRIVATE_COMMITTED.json": "4386f6109586ff9d8223a2413d5ac8859120f4c4ca84f78639320caf9cdd5eb2",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0007-FINISHING_GLOBAL.json": "cfa2dcfa10b7c8497841a504ef87123c645f0040347ad72be4eb3a8aa14e21d2",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/0008-SUCCEEDED.json": "7aa33a882cb191b9f1b7e7f70c7b330ed5d06200aeddb0a54435ecbb2481e8e3",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/COMPLETED.json": "2a8832dce89a1d2b76944c36dfd69c36c005185b01b5182d43a10dedf6a59394",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/game-audit.json": "64b94d4a1fed0503baf77ce037fdd798485e7343d20b8d0d0f7a57e7b9584feb",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/manifest.json": "0dda4138b3fa6cad6538c5b013262af493a6915b17da1761aa74fdee298ee672",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/reconciliation.json": "b82fb9434fd460197864cecc7a37d3c55d5f6c42b39e55399cd03526737de703",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/artifact/statistics.json": "23ebcfb020de64b10704cd96404de0b174465bea8119c6c76cafeec8cc688b85",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/legacy-data/raw/pbp/season=2025/pbp.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/legacy-data/raw/schedules/season=2025/schedules.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/sources/calendar-0.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+      "repeat/2025-bc9664e3-1b3b-4023-9bba-34170b632552/sources/pbp-0.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0000-FROZEN.json": "a09c2f40931c8203d7dd738ecce1b4fde59b4a295b4bddf7c8cbbcaebe5a7035",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0001-RUNNING.json": "d0453336a6dd0f4c6a829bc08b0ceced711229f95f2d40aa6345914fdb94d73a",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0002-CALCULATING.json": "28bf20d3b59b9345baeba089b64b1e66eda83cdd9ba510ea72867ca057578e04",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0003-VALIDATED.json": "85333312e4caea83898987d8a4541f7dae86d0bdccc07bffe0ecf731abe0cad9",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0004-PERSISTING.json": "56f3b5551d4956afc4c9965f81c6eff751e33216e6be343b789dc99d0ed6a572",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0005-ARCHIVED.json": "65772662c65de171044264d3bb31cdb08ead80305e900a20505b726e60c254fe",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0006-PRIVATE_COMMITTED.json": "bebbef45d1238e4d61aa36adb3755bad652122697d7f1d18093c055c903db9e3",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0007-FINISHING_GLOBAL.json": "94cbdf0a54933cb6c6e071e6ebc38a4b7e20feafa191437abd13537bf91d7e74",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/0008-SUCCEEDED.json": "b8dc10df7980b6b69173cb8995256b80cbfa32776a8979e4444cb7be45caa9db",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/COMPLETED.json": "317c6ca0d83428620ec49be3dbc1d2431aaabb743780d60f627685df47410ed9",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/game-audit.json": "5cf0c22b4b6ece7c910c6a03fab7d7a0e1acdae5b283066f8b4fc49baed7725b",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/manifest.json": "450fb8a05d43b64b26a49821812b9d3e91e9c1cc469315960d646e7227879ab0",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/reconciliation.json": "0a48d6f6620802754df7591840f5ee65f9ed98db49126f1dc35af1e5a335f015",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/artifact/statistics.json": "db3e0f066da5f6ad3f2ef8e563846fa4bfa59d862229490d70209fda668bbd48",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/legacy-data/raw/pbp/season=2026/pbp.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/legacy-data/raw/schedules/season=2026/schedules.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/sources/calendar-0.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d",
+      "repeat/2026-dbe5e6d4-52d0-4600-a429-b50e47179751/sources/pbp-0.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+      "request.json": "5e8d5f39ac627e228ae257853b3ff1b74198e815273aa6c82da9b0dbf75c73dd",
+      "review-observations.json": "7084ee10e0cc51233ed7568a9436f7710872576648f0b248a73a6840fd538551",
+      "selection.json": "45a8052a1d716946a38300bad71f69f6c41de8e64cf3f77e8c29d58b7e89bad2"
+    },
+    "verifiedAt": "2026-10-23T18:08:09.663085+00:00"
+  },
+  "documents": [
+    {
+      "id": "ATL/off/1",
+      "team": "ATL",
+      "perspective": "off",
+      "season": 2026,
+      "phase": "REG",
+      "weeks": [
+        1
+      ],
+      "games": [
+        {
+          "away": "ATL",
+          "gameId": "2026_01_ATL_PIT",
+          "home": "PIT",
+          "opponent": "PIT",
+          "week": 1
+        }
+      ],
+      "third": {
+        "byDistance": {
+          "long": {
+            "denominator": 7,
+            "numerator": 1
+          },
+          "medium": {
+            "denominator": 2,
+            "numerator": 0
+          },
+          "short": {
+            "denominator": 3,
+            "numerator": 1
+          },
+          "unknown": {
+            "denominator": 0,
+            "numerator": 0
+          }
+        },
+        "byType": {
+          "pass": {
+            "denominator": 8,
+            "numerator": 1
+          },
+          "run": {
+            "denominator": 4,
+            "numerator": 1
+          }
+        },
+        "denominator": 12,
+        "denominatorState": "POSITIVE",
+        "numerator": 2,
+        "ratio": {
+          "denominator": 12,
+          "numerator": 2
+        },
+        "status": "AVAILABLE"
+      },
+      "redZone": {
+        "denominator": 0,
+        "denominatorState": "ZERO",
+        "numerator": 0,
+        "outcomes": {},
+        "ratio": null,
+        "status": "NO_OPPORTUNITIES"
+      }
+    },
+    {
+      "id": "MIN/off/2",
+      "team": "MIN",
+      "perspective": "off",
+      "season": 2026,
+      "phase": "REG",
+      "weeks": [
+        2
+      ],
+      "games": [
+        {
+          "away": "MIN",
+          "gameId": "2026_02_MIN_CHI",
+          "home": "CHI",
+          "opponent": "CHI",
+          "week": 2
+        }
+      ],
+      "third": {
+        "byDistance": {
+          "long": {
+            "denominator": 5,
+            "numerator": 0
+          },
+          "medium": {
+            "denominator": 4,
+            "numerator": 3
+          },
+          "short": {
+            "denominator": 3,
+            "numerator": 0
+          },
+          "unknown": {
+            "denominator": 0,
+            "numerator": 0
+          }
+        },
+        "byType": {
+          "pass": {
+            "denominator": 11,
+            "numerator": 3
+          },
+          "run": {
+            "denominator": 1,
+            "numerator": 0
+          }
+        },
+        "denominator": 12,
+        "denominatorState": "POSITIVE",
+        "numerator": 3,
+        "ratio": {
+          "denominator": 12,
+          "numerator": 3
+        },
+        "status": "AVAILABLE"
+      },
+      "redZone": {
+        "denominator": 1,
+        "denominatorState": "POSITIVE",
+        "numerator": 0,
+        "outcomes": {
+          "FIELD_GOAL": 1
+        },
+        "ratio": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "status": "AVAILABLE"
+      }
+    },
+    {
+      "id": "NYJ/off/1",
+      "team": "NYJ",
+      "perspective": "off",
+      "season": 2026,
+      "phase": "REG",
+      "weeks": [
+        1
+      ],
+      "games": [
+        {
+          "away": "NYJ",
+          "gameId": "2026_01_NYJ_TEN",
+          "home": "TEN",
+          "opponent": "TEN",
+          "week": 1
+        }
+      ],
+      "third": {
+        "byDistance": {
+          "long": {
+            "denominator": 5,
+            "numerator": 1
+          },
+          "medium": {
+            "denominator": 2,
+            "numerator": 0
+          },
+          "short": {
+            "denominator": 3,
+            "numerator": 1
+          },
+          "unknown": {
+            "denominator": 0,
+            "numerator": 0
+          }
+        },
+        "byType": {
+          "pass": {
+            "denominator": 5,
+            "numerator": 1
+          },
+          "run": {
+            "denominator": 5,
+            "numerator": 1
+          }
+        },
+        "denominator": 10,
+        "denominatorState": "POSITIVE",
+        "numerator": 2,
+        "ratio": {
+          "denominator": 10,
+          "numerator": 2
+        },
+        "status": "AVAILABLE"
+      },
+      "redZone": {
+        "denominator": 3,
+        "denominatorState": "POSITIVE",
+        "numerator": 2,
+        "outcomes": {
+          "FIELD_GOAL": 1,
+          "TOUCHDOWN": 2
+        },
+        "ratio": {
+          "denominator": 3,
+          "numerator": 2
+        },
+        "status": "AVAILABLE"
+      }
+    },
+    {
+      "id": "NYJ/off/2",
+      "team": "NYJ",
+      "perspective": "off",
+      "season": 2026,
+      "phase": "REG",
+      "weeks": [
+        2
+      ],
+      "games": [
+        {
+          "away": "GB",
+          "gameId": "2026_02_GB_NYJ",
+          "home": "NYJ",
+          "opponent": "GB",
+          "week": 2
+        }
+      ],
+      "third": {
+        "byDistance": {
+          "long": {
+            "denominator": 14,
+            "numerator": 4
+          },
+          "medium": {
+            "denominator": 2,
+            "numerator": 2
+          },
+          "short": {
+            "denominator": 3,
+            "numerator": 2
+          },
+          "unknown": {
+            "denominator": 0,
+            "numerator": 0
+          }
+        },
+        "byType": {
+          "pass": {
+            "denominator": 15,
+            "numerator": 6
+          },
+          "run": {
+            "denominator": 4,
+            "numerator": 2
+          }
+        },
+        "denominator": 19,
+        "denominatorState": "POSITIVE",
+        "numerator": 8,
+        "ratio": {
+          "denominator": 19,
+          "numerator": 8
+        },
+        "status": "AVAILABLE"
+      },
+      "redZone": {
+        "denominator": 3,
+        "denominatorState": "POSITIVE",
+        "numerator": 2,
+        "outcomes": {
+          "FIELD_GOAL": 1,
+          "TOUCHDOWN": 2
+        },
+        "ratio": {
+          "denominator": 3,
+          "numerator": 2
+        },
+        "status": "AVAILABLE"
+      }
+    },
+    {
+      "id": "NYJ/off/1-2",
+      "team": "NYJ",
+      "perspective": "off",
+      "season": 2026,
+      "phase": "REG",
+      "weeks": [
+        1,
+        2
+      ],
+      "games": [
+        {
+          "away": "NYJ",
+          "gameId": "2026_01_NYJ_TEN",
+          "home": "TEN",
+          "opponent": "TEN",
+          "week": 1
+        },
+        {
+          "away": "GB",
+          "gameId": "2026_02_GB_NYJ",
+          "home": "NYJ",
+          "opponent": "GB",
+          "week": 2
+        }
+      ],
+      "third": {
+        "byDistance": {
+          "long": {
+            "denominator": 19,
+            "numerator": 5
+          },
+          "medium": {
+            "denominator": 4,
+            "numerator": 2
+          },
+          "short": {
+            "denominator": 6,
+            "numerator": 3
+          },
+          "unknown": {
+            "denominator": 0,
+            "numerator": 0
+          }
+        },
+        "byType": {
+          "pass": {
+            "denominator": 20,
+            "numerator": 7
+          },
+          "run": {
+            "denominator": 9,
+            "numerator": 3
+          }
+        },
+        "denominator": 29,
+        "denominatorState": "POSITIVE",
+        "numerator": 10,
+        "ratio": {
+          "denominator": 29,
+          "numerator": 10
+        },
+        "status": "AVAILABLE"
+      },
+      "redZone": {
+        "denominator": 6,
+        "denominatorState": "POSITIVE",
+        "numerator": 4,
+        "outcomes": {
+          "FIELD_GOAL": 2,
+          "TOUCHDOWN": 4
+        },
+        "ratio": {
+          "denominator": 6,
+          "numerator": 4
+        },
+        "status": "AVAILABLE"
+      }
+    },
+    {
+      "id": "NYJ/def/1",
+      "team": "NYJ",
+      "perspective": "def",
+      "season": 2026,
+      "phase": "REG",
+      "weeks": [
+        1
+      ],
+      "games": [
+        {
+          "away": "NYJ",
+          "gameId": "2026_01_NYJ_TEN",
+          "home": "TEN",
+          "opponent": "TEN",
+          "week": 1
+        }
+      ],
+      "third": {
+        "byDistance": {
+          "long": {
+            "denominator": 5,
+            "numerator": 1
+          },
+          "medium": {
+            "denominator": 3,
+            "numerator": 1
+          },
+          "short": {
+            "denominator": 4,
+            "numerator": 2
+          },
+          "unknown": {
+            "denominator": 0,
+            "numerator": 0
+          }
+        },
+        "byType": {
+          "pass": {
+            "denominator": 10,
+            "numerator": 2
+          },
+          "run": {
+            "denominator": 2,
+            "numerator": 2
+          }
+        },
+        "denominator": 12,
+        "denominatorState": "POSITIVE",
+        "numerator": 4,
+        "ratio": {
+          "denominator": 12,
+          "numerator": 4
+        },
+        "status": "AVAILABLE"
+      },
+      "redZone": {
+        "denominator": 1,
+        "denominatorState": "POSITIVE",
+        "numerator": 1,
+        "outcomes": {
+          "TOUCHDOWN": 1
+        },
+        "ratio": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "status": "AVAILABLE"
+      }
+    }
+  ]
+}
