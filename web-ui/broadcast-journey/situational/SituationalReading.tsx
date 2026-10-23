@@ -35,14 +35,14 @@ function Method({d,snapshot,family}:{d:SituationalDocument;snapshot:Snapshot;fam
     <p><a href="https://nflreadr.nflverse.com/articles/dictionary_pbp.html" target="_blank" rel="noreferrer">Dicionário primário nflverse</a>. Reconciliação independente dos registros brutos documentada nesta entrega local.</p>
   </details>;
 }
-export function SituationalContent({d,snapshot,family}:{d:SituationalDocument;snapshot:Snapshot;family:'third'|'redzone'}) {
+export function SituationalContent({d,snapshot,family,announce=true}:{d:SituationalDocument;snapshot:Snapshot;family:'third'|'redzone';announce?:boolean}) {
   const third=family==='third',m=third?d.third:d.redZone,defense=d.perspective==='def';
   const fact=compositionFact(d,family);
   const label=third?'conversões':'touchdowns ofensivos';
   const identity=teamIdentity(d.team);
   return <article className="situational-reading" style={{'--sit-team':identity.dark} as CSSProperties} data-situational={d.id} data-family={family}>
     <header className="sit-heading"><p>{d.team} · {defense?'Defesa · permitido ao ataque adversário':'Ataque'} · {d.weeks.length===2?'Semanas 1–2 inclusivas':`Semana ${d.weeks[0]}`}</p><h2>{third?(defense?'Quantas terceiras o adversário converteu?':'Quantas terceiras viraram conversão?'):(defense?'Quantas entradas adversárias terminaram em touchdown?':'Quantas entradas na red zone terminaram em touchdown?')}</h2></header>
-    <div className="sit-result" aria-live="polite" aria-atomic="true"><strong data-sit-value="rate">{percent(m.ratio)??'Sem taxa'}</strong><p><b data-sit-value="ratio">{m.numerator} / {m.denominator}</b><span>{label} {defense?(third?'permitidas':'permitidos'):''} / {third?'tentativas elegíveis':'campanhas confirmadas'}</span></p></div>
+    <div className="sit-result" aria-live={announce?'polite':'off'} aria-atomic="true"><strong data-sit-value="rate">{percent(m.ratio)??'Sem taxa'}</strong><p><b data-sit-value="ratio">{m.numerator} / {m.denominator}</b><span>{label} {defense?(third?'permitidas':'permitidos'):''} / {third?'tentativas elegíveis':'campanhas confirmadas'}</span></p></div>
     <p className="sit-caption sit-rule-note">{third?'Taxa pelas regras do projeto: tentativas elegíveis de passe e corrida, sem ajoelhadas, spikes ou jogadas anuladas ou abortadas. Exclusões e penalidades nos detalhes; não é uma estatística oficial da NFL.':'A unidade é a campanha, com a linha de 20 jardas incluída. Campanhas com posição observada na região antes de uma ajoelhada também podem entrar na amostra.'}</p>
     {m.status==='AVAILABLE' ? fact && <p className="sit-fact">{fact}</p> : <p className="sit-fact" role="status">{m.status==='NO_OPPORTUNITIES'?'A fonte está presente, mas não há oportunidades elegíveis. Denominador zero não é taxa de 0%.':'Há unidades insuficientes ou contraditórias. As contagens confirmadas não sustentam uma taxa para o recorte.'}</p>}
     {m.status==='AVAILABLE' && (third?<DistanceChart d={d}/>:<DriveChart d={d}/>)}

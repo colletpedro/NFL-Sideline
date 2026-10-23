@@ -15,6 +15,8 @@ import { LiveReading } from './LiveReading';
 import { nextReadingQuery } from './liveSelection';
 import { readChoice } from './choice';
 import { Discovery } from './Discovery';
+import { Explorer } from './explorer/Explorer';
+import { explorerHref } from './explorer/state';
 import { MediaGallery } from './media/MediaGallery';
 const calendar: NflDataClient = new StaticNflDataClient(window.fetch.bind(window));
 const message = (e: unknown) => e instanceof Error ? e.message : 'Fonte indisponível.';
@@ -44,6 +46,7 @@ export default function App() {
   const heading = useRef<HTMLHeadingElement>(null);
   const gameId = q.get('game'), observationId = q.get('observation'), entryId = q.get('entry');
   const readingRoute = observationId !== null || entryId !== null;
+  const explorerRoute = q.get('view') === 'explorer';
   const galleryRoute = q.get('view') === 'media';
   useEffect(() => {
     let active = true;
@@ -70,7 +73,7 @@ export default function App() {
       setQ(next, { replace: true });
     }
   }, [games, publication, q, season, week, setQ]);
-  useEffect(() => { heading.current?.focus(); window.scrollTo(0, 0); }, [gameId, galleryRoute]);
+  useEffect(() => { if (!explorerRoute) { heading.current?.focus(); window.scrollTo(0, 0); } }, [gameId, galleryRoute, explorerRoute]);
   const game = games?.find(g => g.gameId === gameId);
   const selected = archive?.documents.find(x => x.d.observationId === observationId && x.entry.entryId === entryId);
   const selectedRelation = game && selected ? relation(game, selected.d) : null;
@@ -87,11 +90,12 @@ export default function App() {
     else if (game) setQ(new URLSearchParams(journeyHref(q, { ...change, entry: null, observation: null }).slice(2)));
   };
   const retryArchive = () => setArchiveRetry(v => v + 1);
+  if (explorerRoute) return <Explorer games={games} q={q} onQuery={setQ} calendarHref={journeyHref(q,{...calendarChange,view:null})} error={calError}/>;
   return <>
     <a href="#journey-main" className="skip-link">Ir ao conteúdo</a>
     <header className="site-header real-header"><div className="real-header-inner"><Link className="brand" to={calendarHref}>NFL <strong>SIDELINE</strong><i className="brand-rule"/></Link><nav aria-label="Navegação principal"><Link to={calendarHref}>Central do calendário</Link>{game && <Link to={matchupHref}>Confronto</Link>}</nav><p>Local · fontes preservadas<br/><span>Arquivo de leituras 2026 W1–2</span></p></div></header>
     <main id="journey-main" className="real-page journey-page">
-      <nav className="journey-breadcrumb" aria-label="Caminho"><Link to={calendarHref}>Calendário · {season || 'arquivo'} · semana {week ?? '…'}</Link>{gameId && <><span>/</span><Link to={matchupHref}>{game ? `${game.awayTeam.teamAbbr} × ${game.homeTeam.teamAbbr}` : 'Confronto'}</Link></>}{readingRoute && <><span>/</span><span>Leitura do arquivo</span></>}</nav>
+      <nav className="journey-breadcrumb" aria-label="Caminho"><Link to={calendarHref}>Calendário · {season || 'arquivo'} · semana {week ?? '…'}</Link>{gameId && <><span>/</span><Link to={matchupHref}>{game ? `${game.awayTeam.teamAbbr} × ${game.homeTeam.teamAbbr}` : 'Confronto'}</Link></>}{readingRoute && <><span>/</span><span>Leitura do arquivo</span></>}<Link to={explorerHref(q)}>Entrar no explorador experimental</Link></nav>
       <div className={`real-intro${readingRoute || gameId ? ' journey-reading-intro' : ''}`}><div><p>{readingRoute ? 'Uma observação por vez' : gameId ? 'Confronto identificado' : 'Jogos e leituras arquivadas'}</p><h1 ref={heading} tabIndex={-1}>{galleryRoute ? 'Acervo visual local.' : readingRoute ? 'O recorte, em seu contexto.' : game ? title(game) : gameId ? 'Confronto indisponível' : 'Encontre seu jogo.'}</h1></div></div>
       {galleryRoute && <nav className="media-local-nav"><Link to={calendarHref}>Voltar ao calendário</Link></nav>}
       {galleryRoute ? <MediaGallery q={q}/> : <>
