@@ -26,7 +26,7 @@ export function EpaBlock({d,foundation,onFoundation}:{d:Document;foundation:Foun
   return <section className="mr-section" id="mr-epa" tabIndex={-1} aria-labelledby="mr-epa-title">
     <div className="mr-section-title"><h2 id="mr-epa-title">Produção com a bola</h2><div className="mr-foundations" role="group" aria-label="Fundamento do EPA">{([['general','Geral'],['classified_pass','Passe'],['classified_rush','Corrida']] as const).map(([id,label])=><button key={id} type="button" aria-pressed={foundation===id} onClick={()=>onFoundation(id)}>{label}</button>)}</div></div>
     <p className="mr-unit">EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.</p>
-    <p className="mr-note">{foundation==='classified_pass'?'Passe inclui sacks.':foundation==='classified_rush'?'Corrida inclui scrambles.':'Geral reúne passe e corrida elegíveis.'} Os dois ataques usam a mesma escala.</p>
+    <p className="mr-note">{foundation==='classified_pass'?'Passe inclui sacks.':foundation==='classified_rush'?'Corrida inclui scrambles.':'Geral reúne passe e corrida elegíveis.'} {allowed?'Os dois ataques usam a mesma escala.':'Valores individuais em EPA/jogada.'}</p>
     {!allowed&&<p className="mr-note">A comparação EPA não está autorizada neste recorte. As observações individuais disponíveis seguem abaixo.</p>}
     <div className="mr-epa-chart" data-foundation={foundation}>
       {allowed&&<div className="mr-epa-axis" aria-hidden="true">{epaAxisLabels(scale).map(v=><span key={v} style={{left:`${scale.position(v)}%`}}>{v===0?'0':`${v>0?'+':'−'}${Math.abs(v).toFixed(2).replace('.',',')}`}</span>)}</div>}

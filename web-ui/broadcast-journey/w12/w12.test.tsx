@@ -44,7 +44,7 @@ describe.skipIf(!real)('all 32 real matchups',()=>{
     const d=doc('2026_01_NYJ_TEN');d.comparisons.third.sideBySide.allowed=false;d.comparisons.redZone.sideBySide.allowed=false;
     expect(renderToStaticMarkup(<ThirdBlock d={d}/>)).toContain('data-third-mark=');expect(renderToStaticMarkup(<RedZoneBlock d={d}/>)).toContain('data-campaign-mark=');
     const first=d.productions[0].epa[0],second=d.productions[1].epa[0];first.descriptor.status='SOURCE_ABSENT';first.display.allowed=false;first.originalObservation.values.epa=null;
-    const h=renderToStaticMarkup(<EpaBlock d={d} foundation="general" onFoundation={()=>{}}/>);expect(h).toContain('Não há fonte');expect(h).toContain(epaText(second)!);expect(h).not.toContain('data-domain=');
+    const h=renderToStaticMarkup(<EpaBlock d={d} foundation="general" onFoundation={()=>{}}/>);expect(h).toContain('Não há fonte');expect(h).toContain(epaText(second)!);expect(h).not.toContain('data-domain=');expect(h).not.toContain('Os dois ataques usam a mesma escala.');
     for(const state of ['INSUFFICIENT','SOURCE_ABSENT'] as const){d.productions[0].metrics.third.descriptor.status=state;expect(renderToStaticMarkup(<ThirdBlock d={d}/>)).toContain('data-third-mark=');}
   });
   it('keeps no-opportunity attacks separate from their valid opponent in the real collection',()=>{
