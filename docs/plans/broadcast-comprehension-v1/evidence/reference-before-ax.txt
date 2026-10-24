@@ -1,0 +1,342 @@
+Browser tab: 4, Title: "NYJ × TEN · Leitura do confronto · NFL Sideline", URL: "http://127.0.0.1:18102/?view=matchup-reading".
+0 AXWebArea NYJ × TEN · Leitura do confronto · NFL Sideline, URL: 127.0.0.1:18102/?view=matchup-reading
+	1 container root
+		2 link Description: Ir à leitura do confronto, Value: 127.0.0.1:18102/?view=matchup-reading#mr-main
+		3 container
+			4 link Description: NFL SIDELINE, Value: 127.0.0.1:18102/
+			5 link Description: Voltar ao explorador anterior, Value: 127.0.0.1:18102/?view=explorer&season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=off&analysis=third&question=distance&reading=game
+		6 container mr-main
+			7 container NYJ × TEN
+				8 heading NYJ × TEN, Value: 1, ID: mr-title
+					9 text NYJ  ×  TEN
+				10 text New York Jets
+				11 text NYJ
+				12 text 23
+				13 text Tennessee Titans
+				14 text TEN
+				15 text 10
+				16 container
+					17 text Resultado registrado  ·  13 de setembro de 2026  ·  2026 REG  · Semana  1
+				18 text Leitura retrospectiva deste jogo.
+			19 container O que os registros mostram
+				20 heading O que os registros mostram, Value: 2, ID: mr-summary-title
+					21 text O que os registros mostram
+				22 content list
+					23 container
+						24 text TEN teve maior taxa observada de conversão geral em terceiras.
+						25 link Description: Ver terceiras: NYJ 2/10; TEN 4/12, Value: 127.0.0.1:18102/?view=matchup-reading#mr-third
+					26 container
+						27 text Ambos converteram 1 de 5 terceiras de 7+ jardas observadas.
+						28 link Description: Ver terceiras longas: NYJ 1/5; TEN 1/5, Value: 127.0.0.1:18102/?view=matchup-reading#mr-long
+					29 container
+						30 text NYJ marcou mais TDs nas campanhas de red zone observadas; TEN teve maior taxa em uma única oportunidade.
+						31 link Description: Ver campanhas: NYJ 2/3; TEN 1/1, Value: 127.0.0.1:18102/?view=matchup-reading#mr-redzone
+			32 container Blocos da leitura
+				33 link Description: EPA, Value: 127.0.0.1:18102/?view=matchup-reading#mr-epa
+				34 link Description: Terceiras, Value: 127.0.0.1:18102/?view=matchup-reading#mr-third
+				35 link Description: Red zone, Value: 127.0.0.1:18102/?view=matchup-reading#mr-redzone
+				36 link Description: Método, Value: 127.0.0.1:18102/?view=matchup-reading#mr-method
+			37 container Produção com a bola, ID: mr-epa
+				38 heading Produção com a bola, Value: 2, ID: mr-epa-title
+					39 text Produção com a bola
+				40 container Fundamento do EPA
+					41 checkbox Geral, Value: 1
+					42 checkbox Passe, Value: 0
+					43 checkbox Corrida, Value: 0
+				44 text EPA · pontos esperados por jogada com EPA válido · deste jogo
+				45 container
+					46 text Geral reúne passe e corrida elegíveis.  Os dois ataques usam a mesma escala.
+				47 heading NYJ com a bola, Value: 3
+					48 text NYJ com a bola
+				49 text contra a defesa de
+				50 text TEN
+				51 text +0,168
+				52 text 60
+				53 text  jogadas com EPA válido
+				54 heading TEN com a bola, Value: 3
+					55 text TEN com a bola
+				56 text contra a defesa de
+				57 text NYJ
+				58 text −0,119
+				59 text 49
+				60 text  jogadas com EPA válido
+				61 button (collapsed) Quais jogadas entram no EPA?, Secondary Actions: Expand
+					62 text Quais jogadas entram no EPA?
+			63 container Terceiras descidas, ID: mr-third
+				64 heading Terceiras descidas, Value: 2, ID: mr-third-title
+					65 text Terceiras descidas
+				66 text Conversões / tentativas elegíveis · deste jogo
+				67 heading NYJ com a bola, Value: 3
+					68 text NYJ com a bola
+				69 text contra a defesa de
+				70 text TEN
+				71 container
+					72 text 2 / 10
+				73 text 20,0%
+				74 heading TEN com a bola, Value: 3
+					75 text TEN com a bola
+				76 text contra a defesa de
+				77 text NYJ
+				78 container
+					79 text 4 / 12
+				80 text 33,3%
+				81 text Círculo: passe, incluindo sacks.
+				82 text Quadrado: corrida, incluindo scrambles.
+				83 text Preenchida e com traço de confirmação: conversão. Vazia e com traço horizontal: não convertida.
+				84 heading 1–3 jardas, Value: 3
+					85 text 1–3 jardas
+				86 container
+					87 text NYJ  com a bola
+				88 text 1
+				89 text /
+				90 text 3
+				91 container NYJ, 1–3 jardas, 1 conversões em 3 tentativas
+					92 checkbox Description: NYJ, jogada 1118, 1 jardas, corrida, convertida, Value: 0
+					93 checkbox Description: NYJ, jogada 1398, 1 jardas, corrida, não convertida, Value: 0
+					94 checkbox Description: NYJ, jogada 3113, 3 jardas, corrida, não convertida, Value: 0
+				95 text Passe: 0/0 · Corrida: 1/3
+				96 text conversões / tentativas
+				97 container
+					98 text TEN  com a bola
+				99 text 2
+				100 text /
+				101 text 4
+				102 container TEN, 1–3 jardas, 2 conversões em 4 tentativas
+					103 checkbox Description: TEN, jogada 411, 3 jardas, corrida, scramble, convertida, Value: 0
+					104 checkbox Description: TEN, jogada 491, 3 jardas, corrida, scramble, convertida, Value: 0
+					105 checkbox Description: TEN, jogada 1766, 3 jardas, passe, não convertida, Value: 0
+					106 checkbox Description: TEN, jogada 2516, 3 jardas, passe, não convertida, Value: 0
+				107 text Passe: 0/2 · Corrida: 2/2
+				108 text conversões / tentativas
+				109 heading 4–6 jardas, Value: 3
+					110 text 4–6 jardas
+				111 container
+					112 text NYJ  com a bola
+				113 text 0
+				114 text /
+				115 text 2
+				116 container NYJ, 4–6 jardas, 0 conversões em 2 tentativas
+					117 checkbox Description: NYJ, jogada 1292, 5 jardas, corrida, scramble, não convertida, Value: 0
+					118 checkbox Description: NYJ, jogada 1510, 5 jardas, passe, não convertida, Value: 0
+				119 text Passe: 0/1 · Corrida: 0/1
+				120 text conversões / tentativas
+				121 container
+					122 text TEN  com a bola
+				123 text 1
+				124 text /
+				125 text 3
+				126 container TEN, 4–6 jardas, 1 conversões em 3 tentativas
+					127 checkbox Description: TEN, jogada 2191, 4 jardas, passe, não convertida, Value: 0
+					128 checkbox Description: TEN, jogada 2904, 4 jardas, passe, convertida, Value: 0
+					129 checkbox Description: TEN, jogada 3507, 5 jardas, passe, não convertida, Value: 0
+				130 text Passe: 1/3 · Corrida: 0/0
+				131 text conversões / tentativas
+				132 container mr-long
+					133 heading 7+ jardas, Value: 3
+						134 text 7+ jardas
+					135 container
+						136 text NYJ  com a bola
+					137 text 1
+					138 text /
+					139 text 5
+					140 container NYJ, 7+ jardas, 1 conversões em 5 tentativas
+						141 checkbox Description: NYJ, jogada 251, 9 jardas, passe, convertida, Value: 0
+						142 checkbox Description: NYJ, jogada 1649, 15 jardas, passe, não convertida, Value: 0
+						143 checkbox Description: NYJ, jogada 2735, 7 jardas, passe, não convertida, Value: 0
+						144 checkbox Description: NYJ, jogada 3322, 7 jardas, passe, não convertida, Value: 0
+						145 checkbox Description: NYJ, jogada 3637, 8 jardas, corrida, não convertida, Value: 0
+					146 text Passe: 1/4 · Corrida: 0/1
+					147 text conversões / tentativas
+					148 container
+						149 text TEN  com a bola
+					150 text 1
+					151 text /
+					152 text 5
+					153 container TEN, 7+ jardas, 1 conversões em 5 tentativas
+						154 checkbox Description: TEN, jogada 694, 11 jardas, passe, não convertida, Value: 0
+						155 checkbox Description: TEN, jogada 1029, 9 jardas, passe, não convertida, Value: 0
+						156 checkbox Description: TEN, jogada 3008, 8 jardas, passe, sack, não convertida, Value: 0
+						157 checkbox Description: TEN, jogada 3227, 25 jardas, passe, não convertida, Value: 0
+						158 checkbox Description: TEN, jogada 3910, 10 jardas, passe, convertida, Value: 0
+					159 text Passe: 1/5 · Corrida: 0/0
+					160 text conversões / tentativas
+				161 text Cada marca é uma tentativa. Toque ou use Tab e Enter para consultar a jogada original.
+				162 button (collapsed) O que é uma terceira elegível?, Secondary Actions: Expand
+					163 text O que é uma terceira elegível?
+				164 container Referência da liga, terceiras
+					165 heading Os ataques da liga na W1, Value: 3
+						166 text Os ataques da liga na W1
+					167 container
+						168 text 2026 REG ·  32  times com taxa ·  conversões / terceiras elegíveis . Cada ponto é um time.
+					169 container Distribuição das taxas observadas de 32 times, de zero a cem por cento
+						170 container
+							171 checkbox Description: CLE: 1/8, 12,5%, Value: 0
+							172 checkbox Description: ATL: 2/12, 16,7%, Value: 0
+							173 checkbox Description: DEN: 2/12, 16,7%, Value: 0
+							174 checkbox Description: SEA: 2/11, 18,2%, Value: 0
+							175 checkbox Description: MIA: 2/10, 20,0%, Value: 0
+							176 checkbox Description: NYJ: 2/10, 20,0%, Value: 0
+							177 checkbox Description: LA: 2/9, 22,2%, Value: 0
+							178 checkbox Description: GB: 3/12, 25,0%, Value: 0
+							179 checkbox Description: LAC: 2/8, 25,0%, Value: 0
+							180 checkbox Description: PIT: 3/12, 25,0%, Value: 0
+							181 checkbox Description: IND: 3/10, 30,0%, Value: 0
+							182 checkbox Description: NE: 5/16, 31,3%, Value: 0
+							183 checkbox Description: BUF: 3/9, 33,3%, Value: 0
+							184 checkbox Description: TEN: 4/12, 33,3%, Value: 0
+							185 checkbox Description: WAS: 5/15, 33,3%, Value: 0
+							186 checkbox Description: BAL: 3/8, 37,5%, Value: 0
+							187 checkbox Description: DET: 5/13, 38,5%, Value: 0
+							188 checkbox Description: LV: 5/12, 41,7%, Value: 0
+							189 checkbox Description: PHI: 6/14, 42,9%, Value: 0
+							190 checkbox Description: HOU: 7/16, 43,8%, Value: 0
+							191 checkbox Description: CAR: 4/9, 44,4%, Value: 0
+							192 checkbox Description: ARI: 6/13, 46,2%, Value: 0
+							193 checkbox Description: NO: 8/16, 50,0%, Value: 0
+							194 checkbox Description: TB: 5/10, 50,0%, Value: 0
+							195 checkbox Description: JAX: 5/9, 55,6%, Value: 0
+							196 checkbox Description: KC: 9/16, 56,3%, Value: 0
+							197 checkbox Description: CIN: 8/14, 57,1%, Value: 0
+							198 checkbox Description: MIN: 8/14, 57,1%, Value: 0
+							199 checkbox Description: SF: 7/12, 58,3%, Value: 0
+							200 checkbox Description: CHI: 10/14, 71,4%, Value: 0
+							201 checkbox Description: DAL: 8/11, 72,7%, Value: 0
+							202 checkbox Description: NYG: 9/10, 90,0%, Value: 0
+					203 text NYJ: 2/10, 20,0% TEN: 4/12, 33,3%
+					204 text Selecione um ponto ou consulte a lista com alvos maiores para toque.
+					205 button (collapsed) Consultar os 32 pontos e seus denominadores, Secondary Actions: Expand
+						206 text Consultar os
+						207 text 32
+						208 text  pontos e seus denominadores
+					209 container
+						210 text Taxa conjunta da amostra:  154 / 377  ( 40,8% ), calculada pelas somas, sem média das taxas dos times.
+					211 text NYJ e TEN pertencem à referência; o piloto não é uma amostra independente. Registros observados, sem ajuste ou inferência de qualidade.
+			212 container Red zone, ID: mr-redzone
+				213 heading Red zone, Value: 2, ID: mr-redzone-title
+					214 text Red zone
+				215 text TDs ofensivos / campanhas que entraram nas 20 · deste jogo
+				216 heading NYJ com a bola, Value: 3
+					217 text NYJ com a bola
+				218 text contra a defesa de
+				219 text TEN
+				220 container
+					221 text 2 / 3
+				222 text 66,7%
+				223 container
+					224 text 2 TDs  em  3 campanhas observadas .
+				225 checkbox Description: NYJ, campanha 1, Touchdown, Value: 0
+					226 text TD
+					227 text Campanha
+					228 text 1
+				229 checkbox Description: NYJ, campanha 5, Field goal, Value: 0
+					230 text FG
+					231 text Campanha
+					232 text 5
+				233 checkbox Description: NYJ, campanha 10, Touchdown, Value: 0
+					234 text TD
+					235 text Campanha
+					236 text 10
+				237 container
+					238 text Desfechos:  2 TDs · 1 field goal
+				239 heading TEN com a bola, Value: 3
+					240 text TEN com a bola
+				241 text contra a defesa de
+				242 text NYJ
+				243 container
+					244 text 1 / 1
+				245 text 100,0%
+				246 container
+					247 text 1 TD  em  1 campanha observada .
+				248 checkbox Description: TEN, campanha 19, Touchdown, Value: 0
+					249 text TD
+					250 text Campanha
+					251 text 19
+				252 container
+					253 text Desfechos:  1 TD
+				254 text Uma marca por campanha, em ordem da fonte. TD = touchdown; FG = field goal. Uma única oportunidade não demonstra uma capacidade estável.
+				255 text Toque ou use Tab e Enter em uma campanha para consultar as evidências de entrada e desfecho.
+				256 button (collapsed) Quando uma campanha entra na red zone?, Secondary Actions: Expand
+					257 text Quando uma campanha entra na red zone?
+				258 container Referência da liga, red zone
+					259 heading Os ataques da liga na W1, Value: 3
+						260 text Os ataques da liga na W1
+					261 container
+						262 text 2026 REG ·  31  times com taxa ·  TDs ofensivos / campanhas que entraram nas 20 . Cada ponto é um time.
+					263 container Distribuição das taxas observadas de 31 times, de zero a cem por cento
+						264 container
+							265 checkbox Description: CLE: 0/2, 0,0%, Value: 0
+							266 checkbox Description: SEA: 0/2, 0,0%, Value: 0
+							267 checkbox Description: GB: 1/5, 20,0%, Value: 0
+							268 checkbox Description: BUF: 1/3, 33,3%, Value: 0
+							269 checkbox Description: LA: 1/3, 33,3%, Value: 0
+							270 checkbox Description: MIA: 1/3, 33,3%, Value: 0
+							271 checkbox Description: ARI: 2/5, 40,0%, Value: 0
+							272 checkbox Description: CIN: 2/5, 40,0%, Value: 0
+							273 checkbox Description: DEN: 1/2, 50,0%, Value: 0
+							274 checkbox Description: NE: 1/2, 50,0%, Value: 0
+							275 checkbox Description: PIT: 1/2, 50,0%, Value: 0
+							276 checkbox Description: TB: 2/4, 50,0%, Value: 0
+							277 checkbox Description: KC: 3/5, 60,0%, Value: 0
+							278 checkbox Description: LAC: 2/3, 66,7%, Value: 0
+							279 checkbox Description: NYJ: 2/3, 66,7%, Value: 0
+							280 checkbox Description: PHI: 2/3, 66,7%, Value: 0
+							281 checkbox Description: SF: 2/3, 66,7%, Value: 0
+							282 checkbox Description: BAL: 3/4, 75,0%, Value: 0
+							283 checkbox Description: LV: 3/4, 75,0%, Value: 0
+							284 checkbox Description: DET: 4/5, 80,0%, Value: 0
+							285 checkbox Description: HOU: 4/5, 80,0%, Value: 0
+							286 checkbox Description: MIN: 4/5, 80,0%, Value: 0
+							287 checkbox Description: NO: 4/5, 80,0%, Value: 0
+							288 checkbox Description: NYG: 4/5, 80,0%, Value: 0
+							289 checkbox Description: CAR: 4/4, 100,0%, Value: 0
+							290 checkbox Description: CHI: 4/4, 100,0%, Value: 0
+							291 checkbox Description: DAL: 3/3, 100,0%, Value: 0
+							292 checkbox Description: IND: 3/3, 100,0%, Value: 0
+							293 checkbox Description: JAX: 2/2, 100,0%, Value: 0
+							294 checkbox Description: TEN: 1/1, 100,0%, Value: 0
+							295 checkbox Description: WAS: 3/3, 100,0%, Value: 0
+					296 text NYJ: 2/3, 66,7% TEN: 1/1, 100,0%
+					297 text Selecione um ponto ou consulte a lista com alvos maiores para toque.
+					298 button (collapsed) Consultar os 31 pontos e seus denominadores, Secondary Actions: Expand
+						299 text Consultar os
+						300 text 31
+						301 text  pontos e seus denominadores
+					302 container
+						303 text Fora da distribuição de taxas:  ATL — fonte presente, sem oportunidades elegíveis (0/0), sem taxa .
+					304 container
+						305 text Taxa conjunta da amostra:  70 / 108  ( 64,8% ), calculada pelas somas, sem média das taxas dos times.
+					306 text NYJ e TEN pertencem à referência; o piloto não é uma amostra independente. Registros observados, sem ajuste ou inferência de qualidade.
+			307 container Cotações arquivadas, ID: mr-market
+				308 heading Cotações arquivadas, Value: 2, ID: mr-market-title
+					309 text Cotações arquivadas
+				310 text Instante de captura e fornecedor desconhecidos. Estes valores não são identificados como linha pré-jogo ou fechamento.
+				311 definition list
+					312 container NYJ · moneyline
+						313 text NYJ · moneyline
+					314 text -102
+					315 container TEN · moneyline
+						316 text TEN · moneyline
+					317 text -118
+					318 container Spread · valor bruto
+						319 text Spread · valor bruto
+					320 text +1,5
+					321 container Total · valor bruto
+						322 text Total · valor bruto
+					323 text +39,5
+				324 text O sinal do spread é preservado como campo bruto, sem atribuição a um time. Sem favorito, edge, confiança ou recomendação.
+				325 button (collapsed) Origem das cotações, Secondary Actions: Expand
+					326 text Origem das cotações
+			327 container Método e procedência, ID: mr-method
+				328 heading Método e procedência, Value: 2, ID: mr-method-title
+					329 text Método e procedência
+				330 text Regras resumidas junto de cada unidade; fontes e cálculos completos abaixo. As comparações descrevem a amostra observada, sem demonstrar superioridade, estabilidade ou previsão.
+				331 text Não há semanas anteriores da temporada regular disponíveis neste recorte da W1. É um limite do recorte, não uma falha de fonte desta partida. W2 não compõe esta leitura.
+				332 button (collapsed) Consultar regras, exclusões e penalidades, Secondary Actions: Expand
+					333 text Consultar regras, exclusões e penalidades
+				334 button (collapsed) Consultar EPA, unidades originais e campanhas, Secondary Actions: Expand
+					335 text Consultar EPA, unidades originais e campanhas
+				336 button (collapsed) Consultar garantias, fontes e permissões, Secondary Actions: Expand
+					337 text Consultar garantias, fontes e permissões
+		338 text NFL Sideline · leitura local de registros preservados · sem previsão
+
+The focused UI element is 0 AXWebArea NYJ × TEN · Leitura do confronto · NFL Sideline, URL: 127.0.0.1:18102/?view=matchup-reading
