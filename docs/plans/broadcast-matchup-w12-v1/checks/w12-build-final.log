@@ -1,0 +1,52 @@
+vite v5.4.21 building for production...
+transforming...
+✓ 121 modules transformed.
+rendering chunks...
+computing gzip size...
+../w12-dist/index.html                                        0.38 kB │ gzip:  0.28 kB
+../w12-dist/assets/nyg-B7GEzpDk.png                           7.57 kB
+../w12-dist/assets/cin-DAWVRKmj.png                          26.63 kB
+../w12-dist/assets/was-BcwmxSCJ.png                          30.42 kB
+../w12-dist/assets/sea-Bs6vHzbc.png                          32.08 kB
+../w12-dist/assets/ne-CjQy7Z4T.png                           32.08 kB
+../w12-dist/assets/dal-DumH5f6I.png                          32.37 kB
+../w12-dist/assets/lac-G0yXcTHr.png                          32.85 kB
+../w12-dist/assets/hou-BTtnUu_J.png                          35.77 kB
+../w12-dist/assets/car-CGu1pDhv.png                          36.64 kB
+../w12-dist/assets/buf-C8E5u14Q.png                          38.00 kB
+../w12-dist/assets/la-Cnbeu6OW.png                           38.71 kB
+../w12-dist/assets/gb-Kq_Dl-1v.png                           39.19 kB
+../w12-dist/assets/kc-qEo7C-YT.png                           40.23 kB
+../w12-dist/assets/den-ZMwN9Kj8.png                          40.95 kB
+../w12-dist/assets/ari-SWmA0hjl.png                          41.99 kB
+../w12-dist/assets/ind-BjFZCeSx.png                          42.08 kB
+../w12-dist/assets/sf-VDD_-KP9.png                           48.70 kB
+../w12-dist/assets/ten-BjiV9AWL.png                          50.73 kB
+../w12-dist/assets/atl-BOcCry6n.png                          51.78 kB
+../w12-dist/assets/no-CRvSwJHd.png                           52.02 kB
+../w12-dist/assets/bal-B02a8qg4.png                          55.99 kB
+../w12-dist/assets/pit-CVCA5Q0Z.png                          56.62 kB
+../w12-dist/assets/det-DOjjcZuE.png                          57.47 kB
+../w12-dist/assets/mia-pvajL4QF.png                          64.41 kB
+../w12-dist/assets/min-DxdqfIZ7.png                          69.69 kB
+../w12-dist/assets/phi-DVPW4bAp.png                          70.33 kB
+../w12-dist/assets/lv-BdvUO8u-.png                           77.77 kB
+../w12-dist/assets/jax-DFcKN7bi.png                          78.81 kB
+../w12-dist/assets/chi-BAA7PtZp.png                          93.59 kB
+../w12-dist/assets/cle-CjWlBQek.png                          94.48 kB
+../w12-dist/assets/tb-B-m6i7aa.png                           96.11 kB
+../w12-dist/assets/nyj-No6xqtcN.png                         130.61 kB
+../w12-dist/assets/IND-helmet-Rtvul9IP.png                  181.09 kB
+../w12-dist/assets/BAL-helmet-CKInBePR.png                  247.95 kB
+../w12-dist/assets/DAL-helmet-CaTT8uPk.png                  257.20 kB
+../w12-dist/assets/NE-helmet-DxKOgsGB.png                   292.82 kB
+../w12-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf    371.62 kB
+../w12-dist/assets/Archivo-Variable-DuIT1y7V.ttf            658.60 kB
+../w12-dist/assets/IND-portrait-A7Ny9y06.png              1,430.16 kB
+../w12-dist/assets/DAL-portrait-6a4scUZR.png              3,538.53 kB
+../w12-dist/assets/NE-portrait-IJMRdLLJ.png               3,976.67 kB
+../w12-dist/assets/BAL-portrait-DefwyzYA.png              4,267.72 kB
+../w12-dist/assets/index-tHLCMllo.css                       136.27 kB │ gzip: 24.97 kB
+../w12-dist/assets/MatchupPage-BcYloJsb.js                   29.93 kB │ gzip:  9.95 kB
+../w12-dist/assets/index--hJBhz1H.js                        314.15 kB │ gzip: 97.92 kB
+✓ built in 606ms

@@ -1,0 +1,478 @@
+{
+  "bundleId": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "documents": 32,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 200,
+      "bytes": 13781,
+      "sha256": "f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_ARI_LAC",
+      "status": 200,
+      "bytes": 212184,
+      "sha256": "4cd59fd63b985849543279e89c63b3b64b122b7c6ec7fe7da34d2e835e484aed",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_ATL_PIT",
+      "status": 200,
+      "bytes": 191099,
+      "sha256": "54c9647411f8bdf4364bf14b5ce8eeae75e302ca731999710226b4f95fbd8f1c",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_BAL_IND",
+      "status": 200,
+      "bytes": 204318,
+      "sha256": "0ad3b7bb9b1f021d417b5d7182b8009c16df43d34c46a33736e5004c80b4e4c5",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_BUF_HOU",
+      "status": 200,
+      "bytes": 211277,
+      "sha256": "d2ee4d8932efedcc3d60aed67aa3c40002191d8ab65e50cde995ab5c05e898f0",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_CHI_CAR",
+      "status": 200,
+      "bytes": 218343,
+      "sha256": "4d8d88bed2215fdfc5d068d0d7930b367b89b8de7f794cf75c5cb2cbd0156d96",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_CLE_JAX",
+      "status": 200,
+      "bytes": 192970,
+      "sha256": "70039ffd79d69478e3d5b7121bbc59d4da84bd4a4fae79e8e654e9202a220cb5",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_DAL_NYG",
+      "status": 200,
+      "bytes": 211400,
+      "sha256": "50fcaa5b67a221194901b6473e4be3a437c7669f0371b6c79349aaa667ebb027",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_DEN_KC",
+      "status": 200,
+      "bytes": 206670,
+      "sha256": "f0f280b223b1b288404a8d4baa2b59323355e0f299afb6af737d8f578740823c",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_GB_MIN",
+      "status": 200,
+      "bytes": 216414,
+      "sha256": "d691161a4c11f66b1a6600564c9fb4b124085bc95bff4bfc50c4b5a5edbae72a",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_MIA_LV",
+      "status": 200,
+      "bytes": 205336,
+      "sha256": "ef8560773e5e42999a99cb1e291cc714f99a168c909b3a9dabd537adc7d4dfdc",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_NE_SEA",
+      "status": 200,
+      "bytes": 198591,
+      "sha256": "d7123a7c4f37f87612e87ea0ae80fbec268c55b45f9d7eb0177632aa50f50be3",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_NO_DET",
+      "status": 200,
+      "bytes": 226443,
+      "sha256": "178b9df1da301858ebbf3a9604130a3d2a0d966d77a3d8faa0225c6674c58f9e",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_NYJ_TEN",
+      "status": 200,
+      "bytes": 196599,
+      "sha256": "30410624d4feadfb320f9006772b98055e459824cd80353d1df75fe64fa6c91d",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_SF_LA",
+      "status": 200,
+      "bytes": 202908,
+      "sha256": "b0083e363cdee26cf6f3ae130dfb3bae9cd501b24bf4ae7cb69c2e7e70d5ca46",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_TB_CIN",
+      "status": 200,
+      "bytes": 214413,
+      "sha256": "6cfeb8a965f993b783661ac2ecd4b11ce883409d78ff7eb3712342440169e2fe",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_WAS_PHI",
+      "status": 200,
+      "bytes": 210442,
+      "sha256": "90be904bb9427192bd6d7faa960c162c428a90d111302c7a7238813c389e44b0",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_CAR_ATL",
+      "status": 200,
+      "bytes": 212117,
+      "sha256": "68cfcb8dff888c3f5ad2511a4be46d6c27aeacbe42a425a04081cc2be18e1361",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_CIN_HOU",
+      "status": 200,
+      "bytes": 207816,
+      "sha256": "48f2b41e9fc019ff4b72db42a762ee393ef0932dc5914765286396360fef39ff",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_CLE_TB",
+      "status": 200,
+      "bytes": 212092,
+      "sha256": "c44374318df0163a62f638fe86626be751a529c2b13008c608d73ab7eec5992a",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_DET_BUF",
+      "status": 200,
+      "bytes": 220419,
+      "sha256": "c3010e917546561d6bf77da6f538f09d8dbbfa3edcc33ba614e3de48e74272b0",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_GB_NYJ",
+      "status": 200,
+      "bytes": 210141,
+      "sha256": "df882fa49667ca5df14ed00c6006fd9e8c638ec6f8d2c06e5b829d7552c4976a",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_IND_KC",
+      "status": 200,
+      "bytes": 219460,
+      "sha256": "c3ea58c098790d3de6d48b3c1693868ccd4809151ae33dd974e3bfedf8acd6b7",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_JAX_DEN",
+      "status": 200,
+      "bytes": 207839,
+      "sha256": "ee5fe3f41a819581ee0f81b67a6c03d3b230da0ab68006d3dc6e037b8cc37f65",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_LV_LAC",
+      "status": 200,
+      "bytes": 201669,
+      "sha256": "2e3d2f5a69af389b31e5d40cadd6ec95222f4bd3e818d394bc55db36b8ef298a",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_MIA_SF",
+      "status": 200,
+      "bytes": 208762,
+      "sha256": "5c9433434050935b19d91151a9449ae288e804ab5a76f3904a0af82ef133d708",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_MIN_CHI",
+      "status": 200,
+      "bytes": 205074,
+      "sha256": "a172f88af86c3a8d11be86b8677b2b8b933a7d6e892e43ab1e6b0bad02fede56",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_NO_BAL",
+      "status": 200,
+      "bytes": 201879,
+      "sha256": "abe8009d02ca15a07d940367f29fc38c52886e5a23f6703f845168ba75cab625",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_NYG_LA",
+      "status": 200,
+      "bytes": 199569,
+      "sha256": "71b26e77f7bf13b7c9360dc2901edd6b1c8069197fb48b6fc65c5d39f4f4dae4",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_PHI_TEN",
+      "status": 200,
+      "bytes": 219915,
+      "sha256": "d113f4a4e93c9866577ce05919e85ea9c58488fe43dabc4bf5020913cb731f7c",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_PIT_NE",
+      "status": 200,
+      "bytes": 192426,
+      "sha256": "e138a2e95ac7689df41458932ab11f7ea6eb503a745e0214c03257d07ed0601d",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_SEA_ARI",
+      "status": 200,
+      "bytes": 211685,
+      "sha256": "cbd97a66c266fb9d90e99ee57890c6d303ebb15cca611731f036bf5b18f1b5cb",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_02_WAS_DAL",
+      "status": 200,
+      "bytes": 213565,
+      "sha256": "a7b05f07e77257dfdee590fa1c2322d2fccc41b3fb6d3a75b0840b5faa806ed5",
+      "exactBytes": true
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 200,
+      "bytes": 13781,
+      "sha256": "f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+      "exactBytes": true
+    },
+    {
+      "method": "POST",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "PUT",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "DELETE",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "OPTIONS",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "HEAD",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/?path=/tmp/file",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/../../private",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_NYJ_TEN/child",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_NYJ_TEN?x=1",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/2026_01_XXX_YYY",
+      "status": 404,
+      "bytes": 27,
+      "sha256": "6613242ee574b8145731d74f05594c06540328b67a416b4778d0b60a2ae12c93",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 409,
+      "bytes": 38,
+      "sha256": "04d6c1b5ebaf5badadf3556d0226a5d47084f305ad4462296f097d581534b0c3",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 403,
+      "bytes": 35,
+      "sha256": "593c3aa3e99188fbf9c81c70e6582f3c55b88fc8ae4d23a40f78ac16706b0bda",
+      "exactBytes": false
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-w12/",
+      "status": 417,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exactBytes": false
+    }
+  ]
+}

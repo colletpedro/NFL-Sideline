@@ -1,0 +1,1832 @@
+{
+  "bundleId": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "games": [
+    {
+      "gameId": "2026_01_ARI_LAC",
+      "campaigns": [
+        "2026_01_ARI_LAC:drive:1.0",
+        "2026_01_ARI_LAC:drive:5.0",
+        "2026_01_ARI_LAC:drive:7.0",
+        "2026_01_ARI_LAC:drive:9.0",
+        "2026_01_ARI_LAC:drive:15.0",
+        "2026_01_ARI_LAC:drive:2.0",
+        "2026_01_ARI_LAC:drive:6.0",
+        "2026_01_ARI_LAC:drive:10.0"
+      ],
+      "epa": [
+        "+0,144",
+        "−0,244"
+      ],
+      "epaTeams": [
+        "ARI",
+        "LAC"
+      ],
+      "heading": "ARI × LAC",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "26",
+        "14"
+      ],
+      "third": [
+        "2026_01_ARI_LAC:203",
+        "2026_01_ARI_LAC:1094",
+        "2026_01_ARI_LAC:1269",
+        "2026_01_ARI_LAC:3631",
+        "2026_01_ARI_LAC:527",
+        "2026_01_ARI_LAC:798",
+        "2026_01_ARI_LAC:2644",
+        "2026_01_ARI_LAC:3102",
+        "2026_01_ARI_LAC:3518",
+        "2026_01_ARI_LAC:3968",
+        "2026_01_ARI_LAC:2131",
+        "2026_01_ARI_LAC:2530",
+        "2026_01_ARI_LAC:132",
+        "2026_01_ARI_LAC:1197",
+        "2026_01_ARI_LAC:2369",
+        "2026_01_ARI_LAC:2804",
+        "2026_01_ARI_LAC:1619",
+        "2026_01_ARI_LAC:2977",
+        "2026_01_ARI_LAC:3200",
+        "2026_01_ARI_LAC:3849",
+        "2026_01_ARI_LAC:4070"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "campaigns": [
+        "2026_01_ATL_PIT:drive:7.0",
+        "2026_01_ATL_PIT:drive:9.0"
+      ],
+      "epa": [
+        "−0,321",
+        "−0,303"
+      ],
+      "epaTeams": [
+        "ATL",
+        "PIT"
+      ],
+      "heading": "ATL × PIT",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "13",
+        "20"
+      ],
+      "third": [
+        "2026_01_ATL_PIT:1569",
+        "2026_01_ATL_PIT:2561",
+        "2026_01_ATL_PIT:3689",
+        "2026_01_ATL_PIT:1399",
+        "2026_01_ATL_PIT:3146",
+        "2026_01_ATL_PIT:3404",
+        "2026_01_ATL_PIT:4146",
+        "2026_01_ATL_PIT:211",
+        "2026_01_ATL_PIT:4000",
+        "2026_01_ATL_PIT:122",
+        "2026_01_ATL_PIT:1200",
+        "2026_01_ATL_PIT:2778",
+        "2026_01_ATL_PIT:3873",
+        "2026_01_ATL_PIT:678",
+        "2026_01_ATL_PIT:895",
+        "2026_01_ATL_PIT:1931",
+        "2026_01_ATL_PIT:2305",
+        "2026_01_ATL_PIT:2683",
+        "2026_01_ATL_PIT:2984",
+        "2026_01_ATL_PIT:3282",
+        "2026_01_ATL_PIT:418",
+        "2026_01_ATL_PIT:1743",
+        "2026_01_ATL_PIT:2094",
+        "2026_01_ATL_PIT:2164"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_BAL_IND",
+      "campaigns": [
+        "2026_01_BAL_IND:drive:2.0",
+        "2026_01_BAL_IND:drive:4.0",
+        "2026_01_BAL_IND:drive:6.0",
+        "2026_01_BAL_IND:drive:21.0",
+        "2026_01_BAL_IND:drive:1.0",
+        "2026_01_BAL_IND:drive:13.0",
+        "2026_01_BAL_IND:drive:22.0"
+      ],
+      "epa": [
+        "+0,321",
+        "−0,241"
+      ],
+      "epaTeams": [
+        "BAL",
+        "IND"
+      ],
+      "heading": "BAL × IND",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "41",
+        "23"
+      ],
+      "third": [
+        "2026_01_BAL_IND:105",
+        "2026_01_BAL_IND:1927",
+        "2026_01_BAL_IND:2172",
+        "2026_01_BAL_IND:3218",
+        "2026_01_BAL_IND:3806",
+        "2026_01_BAL_IND:2729",
+        "2026_01_BAL_IND:3933",
+        "2026_01_BAL_IND:590",
+        "2026_01_BAL_IND:983",
+        "2026_01_BAL_IND:1166",
+        "2026_01_BAL_IND:2076",
+        "2026_01_BAL_IND:2508",
+        "2026_01_BAL_IND:2933",
+        "2026_01_BAL_IND:185",
+        "2026_01_BAL_IND:818",
+        "2026_01_BAL_IND:1323",
+        "2026_01_BAL_IND:1778",
+        "2026_01_BAL_IND:3093"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_BUF_HOU",
+      "campaigns": [
+        "2026_01_BUF_HOU:drive:7.0",
+        "2026_01_BUF_HOU:drive:15.0",
+        "2026_01_BUF_HOU:drive:17.0",
+        "2026_01_BUF_HOU:drive:4.0",
+        "2026_01_BUF_HOU:drive:6.0",
+        "2026_01_BUF_HOU:drive:10.0",
+        "2026_01_BUF_HOU:drive:16.0",
+        "2026_01_BUF_HOU:drive:22.0"
+      ],
+      "epa": [
+        "+0,252",
+        "+0,069"
+      ],
+      "epaTeams": [
+        "BUF",
+        "HOU"
+      ],
+      "heading": "BUF × HOU",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "36",
+        "31"
+      ],
+      "third": [
+        "2026_01_BUF_HOU:184",
+        "2026_01_BUF_HOU:771",
+        "2026_01_BUF_HOU:1298",
+        "2026_01_BUF_HOU:1785",
+        "2026_01_BUF_HOU:3000",
+        "2026_01_BUF_HOU:3144",
+        "2026_01_BUF_HOU:4287",
+        "2026_01_BUF_HOU:4392",
+        "2026_01_BUF_HOU:2456",
+        "2026_01_BUF_HOU:3388",
+        "2026_01_BUF_HOU:3465",
+        "2026_01_BUF_HOU:3694",
+        "2026_01_BUF_HOU:385",
+        "2026_01_BUF_HOU:2583",
+        "2026_01_BUF_HOU:2874",
+        "2026_01_BUF_HOU:3826",
+        "2026_01_BUF_HOU:4152",
+        "2026_01_BUF_HOU:313",
+        "2026_01_BUF_HOU:695",
+        "2026_01_BUF_HOU:1230",
+        "2026_01_BUF_HOU:2339",
+        "2026_01_BUF_HOU:2682",
+        "2026_01_BUF_HOU:3617",
+        "2026_01_BUF_HOU:3915",
+        "2026_01_BUF_HOU:4486"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_CHI_CAR",
+      "campaigns": [
+        "2026_01_CHI_CAR:drive:3.0",
+        "2026_01_CHI_CAR:drive:5.0",
+        "2026_01_CHI_CAR:drive:20.0",
+        "2026_01_CHI_CAR:drive:24.0",
+        "2026_01_CHI_CAR:drive:2.0",
+        "2026_01_CHI_CAR:drive:10.0",
+        "2026_01_CHI_CAR:drive:19.0",
+        "2026_01_CHI_CAR:drive:25.0"
+      ],
+      "epa": [
+        "+0,409",
+        "+0,182"
+      ],
+      "epaTeams": [
+        "CHI",
+        "CAR"
+      ],
+      "heading": "CHI × CAR",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "59",
+        "37"
+      ],
+      "third": [
+        "2026_01_CHI_CAR:988",
+        "2026_01_CHI_CAR:1511",
+        "2026_01_CHI_CAR:1790",
+        "2026_01_CHI_CAR:4004",
+        "2026_01_CHI_CAR:4180",
+        "2026_01_CHI_CAR:2614",
+        "2026_01_CHI_CAR:2852",
+        "2026_01_CHI_CAR:3570",
+        "2026_01_CHI_CAR:678",
+        "2026_01_CHI_CAR:3057",
+        "2026_01_CHI_CAR:3207",
+        "2026_01_CHI_CAR:3897",
+        "2026_01_CHI_CAR:4076",
+        "2026_01_CHI_CAR:378",
+        "2026_01_CHI_CAR:4850",
+        "2026_01_CHI_CAR:535",
+        "2026_01_CHI_CAR:1899",
+        "2026_01_CHI_CAR:2261",
+        "2026_01_CHI_CAR:2707",
+        "2026_01_CHI_CAR:812",
+        "2026_01_CHI_CAR:1140",
+        "2026_01_CHI_CAR:2143",
+        "2026_01_CHI_CAR:4350"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_CLE_JAX",
+      "campaigns": [
+        "2026_01_CLE_JAX:drive:13.0",
+        "2026_01_CLE_JAX:drive:15.0",
+        "2026_01_CLE_JAX:drive:4.0",
+        "2026_01_CLE_JAX:drive:8.0"
+      ],
+      "epa": [
+        "−0,184",
+        "+0,338"
+      ],
+      "epaTeams": [
+        "CLE",
+        "JAX"
+      ],
+      "heading": "CLE × JAX",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "10",
+        "34"
+      ],
+      "third": [
+        "2026_01_CLE_JAX:3084",
+        "2026_01_CLE_JAX:3262",
+        "2026_01_CLE_JAX:235",
+        "2026_01_CLE_JAX:1090",
+        "2026_01_CLE_JAX:1255",
+        "2026_01_CLE_JAX:1788",
+        "2026_01_CLE_JAX:2607",
+        "2026_01_CLE_JAX:475",
+        "2026_01_CLE_JAX:1472",
+        "2026_01_CLE_JAX:3399",
+        "2026_01_CLE_JAX:962",
+        "2026_01_CLE_JAX:1673",
+        "2026_01_CLE_JAX:2071",
+        "2026_01_CLE_JAX:2387",
+        "2026_01_CLE_JAX:2487",
+        "2026_01_CLE_JAX:349",
+        "2026_01_CLE_JAX:2785"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_DAL_NYG",
+      "campaigns": [
+        "2026_01_DAL_NYG:drive:5.0",
+        "2026_01_DAL_NYG:drive:11.0",
+        "2026_01_DAL_NYG:drive:13.0",
+        "2026_01_DAL_NYG:drive:2.0",
+        "2026_01_DAL_NYG:drive:8.0",
+        "2026_01_DAL_NYG:drive:10.0",
+        "2026_01_DAL_NYG:drive:12.0",
+        "2026_01_DAL_NYG:drive:14.0"
+      ],
+      "epa": [
+        "+0,221",
+        "+0,369"
+      ],
+      "epaTeams": [
+        "DAL",
+        "NYG"
+      ],
+      "heading": "DAL × NYG",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "20",
+        "28"
+      ],
+      "third": [
+        "2026_01_DAL_NYG:648",
+        "2026_01_DAL_NYG:1422",
+        "2026_01_DAL_NYG:224",
+        "2026_01_DAL_NYG:978",
+        "2026_01_DAL_NYG:3111",
+        "2026_01_DAL_NYG:3948",
+        "2026_01_DAL_NYG:571",
+        "2026_01_DAL_NYG:718",
+        "2026_01_DAL_NYG:1793",
+        "2026_01_DAL_NYG:1871",
+        "2026_01_DAL_NYG:2213",
+        "2026_01_DAL_NYG:3531",
+        "2026_01_DAL_NYG:414",
+        "2026_01_DAL_NYG:3399",
+        "2026_01_DAL_NYG:107",
+        "2026_01_DAL_NYG:2872",
+        "2026_01_DAL_NYG:3679",
+        "2026_01_DAL_NYG:1576",
+        "2026_01_DAL_NYG:1996",
+        "2026_01_DAL_NYG:3298",
+        "2026_01_DAL_NYG:3855"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_DEN_KC",
+      "campaigns": [
+        "2026_01_DEN_KC:drive:3.0",
+        "2026_01_DEN_KC:drive:16.0",
+        "2026_01_DEN_KC:drive:2.0",
+        "2026_01_DEN_KC:drive:10.0",
+        "2026_01_DEN_KC:drive:17.0",
+        "2026_01_DEN_KC:drive:19.0",
+        "2026_01_DEN_KC:drive:23.0"
+      ],
+      "epa": [
+        "−0,344",
+        "+0,164"
+      ],
+      "epaTeams": [
+        "DEN",
+        "KC"
+      ],
+      "heading": "DEN × KC",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "10",
+        "31"
+      ],
+      "third": [
+        "2026_01_DEN_KC:874",
+        "2026_01_DEN_KC:1601",
+        "2026_01_DEN_KC:170",
+        "2026_01_DEN_KC:273",
+        "2026_01_DEN_KC:1092",
+        "2026_01_DEN_KC:1467",
+        "2026_01_DEN_KC:1799",
+        "2026_01_DEN_KC:3500",
+        "2026_01_DEN_KC:3964",
+        "2026_01_DEN_KC:593",
+        "2026_01_DEN_KC:1301",
+        "2026_01_DEN_KC:2030",
+        "2026_01_DEN_KC:3338",
+        "2026_01_DEN_KC:1187",
+        "2026_01_DEN_KC:2794",
+        "2026_01_DEN_KC:2870",
+        "2026_01_DEN_KC:3183",
+        "2026_01_DEN_KC:3605",
+        "2026_01_DEN_KC:99",
+        "2026_01_DEN_KC:996",
+        "2026_01_DEN_KC:2430",
+        "2026_01_DEN_KC:2673",
+        "2026_01_DEN_KC:3078",
+        "2026_01_DEN_KC:3815",
+        "2026_01_DEN_KC:764",
+        "2026_01_DEN_KC:1398",
+        "2026_01_DEN_KC:1688",
+        "2026_01_DEN_KC:2227"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_GB_MIN",
+      "campaigns": [
+        "2026_01_GB_MIN:drive:6.0",
+        "2026_01_GB_MIN:drive:12.0",
+        "2026_01_GB_MIN:drive:16.0",
+        "2026_01_GB_MIN:drive:18.0",
+        "2026_01_GB_MIN:drive:24.0",
+        "2026_01_GB_MIN:drive:5.0",
+        "2026_01_GB_MIN:drive:17.0",
+        "2026_01_GB_MIN:drive:19.0",
+        "2026_01_GB_MIN:drive:21.0",
+        "2026_01_GB_MIN:drive:23.0"
+      ],
+      "epa": [
+        "−0,175",
+        "−0,038"
+      ],
+      "epaTeams": [
+        "GB",
+        "MIN"
+      ],
+      "heading": "GB × MIN",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "22",
+        "39"
+      ],
+      "third": [
+        "2026_01_GB_MIN:4183",
+        "2026_01_GB_MIN:4263",
+        "2026_01_GB_MIN:1257",
+        "2026_01_GB_MIN:2939",
+        "2026_01_GB_MIN:2695",
+        "2026_01_GB_MIN:3236",
+        "2026_01_GB_MIN:337",
+        "2026_01_GB_MIN:793",
+        "2026_01_GB_MIN:911",
+        "2026_01_GB_MIN:1544",
+        "2026_01_GB_MIN:1908",
+        "2026_01_GB_MIN:2521",
+        "2026_01_GB_MIN:3963",
+        "2026_01_GB_MIN:219",
+        "2026_01_GB_MIN:1026",
+        "2026_01_GB_MIN:1116",
+        "2026_01_GB_MIN:1446",
+        "2026_01_GB_MIN:1697",
+        "2026_01_GB_MIN:2418",
+        "2026_01_GB_MIN:2812",
+        "2026_01_GB_MIN:3754",
+        "2026_01_GB_MIN:454",
+        "2026_01_GB_MIN:705",
+        "2026_01_GB_MIN:1324",
+        "2026_01_GB_MIN:1827",
+        "2026_01_GB_MIN:3006"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_MIA_LV",
+      "campaigns": [
+        "2026_01_MIA_LV:drive:7.0",
+        "2026_01_MIA_LV:drive:9.0",
+        "2026_01_MIA_LV:drive:13.0",
+        "2026_01_MIA_LV:drive:2.0",
+        "2026_01_MIA_LV:drive:6.0",
+        "2026_01_MIA_LV:drive:10.0",
+        "2026_01_MIA_LV:drive:12.0"
+      ],
+      "epa": [
+        "−0,236",
+        "−0,039"
+      ],
+      "epaTeams": [
+        "MIA",
+        "LV"
+      ],
+      "heading": "MIA × LV",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "13",
+        "27"
+      ],
+      "third": [
+        "2026_01_MIA_LV:1519",
+        "2026_01_MIA_LV:1875",
+        "2026_01_MIA_LV:2714",
+        "2026_01_MIA_LV:158",
+        "2026_01_MIA_LV:2941",
+        "2026_01_MIA_LV:3146",
+        "2026_01_MIA_LV:381",
+        "2026_01_MIA_LV:546",
+        "2026_01_MIA_LV:721",
+        "2026_01_MIA_LV:3467",
+        "2026_01_MIA_LV:252",
+        "2026_01_MIA_LV:854",
+        "2026_01_MIA_LV:3371",
+        "2026_01_MIA_LV:3740",
+        "2026_01_MIA_LV:4097",
+        "2026_01_MIA_LV:959",
+        "2026_01_MIA_LV:1087",
+        "2026_01_MIA_LV:1752",
+        "2026_01_MIA_LV:2781",
+        "2026_01_MIA_LV:3055",
+        "2026_01_MIA_LV:3551",
+        "2026_01_MIA_LV:3861"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_NE_SEA",
+      "campaigns": [
+        "2026_01_NE_SEA:drive:6.0",
+        "2026_01_NE_SEA:drive:18.0",
+        "2026_01_NE_SEA:drive:13.0",
+        "2026_01_NE_SEA:drive:17.0"
+      ],
+      "epa": [
+        "−0,110",
+        "+0,066"
+      ],
+      "epaTeams": [
+        "NE",
+        "SEA"
+      ],
+      "heading": "NE × SEA",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "10",
+        "13"
+      ],
+      "third": [
+        "2026_01_NE_SEA:712",
+        "2026_01_NE_SEA:1504",
+        "2026_01_NE_SEA:3634",
+        "2026_01_NE_SEA:3908",
+        "2026_01_NE_SEA:557",
+        "2026_01_NE_SEA:3046",
+        "2026_01_NE_SEA:320",
+        "2026_01_NE_SEA:942",
+        "2026_01_NE_SEA:1046",
+        "2026_01_NE_SEA:1636",
+        "2026_01_NE_SEA:2009",
+        "2026_01_NE_SEA:4006",
+        "2026_01_NE_SEA:180",
+        "2026_01_NE_SEA:855",
+        "2026_01_NE_SEA:1755",
+        "2026_01_NE_SEA:1859",
+        "2026_01_NE_SEA:2550",
+        "2026_01_NE_SEA:3483",
+        "2026_01_NE_SEA:407",
+        "2026_01_NE_SEA:2120",
+        "2026_01_NE_SEA:2406",
+        "2026_01_NE_SEA:2863",
+        "2026_01_NE_SEA:3241",
+        "2026_01_NE_SEA:3785",
+        "2026_01_NE_SEA:1370",
+        "2026_01_NE_SEA:2307",
+        "2026_01_NE_SEA:2656"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_NO_DET",
+      "campaigns": [
+        "2026_01_NO_DET:drive:18.0",
+        "2026_01_NO_DET:drive:20.0",
+        "2026_01_NO_DET:drive:22.0",
+        "2026_01_NO_DET:drive:24.0",
+        "2026_01_NO_DET:drive:28.0",
+        "2026_01_NO_DET:drive:3.0",
+        "2026_01_NO_DET:drive:15.0",
+        "2026_01_NO_DET:drive:17.0",
+        "2026_01_NO_DET:drive:23.0",
+        "2026_01_NO_DET:drive:27.0"
+      ],
+      "epa": [
+        "−0,020",
+        "+<0,001"
+      ],
+      "epaTeams": [
+        "NO",
+        "DET"
+      ],
+      "heading": "NO × DET",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "30",
+        "31"
+      ],
+      "third": [
+        "2026_01_NO_DET:227",
+        "2026_01_NO_DET:301",
+        "2026_01_NO_DET:1888",
+        "2026_01_NO_DET:3022",
+        "2026_01_NO_DET:3089",
+        "2026_01_NO_DET:3776",
+        "2026_01_NO_DET:127",
+        "2026_01_NO_DET:2640",
+        "2026_01_NO_DET:3661",
+        "2026_01_NO_DET:4664",
+        "2026_01_NO_DET:2143",
+        "2026_01_NO_DET:2339",
+        "2026_01_NO_DET:3846",
+        "2026_01_NO_DET:3954",
+        "2026_01_NO_DET:404",
+        "2026_01_NO_DET:946",
+        "2026_01_NO_DET:2871",
+        "2026_01_NO_DET:3246",
+        "2026_01_NO_DET:787",
+        "2026_01_NO_DET:1249",
+        "2026_01_NO_DET:1621",
+        "2026_01_NO_DET:1692",
+        "2026_01_NO_DET:2793",
+        "2026_01_NO_DET:4397",
+        "2026_01_NO_DET:647",
+        "2026_01_NO_DET:1072",
+        "2026_01_NO_DET:1472",
+        "2026_01_NO_DET:2010",
+        "2026_01_NO_DET:4279"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "campaigns": [
+        "2026_01_NYJ_TEN:drive:1.0",
+        "2026_01_NYJ_TEN:drive:5.0",
+        "2026_01_NYJ_TEN:drive:10.0",
+        "2026_01_NYJ_TEN:drive:19.0"
+      ],
+      "epa": [
+        "+0,168",
+        "−0,119"
+      ],
+      "epaTeams": [
+        "NYJ",
+        "TEN"
+      ],
+      "heading": "NYJ × TEN",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "23",
+        "10"
+      ],
+      "third": [
+        "2026_01_NYJ_TEN:1118",
+        "2026_01_NYJ_TEN:1398",
+        "2026_01_NYJ_TEN:3113",
+        "2026_01_NYJ_TEN:411",
+        "2026_01_NYJ_TEN:491",
+        "2026_01_NYJ_TEN:1766",
+        "2026_01_NYJ_TEN:2516",
+        "2026_01_NYJ_TEN:1292",
+        "2026_01_NYJ_TEN:1510",
+        "2026_01_NYJ_TEN:2191",
+        "2026_01_NYJ_TEN:2904",
+        "2026_01_NYJ_TEN:3507",
+        "2026_01_NYJ_TEN:251",
+        "2026_01_NYJ_TEN:1649",
+        "2026_01_NYJ_TEN:2735",
+        "2026_01_NYJ_TEN:3322",
+        "2026_01_NYJ_TEN:3637",
+        "2026_01_NYJ_TEN:694",
+        "2026_01_NYJ_TEN:1029",
+        "2026_01_NYJ_TEN:3008",
+        "2026_01_NYJ_TEN:3227",
+        "2026_01_NYJ_TEN:3910"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_SF_LA",
+      "campaigns": [
+        "2026_01_SF_LA:drive:2.0",
+        "2026_01_SF_LA:drive:12.0",
+        "2026_01_SF_LA:drive:14.0",
+        "2026_01_SF_LA:drive:5.0",
+        "2026_01_SF_LA:drive:13.0",
+        "2026_01_SF_LA:drive:19.0"
+      ],
+      "epa": [
+        "+0,179",
+        "−0,265"
+      ],
+      "epaTeams": [
+        "SF",
+        "LA"
+      ],
+      "heading": "SF × LA",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "27",
+        "7"
+      ],
+      "third": [
+        "2026_01_SF_LA:425",
+        "2026_01_SF_LA:500",
+        "2026_01_SF_LA:785",
+        "2026_01_SF_LA:1101",
+        "2026_01_SF_LA:1897",
+        "2026_01_SF_LA:2170",
+        "2026_01_SF_LA:3526",
+        "2026_01_SF_LA:617",
+        "2026_01_SF_LA:2341",
+        "2026_01_SF_LA:2561",
+        "2026_01_SF_LA:3758",
+        "2026_01_SF_LA:221",
+        "2026_01_SF_LA:352",
+        "2026_01_SF_LA:3258",
+        "2026_01_SF_LA:3592",
+        "2026_01_SF_LA:108",
+        "2026_01_SF_LA:688",
+        "2026_01_SF_LA:1443",
+        "2026_01_SF_LA:1297",
+        "2026_01_SF_LA:1710",
+        "2026_01_SF_LA:3427"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_TB_CIN",
+      "campaigns": [
+        "2026_01_TB_CIN:drive:1.0",
+        "2026_01_TB_CIN:drive:6.0",
+        "2026_01_TB_CIN:drive:8.0",
+        "2026_01_TB_CIN:drive:17.0",
+        "2026_01_TB_CIN:drive:5.0",
+        "2026_01_TB_CIN:drive:7.0",
+        "2026_01_TB_CIN:drive:9.0",
+        "2026_01_TB_CIN:drive:16.0",
+        "2026_01_TB_CIN:drive:18.0"
+      ],
+      "epa": [
+        "−0,185",
+        "−0,002"
+      ],
+      "epaTeams": [
+        "TB",
+        "CIN"
+      ],
+      "heading": "TB × CIN",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "27",
+        "33"
+      ],
+      "third": [
+        "2026_01_TB_CIN:113",
+        "2026_01_TB_CIN:1666",
+        "2026_01_TB_CIN:2496",
+        "2026_01_TB_CIN:2577",
+        "2026_01_TB_CIN:861",
+        "2026_01_TB_CIN:1456",
+        "2026_01_TB_CIN:2062",
+        "2026_01_TB_CIN:3483",
+        "2026_01_TB_CIN:4136",
+        "2026_01_TB_CIN:248",
+        "2026_01_TB_CIN:317",
+        "2026_01_TB_CIN:2685",
+        "2026_01_TB_CIN:437",
+        "2026_01_TB_CIN:790",
+        "2026_01_TB_CIN:2805",
+        "2026_01_TB_CIN:3142",
+        "2026_01_TB_CIN:3571",
+        "2026_01_TB_CIN:545",
+        "2026_01_TB_CIN:679",
+        "2026_01_TB_CIN:3345",
+        "2026_01_TB_CIN:1304",
+        "2026_01_TB_CIN:2256",
+        "2026_01_TB_CIN:2377",
+        "2026_01_TB_CIN:3023"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_01_WAS_PHI",
+      "campaigns": [
+        "2026_01_WAS_PHI:drive:11.0",
+        "2026_01_WAS_PHI:drive:21.0",
+        "2026_01_WAS_PHI:drive:23.0",
+        "2026_01_WAS_PHI:drive:6.0",
+        "2026_01_WAS_PHI:drive:10.0",
+        "2026_01_WAS_PHI:drive:20.0"
+      ],
+      "epa": [
+        "+0,075",
+        "+0,071"
+      ],
+      "epaTeams": [
+        "WAS",
+        "PHI"
+      ],
+      "heading": "WAS × PHI",
+      "league": [
+        "Os ataques da liga na W1",
+        "Os ataques da liga na W1"
+      ],
+      "overflow": false,
+      "scores": [
+        "22",
+        "24"
+      ],
+      "third": [
+        "2026_01_WAS_PHI:722",
+        "2026_01_WAS_PHI:1791",
+        "2026_01_WAS_PHI:3954",
+        "2026_01_WAS_PHI:4071",
+        "2026_01_WAS_PHI:1466",
+        "2026_01_WAS_PHI:2041",
+        "2026_01_WAS_PHI:3105",
+        "2026_01_WAS_PHI:3423",
+        "2026_01_WAS_PHI:331",
+        "2026_01_WAS_PHI:1164",
+        "2026_01_WAS_PHI:2416",
+        "2026_01_WAS_PHI:3030",
+        "2026_01_WAS_PHI:3694",
+        "2026_01_WAS_PHI:131",
+        "2026_01_WAS_PHI:225",
+        "2026_01_WAS_PHI:497",
+        "2026_01_WAS_PHI:1049",
+        "2026_01_WAS_PHI:1359",
+        "2026_01_WAS_PHI:1698",
+        "2026_01_WAS_PHI:2321",
+        "2026_01_WAS_PHI:2651",
+        "2026_01_WAS_PHI:2893",
+        "2026_01_WAS_PHI:3346",
+        "2026_01_WAS_PHI:410",
+        "2026_01_WAS_PHI:629",
+        "2026_01_WAS_PHI:930",
+        "2026_01_WAS_PHI:2213",
+        "2026_01_WAS_PHI:2755",
+        "2026_01_WAS_PHI:3620"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_CAR_ATL",
+      "campaigns": [
+        "2026_02_CAR_ATL:drive:2.0",
+        "2026_02_CAR_ATL:drive:6.0",
+        "2026_02_CAR_ATL:drive:10.0",
+        "2026_02_CAR_ATL:drive:12.0",
+        "2026_02_CAR_ATL:drive:14.0",
+        "2026_02_CAR_ATL:drive:16.0"
+      ],
+      "epa": [
+        "+0,142",
+        "−0,473"
+      ],
+      "epaTeams": [
+        "CAR",
+        "ATL"
+      ],
+      "heading": "CAR × ATL",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "34",
+        "3"
+      ],
+      "third": [
+        "2026_02_CAR_ATL:388",
+        "2026_02_CAR_ATL:865",
+        "2026_02_CAR_ATL:3092",
+        "2026_02_CAR_ATL:1133",
+        "2026_02_CAR_ATL:1961",
+        "2026_02_CAR_ATL:3261",
+        "2026_02_CAR_ATL:1526",
+        "2026_02_CAR_ATL:1648",
+        "2026_02_CAR_ATL:2837",
+        "2026_02_CAR_ATL:549",
+        "2026_02_CAR_ATL:752",
+        "2026_02_CAR_ATL:1418",
+        "2026_02_CAR_ATL:2117",
+        "2026_02_CAR_ATL:3910",
+        "2026_02_CAR_ATL:658",
+        "2026_02_CAR_ATL:936",
+        "2026_02_CAR_ATL:1275",
+        "2026_02_CAR_ATL:2407",
+        "2026_02_CAR_ATL:2646",
+        "2026_02_CAR_ATL:3162",
+        "2026_02_CAR_ATL:3721",
+        "2026_02_CAR_ATL:4118",
+        "2026_02_CAR_ATL:1830",
+        "2026_02_CAR_ATL:3378",
+        "2026_02_CAR_ATL:3445",
+        "2026_02_CAR_ATL:3985",
+        "2026_02_CAR_ATL:4320"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_CIN_HOU",
+      "campaigns": [
+        "2026_02_CIN_HOU:drive:16.0",
+        "2026_02_CIN_HOU:drive:6.0",
+        "2026_02_CIN_HOU:drive:8.0",
+        "2026_02_CIN_HOU:drive:10.0",
+        "2026_02_CIN_HOU:drive:25.0"
+      ],
+      "epa": [
+        "−0,092",
+        "−0,247"
+      ],
+      "epaTeams": [
+        "CIN",
+        "HOU"
+      ],
+      "heading": "CIN × HOU",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "20",
+        "6"
+      ],
+      "third": [
+        "2026_02_CIN_HOU:873",
+        "2026_02_CIN_HOU:2824",
+        "2026_02_CIN_HOU:4455",
+        "2026_02_CIN_HOU:111",
+        "2026_02_CIN_HOU:1698",
+        "2026_02_CIN_HOU:3064",
+        "2026_02_CIN_HOU:3431",
+        "2026_02_CIN_HOU:3505",
+        "2026_02_CIN_HOU:3779",
+        "2026_02_CIN_HOU:521",
+        "2026_02_CIN_HOU:4535",
+        "2026_02_CIN_HOU:430",
+        "2026_02_CIN_HOU:724",
+        "2026_02_CIN_HOU:1351",
+        "2026_02_CIN_HOU:1625",
+        "2026_02_CIN_HOU:2198",
+        "2026_02_CIN_HOU:2586",
+        "2026_02_CIN_HOU:2945",
+        "2026_02_CIN_HOU:4036",
+        "2026_02_CIN_HOU:4325",
+        "2026_02_CIN_HOU:252",
+        "2026_02_CIN_HOU:1028",
+        "2026_02_CIN_HOU:1117",
+        "2026_02_CIN_HOU:1521",
+        "2026_02_CIN_HOU:2023",
+        "2026_02_CIN_HOU:2467",
+        "2026_02_CIN_HOU:3292",
+        "2026_02_CIN_HOU:3647",
+        "2026_02_CIN_HOU:3890",
+        "2026_02_CIN_HOU:4226",
+        "2026_02_CIN_HOU:4606",
+        "2026_02_CIN_HOU:4685"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_CLE_TB",
+      "campaigns": [
+        "2026_02_CLE_TB:drive:7.0",
+        "2026_02_CLE_TB:drive:15.0",
+        "2026_02_CLE_TB:drive:21.0",
+        "2026_02_CLE_TB:drive:12.0",
+        "2026_02_CLE_TB:drive:14.0",
+        "2026_02_CLE_TB:drive:20.0",
+        "2026_02_CLE_TB:drive:22.0"
+      ],
+      "epa": [
+        "+0,009",
+        "−0,146"
+      ],
+      "epaTeams": [
+        "CLE",
+        "TB"
+      ],
+      "heading": "CLE × TB",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "23",
+        "19"
+      ],
+      "third": [
+        "2026_02_CLE_TB:2489",
+        "2026_02_CLE_TB:3695",
+        "2026_02_CLE_TB:3772",
+        "2026_02_CLE_TB:3857",
+        "2026_02_CLE_TB:1905",
+        "2026_02_CLE_TB:2272",
+        "2026_02_CLE_TB:3449",
+        "2026_02_CLE_TB:3985",
+        "2026_02_CLE_TB:4106",
+        "2026_02_CLE_TB:2685",
+        "2026_02_CLE_TB:3572",
+        "2026_02_CLE_TB:671",
+        "2026_02_CLE_TB:110",
+        "2026_02_CLE_TB:481",
+        "2026_02_CLE_TB:788",
+        "2026_02_CLE_TB:1113",
+        "2026_02_CLE_TB:1488",
+        "2026_02_CLE_TB:1792",
+        "2026_02_CLE_TB:3262",
+        "2026_02_CLE_TB:285",
+        "2026_02_CLE_TB:911",
+        "2026_02_CLE_TB:1288",
+        "2026_02_CLE_TB:1368",
+        "2026_02_CLE_TB:1701",
+        "2026_02_CLE_TB:2036",
+        "2026_02_CLE_TB:2344",
+        "2026_02_CLE_TB:2885",
+        "2026_02_CLE_TB:3145",
+        "2026_02_CLE_TB:4220"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_DET_BUF",
+      "campaigns": [
+        "2026_02_DET_BUF:drive:6.0",
+        "2026_02_DET_BUF:drive:10.0",
+        "2026_02_DET_BUF:drive:11.0",
+        "2026_02_DET_BUF:drive:13.0",
+        "2026_02_DET_BUF:drive:1.0",
+        "2026_02_DET_BUF:drive:5.0",
+        "2026_02_DET_BUF:drive:7.0",
+        "2026_02_DET_BUF:drive:12.0",
+        "2026_02_DET_BUF:drive:16.0",
+        "2026_02_DET_BUF:drive:18.0"
+      ],
+      "epa": [
+        "+0,232",
+        "+0,435"
+      ],
+      "epaTeams": [
+        "DET",
+        "BUF"
+      ],
+      "heading": "DET × BUF",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "31",
+        "41"
+      ],
+      "third": [
+        "2026_02_DET_BUF:2483",
+        "2026_02_DET_BUF:3409",
+        "2026_02_DET_BUF:900",
+        "2026_02_DET_BUF:2821",
+        "2026_02_DET_BUF:2890",
+        "2026_02_DET_BUF:2962",
+        "2026_02_DET_BUF:3050",
+        "2026_02_DET_BUF:3687",
+        "2026_02_DET_BUF:1423",
+        "2026_02_DET_BUF:1904",
+        "2026_02_DET_BUF:518",
+        "2026_02_DET_BUF:2100",
+        "2026_02_DET_BUF:426",
+        "2026_02_DET_BUF:1357",
+        "2026_02_DET_BUF:2573",
+        "2026_02_DET_BUF:3332",
+        "2026_02_DET_BUF:3849",
+        "2026_02_DET_BUF:4217",
+        "2026_02_DET_BUF:640",
+        "2026_02_DET_BUF:3754",
+        "2026_02_DET_BUF:3954"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_GB_NYJ",
+      "campaigns": [
+        "2026_02_GB_NYJ:drive:7.0",
+        "2026_02_GB_NYJ:drive:18.0",
+        "2026_02_GB_NYJ:drive:20.0",
+        "2026_02_GB_NYJ:drive:24.0",
+        "2026_02_GB_NYJ:drive:8.0",
+        "2026_02_GB_NYJ:drive:13.0",
+        "2026_02_GB_NYJ:drive:17.0"
+      ],
+      "epa": [
+        "−0,222",
+        "−0,106"
+      ],
+      "epaTeams": [
+        "GB",
+        "NYJ"
+      ],
+      "heading": "GB × NYJ",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "20",
+        "17"
+      ],
+      "third": [
+        "2026_02_GB_NYJ:3089",
+        "2026_02_GB_NYJ:3626",
+        "2026_02_GB_NYJ:750",
+        "2026_02_GB_NYJ:2021",
+        "2026_02_GB_NYJ:4269",
+        "2026_02_GB_NYJ:932",
+        "2026_02_GB_NYJ:2100",
+        "2026_02_GB_NYJ:2778",
+        "2026_02_GB_NYJ:124",
+        "2026_02_GB_NYJ:636",
+        "2026_02_GB_NYJ:1809",
+        "2026_02_GB_NYJ:2677",
+        "2026_02_GB_NYJ:4119",
+        "2026_02_GB_NYJ:4373",
+        "2026_02_GB_NYJ:358",
+        "2026_02_GB_NYJ:487",
+        "2026_02_GB_NYJ:821",
+        "2026_02_GB_NYJ:1061",
+        "2026_02_GB_NYJ:1462",
+        "2026_02_GB_NYJ:1568",
+        "2026_02_GB_NYJ:1915",
+        "2026_02_GB_NYJ:2178",
+        "2026_02_GB_NYJ:2328",
+        "2026_02_GB_NYJ:3208",
+        "2026_02_GB_NYJ:3312",
+        "2026_02_GB_NYJ:3474",
+        "2026_02_GB_NYJ:4007",
+        "2026_02_GB_NYJ:4571"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_IND_KC",
+      "campaigns": [
+        "2026_02_IND_KC:drive:1.0",
+        "2026_02_IND_KC:drive:15.0",
+        "2026_02_IND_KC:drive:20.0",
+        "2026_02_IND_KC:drive:4.0",
+        "2026_02_IND_KC:drive:8.0",
+        "2026_02_IND_KC:drive:12.0",
+        "2026_02_IND_KC:drive:14.0",
+        "2026_02_IND_KC:drive:19.0"
+      ],
+      "epa": [
+        "+0,154",
+        "+0,229"
+      ],
+      "epaTeams": [
+        "IND",
+        "KC"
+      ],
+      "heading": "IND × KC",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "30",
+        "33"
+      ],
+      "third": [
+        "2026_02_IND_KC:109",
+        "2026_02_IND_KC:786",
+        "2026_02_IND_KC:1135",
+        "2026_02_IND_KC:2162",
+        "2026_02_IND_KC:2558",
+        "2026_02_IND_KC:4046",
+        "2026_02_IND_KC:4843",
+        "2026_02_IND_KC:282",
+        "2026_02_IND_KC:1993",
+        "2026_02_IND_KC:2739",
+        "2026_02_IND_KC:3402",
+        "2026_02_IND_KC:3529",
+        "2026_02_IND_KC:3868",
+        "2026_02_IND_KC:3945",
+        "2026_02_IND_KC:2379",
+        "2026_02_IND_KC:2884",
+        "2026_02_IND_KC:981",
+        "2026_02_IND_KC:1372",
+        "2026_02_IND_KC:4640",
+        "2026_02_IND_KC:508",
+        "2026_02_IND_KC:2489",
+        "2026_02_IND_KC:3149",
+        "2026_02_IND_KC:3745",
+        "2026_02_IND_KC:4241",
+        "2026_02_IND_KC:4432"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_JAX_DEN",
+      "campaigns": [
+        "2026_02_JAX_DEN:drive:6.0",
+        "2026_02_JAX_DEN:drive:11.0",
+        "2026_02_JAX_DEN:drive:7.0",
+        "2026_02_JAX_DEN:drive:9.0",
+        "2026_02_JAX_DEN:drive:14.0",
+        "2026_02_JAX_DEN:drive:16.0",
+        "2026_02_JAX_DEN:drive:18.0"
+      ],
+      "epa": [
+        "−0,048",
+        "+0,124"
+      ],
+      "epaTeams": [
+        "JAX",
+        "DEN"
+      ],
+      "heading": "JAX × DEN",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "13",
+        "20"
+      ],
+      "third": [
+        "2026_02_JAX_DEN:239",
+        "2026_02_JAX_DEN:609",
+        "2026_02_JAX_DEN:946",
+        "2026_02_JAX_DEN:853",
+        "2026_02_JAX_DEN:1281",
+        "2026_02_JAX_DEN:1401",
+        "2026_02_JAX_DEN:2459",
+        "2026_02_JAX_DEN:3761",
+        "2026_02_JAX_DEN:2222",
+        "2026_02_JAX_DEN:2337",
+        "2026_02_JAX_DEN:2811",
+        "2026_02_JAX_DEN:2588",
+        "2026_02_JAX_DEN:349",
+        "2026_02_JAX_DEN:673",
+        "2026_02_JAX_DEN:1521",
+        "2026_02_JAX_DEN:3205",
+        "2026_02_JAX_DEN:3275",
+        "2026_02_JAX_DEN:3665",
+        "2026_02_JAX_DEN:130",
+        "2026_02_JAX_DEN:503",
+        "2026_02_JAX_DEN:1798",
+        "2026_02_JAX_DEN:2984"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_LV_LAC",
+      "campaigns": [
+        "2026_02_LV_LAC:drive:6.0",
+        "2026_02_LV_LAC:drive:16.0",
+        "2026_02_LV_LAC:drive:22.0",
+        "2026_02_LV_LAC:drive:9.0",
+        "2026_02_LV_LAC:drive:15.0"
+      ],
+      "epa": [
+        "−0,096",
+        "−0,261"
+      ],
+      "epaTeams": [
+        "LV",
+        "LAC"
+      ],
+      "heading": "LV × LAC",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "26",
+        "14"
+      ],
+      "third": [
+        "2026_02_LV_LAC:656",
+        "2026_02_LV_LAC:857",
+        "2026_02_LV_LAC:3502",
+        "2026_02_LV_LAC:4121",
+        "2026_02_LV_LAC:223",
+        "2026_02_LV_LAC:1828",
+        "2026_02_LV_LAC:1901",
+        "2026_02_LV_LAC:3404",
+        "2026_02_LV_LAC:3010",
+        "2026_02_LV_LAC:3878",
+        "2026_02_LV_LAC:756",
+        "2026_02_LV_LAC:2375",
+        "2026_02_LV_LAC:354",
+        "2026_02_LV_LAC:1736",
+        "2026_02_LV_LAC:2051",
+        "2026_02_LV_LAC:2230",
+        "2026_02_LV_LAC:2579",
+        "2026_02_LV_LAC:2782",
+        "2026_02_LV_LAC:3183",
+        "2026_02_LV_LAC:482",
+        "2026_02_LV_LAC:559",
+        "2026_02_LV_LAC:1069",
+        "2026_02_LV_LAC:1334",
+        "2026_02_LV_LAC:3294",
+        "2026_02_LV_LAC:3705",
+        "2026_02_LV_LAC:4030"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_MIA_SF",
+      "campaigns": [
+        "2026_02_MIA_SF:drive:3.0",
+        "2026_02_MIA_SF:drive:5.0",
+        "2026_02_MIA_SF:drive:2.0",
+        "2026_02_MIA_SF:drive:4.0",
+        "2026_02_MIA_SF:drive:6.0",
+        "2026_02_MIA_SF:drive:8.0",
+        "2026_02_MIA_SF:drive:10.0"
+      ],
+      "epa": [
+        "−0,001",
+        "+0,460"
+      ],
+      "epaTeams": [
+        "MIA",
+        "SF"
+      ],
+      "heading": "MIA × SF",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "13",
+        "35"
+      ],
+      "third": [
+        "2026_02_MIA_SF:172",
+        "2026_02_MIA_SF:1005",
+        "2026_02_MIA_SF:2360",
+        "2026_02_MIA_SF:932",
+        "2026_02_MIA_SF:1677",
+        "2026_02_MIA_SF:3614",
+        "2026_02_MIA_SF:470",
+        "2026_02_MIA_SF:544",
+        "2026_02_MIA_SF:3030",
+        "2026_02_MIA_SF:3104",
+        "2026_02_MIA_SF:272",
+        "2026_02_MIA_SF:785",
+        "2026_02_MIA_SF:1090",
+        "2026_02_MIA_SF:1599",
+        "2026_02_MIA_SF:1807",
+        "2026_02_MIA_SF:2104",
+        "2026_02_MIA_SF:2554",
+        "2026_02_MIA_SF:2765",
+        "2026_02_MIA_SF:3251",
+        "2026_02_MIA_SF:3369",
+        "2026_02_MIA_SF:2235",
+        "2026_02_MIA_SF:3523"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_MIN_CHI",
+      "campaigns": [
+        "2026_02_MIN_CHI:drive:1.0",
+        "2026_02_MIN_CHI:drive:11.0",
+        "2026_02_MIN_CHI:drive:17.0",
+        "2026_02_MIN_CHI:drive:19.0"
+      ],
+      "epa": [
+        "−0,078",
+        "−0,125"
+      ],
+      "epaTeams": [
+        "MIN",
+        "CHI"
+      ],
+      "heading": "MIN × CHI",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "9",
+        "3"
+      ],
+      "third": [
+        "2026_02_MIN_CHI:943",
+        "2026_02_MIN_CHI:1228",
+        "2026_02_MIN_CHI:2519",
+        "2026_02_MIN_CHI:407",
+        "2026_02_MIN_CHI:3347",
+        "2026_02_MIN_CHI:4024",
+        "2026_02_MIN_CHI:168",
+        "2026_02_MIN_CHI:238",
+        "2026_02_MIN_CHI:1148",
+        "2026_02_MIN_CHI:3556",
+        "2026_02_MIN_CHI:1439",
+        "2026_02_MIN_CHI:1567",
+        "2026_02_MIN_CHI:2622",
+        "2026_02_MIN_CHI:3452",
+        "2026_02_MIN_CHI:1317",
+        "2026_02_MIN_CHI:1952",
+        "2026_02_MIN_CHI:2846",
+        "2026_02_MIN_CHI:3123",
+        "2026_02_MIN_CHI:3774",
+        "2026_02_MIN_CHI:543",
+        "2026_02_MIN_CHI:860",
+        "2026_02_MIN_CHI:1060",
+        "2026_02_MIN_CHI:1803",
+        "2026_02_MIN_CHI:2336",
+        "2026_02_MIN_CHI:2697",
+        "2026_02_MIN_CHI:3011",
+        "2026_02_MIN_CHI:3244"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_NO_BAL",
+      "campaigns": [
+        "2026_02_NO_BAL:drive:6.0",
+        "2026_02_NO_BAL:drive:15.0",
+        "2026_02_NO_BAL:drive:3.0",
+        "2026_02_NO_BAL:drive:10.0"
+      ],
+      "epa": [
+        "+0,135",
+        "+0,116"
+      ],
+      "epaTeams": [
+        "NO",
+        "BAL"
+      ],
+      "heading": "NO × BAL",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "24",
+        "17"
+      ],
+      "third": [
+        "2026_02_NO_BAL:194",
+        "2026_02_NO_BAL:263",
+        "2026_02_NO_BAL:3659",
+        "2026_02_NO_BAL:3862",
+        "2026_02_NO_BAL:561",
+        "2026_02_NO_BAL:3405",
+        "2026_02_NO_BAL:4071",
+        "2026_02_NO_BAL:2207",
+        "2026_02_NO_BAL:3170",
+        "2026_02_NO_BAL:3565",
+        "2026_02_NO_BAL:107",
+        "2026_02_NO_BAL:380",
+        "2026_02_NO_BAL:2436",
+        "2026_02_NO_BAL:808",
+        "2026_02_NO_BAL:921",
+        "2026_02_NO_BAL:1271",
+        "2026_02_NO_BAL:1341",
+        "2026_02_NO_BAL:1467",
+        "2026_02_NO_BAL:2105",
+        "2026_02_NO_BAL:2828",
+        "2026_02_NO_BAL:3731",
+        "2026_02_NO_BAL:1113",
+        "2026_02_NO_BAL:2681",
+        "2026_02_NO_BAL:2955"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_NYG_LA",
+      "campaigns": [
+        "2026_02_NYG_LA:drive:7.0",
+        "2026_02_NYG_LA:drive:11.0",
+        "2026_02_NYG_LA:drive:6.0",
+        "2026_02_NYG_LA:drive:15.0",
+        "2026_02_NYG_LA:drive:19.0",
+        "2026_02_NYG_LA:drive:21.0"
+      ],
+      "epa": [
+        "−0,429",
+        "+0,290"
+      ],
+      "epaTeams": [
+        "NYG",
+        "LA"
+      ],
+      "heading": "NYG × LA",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "6",
+        "28"
+      ],
+      "third": [
+        "2026_02_NYG_LA:112",
+        "2026_02_NYG_LA:409",
+        "2026_02_NYG_LA:1397",
+        "2026_02_NYG_LA:1870",
+        "2026_02_NYG_LA:719",
+        "2026_02_NYG_LA:3298",
+        "2026_02_NYG_LA:3835",
+        "2026_02_NYG_LA:315",
+        "2026_02_NYG_LA:1224",
+        "2026_02_NYG_LA:215",
+        "2026_02_NYG_LA:614",
+        "2026_02_NYG_LA:1003",
+        "2026_02_NYG_LA:1527",
+        "2026_02_NYG_LA:1692",
+        "2026_02_NYG_LA:2371",
+        "2026_02_NYG_LA:2713",
+        "2026_02_NYG_LA:2783",
+        "2026_02_NYG_LA:3146",
+        "2026_02_NYG_LA:3634",
+        "2026_02_NYG_LA:1147",
+        "2026_02_NYG_LA:2194",
+        "2026_02_NYG_LA:3001"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_PHI_TEN",
+      "campaigns": [
+        "2026_02_PHI_TEN:drive:2.0",
+        "2026_02_PHI_TEN:drive:4.0",
+        "2026_02_PHI_TEN:drive:6.0",
+        "2026_02_PHI_TEN:drive:16.0",
+        "2026_02_PHI_TEN:drive:3.0",
+        "2026_02_PHI_TEN:drive:7.0",
+        "2026_02_PHI_TEN:drive:11.0",
+        "2026_02_PHI_TEN:drive:15.0"
+      ],
+      "epa": [
+        "+0,039",
+        "+0,075"
+      ],
+      "epaTeams": [
+        "PHI",
+        "TEN"
+      ],
+      "heading": "PHI × TEN",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "24",
+        "20"
+      ],
+      "third": [
+        "2026_02_PHI_TEN:3218",
+        "2026_02_PHI_TEN:1074",
+        "2026_02_PHI_TEN:2773",
+        "2026_02_PHI_TEN:2839",
+        "2026_02_PHI_TEN:293",
+        "2026_02_PHI_TEN:395",
+        "2026_02_PHI_TEN:464",
+        "2026_02_PHI_TEN:1449",
+        "2026_02_PHI_TEN:2421",
+        "2026_02_PHI_TEN:3906",
+        "2026_02_PHI_TEN:4031",
+        "2026_02_PHI_TEN:611",
+        "2026_02_PHI_TEN:2624",
+        "2026_02_PHI_TEN:223",
+        "2026_02_PHI_TEN:539",
+        "2026_02_PHI_TEN:848",
+        "2026_02_PHI_TEN:1346",
+        "2026_02_PHI_TEN:1534",
+        "2026_02_PHI_TEN:2211",
+        "2026_02_PHI_TEN:2497",
+        "2026_02_PHI_TEN:2958",
+        "2026_02_PHI_TEN:3296",
+        "2026_02_PHI_TEN:3436",
+        "2026_02_PHI_TEN:115",
+        "2026_02_PHI_TEN:1161",
+        "2026_02_PHI_TEN:1800",
+        "2026_02_PHI_TEN:1982",
+        "2026_02_PHI_TEN:2312",
+        "2026_02_PHI_TEN:3126",
+        "2026_02_PHI_TEN:3676",
+        "2026_02_PHI_TEN:3755"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_PIT_NE",
+      "campaigns": [
+        "2026_02_PIT_NE:drive:20.0",
+        "2026_02_PIT_NE:drive:6.0"
+      ],
+      "epa": [
+        "−0,356",
+        "−0,070"
+      ],
+      "epaTeams": [
+        "PIT",
+        "NE"
+      ],
+      "heading": "PIT × NE",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "3",
+        "20"
+      ],
+      "third": [
+        "2026_02_PIT_NE:2005",
+        "2026_02_PIT_NE:2821",
+        "2026_02_PIT_NE:485",
+        "2026_02_PIT_NE:818",
+        "2026_02_PIT_NE:2721",
+        "2026_02_PIT_NE:353",
+        "2026_02_PIT_NE:711",
+        "2026_02_PIT_NE:1136",
+        "2026_02_PIT_NE:2485",
+        "2026_02_PIT_NE:3273",
+        "2026_02_PIT_NE:3926",
+        "2026_02_PIT_NE:1539",
+        "2026_02_PIT_NE:2246",
+        "2026_02_PIT_NE:2630",
+        "2026_02_PIT_NE:107",
+        "2026_02_PIT_NE:1227",
+        "2026_02_PIT_NE:1357",
+        "2026_02_PIT_NE:1792",
+        "2026_02_PIT_NE:1013",
+        "2026_02_PIT_NE:1901",
+        "2026_02_PIT_NE:2975",
+        "2026_02_PIT_NE:3430",
+        "2026_02_PIT_NE:3826",
+        "2026_02_PIT_NE:4019"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_SEA_ARI",
+      "campaigns": [
+        "2026_02_SEA_ARI:drive:10.0",
+        "2026_02_SEA_ARI:drive:13.0",
+        "2026_02_SEA_ARI:drive:15.0",
+        "2026_02_SEA_ARI:drive:17.0",
+        "2026_02_SEA_ARI:drive:19.0",
+        "2026_02_SEA_ARI:drive:5.0"
+      ],
+      "epa": [
+        "+0,134",
+        "−0,325"
+      ],
+      "epaTeams": [
+        "SEA",
+        "ARI"
+      ],
+      "heading": "SEA × ARI",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "31",
+        "7"
+      ],
+      "third": [
+        "2026_02_SEA_ARI:1536",
+        "2026_02_SEA_ARI:1619",
+        "2026_02_SEA_ARI:3420",
+        "2026_02_SEA_ARI:3721",
+        "2026_02_SEA_ARI:110",
+        "2026_02_SEA_ARI:320",
+        "2026_02_SEA_ARI:1390",
+        "2026_02_SEA_ARI:3286",
+        "2026_02_SEA_ARI:3178",
+        "2026_02_SEA_ARI:389",
+        "2026_02_SEA_ARI:1048",
+        "2026_02_SEA_ARI:1740",
+        "2026_02_SEA_ARI:1858",
+        "2026_02_SEA_ARI:2839",
+        "2026_02_SEA_ARI:473",
+        "2026_02_SEA_ARI:1286",
+        "2026_02_SEA_ARI:2095",
+        "2026_02_SEA_ARI:2310",
+        "2026_02_SEA_ARI:2527",
+        "2026_02_SEA_ARI:2640",
+        "2026_02_SEA_ARI:3527",
+        "2026_02_SEA_ARI:3644",
+        "2026_02_SEA_ARI:805",
+        "2026_02_SEA_ARI:2418",
+        "2026_02_SEA_ARI:2767"
+      ],
+      "width": 320
+    },
+    {
+      "gameId": "2026_02_WAS_DAL",
+      "campaigns": [
+        "2026_02_WAS_DAL:drive:4.0",
+        "2026_02_WAS_DAL:drive:6.0",
+        "2026_02_WAS_DAL:drive:8.0",
+        "2026_02_WAS_DAL:drive:15.0",
+        "2026_02_WAS_DAL:drive:1.0",
+        "2026_02_WAS_DAL:drive:3.0",
+        "2026_02_WAS_DAL:drive:5.0",
+        "2026_02_WAS_DAL:drive:12.0"
+      ],
+      "epa": [
+        "+0,069",
+        "+0,227"
+      ],
+      "epaTeams": [
+        "WAS",
+        "DAL"
+      ],
+      "heading": "WAS × DAL",
+      "league": [
+        "Os ataques da liga na W2",
+        "Os ataques da liga na W2"
+      ],
+      "overflow": false,
+      "scores": [
+        "20",
+        "37"
+      ],
+      "third": [
+        "2026_02_WAS_DAL:979",
+        "2026_02_WAS_DAL:1558",
+        "2026_02_WAS_DAL:1868",
+        "2026_02_WAS_DAL:2123",
+        "2026_02_WAS_DAL:2215",
+        "2026_02_WAS_DAL:3475",
+        "2026_02_WAS_DAL:114",
+        "2026_02_WAS_DAL:1299",
+        "2026_02_WAS_DAL:2686",
+        "2026_02_WAS_DAL:3810",
+        "2026_02_WAS_DAL:3987",
+        "2026_02_WAS_DAL:398",
+        "2026_02_WAS_DAL:2003",
+        "2026_02_WAS_DAL:3586",
+        "2026_02_WAS_DAL:4210",
+        "2026_02_WAS_DAL:527",
+        "2026_02_WAS_DAL:652",
+        "2026_02_WAS_DAL:3259",
+        "2026_02_WAS_DAL:3354",
+        "2026_02_WAS_DAL:880",
+        "2026_02_WAS_DAL:1082",
+        "2026_02_WAS_DAL:2402",
+        "2026_02_WAS_DAL:3149",
+        "2026_02_WAS_DAL:1764",
+        "2026_02_WAS_DAL:2567"
+      ],
+      "width": 320
+    }
+  ]
+}

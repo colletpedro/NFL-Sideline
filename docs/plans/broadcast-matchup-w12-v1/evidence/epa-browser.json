@@ -1,0 +1,164 @@
+[
+  {
+    "width": 1440,
+    "name": "Geral",
+    "denominators": [
+      "60 jogadas com EPA válido",
+      "49 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.2/0.4",
+      "-0.2/0.4"
+    ],
+    "foundation": "general",
+    "overflow": false,
+    "values": [
+      "+0,168",
+      "−0,119"
+    ]
+  },
+  {
+    "width": 1440,
+    "name": "Passe",
+    "denominators": [
+      "24 jogadas com EPA válido",
+      "35 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.4/0.6",
+      "-0.4/0.6"
+    ],
+    "foundation": "classified_pass",
+    "overflow": false,
+    "values": [
+      "+0,406",
+      "−0,210"
+    ]
+  },
+  {
+    "width": 1440,
+    "name": "Corrida",
+    "denominators": [
+      "36 jogadas com EPA válido",
+      "14 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.2/0.4",
+      "-0.2/0.4"
+    ],
+    "foundation": "classified_rush",
+    "overflow": false,
+    "values": [
+      "+0,010",
+      "+0,110"
+    ]
+  },
+  {
+    "width": 390,
+    "name": "Geral",
+    "denominators": [
+      "60 jogadas com EPA válido",
+      "49 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.2/0.4",
+      "-0.2/0.4"
+    ],
+    "foundation": "general",
+    "overflow": false,
+    "values": [
+      "+0,168",
+      "−0,119"
+    ]
+  },
+  {
+    "width": 390,
+    "name": "Passe",
+    "denominators": [
+      "24 jogadas com EPA válido",
+      "35 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.4/0.6",
+      "-0.4/0.6"
+    ],
+    "foundation": "classified_pass",
+    "overflow": false,
+    "values": [
+      "+0,406",
+      "−0,210"
+    ]
+  },
+  {
+    "width": 390,
+    "name": "Corrida",
+    "denominators": [
+      "36 jogadas com EPA válido",
+      "14 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.2/0.4",
+      "-0.2/0.4"
+    ],
+    "foundation": "classified_rush",
+    "overflow": false,
+    "values": [
+      "+0,010",
+      "+0,110"
+    ]
+  },
+  {
+    "width": 320,
+    "name": "Geral",
+    "denominators": [
+      "60 jogadas com EPA válido",
+      "49 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.2/0.4",
+      "-0.2/0.4"
+    ],
+    "foundation": "general",
+    "overflow": false,
+    "values": [
+      "+0,168",
+      "−0,119"
+    ]
+  },
+  {
+    "width": 320,
+    "name": "Passe",
+    "denominators": [
+      "24 jogadas com EPA válido",
+      "35 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.4/0.6",
+      "-0.4/0.6"
+    ],
+    "foundation": "classified_pass",
+    "overflow": false,
+    "values": [
+      "+0,406",
+      "−0,210"
+    ]
+  },
+  {
+    "width": 320,
+    "name": "Corrida",
+    "denominators": [
+      "36 jogadas com EPA válido",
+      "14 jogadas com EPA válido"
+    ],
+    "domains": [
+      "-0.2/0.4",
+      "-0.2/0.4"
+    ],
+    "foundation": "classified_rush",
+    "overflow": false,
+    "values": [
+      "+0,010",
+      "+0,110"
+    ]
+  }
+]

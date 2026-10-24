@@ -39,7 +39,7 @@ Publicação usa estágio temporário irmão, validação completa e rename excl
 
 Estados independentes: AVAILABLE (razão definida); NO_OPPORTUNITIES (fonte presente, 0/0, sem taxa); INSUFFICIENT (registros ambíguos/insuficientes, sem taxa); SOURCE_ABSENT (sem fonte, sem número substituto). Permissão individual é preservada mesmo se a comparação for recusada. Não se aplica mínimo universal de amostra. Ausência não muda jogo/semana/fundamento ou usa o piloto.
 
-`temporalContext`: retrospectiva do jogo. W1 tem NOT_APPLICABLE para semanas regulares anteriores no recorte; W2 tem OUT_OF_SCOPE porque a página descreve somente aquele jogo. Nada disso prova conhecimento pré-kickoff. Completude, cobertura esperada, modelo e disponibilidade histórica UNKNOWN. Mercado usa somente campos existentes do schedule, origem/hash e captura/fornecedor desconhecidos; spread bruto sem atribuição e sem nomear fechamento/pré-jogo.
+`temporalContext`: retrospectiva do jogo. `otherGamesContextAllowed=false` restringe a composição temporal com outros jogos, sem proibir a referência transversal da mesma semana (`referenceWeeks` explícito). W1 tem NOT_APPLICABLE para semanas regulares anteriores no recorte; W2 tem OUT_OF_SCOPE porque a página descreve somente aquele jogo. Nada disso prova conhecimento pré-kickoff. Completude, cobertura esperada, modelo e disponibilidade histórica UNKNOWN. Mercado usa somente campos existentes do schedule, origem/hash e captura/fornecedor desconhecidos; spread bruto sem atribuição e sem nomear fechamento/pré-jogo.
 
 ## URLs e calendário
 
@@ -49,7 +49,7 @@ O calendário reutiliza Discovery, GameSearch, busca, filtros e semanas existent
 
 ## Transporte próprio
 
-Vite `vite.w12.config.ts`, root broadcast-journey com entry exclusiva, somente 127.0.0.1:18104, strictPort, cors:false, envFile:false e envPrefix:[]. `NFL_W12_CONFIG` é configuração do operador com configVersion/path absoluto/expectedBundleId; não é VITE_* nem input do navegador.
+Vite `vite.w12.config.ts`, root broadcast-journey com entry exclusiva reescrita antes da análise do HTML (`transformIndexHtml.order=pre`), somente 127.0.0.1:18104, strictPort, cors:false, envFile:false e envPrefix:[]. `NFL_W12_CONFIG` é configuração do operador com configVersion/path absoluto/expectedBundleId; não é VITE_* nem input do navegador.
 
 Startup Python executa reader integral antes de disponibilizar; Node valida hashes/identidade de índice/documentos e congela bytes em memória. Falha de fonte mantém a fronteira 503, sem fallback. `GET /__matchup-w12/` entrega índice; `GET /__matchup-w12/GAME_ID` só entrega documentos do inventário validado. Corpo é byte exato do arquivo, sem envelope. Sem consulta por path/query ou releitura por requisição.
 

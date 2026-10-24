@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "name": "lint",
+      "command": [
+        "npm",
+        "--prefix",
+        "web-ui",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "type-journey",
+      "command": [
+        "web-ui/node_modules/.bin/tsc",
+        "-p",
+        "web-ui/tsconfig.journey.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "type-matchup",
+      "command": [
+        "web-ui/node_modules/.bin/tsc",
+        "-p",
+        "web-ui/tsconfig.matchup.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "type-w12",
+      "command": [
+        "web-ui/node_modules/.bin/tsc",
+        "-p",
+        "web-ui/tsconfig.w12.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "journey-build",
+      "command": [
+        "npm",
+        "--prefix",
+        "web-ui",
+        "run",
+        "journey:build"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "matchup-build",
+      "command": [
+        "web-ui/node_modules/.bin/vite",
+        "build",
+        "--config",
+        "web-ui/vite.matchup.config.ts"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "w12-build",
+      "command": [
+        "web-ui/node_modules/.bin/vite",
+        "build",
+        "--config",
+        "web-ui/vite.w12.config.ts"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "real-build",
+      "command": [
+        "npm",
+        "--prefix",
+        "web-ui",
+        "run",
+        "real:build"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "experience-build",
+      "command": [
+        "npm",
+        "--prefix",
+        "web-ui",
+        "run",
+        "experience:build"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "public-build",
+      "command": [
+        "npm",
+        "--prefix",
+        "web-ui",
+        "run",
+        "build"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "publicAssetHashes": {
+    "index-BIYXDnRB.css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+    "index-BTsQyTsc.js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5"
+  },
+  "hostilePublicBuildIdentical": true,
+  "reference18103PublicHashesIdentical": true
+}

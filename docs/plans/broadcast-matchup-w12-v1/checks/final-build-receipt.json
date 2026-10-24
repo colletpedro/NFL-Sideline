@@ -1,0 +1,12 @@
+{
+  "entryTransformOrder": "pre",
+  "privateBuildContainsW12Entry": true,
+  "endpoint": "/__matchup-w12/",
+  "contract": "broadcast-matchup-w12-v1",
+  "bundleId": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "privateJsAssets": {
+    "MatchupPage-BcYloJsb.js": "3bee909306e0386388bacaf569ab8007026afc6dcb174c3982198e713098f273",
+    "index--hJBhz1H.js": "f48910e171b2da5fbb17e7b910a0cba58a073e76e39fd8281a896eb02879f364"
+  },
+  "publicBuildUnchanged": true
+}

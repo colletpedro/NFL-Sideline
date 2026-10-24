@@ -1,0 +1,10 @@
+{
+  "finalCalendar": "http://127.0.0.1:18104/?season=2026&week=1",
+  "rootFont": "16px",
+  "viewportOverrideReset": true,
+  "temporaryFetchWrapperRemoved": true,
+  "rawFetchInterceptionCleared": true,
+  "blockedUrlsCleared": true,
+  "consoleErrorsOnFinalCalendar": [],
+  "agentTechnicalChecksOnly": true
+}

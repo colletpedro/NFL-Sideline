@@ -1,0 +1,71 @@
+{
+  "method": "Temporary fetch wrapper held a real IND-KC Response and ignored AbortSignal only in this technical test; released after JAX-DEN loaded",
+  "loading": {
+    "heading": "Conferindo o confronto",
+    "marks": 0
+  },
+  "before": {
+    "epa": [
+      "JAX",
+      "DEN"
+    ],
+    "heading": "JAX × DEN",
+    "marks": [
+      "2026_02_JAX_DEN:239",
+      "2026_02_JAX_DEN:609",
+      "2026_02_JAX_DEN:946",
+      "2026_02_JAX_DEN:853",
+      "2026_02_JAX_DEN:1281",
+      "2026_02_JAX_DEN:1401",
+      "2026_02_JAX_DEN:2459",
+      "2026_02_JAX_DEN:3761",
+      "2026_02_JAX_DEN:2222",
+      "2026_02_JAX_DEN:2337",
+      "2026_02_JAX_DEN:2811",
+      "2026_02_JAX_DEN:2588",
+      "2026_02_JAX_DEN:349",
+      "2026_02_JAX_DEN:673",
+      "2026_02_JAX_DEN:1521",
+      "2026_02_JAX_DEN:3205",
+      "2026_02_JAX_DEN:3275",
+      "2026_02_JAX_DEN:3665",
+      "2026_02_JAX_DEN:130",
+      "2026_02_JAX_DEN:503",
+      "2026_02_JAX_DEN:1798",
+      "2026_02_JAX_DEN:2984"
+    ]
+  },
+  "after": {
+    "epa": [
+      "JAX",
+      "DEN"
+    ],
+    "heading": "JAX × DEN",
+    "marks": [
+      "2026_02_JAX_DEN:239",
+      "2026_02_JAX_DEN:609",
+      "2026_02_JAX_DEN:946",
+      "2026_02_JAX_DEN:853",
+      "2026_02_JAX_DEN:1281",
+      "2026_02_JAX_DEN:1401",
+      "2026_02_JAX_DEN:2459",
+      "2026_02_JAX_DEN:3761",
+      "2026_02_JAX_DEN:2222",
+      "2026_02_JAX_DEN:2337",
+      "2026_02_JAX_DEN:2811",
+      "2026_02_JAX_DEN:2588",
+      "2026_02_JAX_DEN:349",
+      "2026_02_JAX_DEN:673",
+      "2026_02_JAX_DEN:1521",
+      "2026_02_JAX_DEN:3205",
+      "2026_02_JAX_DEN:3275",
+      "2026_02_JAX_DEN:3665",
+      "2026_02_JAX_DEN:130",
+      "2026_02_JAX_DEN:503",
+      "2026_02_JAX_DEN:1798",
+      "2026_02_JAX_DEN:2984"
+    ]
+  },
+  "fetchRestored": true,
+  "rawFetchInterceptionCleared": true
+}

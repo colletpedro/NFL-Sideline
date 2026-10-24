@@ -1,0 +1,17 @@
+[
+  {
+    "query": "game=unknown",
+    "text": "Leitura do confronto indisponível\n\nIdentificador de confronto desconhecido. Nenhum jogo substituto foi escolhido.\n\nTentar carregar novamente",
+    "marks": 0
+  },
+  {
+    "query": "game=2026_02_JAX_DEN&season=2025",
+    "text": "Leitura do confronto indisponível\n\nTemporada ou semana incompatível com este confronto.\n\nTentar carregar novamente",
+    "marks": 0
+  },
+  {
+    "query": "game=2026_02_JAX_DEN&week=1",
+    "text": "Leitura do confronto indisponível\n\nTemporada ou semana incompatível com este confronto.\n\nTentar carregar novamente",
+    "marks": 0
+  }
+]
