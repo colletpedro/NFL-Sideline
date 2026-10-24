@@ -9,21 +9,21 @@ import { dateLabel, gameState } from './relations';
 import { GameSearch } from './GameSearch';
 import { availabilityDescription, searchGames } from './discoveryModel';
 
-type Props = { games: Game[]; archive: Archive | null; archiveError: string; q: URLSearchParams; season: string; week: number | null; onChange: (q: URLSearchParams) => void };
-export function Discovery({ games, archive, archiveError, q, season, week, onChange }: Props) {
+type Props = { games: Game[]; archive: Archive | null; archiveError: string; q: URLSearchParams; season: string; week: number | null; onChange: (q: URLSearchParams) => void; directHref?:(g:Game)=>string; readingStatus?:(g:Game)=>string };
+export function Discovery({ games, archive, archiveError, q, season, week, onChange, directHref, readingStatus }: Props) {
   const query=q.get('q')??'',scope=q.get('scope')==='season'?'season':'week',participantsOnly=q.get('filter')==='participants';
   const heading=useRef<HTMLHeadingElement>(null);
-  const inFilter=(g:Game)=>!participantsOnly || !!archive?.documents.some(({d})=>[g.homeTeam.teamAbbr,g.awayTeam.teamAbbr].includes(d.subject.team));
+  const inFilter=(g:Game)=>!participantsOnly || !!readingStatus || !!archive?.documents.some(({d})=>[g.homeTeam.teamAbbr,g.awayTeam.teamAbbr].includes(d.subject.team));
   const weekGames=games.filter(g=>g.week===week),filtered=weekGames.filter(inFilter),searching=query.trim().length>0;
   const matches=searchGames((scope==='season'?games:weekGames).filter(inFilter),query);
   const pageSize=12,pages=Math.max(1,Math.ceil(matches.length/pageSize)),requestedPage=Number(q.get('page'));
   const page=Math.min(pages,Math.max(1,Number.isInteger(requestedPage)?requestedPage:1));
   const weeks=[...new Set(games.map(g=>g.week))].sort((a,b)=>a-b);
   const change=(values:Record<string,string|null>)=>onChange(new URLSearchParams(journeyHref(q,{...calendarChange,...values}).slice(2)));
-  const status=(g:Game)=>archiveError?'Arquivo de leituras indisponível':!archive?'Conferindo leituras':availabilityDescription(g,archive);
+  const status=(g:Game)=>readingStatus?readingStatus(g):archiveError?'Arquivo de leituras indisponível':!archive?'Conferindo leituras':availabilityDescription(g,archive);
   const card=(g:Game)=>{
     const away=teamIdentity(g.awayTeam.teamAbbr),home=teamIdentity(g.homeTeam.teamAbbr),state=gameState(g);
-    return <li key={g.gameId} data-game={g.gameId}><Link className="hub-match" aria-label={`Abrir confronto ${g.awayTeam.teamAbbr} ${g.homeTeam.teamAbbr} · semana ${g.week}`} to={journeyHref(q,{...calendarChange,game:g.gameId})}>
+    return <li key={g.gameId} data-game={g.gameId}><Link className="hub-match" aria-label={`Abrir confronto ${g.awayTeam.teamAbbr} ${g.homeTeam.teamAbbr} · semana ${g.week}`} to={directHref?directHref(g):journeyHref(q,{...calendarChange,game:g.gameId})}>
       <div className="hub-match-meta"><span>{dateLabel(g.gameday)}</span><span>Semana {g.week}</span></div>
       <div className="hub-duel" style={{'--away':away.color,'--away-dark':away.dark,'--home':home.color,'--home-dark':home.dark} as CSSProperties}>
         <div className="hub-team"><Logo team={away}/><strong>{g.awayTeam.teamAbbr}</strong><span>{away.name}</span></div>
@@ -41,7 +41,7 @@ export function Discovery({ games, archive, archiveError, q, season, week, onCha
     {searching ? <section className="discovery-results" aria-label="Resultados da busca"><div className="discovery-heading"><h2 ref={heading} tabIndex={-1}>Resultados para “{query}”</h2><p role="status">{matches.length} jogos · {scope==='season'?`temporada ${season}`:`semana ${week}`}</p></div>
       {matches.length?<><ul className="hub-games">{matches.slice((page-1)*pageSize,page*pageSize).map(card)}</ul>{pages>1&&<nav className="discovery-pagination" aria-label="Páginas de resultados"><button disabled={page===1} onClick={()=>{change({page:String(page-1)});heading.current?.focus();}}>Página anterior</button><span>Página {page} de {pages}</span><button disabled={page===pages} onClick={()=>{change({page:String(page+1)});heading.current?.focus();}}>Próxima página</button></nav>}</>:<div className="discovery-empty"><h3>Nenhum confronto encontrado.</h3><p>Tente outro nome, cidade ou sigla.</p>{scope==='week'&&<button onClick={()=>change({scope:'season'})}>Buscar na temporada {season}</button>}{participantsOnly&&<button onClick={()=>change({filter:'all'})}>Incluir jogos sem recortes</button>}<button onClick={()=>change({q:null,page:null})}>Voltar aos jogos da semana</button></div>}
     </section>:<section className="hub-week-games" aria-label={`Jogos da semana ${week}`}><div className="discovery-heading"><h2>Semana {week}</h2><p>{filtered.length} jogos · {season} · todos os confrontos abaixo</p></div>
-      {participantsOnly&&!archive?<p role="status">O filtro aguarda a conferência do arquivo. Escolha “Todos os jogos” para ver o calendário.</p>:filtered.length?<ul className="hub-games">{filtered.map(card)}</ul>:<div className="discovery-empty"><h3>Nenhum jogo nesta seleção.</h3><button onClick={()=>change({filter:'all'})}>Mostrar todos os jogos</button></div>}
+      {participantsOnly&&!archive&&!readingStatus?<p role="status">O filtro aguarda a conferência do arquivo. Escolha “Todos os jogos” para ver o calendário.</p>:filtered.length?<ul className="hub-games">{filtered.map(card)}</ul>:<div className="discovery-empty"><h3>Nenhum jogo nesta seleção.</h3><button onClick={()=>change({filter:'all'})}>Mostrar todos os jogos</button></div>}
     </section>}
   </div>;
 }

@@ -71,3 +71,8 @@ web-ui/journey-dist/
 
 # Build isolado da leitura piloto; nenhum snapshot privado versionado.
 web-ui/matchup-dist/
+
+# Build privado dos 32 confrontos W1–2.
+web-ui/w12-dist/
+
+/editorial/local-artifacts/broadcast-matchup-w12-v1/
