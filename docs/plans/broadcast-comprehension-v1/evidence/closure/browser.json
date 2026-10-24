@@ -1,0 +1,282 @@
+{
+  "kind": "TECHNICAL_UI_VERIFICATION",
+  "humanReconfirmation": false,
+  "cases": [
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "font": "16px",
+      "foundation": "general",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "60 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,168"
+        },
+        {
+          "denominator": "49 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "−0,119"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 1440
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.4/0.6",
+        "-0.4/0.6"
+      ],
+      "font": "16px",
+      "foundation": "classified_pass",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "24 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,406"
+        },
+        {
+          "denominator": "35 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "−0,210"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 1440
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "font": "16px",
+      "foundation": "classified_rush",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "36 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,010"
+        },
+        {
+          "denominator": "14 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "+0,110"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 1440
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "font": "16px",
+      "foundation": "general",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "60 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,168"
+        },
+        {
+          "denominator": "49 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "−0,119"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 390
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.4/0.6",
+        "-0.4/0.6"
+      ],
+      "font": "16px",
+      "foundation": "classified_pass",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "24 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,406"
+        },
+        {
+          "denominator": "35 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "−0,210"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 390
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "font": "16px",
+      "foundation": "classified_rush",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "36 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,010"
+        },
+        {
+          "denominator": "14 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "+0,110"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 390
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "font": "16px",
+      "foundation": "general",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "60 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,168"
+        },
+        {
+          "denominator": "49 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "−0,119"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 320
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.4/0.6",
+        "-0.4/0.6"
+      ],
+      "font": "16px",
+      "foundation": "classified_pass",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "24 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,406"
+        },
+        {
+          "denominator": "35 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "−0,210"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 320
+    },
+    {
+      "campaigns": 4,
+      "commonDomains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "font": "16px",
+      "foundation": "classified_rush",
+      "noPageOverflow": true,
+      "noParagraphClipping": true,
+      "noVerticalOverlap": true,
+      "paragraph": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+      "paragraphCount": 1,
+      "rows": [
+        {
+          "denominator": "36 jogadas com EPA válido",
+          "team": "NYJ",
+          "value": "+0,010"
+        },
+        {
+          "denominator": "14 jogadas com EPA válido",
+          "team": "TEN",
+          "value": "+0,110"
+        }
+      ],
+      "thirdMarks": 22,
+      "width": 320
+    }
+  ],
+  "keyboard": {
+    "focused": "Corrida",
+    "outline": "solid",
+    "after": "classified_rush"
+  },
+  "rule": {
+    "open": true,
+    "text": "Quais jogadas entram no EPA?A população é própria do EPA: jogadas elegíveis de passe e corrida com EPA finito. O denominador não é o de terceiras ou de campanhas. O modelo de pontos esperados não está identificado neste arquivo; os valores descrevem os registros observados.Consultar método completo"
+  },
+  "text200": {
+    "font": "32px",
+    "noClipping": true,
+    "noOverlap": true,
+    "noPageOverflow": true,
+    "text": "EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.",
+    "width": 320
+  },
+  "restored": {
+    "font": "16px",
+    "foundation": "general",
+    "hash": "",
+    "width": 532
+  },
+  "consoleErrors": []
+}

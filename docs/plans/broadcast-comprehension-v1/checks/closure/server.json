@@ -1,0 +1,9 @@
+{
+  "pid": 44780,
+  "port": 18103,
+  "host": "127.0.0.1",
+  "strictPort": true,
+  "worktree": "/Users/pedrocollet/.codex/worktrees/broadcast-comprehension-v1/NFL Sideline",
+  "command": "./docs/plans/broadcast-comprehension-v1/run-refined-local.sh",
+  "runtime": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comprehension-v1/20261024-epa-v1"
+}
