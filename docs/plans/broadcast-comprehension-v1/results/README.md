@@ -1,7 +1,7 @@
-# Resultados humanos
+# Resultados — coleta encerrada com N=1
 
-**Nenhuma sessão humana registrada nesta preparação.** P01…P05 são identificadores previstos, não participantes recrutados ou existentes. A ficha é um modelo vazio. Não há falas, tempos, taxas de sucesso ou avaliação de hipóteses disponíveis.
+Foi recebido **um registro humano, P01**, anteriormente chamado SIM01. O usuário esclareceu sua origem humana e a revisão posterior da redação. [P01](P01.md) é o registro canônico: respostas como paráfrases revisadas, separadas das ações descritas, automação, interpretação e aspectos não observados.
 
-Receber os registros reais nesta conversa, anonimizar antes de versionar e preservar indicação de literal/paráfrase, versão, dispositivo, ajuda e complementos. Não preencher lacunas como se fossem observações. Pedidos de retirada/omissão devem ser respeitados antes de guardar resultados.
+A preparação original tinha zero sessões; seus recibos e o protocolo continuam históricos, não descrevem o estado atual. [Emenda posterior à coleta](../AMENDMENT-01.md) registra a mudança expressa de escopo. Não aplicar os limiares de 4/4 ou 4/5 nem calcular percentuais de êxito.
 
-Na análise, criar uma matriz com: tarefa/ID da pessoa → observação → interpretação → hipótese → problema/prioridade → ação/refinamento → reconfirmação. Reportar contagens x/N e os seis estados exigidos no relatório. Não importar o walkthrough técnico como sessão humana.
+[Originais preservados e hashes](provenance/README.md) mantêm a procedência, inclusive a classificação anterior superada. As reservas vazias P02–P05 não são sessões. A coleta está encerrada por decisão do usuário, sem recrutamento adicional. A análise é qualitativa individual, sem reconfirmação humana do acabamento.
