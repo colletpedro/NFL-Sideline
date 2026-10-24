@@ -68,3 +68,6 @@ web-ui/journey-dist/
 
 # Complete private situational-v1 artifacts; active durable path is operator-configured.
 /editorial/local-artifacts/broadcast-situational-w12-v1/
+
+# Build isolado da leitura piloto; nenhum snapshot privado versionado.
+web-ui/matchup-dist/

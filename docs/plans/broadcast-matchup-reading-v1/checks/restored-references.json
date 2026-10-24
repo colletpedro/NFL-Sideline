@@ -1,0 +1,35 @@
+[
+  {
+    "port": 18098,
+    "previousPid": 49375,
+    "observedBeforeRestore": "NO_LISTENER_AND_PREVIOUS_PROCESS_ABSENT",
+    "pid": 30244,
+    "worktree": "/Users/pedrocollet/.codex/worktrees/broadcast-situational-w12-v1/NFL Sideline",
+    "head": "d410cc5ad9749255b241797a0f8c91a273b6a560",
+    "command": "node scripts/journey-dev.mjs",
+    "configChanged": false,
+    "log": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-reading-v1/20261023-v1/restored-reference-18098.log"
+  },
+  {
+    "port": 18099,
+    "previousPid": 64333,
+    "observedBeforeRestore": "NO_LISTENER_AND_PREVIOUS_PROCESS_ABSENT",
+    "pid": 30251,
+    "worktree": "/Users/pedrocollet/.codex/worktrees/broadcast-situational-copy-v2/NFL Sideline",
+    "head": "5348ab117bffd01c75323a0c56466e450b522260",
+    "command": "node scripts/journey-dev.mjs",
+    "configChanged": false,
+    "log": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-reading-v1/20261023-v1/restored-reference-18099.log"
+  },
+  {
+    "port": 18100,
+    "previousPid": 74464,
+    "observedBeforeRestore": "NO_LISTENER_AND_PREVIOUS_PROCESS_ABSENT",
+    "pid": 30265,
+    "worktree": "/Users/pedrocollet/.codex/worktrees/broadcast-explorer-v1/NFL Sideline",
+    "head": "d7e8aa35c7ea6605fd443992668b2b1d2c8fe7d2",
+    "command": "node scripts/journey-dev.mjs",
+    "configChanged": false,
+    "log": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-reading-v1/20261023-v1/restored-reference-18100.log"
+  }
+]

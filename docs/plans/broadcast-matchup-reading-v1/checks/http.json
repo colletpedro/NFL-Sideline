@@ -1,0 +1,95 @@
+{
+  "bundleId": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "responseBytes": 243841,
+  "exactArtifactBytes": true,
+  "cases": [
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "OPTIONS",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/?path=/tmp/another",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/file",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__matchup-reading/",
+      "status": 403,
+      "case": "duplicate Host"
+    }
+  ],
+  "startupNegatives": [
+    {
+      "case": "wrong-pin",
+      "fullReaderRejected": true,
+      "noFallback": true
+    },
+    {
+      "case": "missing-source",
+      "fullReaderRejected": true,
+      "noFallback": true
+    }
+  ]
+}

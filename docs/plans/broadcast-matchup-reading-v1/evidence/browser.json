@@ -1,0 +1,133 @@
+{
+  "kind": "AGENT_BROWSER_CHECK",
+  "humanParticipants": 0,
+  "pin": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "layouts": [
+    {
+      "campaigns": 4,
+      "client": 1440,
+      "epaTop": 701.125,
+      "font": "16px",
+      "redZonePoints": 31,
+      "score": [
+        "23",
+        "10"
+      ],
+      "scrollWidth": 1440,
+      "selectors": 0,
+      "thirdMarks": 22,
+      "thirdPoints": 32,
+      "viewport": 1440
+    },
+    {
+      "campaigns": 4,
+      "client": 390,
+      "epaTop": 783.4453125,
+      "font": "16px",
+      "redZonePoints": 31,
+      "score": [
+        "23",
+        "10"
+      ],
+      "scrollWidth": 390,
+      "selectors": 0,
+      "thirdMarks": 22,
+      "thirdPoints": 32,
+      "viewport": 390
+    },
+    {
+      "campaigns": 4,
+      "client": 320,
+      "epaTop": 873.4375,
+      "font": "16px",
+      "redZonePoints": 31,
+      "score": [
+        "23",
+        "10"
+      ],
+      "scrollWidth": 320,
+      "selectors": 0,
+      "thirdMarks": 22,
+      "thirdPoints": 32,
+      "viewport": 320
+    }
+  ],
+  "epa": [
+    {
+      "foundation": "general",
+      "redZone": 4,
+      "rows": [
+        {
+          "denominator": "60 jogadas com EPA válido",
+          "team": "NYJ",
+          "text": "+0,168"
+        },
+        {
+          "denominator": "49 jogadas com EPA válido",
+          "team": "TEN",
+          "text": "−0,119"
+        }
+      ],
+      "third": 22
+    },
+    {
+      "foundation": "classified_pass",
+      "redZone": 4,
+      "rows": [
+        {
+          "denominator": "24 jogadas com EPA válido",
+          "team": "NYJ",
+          "text": "+0,406"
+        },
+        {
+          "denominator": "35 jogadas com EPA válido",
+          "team": "TEN",
+          "text": "−0,210"
+        }
+      ],
+      "third": 22
+    },
+    {
+      "foundation": "classified_rush",
+      "redZone": 4,
+      "rows": [
+        {
+          "denominator": "36 jogadas com EPA válido",
+          "team": "NYJ",
+          "text": "+0,010"
+        },
+        {
+          "denominator": "14 jogadas com EPA válido",
+          "team": "TEN",
+          "text": "+0,110"
+        }
+      ],
+      "third": 22
+    }
+  ],
+  "scenarios": [
+    "anchors",
+    "EPA keyboard Tab/Enter",
+    "real third attempt identity",
+    "red zone campaign evidence",
+    "league point keyboard and touch-sized list",
+    "rules and UNKNOWN audit keyboard",
+    "reload and direct #mr-third",
+    "return to explorer and browser back",
+    "source network blocked: zero marks/values; restored without fallback"
+  ],
+  "temporarySourceFailure": "Network.setBlockedURLs only in test tab; cleared",
+  "text200": {
+    "viewport": 320,
+    "computedBodyFont": 32,
+    "pageHorizontalOverflow": false,
+    "ruleDisclosureOpened": true
+  },
+  "consoleErrors": [],
+  "restored": {
+    "font": "16px",
+    "hash": "",
+    "query": "?view=matchup-reading",
+    "viewport": 1280
+  }
+}

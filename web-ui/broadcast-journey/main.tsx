@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './journey.css';
 import './live-hub.css';
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><App/></BrowserRouter></React.StrictMode>);
+const MatchupPage = lazy(() => import('./matchup/MatchupPage'));
+const pilot = new URLSearchParams(window.location.search).get('view') === 'matchup-reading';
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter>{pilot ? <Suspense fallback={<p role="status">Abrindo leitura do confronto…</p>}><MatchupPage/></Suspense> : <App/>}</BrowserRouter></React.StrictMode>);
 import './situational/situational.css';

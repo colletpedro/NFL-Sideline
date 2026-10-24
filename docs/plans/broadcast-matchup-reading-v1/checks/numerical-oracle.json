@@ -1,0 +1,60 @@
+{
+  "epa": {
+    "NYJ/general": {
+      "text": "+0,168",
+      "denominator": 60,
+      "exact": {
+        "numerator": "84175055182634929",
+        "denominator": 500000000000000000
+      }
+    },
+    "NYJ/classified_pass": {
+      "text": "+0,406",
+      "denominator": 24,
+      "exact": {
+        "numerator": "243871302611469049",
+        "denominator": 600000000000000000
+      }
+    },
+    "NYJ/classified_rush": {
+      "text": "+0,010",
+      "denominator": 36,
+      "exact": {
+        "numerator": "4326931468217869",
+        "denominator": 450000000000000000
+      }
+    },
+    "TEN/general": {
+      "text": "\u22120,119",
+      "denominator": 49,
+      "exact": {
+        "numerator": "-2906282472951876439",
+        "denominator": 24500000000000000000
+      }
+    },
+    "TEN/classified_pass": {
+      "text": "\u22120,210",
+      "denominator": 35,
+      "exact": {
+        "numerator": "-183781343638301057",
+        "denominator": 875000000000000000
+      }
+    },
+    "TEN/classified_rush": {
+      "text": "+0,110",
+      "denominator": 14,
+      "exact": {
+        "numerator": "769344399814144701",
+        "denominator": 7000000000000000000
+      }
+    }
+  },
+  "third": {
+    "numerator": 154,
+    "denominator": 377
+  },
+  "redZone": {
+    "numerator": 70,
+    "denominator": 108
+  }
+}

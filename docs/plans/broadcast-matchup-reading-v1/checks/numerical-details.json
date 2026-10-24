@@ -1,0 +1,151 @@
+{
+  "pin": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "productions": {
+    "NYJ": {
+      "thirdJoint": [
+        {
+          "distance": "short",
+          "kind": "pass",
+          "numerator": 0,
+          "denominator": 0
+        },
+        {
+          "distance": "short",
+          "kind": "run",
+          "numerator": 1,
+          "denominator": 3
+        },
+        {
+          "distance": "medium",
+          "kind": "pass",
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "distance": "medium",
+          "kind": "run",
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "distance": "long",
+          "kind": "pass",
+          "numerator": 1,
+          "denominator": 4
+        },
+        {
+          "distance": "long",
+          "kind": "run",
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "distance": "unknown",
+          "kind": "pass",
+          "numerator": 0,
+          "denominator": 0
+        },
+        {
+          "distance": "unknown",
+          "kind": "run",
+          "numerator": 0,
+          "denominator": 0
+        }
+      ],
+      "thirdUnitIds": [
+        "2026_01_NYJ_TEN:251",
+        "2026_01_NYJ_TEN:1118",
+        "2026_01_NYJ_TEN:1292",
+        "2026_01_NYJ_TEN:1398",
+        "2026_01_NYJ_TEN:1510",
+        "2026_01_NYJ_TEN:1649",
+        "2026_01_NYJ_TEN:2735",
+        "2026_01_NYJ_TEN:3113",
+        "2026_01_NYJ_TEN:3322",
+        "2026_01_NYJ_TEN:3637"
+      ],
+      "redZoneUnitIds": [
+        "2026_01_NYJ_TEN:drive:1.0",
+        "2026_01_NYJ_TEN:drive:5.0",
+        "2026_01_NYJ_TEN:drive:10.0"
+      ],
+      "outcomes": {
+        "TOUCHDOWN": 2,
+        "FIELD_GOAL": 1
+      }
+    },
+    "TEN": {
+      "thirdJoint": [
+        {
+          "distance": "short",
+          "kind": "pass",
+          "numerator": 0,
+          "denominator": 2
+        },
+        {
+          "distance": "short",
+          "kind": "run",
+          "numerator": 2,
+          "denominator": 2
+        },
+        {
+          "distance": "medium",
+          "kind": "pass",
+          "numerator": 1,
+          "denominator": 3
+        },
+        {
+          "distance": "medium",
+          "kind": "run",
+          "numerator": 0,
+          "denominator": 0
+        },
+        {
+          "distance": "long",
+          "kind": "pass",
+          "numerator": 1,
+          "denominator": 5
+        },
+        {
+          "distance": "long",
+          "kind": "run",
+          "numerator": 0,
+          "denominator": 0
+        },
+        {
+          "distance": "unknown",
+          "kind": "pass",
+          "numerator": 0,
+          "denominator": 0
+        },
+        {
+          "distance": "unknown",
+          "kind": "run",
+          "numerator": 0,
+          "denominator": 0
+        }
+      ],
+      "thirdUnitIds": [
+        "2026_01_NYJ_TEN:411",
+        "2026_01_NYJ_TEN:491",
+        "2026_01_NYJ_TEN:694",
+        "2026_01_NYJ_TEN:1029",
+        "2026_01_NYJ_TEN:1766",
+        "2026_01_NYJ_TEN:2191",
+        "2026_01_NYJ_TEN:2516",
+        "2026_01_NYJ_TEN:2904",
+        "2026_01_NYJ_TEN:3008",
+        "2026_01_NYJ_TEN:3227",
+        "2026_01_NYJ_TEN:3507",
+        "2026_01_NYJ_TEN:3910"
+      ],
+      "redZoneUnitIds": [
+        "2026_01_NYJ_TEN:drive:19.0"
+      ],
+      "outcomes": {
+        "TOUCHDOWN": 1
+      }
+    }
+  },
+  "browserAllSixEpaMatchIndependentOracle": true
+}
