@@ -1,0 +1,11 @@
+# broadcast-observed-rate-position · 1.0.0
+
+Extensão isolada de apresentação, solicitada expressamente pelo usuário nesta entrega. Substitui a orientação de produto anterior de não numerar posições. Não altera contratos, políticas, garantias ou pins dos pacotes anteriores. A política da base comparável não incluía rankings; a política W12 proíbe ranking certificado e qualidade geral. Esta extensão autoriza exclusivamente a colocação descritiva das razões já autorizadas pela operação leagueReference, sem certificar ranking de qualidade. Não reinterpreta a autorização antiga como se ela já concedesse essa apresentação.
+
+Pré-condições: pacote validado/pinado, 2026 REG, uma semana W1 ou W2 e família terceira/red zone; leagueReference concretamente permitida com os mesmos observationIds; inventário íntegro, uma observação ofensiva/time, razões inteiras válidas. Recusa dessa permissão continua recusando a apresentação, sem substituto. Não concede display a observações recusadas, nem referência agregada ao time.
+
+Universo = todos os pontos com taxa válida da semana/família. Ordenação exata decrescente por multiplicação cruzada BigInt, antes de arredondar. Posição = 1 + número de times com razão estritamente maior. Razões equivalentes empatam: 1º, 2º, 2º, 4º. A sigla ordena visualmente os empates, sem alterar a posição. Taxas distintas que arredondam igual não empatam. Zero com denominador positivo tem posição; 0/0, SOURCE_ABSENT e INSUFFICIENT não têm taxa/posição. Não há mínimo universal de amostra.
+
+Resumo usa ordem visitante/casa do jogo, com a colocação calculada no universo completo. Expandido usa todas as linhas ordenadas e destaca os participantes novamente. Essa repetição de apresentação não cria observação ou entra em somas. Inventário sem taxa fica fora da classificação, com motivo; participante sem taxa permanece também no resumo com “sem posição”. Taxa conjunta continua soma n/soma d, nunca média de taxas. Participantes pertencem à referência, sem independência.
+
+Rótulo curto: “Posições pela taxa observada; taxas iguais compartilham posição.” Sem qualidade ajustada, prognóstico, significância, causalidade ou certificação. EPA e W1–2 agregado ficam fora dessa extensão.
