@@ -1,0 +1,360 @@
+
+> web-ui@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/choice.test.ts (15 tests) 4ms
+ ✓ broadcast-journey/situational/compositionCopy.test.tsx (14 tests) 38ms
+stderr | broadcast-journey/discovery.test.tsx > discovery of existing calendar games > shows the entire selected week and all weeks without a collapsed archive, and paginates searches
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+
+stderr | broadcast-journey/discovery.test.tsx > discovery of existing calendar games > does not label an unscored past game as scheduled
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+
+stderr | broadcast-journey/discovery.test.tsx > names BAL by the search action for NO × BAL and makes no confirmed claim with an unavailable archive
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at li
+    at ul
+    at section
+    at div
+    at Discovery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/Discovery.tsx:19:22)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+
+ ✓ broadcast-journey/discovery.test.tsx (10 tests) 84ms
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 28ms
+ ✓ broadcast-journey/matchup/matchup.test.tsx (12 tests) 89ms
+ ✓ broadcast-journey/w12/w12.test.tsx (9 tests) 245ms
+ ✓ broadcast-experience/editorial.test.ts (10 tests) 20ms
+ ✓ broadcast-real/adapter.test.ts (8 tests) 6ms
+ ✓ broadcast-journey/situational/situational.test.tsx (8 tests) 61ms
+ ✓ broadcast-journey/explorer/explorer.test.tsx (12 tests) 587ms
+   ✓ explorer real source projections (operator configured) > matches every numerator, denominator, status and source document across all supported projections without mutation 579ms
+ ✓ src/services/staticDataClient.test.ts (8 tests) 8ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 202ms
+ ✓ src/services/market.test.tsx (14 tests) 43ms
+ ✓ broadcast-journey/liveSelection.test.ts (11 tests) 32ms
+ ✓ local-editorial/local.test.tsx (7 tests) 8ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 27ms
+ ✓ broadcast-journey/relations.test.ts (26 tests) 12ms
+ ✓ broadcast-experience/fixtures.test.ts (4 tests) 29ms
+ ✓ broadcast-journey/hub-team/hub-team.test.tsx (10 tests) 885ms
+   ✓ real 32 team documents and identity > renders all 32 teams, both perspectives, exact EPA/denominators and real units 580ms
+ ✓ local-editorial/observations/directions.test.tsx (4 tests) 44ms
+ ✓ local-editorial/broadcast/refinement.test.tsx (5 tests) 33ms
+ ✓ local-editorial/broadcast/broadcast.test.tsx (5 tests) 52ms
+ ✓ broadcast-real/reading.test.tsx (4 tests) 46ms
+ ✓ broadcast-journey/guided-reading.test.tsx (2 tests) 33ms
+ ✓ broadcast-experience/chartScale.test.ts (2 tests) 6ms
+stderr | broadcast-journey/media/media.test.tsx > separates publication qualification and research candidates with consultable credit and limitations
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at div
+    at section
+    at div
+    at MediaGallery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/media/MediaGallery.tsx:17:25)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at div
+    at section
+    at div
+    at MediaGallery (/Users/pedrocollet/.codex/worktrees/broadcast-hub-team-w12-v1/NFL Sideline/web-ui/broadcast-journey/media/MediaGallery.tsx:17:25)
+    at Router (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/Downloads/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+
+ ✓ broadcast-journey/media/media.test.tsx (3 tests) 25ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 11ms
+ ✓ src/services/calendar.test.ts (9 tests) 4ms
+ ✓ src/services/runtimeClient.test.ts (2 tests) 2ms
+ ✓ src/services/api.test.ts (2 tests) 2ms
+ ✓ broadcast-journey/situational/real-acceptance.test.tsx (1 test) 98ms
+
+ Test Files  31 passed (31)
+      Tests  312 passed (312)
+   Start at  14:49:42
+   Duration  2.05s (transform 1.71s, setup 0ms, collect 5.71s, tests 2.76s, environment 4ms, prepare 1.81s)

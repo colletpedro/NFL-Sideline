@@ -1,0 +1,58 @@
+[
+  {
+    "check": "frontend",
+    "exit": 0,
+    "tests": 312,
+    "log": "frontend.log"
+  },
+  {
+    "check": "lint",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "lint"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "journey-types",
+    "command": [
+      "web-ui/node_modules/.bin/tsc",
+      "-p",
+      "web-ui/tsconfig.journey.json"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "hub-types",
+    "command": [
+      "web-ui/node_modules/.bin/tsc",
+      "-p",
+      "web-ui/tsconfig.hub-team.json"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "hub-team-final",
+    "command": [
+      "web-ui/node_modules/.bin/vite",
+      "build",
+      "--config",
+      "web-ui/vite.hub-team.config.ts"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "http",
+    "exit": 0,
+    "requests": 111,
+    "log": "http.log"
+  },
+  {
+    "check": "isolation",
+    "exit": 0,
+    "log": "isolation.log"
+  }
+]

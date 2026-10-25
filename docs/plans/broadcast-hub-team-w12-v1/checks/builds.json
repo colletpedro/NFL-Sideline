@@ -1,0 +1,105 @@
+[
+  {
+    "check": "lint",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "lint"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "types-journey",
+    "command": [
+      "web-ui/node_modules/.bin/tsc",
+      "-p",
+      "web-ui/tsconfig.journey.json"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "types-hub",
+    "command": [
+      "web-ui/node_modules/.bin/tsc",
+      "-p",
+      "web-ui/tsconfig.hub-team.json"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "hub-team",
+    "command": [
+      "web-ui/node_modules/.bin/vite",
+      "build",
+      "--config",
+      "web-ui/vite.hub-team.config.ts"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "journey",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "journey:build"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "matchup",
+    "command": [
+      "web-ui/node_modules/.bin/vite",
+      "build",
+      "--config",
+      "web-ui/vite.matchup.config.ts"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "w12",
+    "command": [
+      "web-ui/node_modules/.bin/vite",
+      "build",
+      "--config",
+      "web-ui/vite.w12.config.ts"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "real",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "real:build"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "experience",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "experience:build"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "public",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "build"
+    ],
+    "exit": 0
+  }
+]

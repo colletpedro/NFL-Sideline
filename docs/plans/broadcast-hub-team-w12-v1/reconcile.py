@@ -55,7 +55,9 @@ for entry in index['teams']:
    assert all(all(u[k]==v for k,v in lookup[u['id']].items()) for u in actual)
    if family=='third':
     for u in actual:
-     raw=by_play[u['id']];assert u['converted']==int(raw['third_down_converted']) and u['yardsToGo']==raw['ydstogo'] and u['kind']==('pass' if raw['play_type']=='pass' else 'run')
+     raw=by_play[u['id']];yard=raw['ydstogo'];band='unknown' if yard is None or not isfinite(yard) or yard<=0 or yard!=int(yard) else 'short' if yard<=3 else 'medium' if yard<=6 else 'long'
+     assert u['distance']==band and u['sourceOrder']==raw['order_sequence'] and u['offense']==raw['posteam'] and u['defense']==raw['defteam']
+     assert u['converted']==int(raw['third_down_converted']) and u['yardsToGo']==raw['ydstogo'] and u['kind']==('pass' if raw['play_type']=='pass' else 'run')
     for b in ('short','medium','long','unknown'):
      for k in ('pass','run'):
       us=[u for u in expected if u['distance']==b and u['kind']==k];joint=next(j for j in prod['thirdDistanceByType'] if j['distance']==b and j['kind']==k)
