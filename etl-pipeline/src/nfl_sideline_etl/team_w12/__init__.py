@@ -1,0 +1,3 @@
+VERSION = 'broadcast-team-w12-v1'
+PROJECTION = '1.0.0'
+SOURCE_PIN = 'sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc'

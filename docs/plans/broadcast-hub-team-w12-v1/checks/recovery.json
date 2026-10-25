@@ -1,0 +1,14 @@
+{
+  "pin": "sha256:8971d767b6ec0557465aeb65aeb00533fd10255a62f4b916954b3854daa15cef",
+  "physicalFiles": 87,
+  "copy": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-hub-team-w12-v1/20261024-v1/verified-copy",
+  "reproduction": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-hub-team-w12-v1/20261024-v1/reproduced-from-recovery",
+  "blockedRoots": [
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-hub-team-w12-v1/20261024-v1/bundle",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/",
+    "/Users/pedrocollet/.codex/worktrees/broadcast-matchup-w12-v1/",
+    "/Users/pedrocollet/.codex/worktrees/broadcast-comparison-foundation-v1/"
+  ],
+  "physicalDistinctInodes": true,
+  "allHashesMatched": true
+}
