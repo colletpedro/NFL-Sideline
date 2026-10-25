@@ -1,3 +1,6 @@
+import {useReadingPolish} from '../reading-polish/context';
+import {AttemptSymbol,AttemptLegend} from '../reading-polish/Attempts';
+import {LeagueRows} from '../reading-polish/LeagueRows';
 import { useState, type CSSProperties } from 'react';
 import { epaAxisLabels, epaScale } from '../../broadcast-experience/chartScale';
 import { teamIdentity } from '../../broadcast-real/identity';
@@ -9,10 +12,11 @@ export function Unavailable({metric,comparison=false}:{metric?:Metric;comparison
   const state=metric?.descriptor.status;
   return <p className="mr-unavailable" role="status">{state==='NO_OPPORTUNITIES'?'Fonte presente, sem oportunidades elegíveis. Sem taxa (0/0).':state==='INSUFFICIENT'?'Registros insuficientes ou contraditórios para apresentar uma taxa neste jogo.':state==='SOURCE_ABSENT'?'Não há fonte para esta leitura do jogo.':comparison?'A comparação não está autorizada para este recorte.':'Esta observação não está disponível para apresentação.'}</p>;
 }
-export function MetricValue({metric}:{metric:Metric}) {
+export function MetricValue({metric,unit='tentativas'}:{metric:Metric;unit?:'tentativas'|'campanhas'}) {
+  const polish=useReadingPolish();
   if(!permitted(metric.display,'display',[metric.descriptor.id]) || metric.descriptor.status!=='AVAILABLE')return <Unavailable metric={metric}/>;
   const m=metric.descriptor;
-  return <span className="mr-ratio"><strong>{m.numerator}/{m.denominator}</strong><span>{rate(m)}</span></span>;
+  return polish?<span className="mr-ratio rp-result"><strong>{rate(m)}</strong><span>{m.numerator} de {m.denominator} <small>{m.denominator===1?(unit==='campanhas'?'campanha':'tentativa'):unit}</small></span></span>:<span className="mr-ratio"><strong>{m.numerator}/{m.denominator}</strong><span>{rate(m)}</span></span>;
 }
 function ProductionName({p}:{p:Production}) {return <div className="mr-production"><h3>{p.label}</h3><span>contra a defesa de {p.defense}</span></div>;}
 export function Rule({title,children}:{title:string;children:React.ReactNode}) {return <details className="mr-rule"><summary>{title}</summary><div>{children}<a href="#mr-method">Consultar método completo</a></div></details>;}
@@ -39,9 +43,12 @@ export function EpaBlock({d,foundation,onFoundation}:{d:Document;foundation:Foun
   </section>;
 }
 function MarkShape({kind,converted}:{kind:Attempt['kind'];converted:boolean}) {
+  const polish=useReadingPolish();
+  if(polish)return <AttemptSymbol kind={kind} converted={converted}/>;
   return <svg viewBox="0 0 28 28" aria-hidden="true" className="mr-attempt-shape">{kind==='pass'?<circle cx="14" cy="14" r="11"/>:<rect x="3" y="3" width="22" height="22"/>}{converted?<path d="m8 14 4 4 8-9"/>:<path d="M9 14h10"/>}</svg>;
 }
 export function ThirdBlock({d}:{d:Document}) {
+  const polish=useReadingPolish();
   const [selected,setSelected]=useState<Attempt|null>(null);
   const allowed=sideAllowed(d,'third');
   const buckets=(Object.keys(distances) as Attempt['distance'][]).filter(b=>b!=='unknown'||d.productions.some(p=>p.thirdAttempts.some(u=>u.distance==='unknown')));
@@ -49,11 +56,11 @@ export function ThirdBlock({d}:{d:Document}) {
     <h2 id="mr-third-title">Terceiras descidas</h2><p className="mr-unit">Conversões / tentativas elegíveis · deste jogo</p>
     <>{!allowed&&<p className="mr-note">Comparação de terceiras indisponível. Consulte os números de cada ataque abaixo.</p>}
       <div className={allowed?"mr-pair mr-totals":"mr-individual mr-totals"}>{d.productions.map(p=><div key={p.offense}><ProductionName p={p}/><MetricValue metric={p.metrics.third}/></div>)}</div>
-      <p className="mr-mark-legend"><span><MarkShape kind="pass" converted={false}/> Círculo: passe, incluindo sacks.</span><span><MarkShape kind="run" converted={false}/> Quadrado: corrida, incluindo scrambles.</span><span><i className="mr-filled-key"/> Preenchida e com traço de confirmação: conversão. Vazia e com traço horizontal: não convertida.</span></p>
+      {polish?<AttemptLegend/>:(<p className="mr-mark-legend"><span><MarkShape kind="pass" converted={false}/> Círculo: passe, incluindo sacks.</span><span><MarkShape kind="run" converted={false}/> Quadrado: corrida, incluindo scrambles.</span><span><i className="mr-filled-key"/> Preenchida e com traço de confirmação: conversão. Vazia e com traço horizontal: não convertida.</span></p>)}
       <div className="mr-distance-groups">{buckets.map(bucket=><div className="mr-distance" key={bucket} id={bucket==='long'?'mr-long':undefined} tabIndex={bucket==='long'?-1:undefined}>
         <h3>{distances[bucket]}</h3>{<div className={allowed?"mr-pair":"mr-individual"}>{d.productions.map(p=>{const units=p.thirdAttempts.filter(u=>u.distance===bucket),r=p.metrics.third.observation.byDistance[bucket];if(!ready(p.metrics.third))return <div key={p.offense}><ProductionName p={p}/><Unavailable metric={p.metrics.third}/></div>;return <div className="mr-distance-team" key={p.offense}>
           <div className="mr-distance-heading"><strong>{p.offense} com a bola</strong><span>{r.numerator}/{r.denominator}</span></div>
-          <div className="mr-attempts" aria-label={`${p.offense}, ${distances[bucket]}, ${r.numerator} conversões em ${r.denominator} tentativas`}>{units.map(u=><button key={u.id} type="button" data-third-mark={u.id} data-distance={u.distance} data-kind={u.kind} data-converted={u.converted} className={`mr-attempt ${u.converted?'is-converted':''}`} style={{'--production-color':teamIdentity(p.offense).dark} as CSSProperties} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, jogada ${u.playId}, ${u.yardsToGo??'distância desconhecida'} jardas, ${u.kind==='pass'?'passe':'corrida'}${u.sack?', sack':''}${u.scramble?', scramble':''}, ${u.converted?'convertida':'não convertida'}`}><MarkShape kind={u.kind} converted={!!u.converted}/></button>)}</div>
+          <div className="mr-attempts" aria-label={`${p.offense}, ${distances[bucket]}, ${r.numerator} conversões em ${r.denominator} tentativas`}>{units.map(u=><button key={u.id} type="button" data-third-mark={u.id} data-distance={u.distance} data-kind={u.kind} data-converted={u.converted} className={`mr-attempt ${u.converted?'is-converted':''}`} style={polish?undefined:{'--production-color':teamIdentity(p.offense).dark} as CSSProperties} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, jogada ${u.playId}, ${u.yardsToGo??'distância desconhecida'} jardas, ${u.kind==='pass'?'passe':'corrida'}${u.sack?', sack':''}${u.scramble?', scramble':''}, ${u.converted?'convertida':'não convertida'}`}><MarkShape kind={u.kind} converted={!!u.converted}/></button>)}</div>
           <p className="mr-joint-text">{p.thirdDistanceByType.filter(c=>c.distance===bucket).map(c=>`${c.kind==='pass'?'Passe':'Corrida'}: ${c.numerator}/${c.denominator}`).join(' · ')}<span> conversões / tentativas</span></p>
         </div>;})}</div>}
       </div>)}</div>
@@ -67,7 +74,7 @@ export function RedZoneBlock({d}:{d:Document}) {
   const [selected,setSelected]=useState<Campaign|null>(null);const allowed=sideAllowed(d,'redZone');const withoutCampaigns=d.productions.filter(p=>p.metrics.redZone.descriptor.status==='NO_OPPORTUNITIES').map(p=>p.offense);
   return <section className="mr-section" id="mr-redzone" tabIndex={-1} aria-labelledby="mr-redzone-title"><h2 id="mr-redzone-title">Red zone</h2><p className="mr-unit">TDs ofensivos / campanhas que entraram nas 20 · deste jogo</p>
     <>{!allowed&&<p className="mr-note">{withoutCampaigns.length?`${withoutCampaigns.join(' e ')} sem campanhas elegíveis de red zone neste jogo: não há taxa para comparar. As campanhas dos outros ataques seguem abaixo.`:'Não há comparação de red zone neste recorte. Consulte os resultados disponíveis de cada ataque abaixo.'}</p>}
-      <div className={allowed?"mr-pair mr-redzone-pair":"mr-individual mr-redzone-pair"}>{d.productions.map(p=><div key={p.offense}><ProductionName p={p}/><MetricValue metric={p.metrics.redZone}/>{ready(p.metrics.redZone)&&<><p className="mr-note">{p.metrics.redZone.descriptor.numerator} {Number(p.metrics.redZone.descriptor.numerator)===1?'TD':'TDs'} em {p.metrics.redZone.descriptor.denominator} {p.metrics.redZone.descriptor.denominator===1?'campanha observada':'campanhas observadas'}.</p>
+      <div className={allowed?"mr-pair mr-redzone-pair":"mr-individual mr-redzone-pair"}>{d.productions.map(p=><div key={p.offense}><ProductionName p={p}/><MetricValue metric={p.metrics.redZone} unit="campanhas"/>{ready(p.metrics.redZone)&&<><p className="mr-note">{p.metrics.redZone.descriptor.numerator} {Number(p.metrics.redZone.descriptor.numerator)===1?'TD':'TDs'} em {p.metrics.redZone.descriptor.denominator} {p.metrics.redZone.descriptor.denominator===1?'campanha observada':'campanhas observadas'}.</p>
         <div className="mr-campaigns">{p.redZoneCampaigns.map(u=><button type="button" key={u.id} data-campaign-mark={u.id} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, campanha ${u.fixedDrive}, ${outcomes[u.outcome]??u.outcome}`}><strong>{u.outcome==='TOUCHDOWN'?'TD':u.outcome==='FIELD_GOAL'?'FG':outcomes[u.outcome]??u.outcome}</strong><span>Campanha {u.fixedDrive}</span></button>)}</div>
         <p className="mr-outcomes">Desfechos: {Object.entries(p.metrics.redZone.observation.outcomes).sort(([a],[b])=>Number(b==='TOUCHDOWN')-Number(a==='TOUCHDOWN')).map(([k,v])=>`${v} ${k==='TOUCHDOWN'?(v===1?'TD':'TDs'):(outcomes[k]??k).toLowerCase()}`).join(' · ')}</p></>}
       </div>)}</div><p className="mr-note">Uma marca por campanha, em ordem da fonte. TD = touchdown; FG = field goal. Uma única oportunidade não demonstra uma capacidade estável.</p>
@@ -78,7 +85,9 @@ export function RedZoneBlock({d}:{d:Document}) {
   </section>;
 }
 export function League({reference:r,family}:{reference:Reference;family:Family}) {
+  const polish=useReadingPolish();
   const [selected,setSelected]=useState<Point|null>(null),points=r.teamRateDistribution.points;
+  if(polish)return <LeagueRows reference={r} family={family}/>;
   if(!permitted(r.permission,'leagueReference',points.map(p=>p.observationId)))return <p className="mr-unavailable">Referência da liga indisponível para esta operação.</p>;
   const positions=leaguePositions(points),height=Math.max(72,...positions.map(p=>36+p.lane*20));
   const label=(p:Point)=>`${p.team}: ${p.numerator}/${p.denominator}, ${rate(p)}`;

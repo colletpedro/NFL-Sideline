@@ -1,3 +1,5 @@
+import {useReadingPolish} from '../reading-polish/context';
+import {TeamIdentityLink} from '../reading-polish/TeamIdentityLink';
 import {teamStyle} from './visual';
 import {Link} from 'react-router-dom';
 import type {CalendarEntry,Index} from '../w12/model';
@@ -10,9 +12,14 @@ import {Logo} from '../../broadcast-experience/TeamLogo';
 import {gameHref,teamHref,weekHref} from './model';
 export function TeamLogo({team}:{team:string}) {const v=teamIdentity(team);return <Logo team={{...v,logoPlate:false}}/>;}
 export function MatchItem({game:g,q,density='compact'}:{game:CalendarEntry;q:URLSearchParams;density?:'feature'|'support'|'compact'}) {
+ const polish=useReadingPolish();
  return <article className={`ht-match ht-${density}`} data-hub-game={g.gameId} aria-label={`${g.away} contra ${g.home}, semana ${g.week}`}>
   <div className="ht-match-meta"><span>{dateLabel(g.gameday)}</span><span>Semana {g.week}</span></div>
-  <div className="ht-duel">{[g.away,g.home].map((team,i)=>{const t=teamIdentity(team);return <div className="ht-participant" key={team} style={teamStyle(team)}><TeamLogo team={team}/><div><strong>{team}</strong><span>{t.city} {t.name}</span><Link to={teamHref(q,team)} aria-label={`Ver time ${t.city} ${t.name} (${team})`}>Ver time</Link></div><strong className="ht-score">{(i===0?g.awayScore:g.homeScore)??'—'}</strong></div>;})}</div>
+  {polish&&density==='feature'?<div className="rp-feature-stage" style={{'--away-color':teamIdentity(g.away).color,'--away-dark':teamIdentity(g.away).dark,'--home-color':teamIdentity(g.home).color,'--home-dark':teamIdentity(g.home).dark} as React.CSSProperties}>
+   <div className="rp-feature-identity" style={teamStyle(g.away)}><TeamIdentityLink team={g.away} to={teamHref(q,g.away)}/></div>
+   <div className="rp-scoreboard" role="group" aria-label={`${g.away} ${g.awayScore??'resultado indisponível'}, ${g.home} ${g.homeScore??'resultado indisponível'}`}><strong>{g.awayScore??'—'}</strong><span aria-hidden="true">:</span><strong>{g.homeScore??'—'}</strong></div>
+   <div className="rp-feature-identity" style={teamStyle(g.home)}><TeamIdentityLink team={g.home} to={teamHref(q,g.home)}/></div>
+  </div>:<div className="ht-duel">{[g.away,g.home].map((team,i)=>{const t=teamIdentity(team);return <div className="ht-participant" key={team} style={teamStyle(team)}>{polish?<TeamIdentityLink team={team} to={teamHref(q,team)}/>:<><TeamLogo team={team}/><div><strong>{team}</strong><span>{t.city} {t.name}</span><Link to={teamHref(q,team)} aria-label={`Ver time ${t.city} ${t.name} (${team})`}>Ver time</Link></div></>}<strong className="ht-score">{(i===0?g.awayScore:g.homeScore)??'—'}</strong></div>;})}</div>}
   <div className="ht-match-action"><span>{g.awayScore!==null&&g.homeScore!==null?'Resultado registrado':'Resultado indisponível'}</span><Link to={gameHref(q,g)} aria-label={`Ver confronto ${g.away} × ${g.home}, semana ${g.week}`}>Ver confronto</Link></div>
  </article>;
 }

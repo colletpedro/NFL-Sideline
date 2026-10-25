@@ -1,3 +1,5 @@
+import {useReadingPolish} from '../reading-polish/context';
+import {TeamIdentityLink} from '../reading-polish/TeamIdentityLink';
 import type { CSSProperties } from 'react';
 import {Link} from 'react-router-dom';
 import type { Game } from '../../src/services/types';
@@ -10,10 +12,11 @@ import { EpaBlock, ThirdBlock, RedZoneBlock } from './Charts';
 import '../matchup/matchup.css';
 import './w12.css';
 export function MatchupContent({d,game,foundation,onFoundation,participantHref}:{d:Document;game:Game;foundation:Foundation;onFoundation:(f:Foundation)=>void;participantHref?:(team:string)=>string}) {
+  const polish=useReadingPolish();
   const result=finalGameResult(game),facts=linkedFacts(d);
   return <>
     <section className="mr-game" aria-labelledby="mr-title"><h1 id="mr-title" tabIndex={-1}>{game.awayTeam.teamAbbr} × {game.homeTeam.teamAbbr}</h1>
-      <div className="mr-band">{[game.awayTeam,game.homeTeam].map((team,i)=>{const identity=teamIdentity(team.teamAbbr);return <div className={`mr-team mr-team-${team.teamAbbr}`} key={team.teamAbbr} style={{'--team':identity.color,'--team-dark':identity.dark,'--logo-contrast-filter':identity.logoPlate?'brightness(0) invert(1)':'none'} as CSSProperties}><Logo team={{...identity,logoPlate:false}}/><div><strong>{team.teamName}</strong><span>{team.teamAbbr}</span>{participantHref&&<Link className="ht-participant-link" aria-label={`Ver time ${team.teamAbbr}`} to={participantHref(team.teamAbbr)}>Ver time</Link>}</div><strong className="mr-score">{result?(i===0?result.awayScore:result.homeScore):'—'}</strong></div>;})}</div>
+      <div className="mr-band">{[game.awayTeam,game.homeTeam].map((team,i)=>{const identity=teamIdentity(team.teamAbbr);return <div className={`mr-team mr-team-${team.teamAbbr}`} key={team.teamAbbr} style={{'--team':identity.color,'--team-dark':identity.dark,'--logo-contrast-filter':identity.logoPlate?'brightness(0) invert(1)':'none'} as CSSProperties}>{polish&&participantHref?<TeamIdentityLink team={team.teamAbbr} to={participantHref(team.teamAbbr)}/>:<><Logo team={{...identity,logoPlate:false}}/><div><strong>{team.teamName}</strong><span>{team.teamAbbr}</span>{participantHref&&<Link className="ht-participant-link" aria-label={`Ver time ${team.teamAbbr}`} to={participantHref(team.teamAbbr)}>Ver time</Link>}</div></>}<strong className="mr-score">{result?(i===0?result.awayScore:result.homeScore):'—'}</strong></div>;})}</div>
       <p className="mr-game-context">{result?'Resultado registrado':'Resultado indisponível no calendário'} · {dateLabel(game.gameday)} · {game.season} {game.gameType} · Semana {game.week}</p>
       <p className="mr-retrospective">Leitura retrospectiva deste jogo.</p>
     </section>
