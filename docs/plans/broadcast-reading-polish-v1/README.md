@@ -27,3 +27,39 @@ NE × SEA: “NEVer time” visualmente unido; falhas NE vermelhas e SEA azuis; 
 ## Verificação planejada
 
 Pacotes reais, testes de apresentação e consumidores anteriores, lint/TypeScript/builds afetados e público. Conferência de dados por HTTP sem repetir geração histórica. Navegador em 1440, 390, 320, texto 200%, foco/teclado, NE × SEA, NYJ × TEN, ATL, página do time e retorno com consulta/semana. Registrar ajustes após inspeção e pendências reais em REPORT.md.
+
+
+## Operação
+
+Instância própria: `http://127.0.0.1:18106/`. PID observado: **25458**. Encerramento direcionado: `kill -TERM 25458` (confira o PID/listener antes de usar no futuro). Servidores 18098–18105 preservados, especialmente referência 18105/PID 59966.
+
+```sh
+cd "/Users/pedrocollet/.codex/worktrees/broadcast-reading-polish-v1/NFL Sideline"
+sh docs/plans/broadcast-reading-polish-v1/run-local.sh
+# Verificar o listener próprio
+lsof -nP -iTCP:18106 -sTCP:LISTEN
+# Contraprova sem regeneração
+python3 docs/plans/broadcast-reading-polish-v1/check-http.py
+python3 docs/plans/broadcast-reading-polish-v1/check-builds.py
+python3 docs/plans/broadcast-reading-polish-v1/verify-isolation.py
+```
+
+O startup mantém configurações explícitas do operador para os pacotes duráveis existentes; `NFL_TEAM_CONFIG` e `NFL_W12_CONFIG` admitem configuração local do operador, nunca URL/browser. Todos os cinco readers usam 18106. Não alterar manualmente só a porta de um deles. Cache Vite exclusivo sob `node_modules/.vite-broadcast-reading-polish-v1`. A build privada fica em `web-ui/reading-polish-dist`, sem cópia de artefatos para public/data.
+
+Links: [hub W1](http://127.0.0.1:18106/?season=2026&week=1), [hub W2](http://127.0.0.1:18106/?season=2026&week=2), [NE × SEA](http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NE_SEA), [NYJ × TEN](http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NYJ_TEN), [time NYJ](http://127.0.0.1:18106/?view=team-w12&team=NYJ&season=2026&returnWeek=1), [ATL sem oportunidades](http://127.0.0.1:18106/?view=team-w12&team=ATL&season=2026&returnWeek=2#team-redzone), [referência preservada](http://127.0.0.1:18105/?season=2026&week=1).
+
+[Relatório, antes/depois e limites](REPORT.md). Branch `codex/broadcast-reading-polish-v1`; commits locais e HEAD final verificáveis por `git log -3 --oneline` e informados no fechamento. Sem promoção automática.
+
+Para reproduzir os testes com fontes reais habilitadas (sem credenciais):
+
+```sh
+export NFL_TEAM_QA_BUNDLE='/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-hub-team-w12-v1/20261024-v1/bundle'
+export NFL_W12_QA_BUNDLE="$NFL_TEAM_QA_BUNDLE/source/matchups"
+export NFL_MATCHUP_QA_BUNDLE='/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comparison-foundation-v1/20261023-v1/bundle-reconciled'
+export NFL_SITUATIONAL_QA_BUNDLE='/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-situational-w12-v1/20261023-v1/bundle-reconciled'
+export PATH="/opt/homebrew/opt/node@24/bin:$PATH"
+npm --prefix web-ui test
+PYTHONPATH="$PWD/etl-pipeline/src" '/Users/pedrocollet/Downloads/NFL Sideline/etl-pipeline/.venv/bin/python' -m pytest -q etl-pipeline/tests/test_team_w12.py -k 'real_package_reader_integrity or zero_opportunities or unavailable_component or missing_component'
+```
+
+As oito builds e configurações TypeScript/lint são enumeradas e têm seus logs em `checks/builds.json`; o script `check-builds.py` encerra no primeiro erro e confere os hashes públicos. A verificação de isolamento espera os listeners desta sessão; PIDs precisam ser reconferidos quando uma instância for reiniciada.
