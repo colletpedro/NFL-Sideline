@@ -27,7 +27,7 @@ export function EpaBlock({d,foundation,onFoundation}:{d:Document;foundation:Foun
     <div className="mr-section-title"><h2 id="mr-epa-title">Produção com a bola</h2><div className="mr-foundations" role="group" aria-label="Fundamento do EPA">{([['general','Geral'],['classified_pass','Passe'],['classified_rush','Corrida']] as const).map(([id,label])=><button key={id} type="button" aria-pressed={foundation===id} onClick={()=>onFoundation(id)}>{label}</button>)}</div></div>
     <p className="mr-unit">EPA/jogada é a variação média dos pontos esperados nas jogadas com EPA válido deste jogo. Positivo indica ganho; negativo, perda. Não é o placar.</p>
     <p className="mr-note">{foundation==='classified_pass'?'Passe inclui sacks.':foundation==='classified_rush'?'Corrida inclui scrambles.':'Geral reúne passe e corrida elegíveis.'} {allowed?'Os dois ataques usam a mesma escala.':'Valores individuais em EPA/jogada.'}</p>
-    {!allowed&&<p className="mr-note">A comparação EPA não está autorizada neste recorte. As observações individuais disponíveis seguem abaixo.</p>}
+    {!allowed&&<p className="mr-note">Não há comparação EPA para este recorte. Consulte os valores disponíveis de cada ataque abaixo.</p>}
     <div className="mr-epa-chart" data-foundation={foundation}>
       {allowed&&<div className="mr-epa-axis" aria-hidden="true">{epaAxisLabels(scale).map(v=><span key={v} style={{left:`${scale.position(v)}%`}}>{v===0?'0':`${v>0?'+':'−'}${Math.abs(v).toFixed(2).replace('.',',')}`}</span>)}</div>}
       {d.productions.map((p,i)=>{const e=entries[i],v=values[i],pos=v===null?zero:scale.position(v);return <div key={p.offense} className="mr-epa-row" data-epa-team={p.offense}>
@@ -47,7 +47,7 @@ export function ThirdBlock({d}:{d:Document}) {
   const buckets=(Object.keys(distances) as Attempt['distance'][]).filter(b=>b!=='unknown'||d.productions.some(p=>p.thirdAttempts.some(u=>u.distance==='unknown')));
   return <section className="mr-section" id="mr-third" tabIndex={-1} aria-labelledby="mr-third-title">
     <h2 id="mr-third-title">Terceiras descidas</h2><p className="mr-unit">Conversões / tentativas elegíveis · deste jogo</p>
-    <>{!allowed&&<p className="mr-note">Comparação de terceiras indisponível. As apresentações individuais autorizadas permanecem disponíveis.</p>}
+    <>{!allowed&&<p className="mr-note">Comparação de terceiras indisponível. Consulte os números de cada ataque abaixo.</p>}
       <div className={allowed?"mr-pair mr-totals":"mr-individual mr-totals"}>{d.productions.map(p=><div key={p.offense}><ProductionName p={p}/><MetricValue metric={p.metrics.third}/></div>)}</div>
       <p className="mr-mark-legend"><span><MarkShape kind="pass" converted={false}/> Círculo: passe, incluindo sacks.</span><span><MarkShape kind="run" converted={false}/> Quadrado: corrida, incluindo scrambles.</span><span><i className="mr-filled-key"/> Preenchida e com traço de confirmação: conversão. Vazia e com traço horizontal: não convertida.</span></p>
       <div className="mr-distance-groups">{buckets.map(bucket=><div className="mr-distance" key={bucket} id={bucket==='long'?'mr-long':undefined} tabIndex={bucket==='long'?-1:undefined}>
@@ -64,9 +64,9 @@ export function ThirdBlock({d}:{d:Document}) {
   </section>;
 }
 export function RedZoneBlock({d}:{d:Document}) {
-  const [selected,setSelected]=useState<Campaign|null>(null);const allowed=sideAllowed(d,'redZone');
+  const [selected,setSelected]=useState<Campaign|null>(null);const allowed=sideAllowed(d,'redZone');const withoutCampaigns=d.productions.filter(p=>p.metrics.redZone.descriptor.status==='NO_OPPORTUNITIES').map(p=>p.offense);
   return <section className="mr-section" id="mr-redzone" tabIndex={-1} aria-labelledby="mr-redzone-title"><h2 id="mr-redzone-title">Red zone</h2><p className="mr-unit">TDs ofensivos / campanhas que entraram nas 20 · deste jogo</p>
-    <>{!allowed&&<p className="mr-note">Comparação de red zone indisponível. As apresentações individuais autorizadas permanecem disponíveis.</p>}
+    <>{!allowed&&<p className="mr-note">{withoutCampaigns.length?`${withoutCampaigns.join(' e ')} sem campanhas elegíveis de red zone neste jogo: não há taxa para comparar. As campanhas dos outros ataques seguem abaixo.`:'Não há comparação de red zone neste recorte. Consulte os resultados disponíveis de cada ataque abaixo.'}</p>}
       <div className={allowed?"mr-pair mr-redzone-pair":"mr-individual mr-redzone-pair"}>{d.productions.map(p=><div key={p.offense}><ProductionName p={p}/><MetricValue metric={p.metrics.redZone}/>{ready(p.metrics.redZone)&&<><p className="mr-note">{p.metrics.redZone.descriptor.numerator} {Number(p.metrics.redZone.descriptor.numerator)===1?'TD':'TDs'} em {p.metrics.redZone.descriptor.denominator} {p.metrics.redZone.descriptor.denominator===1?'campanha observada':'campanhas observadas'}.</p>
         <div className="mr-campaigns">{p.redZoneCampaigns.map(u=><button type="button" key={u.id} data-campaign-mark={u.id} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, campanha ${u.fixedDrive}, ${outcomes[u.outcome]??u.outcome}`}><strong>{u.outcome==='TOUCHDOWN'?'TD':u.outcome==='FIELD_GOAL'?'FG':outcomes[u.outcome]??u.outcome}</strong><span>Campanha {u.fixedDrive}</span></button>)}</div>
         <p className="mr-outcomes">Desfechos: {Object.entries(p.metrics.redZone.observation.outcomes).sort(([a],[b])=>Number(b==='TOUCHDOWN')-Number(a==='TOUCHDOWN')).map(([k,v])=>`${v} ${k==='TOUCHDOWN'?(v===1?'TD':'TDs'):(outcomes[k]??k).toLowerCase()}`).join(' · ')}</p></>}

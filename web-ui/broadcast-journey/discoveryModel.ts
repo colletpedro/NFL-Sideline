@@ -52,3 +52,8 @@ export function selectGames(games: Game[], archive: Archive | null) {
 }
 export const availabilityLabel = (kind: Relation | null) => kind === 'individual' ? 'Leitura deste jogo' : kind === 'includes' ? 'Período que inclui o jogo' : kind === 'gap' ? 'Lacuna deste jogo' : kind === 'other' || kind === 'archive' ? 'Outros recortes do participante' : 'Sem leitura dos participantes';
 export const availabilityAction = (kind: Relation | null) => kind === 'individual' ? 'Escolher leitura' : kind === 'includes' ? 'Explorar período' : kind === 'gap' ? 'Ver lacuna' : kind === 'other' || kind === 'archive' ? 'Explorar outros recortes' : 'Abrir confronto';
+
+export function suggestTeams(teams:Team[],query:string,limit=4) {
+  const tokens=normalizeSearch(query).split(' ').filter(Boolean),codes=new Set(teams.map(t=>t.teamAbbr.toLowerCase()));
+  return tokens.length?teams.filter(team=>tokens.every(token=>words(team).some(term=>codes.has(token)?term===token:term.startsWith(token)))).slice(0,limit):[];
+}

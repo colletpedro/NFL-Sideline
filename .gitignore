@@ -76,3 +76,8 @@ web-ui/matchup-dist/
 web-ui/w12-dist/
 
 /editorial/local-artifacts/broadcast-matchup-w12-v1/
+
+# Build experimental do percurso hub/time W1–2.
+web-ui/hub-team-dist/
+
+/editorial/local-artifacts/broadcast-hub-team-w12-v1/
