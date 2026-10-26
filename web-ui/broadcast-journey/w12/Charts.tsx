@@ -1,3 +1,4 @@
+import {RedzoneEpaPanel} from '../redzone-epa/Panel';
 import {useRankingRedzone} from '../ranking-redzone/context';
 import {RankingLeague} from '../ranking-redzone/RankingLeague';
 import {CampaignMark,CampaignLegend} from '../ranking-redzone/Campaigns';
@@ -86,6 +87,7 @@ export function RedZoneBlock({d}:{d:Document}) {
     </>
     {ranking&&<CampaignLegend outcomes={d.productions.filter(p=>ready(p.metrics.redZone)).flatMap(p=>p.redZoneCampaigns.map(u=>u.outcome))}/>}
     <Rule title="Quando uma campanha entra na red zone?"><p>Há posição observada antes de um evento de scrimmage a até 20 jardas da end zone, incluindo a linha de 20. Várias entradas não criam outra oportunidade na mesma campanha. Posição observada antes de ajoelhada também pode demonstrar entrada. TD de fora não cria entrada artificial.</p></Rule>
+    <RedzoneEpaPanel gameId={d.game.gameId}/>
     <League reference={d.leagueReferences.redZone} family="redZone" participants={[d.game.away,d.game.home]}/>
   </section>;
 }

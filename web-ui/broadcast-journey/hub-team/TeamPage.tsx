@@ -1,3 +1,4 @@
+import {RedzoneEpaPanel} from '../redzone-epa/Panel';
 import {useRankingRedzone} from '../ranking-redzone/context';
 import {CampaignMark,CampaignLegend} from '../ranking-redzone/Campaigns';
 import {useReadingPolish} from '../reading-polish/context';
@@ -45,6 +46,7 @@ function Situational({d,family}:{d:TeamDocument;family:'third'|'redZone'}) {
  {!third&&ranking&&<CampaignLegend outcomes={d.productions.filter(p=>defined(p.metrics.redZone)).flatMap(p=>p.redZoneCampaigns.map(u=>u.outcome))}/>}
  <p className="mr-mark-readout" aria-live="polite">{selected||'Toque ou use Tab e Enter em uma marca para consultar sua unidade original.'}</p>
  <Rule title={third?'O que é uma terceira elegível?':'Quando uma campanha entra na red zone?'}><p>{third?'Passe/corrida de terceira com flags válidas. Ajoelhadas, spikes, anuladas, abortadas e tentativas especiais ficam fora; avanço por penalidade não é adicionado automaticamente.':'Uma campanha com posição observada antes de evento de scrimmage até a linha de 20, inclusive; várias entradas não criam oportunidades adicionais. Marcas em ordem W1, W2 e ordem da fonte dentro de cada jogo.'} Os dois jogos compõem o denominador. Zero oportunidades não é fonte ausente; falta de componente impede o agregado completo.</p></Rule>
+ {!third&&<RedzoneEpaPanel team={d.scope.team}/>}
  </section>;
 }
 export function TeamPage({d,q,foundation,onFoundation}:{d:TeamDocument;q:URLSearchParams;foundation:Foundation;onFoundation:(f:Foundation)=>void}) {
