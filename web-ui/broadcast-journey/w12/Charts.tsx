@@ -1,3 +1,6 @@
+import {useRankingRedzone} from '../ranking-redzone/context';
+import {RankingLeague} from '../ranking-redzone/RankingLeague';
+import {CampaignMark,CampaignLegend} from '../ranking-redzone/Campaigns';
 import {useReadingPolish} from '../reading-polish/context';
 import {AttemptSymbol,AttemptLegend} from '../reading-polish/Attempts';
 import {LeagueRows} from '../reading-polish/LeagueRows';
@@ -67,26 +70,30 @@ export function ThirdBlock({d}:{d:Document}) {
       <p className="mr-mark-readout" aria-live="polite">{selected?`${selected.offense} contra ${selected.defense} · ${selected.kind==='pass'?'Passe':'Corrida'}${selected.sack?' com sack':''}${selected.scramble?' com scramble':''} · ${selected.yardsToGo??'distância desconhecida'} jardas necessárias · ${selected.converted?'Convertida':'Não convertida'} · ID ${selected.id}`:'Cada marca é uma tentativa. Toque ou use Tab e Enter para consultar a jogada original.'}</p>
     </>
     <Rule title="O que é uma terceira elegível?"><p>Passe ou corrida de terceira com flags válidas de conversão/falha. Exclui ajoelhadas, spikes, anuladas, abortadas e tentativas especiais. Avanço por penalidade não é automaticamente conversão. São as regras do projeto, não uma afirmação de estatística oficial da NFL.</p></Rule>
-    <League reference={d.leagueReferences.third} family="third"/>
+    <League reference={d.leagueReferences.third} family="third" participants={[d.game.away,d.game.home]}/>
   </section>;
 }
 export function RedZoneBlock({d}:{d:Document}) {
+  const ranking=useRankingRedzone();
   const [selected,setSelected]=useState<Campaign|null>(null);const allowed=sideAllowed(d,'redZone');const withoutCampaigns=d.productions.filter(p=>p.metrics.redZone.descriptor.status==='NO_OPPORTUNITIES').map(p=>p.offense);
   return <section className="mr-section" id="mr-redzone" tabIndex={-1} aria-labelledby="mr-redzone-title"><h2 id="mr-redzone-title">Red zone</h2><p className="mr-unit">TDs ofensivos / campanhas que entraram nas 20 · deste jogo</p>
     <>{!allowed&&<p className="mr-note">{withoutCampaigns.length?`${withoutCampaigns.join(' e ')} sem campanhas elegíveis de red zone neste jogo: não há taxa para comparar. As campanhas dos outros ataques seguem abaixo.`:'Não há comparação de red zone neste recorte. Consulte os resultados disponíveis de cada ataque abaixo.'}</p>}
       <div className={allowed?"mr-pair mr-redzone-pair":"mr-individual mr-redzone-pair"}>{d.productions.map(p=><div key={p.offense}><ProductionName p={p}/><MetricValue metric={p.metrics.redZone} unit="campanhas"/>{ready(p.metrics.redZone)&&<><p className="mr-note">{p.metrics.redZone.descriptor.numerator} {Number(p.metrics.redZone.descriptor.numerator)===1?'TD':'TDs'} em {p.metrics.redZone.descriptor.denominator} {p.metrics.redZone.descriptor.denominator===1?'campanha observada':'campanhas observadas'}.</p>
-        <div className="mr-campaigns">{p.redZoneCampaigns.map(u=><button type="button" key={u.id} data-campaign-mark={u.id} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, campanha ${u.fixedDrive}, ${outcomes[u.outcome]??u.outcome}`}><strong>{u.outcome==='TOUCHDOWN'?'TD':u.outcome==='FIELD_GOAL'?'FG':outcomes[u.outcome]??u.outcome}</strong><span>Campanha {u.fixedDrive}</span></button>)}</div>
+        <div className="mr-campaigns">{p.redZoneCampaigns.map(u=>ranking?<CampaignMark key={u.id} unit={u} label={p.label} scope="game" selected={selected?.id===u.id} onSelect={()=>setSelected(u)}/>:<button type="button" key={u.id} data-campaign-mark={u.id} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, campanha ${u.fixedDrive}, ${outcomes[u.outcome]??u.outcome}`}><strong>{u.outcome==='TOUCHDOWN'?'TD':u.outcome==='FIELD_GOAL'?'FG':outcomes[u.outcome]??u.outcome}</strong><span>Campanha {u.fixedDrive}</span></button>)}</div>
         <p className="mr-outcomes">Desfechos: {Object.entries(p.metrics.redZone.observation.outcomes).sort(([a],[b])=>Number(b==='TOUCHDOWN')-Number(a==='TOUCHDOWN')).map(([k,v])=>`${v} ${k==='TOUCHDOWN'?(v===1?'TD':'TDs'):(outcomes[k]??k).toLowerCase()}`).join(' · ')}</p></>}
       </div>)}</div><p className="mr-note">Uma marca por campanha, em ordem da fonte. TD = touchdown; FG = field goal. Uma única oportunidade não demonstra uma capacidade estável.</p>
       <div className="mr-mark-readout" aria-live="polite">{selected?<><p>{selected.offense} contra {selected.defense} · Campanha {selected.fixedDrive} · {outcomes[selected.outcome]}.</p><p>Entrada demonstrada nas jogadas {selected.entryEvidence.map(e=>e.play_id).join(', ')}; desfecho na(s) jogada(s) {selected.outcomeEvidence.map(e=>e.play_id).join(', ')}.</p><p>ID {selected.id}</p></>:'Toque ou use Tab e Enter em uma campanha para consultar as evidências de entrada e desfecho.'}</div>
     </>
+    {ranking&&<CampaignLegend outcomes={d.productions.filter(p=>ready(p.metrics.redZone)).flatMap(p=>p.redZoneCampaigns.map(u=>u.outcome))}/>}
     <Rule title="Quando uma campanha entra na red zone?"><p>Há posição observada antes de um evento de scrimmage a até 20 jardas da end zone, incluindo a linha de 20. Várias entradas não criam outra oportunidade na mesma campanha. Posição observada antes de ajoelhada também pode demonstrar entrada. TD de fora não cria entrada artificial.</p></Rule>
-    <League reference={d.leagueReferences.redZone} family="redZone"/>
+    <League reference={d.leagueReferences.redZone} family="redZone" participants={[d.game.away,d.game.home]}/>
   </section>;
 }
-export function League({reference:r,family}:{reference:Reference;family:Family}) {
+export function League({reference:r,family,participants=r.participantsIncluded}:{reference:Reference;family:Family;participants?:string[]}) {
+  const ranking=useRankingRedzone();
   const polish=useReadingPolish();
   const [selected,setSelected]=useState<Point|null>(null),points=r.teamRateDistribution.points;
+  if(ranking)return <RankingLeague reference={r} family={family} participants={participants}/>;
   if(polish)return <LeagueRows reference={r} family={family}/>;
   if(!permitted(r.permission,'leagueReference',points.map(p=>p.observationId)))return <p className="mr-unavailable">Referência da liga indisponível para esta operação.</p>;
   const positions=leaguePositions(points),height=Math.max(72,...positions.map(p=>36+p.lane*20));
