@@ -1,0 +1,53 @@
+vite v5.4.21 building for production...
+transforming...
+✓ 114 modules transformed.
+rendering chunks...
+computing gzip size...
+../matchup-dist/index.html                                        0.38 kB │ gzip:  0.28 kB
+../matchup-dist/assets/nyg-B7GEzpDk.png                           7.57 kB
+../matchup-dist/assets/cin-DAWVRKmj.png                          26.63 kB
+../matchup-dist/assets/was-BcwmxSCJ.png                          30.42 kB
+../matchup-dist/assets/sea-Bs6vHzbc.png                          32.08 kB
+../matchup-dist/assets/ne-CjQy7Z4T.png                           32.08 kB
+../matchup-dist/assets/dal-DumH5f6I.png                          32.37 kB
+../matchup-dist/assets/lac-G0yXcTHr.png                          32.85 kB
+../matchup-dist/assets/hou-BTtnUu_J.png                          35.77 kB
+../matchup-dist/assets/car-CGu1pDhv.png                          36.64 kB
+../matchup-dist/assets/buf-C8E5u14Q.png                          38.00 kB
+../matchup-dist/assets/la-Cnbeu6OW.png                           38.71 kB
+../matchup-dist/assets/gb-Kq_Dl-1v.png                           39.19 kB
+../matchup-dist/assets/kc-qEo7C-YT.png                           40.23 kB
+../matchup-dist/assets/den-ZMwN9Kj8.png                          40.95 kB
+../matchup-dist/assets/ari-SWmA0hjl.png                          41.99 kB
+../matchup-dist/assets/ind-BjFZCeSx.png                          42.08 kB
+../matchup-dist/assets/sf-VDD_-KP9.png                           48.70 kB
+../matchup-dist/assets/ten-BjiV9AWL.png                          50.73 kB
+../matchup-dist/assets/atl-BOcCry6n.png                          51.78 kB
+../matchup-dist/assets/no-CRvSwJHd.png                           52.02 kB
+../matchup-dist/assets/bal-B02a8qg4.png                          55.99 kB
+../matchup-dist/assets/pit-CVCA5Q0Z.png                          56.62 kB
+../matchup-dist/assets/det-DOjjcZuE.png                          57.47 kB
+../matchup-dist/assets/mia-pvajL4QF.png                          64.41 kB
+../matchup-dist/assets/min-DxdqfIZ7.png                          69.69 kB
+../matchup-dist/assets/phi-DVPW4bAp.png                          70.33 kB
+../matchup-dist/assets/lv-BdvUO8u-.png                           77.77 kB
+../matchup-dist/assets/jax-DFcKN7bi.png                          78.81 kB
+../matchup-dist/assets/chi-BAA7PtZp.png                          93.59 kB
+../matchup-dist/assets/cle-CjWlBQek.png                          94.48 kB
+../matchup-dist/assets/tb-B-m6i7aa.png                           96.11 kB
+../matchup-dist/assets/nyj-No6xqtcN.png                         130.61 kB
+../matchup-dist/assets/IND-helmet-Rtvul9IP.png                  181.09 kB
+../matchup-dist/assets/BAL-helmet-CKInBePR.png                  247.95 kB
+../matchup-dist/assets/DAL-helmet-CaTT8uPk.png                  257.20 kB
+../matchup-dist/assets/NE-helmet-DxKOgsGB.png                   292.82 kB
+../matchup-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf    371.62 kB
+../matchup-dist/assets/Archivo-Variable-DuIT1y7V.ttf            658.60 kB
+../matchup-dist/assets/IND-portrait-A7Ny9y06.png              1,430.16 kB
+../matchup-dist/assets/DAL-portrait-6a4scUZR.png              3,538.53 kB
+../matchup-dist/assets/NE-portrait-IJMRdLLJ.png               3,976.67 kB
+../matchup-dist/assets/BAL-portrait-DefwyzYA.png              4,267.72 kB
+../matchup-dist/assets/MatchupPage-CJ2LwRbs.css                  13.30 kB │ gzip:  3.35 kB
+../matchup-dist/assets/index-DGbv6m-I.css                       122.23 kB │ gzip: 22.40 kB
+../matchup-dist/assets/MatchupPage-BQK7ecRq.js                   30.32 kB │ gzip: 10.11 kB
+../matchup-dist/assets/index-BA7wGeUt.js                        277.96 kB │ gzip: 86.88 kB
+✓ built in 656ms

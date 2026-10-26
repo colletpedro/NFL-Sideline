@@ -1,0 +1,398 @@
+{
+  "newPin": "sha256:6e6bffd6d2e8fc1e70e9d47e395f250b8dcf2cbc084bedbf4e4a32fb2ccf8af6",
+  "requests": [
+    {
+      "path": "/__redzone-epa/",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__redzone-epa/",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__redzone-epa/",
+      "method": "POST",
+      "status": 403
+    },
+    {
+      "path": "/__redzone-epa/?path=/tmp/other",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__redzone-epa/../other",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__redzone-epa/",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__redzone-epa/",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__redzone-epa/",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__redzone-epa/",
+      "method": "GET",
+      "status": 409
+    },
+    {
+      "duplicate": "Host",
+      "status": 403
+    },
+    {
+      "duplicate": "Origin",
+      "status": 403
+    },
+    {
+      "duplicate": "X-Local-Redzone-Epa",
+      "status": 403
+    },
+    {
+      "duplicate": "X-Redzone-Epa-Collection",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/ARI",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/ATL",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/BAL",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/BUF",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CAR",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CHI",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CIN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CLE",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DAL",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DEN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DET",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/GB",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/HOU",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/IND",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/JAX",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/KC",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LA",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LAC",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LV",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/MIA",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/MIN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NE",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NO",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NYG",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NYJ",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/PHI",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/PIT",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/SEA",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/SF",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/TB",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/TEN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/WAS",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_ARI_LAC",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_ATL_PIT",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_BAL_IND",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_BUF_HOU",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_CHI_CAR",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_CLE_JAX",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_DAL_NYG",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_DEN_KC",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_GB_MIN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_MIA_LV",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NE_SEA",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NO_DET",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NYJ_TEN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_SF_LA",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_TB_CIN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_WAS_PHI",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CAR_ATL",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CIN_HOU",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CLE_TB",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_DET_BUF",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_GB_NYJ",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_IND_KC",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_JAX_DEN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_LV_LAC",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_MIA_SF",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_MIN_CHI",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_NO_BAL",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_NYG_LA",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_PHI_TEN",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_PIT_NE",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_SEA_ARI",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_WAS_DAL",
+      "method": "GET",
+      "status": 200
+    }
+  ],
+  "exactPreservedDocuments": 64,
+  "newPayloadExact": true
+}

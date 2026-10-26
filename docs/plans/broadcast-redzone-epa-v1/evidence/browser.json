@@ -1,0 +1,395 @@
+{
+  "measurements": [
+    {
+      "case": "ne-sea",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNE com a bola\n\n−0,913\nEPA/jogada\n\n2 jogadas com EPA válido\n\n−1,00\n0\n+0,40\nSEA com a bola\n\n−0,305\nEPA/jogada\n\n6 jogadas com EPA válido\n\n−1,00\n0\n+0,40\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "2 jogadas com EPA válido",
+          "name": "NE com a bola",
+          "rect": {
+            "left": 184.5,
+            "width": 516
+          },
+          "value": "−0,913EPA/jogada"
+        },
+        {
+          "base": "6 jogadas com EPA válido",
+          "name": "SEA com a bola",
+          "rect": {
+            "left": 724.5,
+            "width": 516
+          },
+          "value": "−0,305EPA/jogada"
+        }
+      ],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "case": "nyj-ten",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNYJ com a bola\n\n+0,343\nEPA/jogada\n\n7 jogadas com EPA válido\n\n−0,20\n0\n+0,80\nTEN com a bola\n\n+0,752\nEPA/jogada\n\n3 jogadas com EPA válido\n\n−0,20\n0\n+0,80\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "7 jogadas com EPA válido",
+          "name": "NYJ com a bola",
+          "rect": {
+            "left": 184.5,
+            "width": 516
+          },
+          "value": "+0,343EPA/jogada"
+        },
+        {
+          "base": "3 jogadas com EPA válido",
+          "name": "TEN com a bola",
+          "rect": {
+            "left": 724.5,
+            "width": 516
+          },
+          "value": "+0,752EPA/jogada"
+        }
+      ],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "case": "atl-pit",
+      "axisCollisions": [
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nSem comparação completa de EPA neste recorte. Os valores disponíveis seguem identificados.\n\nATL com a bola\n\nNenhuma jogada elegível começou na red zone. Sem média.\n\nPIT com a bola\n\n−0,002\nEPA/jogada\n\n6 jogadas com EPA válido\n\n−0,20\n0\n+0,40\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "name": "ATL com a bola",
+          "rect": {
+            "left": 184.5,
+            "width": 516
+          }
+        },
+        {
+          "base": "6 jogadas com EPA válido",
+          "name": "PIT com a bola",
+          "rect": {
+            "left": 724.5,
+            "width": 516
+          },
+          "value": "−0,002EPA/jogada"
+        }
+      ],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "case": "team-nyj",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · W1–2\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNYJ com a bola\n\n+0,438\nEPA/jogada\n\n15 jogadas com EPA válido\n\n−0,20\n0\n+0,60\nAdversários contra NYJ\n\n+0,420\nEPA/jogada\n\n11 jogadas com EPA válido\n\n−0,20\n0\n+0,60\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "15 jogadas com EPA válido",
+          "name": "NYJ com a bola",
+          "rect": {
+            "left": 184.5,
+            "width": 516
+          },
+          "value": "+0,438EPA/jogada"
+        },
+        {
+          "base": "11 jogadas com EPA válido",
+          "name": "Adversários contra NYJ",
+          "rect": {
+            "left": 724.5,
+            "width": 516
+          },
+          "value": "+0,420EPA/jogada"
+        }
+      ],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "case": "ne-sea",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNE com a bola\n\n−0,913\nEPA/jogada\n\n2 jogadas com EPA válido\n\n−1,00\n0\n+0,40\nSEA com a bola\n\n−0,305\nEPA/jogada\n\n6 jogadas com EPA válido\n\n−1,00\n0\n+0,40\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "2 jogadas com EPA válido",
+          "name": "NE com a bola",
+          "rect": {
+            "left": 28,
+            "width": 319
+          },
+          "value": "−0,913EPA/jogada"
+        },
+        {
+          "base": "6 jogadas com EPA válido",
+          "name": "SEA com a bola",
+          "rect": {
+            "left": 28,
+            "width": 319
+          },
+          "value": "−0,305EPA/jogada"
+        }
+      ],
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "case": "nyj-ten",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNYJ com a bola\n\n+0,343\nEPA/jogada\n\n7 jogadas com EPA válido\n\n−0,20\n0\n+0,80\nTEN com a bola\n\n+0,752\nEPA/jogada\n\n3 jogadas com EPA válido\n\n−0,20\n0\n+0,80\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "7 jogadas com EPA válido",
+          "name": "NYJ com a bola",
+          "rect": {
+            "left": 28,
+            "width": 319
+          },
+          "value": "+0,343EPA/jogada"
+        },
+        {
+          "base": "3 jogadas com EPA válido",
+          "name": "TEN com a bola",
+          "rect": {
+            "left": 28,
+            "width": 319
+          },
+          "value": "+0,752EPA/jogada"
+        }
+      ],
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "case": "atl-pit",
+      "axisCollisions": [
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nSem comparação completa de EPA neste recorte. Os valores disponíveis seguem identificados.\n\nATL com a bola\n\nNenhuma jogada elegível começou na red zone. Sem média.\n\nPIT com a bola\n\n−0,002\nEPA/jogada\n\n6 jogadas com EPA válido\n\n−0,20\n0\n+0,40\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "name": "ATL com a bola",
+          "rect": {
+            "left": 28,
+            "width": 319
+          }
+        },
+        {
+          "base": "6 jogadas com EPA válido",
+          "name": "PIT com a bola",
+          "rect": {
+            "left": 28,
+            "width": 319
+          },
+          "value": "−0,002EPA/jogada"
+        }
+      ],
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "case": "team-nyj",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · W1–2\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNYJ com a bola\n\n+0,438\nEPA/jogada\n\n15 jogadas com EPA válido\n\n−0,20\n0\n+0,60\nAdversários contra NYJ\n\n+0,420\nEPA/jogada\n\n11 jogadas com EPA válido\n\n−0,20\n0\n+0,60\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "15 jogadas com EPA válido",
+          "name": "NYJ com a bola",
+          "rect": {
+            "left": 28,
+            "width": 319
+          },
+          "value": "+0,438EPA/jogada"
+        },
+        {
+          "base": "11 jogadas com EPA válido",
+          "name": "Adversários contra NYJ",
+          "rect": {
+            "left": 28,
+            "width": 319
+          },
+          "value": "+0,420EPA/jogada"
+        }
+      ],
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "case": "ne-sea",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNE com a bola\n\n−0,913\nEPA/jogada\n\n2 jogadas com EPA válido\n\n−1,00\n0\n+0,40\nSEA com a bola\n\n−0,305\nEPA/jogada\n\n6 jogadas com EPA válido\n\n−1,00\n0\n+0,40\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "2 jogadas com EPA válido",
+          "name": "NE com a bola",
+          "rect": {
+            "left": 28,
+            "width": 249
+          },
+          "value": "−0,913EPA/jogada"
+        },
+        {
+          "base": "6 jogadas com EPA válido",
+          "name": "SEA com a bola",
+          "rect": {
+            "left": 28,
+            "width": 249
+          },
+          "value": "−0,305EPA/jogada"
+        }
+      ],
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "case": "nyj-ten",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNYJ com a bola\n\n+0,343\nEPA/jogada\n\n7 jogadas com EPA válido\n\n−0,20\n0\n+0,80\nTEN com a bola\n\n+0,752\nEPA/jogada\n\n3 jogadas com EPA válido\n\n−0,20\n0\n+0,80\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "7 jogadas com EPA válido",
+          "name": "NYJ com a bola",
+          "rect": {
+            "left": 28,
+            "width": 249
+          },
+          "value": "+0,343EPA/jogada"
+        },
+        {
+          "base": "3 jogadas com EPA válido",
+          "name": "TEN com a bola",
+          "rect": {
+            "left": 28,
+            "width": 249
+          },
+          "value": "+0,752EPA/jogada"
+        }
+      ],
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "case": "atl-pit",
+      "axisCollisions": [
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · deste jogo\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nSem comparação completa de EPA neste recorte. Os valores disponíveis seguem identificados.\n\nATL com a bola\n\nNenhuma jogada elegível começou na red zone. Sem média.\n\nPIT com a bola\n\n−0,002\nEPA/jogada\n\n6 jogadas com EPA válido\n\n−0,20\n0\n+0,40\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "name": "ATL com a bola",
+          "rect": {
+            "left": 28,
+            "width": 249
+          }
+        },
+        {
+          "base": "6 jogadas com EPA válido",
+          "name": "PIT com a bola",
+          "rect": {
+            "left": 28,
+            "width": 249
+          },
+          "value": "−0,002EPA/jogada"
+        }
+      ],
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "case": "team-nyj",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "panel": "EPA nas jogadas da red zone\n\nEPA por jogada que começa nas últimas 20 jardas · W1–2\n\nAs marcas acima contam campanhas. Aqui, a base é de jogadas com EPA válido. Positivo indica ganho de pontos esperados; negativo, perda.\n\nNYJ com a bola\n\n+0,438\nEPA/jogada\n\n15 jogadas com EPA válido\n\n−0,20\n0\n+0,60\nAdversários contra NYJ\n\n+0,420\nEPA/jogada\n\n11 jogadas com EPA válido\n\n−0,20\n0\n+0,60\nQuais jogadas e cálculos entram neste EPA?",
+      "rows": [
+        {
+          "base": "15 jogadas com EPA válido",
+          "name": "NYJ com a bola",
+          "rect": {
+            "left": 28,
+            "width": 249
+          },
+          "value": "+0,438EPA/jogada"
+        },
+        {
+          "base": "11 jogadas com EPA válido",
+          "name": "Adversários contra NYJ",
+          "rect": {
+            "left": 28,
+            "width": 249
+          },
+          "value": "+0,420EPA/jogada"
+        }
+      ],
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "case": "ne-sea-text200",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "root": "32px",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "case": "ne-sea-text200",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "root": "32px",
+      "scroll": 399,
+      "width": 390
+    },
+    {
+      "case": "ne-sea-text200",
+      "axisCollisions": [
+        false,
+        false
+      ],
+      "root": "32px",
+      "scroll": 305,
+      "width": 320
+    }
+  ],
+  "keyboard": {
+    "methodEnter": true,
+    "unitDetailsEnter": true,
+    "tableRegionTab": true,
+    "focusOutlinePx": 3,
+    "neUnitRows": 2
+  },
+  "fontAmplification": "Page.setFontSizes standard 16→32 px, reset to 16",
+  "sourceFailure": "new source 503; four campaign marks and original EPA retained",
+  "humanStudy": false
+}
