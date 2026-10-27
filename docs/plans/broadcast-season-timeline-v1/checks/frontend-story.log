@@ -1,0 +1,14 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/game-story/story.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-season-timeline-v1/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/game-story/story.test.tsx (10 tests) 97ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  11:30:53
+   Duration  468ms (transform 88ms, setup 0ms, collect 134ms, tests 97ms, environment 0ms, prepare 46ms)
+

@@ -1,0 +1,146 @@
+[
+  {
+    "headings": [
+      "Conversões de terceira — ataques na W7",
+      "TDs em campanhas de red zone — ataques na W7"
+    ],
+    "kind": "switch",
+    "switches": [
+      {
+        "checked": true,
+        "focused": false
+      },
+      {
+        "checked": true,
+        "focused": true
+      }
+    ],
+    "url": "http://127.0.0.1:18110/?view=matchup-season&game=2026_07_DAL_PHI&rank=week"
+  },
+  {
+    "expanded": [
+      {
+        "expanded": "false",
+        "label": "Ver classificação completa — 30 timesVer classificação completa — 30 times+"
+      },
+      {
+        "expanded": "true",
+        "label": "Ver classificação completa — 32 timesRecolher classificação−"
+      }
+    ],
+    "kind": "expanded-season",
+    "rank": "TDs em campanhas de red zone — ataques em W1–72026 REG · Acumulado W1–7 · 32 times com taxa, de 32 candidatos. TDs ofensivos / campanhas que entraram nas 20.Posições pela taxa observada; taxas iguais compartilham posição.Posição · time0%25%50%75%100%Taxa · razão4ºDAL71,4%20 de 283ºPHI73,7%14 de 19Ver classificação completa — 32 timesRecolher classificação−Posição · time0%25%50%75%100%Taxa · razão1ºSF87,0%20 de 232ºNO73,9%17 de 233ºPHI73,7%14 de 194ºDAL71,4%20 de 285ºDET67,9%19 de 286ºATL66,7%14 de 216ºJAX66,7%12 de 188ºCAR65,2%15 de 239ºLA64,5%20 de 3110ºBUF64,3%18 de 2811ºCIN63,6%14 de 2211ºNYG63,6%14 de 2213ºBAL62,5%15 de 2414ºIND60,0%12 de 2015ºHOU57,7%15 de 2616ºDEN57,1%12 de 2117ºKC56,5%13 de 2318ºMIA56,3%9 de 1619ºWAS52,9%9 de 1720ºNE52,4%11 de 2121ºTB52,2%12 de 2322ºCHI51,6%16 de 3123ºCLE50,0%9 de 1823ºLAC50,0%8 de 1623ºSEA50,0%12 de 2426ºLV48,3%14 de 2927ºPIT47,4%9 de 1927ºTEN47,4%9 de 1929ºMIN46,7%7 de 1530ºNYJ45,0%9 de 2031ºGB44,4%12 de 2732ºARI42,9%12 de 28Taxa conjunta da amostra: 422/723 (58,4%), pelas somas. DAL e PHI pertencem à referência; a repetição na lista completa é apenas visual.Registros observados, sem ajuste ou inferência de qualidade. Os participantes não são independentes da referência.",
+    "url": "http://127.0.0.1:18110/?view=matchup-season&game=2026_07_DAL_PHI&rank=season"
+  },
+  {
+    "after": 7827,
+    "before": 7792,
+    "focus": "switch",
+    "headings": [
+      "Conversões de terceira — ataques em W1–7",
+      "TDs em campanhas de red zone — ataques em W1–7"
+    ],
+    "kind": "switch-scroll"
+  },
+  {
+    "kind": "overtime",
+    "moments": "OT03:01até 02:57BAL · TD + extra +730 × 23Campanha da red zone · +6 e +1",
+    "notes": "Início do recorte: BAL 23 × 23 ATL. A taxa de red zone acima continua sendo do jogo inteiro. TD e ponto extra têm registros separados; um turnover sem pontuação não muda a vantagem.",
+    "readout": "Ao fim do recorte: BAL 30 × 23 ATL. Selecione um momento abaixo para localizar na curva."
+  },
+  {
+    "events": [
+      "LV · Perda por descidas 0 × 0Campanha da red zone",
+      "LV · TD + extra +77 × 0Pontuação do jogo · +6 e +1",
+      "LAC · TD + extra +77 × 7Campanha da red zone · +6 e +1",
+      "LV · Field goal +310 × 7Pontuação do jogo",
+      "LAC · TD + extra +710 × 14Campanha da red zone · +6 e +1",
+      "LV · TD + extra +717 × 14Campanha da red zone · +6 e +1",
+      "LV · TD + extra +724 × 14Campanha da red zone · +6 e +1",
+      "LV · Safety +226 × 14Pontuação do jogo"
+    ],
+    "kind": "special-event",
+    "readout": "De 0 × 0 ao placar final: LV 26 × 14 LAC. Selecione um momento abaixo para localizar na curva.",
+    "url": "http://127.0.0.1:18110/?view=matchup-season&game=2026_02_LV_LAC#mr-redzone"
+  },
+  {
+    "events": [
+      "TB · TD + extra +77 × 0Campanha da red zone · +6 e +1",
+      "TB · Field goal +310 × 0Campanha da red zone",
+      "TB · TD + extra +717 × 0Pontuação do jogo · +6 e +1",
+      "CAR · TD +617 × 6Pontuação do jogo",
+      "TB · Retorno defensivo +219 × 6Pontuação do jogo",
+      "TB · TD + extra +726 × 6Campanha da red zone · +6 e +1",
+      "TB · TD + extra +733 × 6Campanha da red zone · +6 e +1",
+      "TB · Field goal +336 × 6Pontuação do jogo",
+      "CAR · Perda por descidas 36 × 6Campanha da red zone",
+      "TB · TD + extra +743 × 6Pontuação do jogo · +6 e +1",
+      "CAR · TD + extra +743 × 13Campanha da red zone · +6 e +1"
+    ],
+    "kind": "special-event",
+    "readout": "De 0 × 0 ao placar final: TB 43 × 13 CAR. Selecione um momento abaixo para localizar na curva.",
+    "url": "http://127.0.0.1:18110/?view=matchup-season&game=2026_07_TB_CAR#mr-redzone"
+  },
+  {
+    "events": [
+      "CHI · Field goal +30 × 3Pontuação do jogo",
+      "CHI · TD + extra +70 × 10Campanha da red zone · +6 e +1",
+      "NE · TD + extra +77 × 10Campanha da red zone · +6 e +1",
+      "CHI · Field goal +37 × 13Campanha da red zone",
+      "NE · Turnover 7 × 13Campanha da red zone",
+      "CHI · TD + extra +77 × 20Campanha da red zone · +6 e +1",
+      "NE · TD + extra +714 × 20Pontuação do jogo · +6 e +1",
+      "CHI · TD + extra +714 × 27Campanha da red zone · +6 e +1",
+      "NE · TD + extra +721 × 27Pontuação do jogo · +6 e +1",
+      "CHI · Field goal +321 × 30Pontuação do jogo",
+      "NE · Field goal +324 × 30Pontuação do jogo"
+    ],
+    "kind": "special-event",
+    "readout": "De 0 × 0 ao placar final: NE 24 × 30 CHI. Selecione um momento abaixo para localizar na curva.",
+    "url": "http://127.0.0.1:18110/?view=matchup-season&game=2026_07_NE_CHI#mr-redzone"
+  },
+  {
+    "focus": "PHI · TD + extra +73 × 7Campanha da red zone · +6 e +1",
+    "kind": "keyboard-event",
+    "outline": "3px",
+    "picked": true,
+    "readout": "1º quarto · 10:25 · PHI: TD + extra +7 · DAL 3 × 7 PHI."
+  },
+  {
+    "afterTop": 536.546875,
+    "beforeTop": 537.15625,
+    "focused": "switch",
+    "kind": "switch-anchor"
+  },
+  {
+    "kind": "reduced-motion",
+    "matches": true,
+    "rankingTransition": "0s",
+    "switchTransition": "0s"
+  },
+  {
+    "kind": "reload-explicit-week",
+    "scope": "TDs em campanhas de red zone — ataques na W7",
+    "switches": [
+      true,
+      true
+    ],
+    "url": "http://127.0.0.1:18110/?view=matchup-season&game=2026_07_CIN_BAL&rank=week#mr-redzone"
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "hasGraph": false,
+    "kind": "invalid-url"
+  },
+  {
+    "hasTimeline": false,
+    "kind": "team-navigation",
+    "title": "Cincinnati Bengals",
+    "url": "http://127.0.0.1:18110/?rank=week&view=team-season&team=CIN&season=2026&returnWeek=7"
+  },
+  {
+    "kind": "back",
+    "scope": "TDs em campanhas de red zone — ataques na W7",
+    "url": "http://127.0.0.1:18110/?view=matchup-season&game=2026_07_CIN_BAL&rank=week"
+  }
+]
