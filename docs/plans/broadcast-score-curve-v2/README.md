@@ -6,7 +6,7 @@ O gráfico usa Recharts 3.10.1, já instalado, com curva monotônica, áreas nas
 
 A sequência por escrito começa recolhida. Touchdown, field goal e turnover podem ser consultados no próprio gráfico por mouse, toque, foco e Enter/Espaço. No celular a partida inteira cabe na tela; “Ampliar gráfico” oferece mais espaço com rolagem contida. Marcas numeradas reúnem ícones que disputariam o mesmo espaço e oferecem os eventos individuais no painel abaixo.
 
-[Relatório e limites](REPORT.md) · [Plano](PLAN.md).
+[Relatório e limites](REPORT.md) · [Ajuste das logos e orientação vertical](LOGO-AXES.md) · [Plano](PLAN.md).
 
 ## Teste visual curto
 

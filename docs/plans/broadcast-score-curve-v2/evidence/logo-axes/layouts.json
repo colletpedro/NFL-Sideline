@@ -1,0 +1,116 @@
+[
+  {
+    "above": true,
+    "below": true,
+    "font": "16px",
+    "logos": [
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "CIN"
+      },
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "BAL"
+      }
+    ],
+    "overflow": -15,
+    "width": 1440
+  },
+  {
+    "above": true,
+    "below": true,
+    "font": "16px",
+    "logos": [
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "CIN"
+      },
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "BAL"
+      }
+    ],
+    "overflow": -15,
+    "width": 390
+  },
+  {
+    "above": true,
+    "below": true,
+    "font": "16px",
+    "logos": [
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "CIN"
+      },
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "BAL"
+      }
+    ],
+    "overflow": -15,
+    "width": 320
+  },
+  {
+    "above": true,
+    "below": true,
+    "font": "32px",
+    "logos": [
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "CIN"
+      },
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "BAL"
+      }
+    ],
+    "overflow": -15,
+    "width": 1440
+  },
+  {
+    "above": true,
+    "below": true,
+    "font": "32px",
+    "logos": [
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "CIN"
+      },
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "BAL"
+      }
+    ],
+    "overflow": -15,
+    "width": 390
+  },
+  {
+    "above": true,
+    "below": true,
+    "font": "32px",
+    "logos": [
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "CIN"
+      },
+      {
+        "filter": "none",
+        "loaded": true,
+        "team": "BAL"
+      }
+    ],
+    "overflow": -15,
+    "width": 320
+  }
+]

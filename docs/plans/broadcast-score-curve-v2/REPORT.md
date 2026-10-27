@@ -6,7 +6,7 @@ Base exata `0e9855da47e7e1a77acea860296eb3c8b7d87435`, preservada em 18110. Nova
 
 A curva passou a ser desenhada pela biblioteca Recharts 3.10.1 já presente no projeto, com `monotoneX`. Os componentes cuidam da interpolação, escalas, áreas e coordenadas responsivas; não há um caminho de curva escrito manualmente. A referência técnica é a [API oficial de Area](https://recharts.github.io/en-US/api/Area/); a integração usa as APIs exportadas pela versão instalada.
 
-O painel tem fundo ardósia profundo, linha clara e preenchimento dividido no zero pelas cores dos times. As identidades menores aparecem em branco nesse fundo; a identidade principal da página, cores, fontes, rankings e métricas permanecem. O ponto de empate e os limites de vantagem são explícitos.
+O painel tem fundo ardósia profundo, linha clara e preenchimento dividido no zero pelas cores dos times. As identidades menores usam as logos originais coloridas, com o visitante acima e o mandante abaixo da curva (refinamento em [LOGO-AXES.md](LOGO-AXES.md)); a identidade principal da página, cores, fontes, rankings e métricas permanecem. O ponto de empate e os limites de vantagem são explícitos.
 
 FG e TD têm ícones presos aos seus pontos e rótulos +3/+7/+8 conforme o momento real. Turnover tem ícone próprio e acento âmbar. Um marcador pode reunir TD e conversão consecutivos, preservando a regra anterior, ambos os relógios e os componentes exatos na auditoria. Selecionar por mouse, toque, foco ou Enter/Espaço apresenta o placar e o evento no painel junto ao gráfico. Uma área transparente de 44 × 44 px amplia o alvo do ícone.
 
@@ -14,7 +14,7 @@ A linha suaviza visualmente o caminho entre eventos, sem afirmar que pontos fora
 
 A sequência escrita agora é um `details` recolhido inicialmente. Abrir/fechar não muda a curva nem os resultados. A auditoria mantém os eventos individuais de pontuação e turnovers em ordem de fonte, além das evidências de campanhas.
 
-[Desktop](evidence/desktop-1440.png) · [Turnover selecionado](evidence/turnover-1440.png) · [Mobile](evidence/mobile-390.png) · [Texto a 200%](evidence/text200-320.png).
+[Desktop atual](evidence/logo-axes/desktop-1440.png) · [Turnover na entrega inicial](evidence/turnover-1440.png) · [Mobile na entrega inicial](evidence/mobile-390.png) · [Texto a 200%](evidence/text200-320.png).
 
 ## Espaço no celular
 
