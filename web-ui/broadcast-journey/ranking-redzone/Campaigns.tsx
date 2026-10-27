@@ -11,6 +11,7 @@ const outcomes:Record<string,{short:string;label:string;shape:React.ReactNode}>=
  SAFETY:{short:'Safety',label:'Safety',shape:<><path d="m16 3 11 4v9c0 6-5 10-11 13C10 26 5 22 5 16V7Z"/><path d="M12 13c0-5 8-5 8 0 0 3-8 6-8 9h8"/></>},
 };
 const campaignOutcome=(outcome:string)=>outcomes[outcome]??{short:outcome,label:outcome,shape:<><circle cx="16" cy="16" r="12"/><path d="M16 8v10m0 5v1"/></>};
+export function CampaignGlyph({outcome}:{outcome:string}) {return <>{campaignOutcome(outcome).shape}</>;}
 export function CampaignSymbol({outcome}:{outcome:string}) {return <svg className="rr-campaign-symbol" viewBox="0 0 32 32" aria-hidden="true" data-outcome-symbol={outcome}>{campaignOutcome(outcome).shape}</svg>;}
 export function CampaignLegend({outcomes:values}:{outcomes:string[]}) {
  const relevant=[...new Set(values)];

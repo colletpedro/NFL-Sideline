@@ -1,0 +1,4 @@
+import {useEffect,useState} from 'react';
+import {CurveContext} from './context';
+import {loadEvents,type CurveEvents} from './model';
+export function CurveProvider({children}:{children:React.ReactNode}){const [data,setData]=useState<CurveEvents|null>(null),[error,setError]=useState(''),[loading,setLoading]=useState(true),[retry,setRetry]=useState(0);useEffect(()=>{const c=new AbortController();let active=true;setLoading(true);setError('');setData(null);loadEvents(c.signal).then(d=>{if(active)setData(d);}).catch(()=>{if(active)setError('Os turnovers do jogo não puderam ser carregados. A pontuação e as campanhas disponíveis permanecem identificadas.');}).finally(()=>{if(active)setLoading(false);});return()=>{active=false;c.abort();};},[retry]);return <CurveContext.Provider value={{data,error,loading,retry:()=>setRetry(n=>n+1)}}>{children}</CurveContext.Provider>;}

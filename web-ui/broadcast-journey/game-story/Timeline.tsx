@@ -1,11 +1,15 @@
-import {useContext,useId,useState} from 'react';
+import {lazy,Suspense,useContext,useId,useState} from 'react';
+import {CurveContext} from '../score-curve/context';
+const CurveTimeline=lazy(()=>import('../score-curve/Timeline'));
+export function GameTimeline(props:{gameId:string}){const curve=useContext(CurveContext);return curve?<Suspense fallback={<p role="status">Preparando a visualização…</p>}><CurveTimeline {...props}/></Suspense>:<ClassicTimeline {...props}/>;}
+
 import {GameStoryContext} from './context';
 import {moments,quarterStart,stepPath,type Moment} from './model';
 import {CampaignSymbol} from '../ranking-redzone/Campaigns';
 import {teamIdentity} from '../../broadcast-real/identity';
 const names:Record<string,string>={TOUCHDOWN:'TD',FIELD_GOAL:'Field goal',EXTRA_POINT:'Extra',TWO_POINT:'Conversão de 2',DEFENSIVE_TWO_POINT:'Retorno defensivo',SAFETY:'Safety',TURNOVER:'Turnover',OPPONENT_TOUCHDOWN:'TD adversário',MISSED_FIELD_GOAL:'FG perdido',DOWNS:'Perda por descidas',PUNT:'Punt',END_HALF_GAME:'Fim de tempo/jogo'};
 const title=(m:Moment)=>m.kind==='TOUCHDOWN'&&m.events.length>1?`TD + ${m.events[1].kind==='TWO_POINT'?'conversão de 2':'extra'}`:names[m.kind]??m.kind;
-export function GameTimeline({gameId}:{gameId:string}){
+function ClassicTimeline({gameId}:{gameId:string}){
  const state=useContext(GameStoryContext),[quarter,setQuarter]=useState(0),[selected,setSelected]=useState(''),clip=useId().replace(/:/g,'');
  if(!state)return null;const t=state.data?.timelines[gameId];
  if(state.loading)return <p role="status">Conferindo a cronologia do placar…</p>;
