@@ -1,0 +1,134 @@
+[
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "16px",
+    "invalid": false,
+    "markerCount": 11,
+    "overflow": -15,
+    "period": "Jogo inteiro",
+    "sequenceOpen": false,
+    "width": 1440
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "16px",
+    "invalid": false,
+    "markerCount": 3,
+    "overflow": -15,
+    "period": "1º quarto",
+    "sequenceOpen": false,
+    "width": 1440
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "16px",
+    "invalid": false,
+    "markerCount": 8,
+    "overflow": -15,
+    "period": "Jogo inteiro",
+    "sequenceOpen": false,
+    "width": 390
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "16px",
+    "invalid": false,
+    "markerCount": 3,
+    "overflow": -15,
+    "period": "1º quarto",
+    "sequenceOpen": false,
+    "width": 390
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "16px",
+    "invalid": false,
+    "markerCount": 7,
+    "overflow": -15,
+    "period": "Jogo inteiro",
+    "sequenceOpen": false,
+    "width": 320
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "16px",
+    "invalid": false,
+    "markerCount": 3,
+    "overflow": -15,
+    "period": "1º quarto",
+    "sequenceOpen": false,
+    "width": 320
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "32px",
+    "invalid": false,
+    "markerCount": 11,
+    "overflow": -15,
+    "period": "Jogo inteiro",
+    "sequenceOpen": false,
+    "width": 1440
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "32px",
+    "invalid": false,
+    "markerCount": 3,
+    "overflow": -15,
+    "period": "1º quarto",
+    "sequenceOpen": false,
+    "width": 1440
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "32px",
+    "invalid": false,
+    "markerCount": 8,
+    "overflow": -15,
+    "period": "Jogo inteiro",
+    "sequenceOpen": false,
+    "width": 390
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "32px",
+    "invalid": false,
+    "markerCount": 3,
+    "overflow": -15,
+    "period": "1º quarto",
+    "sequenceOpen": false,
+    "width": 390
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "32px",
+    "invalid": false,
+    "markerCount": 7,
+    "overflow": -15,
+    "period": "Jogo inteiro",
+    "sequenceOpen": false,
+    "width": 320
+  },
+  {
+    "cubic": true,
+    "fit": true,
+    "font": "32px",
+    "invalid": false,
+    "markerCount": 3,
+    "overflow": -15,
+    "period": "1º quarto",
+    "sequenceOpen": false,
+    "width": 320
+  }
+]
