@@ -92,3 +92,6 @@ web-ui/redzone-epa-dist/
 # Private seven-week source/projection and isolated build.
 /editorial/local-artifacts/broadcast-w1-7-v1/
 web-ui/season-dist/
+
+web-ui/story-dist/
+/editorial/local-artifacts/broadcast-season-timeline-v1/
