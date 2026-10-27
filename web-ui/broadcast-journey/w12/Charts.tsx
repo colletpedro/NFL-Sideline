@@ -1,4 +1,5 @@
 import {useContext} from 'react';
+import {CurveContext} from '../score-curve/context';
 import {GameStoryContext} from '../game-story/context';
 import {GameTimeline} from '../game-story/Timeline';
 import {RedzoneEpaPanel} from '../redzone-epa/Panel';
@@ -78,7 +79,7 @@ export function ThirdBlock({d}:{d:Document}) {
   </section>;
 }
 export function RedZoneBlock({d}:{d:Document}) {
-  const story=useContext(GameStoryContext),timelineMode=!!story&&(story.loading||!story.error&&story.data?.timelines[d.game.gameId]?.status==='AVAILABLE');
+  const curve=useContext(CurveContext),story=useContext(GameStoryContext),timelineMode=!!story&&(story.loading||!story.error&&story.data?.timelines[d.game.gameId]?.status==='AVAILABLE');
   const ranking=useRankingRedzone();
   const [selected,setSelected]=useState<Campaign|null>(null);const allowed=sideAllowed(d,'redZone');const withoutCampaigns=d.productions.filter(p=>p.metrics.redZone.descriptor.status==='NO_OPPORTUNITIES').map(p=>p.offense);
   return <section className="mr-section" id="mr-redzone" tabIndex={-1} aria-labelledby="mr-redzone-title"><h2 id="mr-redzone-title">Red zone</h2><p className="mr-unit">TDs ofensivos / campanhas que entraram nas 20 · deste jogo</p>
@@ -90,8 +91,8 @@ export function RedZoneBlock({d}:{d:Document}) {
       {timelineMode?<GameTimeline key={d.game.gameId} gameId={d.game.gameId}/>:<><GameTimeline gameId={d.game.gameId}/><div className="mr-mark-readout" aria-live="polite">{selected?<><p>{selected.offense} contra {selected.defense} · Campanha {selected.fixedDrive} · {outcomes[selected.outcome]}.</p><p>Entrada demonstrada nas jogadas {selected.entryEvidence.map(e=>e.play_id).join(', ')}; desfecho na(s) jogada(s) {selected.outcomeEvidence.map(e=>e.play_id).join(', ')}.</p><p>ID {selected.id}</p></>:'Toque ou use Tab e Enter em uma campanha para consultar as evidências de entrada e desfecho.'}</div></>}
     </>
     {ranking&&!timelineMode&&<CampaignLegend outcomes={d.productions.filter(p=>ready(p.metrics.redZone)).flatMap(p=>p.redZoneCampaigns.map(u=>u.outcome))}/>}
-    <Rule title="Quando uma campanha entra na red zone?"><p>Há posição observada antes de um evento de scrimmage a até 20 jardas da end zone, incluindo a linha de 20. Várias entradas não criam outra oportunidade na mesma campanha. Posição observada antes de ajoelhada também pode demonstrar entrada. TD de fora não cria entrada artificial.</p></Rule>
-    <RedzoneEpaPanel gameId={d.game.gameId}/>
+    {!curve&&<Rule title="Quando uma campanha entra na red zone?"><p>Há posição observada antes de um evento de scrimmage a até 20 jardas da end zone, incluindo a linha de 20. Várias entradas não criam outra oportunidade na mesma campanha. Posição observada antes de ajoelhada também pode demonstrar entrada. TD de fora não cria entrada artificial.</p></Rule>}
+    <RedzoneEpaPanel gameId={d.game.gameId} campaigns={d.productions.map(p=>p.redZoneCampaigns)}/>
     <League reference={d.leagueReferences.redZone} family="redZone" participants={[d.game.away,d.game.home]}/>
   </section>;
 }

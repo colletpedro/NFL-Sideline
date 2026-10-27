@@ -1,0 +1,215 @@
+[
+  {
+    "font": "16px",
+    "impact": [
+      {
+        "rect": {
+          "left": 184.5,
+          "right": 696.5,
+          "width": 512
+        },
+        "text": "CIN com a bola+2,776EPA na jogada 3539Contribuiu positivamente para a soma.Ver situação e descrição Jogada 3539 · CIN com a bola3ª para 2 jardas · a 16 jardas da end zone4º quarto · 06:28(6:28) 9-J.Burrow pass short left to 89-D.Sample for 16 yards, TOUCHDOWN. Penalty on BAL-2-N.Wiggins, Defensive Holding, declined.Descrição original da fonte. EPA desta jogada: +2,776; a média acima usa as 10 jogadas válidas."
+      },
+      {
+        "rect": {
+          "left": 728.5,
+          "right": 1240.5,
+          "width": 512
+        },
+        "text": "BAL com a bola−3,114EPA na jogada 2836Contribuiu negativamente para a soma.Ver situação e descrição Jogada 2836 · BAL com a bola4ª para 2 jardas · a 12 jardas da end zone4º quarto · 15:00(15:00) (Shotgun) 5-T.Huntley pass incomplete short middle to 85-J.Cuevas.Descrição original da fonte. EPA desta jogada: −3,114; a média acima usa as 10 jogadas válidas."
+      }
+    ],
+    "scrollWidth": 1425,
+    "summaries": [
+      "Timeline de eventos 10 momentos",
+      "Jogadas por visita à red zone Situação inicial → jogadas → resultado",
+      "Ver situação e descrição Jogada 3539 · CIN com a bola",
+      "Ver situação e descrição Jogada 2836 · BAL com a bola"
+    ],
+    "width": 1440
+  },
+  {
+    "font": "16px",
+    "impact": [
+      {
+        "rect": {
+          "left": 28,
+          "right": 347,
+          "width": 319
+        },
+        "text": "CIN com a bola+2,776EPA na jogada 3539Contribuiu positivamente para a soma.Ver situação e descrição Jogada 3539 · CIN com a bola3ª para 2 jardas · a 16 jardas da end zone4º quarto · 06:28(6:28) 9-J.Burrow pass short left to 89-D.Sample for 16 yards, TOUCHDOWN. Penalty on BAL-2-N.Wiggins, Defensive Holding, declined.Descrição original da fonte. EPA desta jogada: +2,776; a média acima usa as 10 jogadas válidas."
+      },
+      {
+        "rect": {
+          "left": 28,
+          "right": 347,
+          "width": 319
+        },
+        "text": "BAL com a bola−3,114EPA na jogada 2836Contribuiu negativamente para a soma.Ver situação e descrição Jogada 2836 · BAL com a bola4ª para 2 jardas · a 12 jardas da end zone4º quarto · 15:00(15:00) (Shotgun) 5-T.Huntley pass incomplete short middle to 85-J.Cuevas.Descrição original da fonte. EPA desta jogada: −3,114; a média acima usa as 10 jogadas válidas."
+      }
+    ],
+    "scrollWidth": 375,
+    "summaries": [
+      "Timeline de eventos 10 momentos",
+      "Jogadas por visita à red zone Situação inicial → jogadas → resultado",
+      "Ver situação e descrição Jogada 3539 · CIN com a bola",
+      "Ver situação e descrição Jogada 2836 · BAL com a bola"
+    ],
+    "width": 390
+  },
+  {
+    "font": "16px",
+    "impact": [
+      {
+        "rect": {
+          "left": 28,
+          "right": 277,
+          "width": 249
+        },
+        "text": "CIN com a bola+2,776EPA na jogada 3539Contribuiu positivamente para a soma.Ver situação e descrição Jogada 3539 · CIN com a bola3ª para 2 jardas · a 16 jardas da end zone4º quarto · 06:28(6:28) 9-J.Burrow pass short left to 89-D.Sample for 16 yards, TOUCHDOWN. Penalty on BAL-2-N.Wiggins, Defensive Holding, declined.Descrição original da fonte. EPA desta jogada: +2,776; a média acima usa as 10 jogadas válidas."
+      },
+      {
+        "rect": {
+          "left": 28,
+          "right": 277,
+          "width": 249
+        },
+        "text": "BAL com a bola−3,114EPA na jogada 2836Contribuiu negativamente para a soma.Ver situação e descrição Jogada 2836 · BAL com a bola4ª para 2 jardas · a 12 jardas da end zone4º quarto · 15:00(15:00) (Shotgun) 5-T.Huntley pass incomplete short middle to 85-J.Cuevas.Descrição original da fonte. EPA desta jogada: −3,114; a média acima usa as 10 jogadas válidas."
+      }
+    ],
+    "scrollWidth": 305,
+    "summaries": [
+      "Timeline de eventos 10 momentos",
+      "Jogadas por visita à red zone Situação inicial → jogadas → resultado",
+      "Ver situação e descrição Jogada 3539 · CIN com a bola",
+      "Ver situação e descrição Jogada 2836 · BAL com a bola"
+    ],
+    "width": 320
+  },
+  {
+    "font": "32px",
+    "scrollWidth": 1425,
+    "sectionWidth": 1056,
+    "width": 1440
+  },
+  {
+    "font": "32px",
+    "scrollWidth": 375,
+    "sectionWidth": 319,
+    "width": 390
+  },
+  {
+    "font": "32px",
+    "scrollWidth": 305,
+    "sectionWidth": 249,
+    "width": 320
+  },
+  {
+    "columns": [
+      {
+        "left": 184.5,
+        "right": 696.5
+      },
+      {
+        "left": 728.5,
+        "right": 1240.5
+      }
+    ],
+    "font": "16px",
+    "plays": 20,
+    "scrollWidth": 1425,
+    "state": "visits-open",
+    "visits": 8,
+    "width": 1440
+  },
+  {
+    "columns": [
+      {
+        "left": 28,
+        "right": 347
+      },
+      {
+        "left": 28,
+        "right": 347
+      }
+    ],
+    "font": "16px",
+    "plays": 20,
+    "scrollWidth": 375,
+    "state": "visits-open",
+    "visits": 8,
+    "width": 390
+  },
+  {
+    "columns": [
+      {
+        "left": 28,
+        "right": 277
+      },
+      {
+        "left": 28,
+        "right": 277
+      }
+    ],
+    "font": "16px",
+    "plays": 20,
+    "scrollWidth": 305,
+    "state": "visits-open",
+    "visits": 8,
+    "width": 320
+  },
+  {
+    "columns": [
+      {
+        "left": 184.5,
+        "right": 696.5
+      },
+      {
+        "left": 728.5,
+        "right": 1240.5
+      }
+    ],
+    "font": "32px",
+    "plays": 20,
+    "scrollWidth": 1425,
+    "state": "visits-open",
+    "visits": 8,
+    "width": 1440
+  },
+  {
+    "columns": [
+      {
+        "left": 28,
+        "right": 347
+      },
+      {
+        "left": 28,
+        "right": 347
+      }
+    ],
+    "font": "32px",
+    "plays": 20,
+    "scrollWidth": 375,
+    "state": "visits-open",
+    "visits": 8,
+    "width": 390
+  },
+  {
+    "columns": [
+      {
+        "left": 28,
+        "right": 277
+      },
+      {
+        "left": 28,
+        "right": 277
+      }
+    ],
+    "font": "32px",
+    "plays": 20,
+    "scrollWidth": 305,
+    "state": "visits-open",
+    "visits": 8,
+    "width": 320
+  }
+]

@@ -1,0 +1,53 @@
+vite v5.4.21 building for production...
+transforming...
+✓ 743 modules transformed.
+rendering chunks...
+computing gzip size...
+../reading-polish-dist/index.html                                        0.38 kB │ gzip:   0.28 kB
+../reading-polish-dist/assets/nyg-B7GEzpDk.png                           7.57 kB
+../reading-polish-dist/assets/cin-DAWVRKmj.png                          26.63 kB
+../reading-polish-dist/assets/was-BcwmxSCJ.png                          30.42 kB
+../reading-polish-dist/assets/sea-Bs6vHzbc.png                          32.08 kB
+../reading-polish-dist/assets/ne-CjQy7Z4T.png                           32.08 kB
+../reading-polish-dist/assets/dal-DumH5f6I.png                          32.37 kB
+../reading-polish-dist/assets/lac-G0yXcTHr.png                          32.85 kB
+../reading-polish-dist/assets/hou-BTtnUu_J.png                          35.77 kB
+../reading-polish-dist/assets/car-CGu1pDhv.png                          36.64 kB
+../reading-polish-dist/assets/buf-C8E5u14Q.png                          38.00 kB
+../reading-polish-dist/assets/la-Cnbeu6OW.png                           38.71 kB
+../reading-polish-dist/assets/gb-Kq_Dl-1v.png                           39.19 kB
+../reading-polish-dist/assets/kc-qEo7C-YT.png                           40.23 kB
+../reading-polish-dist/assets/den-ZMwN9Kj8.png                          40.95 kB
+../reading-polish-dist/assets/ari-SWmA0hjl.png                          41.99 kB
+../reading-polish-dist/assets/ind-BjFZCeSx.png                          42.08 kB
+../reading-polish-dist/assets/sf-VDD_-KP9.png                           48.70 kB
+../reading-polish-dist/assets/ten-BjiV9AWL.png                          50.73 kB
+../reading-polish-dist/assets/atl-BOcCry6n.png                          51.78 kB
+../reading-polish-dist/assets/no-CRvSwJHd.png                           52.02 kB
+../reading-polish-dist/assets/bal-B02a8qg4.png                          55.99 kB
+../reading-polish-dist/assets/pit-CVCA5Q0Z.png                          56.62 kB
+../reading-polish-dist/assets/det-DOjjcZuE.png                          57.47 kB
+../reading-polish-dist/assets/mia-pvajL4QF.png                          64.41 kB
+../reading-polish-dist/assets/min-DxdqfIZ7.png                          69.69 kB
+../reading-polish-dist/assets/phi-DVPW4bAp.png                          70.33 kB
+../reading-polish-dist/assets/lv-BdvUO8u-.png                           77.77 kB
+../reading-polish-dist/assets/jax-DFcKN7bi.png                          78.81 kB
+../reading-polish-dist/assets/chi-BAA7PtZp.png                          93.59 kB
+../reading-polish-dist/assets/cle-CjWlBQek.png                          94.48 kB
+../reading-polish-dist/assets/tb-B-m6i7aa.png                           96.11 kB
+../reading-polish-dist/assets/nyj-No6xqtcN.png                         130.61 kB
+../reading-polish-dist/assets/IND-helmet-Rtvul9IP.png                  181.09 kB
+../reading-polish-dist/assets/BAL-helmet-CKInBePR.png                  247.95 kB
+../reading-polish-dist/assets/DAL-helmet-CaTT8uPk.png                  257.20 kB
+../reading-polish-dist/assets/NE-helmet-DxKOgsGB.png                   292.82 kB
+../reading-polish-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf    371.62 kB
+../reading-polish-dist/assets/Archivo-Variable-DuIT1y7V.ttf            658.60 kB
+../reading-polish-dist/assets/IND-portrait-A7Ny9y06.png              1,430.16 kB
+../reading-polish-dist/assets/DAL-portrait-6a4scUZR.png              3,538.53 kB
+../reading-polish-dist/assets/NE-portrait-IJMRdLLJ.png               3,976.67 kB
+../reading-polish-dist/assets/BAL-portrait-DefwyzYA.png              4,267.72 kB
+../reading-polish-dist/assets/index-0NWmXBS5.css                       156.52 kB │ gzip:  28.66 kB
+../reading-polish-dist/assets/MatchupPage-M1VMonxE.js                   29.93 kB │ gzip:   9.95 kB
+../reading-polish-dist/assets/Timeline-BPsnV9IG.js                     348.73 kB │ gzip: 104.02 kB
+../reading-polish-dist/assets/index-Dyy4USm8.js                        385.16 kB │ gzip: 116.95 kB
+✓ built in 967ms
