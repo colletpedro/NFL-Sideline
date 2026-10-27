@@ -1,0 +1,62 @@
+{
+  "evidence/dal-phi-pass-320-text200.png": {
+    "bytes": 33804,
+    "sha256": "sha256:29b3010257cfc6b3d54718d17bb849ee1c34048b97438209d545fbdddcd54261"
+  },
+  "evidence/extreme-pass-axes.json": {
+    "bytes": 3340,
+    "sha256": "sha256:fdb0a7d5f19797317297ed1607633ff1a66f9678d7d0bd82b2e7fb0d33be9729"
+  },
+  "evidence/final-hub-w7.png": {
+    "bytes": 68531,
+    "sha256": "sha256:30ad129cdaaa2be52fdedddd9af3e62f472be7a7f6a6b14b344fe87ce157fe73"
+  },
+  "evidence/foundation-continuity.json": {
+    "bytes": 275,
+    "sha256": "sha256:7686d2fc7adaae3818d0122f589dbb86e7dfbdd3e6f245936fa318b37385eb96"
+  },
+  "evidence/hub-w7-1440.png": {
+    "bytes": 98207,
+    "sha256": "sha256:7739885e2191f0e604cfb1ff7f0744957d7e0ed845748d1e50eb53a6330c60b0"
+  },
+  "evidence/hub-w7-390.png": {
+    "bytes": 44736,
+    "sha256": "sha256:acf01115d38d0a0585a150a409c38423ffd9fa8b644289a13e10ac98b7192a3e"
+  },
+  "evidence/journey.json": {
+    "bytes": 376,
+    "sha256": "sha256:27431c250bdd47e92622f6af03d669dcc00337ec6a9a7f7a7ceed7abd431663d"
+  },
+  "evidence/layouts.json": {
+    "bytes": 7822,
+    "sha256": "sha256:0fe9245007118a2df7a71f8693fe219103a752b43f2596d1b780902bc4ca64a8"
+  },
+  "evidence/mia-sf-pass-320-text200.png": {
+    "bytes": 30525,
+    "sha256": "sha256:8969e0c79cdc7e2a3e0d0f76b2f6b079533d87d4590b56fe7b9b6a754c570cbc"
+  },
+  "evidence/ne-chi-w7-redzone-1440.png": {
+    "bytes": 77291,
+    "sha256": "sha256:1be73d40c129bd0f6560b112f15e895e19d14fea8de73efb844fec9c717817e6"
+  },
+  "evidence/phi-chi-pass-320-text200.png": {
+    "bytes": 36614,
+    "sha256": "sha256:414226703dec0bcde4d15a98c5aac2ae59ec059d5b61970d09905e214bd5aa23"
+  },
+  "evidence/ranking-w7-320.png": {
+    "bytes": 36461,
+    "sha256": "sha256:d388da6951943e67c9efbf46a8aa9167852da5f72dd5f400ebe3d954295a0919"
+  },
+  "evidence/ranking.json": {
+    "bytes": 345,
+    "sha256": "sha256:cd7975af39eb0dd84813ba0bcc67e5d0ad5874c8c5e3c63df923a4533091bf00"
+  },
+  "evidence/team-buf-320-text200.png": {
+    "bytes": 30886,
+    "sha256": "sha256:74e7aaae646179fda7d34895eb46cfc9fa2b209184b119b3f3dab63d447a51c9"
+  },
+  "evidence/team-buf-390.png": {
+    "bytes": 40877,
+    "sha256": "sha256:0f656e74ff37612b1b083dc6200153f1b7ee1f9d1e61dcf4b5d8f81ff2735861"
+  }
+}

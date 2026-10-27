@@ -1,0 +1,146 @@
+[
+  {
+    "collisions": [],
+    "doc": 1425,
+    "domain": "-0.2/1.2",
+    "font": "16px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_02_MIA_SF&foundation=classified_pass#mr-epa",
+    "values": [
+      "+0,165",
+      "+1,060"
+    ],
+    "width": 1440
+  },
+  {
+    "collisions": [],
+    "doc": 1425,
+    "domain": "-0.8/0.4",
+    "font": "16px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_03_PHI_CHI&foundation=classified_pass#mr-epa",
+    "values": [
+      "−0,718",
+      "+0,213"
+    ],
+    "width": 1440
+  },
+  {
+    "collisions": [],
+    "doc": 375,
+    "domain": "-0.2/1.2",
+    "font": "16px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_02_MIA_SF&foundation=classified_pass#mr-epa",
+    "values": [
+      "+0,165",
+      "+1,060"
+    ],
+    "width": 390
+  },
+  {
+    "collisions": [],
+    "doc": 375,
+    "domain": "-0.8/0.4",
+    "font": "16px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_03_PHI_CHI&foundation=classified_pass#mr-epa",
+    "values": [
+      "−0,718",
+      "+0,213"
+    ],
+    "width": 390
+  },
+  {
+    "collisions": [],
+    "doc": 305,
+    "domain": "-0.2/1.2",
+    "font": "16px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_02_MIA_SF&foundation=classified_pass#mr-epa",
+    "values": [
+      "+0,165",
+      "+1,060"
+    ],
+    "width": 320
+  },
+  {
+    "collisions": [],
+    "doc": 305,
+    "domain": "-0.8/0.4",
+    "font": "16px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_03_PHI_CHI&foundation=classified_pass#mr-epa",
+    "values": [
+      "−0,718",
+      "+0,213"
+    ],
+    "width": 320
+  },
+  {
+    "collisions": [],
+    "doc": 1425,
+    "domain": "-0.2/1.2",
+    "font": "32px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_02_MIA_SF&foundation=classified_pass#mr-epa",
+    "values": [
+      "+0,165",
+      "+1,060"
+    ],
+    "width": 1440
+  },
+  {
+    "collisions": [],
+    "doc": 1425,
+    "domain": "-0.8/0.4",
+    "font": "32px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_03_PHI_CHI&foundation=classified_pass#mr-epa",
+    "values": [
+      "−0,718",
+      "+0,213"
+    ],
+    "width": 1440
+  },
+  {
+    "collisions": [],
+    "doc": 375,
+    "domain": "-0.2/1.2",
+    "font": "32px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_02_MIA_SF&foundation=classified_pass#mr-epa",
+    "values": [
+      "+0,165",
+      "+1,060"
+    ],
+    "width": 390
+  },
+  {
+    "collisions": [],
+    "doc": 375,
+    "domain": "-0.8/0.4",
+    "font": "32px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_03_PHI_CHI&foundation=classified_pass#mr-epa",
+    "values": [
+      "−0,718",
+      "+0,213"
+    ],
+    "width": 390
+  },
+  {
+    "collisions": [],
+    "doc": 305,
+    "domain": "-0.2/1.2",
+    "font": "32px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_02_MIA_SF&foundation=classified_pass#mr-epa",
+    "values": [
+      "+0,165",
+      "+1,060"
+    ],
+    "width": 320
+  },
+  {
+    "collisions": [],
+    "doc": 305,
+    "domain": "-0.8/0.4",
+    "font": "32px",
+    "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_03_PHI_CHI&foundation=classified_pass#mr-epa",
+    "values": [
+      "−0,718",
+      "+0,213"
+    ],
+    "width": 320
+  }
+]

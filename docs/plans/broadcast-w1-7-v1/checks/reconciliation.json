@@ -1,0 +1,218 @@
+{
+  "pin": "sha256:77af196874e984bfa85a270da8733073f97836e959b6dd3d2cd2ec8a98bc7a0c",
+  "games": 107,
+  "teams": 32,
+  "rows": 18738,
+  "checks": {
+    "gameEpa": 642,
+    "thirdProductions": 214,
+    "campaignProductions": 214,
+    "gameRedzoneEpa": 214,
+    "teamEpa": 192,
+    "teamSituational": 128,
+    "teamRedzoneEpa": 64
+  },
+  "states": {
+    "third:AVAILABLE": 212,
+    "redZone:AVAILABLE": 210,
+    "redZone:NO_OPPORTUNITIES": 4,
+    "third:INSUFFICIENT": 2
+  },
+  "weekly": {
+    "1": {
+      "redZone": {
+        "denominator": 108,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 70,
+        "withRate": 31,
+        "withoutRate": [
+          "ATL"
+        ],
+        "byes": []
+      },
+      "third": {
+        "denominator": 377,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 154,
+        "withRate": 32,
+        "withoutRate": [],
+        "byes": []
+      }
+    },
+    "2": {
+      "redZone": {
+        "denominator": 100,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 54,
+        "withRate": 31,
+        "withoutRate": [
+          "ATL"
+        ],
+        "byes": []
+      },
+      "third": {
+        "denominator": 410,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 169,
+        "withRate": 32,
+        "withoutRate": [],
+        "byes": []
+      }
+    },
+    "3": {
+      "redZone": {
+        "denominator": 119,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 67,
+        "withRate": 31,
+        "withoutRate": [
+          "MIN"
+        ],
+        "byes": []
+      },
+      "third": {
+        "denominator": 393,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 168,
+        "withRate": 31,
+        "withoutRate": [
+          "MIN"
+        ],
+        "byes": []
+      }
+    },
+    "4": {
+      "redZone": {
+        "denominator": 106,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 65,
+        "withRate": 32,
+        "withoutRate": [],
+        "byes": []
+      },
+      "third": {
+        "denominator": 395,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 141,
+        "withRate": 32,
+        "withoutRate": [],
+        "byes": []
+      }
+    },
+    "5": {
+      "redZone": {
+        "denominator": 93,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 60,
+        "withRate": 30,
+        "withoutRate": [],
+        "byes": [
+          "CAR",
+          "KC"
+        ]
+      },
+      "third": {
+        "denominator": 399,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 161,
+        "withRate": 30,
+        "withoutRate": [],
+        "byes": [
+          "CAR",
+          "KC"
+        ]
+      }
+    },
+    "6": {
+      "redZone": {
+        "denominator": 100,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 53,
+        "withRate": 28,
+        "withoutRate": [],
+        "byes": [
+          "CIN",
+          "DET",
+          "MIA",
+          "MIN"
+        ]
+      },
+      "third": {
+        "denominator": 388,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 152,
+        "withRate": 28,
+        "withoutRate": [],
+        "byes": [
+          "CIN",
+          "DET",
+          "MIA",
+          "MIN"
+        ]
+      }
+    },
+    "7": {
+      "redZone": {
+        "denominator": 97,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 53,
+        "withRate": 27,
+        "withoutRate": [
+          "KC"
+        ],
+        "byes": [
+          "BUF",
+          "JAX",
+          "LAC",
+          "WAS"
+        ]
+      },
+      "third": {
+        "denominator": 333,
+        "method": "SUM_NUMERATORS_OVER_SUM_DENOMINATORS",
+        "numerator": 148,
+        "withRate": 27,
+        "withoutRate": [
+          "CHI"
+        ],
+        "byes": [
+          "BUF",
+          "JAX",
+          "LAC",
+          "WAS"
+        ]
+      }
+    }
+  },
+  "ambiguousThirds": [
+    {
+      "game_id": "2026_03_MIN_TB",
+      "play_id": 3948.0,
+      "posteam": "MIN",
+      "third_down_converted": 0.0,
+      "third_down_failed": 0.0,
+      "desc": "(3:58) (Shotgun) 1-K.Murray pass short left to 3-J.Addison to TB 35 for 9 yards (0-Y.Diaby). PENALTY on MIN-74-D.Jackson, Illegal Block Above the Waist, 10 yards, enforced at TB 39."
+    },
+    {
+      "game_id": "2026_07_NE_CHI",
+      "play_id": 3669.0,
+      "posteam": "CHI",
+      "third_down_converted": 0.0,
+      "third_down_failed": 0.0,
+      "desc": "(5:27) 65-L.Newman reported in as eligible. 4-D.Swift left end to CHI 26 for 8 yards (4-C.Woodson). PENALTY on CHI-13-Z.Thomas, Offensive Holding, 10 yards, enforced at CHI 20."
+    }
+  ],
+  "revisionW12": {
+    "oldRows": 5489,
+    "newRows": 5489,
+    "changedColumns": [
+      "surface",
+      "receiver",
+      "receiver_id",
+      "fantasy",
+      "fantasy_id"
+    ],
+    "metricChanges": []
+  },
+  "differences": 0
+}

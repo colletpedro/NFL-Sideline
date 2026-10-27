@@ -1,0 +1,848 @@
+{
+  "pin": "sha256:77af196874e984bfa85a270da8733073f97836e959b6dd3d2cd2ec8a98bc7a0c",
+  "exactDocuments": 140,
+  "counterexamples": 16,
+  "documents": [
+    {
+      "path": "",
+      "status": 200,
+      "bytes": 57697,
+      "hash": "sha256:77af196874e984bfa85a270da8733073f97836e959b6dd3d2cd2ec8a98bc7a0c"
+    },
+    {
+      "path": "games/2026_01_NE_SEA",
+      "status": 200,
+      "bytes": 138821,
+      "hash": "sha256:f05c2cf3a25d222b80a2e82ad8bca6df2bc843b68df345ef1c2a45394edb5598"
+    },
+    {
+      "path": "games/2026_01_SF_LA",
+      "status": 200,
+      "bytes": 145575,
+      "hash": "sha256:5c9e3a688ef346fd01a68281d7832a69ac72af0f8cfbc4b1d49de1ebb51b8231"
+    },
+    {
+      "path": "games/2026_01_ARI_LAC",
+      "status": 200,
+      "bytes": 156169,
+      "hash": "sha256:7e6041a622e1dcfcf718bb39f594e088f0103d96b5f9386c5b408c9df36e27f1"
+    },
+    {
+      "path": "games/2026_01_ATL_PIT",
+      "status": 200,
+      "bytes": 130729,
+      "hash": "sha256:0b5d818481c834a61d56aa8ed3606e233e00b7550232b0264fb5d47d09b66347"
+    },
+    {
+      "path": "games/2026_01_BAL_IND",
+      "status": 200,
+      "bytes": 147170,
+      "hash": "sha256:7b6b90d35e05cca718a0787282614796c54684f9284aab6f4f30c716657f673e"
+    },
+    {
+      "path": "games/2026_01_BUF_HOU",
+      "status": 200,
+      "bytes": 154201,
+      "hash": "sha256:8c8ad1374f4a8bed15431c831e57ccac81a2ca838464084de248b5326b9b1292"
+    },
+    {
+      "path": "games/2026_01_CHI_CAR",
+      "status": 200,
+      "bytes": 162487,
+      "hash": "sha256:bbf1271695062459e6be34acd1e7121c86e8d5dc3bef39e06795ecc1c3cd94be"
+    },
+    {
+      "path": "games/2026_01_CLE_JAX",
+      "status": 200,
+      "bytes": 133576,
+      "hash": "sha256:1699358df6473b2e251f69d3300147a3174cf6236ab20e1c089c91fad453b288"
+    },
+    {
+      "path": "games/2026_01_DAL_NYG",
+      "status": 200,
+      "bytes": 154679,
+      "hash": "sha256:994c95983fd7886fcd389a60291ce0370f0bcf7cc8ca67e3923790efcc7092e6"
+    },
+    {
+      "path": "games/2026_01_GB_MIN",
+      "status": 200,
+      "bytes": 160315,
+      "hash": "sha256:3a361a0260450a413b55151330d08e9c06c6c0b5c785eb2970f6d25f78c94d37"
+    },
+    {
+      "path": "games/2026_01_MIA_LV",
+      "status": 200,
+      "bytes": 147760,
+      "hash": "sha256:df930afa070833b41d208e6925dd3cc094e1867c101e8e0cc3cc8c0e5f8489ae"
+    },
+    {
+      "path": "games/2026_01_NO_DET",
+      "status": 200,
+      "bytes": 171710,
+      "hash": "sha256:edff00b87c3978657f8ce2bcd9fbff888066230d41db4cc4eb963bc2dc6a4f17"
+    },
+    {
+      "path": "games/2026_01_NYJ_TEN",
+      "status": 200,
+      "bytes": 137273,
+      "hash": "sha256:fbf59c105c5538f7048a77575187af177e50b8cb61dc8763eb2d8f932ea935f7"
+    },
+    {
+      "path": "games/2026_01_TB_CIN",
+      "status": 200,
+      "bytes": 158304,
+      "hash": "sha256:6ea14f85f52683cf218bd8b0fa7e9c7875e7a51992b42559d79424cdd095345c"
+    },
+    {
+      "path": "games/2026_01_WAS_PHI",
+      "status": 200,
+      "bytes": 153920,
+      "hash": "sha256:4ef63b4f2e4179c7d2603d3cdd565f5d11514f58e3dcf70a5a640a414d6ce621"
+    },
+    {
+      "path": "games/2026_01_DEN_KC",
+      "status": 200,
+      "bytes": 148280,
+      "hash": "sha256:8cc65de4eb9d6ed4010bc5a912836b476715b37679a115c18cc4a70a4324f5fe"
+    },
+    {
+      "path": "games/2026_02_DET_BUF",
+      "status": 200,
+      "bytes": 163999,
+      "hash": "sha256:feab928d16518c8146fa98d7e8eb5c6a380bfd1d0aa62dac41f10ce9889702ef"
+    },
+    {
+      "path": "games/2026_02_CAR_ATL",
+      "status": 200,
+      "bytes": 155986,
+      "hash": "sha256:7b73545c7902fbb25bee1f2ca8cda591154c35374327df495ea90d578e53228d"
+    },
+    {
+      "path": "games/2026_02_CIN_HOU",
+      "status": 200,
+      "bytes": 149226,
+      "hash": "sha256:003848fad4cbe8cd27ef97e75eb756d1cf5b80ede5befb9a936ead289a116f77"
+    },
+    {
+      "path": "games/2026_02_CLE_TB",
+      "status": 200,
+      "bytes": 155069,
+      "hash": "sha256:99941ccaedcc0d9a13c2fc4d5303dc9080670d8469677e6be7d28f18afabfc7f"
+    },
+    {
+      "path": "games/2026_02_GB_NYJ",
+      "status": 200,
+      "bytes": 152508,
+      "hash": "sha256:df9bc127c894604ce4928fe54e42e1af8801e1569b03996172723ac855beedfe"
+    },
+    {
+      "path": "games/2026_02_IND_KC",
+      "status": 200,
+      "bytes": 163701,
+      "hash": "sha256:86b60057ff56a06068e5b6872a35bafe8a524960a0a4c2179bc4a270a86d9c59"
+    },
+    {
+      "path": "games/2026_02_JAX_DEN",
+      "status": 200,
+      "bytes": 150179,
+      "hash": "sha256:e6665327b1427dbfe5f764f54ff871e4451cc9de9fa194758495a680408ed082"
+    },
+    {
+      "path": "games/2026_02_LV_LAC",
+      "status": 200,
+      "bytes": 143407,
+      "hash": "sha256:e470bfb1b32ddd4f8804e55c3bfea0fe8b84092c4fe2ec7603331a50a9529eb1"
+    },
+    {
+      "path": "games/2026_02_MIA_SF",
+      "status": 200,
+      "bytes": 152752,
+      "hash": "sha256:bade43648544a8347b86f03e8c885d877058bf5f1286f5fbe3ff18291c615897"
+    },
+    {
+      "path": "games/2026_02_MIN_CHI",
+      "status": 200,
+      "bytes": 147296,
+      "hash": "sha256:955d31cf9d30c674d6cfa620b37922426e0e7ea4f019b41a47bd44b4e4d86dc5"
+    },
+    {
+      "path": "games/2026_02_NO_BAL",
+      "status": 200,
+      "bytes": 143762,
+      "hash": "sha256:6a2d596a6c66f18d528fe86c41a28c4c2bd888812f5efdeab65b64860ccbe01c"
+    },
+    {
+      "path": "games/2026_02_PHI_TEN",
+      "status": 200,
+      "bytes": 164311,
+      "hash": "sha256:15e2d7e4e2c081297f9acc2bb2555839959397610dd0ddf5b4510de0e1368fe2"
+    },
+    {
+      "path": "games/2026_02_PIT_NE",
+      "status": 200,
+      "bytes": 131890,
+      "hash": "sha256:37e8ed199f8f7acceb44268211b49d708b866d6cb29d064c22cbbc7e56c27bc2"
+    },
+    {
+      "path": "games/2026_02_SEA_ARI",
+      "status": 200,
+      "bytes": 156173,
+      "hash": "sha256:1b03e8c139cc900e2425727875d922637aa64a1647ecfaca65a8f17bd8513fd3"
+    },
+    {
+      "path": "games/2026_02_WAS_DAL",
+      "status": 200,
+      "bytes": 156765,
+      "hash": "sha256:37ef5a1ccc38cadbf94a9bebf7962cb19d6e7e58e98bc6d6e91e811b2993251a"
+    },
+    {
+      "path": "games/2026_02_NYG_LA",
+      "status": 200,
+      "bytes": 140336,
+      "hash": "sha256:88abcb10a9204783e9769f81b2c79f076259c4501366d7c260d0eb86a5af5908"
+    },
+    {
+      "path": "games/2026_03_ATL_GB",
+      "status": 200,
+      "bytes": 160712,
+      "hash": "sha256:03a6041ef80349e854b17cafb8dc37f299c44cad7937242c3eba6ecfbe3ea4c6"
+    },
+    {
+      "path": "games/2026_03_ARI_SF",
+      "status": 200,
+      "bytes": 163399,
+      "hash": "sha256:8b8609cf246fefef6c4fb3656666a941077330dd55c001ce4ed284fd8e20baf7"
+    },
+    {
+      "path": "games/2026_03_BAL_DAL",
+      "status": 200,
+      "bytes": 177275,
+      "hash": "sha256:d53c5941884af9b70800c859986c9d100b0227196f783cd0d46dadf0c4737ae8"
+    },
+    {
+      "path": "games/2026_03_CAR_CLE",
+      "status": 200,
+      "bytes": 153154,
+      "hash": "sha256:b3834983e6030975d8517b02691c9d540abda411531c5d116bb24388abf1303d"
+    },
+    {
+      "path": "games/2026_03_CIN_PIT",
+      "status": 200,
+      "bytes": 146396,
+      "hash": "sha256:4a2ad6642c19fe3b269f5054135f0901eb13d55e1dca69b4ef175e6db1eb9215"
+    },
+    {
+      "path": "games/2026_03_HOU_IND",
+      "status": 200,
+      "bytes": 153184,
+      "hash": "sha256:d7f649f4d34c9e4834f63f396ecd90a488449afcd5a3af35063084bdc8cdf805"
+    },
+    {
+      "path": "games/2026_03_KC_MIA",
+      "status": 200,
+      "bytes": 154833,
+      "hash": "sha256:3f4b12410a2c40c8f377a893ed740f9f83692a83f0e1a5d675e6d66274f96512"
+    },
+    {
+      "path": "games/2026_03_LAC_BUF",
+      "status": 200,
+      "bytes": 166969,
+      "hash": "sha256:b3f938883e7ea95906b1cd6322e4ca438eb66f8cc38005fc9ec8531cb6d6d62b"
+    },
+    {
+      "path": "games/2026_03_LA_DEN",
+      "status": 200,
+      "bytes": 171036,
+      "hash": "sha256:e32f2f315101fd5db813fb7a86aa4cd1af79afc7211474fcf1ef45869330c35b"
+    },
+    {
+      "path": "games/2026_03_LV_NO",
+      "status": 200,
+      "bytes": 171280,
+      "hash": "sha256:168d8e8590b4103b52b7a7349d4ceee860837fbc08597b91984ee6819e296e9d"
+    },
+    {
+      "path": "games/2026_03_MIN_TB",
+      "status": 200,
+      "bytes": 132331,
+      "hash": "sha256:44cd7b6f8115c1c3fed80ebc6ca6a19266a1a390bfea7968e26bbbba723bb199"
+    },
+    {
+      "path": "games/2026_03_NE_JAX",
+      "status": 200,
+      "bytes": 163282,
+      "hash": "sha256:5cf57cdbdb6ad82b5ac16b9cff35c29e83ee605f26c73e8be792cdb4b0239659"
+    },
+    {
+      "path": "games/2026_03_NYJ_DET",
+      "status": 200,
+      "bytes": 160506,
+      "hash": "sha256:d49c0e13f5dc8bde22876de6e02958dae785b749fd77884b0d21a6a3f62c8808"
+    },
+    {
+      "path": "games/2026_03_SEA_WAS",
+      "status": 200,
+      "bytes": 155530,
+      "hash": "sha256:12dd4d5c2dba4e49112d172f19a7cc27a32185a595e269dc7f744b5e9a4c798d"
+    },
+    {
+      "path": "games/2026_03_TEN_NYG",
+      "status": 200,
+      "bytes": 150988,
+      "hash": "sha256:1768a039d1ec45d2e32dbdf874587be36bf8a0568a5d6702a3aeddf8db061763"
+    },
+    {
+      "path": "games/2026_03_PHI_CHI",
+      "status": 200,
+      "bytes": 162552,
+      "hash": "sha256:62038e0ab38540d150a0d1a30bb46086e538e4a0f1c49463a6e56715d72342cf"
+    },
+    {
+      "path": "games/2026_04_PIT_CLE",
+      "status": 200,
+      "bytes": 152253,
+      "hash": "sha256:0f2a18f2aaf7ff902ad39636532aac652a9e44a679fe6df6f6b7f0503f12b000"
+    },
+    {
+      "path": "games/2026_04_ARI_NYG",
+      "status": 200,
+      "bytes": 155521,
+      "hash": "sha256:a5a9890fd8f1f3b73113bf3800d216ab9915a141191107e28a6b69581f563f17"
+    },
+    {
+      "path": "games/2026_04_DAL_HOU",
+      "status": 200,
+      "bytes": 152176,
+      "hash": "sha256:d5d30cfd5bb067a2ae9bfa414881a1e31c05f5e4a944ac4a91c35f5ce8d37274"
+    },
+    {
+      "path": "games/2026_04_DEN_SF",
+      "status": 200,
+      "bytes": 144445,
+      "hash": "sha256:f16405208f0063022349553e967b3b810d986643591d1b0a61868e695e812cbc"
+    },
+    {
+      "path": "games/2026_04_DET_CAR",
+      "status": 200,
+      "bytes": 161736,
+      "hash": "sha256:f42c291386dbd6762d6eb5be9fe21b88caf1d42a969570dd011c709650ba4e3b"
+    },
+    {
+      "path": "games/2026_04_GB_TB",
+      "status": 200,
+      "bytes": 147409,
+      "hash": "sha256:9a929ef1fe01a85eacddb6000a7a559d1de2086d5a46229b4b60fdf0ed3b8dbf"
+    },
+    {
+      "path": "games/2026_04_IND_WAS",
+      "status": 200,
+      "bytes": 147689,
+      "hash": "sha256:f74a244369bed867838cc5d271fb516d6aafc64b4c33a7df75d0a517927967e8"
+    },
+    {
+      "path": "games/2026_04_JAX_CIN",
+      "status": 200,
+      "bytes": 152149,
+      "hash": "sha256:df9947b8d10f88d7490f3e505dd2b520dd31b9a667f4ad072a94f6c968a8262a"
+    },
+    {
+      "path": "games/2026_04_KC_LV",
+      "status": 200,
+      "bytes": 148612,
+      "hash": "sha256:c11114ae4546b62db7f733894fc6e331983fb1019e897fa241a34e8a0e012bf3"
+    },
+    {
+      "path": "games/2026_04_LAC_SEA",
+      "status": 200,
+      "bytes": 151862,
+      "hash": "sha256:910b2b0dc0b82df66c6701e28067e8be4e018d801d0e73254172df9e534f4980"
+    },
+    {
+      "path": "games/2026_04_LA_PHI",
+      "status": 200,
+      "bytes": 159449,
+      "hash": "sha256:01add2a05d946de785c0092a3da7ad5006fed5d69d01a3081b18b4fac32b5ea5"
+    },
+    {
+      "path": "games/2026_04_MIA_MIN",
+      "status": 200,
+      "bytes": 145179,
+      "hash": "sha256:992862b2a7a9a4296971948b1a8c40140b29e577512ba86e397c31e08e2e2985"
+    },
+    {
+      "path": "games/2026_04_NE_BUF",
+      "status": 200,
+      "bytes": 154218,
+      "hash": "sha256:a711b922f1c99930f5bc5e0f8383c75cddc36c5bc32eb88ad921194bde55b8db"
+    },
+    {
+      "path": "games/2026_04_NYJ_CHI",
+      "status": 200,
+      "bytes": 163916,
+      "hash": "sha256:7079aee8b93ed48ccbb21e85c02f00d0f738145c71a5d823c54d3938d9e594d7"
+    },
+    {
+      "path": "games/2026_04_TEN_BAL",
+      "status": 200,
+      "bytes": 151207,
+      "hash": "sha256:fa0ae023fc36cfbe9e08a2c8605f1e99641b283aba6f69e11a7ab8ec5eb3e083"
+    },
+    {
+      "path": "games/2026_04_ATL_NO",
+      "status": 200,
+      "bytes": 161374,
+      "hash": "sha256:a37330378f32a8fb7648de6ba44c075a3a82c2c3e4f8426e366ecac965e2a7b9"
+    },
+    {
+      "path": "games/2026_05_TB_DAL",
+      "status": 200,
+      "bytes": 148597,
+      "hash": "sha256:14e243edd4815b920db7d591195baaf0a19db95acca767922fa35504aeed9403"
+    },
+    {
+      "path": "games/2026_05_BAL_ATL",
+      "status": 200,
+      "bytes": 155844,
+      "hash": "sha256:466a1ef05e8e218383be2bf111d0e27aa74d2dbf888a2997c58b374be20f380a"
+    },
+    {
+      "path": "games/2026_05_CHI_GB",
+      "status": 200,
+      "bytes": 148482,
+      "hash": "sha256:f94fa6835a8eaf4e263d1c8fcba02f775ad94b8a92e00c02e19ead5e0842a707"
+    },
+    {
+      "path": "games/2026_05_CIN_MIA",
+      "status": 200,
+      "bytes": 169801,
+      "hash": "sha256:b42d0bc23209b1c952b10cf701356592ebbc41d6c462f283a3d4965bb7785e75"
+    },
+    {
+      "path": "games/2026_05_CLE_NYJ",
+      "status": 200,
+      "bytes": 137861,
+      "hash": "sha256:212036df7bba1f55e7923cb9928e257457aa87ac37a46938db67c3a0d119ec0b"
+    },
+    {
+      "path": "games/2026_05_DEN_LAC",
+      "status": 200,
+      "bytes": 145691,
+      "hash": "sha256:86232b4696ea681262c639fc0468441306ac9a5cf0e1f492ab19d422d3ee946b"
+    },
+    {
+      "path": "games/2026_05_DET_ARI",
+      "status": 200,
+      "bytes": 164434,
+      "hash": "sha256:afd6506d1712422fca9ac498ebd88135cb3ee880be5883f74a4e6cdca09bc692"
+    },
+    {
+      "path": "games/2026_05_HOU_TEN",
+      "status": 200,
+      "bytes": 143476,
+      "hash": "sha256:3cd3d3779623ffd85c424679ee8681a9b31a56e28a2edc25ef08366ab0507efd"
+    },
+    {
+      "path": "games/2026_05_IND_PIT",
+      "status": 200,
+      "bytes": 144233,
+      "hash": "sha256:ee806dc2cfa050aa57ae07a6299c4e6efa17c0a03c9ca7fbe78c023ec1b580f6"
+    },
+    {
+      "path": "games/2026_05_LV_NE",
+      "status": 200,
+      "bytes": 154122,
+      "hash": "sha256:b90f9c3b5acde7ee715309f8fe36d0bab285229122fa18c1feb3e89ab99ce58d"
+    },
+    {
+      "path": "games/2026_05_MIN_NO",
+      "status": 200,
+      "bytes": 141581,
+      "hash": "sha256:3b8b3ce7896b8a76aa2e84b35a1ed6a784440551d4df75128562412dfec43449"
+    },
+    {
+      "path": "games/2026_05_NYG_WAS",
+      "status": 200,
+      "bytes": 150406,
+      "hash": "sha256:374f45776f2e228a6317c3348318b83d66e12dd67722c1787ce1241021a6ba3a"
+    },
+    {
+      "path": "games/2026_05_PHI_JAX",
+      "status": 200,
+      "bytes": 151895,
+      "hash": "sha256:b7105c0046268ef93a4965f2f66c9567d807da87b847add7a9d4ab65850138b7"
+    },
+    {
+      "path": "games/2026_05_SF_SEA",
+      "status": 200,
+      "bytes": 140218,
+      "hash": "sha256:d503aaf26ac4cc1825ee22f3c7631eb3ae44d2e376e3465610c0424a51482d3f"
+    },
+    {
+      "path": "games/2026_05_BUF_LA",
+      "status": 200,
+      "bytes": 163904,
+      "hash": "sha256:0541cb9fcb24d14dc985b704b6a00f1fbc1d400af185391b3b086564b0457174"
+    },
+    {
+      "path": "games/2026_06_SEA_DEN",
+      "status": 200,
+      "bytes": 138442,
+      "hash": "sha256:c10c910244438d9af448af07332955a2d279fce5635cdb3737c8ffb3507fc6d1"
+    },
+    {
+      "path": "games/2026_06_ARI_LA",
+      "status": 200,
+      "bytes": 157113,
+      "hash": "sha256:ee067b9969497d92266d7d1b639be3b26ff7b64547f68c8a1f7b12b071c858e8"
+    },
+    {
+      "path": "games/2026_06_BAL_CLE",
+      "status": 200,
+      "bytes": 141145,
+      "hash": "sha256:00e5eb4084a93a2b7d1ea488c9663843a739b4facd35cf951d9ef849426fec27"
+    },
+    {
+      "path": "games/2026_06_BUF_LV",
+      "status": 200,
+      "bytes": 161618,
+      "hash": "sha256:5d94075959a4aee5bddab299ea3aeedc0b3e1b1dbccd27093baceb7f35ba9029"
+    },
+    {
+      "path": "games/2026_06_CAR_PHI",
+      "status": 200,
+      "bytes": 147110,
+      "hash": "sha256:620eb8debd789ffa8fedc555a9fbe9a8a73bd96500643b914bf7fe0b111e7b18"
+    },
+    {
+      "path": "games/2026_06_CHI_ATL",
+      "status": 200,
+      "bytes": 156646,
+      "hash": "sha256:17949d980c48e5646d7bfef8864a03863e0d8ff0ffcfe420d25b71fb819614fc"
+    },
+    {
+      "path": "games/2026_06_DAL_GB",
+      "status": 200,
+      "bytes": 161801,
+      "hash": "sha256:26122c7e8be8cc4c7934cf4f53b1798254bd3ae71b0bd1f07efe5e04571885db"
+    },
+    {
+      "path": "games/2026_06_HOU_JAX",
+      "status": 200,
+      "bytes": 163986,
+      "hash": "sha256:49141ba5e36fa4368c05bade9b402d654919cc32dcc240a641b4b785e8ffe4b1"
+    },
+    {
+      "path": "games/2026_06_LAC_KC",
+      "status": 200,
+      "bytes": 151483,
+      "hash": "sha256:91871be258a14e4e88d0ece8d6b1aeac456506705f7f876b92d5f73b7e855802"
+    },
+    {
+      "path": "games/2026_06_NO_NYG",
+      "status": 200,
+      "bytes": 147723,
+      "hash": "sha256:809128cd7aa4a65ce62524fea51496836a65dd94fe5c6668656dbd8d3bd32655"
+    },
+    {
+      "path": "games/2026_06_NYJ_NE",
+      "status": 200,
+      "bytes": 152435,
+      "hash": "sha256:3f506e0fa936a9cb2a5ff59663fd9dfb7dd0bce7c68e5ff5fcaf5c420130898c"
+    },
+    {
+      "path": "games/2026_06_PIT_TB",
+      "status": 200,
+      "bytes": 151151,
+      "hash": "sha256:b850114c4180aa4001496b34031111b4319019bf9346b3a8a092288361182c43"
+    },
+    {
+      "path": "games/2026_06_TEN_IND",
+      "status": 200,
+      "bytes": 143981,
+      "hash": "sha256:9a048d8f8b5d7350a36b60774da056389e9ad3a83431d96c849c0cd5b9d8cb87"
+    },
+    {
+      "path": "games/2026_06_WAS_SF",
+      "status": 200,
+      "bytes": 155191,
+      "hash": "sha256:d0783d90cc9ec737a61086f33c68a1cc4936546aa62de4b2c8c3bdfbf2589a07"
+    },
+    {
+      "path": "games/2026_07_NE_CHI",
+      "status": 200,
+      "bytes": 131413,
+      "hash": "sha256:62b16166e25875cee5c4a1688e49a838f56531cb28065fe16acc7f62ba284321"
+    },
+    {
+      "path": "games/2026_07_CIN_BAL",
+      "status": 200,
+      "bytes": 148804,
+      "hash": "sha256:fb529ddc0f83ddc785e5f1708bffcaf4cbfdd246afa184f5d968e0e40052bf85"
+    },
+    {
+      "path": "games/2026_07_CLE_TEN",
+      "status": 200,
+      "bytes": 156501,
+      "hash": "sha256:341a7cb3ff023ba74e58b9cbb4cb1bd5a0657041593f51ae1283481a8fa8604b"
+    },
+    {
+      "path": "games/2026_07_DEN_ARI",
+      "status": 200,
+      "bytes": 158336,
+      "hash": "sha256:87cdac02cbd4f6e4dda4ed69183e1ad8ae8362dee8e052dabfcf94e4ee5ff117"
+    },
+    {
+      "path": "games/2026_07_GB_DET",
+      "status": 200,
+      "bytes": 157601,
+      "hash": "sha256:76ffbe809de97e3362fb35ea6cf34c25b4dcd669791a574f4bf1d791bda81bc6"
+    },
+    {
+      "path": "games/2026_07_IND_MIN",
+      "status": 200,
+      "bytes": 131591,
+      "hash": "sha256:ea7c07ac5725bed1852160d08572d8e1a6b9eb5755ccf133474e3c94cf375879"
+    },
+    {
+      "path": "games/2026_07_KC_SEA",
+      "status": 200,
+      "bytes": 130060,
+      "hash": "sha256:40b29e78f30202c945c5b9ae42d136bb82bbb0a9da79abbc3d03db0f6bfd7e62"
+    },
+    {
+      "path": "games/2026_07_LA_LV",
+      "status": 200,
+      "bytes": 157586,
+      "hash": "sha256:bdde43266997b282b0183fda4dbc595d4a312c80b98bba9a70d3e9e16f4dfb0b"
+    },
+    {
+      "path": "games/2026_07_MIA_NYJ",
+      "status": 200,
+      "bytes": 149283,
+      "hash": "sha256:4aa26e17862691d9f2018c46af41b429c6a99195dfd7b0829998045dab9bda07"
+    },
+    {
+      "path": "games/2026_07_NYG_HOU",
+      "status": 200,
+      "bytes": 134825,
+      "hash": "sha256:a60a8d271d3abf13c12417ab54256810b50176b00e65c484fce531fa99cfc3ab"
+    },
+    {
+      "path": "games/2026_07_PIT_NO",
+      "status": 200,
+      "bytes": 151715,
+      "hash": "sha256:bf4e08770bcae5b833853d8ae13308f7f9c781c22e00da6d296262c2d6dd7924"
+    },
+    {
+      "path": "games/2026_07_SF_ATL",
+      "status": 200,
+      "bytes": 141663,
+      "hash": "sha256:8783b784000cc48e2c3e640c3f1ad0a41443c73da9eaf6d30610995f0b8e6b0a"
+    },
+    {
+      "path": "games/2026_07_TB_CAR",
+      "status": 200,
+      "bytes": 143492,
+      "hash": "sha256:c7d5bb96fc26debbb616afe41b840e4f75fcaeea26742f2643a9393face57eab"
+    },
+    {
+      "path": "games/2026_07_DAL_PHI",
+      "status": 200,
+      "bytes": 158388,
+      "hash": "sha256:8a06446c79075c7d3ba804851b9fc279394444296f6d3e02af259acf11886cf5"
+    },
+    {
+      "path": "teams/ARI",
+      "status": 200,
+      "bytes": 1255191,
+      "hash": "sha256:d67860237e46b6368b90bad766442308a2023f2cc23cc82387717dd27f876a82"
+    },
+    {
+      "path": "teams/ATL",
+      "status": 200,
+      "bytes": 1170606,
+      "hash": "sha256:ac3bbf29d6c605f352a56e4905494b901bffca9ac86c98d7205a4379f4f3f950"
+    },
+    {
+      "path": "teams/BAL",
+      "status": 200,
+      "bytes": 1167528,
+      "hash": "sha256:3fee9fd31a4adf3c7a585069993a4b22c5bb225c7bd561f5b973eda092196913"
+    },
+    {
+      "path": "teams/BUF",
+      "status": 200,
+      "bytes": 1097740,
+      "hash": "sha256:a0893e3717fa1734b76a2906a2e78f49d1aabc30762fdc20b7f6fa05bb0e9a72"
+    },
+    {
+      "path": "teams/CAR",
+      "status": 200,
+      "bytes": 1035301,
+      "hash": "sha256:5fcc4d7b55daed9b8c9b1c9070e478d652ba39932535f726797904f0e9309c2c"
+    },
+    {
+      "path": "teams/CHI",
+      "status": 200,
+      "bytes": 1183802,
+      "hash": "sha256:bcca686db5dce3572a35dfc9bcf4dcd5725f757070f73d487b170f5e34f66367"
+    },
+    {
+      "path": "teams/CIN",
+      "status": 200,
+      "bytes": 1022132,
+      "hash": "sha256:231df33e1c362808e23906aa17a22e4c49aa6a7ab7325f693d9856af974c6dc2"
+    },
+    {
+      "path": "teams/CLE",
+      "status": 200,
+      "bytes": 1103591,
+      "hash": "sha256:04a093960b17e550f5d19a3bfd5296dd4d6af2707be343fcd2c3d252aef5ff84"
+    },
+    {
+      "path": "teams/DAL",
+      "status": 200,
+      "bytes": 1254300,
+      "hash": "sha256:0d99930b16b2146c689fdaeee06a1dbd9bad26be86530f34ef57f955f667743a"
+    },
+    {
+      "path": "teams/DEN",
+      "status": 200,
+      "bytes": 1157353,
+      "hash": "sha256:766579b28cdfbc36c41fdd1c5477af98479b2f8b1afc30dc54ac29a1c7e1c38c"
+    },
+    {
+      "path": "teams/DET",
+      "status": 200,
+      "bytes": 1136620,
+      "hash": "sha256:d2fe78c0b13e993ab08cc0a407bfde2097dd5a3cf74461bb1c5b1f945855d675"
+    },
+    {
+      "path": "teams/GB",
+      "status": 200,
+      "bytes": 1212195,
+      "hash": "sha256:7caa85b1e57b2d4864ac9166b38995c37ee11b2821c5f69846c91273db0768ff"
+    },
+    {
+      "path": "teams/HOU",
+      "status": 200,
+      "bytes": 1146572,
+      "hash": "sha256:ca92f3d0c81da161a342fa23eaa9c283e6c0a094104b683865e9b9db49eb69a8"
+    },
+    {
+      "path": "teams/IND",
+      "status": 200,
+      "bytes": 1108160,
+      "hash": "sha256:dff443e851f290e9f91292cf844acea08f7e8060292f0db3f1f2e6aaa6b0c01f"
+    },
+    {
+      "path": "teams/JAX",
+      "status": 200,
+      "bytes": 996615,
+      "hash": "sha256:54d1dc41d5edc00e818af3ed460b82724380afd9394427575c53a5a10153ead9"
+    },
+    {
+      "path": "teams/KC",
+      "status": 200,
+      "bytes": 975778,
+      "hash": "sha256:ed844780102af7733adbdcee3419edc07af1bccfecb2729f7477764e6417b864"
+    },
+    {
+      "path": "teams/LA",
+      "status": 200,
+      "bytes": 1227601,
+      "hash": "sha256:93d8a2ae9653d929ef16944d53168a89605cbbc657d5a9b081a3abe36eb766ae"
+    },
+    {
+      "path": "teams/LAC",
+      "status": 200,
+      "bytes": 1000013,
+      "hash": "sha256:1d32a367a998a8e4165cf15b10f76217424f57159f943e2db355c3de6f9973dc"
+    },
+    {
+      "path": "teams/LV",
+      "status": 200,
+      "bytes": 1201647,
+      "hash": "sha256:3897915c4498b0c8ebedaa3e1519ce0b523da63b3e59a8c42c376e7648b7b074"
+    },
+    {
+      "path": "teams/MIA",
+      "status": 200,
+      "bytes": 1002341,
+      "hash": "sha256:426198e1fd8ef773907301b155a023c199e44e75b10cdae49b04b536bcc99c77"
+    },
+    {
+      "path": "teams/MIN",
+      "status": 200,
+      "bytes": 899292,
+      "hash": "sha256:326d66f073adb85ea2d169171b9eb1e7ebb9c6598d084f1bed09bac0c53dd77a"
+    },
+    {
+      "path": "teams/NE",
+      "status": 200,
+      "bytes": 1095795,
+      "hash": "sha256:fe221a164bc38570ebaf4071d037d988938c706a440ffbf33c7cbf04ec81aeec"
+    },
+    {
+      "path": "teams/NO",
+      "status": 200,
+      "bytes": 1214936,
+      "hash": "sha256:54d36429d0e2d4deec018a9e80d476ff50d0f55310d7ad2a4615f2cbe241bd13"
+    },
+    {
+      "path": "teams/NYG",
+      "status": 200,
+      "bytes": 1113906,
+      "hash": "sha256:dcc041edff5908939f9f4684aaf1b8ed668e47c04a57b51f5fa40c08ff3813c4"
+    },
+    {
+      "path": "teams/NYJ",
+      "status": 200,
+      "bytes": 1149067,
+      "hash": "sha256:433c135768d968626bdf8ae5a728daa8d3b34321e4b21d86bd96d9d32dbf4bfa"
+    },
+    {
+      "path": "teams/PHI",
+      "status": 200,
+      "bytes": 1230849,
+      "hash": "sha256:c40a4e6dff54326b1b9a869c4753f6035f2d0416fd2ec70216a3505da2bea144"
+    },
+    {
+      "path": "teams/PIT",
+      "status": 200,
+      "bytes": 1068228,
+      "hash": "sha256:54ba08d2c5d8c9d543c7a0cf4974d246d65f3b2bd8065f8014c2cbb129a7799a"
+    },
+    {
+      "path": "teams/SEA",
+      "status": 200,
+      "bytes": 1070690,
+      "hash": "sha256:0f105c05b09f8a2bef75a3322e28cfc58f18843c7e1ccc6b7cbd4d240376278f"
+    },
+    {
+      "path": "teams/SF",
+      "status": 200,
+      "bytes": 1119987,
+      "hash": "sha256:dd51aaeb0b4bc016b16f4bf81fa7ab74e07a91afa86d7b047c0dbc2e9fc83d87"
+    },
+    {
+      "path": "teams/TB",
+      "status": 200,
+      "bytes": 1117538,
+      "hash": "sha256:764f90693cc51494ea69245cdaf7c264cba4a8c970c41741c29bc49b06b808c3"
+    },
+    {
+      "path": "teams/TEN",
+      "status": 200,
+      "bytes": 1133789,
+      "hash": "sha256:d12fe3f09927ce51fd2802cb8e6ecd0530c019e0c86713bdb8e1d0f337d37140"
+    },
+    {
+      "path": "teams/WAS",
+      "status": 200,
+      "bytes": 1011269,
+      "hash": "sha256:f69b0a82f23b4ab4fefc5137d19a687a1c43c870f9dc8d4a6a136e0c6d572008"
+    }
+  ],
+  "passed": true
+}

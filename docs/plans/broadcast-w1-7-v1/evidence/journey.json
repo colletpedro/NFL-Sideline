@@ -1,0 +1,6 @@
+[
+  "http://127.0.0.1:18109/?view=matchup-season&game=2026_03_MIN_TB&q=MIN&scope=season",
+  "http://127.0.0.1:18109/?q=MIN&scope=season&view=team-season&team=MIN&season=2026&returnWeek=3",
+  "http://127.0.0.1:18109/?q=MIN&scope=season&view=matchup-season&game=2026_01_GB_MIN&season=2026&week=1&returnWeek=3",
+  "http://127.0.0.1:18109/?q=MIN&scope=season&season=2026&week=3"
+]
