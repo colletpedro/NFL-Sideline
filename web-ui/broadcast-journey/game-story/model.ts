@@ -1,0 +1,31 @@
+import type {Reference} from '../w12/model';
+import {PIN as SOURCE_PIN,WEEKS} from '../season/model';
+import pin from './pin.json';
+export const STORY_PIN=pin.bundleId,STORY_ENDPOINT='/__game-story/';
+export type Clock={quarter:number;remaining:number;clock:string;elapsed:number};
+export type ScoreEvent=Clock&{id:string;playId:number;sourceOrder:number;team:string;kind:string;points:number;before:number[];after:number[];margin:number;fixedDrive:number;description:string};
+export type CampaignEvent=Clock&{id:string;team:string;opponent:string;outcome:string;drive:number;sourceOrder:number;score:number[];margin:number;entryPlayIds:string[];terminalPlayId:string;description:string};
+export type Timeline={status:'AVAILABLE'|'INSUFFICIENT'|'SOURCE_ABSENT';reason:string|null;gameId:string;away:string;home:string;final:number[];endElapsed:number;periods:number[];events:ScoreEvent[];campaigns:CampaignEvent[];definition:string;allScoringIncluded:boolean};
+export type Story={contractVersion:string;sourcePin:string;season:number;weeks:number[];seasonReferences:Record<'third'|'redZone',Reference>;timelines:Record<string,Timeline>;guarantees:Record<string,string>};
+const same=(a:unknown[],b:unknown[])=>a.length===b.length&&[...a].sort().join('|')===[...b].sort().join('|');
+function assert(ok:unknown):asserts ok{if(!ok)throw new Error('A classificação acumulada ou a cronologia não passou na conferência.');}
+export function validateStory(v:unknown):Story{
+ const d=v as Story;assert(d?.contractVersion==='broadcast-game-story-v1'&&d.sourcePin===SOURCE_PIN&&d.season===2026&&same(d.weeks,WEEKS)&&Object.keys(d.timelines).length===107);
+ for(const f of ['third','redZone'] as const){const r=d.seasonReferences[f];assert(r.season===2026&&same(r.weeks,WEEKS)&&r.candidateTeams.length===32&&new Set(r.candidateTeams).size===32&&same(r.inventory.map(p=>p.team),r.candidateTeams));const ps=r.teamRateDistribution.points;assert(same(ps.map(p=>p.team),r.representedTeams)&&same([...ps,...r.teamsWithoutRate].map(p=>p.team),r.candidateTeams)&&ps.every(p=>p.denominator>0&&Number.isSafeInteger(p.denominator)&&Number.isSafeInteger(p.numerator)&&p.numerator>=0&&p.numerator<=p.denominator&&p.unitIds.length===p.denominator&&p.status==='AVAILABLE'));assert(r.permission.allowed&&r.permission.operation==='leagueReference'&&same(r.permission.observationIds,ps.map(p=>p.observationId))&&r.pooledRate.numerator===ps.reduce((s,p)=>s+p.numerator,0)&&r.pooledRate.denominator===ps.reduce((s,p)=>s+p.denominator,0));}
+ for(const [id,t] of Object.entries(d.timelines)){
+  assert(['AVAILABLE','INSUFFICIENT','SOURCE_ABSENT'].includes(t.status));if(t.status!=='AVAILABLE'){assert(!t.events.length&&!t.campaigns.length);continue;}
+  assert(id===t.gameId&&id.split('_')[2]===t.away&&id.split('_')[3]===t.home&&t.allScoringIncluded&&t.definition==='OBSERVED_POST_PLAY_SCORES_AWAY_MINUS_HOME_V1'&&t.endElapsed>=3600&&t.endElapsed<=4200);
+  let previous=[0,0],time=0;const ids=new Set<string>();for(const e of t.events){assert(e.id===`${id}:${e.playId}`&&!ids.has(e.id)&&same(e.before,previous)&&e.before[0]===previous[0]&&e.before[1]===previous[1]&&e.elapsed>=time&&e.elapsed<=t.endElapsed&&[t.away,t.home].includes(e.team));ids.add(e.id);const delta=e.after.map((n,j)=>n-previous[j]);assert(e.after.every(n=>Number.isSafeInteger(n)&&n>=0)&&delta.filter(n=>n>0).length===1&&delta.every(n=>n>=0)&&delta[e.team===t.away?0:1]===e.points&&[1,2,3,6].includes(e.points)&&e.margin===e.after[0]-e.after[1]);previous=e.after;time=e.elapsed;}
+  assert(previous[0]===t.final[0]&&previous[1]===t.final[1]);assert(new Set(t.campaigns.map(c=>c.id)).size===t.campaigns.length&&t.campaigns.every(c=>[t.away,t.home].includes(c.team)&&c.margin===c.score[0]-c.score[1]&&c.elapsed>=0&&c.elapsed<=t.endElapsed&&c.entryPlayIds.length>0));
+ }
+ assert(Object.values(d.guarantees).every(v=>v==='UNKNOWN'));return d;
+}
+export async function loadStory(signal?:AbortSignal){let r:Response;try{r=await fetch(STORY_ENDPOINT,{signal,method:'GET',headers:{'X-Local-Game-Story':'1','X-Game-Story-Collection':STORY_PIN},credentials:'same-origin'});}catch{throw new Error('A fonte da cronologia e da classificação acumulada não pôde ser carregada.');}if(!r.ok)throw new Error('A fonte da cronologia e da classificação acumulada está indisponível.');const b=await r.text(),h=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(b));assert(r.headers.get('X-Game-Story-Collection')===STORY_PIN&&'sha256:'+Array.from(new Uint8Array(h),n=>n.toString(16).padStart(2,'0')).join('')===STORY_PIN);return validateStory(JSON.parse(b));}
+export type Moment={id:string;team:string;kind:string;clock:Clock;score:number[];points:number;events:ScoreEvent[];campaign?:CampaignEvent};
+export function moments(t:Timeline):Moment[]{const out:Moment[]=[];
+ for(const e of t.events){const previous=out.slice(-1)[0];if(['EXTRA_POINT','TWO_POINT'].includes(e.kind)&&previous?.kind==='TOUCHDOWN'&&previous.team===e.team&&previous.clock.quarter===e.quarter&&previous.events[0].fixedDrive===e.fixedDrive){previous.events.push(e);previous.points+=e.points;previous.score=e.after;previous.clock=e;continue;}out.push({id:e.id,team:e.team,kind:e.kind,clock:e,score:e.after,points:e.points,events:[e]});}
+ for(const c of t.campaigns){const matching=out.find(m=>m.team===c.team&&m.events.some(e=>e.id===c.terminalPlayId));if(matching)matching.campaign=c;else out.push({id:c.id,team:c.team,kind:c.outcome,clock:c,score:c.score,points:0,events:[],campaign:c});}
+ return out.sort((a,b)=>(a.events[0]?.sourceOrder??a.campaign!.sourceOrder)-(b.events[0]?.sourceOrder??b.campaign!.sourceOrder));
+}
+export function quarterStart(q:number){return q<=4?(q-1)*900:3600;}
+export function stepPath(t:Timeline,start:number,end:number,quarter=0){const before=t.events.filter(e=>quarter?e.quarter<quarter:e.elapsed<start).slice(-1)[0]?.margin??0;const events=t.events.filter(e=>quarter?e.quarter===quarter:e.elapsed>=start&&e.elapsed<=end);const extent=Math.max(7,...t.events.map(e=>Math.abs(e.margin))),bound=Math.ceil(extent/7)*7;const x=(n:number)=>((n-start)/(end-start))*1000,y=(v:number)=>130-v/bound*106;let path=`M0 ${y(before)}`,last=before;for(const e of events){path+=` H${x(e.elapsed)} V${y(e.margin)}`;last=e.margin;}path+=' H1000';return {path,area:path+' L1000 130 H0 Z',bound,before,last,x,y,events};}

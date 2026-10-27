@@ -1,3 +1,6 @@
+import {useContext} from 'react';
+import {GameStoryContext} from '../game-story/context';
+import {GameTimeline} from '../game-story/Timeline';
 import {RedzoneEpaPanel} from '../redzone-epa/Panel';
 import {useRankingRedzone} from '../ranking-redzone/context';
 import {RankingLeague} from '../ranking-redzone/RankingLeague';
@@ -75,17 +78,18 @@ export function ThirdBlock({d}:{d:Document}) {
   </section>;
 }
 export function RedZoneBlock({d}:{d:Document}) {
+  const story=useContext(GameStoryContext),timelineMode=!!story&&(story.loading||!story.error&&story.data?.timelines[d.game.gameId]?.status==='AVAILABLE');
   const ranking=useRankingRedzone();
   const [selected,setSelected]=useState<Campaign|null>(null);const allowed=sideAllowed(d,'redZone');const withoutCampaigns=d.productions.filter(p=>p.metrics.redZone.descriptor.status==='NO_OPPORTUNITIES').map(p=>p.offense);
   return <section className="mr-section" id="mr-redzone" tabIndex={-1} aria-labelledby="mr-redzone-title"><h2 id="mr-redzone-title">Red zone</h2><p className="mr-unit">TDs ofensivos / campanhas que entraram nas 20 · deste jogo</p>
     <>{!allowed&&<p className="mr-note">{withoutCampaigns.length?`${withoutCampaigns.join(' e ')} sem campanhas elegíveis de red zone neste jogo: não há taxa para comparar. As campanhas dos outros ataques seguem abaixo.`:'Não há comparação de red zone neste recorte. Consulte os resultados disponíveis de cada ataque abaixo.'}</p>}
       <div className={allowed?"mr-pair mr-redzone-pair":"mr-individual mr-redzone-pair"}>{d.productions.map(p=><div key={p.offense}><ProductionName p={p}/><MetricValue metric={p.metrics.redZone} unit="campanhas"/>{ready(p.metrics.redZone)&&<><p className="mr-note">{p.metrics.redZone.descriptor.numerator} {Number(p.metrics.redZone.descriptor.numerator)===1?'TD':'TDs'} em {p.metrics.redZone.descriptor.denominator} {p.metrics.redZone.descriptor.denominator===1?'campanha observada':'campanhas observadas'}.</p>
-        <div className="mr-campaigns">{p.redZoneCampaigns.map(u=>ranking?<CampaignMark key={u.id} unit={u} label={p.label} scope="game" selected={selected?.id===u.id} onSelect={()=>setSelected(u)}/>:<button type="button" key={u.id} data-campaign-mark={u.id} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, campanha ${u.fixedDrive}, ${outcomes[u.outcome]??u.outcome}`}><strong>{u.outcome==='TOUCHDOWN'?'TD':u.outcome==='FIELD_GOAL'?'FG':outcomes[u.outcome]??u.outcome}</strong><span>Campanha {u.fixedDrive}</span></button>)}</div>
+        {!timelineMode&&<div className="mr-campaigns">{p.redZoneCampaigns.map(u=>ranking?<CampaignMark key={u.id} unit={u} label={p.label} scope="game" selected={selected?.id===u.id} onSelect={()=>setSelected(u)}/>:<button type="button" key={u.id} data-campaign-mark={u.id} onClick={()=>setSelected(u)} aria-pressed={selected?.id===u.id} aria-label={`${p.offense}, campanha ${u.fixedDrive}, ${outcomes[u.outcome]??u.outcome}`}><strong>{u.outcome==='TOUCHDOWN'?'TD':u.outcome==='FIELD_GOAL'?'FG':outcomes[u.outcome]??u.outcome}</strong><span>Campanha {u.fixedDrive}</span></button>)}</div>}
         <p className="mr-outcomes">Desfechos: {Object.entries(p.metrics.redZone.observation.outcomes).sort(([a],[b])=>Number(b==='TOUCHDOWN')-Number(a==='TOUCHDOWN')).map(([k,v])=>`${v} ${k==='TOUCHDOWN'?(v===1?'TD':'TDs'):(outcomes[k]??k).toLowerCase()}`).join(' · ')}</p></>}
-      </div>)}</div><p className="mr-note">Uma marca por campanha, em ordem da fonte. TD = touchdown; FG = field goal. Uma única oportunidade não demonstra uma capacidade estável.</p>
-      <div className="mr-mark-readout" aria-live="polite">{selected?<><p>{selected.offense} contra {selected.defense} · Campanha {selected.fixedDrive} · {outcomes[selected.outcome]}.</p><p>Entrada demonstrada nas jogadas {selected.entryEvidence.map(e=>e.play_id).join(', ')}; desfecho na(s) jogada(s) {selected.outcomeEvidence.map(e=>e.play_id).join(', ')}.</p><p>ID {selected.id}</p></>:'Toque ou use Tab e Enter em uma campanha para consultar as evidências de entrada e desfecho.'}</div>
+      </div>)}</div>{!timelineMode&&<p className="mr-note">Uma marca por campanha, em ordem da fonte. TD = touchdown; FG = field goal. Uma única oportunidade não demonstra uma capacidade estável.</p>}
+      {timelineMode?<GameTimeline key={d.game.gameId} gameId={d.game.gameId}/>:<><GameTimeline gameId={d.game.gameId}/><div className="mr-mark-readout" aria-live="polite">{selected?<><p>{selected.offense} contra {selected.defense} · Campanha {selected.fixedDrive} · {outcomes[selected.outcome]}.</p><p>Entrada demonstrada nas jogadas {selected.entryEvidence.map(e=>e.play_id).join(', ')}; desfecho na(s) jogada(s) {selected.outcomeEvidence.map(e=>e.play_id).join(', ')}.</p><p>ID {selected.id}</p></>:'Toque ou use Tab e Enter em uma campanha para consultar as evidências de entrada e desfecho.'}</div></>}
     </>
-    {ranking&&<CampaignLegend outcomes={d.productions.filter(p=>ready(p.metrics.redZone)).flatMap(p=>p.redZoneCampaigns.map(u=>u.outcome))}/>}
+    {ranking&&!timelineMode&&<CampaignLegend outcomes={d.productions.filter(p=>ready(p.metrics.redZone)).flatMap(p=>p.redZoneCampaigns.map(u=>u.outcome))}/>}
     <Rule title="Quando uma campanha entra na red zone?"><p>Há posição observada antes de um evento de scrimmage a até 20 jardas da end zone, incluindo a linha de 20. Várias entradas não criam outra oportunidade na mesma campanha. Posição observada antes de ajoelhada também pode demonstrar entrada. TD de fora não cria entrada artificial.</p></Rule>
     <RedzoneEpaPanel gameId={d.game.gameId}/>
     <League reference={d.leagueReferences.redZone} family="redZone" participants={[d.game.away,d.game.home]}/>
