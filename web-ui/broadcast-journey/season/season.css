@@ -1,0 +1,14 @@
+/* The approved identity is reused. Seven weeks need wrapping, never squeezed tabs. */
+.season-seven .ht-weeks{flex-wrap:wrap;gap:.5rem}
+.season-seven .ht-weeks a{flex:1 1 7rem;min-width:0;display:block;line-height:1.3}
+.season-seven .ht-weeks a>span{display:block;margin-top:.35rem}
+.season-seven .ht-team-byes{margin:0;padding:1rem 1.5rem;background:#d5e0e5;color:#3e5665}
+.season-seven .mr-ratio.rp-result strong{overflow-wrap:anywhere;min-width:0}
+.season-seven .mr-production,.season-seven .mr-totals>div{min-width:0}
+.season-seven .mr-table-scroll,.season-seven pre{max-width:100%}
+@media(max-width:600px){.season-seven .ht-weeks a{flex-basis:calc(33.333% - .5rem);min-width:min(100%,6.5rem);padding:.75rem}.season-seven .ht-header{gap:1rem;flex-wrap:wrap}}
+
+/* Keep zero readable on asymmetric EPA domains, with the existing min/max labels. */
+.season-seven .mr-epa-axis{line-height:1.4;height:1.8em}
+.season-seven .mr-epa-axis[data-zero-split=true]{height:2.8em}
+.season-seven .mr-epa-axis[data-zero-split=true]>span[data-zero=true]{top:1.4em}

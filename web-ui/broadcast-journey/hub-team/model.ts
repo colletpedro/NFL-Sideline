@@ -24,7 +24,7 @@ export interface TeamProduction {
 }
 export interface TeamDocument {
  contractVersion:string;projectionVersion:string;scope:{team:string;season:number;phase:string;weeks:number[]};
- games:Entry[];productions:TeamProduction[];comparisons:Record<string,{sideBySide:Permission}>;
+ games:Entry[];byeWeeks?:number[];productions:TeamProduction[];comparisons:Record<string,{sideBySide:Permission}>;
  facts:{text:string;observationId:string;numerator:number;denominator:number;unitIds:string[];permission:Permission}[];
  definitions:{document:string};policy:{document:string;version:string};guarantees:Record<string,string>;sources:Record<string,string>;limitations:string[];
 }

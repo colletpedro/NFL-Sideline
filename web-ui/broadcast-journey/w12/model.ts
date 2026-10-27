@@ -17,7 +17,7 @@ export type Campaign = { id: string; gameId: string; offense: string; defense: s
 export type Epa = Metric & { foundation: Foundation; eligibleUnitIds: string[]; finiteEpaUnitIds: string[]; originalObservation: { observationId: string; subject: { team: string; role: string; foundation: Foundation }; values: { epa: { numerator: string; denominator: number } | null }; totals: { eligibleN: number; epaN: number; epaMissingN: number; epaNonfiniteN: number; epaSum: string }; presentation: { epaDecimals: number } } };
 export type Production = { offense: string; defense: string; label: string; gameId: string; metrics: { third: Metric & { observation: Third }; redZone: Metric & { observation: RedZone }; thirdLong: Metric }; epa: Epa[]; thirdAttempts: Attempt[]; redZoneCampaigns: Campaign[]; thirdDistanceByType: { distance: Attempt['distance']; kind: Attempt['kind']; numerator: number; denominator: number; unitIds: string[] }[] };
 export type Point = { team: string; perspective: string; observationId: string; numerator: number; denominator: number; ratio: { numerator: number; denominator: number } | null; status: Descriptor['status']; unitIds: string[]; includedInRateDistribution: boolean; reasonCodes: string[] };
-export type Reference = { season: number; phase: string; weeks: number[]; population: string; candidateTeams: string[]; representedTeams: string[]; inventory: Point[]; teamsWithoutRate: Point[]; teamRateDistribution: { points: Point[] }; pooledRate: { numerator: number; denominator: number; method: string }; permission: Permission; participantsIncluded: string[]; participantsIndependentOfReference: boolean };
+export type Reference = { season: number; phase: string; weeks: number[]; population: string; candidateTeams: string[]; byeTeams?:string[]; representedTeams: string[]; inventory: Point[]; teamsWithoutRate: Point[]; teamRateDistribution: { points: Point[] }; pooledRate: { numerator: number; denominator: number; method: string }; permission: Permission; participantsIncluded: string[]; participantsIndependentOfReference: boolean };
 export type Fact = { id: string; metric: 'third' | 'thirdLong' | 'redZone'; text: string; participants: string[]; scope: { season: number; phase: string; weeks: number[]; gameIds: string[] }; evidence: { observationId: string; numerator: number; denominator: number; unitIds: string[] }[]; permission: Permission; limitations: string[] };
 export type Comparison = { sideBySide: Permission; difference: Permission; differenceAminusB: Ratio | null };
 export interface Document {
@@ -96,11 +96,11 @@ export function sideAllowed(d: Document, family: Foundation | Family | 'thirdLon
   const ms = d.productions.map(p => family in p.metrics ? p.metrics[family as keyof Production['metrics']] : p.epa.find(e => e.foundation === family)!);
   return ms.every(m => permitted(m.display,'display',[m.descriptor.id])) && permitted(d.comparisons[family]?.sideBySide,'sideBySide',ms.map(m => m.descriptor.id));
 }
-export function linkedFacts(d: Document) {
+export function linkedFacts(d: Document, allowedWeeks: number[] = [1,2]) {
   return d.facts.filter(f => {
     if (!['third','thirdLong','redZone'].includes(f.metric)) return false;
     const ms = d.productions.map(p => p.metrics[f.metric]);
-    return f.scope.season === 2026 && f.scope.phase === 'REG' && period(f.scope.weeks) && equalIds(f.scope.gameIds,[d.game.gameId]) && f.scope.weeks[0]===d.game.weeks[0] &&
+    return f.scope.season === 2026 && f.scope.phase === 'REG' && f.scope.weeks.length===1 && allowedWeeks.includes(f.scope.weeks[0]) && equalIds(f.scope.gameIds,[d.game.gameId]) && f.scope.weeks[0]===d.game.weeks[0] &&
       equalIds(f.participants,d.game.offenses) && sideAllowed(d,f.metric) &&
       permitted(f.permission,'editorialFact',ms.map(m => m.descriptor.id)) && permitted(d.comparisons[f.metric].difference,'difference',ms.map(m => m.descriptor.id)) &&
       f.evidence.length === ms.length && f.evidence.every(e => ms.some(m => e.observationId === m.descriptor.id && e.numerator === m.descriptor.numerator && e.denominator === m.descriptor.denominator && equalIds(e.unitIds,m.descriptor.unitIds)));

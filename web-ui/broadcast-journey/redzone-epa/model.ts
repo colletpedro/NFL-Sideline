@@ -18,12 +18,12 @@ function equal(a:Rational,b:Rational) {return BigInt(a.numerator)*BigInt(b.denom
 function rational(v:Rational) {assert(v&&/^-?\d+$/.test(v.numerator)&&/^[1-9]\d*$/.test(v.denominator));}
 export function value(r:Reading) {return r.status==='AVAILABLE'&&r.mean?Number(r.mean.numerator)/Number(r.mean.denominator):null;}
 export function epaLabel(v:number) {const rounded=Math.round(Math.abs(v)*1000)/1000;return `${rounded===0?'':v>0?'+':'−'}${rounded.toFixed(3).replace('.',',')}`;}
-export function validateReading(r:Reading) {
+export function validateReading(r:Reading, allowedWeeks:number[] = [1,2]) {
  assert(r&&['AVAILABLE','NO_OPPORTUNITIES','INSUFFICIENT','SOURCE_ABSENT'].includes(r.status)&&Array.isArray(r.units));
  for(const n of [r.eligibleN,r.validN,r.missingN,r.nonfiniteN,r.ambiguityN,...Object.values(r.exclusions)])assert(Number.isSafeInteger(n)&&n>=0);
  assert(r.eligibleN===r.units.length&&r.validN+r.missingN+r.nonfiniteN===r.eligibleN&&new Set(r.units.map(u=>u.id)).size===r.units.length);
  rational(r.sum);let total:Rational={numerator:'0',denominator:'1'};let valid=0,missing=0,nonfinite=0;
- for(const u of r.units){assert(u.id===`${u.gameId}:${u.playId}`&&/^2026_0[12]_[A-Z]{2,3}_[A-Z]{2,3}$/.test(u.gameId)&&[1,2].includes(u.week)&&Number.isSafeInteger(u.playId)&&Number.isFinite(u.sourceOrder)&&u.yardline>0&&u.yardline<=20&&['pass','run'].includes(u.kind)&&typeof u.sack==='boolean'&&typeof u.scramble==='boolean');if(u.epaStatus==='VALID'){assert(typeof u.epa==='string');total=add(total,exact(u.epa));valid++;}else{assert(u.epa===null&&['MISSING','NONFINITE'].includes(u.epaStatus));if(u.epaStatus==='MISSING')missing++;else nonfinite++;}}
+ for(const u of r.units){assert(u.id===`${u.gameId}:${u.playId}`&&u.gameId===`2026_0${u.week}_${u.gameId.split('_')[2]}_${u.gameId.split('_')[3]}`&&/^2026_0[1-7]_[A-Z]{2,3}_[A-Z]{2,3}$/.test(u.gameId)&&allowedWeeks.includes(u.week)&&Number.isSafeInteger(u.playId)&&Number.isFinite(u.sourceOrder)&&u.yardline>0&&u.yardline<=20&&['pass','run'].includes(u.kind)&&typeof u.sack==='boolean'&&typeof u.scramble==='boolean');if(u.epaStatus==='VALID'){assert(typeof u.epa==='string');total=add(total,exact(u.epa));valid++;}else{assert(u.epa===null&&['MISSING','NONFINITE'].includes(u.epaStatus));if(u.epaStatus==='MISSING')missing++;else nonfinite++;}}
  assert(valid===r.validN&&missing===r.missingN&&nonfinite===r.nonfiniteN&&equal(total,r.sum));
  if(r.status==='AVAILABLE'){assert(r.ambiguityN===0&&valid>0&&r.mean);rational(r.mean);assert(equal(r.mean,norm(BigInt(total.numerator),BigInt(total.denominator)*BigInt(valid)))&&Number.isFinite(value(r)));}
  else assert(r.mean===null);

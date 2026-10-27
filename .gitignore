@@ -88,3 +88,7 @@ web-ui/ranking-redzone-dist/
 
 web-ui/redzone-epa-dist/
 /editorial/local-artifacts/broadcast-redzone-epa-v1/
+
+# Private seven-week source/projection and isolated build.
+/editorial/local-artifacts/broadcast-w1-7-v1/
+web-ui/season-dist/

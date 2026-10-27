@@ -1,0 +1,4 @@
+import {defineConfig} from 'vite';
+import react from '@vitejs/plugin-react';
+import {seasonBoundary} from './build/season';
+export default defineConfig(({command})=>({root:decodeURIComponent(new URL('./broadcast-journey',import.meta.url).pathname),cacheDir:decodeURIComponent(new URL('./node_modules/.vite-broadcast-season-v1',import.meta.url).pathname),envFile:false,envPrefix:[],publicDir:decodeURIComponent(new URL('./public',import.meta.url).pathname),plugins:[{name:'season-entry',transformIndexHtml:{order:'pre',handler:html=>html.replace('src="/main.tsx"','src="/season/main.tsx"')}},...(command==='serve'?[seasonBoundary(18109)]:[]),react()],server:{host:'127.0.0.1',port:18109,strictPort:true,cors:false,fs:{allow:[decodeURIComponent(new URL('.',import.meta.url).pathname)]}},build:{outDir:'../season-dist',emptyOutDir:true,copyPublicDir:false}}));

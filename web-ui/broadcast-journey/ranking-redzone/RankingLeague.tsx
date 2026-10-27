@@ -1,3 +1,4 @@
+import {usePresentation} from '../presentation';
 import {useId,useState} from 'react';
 import {Logo} from '../../broadcast-experience/TeamLogo';
 import {teamIdentity} from '../../broadcast-real/identity';
@@ -11,13 +12,15 @@ function Row({point:p,position,participant}:{point:Point;position?:number;partic
  </li>;
 }
 export function RankingLeague({reference:r,family,participants}:{reference:Reference;family:Family;participants:string[]}) {
+ const {weeks}=usePresentation();
  const [open,setOpen]=useState(false),id=useId(),points=r.teamRateDistribution.points;
  if(!permitted(r.permission,'leagueReference',points.map(p=>p.observationId)))return <p className="mr-unavailable">Referência da liga indisponível para esta operação.</p>;
  let positions:ReturnType<typeof observedPositions>;
- try{if(r.season!==2026||r.phase!=='REG'||r.weeks.length!==1||![1,2].includes(r.weeks[0])||participants.length!==2||new Set(participants).size!==2||participants.some(t=>!r.participantsIncluded.includes(t)||!r.inventory.some(p=>p.team===t)))throw new Error();positions=observedPositions(points);}catch{return <p className="mr-unavailable">Inventário incompatível com a classificação desta semana.</p>;}
+ try{if(r.season!==2026||r.phase!=='REG'||r.weeks.length!==1||!weeks.includes(r.weeks[0])||participants.length!==2||new Set(participants).size!==2||participants.some(t=>!r.participantsIncluded.includes(t)||!r.inventory.some(p=>p.team===t)))throw new Error();positions=observedPositions(points);}catch{return <p className="mr-unavailable">Inventário incompatível com a classificação desta semana.</p>;}
  const title=`${family==='third'?'Conversões de terceira':'TDs em campanhas de red zone'} — ataques na W${r.weeks[0]}`;
  return <div className="mr-league rp-league rr-ranking" role="group" aria-label={title} data-position-rule={POSITION_RULE}>
  <h3>{title}</h3><p className="mr-note">{r.season} {r.phase} · {points.length} times com taxa, de {r.candidateTeams.length} candidatos. {family==='third'?'Conversões / tentativas elegíveis.':'TDs ofensivos / campanhas que entraram nas 20.'}</p>
+ {r.byeTeams&&r.byeTeams.length>0&&<p className="mr-note">Folgas na W{r.weeks[0]}: {r.byeTeams.join(', ')}. Sem jogo, fora desta referência.</p>}
  <p className="mr-note">Posições pela taxa observada; taxas iguais compartilham posição.</p>
  <div data-ranking-scope="summary"><Axis/><ul className="rp-league-rows" aria-label="Participantes, em ordem visitante e casa">{participants.map(team=>{const row=positions.find(e=>e.point.team===team);return <Row key={team} point={row?.point??r.inventory.find(p=>p.team===team)!} position={row?.position} participant/>;})}</ul></div>
  <button type="button" className="rr-expand" aria-expanded={open} aria-controls={id} onClick={()=>setOpen(v=>!v)}><span className="rr-expand-label"><span className="rr-expand-measure" aria-hidden="true">Ver classificação completa — {points.length} times</span><span>{open?'Recolher classificação':`Ver classificação completa — ${points.length} times`}</span></span><span className="rr-expand-sign" aria-hidden="true">{open?'−':'+'}</span></button>
