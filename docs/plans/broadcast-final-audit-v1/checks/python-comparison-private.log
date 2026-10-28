@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.13, pytest-9.0.2, pluggy-1.6.0
+rootdir: /Users/pedrocollet/.codex/worktrees/broadcast-score-curve-v2/NFL Sideline/etl-pipeline
+configfile: pyproject.toml
+collected 26 items / 23 deselected / 3 selected
+
+etl-pipeline/tests/test_comparison_foundation.py ...                     [100%]
+
+====================== 3 passed, 23 deselected in 49.82s =======================

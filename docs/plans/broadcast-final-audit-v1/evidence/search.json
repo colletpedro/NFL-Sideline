@@ -1,0 +1,107 @@
+[
+  {
+    "empty": [],
+    "expanded": "true",
+    "options": [
+      "Time · Arizona Cardinals (ARI)\nVer time · W1–7",
+      "Time · Atlanta Falcons (ATL)\nVer time · W1–7",
+      "Time · Los Angeles Rams (LA)\nVer time · W1–7",
+      "Time · Los Angeles Chargers (LAC)\nVer time · W1–7",
+      "Partida · DEN × ARI\nDenver Broncos × Arizona Cardinals\nSemana 7 · 25 de outubro de 2026",
+      "Partida · LA × LV\nLos Angeles Rams × Las Vegas Raiders\nSemana 7 · 25 de outubro de 2026",
+      "Partida · SF × ATL\nSan Francisco 49ers × Atlanta Falcons\nSemana 7 · 25 de outubro de 2026",
+      "Partida · SF × LA\nSan Francisco 49ers × Los Angeles Rams\nSemana 1 · 10 de setembro de 2026"
+    ],
+    "overflow": false,
+    "term": "a"
+  },
+  {
+    "empty": [],
+    "expanded": "true",
+    "options": [
+      "Time · Baltimore Ravens (BAL)\nVer time · W1–7",
+      "Time · Buffalo Bills (BUF)\nVer time · W1–7",
+      "Time · Chicago Bears (CHI)\nVer time · W1–7",
+      "Time · Cincinnati Bengals (CIN)\nVer time · W1–7",
+      "Partida · NE × CHI\nNew England Patriots × Chicago Bears\nSemana 7 · 22 de outubro de 2026",
+      "Partida · CIN × BAL\nCincinnati Bengals × Baltimore Ravens\nSemana 7 · 25 de outubro de 2026",
+      "Partida · CLE × TEN\nCleveland Browns × Tennessee Titans\nSemana 7 · 25 de outubro de 2026",
+      "Partida · DEN × ARI\nDenver Broncos × Arizona Cardinals\nSemana 7 · 25 de outubro de 2026"
+    ],
+    "overflow": false,
+    "term": "b"
+  },
+  {
+    "empty": [],
+    "expanded": "true",
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Time · New Orleans Saints (NO)\nVer time · W1–7",
+      "Time · New York Giants (NYG)\nVer time · W1–7",
+      "Time · New York Jets (NYJ)\nVer time · W1–7",
+      "Partida · NE × CHI\nNew England Patriots × Chicago Bears\nSemana 7 · 22 de outubro de 2026",
+      "Partida · MIA × NYJ\nMiami Dolphins × New York Jets\nSemana 7 · 25 de outubro de 2026",
+      "Partida · NYG × HOU\nNew York Giants × Houston Texans\nSemana 7 · 25 de outubro de 2026",
+      "Partida · PIT × NO\nPittsburgh Steelers × New Orleans Saints\nSemana 7 · 25 de outubro de 2026"
+    ],
+    "overflow": false,
+    "term": "new"
+  },
+  {
+    "empty": [],
+    "expanded": "true",
+    "options": [
+      "Time · Baltimore Ravens (BAL)\nVer time · W1–7",
+      "Partida · CIN × BAL\nCincinnati Bengals × Baltimore Ravens\nSemana 7 · 25 de outubro de 2026",
+      "Partida · BAL × IND\nBaltimore Ravens × Indianapolis Colts\nSemana 1 · 13 de setembro de 2026",
+      "Partida · NO × BAL\nNew Orleans Saints × Baltimore Ravens\nSemana 2 · 20 de setembro de 2026",
+      "Partida · BAL × DAL\nBaltimore Ravens × Dallas Cowboys\nSemana 3 · 27 de setembro de 2026"
+    ],
+    "overflow": false,
+    "term": "BAL"
+  },
+  {
+    "empty": [],
+    "expanded": "true",
+    "options": [
+      "Time · New York Jets (NYJ)\nVer time · W1–7",
+      "Partida · MIA × NYJ\nMiami Dolphins × New York Jets\nSemana 7 · 25 de outubro de 2026",
+      "Partida · NYJ × TEN\nNew York Jets × Tennessee Titans\nSemana 1 · 13 de setembro de 2026",
+      "Partida · GB × NYJ\nGreen Bay Packers × New York Jets\nSemana 2 · 20 de setembro de 2026",
+      "Partida · NYJ × DET\nNew York Jets × Detroit Lions\nSemana 3 · 27 de setembro de 2026"
+    ],
+    "overflow": false,
+    "term": "NY Jets"
+  },
+  {
+    "empty": [],
+    "expanded": "true",
+    "options": [
+      "Time · Los Angeles Rams (LA)\nVer time · W1–7",
+      "Partida · LA × LV\nLos Angeles Rams × Las Vegas Raiders\nSemana 7 · 25 de outubro de 2026",
+      "Partida · SF × LA\nSan Francisco 49ers × Los Angeles Rams\nSemana 1 · 10 de setembro de 2026",
+      "Partida · NYG × LA\nNew York Giants × Los Angeles Rams\nSemana 2 · 21 de setembro de 2026",
+      "Partida · LA × DEN\nLos Angeles Rams × Denver Broncos\nSemana 3 · 27 de setembro de 2026"
+    ],
+    "overflow": false,
+    "term": "LAR"
+  },
+  {
+    "empty": [
+      "Nenhum time ou confronto encontrado. Tente outro nome ou sigla."
+    ],
+    "expanded": "true",
+    "options": [],
+    "overflow": false,
+    "term": "Pats"
+  },
+  {
+    "empty": [
+      "Nenhum time ou confronto encontrado. Tente outro nome ou sigla."
+    ],
+    "expanded": "true",
+    "options": [],
+    "overflow": false,
+    "term": "ZZZZ"
+  }
+]

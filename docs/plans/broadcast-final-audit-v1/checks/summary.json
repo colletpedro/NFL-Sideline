@@ -1,0 +1,15 @@
+{
+  "uniquePages": 146,
+  "desktop": 146,
+  "mobile320": 146,
+  "mobileText200": 146,
+  "totalRenderChecks": 438,
+  "invalidURLsRefused": 13,
+  "overtimeGames": 9,
+  "frontendTests": 370,
+  "pythonDistinctTests": 714,
+  "expectedLegacyFailures": 5,
+  "unexpectedConsoleErrorsBeforeFaultInjection": 0,
+  "sourceDivergences": 0,
+  "codeCommit": "7a70e60e9710c838a5a612aeb80b71e3cd6550ee"
+}

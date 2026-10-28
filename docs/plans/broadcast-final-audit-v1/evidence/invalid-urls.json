@@ -1,0 +1,80 @@
+[
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=1",
+    "url": "http://127.0.0.1:18111/?season=2025&week=1",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?season=2026&week=8",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=6",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_07_CIN_BAL&week=6",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?view=team-season&team=ZZZ",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?view=team-season&team=BAL&week=7",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?view=unknown",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_07_CIN_BAL&team=BAL",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?rank=week&season=2026&week=1",
+    "url": "http://127.0.0.1:18111/?week=1&rank=week&rank=season",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?foundation=invalid",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?game=2026_07_CIN_BAL",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?view=team-season&team=BAL&weeks=1,2",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?phase=POST",
+    "wrongMetrics": false
+  },
+  {
+    "alert": "Esta leitura não está disponívelFonte incompatível com o acervo 2026 REG W1–7. Nenhum outro recorte foi usado.Tentar carregar novamenteVoltar à semana",
+    "recoveryHref": "/?season=2026&week=7",
+    "url": "http://127.0.0.1:18111/?season=2026&season=2025",
+    "wrongMetrics": false
+  }
+]
