@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": 13,
+  "pointChecks": 676,
+  "source": "Independent sums from per-pass frozen JSON evidence; not frontend aggregation",
+  "tolerances": {
+    "coordinates": 1e-10,
+    "svgProjection": 1e-08,
+    "displayRounding": 0.00500001
+  },
+  "sameUnitAndDomainBothAxes": true,
+  "noCoordinateJitter": true,
+  "interceptionsKeptSeparate": true,
+  "zeroPassPresentation": "em dash; no rate",
+  "allCasesWithoutPageHorizontalOverflow": true
+}

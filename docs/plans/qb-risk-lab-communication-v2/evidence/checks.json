@@ -1,0 +1,9 @@
+{
+  "vitestPassedIncludingExpectedFailures": 392,
+  "ordinaryPassed": 387,
+  "expectedFailures": 5,
+  "skipped": 0,
+  "failed": 0,
+  "configuredLocalSources": true,
+  "legacyExpectationsUnchanged": true
+}
