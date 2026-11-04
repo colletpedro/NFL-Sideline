@@ -97,3 +97,6 @@ web-ui/story-dist/
 /editorial/local-artifacts/broadcast-season-timeline-v1/
 web-ui/curve-dist/
 /editorial/local-artifacts/broadcast-score-curve-v2/
+
+# Isolated laboratory build; never part of the approved public build.
+web-ui/risk-lab-dist/
