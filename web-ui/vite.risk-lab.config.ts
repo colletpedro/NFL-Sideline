@@ -5,6 +5,6 @@ import {storyBoundary} from './build/story';
 import {curveBoundary} from './build/curve';
 import {labExport} from './build/risk-lab-export';
 import {labBoundary} from './build/risk-lab';
-const port=18121;
+const port=18123;
 const store=process.env.NFL_RISK_LAB_STORE??'/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-risk-lab-v1';
 export default defineConfig(({command})=>({root:decodeURIComponent(new URL('./broadcast-journey',import.meta.url).pathname),cacheDir:decodeURIComponent(new URL('./node_modules/.vite-risk-lab',import.meta.url).pathname),envFile:false,envPrefix:[],publicDir:false,plugins:[{name:'risk-lab-entry',transformIndexHtml:{order:'pre',handler:html=>html.replace('src="/main.tsx"','src="/risk-lab/main.tsx"')}},...(command==='serve'?[labBoundary(store,port),curveBoundary(port),storyBoundary(port),seasonBoundary(port)]:[labExport(store)]),react()],server:{host:'127.0.0.1',port,strictPort:true,cors:false,fs:{allow:[decodeURIComponent(new URL('.',import.meta.url).pathname)]}},build:{outDir:'../risk-lab-dist',emptyOutDir:true,copyPublicDir:false}}));
