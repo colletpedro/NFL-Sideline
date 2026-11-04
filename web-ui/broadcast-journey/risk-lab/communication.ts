@@ -16,15 +16,15 @@ export function scatterLayout(players:Player[],scale:Scale,width:number,fontScal
  for(const seed of [...points].sort((a,b)=>b.y-a.y||a.player.id.localeCompare(b.player.id))){if(!remaining.delete(seed))continue;const members=[seed];for(const candidate of remaining)if(Math.hypot(seed.px-candidate.px,seed.py-candidate.py)<44){remaining.delete(candidate);members.push(candidate);}components.push(members);}
  const used:{left:number;top:number;width:number;height:number}[]=[];
  const intersects=(a:typeof used[number],b:typeof used[number])=>a.left<b.left+b.width+4&&a.left+a.width+4>b.left&&a.top<b.top+b.height+4&&a.top+a.height+4>b.top;
- const groups:Group[]=components.sort((a,b)=>Math.max(...b.map(p=>p.y))-Math.max(...a.map(p=>p.y))).map((members,i)=>{
+ const groups:Group[]=components.sort((a,b)=>Math.max(...b.map(p=>p.y))-Math.max(...a.map(p=>p.y))).map(members=>{
   members.sort((a,b)=>a.player.id.localeCompare(b.player.id));const anchorX=members.reduce((s,p)=>s+p.px,0)/members.length,anchorY=members.reduce((s,p)=>s+p.py,0)/members.length;
-  const label=members.length===1?shortName(members[0].player.name)+(members[0].player.teams.length>1?' · '+members[0].player.teams.join('/'):''):`#${i+1} · ${members.length} jogadores`;
-  const desiredWidth=width>=600?Math.max(110,label.length*7*fontScale+34):44,height=44;
-  function candidates(w:number){const result:{left:number;top:number;width:number;height:number}[]=[];for(let y=bounds.top;y<=bounds.top+bounds.size-height;y+=48)for(let x=4;x<=width-w-4;x+=w+8)result.push({left:x,top:y,width:w,height});return result.sort((a,b)=>Math.hypot(a.left+w/2-anchorX,a.top+22-anchorY)-Math.hypot(b.left+w/2-anchorX,b.top+22-anchorY));}
+  const label=members.length===1?shortName(members[0].player.name)+(members[0].player.teams.length>1?' · '+members[0].player.teams.join('/'):''):`${members.length} jogadores`;
+  const single=members.length===1,small=Math.max(44,Math.ceil(24*fontScale)),height=small,desiredWidth=single||width>=600?Math.min(width-8,Math.max(110,label.length*7*fontScale+34)):small;
+  function candidates(w:number){const result:{left:number;top:number;width:number;height:number}[]=[];for(let y=bounds.top;y<=bounds.top+bounds.size-height;y+=height+4)for(let x=4;x<=width-w-4;x+=w+8)result.push({left:x,top:y,width:w,height});return result.sort((a,b)=>Math.hypot(a.left+w/2-anchorX,a.top+height/2-anchorY)-Math.hypot(b.left+w/2-anchorX,b.top+height/2-anchorY));}
   function free(r:typeof used[number]){return !used.some(u=>intersects(r,u))&&!points.some(p=>p.px>r.left-5&&p.px<r.left+r.width+5&&p.py>r.top-5&&p.py<r.top+r.height+5);}
-  let rect=candidates(desiredWidth).find(free),compact=width<600;
-  if(!rect){rect=candidates(44).find(r=>!used.some(u=>intersects(r,u)));compact=true;}
-  if(!rect){const columns=Math.max(1,Math.floor((width-8)/48)),overflow=used.filter(r=>r.top>bounds.top+bounds.size).length;rect={left:4+(overflow%columns)*48,top:bounds.top+bounds.size+40+Math.floor(overflow/columns)*48,width:44,height};compact=true;}
-  used.push(rect);return {id:members[0].player.id,members,anchorX,anchorY,...rect,compact,label:compact?String(i+1):label};
+  let rect=candidates(desiredWidth).find(free),compact=width<600&&!single;
+  if(!rect&&!single){rect=candidates(small).find(r=>!used.some(u=>intersects(r,u)));compact=true;}
+  if(!rect){const top=Math.max(bounds.top+bounds.size+40,...used.filter(r=>r.top>bounds.top+bounds.size).map(r=>r.top+r.height+4));rect={left:4,top,width:single?desiredWidth:small,height};compact=!single;}
+  used.push(rect);return {id:members[0].player.id,members,anchorX,anchorY,...rect,compact,label:compact?String(members.length):label};
  });return {bounds,domain,points,groups,height:Math.max(bounds.top+bounds.size+32,...used.map(r=>r.top+r.height+8))};
 }
