@@ -1,0 +1,1280 @@
+{
+  "2022": {
+    "coverage": {
+      "eligible_games": 271,
+      "ftn_games": 284,
+      "ftn_weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "pbp_without_schedule": [],
+      "raw_games": 284,
+      "raw_rows": 49434,
+      "reg_games": 271,
+      "schedule_games": 271,
+      "schedule_without_pbp": []
+    },
+    "cross": {
+      "0.0": {
+        "0": 17025,
+        "1": 565
+      },
+      "1.0": {
+        "0": 42,
+        "1": 376
+      }
+    },
+    "date_pulled": {
+      "2024-09-06 23:50:14.696374+00:00": 39275,
+      "2024-10-10 01:13:42.148060+00:00": 2368
+    },
+    "eligible_before_identity": 18008,
+    "filter_nulls": {
+      "pass_attempt": 1493,
+      "play_deleted": 0,
+      "play_type": 1449,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1493,
+      "two_point_attempt": 1493
+    },
+    "filter_values": {
+      "pass_attempt": {
+        "0.0": 27483,
+        "1.0": 20458,
+        "nan": 1493
+      },
+      "play_deleted": {
+        "0.0": 49434
+      },
+      "play_type": {
+        "None": 1449,
+        "extra_point": 1253,
+        "field_goal": 1105,
+        "kickoff": 2835,
+        "no_play": 4563,
+        "pass": 20393,
+        "punt": 2294,
+        "qb_kneel": 442,
+        "qb_spike": 63,
+        "run": 15037
+      },
+      "qb_scramble": {
+        "0.0": 48411,
+        "1.0": 1023
+      },
+      "qb_spike": {
+        "0.0": 49371,
+        "1.0": 63
+      },
+      "sack": {
+        "0.0": 46585,
+        "1.0": 1356,
+        "nan": 1493
+      },
+      "two_point_attempt": {
+        "0.0": 47813,
+        "1.0": 128,
+        "nan": 1493
+      }
+    },
+    "flag_counts": {
+      "aborted_play": 0,
+      "incomplete_pass": 5985,
+      "is_throw_away": 684,
+      "overtime": 163,
+      "penalty": 225,
+      "unknown_receiver": 702
+    },
+    "ftn_outside_eligible_by_reason": {
+      "eligible": 18008,
+      "not_sack": 1297,
+      "not_two_point": 19,
+      "pass_type": 20418,
+      "regular_season": 1901
+    },
+    "ftn_worthy_outside_eligible_by_reason": {
+      "eligible": 941,
+      "not_sack": 6,
+      "pass_type": 68,
+      "regular_season": 45
+    },
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 49434,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2277,
+        "remaining": 47157,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47157,
+        "stage": "window_W1_W7_for_2026"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47157,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 27764,
+        "remaining": 19393,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 19393,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1297,
+        "remaining": 18096,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18096,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18096,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 88,
+        "remaining": 18008,
+        "stage": "not_two_point"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18008,
+        "stage": "identified_passer"
+      }
+    ],
+    "independent": {
+      "groups": {
+        "cross": 4,
+        "game": 271,
+        "qb": 106,
+        "season": 1,
+        "week": 18
+      },
+      "method": "Independent SQLite WHERE / LEFT JOIN / GROUP BY from raw PBP and FTN, exact keys/labels/INT + season/week/game/QB/cross",
+      "passed": true,
+      "rows": 18008
+    },
+    "missing_passer": 0,
+    "null_labels": 0,
+    "nulls": {
+      "aborted_play": 0,
+      "air_yards": 1,
+      "complete_pass": 0,
+      "defteam": 0,
+      "down": 0,
+      "game_date": 0,
+      "game_id": 0,
+      "game_seconds_remaining": 0,
+      "game_stadium": 0,
+      "incomplete_pass": 0,
+      "interception": 0,
+      "is_interception_worthy": 0,
+      "is_throw_away": 0,
+      "passer_player_id": 0,
+      "passer_player_name": 0,
+      "penalty": 0,
+      "penalty_type": 17783,
+      "play_id": 0,
+      "posteam": 0,
+      "qtr": 0,
+      "quarter_seconds_remaining": 0,
+      "receiver_player_id": 702,
+      "roof": 0,
+      "score_differential": 0,
+      "season": 0,
+      "season_type": 0,
+      "stadium_id": 0,
+      "temp": 11780,
+      "week": 0,
+      "wind": 11780,
+      "yardline_100": 0,
+      "ydstogo": 0
+    },
+    "read_thrown_eligible": {
+      " CHK": 1,
+      "1": 9303,
+      "2": 2845,
+      "CHK": 2580,
+      "DES": 1653,
+      "None": 379,
+      "SD": 1247
+    },
+    "read_thrown_raw": {
+      " CHK": 1,
+      "1": 10274,
+      "2": 3112,
+      "CHK": 2802,
+      "DES": 1838,
+      "None": 22116,
+      "SD": 1500
+    },
+    "source_join": {
+      "both": 41643,
+      "left_only": 0,
+      "right_only": 7791
+    },
+    "target": {
+      "interceptions": 418,
+      "n": 18008,
+      "prevalence": 0.05225455353176366,
+      "worthy": 941
+    },
+    "unmatched": 0
+  },
+  "2023": {
+    "coverage": {
+      "eligible_games": 272,
+      "ftn_games": 285,
+      "ftn_weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "pbp_without_schedule": [],
+      "raw_games": 285,
+      "raw_rows": 49665,
+      "reg_games": 272,
+      "schedule_games": 272,
+      "schedule_without_pbp": []
+    },
+    "cross": {
+      "0.0": {
+        "0": 17455,
+        "1": 363
+      },
+      "1.0": {
+        "0": 55,
+        "1": 375
+      }
+    },
+    "date_pulled": {
+      "2024-09-06 23:50:14.696374+00:00": 48225
+    },
+    "eligible_before_identity": 18248,
+    "filter_nulls": {
+      "pass_attempt": 1488,
+      "play_deleted": 0,
+      "play_type": 1452,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1488,
+      "two_point_attempt": 1488
+    },
+    "filter_values": {
+      "pass_attempt": {
+        "0.0": 27380,
+        "1.0": 20797,
+        "nan": 1488
+      },
+      "play_deleted": {
+        "0.0": 49665
+      },
+      "play_type": {
+        "None": 1452,
+        "extra_point": 1238,
+        "field_goal": 1107,
+        "kickoff": 2838,
+        "no_play": 4555,
+        "pass": 20723,
+        "punt": 2352,
+        "qb_kneel": 454,
+        "qb_spike": 69,
+        "run": 14877
+      },
+      "qb_scramble": {
+        "0.0": 48483,
+        "1.0": 1182
+      },
+      "qb_spike": {
+        "0.0": 49595,
+        "1.0": 70
+      },
+      "sack": {
+        "0.0": 46718,
+        "1.0": 1459,
+        "nan": 1488
+      },
+      "two_point_attempt": {
+        "0.0": 48045,
+        "1.0": 132,
+        "nan": 1488
+      }
+    },
+    "flag_counts": {
+      "aborted_play": 1,
+      "incomplete_pass": 6010,
+      "is_throw_away": 744,
+      "overtime": 84,
+      "penalty": 241,
+      "unknown_receiver": 765
+    },
+    "ftn_outside_eligible_by_reason": {
+      "eligible": 18248,
+      "not_sack": 1410,
+      "not_two_point": 77,
+      "pass_type": 26290,
+      "regular_season": 2200
+    },
+    "ftn_worthy_outside_eligible_by_reason": {
+      "eligible": 738,
+      "not_sack": 4,
+      "not_two_point": 5,
+      "pass_type": 34,
+      "regular_season": 40
+    },
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 49665,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2266,
+        "remaining": 47399,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47399,
+        "stage": "window_W1_W7_for_2026"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47399,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 27664,
+        "remaining": 19735,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 19735,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1410,
+        "remaining": 18325,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18325,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18325,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 77,
+        "remaining": 18248,
+        "stage": "not_two_point"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18248,
+        "stage": "identified_passer"
+      }
+    ],
+    "independent": {
+      "groups": {
+        "cross": 4,
+        "game": 272,
+        "qb": 104,
+        "season": 1,
+        "week": 18
+      },
+      "method": "Independent SQLite WHERE / LEFT JOIN / GROUP BY from raw PBP and FTN, exact keys/labels/INT + season/week/game/QB/cross",
+      "passed": true,
+      "rows": 18248
+    },
+    "missing_passer": 0,
+    "null_labels": 0,
+    "nulls": {
+      "aborted_play": 0,
+      "air_yards": 1,
+      "complete_pass": 0,
+      "defteam": 0,
+      "down": 0,
+      "game_date": 0,
+      "game_id": 0,
+      "game_seconds_remaining": 0,
+      "game_stadium": 0,
+      "incomplete_pass": 0,
+      "interception": 0,
+      "is_interception_worthy": 0,
+      "is_throw_away": 0,
+      "passer_player_id": 0,
+      "passer_player_name": 0,
+      "penalty": 0,
+      "penalty_type": 18007,
+      "play_id": 0,
+      "posteam": 0,
+      "qtr": 0,
+      "quarter_seconds_remaining": 0,
+      "receiver_player_id": 765,
+      "roof": 0,
+      "score_differential": 0,
+      "season": 0,
+      "season_type": 0,
+      "stadium_id": 0,
+      "temp": 8323,
+      "week": 0,
+      "wind": 8323,
+      "yardline_100": 0,
+      "ydstogo": 0
+    },
+    "read_thrown_eligible": {
+      "0": 479,
+      "1": 9234,
+      "2": 2184,
+      "CHK": 2906,
+      "DES": 1966,
+      "SD": 1479
+    },
+    "read_thrown_raw": {
+      "0": 28053,
+      "1": 10323,
+      "2": 2404,
+      "CHK": 3163,
+      "DES": 2141,
+      "SD": 2141
+    },
+    "source_join": {
+      "both": 48225,
+      "left_only": 0,
+      "right_only": 1440
+    },
+    "target": {
+      "interceptions": 430,
+      "n": 18248,
+      "prevalence": 0.040442788250767206,
+      "worthy": 738
+    },
+    "unmatched": 0
+  },
+  "2024": {
+    "coverage": {
+      "eligible_games": 272,
+      "ftn_games": 285,
+      "ftn_weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "pbp_without_schedule": [],
+      "raw_games": 285,
+      "raw_rows": 49492,
+      "reg_games": 272,
+      "schedule_games": 272,
+      "schedule_without_pbp": []
+    },
+    "cross": {
+      "0.0": {
+        "0": 17095,
+        "1": 258
+      },
+      "1.0": {
+        "0": 54,
+        "1": 333
+      }
+    },
+    "date_pulled": {
+      "2024-11-13 12:29:59.804046+00:00": 2328,
+      "2024-11-20 12:31:36.648663+00:00": 2354,
+      "2024-11-26 18:22:36.620539+00:00": 2380,
+      "2024-11-27 06:23:14.957069+00:00": 2224,
+      "2024-11-30 12:29:28.171890+00:00": 337,
+      "2024-11-30 18:20:38.538033+00:00": 2395,
+      "2024-12-04 12:33:01.213874+00:00": 698,
+      "2024-12-04 17:58:56.579735+00:00": 2066,
+      "2024-12-11 12:34:06.427354+00:00": 2205,
+      "2024-12-18 15:07:39.373595+00:00": 2699,
+      "2024-12-25 12:29:04.618223+00:00": 2523,
+      "2024-12-26 18:20:30.862365+00:00": 160,
+      "2025-01-01 18:20:03.478556+00:00": 2684,
+      "2025-01-08 06:22:36.731595+00:00": 2702,
+      "2025-01-15 18:20:18.475677+00:00": 787,
+      "2025-01-21 18:20:48.069051+00:00": 828,
+      "2025-02-05 01:09:28.034513+00:00": 366,
+      "2025-09-01 01:29:30.123782+00:00": 18295
+    },
+    "eligible_before_identity": 17740,
+    "filter_nulls": {
+      "pass_attempt": 1517,
+      "play_deleted": 0,
+      "play_type": 1446,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1517,
+      "two_point_attempt": 1517
+    },
+    "filter_values": {
+      "pass_attempt": {
+        "0.0": 27893,
+        "1.0": 20082,
+        "nan": 1517
+      },
+      "play_deleted": {
+        "0.0": 49492
+      },
+      "play_type": {
+        "None": 1446,
+        "extra_point": 1308,
+        "field_goal": 1166,
+        "kickoff": 2955,
+        "no_play": 4936,
+        "pass": 20007,
+        "punt": 2119,
+        "qb_kneel": 437,
+        "qb_spike": 75,
+        "run": 15043
+      },
+      "qb_scramble": {
+        "0.0": 48281,
+        "1.0": 1211
+      },
+      "qb_spike": {
+        "0.0": 49413,
+        "1.0": 79
+      },
+      "sack": {
+        "0.0": 46583,
+        "1.0": 1392,
+        "nan": 1517
+      },
+      "two_point_attempt": {
+        "0.0": 47827,
+        "1.0": 148,
+        "nan": 1517
+      }
+    },
+    "flag_counts": {
+      "aborted_play": 2,
+      "incomplete_pass": 5724,
+      "is_throw_away": 701,
+      "overtime": 78,
+      "penalty": 230,
+      "unknown_receiver": 727
+    },
+    "ftn_outside_eligible_by_reason": {
+      "eligible": 17740,
+      "not_sack": 1314,
+      "not_two_point": 99,
+      "pass_type": 26727,
+      "regular_season": 2151
+    },
+    "ftn_worthy_outside_eligible_by_reason": {
+      "eligible": 591,
+      "not_two_point": 5,
+      "pass_type": 32,
+      "regular_season": 31
+    },
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 49492,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2218,
+        "remaining": 47274,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47274,
+        "stage": "window_W1_W7_for_2026"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47274,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 28121,
+        "remaining": 19153,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 19153,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1314,
+        "remaining": 17839,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17839,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17839,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 99,
+        "remaining": 17740,
+        "stage": "not_two_point"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17740,
+        "stage": "identified_passer"
+      }
+    ],
+    "independent": {
+      "groups": {
+        "cross": 4,
+        "game": 272,
+        "qb": 103,
+        "season": 1,
+        "week": 18
+      },
+      "method": "Independent SQLite WHERE / LEFT JOIN / GROUP BY from raw PBP and FTN, exact keys/labels/INT + season/week/game/QB/cross",
+      "passed": true,
+      "rows": 17740
+    },
+    "missing_passer": 0,
+    "null_labels": 0,
+    "nulls": {
+      "aborted_play": 0,
+      "air_yards": 0,
+      "complete_pass": 0,
+      "defteam": 0,
+      "down": 0,
+      "game_date": 0,
+      "game_id": 0,
+      "game_seconds_remaining": 0,
+      "game_stadium": 0,
+      "incomplete_pass": 0,
+      "interception": 0,
+      "is_interception_worthy": 0,
+      "is_throw_away": 0,
+      "passer_player_id": 0,
+      "passer_player_name": 0,
+      "penalty": 0,
+      "penalty_type": 17510,
+      "play_id": 0,
+      "posteam": 0,
+      "qtr": 0,
+      "quarter_seconds_remaining": 0,
+      "receiver_player_id": 727,
+      "roof": 0,
+      "score_differential": 0,
+      "season": 0,
+      "season_type": 0,
+      "stadium_id": 0,
+      "temp": 6556,
+      "week": 0,
+      "wind": 6556,
+      "yardline_100": 0,
+      "ydstogo": 0
+    },
+    "read_thrown_eligible": {
+      "0": 536,
+      "1": 9697,
+      "2": 1485,
+      "CHK": 2522,
+      "DES": 2022,
+      "SD": 1478
+    },
+    "read_thrown_raw": {
+      "0": 28534,
+      "1": 10758,
+      "2": 1679,
+      "CHK": 2737,
+      "DES": 2213,
+      "SD": 2110
+    },
+    "source_join": {
+      "both": 48031,
+      "left_only": 0,
+      "right_only": 1461
+    },
+    "target": {
+      "interceptions": 387,
+      "n": 17740,
+      "prevalence": 0.03331454340473506,
+      "worthy": 591
+    },
+    "unmatched": 0
+  },
+  "2025": {
+    "coverage": {
+      "eligible_games": 272,
+      "ftn_games": 285,
+      "ftn_weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "pbp_without_schedule": [],
+      "raw_games": 285,
+      "raw_rows": 48771,
+      "reg_games": 272,
+      "schedule_games": 272,
+      "schedule_without_pbp": []
+    },
+    "cross": {
+      "0.0": {
+        "0": 16730,
+        "1": 248
+      },
+      "1.0": {
+        "0": 75,
+        "1": 305
+      }
+    },
+    "date_pulled": {
+      "2026-09-22 20:52:46.111704+00:00": 15537,
+      "2026-09-22 23:02:14.004171+00:00": 16763,
+      "2026-09-23 03:14:20.088255+00:00": 15016
+    },
+    "eligible_before_identity": 17358,
+    "filter_nulls": {
+      "pass_attempt": 1511,
+      "play_deleted": 0,
+      "play_type": 1445,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1511,
+      "two_point_attempt": 1511
+    },
+    "filter_values": {
+      "pass_attempt": {
+        "0.0": 27441,
+        "1.0": 19819,
+        "nan": 1511
+      },
+      "play_deleted": {
+        "0.0": 48771
+      },
+      "play_type": {
+        "None": 1445,
+        "extra_point": 1330,
+        "field_goal": 1140,
+        "kickoff": 2927,
+        "no_play": 4723,
+        "pass": 19737,
+        "punt": 2042,
+        "qb_kneel": 452,
+        "qb_spike": 80,
+        "run": 14895
+      },
+      "qb_scramble": {
+        "0.0": 47550,
+        "1.0": 1221
+      },
+      "qb_spike": {
+        "0.0": 48689,
+        "1.0": 82
+      },
+      "sack": {
+        "0.0": 45908,
+        "1.0": 1352,
+        "nan": 1511
+      },
+      "two_point_attempt": {
+        "0.0": 47130,
+        "1.0": 130,
+        "nan": 1511
+      }
+    },
+    "flag_counts": {
+      "aborted_play": 0,
+      "incomplete_pass": 5761,
+      "is_throw_away": 722,
+      "overtime": 101,
+      "penalty": 251,
+      "unknown_receiver": 749
+    },
+    "ftn_outside_eligible_by_reason": {
+      "eligible": 17358,
+      "not_sack": 1287,
+      "not_two_point": 96,
+      "pass_type": 26323,
+      "regular_season": 2252
+    },
+    "ftn_worthy_outside_eligible_by_reason": {
+      "eligible": 553,
+      "not_two_point": 6,
+      "pass_type": 25,
+      "regular_season": 36
+    },
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 48771,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2319,
+        "remaining": 46452,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 46452,
+        "stage": "window_W1_W7_for_2026"
+      },
+      {
+        "excluded": 0,
+        "remaining": 46452,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 27711,
+        "remaining": 18741,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18741,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1287,
+        "remaining": 17454,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17454,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17454,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 96,
+        "remaining": 17358,
+        "stage": "not_two_point"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17358,
+        "stage": "identified_passer"
+      }
+    ],
+    "independent": {
+      "groups": {
+        "cross": 4,
+        "game": 272,
+        "qb": 95,
+        "season": 1,
+        "week": 18
+      },
+      "method": "Independent SQLite WHERE / LEFT JOIN / GROUP BY from raw PBP and FTN, exact keys/labels/INT + season/week/game/QB/cross",
+      "passed": true,
+      "rows": 17358
+    },
+    "missing_passer": 0,
+    "null_labels": 0,
+    "nulls": {
+      "aborted_play": 0,
+      "air_yards": 0,
+      "complete_pass": 0,
+      "defteam": 0,
+      "down": 0,
+      "game_date": 0,
+      "game_id": 0,
+      "game_seconds_remaining": 0,
+      "game_stadium": 0,
+      "incomplete_pass": 0,
+      "interception": 0,
+      "is_interception_worthy": 0,
+      "is_throw_away": 0,
+      "passer_player_id": 0,
+      "passer_player_name": 0,
+      "penalty": 0,
+      "penalty_type": 17107,
+      "play_id": 0,
+      "posteam": 0,
+      "qtr": 0,
+      "quarter_seconds_remaining": 0,
+      "receiver_player_id": 749,
+      "roof": 0,
+      "score_differential": 0,
+      "season": 0,
+      "season_type": 0,
+      "stadium_id": 0,
+      "temp": 6317,
+      "week": 0,
+      "wind": 6317,
+      "yardline_100": 0,
+      "ydstogo": 0
+    },
+    "read_thrown_eligible": {
+      "0": 367,
+      "1": 9736,
+      "2": 1936,
+      "CHK": 2313,
+      "DES": 1714,
+      "SD": 1292
+    },
+    "read_thrown_raw": {
+      "0": 27193,
+      "1": 10877,
+      "2": 2189,
+      "CHK": 2539,
+      "DES": 1863,
+      "SD": 2655
+    },
+    "source_join": {
+      "both": 47316,
+      "left_only": 0,
+      "right_only": 1455
+    },
+    "target": {
+      "interceptions": 380,
+      "n": 17358,
+      "prevalence": 0.031858509044820835,
+      "worthy": 553
+    },
+    "unmatched": 0
+  },
+  "2026": {
+    "coverage": {
+      "eligible_games": 107,
+      "ftn_games": 121,
+      "ftn_weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "pbp_without_schedule": [],
+      "raw_games": 107,
+      "raw_rows": 18738,
+      "reg_games": 107,
+      "schedule_games": 107,
+      "schedule_without_pbp": []
+    },
+    "cross": {
+      "0.0": {
+        "0": 6864,
+        "1": 96
+      },
+      "1.0": {
+        "0": 23,
+        "1": 123
+      }
+    },
+    "date_pulled": {
+      "2026-10-05 17:01:53.262414+00:00": 2649,
+      "2026-10-22 03:12:31.260896+00:00": 2466,
+      "2026-10-28 17:01:40.677052+00:00": 8114,
+      "2026-10-29 12:15:49.245516+00:00": 2287,
+      "2026-11-01 12:01:32.054643+00:00": 2675,
+      "2026-11-04 06:01:28.262249+00:00": 2381
+    },
+    "eligible_before_identity": 7106,
+    "filter_nulls": {
+      "pass_attempt": 565,
+      "play_deleted": 0,
+      "play_type": 547,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 565,
+      "two_point_attempt": 565
+    },
+    "filter_values": {
+      "pass_attempt": {
+        "0.0": 10507,
+        "1.0": 7666,
+        "nan": 565
+      },
+      "play_deleted": {
+        "0.0": 18738
+      },
+      "play_type": {
+        "None": 547,
+        "extra_point": 495,
+        "field_goal": 447,
+        "kickoff": 1099,
+        "no_play": 1970,
+        "pass": 7627,
+        "punt": 799,
+        "qb_kneel": 163,
+        "qb_spike": 39,
+        "run": 5552
+      },
+      "qb_scramble": {
+        "0.0": 18312,
+        "1.0": 426
+      },
+      "qb_spike": {
+        "0.0": 18699,
+        "1.0": 39
+      },
+      "sack": {
+        "0.0": 17693,
+        "1.0": 480,
+        "nan": 565
+      },
+      "two_point_attempt": {
+        "0.0": 18125,
+        "1.0": 48,
+        "nan": 565
+      }
+    },
+    "flag_counts": {
+      "aborted_play": 1,
+      "incomplete_pass": 2379,
+      "is_throw_away": 318,
+      "overtime": 71,
+      "penalty": 107,
+      "unknown_receiver": 302
+    },
+    "ftn_outside_eligible_by_reason": {
+      "eligible": 7106,
+      "not_in_frozen_PBP": 2381,
+      "not_sack": 480,
+      "not_two_point": 41,
+      "pass_type": 10564
+    },
+    "ftn_worthy_outside_eligible_by_reason": {
+      "eligible": 219,
+      "not_in_frozen_PBP": 26,
+      "pass_type": 19
+    },
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 18738,
+        "stage": "raw"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18738,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18738,
+        "stage": "window_W1_W7_for_2026"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18738,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 11111,
+        "remaining": 7627,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 7627,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 480,
+        "remaining": 7147,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 7147,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 7147,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 41,
+        "remaining": 7106,
+        "stage": "not_two_point"
+      },
+      {
+        "excluded": 0,
+        "remaining": 7106,
+        "stage": "identified_passer"
+      }
+    ],
+    "independent": {
+      "groups": {
+        "cross": 4,
+        "game": 107,
+        "qb": 62,
+        "season": 1,
+        "week": 7
+      },
+      "method": "Independent SQLite WHERE / LEFT JOIN / GROUP BY from raw PBP and FTN, exact keys/labels/INT + season/week/game/QB/cross",
+      "passed": true,
+      "rows": 7106
+    },
+    "missing_passer": 0,
+    "null_labels": 0,
+    "nulls": {
+      "aborted_play": 0,
+      "air_yards": 0,
+      "complete_pass": 0,
+      "defteam": 0,
+      "down": 0,
+      "game_date": 0,
+      "game_id": 0,
+      "game_seconds_remaining": 0,
+      "game_stadium": 0,
+      "incomplete_pass": 0,
+      "interception": 0,
+      "is_interception_worthy": 0,
+      "is_throw_away": 0,
+      "passer_player_id": 0,
+      "passer_player_name": 0,
+      "penalty": 0,
+      "penalty_type": 6999,
+      "play_id": 0,
+      "posteam": 0,
+      "qtr": 0,
+      "quarter_seconds_remaining": 0,
+      "receiver_player_id": 302,
+      "roof": 0,
+      "score_differential": 0,
+      "season": 0,
+      "season_type": 0,
+      "stadium_id": 0,
+      "temp": 4186,
+      "week": 0,
+      "wind": 4186,
+      "yardline_100": 0,
+      "ydstogo": 0
+    },
+    "read_thrown_eligible": {
+      "0": 126,
+      "1": 3892,
+      "2": 909,
+      "CHK": 903,
+      "DES": 715,
+      "SD": 561
+    },
+    "read_thrown_raw": {
+      "0": 11730,
+      "1": 4630,
+      "2": 1078,
+      "CHK": 1092,
+      "DES": 846,
+      "SD": 1196
+    },
+    "source_join": {
+      "both": 18191,
+      "left_only": 2381,
+      "right_only": 547
+    },
+    "target": {
+      "interceptions": 146,
+      "n": 7106,
+      "prevalence": 0.030819026175063328,
+      "worthy": 219
+    },
+    "unmatched": 0
+  }
+}
