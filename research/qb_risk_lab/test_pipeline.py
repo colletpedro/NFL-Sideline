@@ -52,6 +52,7 @@ def test_population_penalty_attempt_and_exclusions(frames):
  for col,val in [('play_type','no_play'),('sack',1),('qb_scramble',1),('qb_spike',1),('play_deleted',1),('two_point_attempt',1),('pass_attempt',0)]:
   changed=row.copy();changed[col]=val;assert not p.eligible(changed).any()
  row['week']=9;assert p.eligible(row).all() # explicit replacement of old window
+ frames[0].loc[0,'qtr']=5;assert build(frames)[0]['summary']['passes']==3 # overtime retained
 
 def test_zero_events_and_zero_denominator():
  empty=p.aggregate([]);assert empty['per100'] is None and empty['observedRate'] is None
