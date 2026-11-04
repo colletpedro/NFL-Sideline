@@ -99,6 +99,10 @@ def main():
  elif args.command=='evaluate': evaluate(args.build,args.development,args.out)
  elif args.command=='apply': apply(args.build,args.development,args.out)
  else:
-  # Replay frozen choices/models; no re-selection after seeing the final test.
-  root=destination(args.out); build(args.store,root/'build'); evaluate(root/'build',args.development,root/'evaluation'); apply(root/'build',args.development,root/'application')
+  # Reproduce the predetermined development procedure; refuse any departure from the pre-test freeze.
+  root=destination(args.out); build(args.store,root/'build'); develop(root/'build',root/'development')
+  if sha(root/'development/frozen_config.json')!=sha(args.development/'frozen_config.json'): raise ValueError('Reproduction differs from pre-test frozen config/model hashes; no new test evaluation')
+  evaluate(root/'build',root/'development',root/'evaluation'); apply(root/'build',root/'development',root/'application')
+  from plots import plots
+  plots(root/'evaluation',root/'application',root/'figures')
 if __name__=='__main__': main()

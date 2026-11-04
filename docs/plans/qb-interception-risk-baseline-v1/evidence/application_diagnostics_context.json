@@ -1,0 +1,96 @@
+{
+  "calibration": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.018528522396847494,
+      "n": 4,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.48990002040399916,
+      "wilson_low": 0.0
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.027121262234491867,
+      "n": 1349,
+      "observed_rate": 0.02446256486286138,
+      "positives": 33,
+      "wilson_high": 0.034154949733693846,
+      "wilson_low": 0.017470902102914382
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.034943305086862664,
+      "n": 2937,
+      "observed_rate": 0.02519577800476677,
+      "positives": 74,
+      "wilson_high": 0.03151412334354087,
+      "wilson_low": 0.02011789927202605
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.04424409814209868,
+      "n": 1833,
+      "observed_rate": 0.03600654664484452,
+      "positives": 66,
+      "wilson_high": 0.04555219874590238,
+      "wilson_low": 0.028401701252878143
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.05762287975662808,
+      "n": 858,
+      "observed_rate": 0.04312354312354312,
+      "positives": 37,
+      "wilson_high": 0.05887420439111647,
+      "wilson_low": 0.03144587298737163
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.0866432671130559,
+      "n": 73,
+      "observed_rate": 0.0136986301369863,
+      "positives": 1,
+      "wilson_high": 0.0735991326912731,
+      "wilson_low": 0.0024221890927605197
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.11538773606667442,
+      "n": 51,
+      "observed_rate": 0.13725490196078433,
+      "positives": 7,
+      "wilson_high": 0.25721952342631627,
+      "wilson_low": 0.06811015331542726
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": 0.15043323654003796,
+      "n": 1,
+      "observed_rate": 1.0,
+      "positives": 1,
+      "wilson_high": 1.0,
+      "wilson_low": 0.20654329147389294
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "metrics_descriptive_only": {
+    "brier": 0.02984316969838219,
+    "expected": 282.18921288487985,
+    "log_loss": 0.13734305368853172,
+    "mean_probability": 0.03971140063113986,
+    "n": 7106,
+    "positives": 219,
+    "pr_auc_average_precision": 0.05282409165714033,
+    "prevalence": 0.030819026175063328,
+    "roc_auc": 0.5780969770986697
+  }
+}

@@ -1,0 +1,179 @@
+season,stadium_id,game_stadium,roof,n,games,wind_present,temp_present
+2022,ATL97,Mercedes-Benz Stadium,closed,349,6,0,0
+2022,ATL97,Mercedes-Benz Stadium,open,175,3,0,0
+2022,BAL00,M&T Bank Stadium,outdoors,475,8,221,221
+2022,BOS00,Gillette Stadium,outdoors,500,8,334,334
+2022,BUF00,New Era Field,outdoors,515,7,308,308
+2022,CAR00,Bank of America Stadium,outdoors,543,9,207,207
+2022,CHI98,Soldier Field,outdoors,475,9,332,332
+2022,CIN00,Paycor Stadium,outdoors,492,7,278,278
+2022,CLE00,FirstEnergy Stadium,outdoors,523,8,241,241
+2022,DAL00,AT&T Stadium,closed,523,8,0,0
+2022,DAL00,AT&T Stadium,open,51,1,0,0
+2022,DEN00,Empower Field at Mile High,outdoors,566,8,284,284
+2022,DET00,Ford Field,dome,713,10,0,0
+2022,GER00,Allianz Arena,outdoors,63,1,0,0
+2022,GNB00,Lambeau Field,outdoors,462,8,307,307
+2022,HOU00,NRG Stadium,closed,514,8,0,0
+2022,IND00,Lucas Oil Stadium,closed,308,5,0,0
+2022,IND00,Lucas Oil Stadium,open,211,3,0,0
+2022,JAX00,TIAA Bank Stadium,outdoors,472,7,268,268
+2022,KAN00,GEHA Field at Arrowhead Stadium,outdoors,609,8,373,373
+2022,LAX01,SoFi Stadium,dome,1140,17,0,0
+2022,LON00,Wembley Stadium,outdoors,60,1,0,0
+2022,LON02,Tottenham Stadium,outdoors,133,2,0,0
+2022,MEX00,Azteca Stadium,outdoors,73,1,0,0
+2022,MIA00,Hard Rock Stadium,outdoors,574,8,274,274
+2022,MIN01,U.S. Bank Stadium,dome,697,9,0,0
+2022,NAS00,Nissan Stadium,outdoors,553,8,364,364
+2022,NOR00,Mercedes-Benz Superdome,dome,459,8,0,0
+2022,NYC01,MetLife Stadium,outdoors,1094,17,558,558
+2022,PHI00,Lincoln Financial Field,outdoors,562,9,304,304
+2022,PHO00,State Farm Stadium,closed,388,5,0,0
+2022,PHO00,State Farm Stadium,open,240,3,0,0
+2022,PIT00,Acrisure Stadium,outdoors,513,8,313,313
+2022,SEA00,Lumen Field,outdoors,601,9,264,264
+2022,SFO01,Levi's Stadium,outdoors,600,9,388,388
+2022,TAM00,Raymond James Stadium,outdoors,652,8,329,329
+2022,VEG00,Allegiant Stadium,dome,558,8,0,0
+2022,WAS00,FedExField,outdoors,572,9,281,281
+2023,ATL97,Mercedes-Benz Stadium,closed,321,5,0,0
+2023,ATL97,Mercedes-Benz Stadium,open,203,3,0,0
+2023,BAL00,M&T Bank Stadium,outdoors,588,9,523,523
+2023,BOS00,Gillette Stadium,outdoors,557,8,398,398
+2023,BUF00,New Era Field,outdoors,489,8,428,428
+2023,CAR00,Bank of America Stadium,outdoors,468,8,398,398
+2023,CHI98,Soldier Field,outdoors,524,8,460,460
+2023,CIN00,Paycor Stadium,outdoors,645,9,571,571
+2023,CLE00,FirstEnergy Stadium,outdoors,606,9,545,545
+2023,DAL00,AT&T Stadium,closed,497,7,0,0
+2023,DAL00,AT&T Stadium,open,64,1,0,0
+2023,DEN00,Empower Field at Mile High,outdoors,571,9,442,442
+2023,DET00,Ford Field,dome,549,8,0,0
+2023,FRA00,Deutsche Bank Park,outdoors,119,2,0,0
+2023,GNB00,Lambeau Field,outdoors,531,8,531,531
+2023,HOU00,NRG Stadium,closed,496,7,0,0
+2023,HOU00,NRG Stadium,open,135,2,0,0
+2023,IND00,Lucas Oil Stadium,closed,387,6,0,0
+2023,IND00,Lucas Oil Stadium,open,184,3,0,0
+2023,JAX00,TIAA Bank Stadium,outdoors,550,8,382,382
+2023,KAN00,GEHA Field at Arrowhead Stadium,outdoors,544,8,348,348
+2023,LAX01,SoFi Stadium,dome,1205,17,0,0
+2023,LON00,Wembley Stadium,outdoors,61,1,0,0
+2023,LON02,Tottenham Stadium,outdoors,128,2,0,0
+2023,MIA00,Hard Rock Stadium,outdoors,620,9,620,620
+2023,MIN01,U.S. Bank Stadium,dome,622,8,0,0
+2023,NAS00,Nissan Stadium,outdoors,511,8,446,446
+2023,NOR00,Mercedes-Benz Superdome,dome,533,8,0,0
+2023,NYC01,MetLife Stadium,outdoors,1131,17,1014,1014
+2023,PHI00,Lincoln Financial Field,outdoors,555,8,410,410
+2023,PHO00,State Farm Stadium,closed,399,6,0,0
+2023,PHO00,State Farm Stadium,open,127,2,0,0
+2023,PIT00,Acrisure Stadium,outdoors,601,9,457,457
+2023,SEA00,Lumen Field,outdoors,554,8,490,490
+2023,SFO01,Levi's Stadium,outdoors,504,8,504,504
+2023,TAM00,Raymond James Stadium,outdoors,547,8,484,484
+2023,VEG00,Allegiant Stadium,dome,587,9,0,0
+2023,WAS00,FedExField,outdoors,535,8,474,474
+2024,ATL97,Mercedes-Benz Stadium,closed,608,9,0,0
+2024,BAL00,M&T Bank Stadium,outdoors,498,8,498,498
+2024,BOS00,Gillette Stadium,outdoors,503,8,503,503
+2024,BUF00,New Era Field,outdoors,502,8,502,502
+2024,CAR00,Bank of America Stadium,outdoors,510,8,510,510
+2024,CHI98,Soldier Field,outdoors,485,8,485,485
+2024,CIN00,Paycor Stadium,outdoors,544,8,544,544
+2024,CLE00,FirstEnergy Stadium,outdoors,578,8,578,578
+2024,DAL00,AT&T Stadium,closed,620,9,0,0
+2024,DEN00,Empower Field at Mile High,outdoors,535,8,535,535
+2024,DET00,Ford Field,dome,643,9,0,0
+2024,GER00,Allianz Arena,outdoors,61,1,0,0
+2024,GNB00,Lambeau Field,outdoors,548,9,548,548
+2024,HOU00,NRG Stadium,closed,518,8,0,0
+2024,IND00,Lucas Oil Stadium,closed,487,8,0,0
+2024,JAX00,TIAA Bank Stadium,outdoors,466,7,314,314
+2024,KAN00,GEHA Field at Arrowhead Stadium,outdoors,577,8,577,577
+2024,LAX01,SoFi Stadium,dome,1104,17,0,0
+2024,LON00,Wembley Stadium,outdoors,57,1,57,57
+2024,LON02,Tottenham Stadium,outdoors,151,2,151,151
+2024,MIA00,Hard Rock Stadium,outdoors,545,8,545,545
+2024,MIN01,U.S. Bank Stadium,dome,531,8,0,0
+2024,NAS00,Nissan Stadium,outdoors,502,8,502,502
+2024,NOR00,Mercedes-Benz Superdome,dome,591,9,0,0
+2024,NYC01,MetLife Stadium,outdoors,1074,17,1074,1074
+2024,PHI00,Lincoln Financial Field,outdoors,449,8,449,449
+2024,PHO00,State Farm Stadium,closed,541,9,0,0
+2024,PIT00,Acrisure Stadium,outdoors,543,8,543,543
+2024,SAO00,Arena Corinthians,outdoors,68,1,0,0
+2024,SEA00,Lumen Field,outdoors,633,9,633,633
+2024,SFO01,Levi's Stadium,outdoors,545,9,472,472
+2024,TAM00,Raymond James Stadium,outdoors,609,9,609,609
+2024,VEG00,Allegiant Stadium,dome,559,8,0,0
+2024,WAS00,FedExField,outdoors,555,9,555,555
+2025,ATL97,Mercedes-Benz Stadium,closed,501,8,0,0
+2025,BAL00,M&T Bank Stadium,outdoors,563,9,563,563
+2025,BOS00,Gillette Stadium,outdoors,532,9,532,532
+2025,BUF00,New Era Field,outdoors,532,9,532,532
+2025,CAR00,Bank of America Stadium,outdoors,448,8,448,448
+2025,CHI98,Soldier Field,outdoors,519,8,519,519
+2025,CIN00,Paycor Stadium,outdoors,639,9,639,639
+2025,CLE00,FirstEnergy Stadium,outdoors,530,9,530,530
+2025,DAL00,AT&T Stadium,closed,577,8,0,0
+2025,DEN00,Empower Field at Mile High,outdoors,640,9,640,640
+2025,DET00,Ford Field,dome,574,8,0,0
+2025,GNB00,Lambeau Field,outdoors,466,8,466,466
+2025,HOU00,NRG Stadium,closed,587,9,0,0
+2025,IND00,Lucas Oil Stadium,closed,588,9,54,54
+2025,JAX00,TIAA Bank Stadium,outdoors,603,9,603,603
+2025,KAN00,GEHA Field at Arrowhead Stadium,outdoors,558,9,360,360
+2025,LAX01,SoFi Stadium,dome,1149,17,0,0
+2025,MIA00,Hard Rock Stadium,outdoors,540,9,490,490
+2025,MIN01,U.S. Bank Stadium,dome,427,8,0,0
+2025,NAS00,Nissan Stadium,outdoors,567,9,567,567
+2025,NOR00,Mercedes-Benz Superdome,dome,549,8,0,0
+2025,NYC01,MetLife Stadium,outdoors,962,17,962,962
+2025,PHI00,Lincoln Financial Field,outdoors,479,8,479,479
+2025,PHO00,State Farm Stadium,closed,587,8,0,0
+2025,PIT00,Acrisure Stadium,outdoors,611,9,611,611
+2025,SEA00,Lumen Field,outdoors,523,8,523,523
+2025,SFO01,Levi's Stadium,outdoors,529,8,529,529
+2025,TAM00,Raymond James Stadium,outdoors,513,8,513,513
+2025,VEG00,Allegiant Stadium,dome,584,9,0,0
+2025,WAS00,FedExField,outdoors,481,8,481,481
+2026,ATL97,Mercedes-Benz Stadium,closed,137,2,0,0
+2026,ATL97,Mercedes-Benz Stadium,open,139,2,0,0
+2026,BAL00,M&T Bank Stadium,outdoors,188,3,124,124
+2026,BOS00,Gillette Stadium,outdoors,194,3,62,62
+2026,BUF00,Highmark Stadium,outdoors,199,3,199,199
+2026,CAR00,Bank of America Stadium,outdoors,202,3,160,160
+2026,CHI98,Soldier Field,outdoors,226,4,163,163
+2026,CIN00,Paycor Stadium,outdoors,140,2,140,140
+2026,CLE00,Huntington Bank Field,outdoors,208,3,151,151
+2026,DAL00,AT&T Stadium,closed,133,2,0,0
+2026,DEN00,Empower Field at Mile High,outdoors,223,3,147,147
+2026,DET00,Ford Field,dome,240,3,0,0
+2026,GNB00,Lambeau Field,outdoors,244,3,78,78
+2026,HOU00,Reliant Stadium,closed,281,4,0,0
+2026,IND00,Lucas Oil Stadium,closed,55,1,0,0
+2026,IND00,Lucas Oil Stadium,open,126,2,0,0
+2026,JAX00,EverBank Stadium,outdoors,104,2,104,104
+2026,JAX00,Tottenham Hotspur Stadium,outdoors,79,1,0,0
+2026,KAN00,GEHA Field at Arrowhead Stadium,outdoors,200,3,133,133
+2026,LAX01,SoFi Stadium,dome,373,6,0,0
+2026,LON00,Wembley Stadium,outdoors,75,1,0,0
+2026,LON02,Tottenham Hotspur Stadium,outdoors,71,1,71,71
+2026,MEL00,Melbourne Cricket Ground,dome,62,1,62,62
+2026,MIA00,Hard Rock Stadium,outdoors,118,2,60,60
+2026,MIN01,U.S. Bank Stadium,dome,166,3,0,0
+2026,NAS00,Nissan Stadium,outdoors,250,4,113,113
+2026,NOR00,Caesars Superdome,dome,197,3,0,0
+2026,NYC01,MetLife Stadium,outdoors,441,7,254,254
+2026,PAR00,Stade de France,dome,68,1,0,0
+2026,PHI00,Lincoln Financial Field,outdoors,283,4,137,137
+2026,PHO00,State Farm Stadium,closed,208,3,0,0
+2026,PIT00,Acrisure Stadium,outdoors,208,3,133,133
+2026,RIO00,Maracana Stadium,open,60,1,60,60
+2026,SEA00,Lumen Field,outdoors,230,4,111,111
+2026,SFO01,Levi's Stadium,outdoors,261,4,194,194
+2026,TAM00,Raymond James Stadium,outdoors,277,4,187,187
+2026,VEG00,Allegiant Stadium,dome,284,4,0,0
+2026,WAS00,Northwest Stadium,outdoors,156,2,77,77

@@ -1,0 +1,83 @@
+[
+  {
+    "bin": "[0.0, 0.02)",
+    "mean_probability": 0.018872799074224397,
+    "n": 23,
+    "observed_rate": 0.0,
+    "positives": 0,
+    "wilson_high": 0.14312112541726274,
+    "wilson_low": -1.3877787807814457e-17
+  },
+  {
+    "bin": "[0.02, 0.03)",
+    "mean_probability": 0.027390179540959854,
+    "n": 2283,
+    "observed_rate": 0.02058694699956198,
+    "positives": 47,
+    "wilson_high": 0.027267675943381385,
+    "wilson_low": 0.015516922692571362
+  },
+  {
+    "bin": "[0.03, 0.04)",
+    "mean_probability": 0.03492806156241217,
+    "n": 6576,
+    "observed_rate": 0.026916058394160582,
+    "positives": 177,
+    "wilson_high": 0.03111248052591986,
+    "wilson_low": 0.02327205055458518
+  },
+  {
+    "bin": "[0.04, 0.05)",
+    "mean_probability": 0.04450812049870029,
+    "n": 4987,
+    "observed_rate": 0.03188289552837377,
+    "positives": 159,
+    "wilson_high": 0.03713081642552435,
+    "wilson_low": 0.02735562209418342
+  },
+  {
+    "bin": "[0.05, 0.075)",
+    "mean_probability": 0.05765678040366201,
+    "n": 3003,
+    "observed_rate": 0.04628704628704629,
+    "positives": 139,
+    "wilson_high": 0.05439904743114961,
+    "wilson_low": 0.039334390339566344
+  },
+  {
+    "bin": "[0.075, 0.1)",
+    "mean_probability": 0.08336048392028073,
+    "n": 304,
+    "observed_rate": 0.049342105263157895,
+    "positives": 15,
+    "wilson_high": 0.0798052629487407,
+    "wilson_low": 0.030126598112272498
+  },
+  {
+    "bin": "[0.1, 0.15)",
+    "mean_probability": 0.11742343769004616,
+    "n": 182,
+    "observed_rate": 0.08791208791208792,
+    "positives": 16,
+    "wilson_high": 0.13802458472009144,
+    "wilson_low": 0.05483643240416924
+  },
+  {
+    "bin": "[0.15, 0.25)",
+    "mean_probability": null,
+    "n": 0,
+    "observed_rate": null,
+    "positives": 0,
+    "wilson_high": null,
+    "wilson_low": null
+  },
+  {
+    "bin": "[0.25, 1.0)",
+    "mean_probability": null,
+    "n": 0,
+    "observed_rate": null,
+    "positives": 0,
+    "wilson_high": null,
+    "wilson_low": null
+  }
+]

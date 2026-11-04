@@ -123,6 +123,9 @@ def build(store,out):
   # Keep auditable cases locally, including descriptions; never model inputs.
   for tag,m in [('penalty',j.penalty.eq(1)),('aborted',j.aborted_play.eq(1)),('unknown_receiver',j.receiver_player_id.isna())]:
    j.loc[m,KEY+['desc','passer_player_id','penalty_type','is_interception_worthy','interception']].to_csv(out/f'audit/{tag}_{year}.csv',index=False)
+  no_play=p[p.season_type.eq('REG')].merge(f[KEY+['is_interception_worthy']],on=KEY,how='left',validate='one_to_one')
+  no_play=no_play[no_play.play_type.eq('no_play') & no_play.is_interception_worthy.eq(True)]
+  no_play[KEY+['play_type','pass_attempt','penalty_type','desc','is_interception_worthy']].to_csv(out/f'audit/no_play_worthy_{year}.csv',index=False)
   j[PBP_KEEP+['is_interception_worthy','is_throw_away','read_thrown','date_pulled']].to_parquet(out/f'audit/eligible_{year}.parquet',index=False)
   env=j.groupby(['stadium_id','game_stadium','roof'],dropna=False).agg(n=('play_id','size'),games=('game_id','nunique'),wind_present=('wind','count'),temp_present=('temp','count')).reset_index(); env.insert(0,'season',year); external.append(env)
   allrows.append(j[PBP_KEEP+['is_interception_worthy','is_throw_away','read_thrown']]); audit[str(year)]=info
@@ -133,6 +136,13 @@ def build(store,out):
  for year in range(2022,2027):
   p=pd.read_parquet(store/f'raw/pbp_{year}.parquet'); mask,_=eligible(p)
   assert (p.loc[mask,'score_differential']==p.loc[mask,'posteam_score']-p.loc[mask,'defteam_score']).all()
+ distributions=[]
+ for year,g in d.groupby('season'):
+  for c in ['down','qtr','ydstogo','yardline_100','quarter_seconds_remaining','score_differential','air_yards','wind','temp']:
+   col=g[c]; distributions.append(dict(season=int(year),feature=c,n=len(col),missing=int(col.isna().sum()),mean=float(col.mean()),p01=float(col.quantile(.01)),p50=float(col.median()),p99=float(col.quantile(.99)),min=float(col.min()),max=float(col.max())))
+ pd.DataFrame(distributions).to_csv(out/'audit/feature_distributions.csv',index=False)
+ for c in ['down','qtr','roof','penalty_type']:
+  d.groupby(['season',c],dropna=False).size().rename('n').to_csv(out/f'audit/distribution_{c}.csv')
  d.to_parquet(out/'dataset.parquet',index=False)
  for name,keys in [('season',['season']),('week',['season','week']),('game',['season','week','game_id']),('qb',['season','passer_player_id'])]:
   d.groupby(keys,dropna=False).agg(passes=('play_id','size'),games=('game_id','nunique'),worthy=('is_interception_worthy','sum'),interceptions=('interception','sum')).reset_index().to_csv(out/f'audit/counts_by_{name}.csv',index=False)

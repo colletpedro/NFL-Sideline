@@ -1,0 +1,17 @@
+{
+  "development_comparison": {
+    "context": {
+      "coefficient_max_abs_difference": 3.5747238502636947e-12,
+      "train_probability_max_abs_difference": 5.177108741705183e-13
+    },
+    "depth": {
+      "coefficient_max_abs_difference": 3.970176964962491e-09,
+      "train_probability_max_abs_difference": 1.8097209286693783e-09
+    }
+  },
+  "earlier_exact_cross_version_1e10_tolerance_check": "failed at coefficient difference 3.97e-9 for depth; not same-version determinism criterion",
+  "matmul_einsum_max_abs_diff": 3.552713678800501e-15,
+  "numpy": "2.3.4",
+  "warnings_as_errors": true,
+  "zero_multiplication_pass": true
+}

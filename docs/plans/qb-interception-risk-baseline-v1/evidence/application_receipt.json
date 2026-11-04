@@ -1,0 +1,17 @@
+{
+  "expected_sum": 282.18921288487985,
+  "frozen_config_sha256": "3add5c6113c91f720ae7dfde759617f114daf66f700b4ce7229c2efa21f3e90a",
+  "games": 107,
+  "observed": 219,
+  "passers": 62,
+  "passes": 7106,
+  "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}
