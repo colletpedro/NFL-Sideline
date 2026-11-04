@@ -1,0 +1,13 @@
+
+> web-ui@0.0.0 test
+> vitest run src/components/visual-preparation-regressions.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/qb-risk-temporal-calibration-v2/NFL Sideline/web-ui
+
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 10ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  10:57:48
+   Duration  551ms (transform 36ms, setup 0ms, collect 281ms, tests 10ms, environment 0ms, prepare 33ms)

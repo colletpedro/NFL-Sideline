@@ -1,6 +1,7 @@
 {
   "byte_identical": 124,
   "expected_environment_differences": "environment.json records code inventory/hashes and is excluded; dependencies pinned; platform-specific wheelhouse",
+  "figures_directory": "figures-reviewed",
   "network_connections_blocked": true,
   "numerical_tolerance_policy": "If bytes differ, inspect exact typed tables and predictions at atol1e-12/rtol1e-10; never report numerical equivalence as byte equality. This execution requires all listed scientific bytes equal.",
   "passed": true,
@@ -699,55 +700,55 @@
       "actual": "066623bf0fc7d4c249ee4802d4d44ae38e49ffd8e0290b7f5eb11a68f133dd10",
       "byte_equal": true,
       "expected": "066623bf0fc7d4c249ee4802d4d44ae38e49ffd8e0290b7f5eb11a68f133dd10",
-      "path": "figures-rechecked/calibration_diagnostics.png"
+      "path": "figures-reviewed/calibration_diagnostics.png"
     },
     {
       "actual": "0326194773023204aee63a6c3d1738a356024280e659d29a06a48dcb17d96780",
       "byte_equal": true,
       "expected": "0326194773023204aee63a6c3d1738a356024280e659d29a06a48dcb17d96780",
-      "path": "figures-rechecked/calibration_diagnostics.svg"
+      "path": "figures-reviewed/calibration_diagnostics.svg"
     },
     {
-      "actual": "d675a523063a45be2f67d6d1efcec9c71d6d5f59f7c78512220a4a98c3f3469d",
+      "actual": "a5450e15b9a4c85b204f8a1fbb866f56f0453fc451b69f0544003c7ba5ef30df",
       "byte_equal": true,
-      "expected": "d675a523063a45be2f67d6d1efcec9c71d6d5f59f7c78512220a4a98c3f3469d",
-      "path": "figures-rechecked/calibration_known_periods.png"
+      "expected": "a5450e15b9a4c85b204f8a1fbb866f56f0453fc451b69f0544003c7ba5ef30df",
+      "path": "figures-reviewed/calibration_known_periods.png"
     },
     {
-      "actual": "5efef88525270e553895d9d8da4237697b22be37a6b2b705c5b34d6cde5fa30a",
+      "actual": "f0c0586b0475b2d16db5f612e6dd8ea3a8c9deff69f4c6f1eb561898c7fba72e",
       "byte_equal": true,
-      "expected": "5efef88525270e553895d9d8da4237697b22be37a6b2b705c5b34d6cde5fa30a",
-      "path": "figures-rechecked/calibration_known_periods.svg"
+      "expected": "f0c0586b0475b2d16db5f612e6dd8ea3a8c9deff69f4c6f1eb561898c7fba72e",
+      "path": "figures-reviewed/calibration_known_periods.svg"
     },
     {
       "actual": "882f106fe303c46e7873e00949a5631b9d36da9a637845e30f3f84fac62ff136",
       "byte_equal": true,
       "expected": "882f106fe303c46e7873e00949a5631b9d36da9a637845e30f3f84fac62ff136",
-      "path": "figures-rechecked/calibration_support.csv"
+      "path": "figures-reviewed/calibration_support.csv"
     },
     {
       "actual": "7b698522095fe346a7e9f05ae1d77dcaa2e88218ba97a60e8d6d79a9b07e5d24",
       "byte_equal": true,
       "expected": "7b698522095fe346a7e9f05ae1d77dcaa2e88218ba97a60e8d6d79a9b07e5d24",
-      "path": "figures-rechecked/performance_vs_recent.png"
+      "path": "figures-reviewed/performance_vs_recent.png"
     },
     {
       "actual": "b4653fe8ed73e3c1b61af2c743df52c3917ff32254ddedd27154c9f97c7ae5b8",
       "byte_equal": true,
       "expected": "b4653fe8ed73e3c1b61af2c743df52c3917ff32254ddedd27154c9f97c7ae5b8",
-      "path": "figures-rechecked/performance_vs_recent.svg"
+      "path": "figures-reviewed/performance_vs_recent.svg"
     },
     {
       "actual": "44517cce34594ef13d8b6223b1c259dc5df3f7350256917efd3470d2d731654c",
       "byte_equal": true,
       "expected": "44517cce34594ef13d8b6223b1c259dc5df3f7350256917efd3470d2d731654c",
-      "path": "figures-rechecked/standardization.png"
+      "path": "figures-reviewed/standardization.png"
     },
     {
       "actual": "12b79d502f1a9c039e95d6ead6d9a53426df5fa418cc907e901297ca31c737db",
       "byte_equal": true,
       "expected": "12b79d502f1a9c039e95d6ead6d9a53426df5fa418cc907e901297ca31c737db",
-      "path": "figures-rechecked/standardization.svg"
+      "path": "figures-reviewed/standardization.svg"
     }
   ],
   "scientific_files": 124

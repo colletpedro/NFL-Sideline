@@ -15,8 +15,8 @@ Store durável:
 - `additional-sources.json`, `provider-revision-source.json`: roster semanal2026, documentação oficial/histórico e seus hashes. Nenhum novo PBP/FTN foi adquirido nesta rodada.
 - `reference-v1/`: replay integral da v1 com seu pipeline. `reference-v1-check.json`:84 arquivos científicos idênticos.
 - `experiment-verified/`: dataset lido da referência, diagnósticos, modelos, previsões por passe, splits por chave/candidato/ano, CIs, classificação de posição e decisão. `models/` preserva M1/M2/M3 por ano para auditoria, sem ampliar os candidatos. `frozen/` contém apenas M0/M1 e o M3 escolhido para reserva.
-- `figures-verified/`: PNG/SVG e tabela de suporte das curvas.
-- `reproduction-final/`: reconstrução offline em destino novo. A primeira comparação conservada difere em4SVGs por estado global de hash do renderer v1; `figures-rechecked/` e `reproduction-check-rechecked.json` registram a correção/rechecagem gráfica, com os outros resultados preservados.
+- `figures-reviewed/`: PNG/SVG e tabela de suporte das curvas.
+- `reproduction-final/`: reconstrução offline em destino novo. A primeira comparação conservada difere em4SVGs por estado global de hash do renderer v1; `figures-reviewed/` e `reproduction-check-3.json` registram a correção/rechecagem gráfica, com os outros resultados preservados.
 - `reserved-status.json`: recusas prematuras reais, sem rótulos abertos ou aquisição futura.
 - `wheelhouse/`, `requirements.lock`: instalação offline na plataforma atual CPython3.11/macOS arm64.
 - Cópia de recuperação em `/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/qb-risk-temporal-calibration-v2/20261104-v2`, com receipt/hashes em evidence. Não é backup do venv: as wheels permitem recriá-lo.
@@ -109,3 +109,5 @@ $PY research/qb_risk_temporal_v2/isolation.py --out "$STORE/isolation-review-new
 Fixtures offline, sem downloads. Se necessário, `npm --prefix web-ui ci` somente nesta worktree. Checagens incluem cronologia/IDs de jogos, reserva fora da seleção, intercepto separado, preprocessing só no treino, zero eventos, identidade/posição desconhecida ou conflitante, manifests adulterados, recusa prematura antes de abrir Parquets/rede e imutabilidade v1. Isolamento confere os347 arquivos pinados da v1, HEAD/status dos dois checkouts preservados, árvore operacional e cinco expected failures. Nenhuma auditoria visual do site foi repetida.
 
 [Verificação](evidence/verification.json), [replay](evidence/reproduction-check.json), [isolamento](evidence/isolation.json), [recuperação](evidence/recovery-receipt.json). Commits/checkpoints: [CHECKPOINTS](CHECKPOINTS.md).
+
+Recuperação conferida: **478 arquivos / 242.139.078 bytes**. O script `research/qb_risk_temporal_v2/archive.py --store STORE --backup NEW_BACKUP --receipt NEW_RECEIPT` faz cópia disjunta em destino novo e confere cada hash, sem tocar na v1 ou no produto. O store não contém venv; inclui wheels e lock. A árvore restaurada permite replay offline sem os caminhos originais da v1. O código deve acompanhar o commit desta branch. Recibo completo em [recovery-receipt](evidence/recovery-receipt.json).

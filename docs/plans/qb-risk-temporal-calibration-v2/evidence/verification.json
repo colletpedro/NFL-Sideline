@@ -1,0 +1,404 @@
+{
+  "status": "A: retrospective diagnosis complete; M3 frozen; independent reserved evaluation pending",
+  "base_v1": "d654bd65f834f3903006a97b3074123eda26d236",
+  "reservation_commit": "94e2b82",
+  "numeric_protocol_commit": "f7e8b74",
+  "implementation_before_comparison_commit": "3be92a5",
+  "retrospective_results_commit": "e3422e9",
+  "tests": {
+    "new": 24,
+    "v1": 23,
+    "total_offline": 47,
+    "legacy": 6,
+    "legacy_expected_failures": 5,
+    "offline_downloads": false,
+    "warnings_policy": "RuntimeWarning and FutureWarning treated as errors"
+  },
+  "reference_reproduction": {
+    "files": 84,
+    "byte_equal": true
+  },
+  "v2_reproduction": {
+    "files": 124,
+    "byte_equal": true,
+    "network_blocked": true,
+    "receipt_sha256": "d8064e32b39990827714dfc1776ebcba162f93c43069c1ccb4b0d0af01530068",
+    "first_attempt": "120/124 identical; four SVG path IDs differed from matplotlib state. Corrected local renderer state; reran figures only. Kept failed receipt.",
+    "environment": "environment.json excluded explicitly; numerical equivalence and byte equality not conflated; no cross-platform promise"
+  },
+  "reserved": {
+    "checks": [
+      {
+        "returncode": 3,
+        "script": "reserved.py",
+        "stderr": "",
+        "stdout": "PREMATURE: not before 2026-12-16T01:15:00+00:00 UTC; no PBP/FTN opened"
+      },
+      {
+        "returncode": 3,
+        "script": "acquire_reserved.py",
+        "stderr": "",
+        "stdout": "PREMATURE: no acquisition before 2026-12-16T01:15:00+00:00; no network or label files opened"
+      }
+    ],
+    "freeze_sha256": "3af75413a0f8bdb9a5fa788cc3b769272deaa66f523b734aa5fe739a90b723ca",
+    "no_future_network_acquisition": true,
+    "no_reserved_label_files_opened": true,
+    "not_before_fortaleza": "2026-12-15 22:15 -03:00",
+    "not_before_utc": "2026-12-16T01:15:00+00:00",
+    "not_independent_confirmation": true,
+    "reserved_season": 2026,
+    "state": "PENDING_PREMATURE",
+    "weeks": [
+      9,
+      13
+    ]
+  },
+  "recovery": {
+    "files": 478,
+    "bytes": 242139078,
+    "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/qb-risk-temporal-calibration-v2/20261104-v2",
+    "all_hashes_verified": true,
+    "receipt_sha256": "dd04f3b8c7079ec01cdd1aed7af646403e5bb5410b4074f20d5dc7e1d29ea0c9"
+  },
+  "isolation": {
+    "approved_site_clean": true,
+    "v1_checkout_clean": true,
+    "v1_pinned_files": 347,
+    "public_contracts_snapshots_backend_database_etl_untouched": true,
+    "server_preserved": true
+  },
+  "position": {
+    "QB_identified": 53,
+    "other_position": 9,
+    "unknown_or_conflicting": 0,
+    "no_statistical_population_filter": true,
+    "all_comparative_passer_intervals_omitted": true
+  },
+  "figures_inspected": [
+    "standardization",
+    "performance_vs_recent",
+    "calibration_known_periods",
+    "calibration_diagnostics"
+  ],
+  "no_merge_push_deploy_or_paid_services": true,
+  "logs": {
+    "reference-v1.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-risk-temporal-calibration-v2/20261104-v2/reference-v1.log",
+      "sha256": "669ebe377df27af34d539fb9b0eaf13dc2a61ec01eadb7ead1afbfdf06ce2d47",
+      "bytes": 2469
+    },
+    "experiment-verified.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-risk-temporal-calibration-v2/20261104-v2/experiment-verified.log",
+      "sha256": "dfe9d732945b099db9eb4c49d93a546b80b585ec0aa35326d817741ff82951c2",
+      "bytes": 150
+    },
+    "reproduction-final.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-risk-temporal-calibration-v2/20261104-v2/reproduction-final.log",
+      "sha256": "1f4b299f331c864cfaf940e7187dfb2a7dd34f35ffcdd742c2847a36babb6057",
+      "bytes": 3527
+    },
+    "tests-delivery-final.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-risk-temporal-calibration-v2/20261104-v2/tests-delivery-final.log",
+      "sha256": "23db771bf01605b02ba0e1017366983950f4281d95b712ad5901df3e71ee6e94",
+      "bytes": 99
+    },
+    "legacy-tests.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-risk-temporal-calibration-v2/20261104-v2/legacy-tests.log",
+      "sha256": "23776e33b56c175aacb50428866ef64bfe2c29271d18c1d154a37ea68a37b63b",
+      "bytes": 449
+    }
+  },
+  "documentation_links": [
+    {
+      "document": "MODEL-CARD.md",
+      "target": "EXPERIMENT-PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "MODEL-CARD.md",
+      "target": "evidence/selection.json",
+      "exists": true
+    },
+    {
+      "document": "MODEL-CARD.md",
+      "target": "evidence/frozen/freeze.json",
+      "exists": true
+    },
+    {
+      "document": "MODEL-CARD.md",
+      "target": "evidence/groups.csv",
+      "exists": true
+    },
+    {
+      "document": "MODEL-CARD.md",
+      "target": "RESERVED-EVALUATION.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "DRIFT-AUDIT.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/standardization.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/performance_vs_recent.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/selection.json",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/calibration_known_periods.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/calibration_diagnostics.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/metrics.json",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/calibration_support.csv",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "MODEL-CARD.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/position_by_week.csv",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/passer_presentation.csv",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "RESERVED-EVALUATION.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/reserved-status.json",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/frozen/freeze.json",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/verification.json",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "evidence/population.csv",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "evidence/integrity_v1_reconciled.json",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "evidence/schema_comparison.json",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "evidence/composition.csv",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "evidence/standardization_contract.json",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "evidence/standardization_cells_primary.csv",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "evidence/standardization_cells_coarse.csv",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "figures/standardization.png",
+      "exists": true
+    },
+    {
+      "document": "DRIFT-AUDIT.md",
+      "target": "../qb-interception-risk-baseline-v1/NOTICE.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "DRIFT-AUDIT.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "EXPERIMENT-PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "RESERVED-EVALUATION.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "MODEL-CARD.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "HANDOFF.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "figures/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "../qb-interception-risk-baseline-v1/NOTICE.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "../qb-interception-risk-baseline-v1/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/verification.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/reproduction-check.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/isolation.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/recovery-receipt.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "CHECKPOINTS.md",
+      "exists": true
+    },
+    {
+      "document": "HANDOFF.md",
+      "target": "REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "HANDOFF.md",
+      "target": "DRIFT-AUDIT.md",
+      "exists": true
+    },
+    {
+      "document": "HANDOFF.md",
+      "target": "MODEL-CARD.md",
+      "exists": true
+    },
+    {
+      "document": "HANDOFF.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "standardization.png",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "standardization.svg",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "performance_vs_recent.png",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "performance_vs_recent.svg",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "calibration_known_periods.png",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "calibration_known_periods.svg",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "calibration_support.csv",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "calibration_diagnostics.png",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "calibration_diagnostics.svg",
+      "exists": true
+    },
+    {
+      "document": "figures/README.md",
+      "target": "../REPORT.md",
+      "exists": true
+    }
+  ]
+}

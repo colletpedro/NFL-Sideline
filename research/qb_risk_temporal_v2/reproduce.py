@@ -30,14 +30,18 @@ def compare(store,out,checks=None,figures_dir='figures'):
  store=Path(store);out=Path(out)
  if checks is None:
   reference=json.loads((store/'reference-v1-check.json').read_text());checks=[dict(path='reference-v1/'+r['reproduction'],expected=r['sha256'],actual=sha(out/'reference-v1'/r['reproduction']),byte_equal=r['sha256']==sha(out/'reference-v1'/r['reproduction'])) for r in reference['records']]
- for source,target in [(store/'experiment-verified',out/'experiment'),(store/'figures-verified',out/figures_dir)]:
+ for source,target in [(store/'experiment-verified',out/'experiment'),(store/'figures-reviewed',out/figures_dir)]:
   for p in sorted(source.rglob('*')):
    if not p.is_file() or p.name=='environment.json':continue
    other=target/p.relative_to(source);expected=sha(p);actual=sha(other) if other.exists() else None
    checks.append(dict(path=str(other.relative_to(out)),expected=expected,actual=actual,byte_equal=expected==actual))
  summary=dict(passed=all(r['byte_equal'] for r in checks),scientific_files=len(checks),byte_identical=sum(r['byte_equal'] for r in checks),numerical_tolerance_policy='If bytes differ, inspect exact typed tables and predictions at atol1e-12/rtol1e-10; never report numerical equivalence as byte equality. This execution requires all listed scientific bytes equal.',expected_environment_differences='environment.json records code inventory/hashes and is excluded; dependencies pinned; platform-specific wheelhouse',network_connections_blocked=True,records=checks)
  report=out/('reproduction-check.json' if not (out/'reproduction-check.json').exists() else 'reproduction-check-rechecked.json')
- if report.exists():raise FileExistsError(report)
+ if report.exists():
+  index=3
+  while (out/f'reproduction-check-{index}.json').exists():index+=1
+  report=out/f'reproduction-check-{index}.json'
+ summary['figures_directory']=figures_dir
  dump(report,summary)
  if not summary['passed']:raise ValueError('Scientific replay mismatch; inspect preserved report')
  print('REPRODUCTION PASS',len(checks),'scientific files byte-identical',flush=True)
