@@ -55,6 +55,9 @@ def reserved_population(pbp,ftn,expected_games):
  f=ftn.rename(columns={'nflverse_game_id':'game_id','nflverse_play_id':'play_id'})
  f=f[f.season.eq(2026)&f.week.between(9,13)].copy()
  if set(p.game_id)!=set(expected_games) or set(f.game_id)!=set(expected_games):raise GateError('Incomplete reserved games; no partial evaluation')
+ if isinstance(expected_games,dict):
+  for frame in [p,f]:
+   if not frame.week.eq(frame.game_id.map(expected_games)).all():raise GateError('Reserved metadata differs from calendar week')
  unique(p,KEY,'reserved PBP');unique(f,KEY,'reserved FTN')
  shared=p[KEY+['week']].merge(f[KEY+['week']],on=KEY,validate='one_to_one',suffixes=('_p','_f'))
  if not shared.week_p.eq(shared.week_f).all():raise GateError('Reserved week mismatch')
@@ -73,6 +76,7 @@ def evaluate(bundle,manifest_path,out):
  # One logical opening; successful output sentinel refuses a second invocation.
  bundle=Path(bundle);out=Path(out)
  if out.exists():raise FileExistsError('Never overwrite a reserved evaluation')
+ if (bundle/'OPENED.json').exists():raise GateError('Reserved bundle already opened; preserve first result')
  f=validate_bundle(bundle);manifest_path=Path(manifest_path);manifest=json.loads(manifest_path.read_text());now=utcnow()
  if manifest.get('purpose')!='reserved_window_only' or manifest.get('season')!=2026 or manifest.get('weeks')!=[9,13] or manifest.get('freeze_sha256')!=sha(bundle/'freeze.json'):raise GateError('Evaluation manifest does not bind exact frozen window/models')
  entries={r['role']:r for r in manifest['files']}
@@ -85,7 +89,7 @@ def evaluate(bundle,manifest_path,out):
   if acquired.tzinfo is None or acquired>now or acquired<datetime.fromisoformat(gate['not_before_utc']):raise GateError('Sources must be acquired after maturity, never future-dated')
   if sha(paths[k])!=r['sha256']:raise GateError('Evaluation source hash differs')
  # No PBP or FTN read above this line.
- data=reserved_population(pd.read_parquet(paths['pbp']),pd.read_parquet(paths['ftn']),set(schedule_window(updated).game_id))
+ data=reserved_population(pd.read_parquet(paths['pbp']),pd.read_parquet(paths['ftn']),dict(zip(schedule_window(updated).game_id,schedule_window(updated).week)))
  opening=bundle/'OPENED.json'
  try:
   with opening.open('x') as lock:json.dump(dict(manifest_sha256=sha(manifest_path),opened_at_utc=now.isoformat(),output=str(out),notice='If evaluation fails, preserve this receipt and diagnose; do not delete to tune/reopen.'),lock,indent=2)

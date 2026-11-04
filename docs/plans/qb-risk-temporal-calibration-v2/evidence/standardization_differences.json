@@ -1,0 +1,82 @@
+[
+  {
+    "composition_associated_difference": -1.5121317186755912e-05,
+    "fraction_of_same_support_drop": -0.0013020379057613197,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.01161357677825383,
+    "spec": "primary",
+    "standardized_drop": 0.011628698095440586,
+    "to_year": 2023
+  },
+  {
+    "composition_associated_difference": -0.0001099775707036274,
+    "fraction_of_same_support_drop": -0.006072682273192203,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.018110213206629026,
+    "spec": "primary",
+    "standardized_drop": 0.018220190777332654,
+    "to_year": 2024
+  },
+  {
+    "composition_associated_difference": -0.0001622041435296595,
+    "fraction_of_same_support_drop": -0.008340489303059036,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.019447797081901176,
+    "spec": "primary",
+    "standardized_drop": 0.019610001225430836,
+    "to_year": 2025
+  },
+  {
+    "composition_associated_difference": -0.00019412225143220288,
+    "fraction_of_same_support_drop": -0.009240425345189035,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.02100793461128619,
+    "spec": "primary",
+    "standardized_drop": 0.021202056862718394,
+    "to_year": 2026
+  },
+  {
+    "composition_associated_difference": -0.00011344109239457001,
+    "fraction_of_same_support_drop": -0.009604076079727176,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.011811765280996457,
+    "spec": "coarse",
+    "standardized_drop": 0.011925206373391027,
+    "to_year": 2023
+  },
+  {
+    "composition_associated_difference": -0.00018575314597455567,
+    "fraction_of_same_support_drop": -0.00980744702504008,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.018940010127028603,
+    "spec": "coarse",
+    "standardized_drop": 0.01912576327300316,
+    "to_year": 2024
+  },
+  {
+    "composition_associated_difference": -0.0002836719320994524,
+    "fraction_of_same_support_drop": -0.013908183632422157,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.02039604448694283,
+    "spec": "coarse",
+    "standardized_drop": 0.02067971641904228,
+    "to_year": 2025
+  },
+  {
+    "composition_associated_difference": -0.0002626444291005843,
+    "fraction_of_same_support_drop": -0.012252762655661312,
+    "from_year": 2022,
+    "notice": "descriptive, not causal; no extrapolation; reference/cell specification conditional",
+    "raw_drop_same_support": 0.021435527356700335,
+    "spec": "coarse",
+    "standardized_drop": 0.02169817178580092,
+    "to_year": 2026
+  }
+]

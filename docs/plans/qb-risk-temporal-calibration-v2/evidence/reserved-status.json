@@ -1,0 +1,28 @@
+{
+  "checks": [
+    {
+      "returncode": 3,
+      "script": "reserved.py",
+      "stderr": "",
+      "stdout": "PREMATURE: not before 2026-12-16T01:15:00+00:00 UTC; no PBP/FTN opened"
+    },
+    {
+      "returncode": 3,
+      "script": "acquire_reserved.py",
+      "stderr": "",
+      "stdout": "PREMATURE: no acquisition before 2026-12-16T01:15:00+00:00; no network or label files opened"
+    }
+  ],
+  "freeze_sha256": "3af75413a0f8bdb9a5fa788cc3b769272deaa66f523b734aa5fe739a90b723ca",
+  "no_future_network_acquisition": true,
+  "no_reserved_label_files_opened": true,
+  "not_before_fortaleza": "2026-12-15 22:15 -03:00",
+  "not_before_utc": "2026-12-16T01:15:00+00:00",
+  "not_independent_confirmation": true,
+  "reserved_season": 2026,
+  "state": "PENDING_PREMATURE",
+  "weeks": [
+    9,
+    13
+  ]
+}

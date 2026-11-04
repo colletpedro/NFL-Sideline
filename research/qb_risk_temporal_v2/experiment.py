@@ -44,13 +44,13 @@ def select(retro,pred):
   best=min(pooled.values());chosen='M2' if 'M2' in eligible and pooled['M2']<=best+1e-10 else min(eligible,key=lambda m:pooled[m])
  return dict(selected_contextual_candidate=chosen,reference_if_none='M1',selection_years=[2024,2025],results=result,decision='candidate_for_reserved_evaluation_only' if chosen else 'no_contextual_promotion')
 
-def run(store,out):
+def run(store,out,reference_dir=None):
  store=Path(store);out=destination(out);cfg=protocol()
  # Verify the copied inputs; raw bytes beyond W8 do not exist in this snapshot.
  verify_sources(store/'inputs/v1')
  for x in json.loads((store/'additional-sources.json').read_text())['files']:
   if sha(store/x['path'])!=x['sha256']:raise ValueError('Supplemental input changed')
- reference=store/'reference-v1';check=json.loads((store/'reference-v1-check.json').read_text())
+ reference=Path(reference_dir) if reference_dir is not None else store/'reference-v1';check=json.loads((store/'reference-v1-check.json').read_text())
  if not check['passed']:raise ValueError('V1 reproduction not reconciled')
  d=known_only(load_dataset(reference/'build'));run_drift(d,store/'inputs/v1/sources.json',reference/'build/audit.json',out/'drift')
  models=out/'models';models.mkdir();allpred=[];splits=[];results=[];group_rows=[];calib={};fullpred=pd.DataFrame(index=d.index)
@@ -69,7 +69,11 @@ def run(store,out):
   if year==2026:fullpred.loc[ev.index,'M0']=pred.M0.to_numpy()
   for name in cfg['candidates']:
    p=pred[name].to_numpy();m=scores(ev.is_interception_worthy,p);base=scores(ev.is_interception_worthy,pred.M1.to_numpy());diff=paired_game_bootstrap(ev,p,pred.M1.to_numpy(),cfg['bootstrap_replicates'],cfg['seed'])
-   diagnostic=diagnostic_calibration(ev,p,cfg['bootstrap_replicates'],cfg['seed']);results.append(dict(year=year,candidate=name,model=m,M1=base,difference_vs_M1=diff,calibration_diagnostic=diagnostic,period_status='known_retrospective_diagnostic'))
+   diagnostic=diagnostic_calibration(ev,p,cfg['bootstrap_replicates'],cfg['seed']);record=dict(year=year,candidate=name,model=m,M1=base,difference_vs_M1=diff,calibration_diagnostic=diagnostic,period_status='known_retrospective_diagnostic')
+   if name=='M3':
+    raw=scores(ev.is_interception_worthy,predict_json(m3['structure'],ev));record['same_structure_before_offset_diagnostic']=raw
+    if abs(raw['roc_auc']-m['roc_auc'])>1e-12 or abs(raw['pr_auc_average_precision']-m['pr_auc_average_precision'])>1e-12:raise ValueError('Intercept shift changed order-dependent discrimination')
+   results.append(record)
    calib[f'{year}_{name}']=calibration(ev.is_interception_worthy,p,design()['calibration_edges'])
    for g in groups(ev,p,pred.M1.to_numpy()):group_rows.append(dict(year=year,candidate=name,**g))
    # Explicit temporal roles per key; models have no dependencies on evaluation labels.

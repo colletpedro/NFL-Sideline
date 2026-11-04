@@ -1,0 +1,67 @@
+{
+  "decision": "candidate_for_reserved_evaluation_only",
+  "reference_if_none": "M1",
+  "results": {
+    "M2": {
+      "difference_vs_M1": {
+        "brier": {
+          "delta": -7.15389750451065e-05,
+          "high": -2.1468545859129183e-05,
+          "low": -0.00012484992845438503
+        },
+        "ll": {
+          "delta": -0.0010270804316198257,
+          "high": -0.0004166899051765632,
+          "low": -0.0016526267328082578
+        }
+      },
+      "eligible": true,
+      "per_year_conditions_pass": true,
+      "pooled": {
+        "brier": 0.031486713677158294,
+        "expected": 1298.0561260949444,
+        "log_loss": 0.14298056179936838,
+        "mean_probability": 0.03698376335104406,
+        "n": 35098,
+        "observed_expected": 0.8813178236303195,
+        "positives": 1144,
+        "pr_auc_average_precision": 0.045095708079749816,
+        "prevalence": 0.032594449826200925,
+        "roc_auc": 0.5690781614862724
+      }
+    },
+    "M3": {
+      "difference_vs_M1": {
+        "brier": {
+          "delta": -0.00010781973652902111,
+          "high": -4.2939230511026794e-05,
+          "low": -0.000175796385536743
+        },
+        "ll": {
+          "delta": -0.0014489648345284696,
+          "high": -0.0007721888243106852,
+          "low": -0.0021515498804693858
+        }
+      },
+      "eligible": true,
+      "per_year_conditions_pass": true,
+      "pooled": {
+        "brier": 0.03145043291567438,
+        "expected": 1299.2211771878638,
+        "log_loss": 0.14255867739645972,
+        "mean_probability": 0.0370169575812828,
+        "n": 35098,
+        "observed_expected": 0.8805275191681861,
+        "positives": 1144,
+        "pr_auc_average_precision": 0.049956187047367574,
+        "prevalence": 0.032594449826200925,
+        "roc_auc": 0.5776336485273577
+      }
+    }
+  },
+  "selected_contextual_candidate": "M3",
+  "selection_years": [
+    2024,
+    2025
+  ]
+}

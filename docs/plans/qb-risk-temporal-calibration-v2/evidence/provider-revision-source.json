@@ -1,0 +1,7 @@
+{
+  "path": "inputs/provider/dictionary_revision_detail.json",
+  "url": "https://api.github.com/repos/nflverse/nflreadr/commits/b32d4340123ead6b67cf7508e5e04495f9bdd882",
+  "acquired_at_utc": "2026-11-04T13:47:06.587105+00:00",
+  "bytes": 24698,
+  "sha256": "9a15ef78a5fb155880282b6a938c0be4e93909d255a268b7161d5a88849477ac"
+}

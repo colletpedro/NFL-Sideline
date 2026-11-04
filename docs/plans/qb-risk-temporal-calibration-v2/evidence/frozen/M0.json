@@ -1,0 +1,134 @@
+{
+  "calibration_year": null,
+  "kind": "context",
+  "offset": 0.0,
+  "structure": {
+    "C": 0.1,
+    "categorical_columns": [
+      "down",
+      "qtr"
+    ],
+    "categories": [
+      [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ]
+    ],
+    "category_imputation": [
+      1.0,
+      2.0
+    ],
+    "coefficients": [
+      -0.01365315922356425,
+      0.09397268417190417,
+      0.08565058433594766,
+      0.06161662335680941,
+      -0.04690619271004169,
+      -0.1611183930967887,
+      -0.060292163713601396,
+      0.06733798901700397,
+      -0.03691174339703187,
+      -0.42201491591551593,
+      -0.2747282612868016,
+      0.05428408505420902,
+      0.6424905004315022,
+      -0.13400390808309387,
+      0.010198988765151868,
+      0.03294782426426156,
+      0.17207398289563028,
+      -0.08118547955854319
+    ],
+    "feature_names": [
+      "num__ydstogo",
+      "num__log_ydstogo",
+      "num__yardline_100",
+      "num__redzone_distance",
+      "num__quarter_seconds_remaining",
+      "num__score_differential",
+      "num__deficit",
+      "num__end_half",
+      "num__deficit_end_half",
+      "cat__down_1.0",
+      "cat__down_2.0",
+      "cat__down_3.0",
+      "cat__down_4.0",
+      "cat__qtr_1.0",
+      "cat__qtr_2.0",
+      "cat__qtr_3.0",
+      "cat__qtr_4.0",
+      "cat__qtr_5.0"
+    ],
+    "format": "qb-iw-json-logistic-v1",
+    "intercept": -3.0395405143059664,
+    "iterations": 84,
+    "mean": [
+      8.880273005017237,
+      2.1936517108582763,
+      51.33433304369762,
+      1.177537348992348,
+      416.5270342237296,
+      -2.6867309471087815,
+      5.078580037559211,
+      0.14974633517392158,
+      0.8543319225271183
+    ],
+    "median": [
+      10.0,
+      2.3978952727983707,
+      55.0,
+      0.0,
+      401.0,
+      -2.0,
+      2.0,
+      0.0,
+      0.0
+    ],
+    "missing_indicators": [],
+    "numeric_columns": [
+      "ydstogo",
+      "log_ydstogo",
+      "yardline_100",
+      "redzone_distance",
+      "quarter_seconds_remaining",
+      "score_differential",
+      "deficit",
+      "end_half",
+      "deficit_end_half"
+    ],
+    "raw_features": [
+      "down",
+      "qtr",
+      "ydstogo",
+      "yardline_100",
+      "quarter_seconds_remaining",
+      "score_differential"
+    ],
+    "scale": [
+      3.995881383496183,
+      0.47727900150268887,
+      23.349982560003134,
+      3.654269645900106,
+      274.66111602050137,
+      9.944874615123041,
+      7.0581657182617565,
+      0.35682260337005206,
+      3.327795133448037
+    ],
+    "train_years": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "variant": "context"
+  }
+}

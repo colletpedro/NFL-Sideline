@@ -43,6 +43,10 @@ def diagnostic_calibration(d,p,reps=2000,seed=20261104):
  for k in range(0,reps,20):
   w=counts[k:k+20,game].astype(float);n=w.sum(axis=1);positive=w@y;valid=(positive>0)&(positive<n)
   a=np.full(len(w),offset)
+  if not valid.any():
+   offsets.extend([float('nan')]*len(w))
+   if not flat:joint.extend([[float('nan'),float('nan')]]*len(w))
+   continue
   for _ in range(30):
    prob=expit(x[None,:]+a[:,None]);grad=(w*(prob-y)).sum(axis=1);hess=(w*prob*(1-prob)).sum(axis=1);step=grad/np.maximum(hess,1e-12);a-=np.clip(step,-3,3)
    if np.max(np.abs(step[valid]))<1e-10:break

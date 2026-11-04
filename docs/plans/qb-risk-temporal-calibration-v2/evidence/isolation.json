@@ -1,0 +1,31 @@
+{
+  "approved_site_clean": true,
+  "approved_site_head": "5b38f04e559bad5fc1b4ef25116cc0afb93293d9",
+  "changed_paths": [
+    "docs/plans/qb-risk-temporal-calibration-v2/EXPERIMENT-PROTOCOL.md",
+    "docs/plans/qb-risk-temporal-calibration-v2/RESERVED-EVALUATION.md",
+    "research/qb_risk_temporal_v2/.gitignore",
+    "research/qb_risk_temporal_v2/calibration_stats.py",
+    "research/qb_risk_temporal_v2/common.py",
+    "research/qb_risk_temporal_v2/drift.py",
+    "research/qb_risk_temporal_v2/experiment.py",
+    "research/qb_risk_temporal_v2/identity.py",
+    "research/qb_risk_temporal_v2/prepare.py",
+    "research/qb_risk_temporal_v2/protocol.json",
+    "research/qb_risk_temporal_v2/requirements.lock",
+    "research/qb_risk_temporal_v2/reserved.py",
+    "research/qb_risk_temporal_v2/run.py",
+    "research/qb_risk_temporal_v2/figures.py",
+    "research/qb_risk_temporal_v2/isolation.py",
+    "research/qb_risk_temporal_v2/reproduce.py",
+    "research/qb_risk_temporal_v2/tests/conftest.py",
+    "research/qb_risk_temporal_v2/tests/test_temporal.py"
+  ],
+  "expected_failures": 5,
+  "no_merge_push_deploy_or_publication": true,
+  "passed": true,
+  "server_18111": "COMMAND   PID        USER   FD   TYPE            DEVICE SIZE/OFF NODE NAME\nnode    83042 pedrocollet   16u  IPv4 0x542fc0bc6179a7b      0t0  TCP 127.0.0.1:18111 (LISTEN)",
+  "v1_checkout_clean": true,
+  "v1_head": "d654bd65f834f3903006a97b3074123eda26d236",
+  "v1_pinned_files_verified": 347
+}
