@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "base": "a6d3672f770e7d5db3728edbff216b229fc6aba7",
+  "approvedHead": "5b38f04e559bad5fc1b4ef25116cc0afb93293d9",
+  "v2Head": "a6d3672f770e7d5db3728edbff216b229fc6aba7",
+  "approvedClean": true,
+  "v2Clean": true,
+  "protectedPathsUnchanged": [
+    "web-ui/src",
+    "web-ui/public",
+    "web-ui/vite.config.ts",
+    "web-ui/vercel.json",
+    "core-api",
+    "etl-pipeline",
+    "supabase",
+    "research/qb_interception_risk",
+    "research/qb_risk_temporal_v2",
+    "docs/plans/qb-interception-risk-baseline-v1",
+    "docs/plans/qb-risk-temporal-calibration-v2",
+    "docs/static-snapshot-contract.md",
+    "Spec.md"
+  ],
+  "publicBuildFiles": 5,
+  "publicBuildByteEquality": true,
+  "publicAssetHashes": {
+    "assets/index-BIYXDnRB.css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+    "assets/index-BTsQyTsc.js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5"
+  },
+  "labBuildHasNoPublicDataDirectory": true,
+  "labBuildSeparate": "/Users/pedrocollet/.codex/worktrees/qb-risk-lab-v1/NFL Sideline/web-ui/risk-lab-dist"
+}

@@ -1,0 +1,24 @@
+{
+  "uiWidths": [
+    {
+      "client": 375,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "client": 305,
+      "scroll": 305,
+      "width": 320
+    }
+  ],
+  "enlarged": {
+    "client": 305,
+    "heading": "64px",
+    "scroll": 305,
+    "width": 320
+  },
+  "textSizeRestored": true,
+  "historyReloadEvidenceVerified": true,
+  "keyboardEnterEvidenceVerified": true,
+  "focusOutline": "3px rgb(215,245,107)"
+}
