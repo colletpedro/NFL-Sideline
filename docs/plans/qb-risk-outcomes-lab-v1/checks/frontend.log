@@ -7,18 +7,18 @@
 
  ✓ broadcast-journey/choice.test.ts (15 tests) 7ms
  ✓ broadcast-journey/situational/compositionCopy.test.tsx (14 tests) 38ms
- ✓ local-editorial/observations/observations.test.tsx (12 tests) 32ms
- ✓ broadcast-journey/matchup/matchup.test.tsx (12 tests) 82ms
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 30ms
+ ✓ broadcast-journey/matchup/matchup.test.tsx (12 tests) 93ms
 stderr | broadcast-journey/risk-lab/Lab.test.tsx > lab navigation, integrity and asynchronous states > shows loading, artifact-derived values, immediate filters and back/forward
 ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
 ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
 
+ ✓ broadcast-journey/risk-outcomes/model.test.tsx (6 tests) 45ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 150ms
 stderr | broadcast-journey/risk-outcomes/Entry.test.tsx > two readings, history and pinned asynchronous versions > keeps old URLs on M3 and preserves player/period/scale/position across readings and history
 ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
 ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
 
- ✓ broadcast-journey/risk-outcomes/model.test.tsx (6 tests) 38ms
- ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 155ms
 stderr | broadcast-journey/discovery.test.tsx > discovery of existing calendar games > shows the entire selected week and all weeks without a collapsed archive, and paginates searches
 Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
     at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
@@ -314,67 +314,47 @@ Warning: useLayoutEffect does nothing on the server, because its effect cannot b
     at Router (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
     at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
 
- ✓ broadcast-journey/discovery.test.tsx (10 tests) 66ms
- ✓ broadcast-journey/risk-outcomes/Entry.test.tsx (8 tests) 380ms
- ✓ broadcast-journey/risk-lab/Lab.test.tsx (15 tests) 474ms
- ✓ broadcast-journey/explorer/explorer.test.tsx (12 tests) 693ms
-   ✓ explorer real source projections (operator configured) > matches every numerator, denominator, status and source document across all supported projections without mutation 684ms
- ✓ src/services/market.test.tsx (14 tests) 35ms
- ✓ broadcast-journey/w12/w12.test.tsx (9 tests) 317ms
- ✓ broadcast-experience/editorial.test.ts (10 tests) 4ms
- ✓ broadcast-real/adapter.test.ts (8 tests) 8ms
- ✓ broadcast-journey/situational/situational.test.tsx (8 tests) 38ms
- ✓ broadcast-journey/game-story/story.test.tsx (11 tests) 261ms
- ✓ broadcast-journey/risk-outcomes/artifact.test.tsx (1 test) 1201ms
-   ✓ all pinned outcome players and periods through rendered presentation > reconciles all scientific pass probabilities, periods, two contributions, DOM numbers and chart units 1200ms
- ✓ src/services/staticDataClient.test.ts (8 tests) 8ms
- ✓ broadcast-journey/liveSelection.test.ts (11 tests) 19ms
- ✓ broadcast-journey/hub-team/hub-team.test.tsx (10 tests) 932ms
-   ✓ real 32 team documents and identity > renders all 32 teams, both perspectives, exact EPA/denominators and real units 651ms
- ✓ broadcast-journey/redzone-epa/redzone-epa.test.tsx (9 tests) 111ms
- ✓ local-editorial/local.test.tsx (7 tests) 15ms
- ✓ src/components/MatchupHero.test.tsx (8 tests) 27ms
- ✓ broadcast-journey/relations.test.ts (26 tests) 14ms
- ✓ broadcast-experience/fixtures.test.ts (4 tests) 21ms
- ✓ broadcast-journey/risk-lab/communication.test.ts (9 tests) 31ms
- ✓ broadcast-journey/score-curve/curve.test.tsx (8 tests) 59ms
- ✓ broadcast-journey/ranking-redzone/ranking-redzone.test.tsx (5 tests) 1317ms
-   ✓ immutable collection representation with compact reference > checks all full-universe positions against independent Fraction oracle, with two participants in away/home order 309ms
-   ✓ immutable collection representation with compact reference > preserves every campaign ID/order/outcome, third attempt and metric in games and both team perspectives 969ms
- ✓ local-editorial/observations/directions.test.tsx (4 tests) 57ms
- ✓ local-editorial/broadcast/broadcast.test.tsx (5 tests) 23ms
- ✓ local-editorial/broadcast/refinement.test.tsx (5 tests) 32ms
- ✓ broadcast-real/reading.test.tsx (4 tests) 31ms
- ✓ broadcast-journey/redzone-epa/visits.test.tsx (5 tests) 71ms
- ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 11ms
- ✓ broadcast-journey/reading-polish/polish.test.tsx (8 tests) 1775ms
-   ✓ real immutable representation across W1–2 > preserves all game units, EPA values, participants and weekly reference reasons 1461ms
- ✓ broadcast-journey/risk-lab/model.test.ts (4 tests) 5ms
+ ✓ broadcast-journey/discovery.test.tsx (10 tests) 86ms
+ ✓ broadcast-journey/risk-outcomes/Entry.test.tsx (8 tests) 418ms
+ ✓ broadcast-journey/risk-lab/Lab.test.tsx (15 tests) 595ms
+ ✓ broadcast-journey/w12/w12.test.tsx (9 tests) 336ms
+ ✓ src/services/market.test.tsx (14 tests) 68ms
+ ✓ broadcast-journey/explorer/explorer.test.tsx (12 tests) 884ms
+   ✓ explorer real source projections (operator configured) > matches every numerator, denominator, status and source document across all supported projections without mutation 869ms
+ ✓ broadcast-experience/editorial.test.ts (10 tests) 5ms
+ ✓ broadcast-real/adapter.test.ts (8 tests) 4ms
+ ✓ broadcast-journey/situational/situational.test.tsx (8 tests) 53ms
+ ✓ broadcast-journey/game-story/story.test.tsx (11 tests) 207ms
+ ✓ broadcast-journey/risk-outcomes/artifact.test.tsx (1 test) 1408ms
+   ✓ all pinned outcome players and periods through rendered presentation > reconciles all scientific pass probabilities, periods, two contributions, DOM numbers and chart units 1407ms
+ ✓ src/services/staticDataClient.test.ts (8 tests) 11ms
+ ✓ broadcast-journey/hub-team/hub-team.test.tsx (10 tests) 986ms
+   ✓ real 32 team documents and identity > renders all 32 teams, both perspectives, exact EPA/denominators and real units 736ms
+ ✓ broadcast-journey/ranking-redzone/ranking-redzone.test.tsx (5 tests) 1018ms
+   ✓ immutable collection representation with compact reference > checks all full-universe positions against independent Fraction oracle, with two participants in away/home order 345ms
+   ✓ immutable collection representation with compact reference > preserves every campaign ID/order/outcome, third attempt and metric in games and both team perspectives 629ms
+ ✓ broadcast-journey/liveSelection.test.ts (11 tests) 13ms
+ ✓ local-editorial/local.test.tsx (7 tests) 60ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 24ms
+ ✓ broadcast-journey/redzone-epa/redzone-epa.test.tsx (9 tests) 259ms
+ ✓ broadcast-journey/relations.test.ts (26 tests) 3ms
+ ✓ broadcast-journey/risk-lab/communication.test.ts (9 tests) 24ms
+ ✓ broadcast-experience/fixtures.test.ts (4 tests) 23ms
+ ✓ broadcast-journey/score-curve/curve.test.tsx (8 tests) 71ms
+ ✓ broadcast-journey/reading-polish/polish.test.tsx (8 tests) 1413ms
+   ✓ real immutable representation across W1–2 > preserves all game units, EPA values, participants and weekly reference reasons 1070ms
+ ✓ local-editorial/observations/directions.test.tsx (4 tests) 37ms
+ ✓ local-editorial/broadcast/refinement.test.tsx (5 tests) 19ms
+ ✓ local-editorial/broadcast/broadcast.test.tsx (5 tests) 27ms
+ ✓ broadcast-real/reading.test.tsx (4 tests) 32ms
+ ✓ broadcast-journey/redzone-epa/visits.test.tsx (5 tests) 46ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 13ms
+ ✓ broadcast-journey/risk-lab/model.test.ts (4 tests) 7ms
+ ✓ broadcast-journey/risk-lab/artifact.test.ts (1 test) 107ms
  ✓ broadcast-experience/chartScale.test.ts (2 tests) 4ms
- ✓ broadcast-journey/risk-lab/artifact.test.ts (1 test) 154ms
- ✓ broadcast-journey/guided-reading.test.tsx (2 tests) 31ms
- ✓ src/services/calendar.test.ts (9 tests) 3ms
-stderr | broadcast-journey/media/media.test.tsx > separates publication qualification and research candidates with consultable credit and limitations
-Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
-    at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
-Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
-    at LinkWithRef (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
-    at div
-    at section
-    at div
-    at MediaGallery (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/broadcast-journey/media/MediaGallery.tsx:17:25)
-    at Router (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
-    at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
-Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
-    at LinkWithRef (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
-    at div
-    at section
-    at div
-    at MediaGallery (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/broadcast-journey/media/MediaGallery.tsx:17:25)
-    at Router (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
-    at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
-
- ✓ broadcast-journey/media/media.test.tsx (3 tests) 18ms
+ ✓ broadcast-journey/guided-reading.test.tsx (2 tests) 38ms
+ ✓ src/services/calendar.test.ts (9 tests) 5ms
+ ✓ build/risk-lab.test.ts (1 test) 1ms
 stderr | broadcast-journey/season/season.test.tsx > frozen seven-week integration > renders all 107 matchup and 32 team compositions with their own period
 Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
     at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
@@ -9647,7 +9627,6 @@ stderr | broadcast-journey/season/season.test.tsx > frozen seven-week integratio
 Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
     at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
 
- ✓ broadcast-journey/situational/real-acceptance.test.tsx (1 test) 103ms
 stderr | broadcast-journey/season/season.test.tsx > frozen seven-week integration > shows seven weeks, actual counts and byes; search includes the extended period
 Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
     at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
@@ -10683,15 +10662,36 @@ stderr | broadcast-journey/season/season.test.tsx > frozen seven-week integratio
 Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
     at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
 
- ✓ broadcast-journey/season/season.test.tsx (12 tests) 1384ms
-   ✓ frozen seven-week integration > renders all 107 matchup and 32 team compositions with their own period 1265ms
- ✓ build/risk-lab.test.ts (1 test) 2ms
- ✓ src/services/runtimeClient.test.ts (2 tests) 2ms
+ ✓ broadcast-journey/season/season.test.tsx (12 tests) 1129ms
+   ✓ frozen seven-week integration > renders all 107 matchup and 32 team compositions with their own period 1022ms
+stderr | broadcast-journey/media/media.test.tsx > separates publication qualification and research candidates with consultable credit and limitations
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at div
+    at section
+    at div
+    at MediaGallery (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/broadcast-journey/media/MediaGallery.tsx:17:25)
+    at Router (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at div
+    at section
+    at div
+    at MediaGallery (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/broadcast-journey/media/MediaGallery.tsx:17:25)
+    at Router (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+
+ ✓ broadcast-journey/media/media.test.tsx (3 tests) 21ms
+ ✓ broadcast-journey/situational/real-acceptance.test.tsx (1 test) 117ms
+ ✓ src/services/runtimeClient.test.ts (2 tests) 1ms
  ✓ src/services/api.test.ts (2 tests) 2ms
 
  Test Files  46 passed (46)
       Tests  415 passed (415)
-   Start at  16:04:46
-   Duration  3.66s (transform 2.19s, setup 0ms, collect 8.82s, tests 10.09s, environment 1.24s, prepare 2.58s)
+   Start at  16:18:52
+   Duration  3.63s (transform 2.12s, setup 0ms, collect 8.70s, tests 9.94s, environment 1.40s, prepare 2.02s)
 
 JSON report written to /Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/docs/plans/qb-risk-outcomes-lab-v1/checks/frontend.json

@@ -1,0 +1,30 @@
+{
+  "mode": "Synthetic DOM PointerEvent(pointerType=touch) plus click; physical device/native touch gesture not tested; raw Input.dispatchTouchEvent unavailable in IAB",
+  "nearbyNames": [
+    "Selecionar Mason Rudolph, PIT, 1 passes",
+    "Selecionar Anthony Richardson, IND, 2 passes",
+    "Selecionar Stetson Bennett, LA, 3 passes",
+    "Selecionar Quinn Ewers, JAX, 3 passes",
+    "Selecionar Shedeur Sanders, CLE, 3 passes",
+    "Selecionar Kenny Pickett, CAR, 5 passes",
+    "Selecionar Tommy DeVito, NE, 5 passes",
+    "Selecionar Fernando Mendoza, LV, 8 passes",
+    "Selecionar Gardner Minshew, ARI, 20 passes",
+    "Selecionar Jayden Daniels, WAS, 143 passes",
+    "Selecionar Jaxson Dart, NYG, 34 passes",
+    "Selecionar Carson Wentz, MIN, 39 passes",
+    "Selecionar Drew Lock, SEA, 48 passes",
+    "Selecionar Marcus Mariota, WAS, 51 passes",
+    "Selecionar Jack Strand, ATL, 15 passes",
+    "Selecionar Andy Dalton, PHI, 1 passes",
+    "Selecionar Tua Tagovailoa, ATL, 3 passes",
+    "Selecionar Joe Fagnano, BAL, 21 passes",
+    "Selecionar Athan Kaliakmanis, WAS, 33 passes",
+    "Selecionar Case Keenum, CHI, 53 passes"
+  ],
+  "pointCount": 57,
+  "previewClass": "rl-point-preview rl-preview-inline ",
+  "scrollWidth": 375,
+  "selected": "Mason Rudolph",
+  "width": 390
+}

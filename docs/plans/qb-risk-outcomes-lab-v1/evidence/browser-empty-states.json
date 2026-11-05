@@ -1,0 +1,24 @@
+{
+  "emptyCross": {
+    "empty": "Nenhuma jogada corresponde a este cruzamento e período. Isso não significa ausência de dados na temporada inteira.",
+    "plays": 0,
+    "selected": "Kirk Cousins · detalhe das interceptações",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0029604&cross=01#jogadas"
+  },
+  "noPeriod": {
+    "alerts": [
+      "A semana 9 não tem cobertura utilizável nesta leitura. O período foi mantido, sem substituição.",
+      "Nenhum passe elegível neste recorte. Não há pontos ou taxas para comparar.",
+      "Sem passes elegíveis deste jogador no período selecionado. Nenhum valor de outro período foi usado.",
+      "Sem passes elegíveis neste período; não há estimativa para decompor.",
+      "Nenhum passe utilizável neste período.",
+      "0 jogadas nesta seleção."
+    ],
+    "metrics": "Interceptações sofridas—Desfecho registrado no PBPInterceptações esperadas—Soma das probabilidades da referência B2Sofridas menos esperadas—Diferença descritiva, sem atribuição de causa",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0035710&period=9"
+  },
+  "noPeriodM3": {
+    "metrics": "Passes classificados como interceptáveis—Classificação do provedor FTNPasses interceptáveis esperados—Soma das probabilidades do M3Interceptações sofridas—O que aconteceu nesses passes",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=passes&player=00-0035710&period=9"
+  }
+}

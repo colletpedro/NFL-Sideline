@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "base": "a2466636dec1d7feb8c3975cf984d7b505711dde",
+  "visualAncestor": "5d7d7769ce71a6864edce4c7393a75913563595f",
+  "frontend": {
+    "passed": 415,
+    "failed": 0,
+    "pending": 0,
+    "expectedFailureDefinitions": 5,
+    "allLocalQaSourcesConfigured": true
+  },
+  "python": {
+    "publication": 6,
+    "b2Scientific": 33,
+    "m3AndPrevious": 59
+  },
+  "typescript": "PASS",
+  "lint": "PASS; one preserved reading-polish warning",
+  "publicBuild": {
+    "passed": true,
+    "files": 5,
+    "hashes": {
+      "index.html": "8494c76e567b3c117d98d17914d7ff07e3948d321d3b06306a69beba60bb8d09",
+      "data/manifest.json": "deca3888625d74dd2ac81e4b500a0c1f767251387dd38a60f016be04f81dc71d",
+      "assets/index-BIYXDnRB.css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+      "assets/index-BTsQyTsc.js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5",
+      "data/seasons/2026.json": "9c378a2951c3333015d02b083e9a450424becc0bf1083fdffd34694cf08d867d"
+    },
+    "byteEqualToApproved": true
+  },
+  "browser": {
+    "allContributionsVerified": true,
+    "allCoordinatesAndIdentityProjection": true,
+    "b2PackageId": "404d23007ba98d989940f117",
+    "browserPoints": 1372,
+    "browserViews": 36,
+    "frozenGetDocuments": 276,
+    "m3PackageId": "d3739e3d9103c48fda1c417a",
+    "note": "Saved browser observations are frozen evidence, not a fresh browser run. Vitest additionally renders every player-period calculation from pinned sources.",
+    "offline": true,
+    "passed": true,
+    "realCases": 6
+  },
+  "update": {
+    "passed": true,
+    "offline": true,
+    "allPassRecordsAndProbabilitiesExact": 7970,
+    "allPlayerAndGameAggregatesExact": true,
+    "modelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+    "activePackageUnchanged": "404d23007ba98d989940f117",
+    "qaActivatedPackage": "7a06817ccdca4eac4ee8a3d3",
+    "noM3Update": true,
+    "noRetraining": true
+  },
+  "http": {
+    "passed": true,
+    "modelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+    "packageId": "404d23007ba98d989940f117",
+    "allPlayerResponsesByteEqual": 66,
+    "refusals": [
+      {
+        "path": "/__risk-outcomes/index.json",
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__risk-outcomes/index.json",
+        "method": "GET",
+        "status": 403
+      },
+      {
+        "path": "/__risk-outcomes/index.json",
+        "method": "POST",
+        "status": 403
+      },
+      {
+        "path": "/__risk-outcomes/../../.env",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "path": "/__risk-outcomes/private.json",
+        "method": "GET",
+        "status": 404
+      }
+    ],
+    "frozenBuildRoutes": 276,
+    "noPublicSnapshots": true
+  },
+  "preservation": {
+    "passed": true,
+    "files": 28295,
+    "checkouts": {
+      "b2": {
+        "head": "a2466636dec1d7feb8c3975cf984d7b505711dde",
+        "status": ""
+      },
+      "main": {
+        "head": "98cca81929f740cd026737a3acb2d8d625fcecae",
+        "status": "?? Handoff.md\n?? docs/plans/broadcast-comprehension-v1/\n?? docs/plans/visual-broadcast/\n?? editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/user-prompt.txt\n?? editorial/evaluations/2026-09-26/diagnose_both_keys.py\n?? editorial/evaluations/2026-09-26/diagnose_prod_key.py\n?? editorial/evaluations/2026-09-26/provenance/ClaimRenderer.baseline.java.txt\n?? editorial/evaluations/2026-09-26/provenance/PromptCatalog.baseline.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiClient.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GenerationFailure.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/GeminiClient.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/GenerationFailure.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/run_authorized.py\n?? editorial/local-artifacts/\n?? reports/\n?? research_notes/"
+      },
+      "visual": {
+        "head": "5d7d7769ce71a6864edce4c7393a75913563595f",
+        "status": ""
+      }
+    },
+    "approvedListener": [
+      "node      27026 pedrocollet   16u  IPv4 0xffe5a4240f61c005      0t0  TCP 127.0.0.1:18124 (LISTEN)"
+    ]
+  },
+  "noTrainingOrNewNflAcquisition": true,
+  "noMergePushDeploy": true,
+  "reviewLinksValid": true
+}

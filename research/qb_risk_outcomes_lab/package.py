@@ -82,7 +82,9 @@ def presentation(application,source_root,m3_store):
  return index,details,sources
 def safe_store(store):
  p=Path(store).resolve()
- protected=[SCIENTIFIC,M3_STORE,ROOT,MAIN/'web-ui']
+ protected=[SCIENTIFIC.parent,M3_STORE,ROOT,MAIN/'web-ui',
+  MAIN/'editorial/local-artifacts/qb-interception-risk-baseline-v1',MAIN/'editorial/local-artifacts/qb-risk-temporal-calibration-v2',
+  Path('/Users/pedrocollet/.codex/worktrees/qb-risk-lab-chart-focus-v3/NFL Sideline'),Path('/Users/pedrocollet/.codex/worktrees/qb-expected-interceptions-v1/NFL Sideline')]
  require(not any(p==x or p.is_relative_to(x) for x in protected),'Protected destination; use a separate outcome store')
  return p
 def verify_package(base):

@@ -38,10 +38,10 @@ computing gzip size...
 ../risk-outcomes-dist/assets/nyj-No6xqtcN.png                       130.61 kB
 ../risk-outcomes-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf  371.62 kB
 ../risk-outcomes-dist/assets/Archivo-Variable-DuIT1y7V.ttf          658.60 kB
-../risk-outcomes-dist/assets/Entry-Cw2LMoJq.css                      25.46 kB │ gzip:   5.39 kB
+../risk-outcomes-dist/assets/Entry-CPjdciMR.css                      25.83 kB │ gzip:   5.45 kB
 ../risk-outcomes-dist/assets/index-CedoJr3j.css                     168.18 kB │ gzip:  31.01 kB
-../risk-outcomes-dist/assets/Entry-CiSzbFSk.js                       80.92 kB │ gzip:  25.21 kB
-../risk-outcomes-dist/assets/index-ElSqX998.js                      279.23 kB │ gzip:  87.54 kB
-../risk-outcomes-dist/assets/Timeline-3vbMWAS3.js                   346.69 kB │ gzip: 103.03 kB
-✓ built in 1.01s
+../risk-outcomes-dist/assets/Entry-CafkthTD.js                       80.92 kB │ gzip:  25.20 kB
+../risk-outcomes-dist/assets/index-CeccVX2a.js                      279.23 kB │ gzip:  87.53 kB
+../risk-outcomes-dist/assets/Timeline-D869ZbtQ.js                   346.69 kB │ gzip: 103.02 kB
+✓ built in 953ms
 Lab build: 276 frozen GET documents; public snapshots excluded.

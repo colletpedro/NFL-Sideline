@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "modelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+  "packageId": "404d23007ba98d989940f117",
+  "allPlayerResponsesByteEqual": 66,
+  "refusals": [
+    {
+      "path": "/__risk-outcomes/index.json",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__risk-outcomes/index.json",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__risk-outcomes/index.json",
+      "method": "POST",
+      "status": 403
+    },
+    {
+      "path": "/__risk-outcomes/../../.env",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/__risk-outcomes/private.json",
+      "method": "GET",
+      "status": 404
+    }
+  ],
+  "frozenBuildRoutes": 276,
+  "noPublicSnapshots": true
+}

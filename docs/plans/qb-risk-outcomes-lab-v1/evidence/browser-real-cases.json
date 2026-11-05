@@ -1,0 +1,356 @@
+[
+  {
+    "caseName": "Daniel Jones",
+    "caseId": "00-0035710",
+    "beforeY": 700,
+    "contributions": [
+      {
+        "contribution": 9.376130198915003,
+        "group": "classified",
+        "passes": 17,
+        "rate": 0.5515370705244123
+      },
+      {
+        "contribution": 1.11573936328475,
+        "group": "not-classified",
+        "passes": 250,
+        "rate": 0.0044629574531389465
+      }
+    ],
+    "crosses": [
+      {
+        "count": 267,
+        "label": "Todos os passes267"
+      },
+      {
+        "count": 8,
+        "label": "Classificado como interceptável · com interceptação8"
+      },
+      {
+        "count": 9,
+        "label": "Classificado como interceptável · sem interceptação9"
+      },
+      {
+        "count": 1,
+        "label": "Não classificado como interceptável · com interceptação1"
+      },
+      {
+        "count": 249,
+        "label": "Não classificado como interceptável · sem interceptação249"
+      }
+    ],
+    "expectedTotal": 10.491869562199756,
+    "metrics": [
+      {
+        "key": "observed-interceptions",
+        "value": "9"
+      },
+      {
+        "key": "expected-interceptions",
+        "value": "10,49"
+      },
+      {
+        "key": "difference-interceptions",
+        "value": "-1,49"
+      }
+    ],
+    "name": "Daniel Jones",
+    "scrollY": 586,
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0035710"
+  },
+  {
+    "caseName": "Kirk Cousins",
+    "caseId": "00-0029604",
+    "beforeY": 586,
+    "contributions": [
+      {
+        "contribution": 3.860759493670885,
+        "group": "classified",
+        "passes": 7,
+        "rate": 0.5515370705244123
+      },
+      {
+        "contribution": 1.218387384706947,
+        "group": "not-classified",
+        "passes": 273,
+        "rate": 0.0044629574531389465
+      }
+    ],
+    "crosses": [
+      {
+        "count": 280,
+        "label": "Todos os passes280"
+      },
+      {
+        "count": 5,
+        "label": "Classificado como interceptável · com interceptação5"
+      },
+      {
+        "count": 2,
+        "label": "Classificado como interceptável · sem interceptação2"
+      },
+      {
+        "count": 0,
+        "label": "Não classificado como interceptável · com interceptação0"
+      },
+      {
+        "count": 273,
+        "label": "Não classificado como interceptável · sem interceptação273"
+      }
+    ],
+    "expectedTotal": 5.0791468783778315,
+    "metrics": [
+      {
+        "key": "observed-interceptions",
+        "value": "5"
+      },
+      {
+        "key": "expected-interceptions",
+        "value": "5,08"
+      },
+      {
+        "key": "difference-interceptions",
+        "value": "-0,08"
+      }
+    ],
+    "name": "Kirk Cousins",
+    "scrollY": 703,
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0029604"
+  },
+  {
+    "caseName": "Sam Darnold",
+    "caseId": "00-0034869",
+    "beforeY": 703,
+    "contributions": [
+      {
+        "contribution": 4.412296564195296,
+        "group": "classified",
+        "passes": 8,
+        "rate": 0.5515370705244123
+      },
+      {
+        "contribution": 0.897054448080939,
+        "group": "not-classified",
+        "passes": 201,
+        "rate": 0.0044629574531389465
+      }
+    ],
+    "crosses": [
+      {
+        "count": 209,
+        "label": "Todos os passes209"
+      },
+      {
+        "count": 7,
+        "label": "Classificado como interceptável · com interceptação7"
+      },
+      {
+        "count": 1,
+        "label": "Classificado como interceptável · sem interceptação1"
+      },
+      {
+        "count": 2,
+        "label": "Não classificado como interceptável · com interceptação2"
+      },
+      {
+        "count": 199,
+        "label": "Não classificado como interceptável · sem interceptação199"
+      }
+    ],
+    "expectedTotal": 5.3093510122762355,
+    "metrics": [
+      {
+        "key": "observed-interceptions",
+        "value": "9"
+      },
+      {
+        "key": "expected-interceptions",
+        "value": "5,31"
+      },
+      {
+        "key": "difference-interceptions",
+        "value": "+3,69"
+      }
+    ],
+    "name": "Sam Darnold",
+    "scrollY": 586,
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0034869"
+  },
+  {
+    "caseName": "Jordan Love",
+    "caseId": "00-0036264",
+    "beforeY": 586,
+    "contributions": [
+      {
+        "contribution": 7.169981916817356,
+        "group": "classified",
+        "passes": 13,
+        "rate": 0.5515370705244123
+      },
+      {
+        "contribution": 1.3344242784885612,
+        "group": "not-classified",
+        "passes": 299,
+        "rate": 0.0044629574531389465
+      }
+    ],
+    "crosses": [
+      {
+        "count": 312,
+        "label": "Todos os passes312"
+      },
+      {
+        "count": 6,
+        "label": "Classificado como interceptável · com interceptação6"
+      },
+      {
+        "count": 7,
+        "label": "Classificado como interceptável · sem interceptação7"
+      },
+      {
+        "count": 0,
+        "label": "Não classificado como interceptável · com interceptação0"
+      },
+      {
+        "count": 299,
+        "label": "Não classificado como interceptável · sem interceptação299"
+      }
+    ],
+    "expectedTotal": 8.504406195305917,
+    "metrics": [
+      {
+        "key": "observed-interceptions",
+        "value": "6"
+      },
+      {
+        "key": "expected-interceptions",
+        "value": "8,50"
+      },
+      {
+        "key": "difference-interceptions",
+        "value": "-2,50"
+      }
+    ],
+    "name": "Jordan Love",
+    "scrollY": 674,
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0036264"
+  },
+  {
+    "caseName": "Aaron Rodgers",
+    "caseId": "00-0023459",
+    "beforeY": 674,
+    "contributions": [
+      {
+        "contribution": 2.75768535262206,
+        "group": "classified",
+        "passes": 5,
+        "rate": 0.5515370705244123
+      },
+      {
+        "contribution": 1.245165129425781,
+        "group": "not-classified",
+        "passes": 279,
+        "rate": 0.0044629574531389465
+      }
+    ],
+    "crosses": [
+      {
+        "count": 284,
+        "label": "Todos os passes284"
+      },
+      {
+        "count": 1,
+        "label": "Classificado como interceptável · com interceptação1"
+      },
+      {
+        "count": 4,
+        "label": "Classificado como interceptável · sem interceptação4"
+      },
+      {
+        "count": 5,
+        "label": "Não classificado como interceptável · com interceptação5"
+      },
+      {
+        "count": 274,
+        "label": "Não classificado como interceptável · sem interceptação274"
+      }
+    ],
+    "expectedTotal": 4.002850482047841,
+    "metrics": [
+      {
+        "key": "observed-interceptions",
+        "value": "6"
+      },
+      {
+        "key": "expected-interceptions",
+        "value": "4,00"
+      },
+      {
+        "key": "difference-interceptions",
+        "value": "+2,00"
+      }
+    ],
+    "name": "Aaron Rodgers",
+    "scrollY": 674,
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0023459"
+  },
+  {
+    "caseName": "Andy Dalton",
+    "caseId": "00-0027973",
+    "beforeY": 674,
+    "contributions": [
+      {
+        "contribution": 0.551537070524412,
+        "group": "classified",
+        "passes": 1,
+        "rate": 0.5515370705244123
+      },
+      {
+        "contribution": 0,
+        "group": "not-classified",
+        "passes": 0,
+        "rate": 0.0044629574531389465
+      }
+    ],
+    "crosses": [
+      {
+        "count": 1,
+        "label": "Todos os passes1"
+      },
+      {
+        "count": 1,
+        "label": "Classificado como interceptável · com interceptação1"
+      },
+      {
+        "count": 0,
+        "label": "Classificado como interceptável · sem interceptação0"
+      },
+      {
+        "count": 0,
+        "label": "Não classificado como interceptável · com interceptação0"
+      },
+      {
+        "count": 0,
+        "label": "Não classificado como interceptável · sem interceptação0"
+      }
+    ],
+    "expectedTotal": 0.551537070524412,
+    "metrics": [
+      {
+        "key": "observed-interceptions",
+        "value": "1"
+      },
+      {
+        "key": "expected-interceptions",
+        "value": "0,55"
+      },
+      {
+        "key": "difference-interceptions",
+        "value": "+0,45"
+      }
+    ],
+    "name": "Andy Dalton",
+    "scrollY": 820.5,
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0027973"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "browserViews": 36,
+  "browserPoints": 1372,
+  "questions": [
+    "M3_interception_worthy",
+    "B2_observed_interception"
+  ],
+  "allAvailablePeriods": true,
+  "allLaunchersNoVolumeCut": true,
+  "allDisplayedCoordinatesCompared": true,
+  "identityLineProjectionVerified": true,
+  "mandatoryCases": [
+    "Daniel Jones",
+    "Kirk Cousins",
+    "Sam Darnold",
+    "Jordan Love",
+    "Aaron Rodgers",
+    "Andy Dalton"
+  ],
+  "decompositionsMatch": true,
+  "rodgersNonClassifiedInterceptions": 5,
+  "tolerance": 1e-10,
+  "m3PackageId": "d3739e3d9103c48fda1c417a",
+  "b2PackageId": "404d23007ba98d989940f117"
+}

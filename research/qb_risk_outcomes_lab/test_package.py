@@ -51,5 +51,5 @@ def test_zero_events_small_support_and_identity_trades():
  traded=plays+[dict(**{**plays[0],'id':'h:2','gameId':'h','team':'B'})];assert p.aggregate(traded)['games']==2
 
 def test_protected_destination_refused():
- for path in [p.SCIENTIFIC,p.M3_STORE,p.ROOT,p.MAIN/'web-ui']:
+ for path in [p.SCIENTIFIC,p.SCIENTIFIC.parent/'another-run',p.M3_STORE,p.ROOT,p.MAIN/'web-ui',p.MAIN/'editorial/local-artifacts/qb-risk-temporal-calibration-v2',p.MAIN/'editorial/local-artifacts/qb-interception-risk-baseline-v1']:
   with pytest.raises(ValueError):p.safe_store(path)

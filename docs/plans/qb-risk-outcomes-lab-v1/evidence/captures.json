@@ -1,0 +1,74 @@
+{
+  "b2-chart-desktop.jpg": {
+    "sha256": "b8d03338ff97f62ec0514a1be1224f3f4150b9012d23ceb4f0fccc3a36e9639b",
+    "bytes": 72788
+  },
+  "b2-opening-320.jpg": {
+    "sha256": "57712de401ae2efca75144ae209bcefeb8c16f80c3b68bd2b7437b4943bdc1c5",
+    "bytes": 39848
+  },
+  "b2-opening-desktop.jpg": {
+    "sha256": "5e510bda1fd400c393fb4fcf4a4acb3014bf32a7ea88d09689d637f2a96add15",
+    "bytes": 96629
+  },
+  "daniel-b2-calculation-390.jpg": {
+    "sha256": "c44a94c3d5fafa47c8bbf9bfa2ca49c2ca6db3714cc74eeb555f63286f253cdc",
+    "bytes": 52394
+  },
+  "daniel-b2-calculation-desktop.jpg": {
+    "sha256": "ed5f8f35fa2096346479a1dcdedaa2644ede1225b1bcdf707c1d4c3008521aa6",
+    "bytes": 109639
+  },
+  "daniel-b2-desktop.jpg": {
+    "sha256": "6ff4aab91f1000d75bd272ce8a2efc8999fa4b16727448d03df9eaf35a7d10fb",
+    "bytes": 96284
+  },
+  "daniel-m3-desktop.jpg": {
+    "sha256": "a5247c3a06ab4a6365af8dfa81930cd8f1869779c8cfd19d8516821e96d965d3",
+    "bytes": 83335
+  },
+  "empty-cross-390.jpg": {
+    "sha256": "79c88d9f492de23c3bc1b0afc0951fbe5c0301a5916f0526f58f897b88a30474",
+    "bytes": 48992
+  },
+  "keyboard-preview-390.jpg": {
+    "sha256": "f18862743c33c3c14383bb1ef90faab97988f1134302813df55fff5d9c27053f",
+    "bytes": 34863
+  },
+  "load-failure-390.jpg": {
+    "sha256": "36072b4582291eb05a833f45701c34dfbaf0934519f9f009c882718dd3a22b32",
+    "bytes": 43579
+  },
+  "loading-390.jpg": {
+    "sha256": "11c22c9b9a67efe5a45da6d764b82629b8f8d6d5a7388d9edbbbd0a8df516575",
+    "bytes": 30798
+  },
+  "m3-text200-320.jpg": {
+    "sha256": "53dc29461b4dc12026afcf558db18bddd16e0b5b25e2383ec10b3d8c81534b17",
+    "bytes": 32849
+  },
+  "rodgers-evidence-390.jpg": {
+    "sha256": "900aad18611aadb0c5178fda996146b8b55b2e9c7a53e7721807ff5142ce924b",
+    "bytes": 42028
+  },
+  "text200-320-before.jpg": {
+    "sha256": "257091475ac21ada3f78ecfc76b44478376b1053709833df6adf110eefc0f4e9",
+    "bytes": 32556
+  },
+  "text200-320-calculation.jpg": {
+    "sha256": "2e11d0b04c7f2708e8424f65d63e5939f59600740cec7c618fc5b5d3c0202184",
+    "bytes": 36659
+  },
+  "text200-320-chart.jpg": {
+    "sha256": "3533b0804d7b0b08e3bb00679ed686838300f6d5bc8d6d33b452f3beb4d171d4",
+    "bytes": 31918
+  },
+  "text200-320-opening.jpg": {
+    "sha256": "2e3442708c395689c1c5deabed71a780c38ed07bbce0efc522e88174f6cc4640",
+    "bytes": 31985
+  },
+  "touch-dense-390.jpg": {
+    "sha256": "3a8c36ab9760a9796aae4a8274ebc191ef8df0ec24fb936d1f7203bc527a93cc",
+    "bytes": 38050
+  }
+}
