@@ -7,6 +7,7 @@ import Collective from './Collective';
 import {Metrics} from './Metrics';
 import './lab.css';
 import './communication.css';
+import './chart-focus.css';
 const n=(x:number,d=1)=>(Math.abs(x)<.5*10**-d?0:x).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const signed=(x:number,d=1)=>(x>0?'+':'')+n(x,d);
 const pct=(x:number|null)=>x===null?'—':n(100*x)+'%';
@@ -45,9 +46,10 @@ function PlayerDetail({index,q,id,period}:{index:Index;q:URLSearchParams;id:stri
 }
 function Content({index,q}:{index:Index;q:URLSearchParams}){const [,setQ]=useSearchParams();let r:ReturnType<typeof route>;try{r=route(q,index);}catch(e){return <section role="alert" className="rl-state"><h2>Esta seleção não está disponível</h2><p>{e instanceof Error?e.message:'URL inválida.'}</p><Link to="/?view=risk-lab&season=2026">Abrir visão geral do laboratório</Link></section>;}
  const weeks=index.coverage.weeks;
- return <><div className="rl-period"><label htmlFor="risk-period">Período<select id="risk-period" value={r.period} onChange={e=>setQ(new URLSearchParams(href(q,{period:e.target.value,group:null,game:null,play:null,page:null}).split('?')[1]),{preventScrollReset:true})}><option value="all">Acumulado disponível · W{weeks[0]}–{weeks[weeks.length-1]}</option>{r.period!=='all'&&!weeks.includes(Number(r.period))?<option value={r.period}>Semana {r.period} · sem cobertura utilizável</option>:null}{weeks.map(w=><option key={w} value={w}>Semana {w}</option>)}</select></label><a href="#metodo">Entender o cálculo</a></div>
+ const periodControl=<label htmlFor="risk-period">Período<select id="risk-period" value={r.period} onChange={e=>setQ(new URLSearchParams(href(q,{period:e.target.value,group:null,game:null,play:null,page:null}).split('?')[1]),{preventScrollReset:true})}><option value="all">Acumulado disponível · W{weeks[0]}–{weeks[weeks.length-1]}</option>{r.period!=='all'&&!weeks.includes(Number(r.period))?<option value={r.period}>Semana {r.period} · sem cobertura utilizável</option>:null}{weeks.map(w=><option key={w} value={w}>Semana {w}</option>)}</select></label>;
+ return <>
  {q.has('volume')||q.has('search')||q.has('sort')?<p className="rl-legacy-note">Este link preserva parâmetros da lista anterior. A visão coletiva inclui todos os lançadores do recorte de posição e período, sem corte de volume nem busca por nome. <Link to={href(q,{volume:null,search:null,sort:null})}>Limpar parâmetros antigos</Link>.</p>:null}
- <Collective index={index} q={q}/>
+ <Collective index={index} q={q} periodControl={periodControl}/>
  {r.player?<PlayerDetail index={index} q={q} id={r.player} period={r.period}/>:null}
  <Method index={index}/></>;
 }
