@@ -100,3 +100,4 @@ web-ui/curve-dist/
 
 # Isolated laboratory build; never part of the approved public build.
 web-ui/risk-lab-dist/
+web-ui/risk-outcomes-dist/

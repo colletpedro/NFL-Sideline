@@ -1,0 +1,13 @@
+
+> web-ui@0.0.0 lint
+> eslint .
+
+
+/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/broadcast-journey/reading-polish/main.tsx
+  10:10  warning  Fast refresh only works when a file has exports. Move your component(s) to a separate file  react-refresh/only-export-components
+
+/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/broadcast-journey/risk-outcomes/main.tsx
+  16:10  warning  Fast refresh only works when a file has exports. Move your component(s) to a separate file  react-refresh/only-export-components
+
+✖ 2 problems (0 errors, 2 warnings)
+
