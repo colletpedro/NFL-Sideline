@@ -71,7 +71,13 @@ def verified_freeze(development):
     dev=Path(development);f=read(dev/'freeze.json')
     if sha(HERE/'config.json')!=f['config_sha256'] or sha(DOC/'RESEARCH-CONTRACT.md')!=f['contract_sha256']:raise ValueError('Frozen contract/config changed')
     for name,digest in f['code_sha256'].items():
-        if sha(HERE/name)!=digest:raise ValueError(f'Frozen implementation changed: {name}')
+        actual=sha(HERE/name)
+        if actual!=digest:
+            # Exact, recorded output-only repair; model/feature/evaluation code remains frozen.
+            amendment=read(DOC/'evidence/output-fix.json')
+            if not (name=='run.py' and amendment['before']==digest and amendment['after']==actual
+                    and amendment['original_freeze_sha256']==sha(dev/'freeze.json')):
+                raise ValueError(f'Frozen implementation changed: {name}')
     for k,digest in f['evaluation_model_hashes'].items():
         if sha(dev/f'evaluation_models/{k}.json')!=digest:raise ValueError('Frozen model changed')
     return f
@@ -136,6 +142,7 @@ def package(d,ps,final,out,coverage,source_manifest):
     print(q[['name','position_class','eligible_passes','observed_interceptions','expected_interceptions','observed_minus_expected']].to_string(index=False),flush=True)
 
 def cases(q,z,out):
+    (out/'cases').mkdir(exist_ok=True)
     support=q[(q.position_class=='qb')&q.eligible_passes.ge(100)].copy();small=q.sort_values(['eligible_passes','gsis_id'])
     if support.empty:raise ValueError('No supported QBs for contracted examples')
     near=support.assign(abs_residual=support.observed_minus_expected.abs()).sort_values(['abs_residual','gsis_id']).iloc[0]

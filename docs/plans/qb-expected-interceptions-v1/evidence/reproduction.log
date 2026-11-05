@@ -1,0 +1,264 @@
+         size  sum      mean
+season                      
+2022    18008  418  0.023212
+2023    18248  430  0.023564
+2024    17740  387  0.021815
+2025    17358  380  0.021892
+2026     7970  170  0.021330
+{
+  "selected": "B2",
+  "C": 0.1,
+  "context_useful": false,
+  "dev_metrics": [
+    {
+      "model": "B0",
+      "group": "all",
+      "n": 35988,
+      "observed_interceptions": 817,
+      "expected_interceptions": 838.4958353313993,
+      "observed_expected_ratio": 0.9743638138370675,
+      "prevalence": 0.022702011781705014,
+      "mean_prediction": 0.02329931742056795,
+      "log_loss": 0.1083877933497849,
+      "brier": 0.02218715012789876,
+      "average_precision": 0.022281899038967753,
+      "roc_auc": 0.4901473851812722
+    },
+    {
+      "model": "B1",
+      "group": "all",
+      "n": 35988,
+      "observed_interceptions": 817,
+      "expected_interceptions": 650.4335429222403,
+      "observed_expected_ratio": 1.2560852817175094,
+      "prevalence": 0.022702011781705014,
+      "mean_prediction": 0.01807362295549184,
+      "log_loss": 0.04692718141402504,
+      "brier": 0.01264756438885035,
+      "average_precision": 0.4784322925548465,
+      "roc_auc": 0.9249249000520521
+    },
+    {
+      "model": "B2",
+      "group": "all",
+      "n": 35988,
+      "observed_interceptions": 817,
+      "expected_interceptions": 692.147419776114,
+      "observed_expected_ratio": 1.180384375721969,
+      "prevalence": 0.022702011781705014,
+      "mean_prediction": 0.019232728125378292,
+      "log_loss": 0.046573521085655864,
+      "brier": 0.01247617506713363,
+      "average_precision": 0.4784322925548465,
+      "roc_auc": 0.9249249000520521
+    },
+    {
+      "model": "C",
+      "group": "all",
+      "n": 35988,
+      "observed_interceptions": 817,
+      "expected_interceptions": 652.2494056021993,
+      "observed_expected_ratio": 1.252588339648531,
+      "prevalence": 0.022702011781705014,
+      "mean_prediction": 0.018124080404640416,
+      "log_loss": 0.04702175615377407,
+      "brier": 0.012687588158111919,
+      "average_precision": 0.4966168766377297,
+      "roc_auc": 0.9261271047587156
+    },
+    {
+      "model": "B0",
+      "group": "ftn_1",
+      "n": 1329,
+      "observed_interceptions": 708,
+      "expected_interceptions": 30.95342268200502,
+      "observed_expected_ratio": 22.873076340329902,
+      "prevalence": 0.5327313769751693,
+      "mean_prediction": 0.02329076198796465,
+      "log_loss": 2.013818494422862,
+      "brier": 0.5084535599388128,
+      "average_precision": 0.5471803785170253,
+      "roc_auc": 0.5274400229263899
+    },
+    {
+      "model": "B1",
+      "group": "ftn_1",
+      "n": 1329,
+      "observed_interceptions": 708,
+      "expected_interceptions": 559.2347128591674,
+      "observed_expected_ratio": 1.2660158314927354,
+      "prevalence": 0.5327313769751693,
+      "mean_prediction": 0.42079361388951647,
+      "log_loss": 0.7148748759015588,
+      "brier": 0.2607172461060596,
+      "average_precision": 0.5471803785170253,
+      "roc_auc": 0.5274400229263899
+    },
+    {
+      "model": "B2",
+      "group": "ftn_1",
+      "n": 1329,
+      "observed_interceptions": 708,
+      "expected_interceptions": 595.1911692283768,
+      "observed_expected_ratio": 1.1895337777236714,
+      "prevalence": 0.5327313769751693,
+      "mean_prediction": 0.44784888580013305,
+      "log_loss": 0.7055597218111683,
+      "brier": 0.2560777155932116,
+      "average_precision": 0.5471803785170253,
+      "roc_auc": 0.5274400229263899
+    },
+    {
+      "model": "C",
+      "group": "ftn_1",
+      "n": 1329,
+      "observed_interceptions": 708,
+      "expected_interceptions": 556.8723914812513,
+      "observed_expected_ratio": 1.2713864268198989,
+      "prevalence": 0.5327313769751693,
+      "mean_prediction": 0.4190160959226872,
+      "log_loss": 0.7174387890544157,
+      "brier": 0.26180438933132216,
+      "average_precision": 0.559482117767796,
+      "roc_auc": 0.5273115168718214
+    },
+    {
+      "model": "B0",
+      "group": "ftn_0",
+      "n": 34659,
+      "observed_interceptions": 109,
+      "expected_interceptions": 807.5424126493944,
+      "observed_expected_ratio": 0.13497743064960707,
+      "prevalence": 0.003144926281773854,
+      "mean_prediction": 0.023299645478790338,
+      "log_loss": 0.03532401765729178,
+      "brier": 0.00354125559433735,
+      "average_precision": 0.00314688087000964,
+      "roc_auc": 0.5003113424235586
+    },
+    {
+      "model": "B1",
+      "group": "ftn_0",
+      "n": 34659,
+      "observed_interceptions": 109,
+      "expected_interceptions": 91.19883006307307,
+      "observed_expected_ratio": 1.1951907708094023,
+      "prevalence": 0.003144926281773854,
+      "mean_prediction": 0.002631317408554,
+      "log_loss": 0.021314714638470855,
+      "brier": 0.003135327826855741,
+      "average_precision": 0.00314688087000964,
+      "roc_auc": 0.5003113424235586
+    },
+    {
+      "model": "B2",
+      "group": "ftn_0",
+      "n": 34659,
+      "observed_interceptions": 109,
+      "expected_interceptions": 96.95625054773713,
+      "observed_expected_ratio": 1.1242183911220147,
+      "prevalence": 0.003144926281773854,
+      "mean_prediction": 0.002797433582842469,
+      "log_loss": 0.021304682955178764,
+      "brier": 0.0031352694622645448,
+      "average_precision": 0.00314688087000964,
+      "roc_auc": 0.5003113424235586
+    },
+    {
+      "model": "C",
+      "group": "ftn_0",
+      "n": 34659,
+      "observed_interceptions": 109,
+      "expected_interceptions": 95.37701412094813,
+      "observed_expected_ratio": 1.1428330086091443,
+      "prevalence": 0.003144926281773854,
+      "mean_prediction": 0.0027518686090466584,
+      "log_loss": 0.021314602550815163,
+      "brier": 0.003135199781090178,
+      "average_precision": 0.004172548831374701,
+      "roc_auc": 0.5094993295184481
+    }
+  ]
+}
+model group     n  observed_interceptions  expected_interceptions  observed_expected_ratio  prevalence  mean_prediction  log_loss    brier  average_precision  roc_auc
+   B0   all 17358                     380              397.013297                 0.957147    0.021892         0.022872  0.105335 0.021414           0.021892 0.500000
+   B1   all 17358                     380              313.133402                 1.213540    0.021892         0.018040  0.050298 0.012358           0.447002 0.894012
+   B2   all 17358                     380              364.505621                 1.042508    0.021892         0.020999  0.049853 0.012188           0.447002 0.894012
+    C   all 17358                     380              312.313598                 1.216726    0.021892         0.017992  0.050521 0.012512           0.444712 0.901749
+   B0 ftn_1   553                     305               12.648252                24.114005    0.551537         0.022872  2.093995 0.526831           0.551537 0.500000
+   B1 ftn_1   553                     305              264.075771                 1.154972    0.551537         0.477533  0.698792 0.252821           0.551537 0.500000
+   B2 ftn_1   553                     305              311.588832                 0.978854    0.551537         0.563452  0.688114 0.247486           0.551537 0.500000
+    C ftn_1   553                     305              262.278029                 1.162888    0.551537         0.474282  0.708747 0.257675           0.534589 0.464014
+   B0 ftn_0 16805                      75              384.365046                 0.195127    0.004463         0.022872  0.039895 0.004782           0.004463 0.500000
+   B1 ftn_0 16805                      75               49.057631                 1.528814    0.004463         0.002919  0.028958 0.004445           0.004463 0.500000
+   B2 ftn_0 16805                      75               52.916788                 1.417320    0.004463         0.003149  0.028850 0.004445           0.004463 0.500000
+    C ftn_0 16805                      75               50.035569                 1.498934    0.004463         0.002977  0.028861 0.004445           0.005696 0.541949
+Fixed XINT-FTN-B2-v1-fit2025 ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8
+              name position_class  eligible_passes  observed_interceptions  expected_interceptions  observed_minus_expected
+           AJ Cole          other                1                       0                0.004463                -0.004463
+     Aaron Rodgers             qb              284                       6                4.002850                 1.997150
+       Andy Dalton             qb                1                       1                0.551537                 0.448463
+Anthony Richardson             qb                2                       0                0.008926                -0.008926
+  Antonio Williams          other                1                       0                0.004463                -0.004463
+ Athan Kaliakmanis             qb               33                       1                0.694352                 0.305648
+    Baker Mayfield             qb              110                       2                1.585074                 0.414926
+            Bo Nix             qb              250                       3                5.492332                -2.492332
+       Brock Purdy             qb              209                       4                4.215203                -0.215203
+       Bryce Young             qb              267                       5                3.379906                 1.620094
+       C.J. Stroud             qb              243                       1                2.725721                -1.725721
+    Caleb Williams             qb              158                       1                1.252221                -0.252221
+          Cam Ward             qb              248                       5                3.842184                 1.157816
+  Cameron Johnston          other                1                       0                0.004463                -0.004463
+      Carson Wentz             qb               39                       0                0.721129                -0.721129
+       Case Keenum             qb               53                       1                0.783611                 0.216389
+       Cooper Rush             qb               39                       4                2.909426                 1.090574
+      Dak Prescott             qb              302                       5                5.177332                -0.177332
+      Daniel Jones             qb              267                       9               10.491870                -1.491870
+    Deshaun Watson             qb              249                       3                4.393721                -1.393721
+        Drake Maye             qb              233                       8                5.963536                 2.036464
+         Drew Lock             qb               48                       0                0.761296                -0.761296
+       Dyami Brown          other                1                       0                0.004463                -0.004463
+   Efton Chism III          other                1                       0                0.004463                -0.004463
+  Fernando Mendoza             qb                8                       0                0.035704                -0.035704
+   Gardner Minshew             qb               20                       0                0.089259                -0.089259
+        Geno Smith             qb              238                       3                3.797554                -0.797554
+     J.J. McCarthy             qb               44                       1                1.837592                -0.837592
+       Jack Strand             qb               15                       1                0.066944                 0.933056
+   Jacoby Brissett             qb              303                       7                5.728869                 1.271131
+       Jalen Hurts             qb              154                       3                2.875592                 0.124408
+     Jalon Daniels             qb               98                       5                3.719815                 1.280185
+    Jameis Winston             qb              158                       5                3.987592                 1.012408
+        Jared Goff             qb              248                       1                3.295110                -2.295110
+Jaxon Smith-Njigba          other                1                       0                0.004463                -0.004463
+       Jaxson Dart             qb               34                       0                0.698815                -0.698815
+    Jayden Daniels             qb              143                       0                0.638203                -0.638203
+        Joe Burrow             qb              267                       6                4.474054                 1.525946
+       Joe Fagnano             qb               21                       1                0.640796                 0.359204
+       Jordan Love             qb              312                       6                8.504406                -2.504406
+        Josh Allen             qb              205                       5                4.744425                 0.255575
+    Justin Herbert             qb              210                      10                8.049185                 1.950815
+       Kai Kroeger          other                1                       0                0.004463                -0.004463
+     Kenny Pickett             qb                5                       0                0.022315                -0.022315
+      Kirk Cousins             qb              280                       5                5.079147                -0.079147
+      Kyler Murray             qb              153                       3                2.871129                 0.128871
+     Lamar Jackson             qb               95                       1                2.065203                -1.065203
+      Malik Willis             qb              182                       5                3.547629                 1.452371
+    Marcus Mariota             qb               51                       0                0.774685                -0.774685
+     Mason Rudolph             qb                1                       0                0.004463                -0.004463
+  Matthew Stafford             qb              300                       8                8.450851                -0.450851
+ Michael Penix Jr.             qb              167                       5                4.574833                 0.425167
+    Michael Wilson          other                1                       0                0.004463                -0.004463
+   Patrick Mahomes             qb              232                       4                4.317851                -0.317851
+       Quinn Ewers             qb                3                       0                0.013389                -0.013389
+       Sam Darnold             qb              209                       9                5.309351                 3.690649
+   Shedeur Sanders             qb                3                       0                0.013389                -0.013389
+   Stetson Bennett             qb                3                       0                0.013389                -0.013389
+      Tanner McKee             qb              114                       2                2.149999                -0.149999
+      Tommy DeVito             qb                5                       0                0.022315                -0.022315
+        Tre Harris          other                1                       0                0.004463                -0.004463
+   Trevor Lawrence             qb              197                       4                4.708721                -0.708721
+    Tua Tagovailoa             qb                3                       1                0.560463                 0.439537
+     Tyler Huntley             qb              110                       1                2.679222                -1.679222
+      Tyler Shough             qb              272                       6                6.137591                -0.137591
+      Tyson Bagent             qb               63                       3                2.469463                 0.530537
+OFFLINE REPRODUCTION PASS: 156 byte-identical scientific files

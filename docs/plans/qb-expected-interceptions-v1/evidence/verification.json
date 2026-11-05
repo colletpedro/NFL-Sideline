@@ -1,0 +1,58 @@
+{
+  "consumer": {
+    "allKeysUnique": true,
+    "allPlayerSums": true,
+    "exactStoredDecomposition": true,
+    "integrityAllScientificFiles": true,
+    "interceptions": 170,
+    "passed": true,
+    "passes": 7970,
+    "players": 66,
+    "unchangedFixedModelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8"
+  },
+  "dataUpdate": {
+    "allKeysLabelsTargetsProbabilitiesAuditedNamesAndPositionsExact": true,
+    "noFit": true,
+    "note": "Sources manifest dates/provenance differ from full research acquisition by scope; semantic predictions and aggregates agree. No active laboratory pointer written.",
+    "offlineReplay": true,
+    "passed": true,
+    "passesCompared": 7970,
+    "pinnedModelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+    "revision": {
+      "added": [],
+      "changed": [],
+      "current_predictions_sha256": "a4a1b644abc0474829f4476f47e92f02bf22d6857c2968f359eb7b042a0e71e0",
+      "previous_predictions_sha256": "a4a1b644abc0474829f4476f47e92f02bf22d6857c2968f359eb7b042a0e71e0",
+      "removed": []
+    }
+  },
+  "figureReview": [
+    "calibration_global_and_ftn",
+    "performance_vs_references_2025",
+    "qb_observed_vs_expected_2026",
+    "small_support_all_positions_2026",
+    "expected_decomposition_2026"
+  ],
+  "newTests": 33,
+  "noAutomaticRetraining": true,
+  "noMergePushDeploy": true,
+  "noProductionOrUiChange": true,
+  "offlineEnvironment": {
+    "fixedModelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+    "inferenceModelAndCodeHashesVerified": true,
+    "install": "--no-index from own copied wheelhouse",
+    "passed": true,
+    "result": "PASS: fresh offline environment, 7970 predictions byte-numeric identical",
+    "venv": "/var/folders/7t/l3c1txvj58x4rfm4njhyb_8h0000gn/T/nfl-xint-offline-env-mu4dc44v/.venv"
+  },
+  "offlineReproductionByteEqualFiles": 156,
+  "packageScientificFilesVerified": 220,
+  "passed": true,
+  "preservedTests": 59,
+  "recovery": {
+    "allHashesVerified": true,
+    "bytes": 295122487,
+    "files": 565
+  },
+  "reviewLinksValid": true
+}

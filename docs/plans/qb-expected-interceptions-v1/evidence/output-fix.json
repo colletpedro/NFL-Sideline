@@ -1,0 +1,6 @@
+{
+  "after": "9daee27bdce97fb81ad17fc80960459792a7cae62b2a8cb894a72a8685588523",
+  "before": "9573d49874ef45156974920c717acae82c2757a21e630667224ad2818bce9b72",
+  "original_freeze_sha256": "db3274be82a6eeaf292875097dbc0cefbf6e7fc0599515c8dcc67048776b5856",
+  "reason": "Application failed only when saving case CSVs because cases/ parent was absent. Add mkdir, and exact-hash verification of this output-only repair. Model, features, selection, evaluation, config and contract unchanged. Original freeze and original 2025 evaluation retained."
+}

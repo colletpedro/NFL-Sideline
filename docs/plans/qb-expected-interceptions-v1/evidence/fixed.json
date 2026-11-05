@@ -1,0 +1,17 @@
+{
+  "code_sha256": {
+    "common.py": "230b04fad28052eb96cdf9dac3ef8749f0d37e1658672d97171d18918b883588",
+    "risk_model.py": "2161619135fea8654aa79e9fc337adc1b333d5686a2d4e3a66f77a7539e0fec0"
+  },
+  "development_freeze_sha256": "db3274be82a6eeaf292875097dbc0cefbf6e7fc0599515c8dcc67048776b5856",
+  "fit_years": [
+    2025
+  ],
+  "interpretation": "Retrospective conditional probability. FTN charting may know the outcome; not pre-snap prediction or responsibility.",
+  "model_id": "XINT-FTN-B2-v1-fit2025",
+  "model_sha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+  "risk_input": "is_interception_worthy",
+  "selected": "B2",
+  "target": "interception",
+  "update_policy": "Apply only. Never fit during data update."
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "packageKind": "expected-observed-interceptions-research",
+  "activation": "No active pointer or laboratory route. For future explicit review only.",
+  "modelFamily": "XINT-FTN",
+  "modelTarget": "interception",
+  "riskInput": "is_interception_worthy",
+  "availability": "Retrospective FTN classification; outcome may be known to annotator. Not pre-snap or independent pre-event prediction.",
+  "files": {
+    "consumer/index.json": "Version, fixed model/hash, coverage including pending games, all players, summary, interpretation, attribution.",
+    "consumer/players/{gsis_id}.json": "All eligible passes, source game_id/play_id, GSIS, audited name/position, team, dates, FTN, observed interception, p_interception_given_ftn, authorized context and audit-only description.",
+    "players.csv": "Complete numeric table, alphabetical order. No causal ranking.",
+    "pass_predictions.parquet": "Complete per-pass population and fixed model predictions.",
+    "integrity.json": "SHA-256 for every scientific package file; environment inventory excluded.",
+    "sources.json": "Pinned sources, original public URL, acquisition time, byte size, hash, attribution and license.",
+    "fixed.json": "Fixed model SHA-256, training years, original development freeze SHA-256, update policy and inference code hashes."
+  },
+  "playerFields": {
+    "gsis_id": "Identity; do not join by abbreviated name.",
+    "name": "Weekly roster full name, fallback PBP display name if missing or conflicting; inspect position_class.",
+    "position_class": "qb / other / unknown_or_conflicting. Never use as a fit or population filter.",
+    "teams": "All observed teams in period; same GSIS remains same player after transfer.",
+    "eligible_passes": "Included official attempts after preserved eligibility; not all dropbacks or all official attempts including spikes.",
+    "ftn_interception_worthy_passes": "Observed FTN=1 count, not expected interceptions.",
+    "observed_interceptions": "Observed PBP interceptions on the included passes.",
+    "expected_interceptions": "Canonical sum expected_from_ftn_1 + expected_from_ftn_0; estimate of observed-INT target, never M3 expected interception-worthy passes.",
+    "expected_from_ftn_1": "Sum of p_interception_given_ftn over FTN=1.",
+    "expected_from_ftn_0": "Sum of p_interception_given_ftn over FTN=0, including interceptions outside FTN=1.",
+    "observed_minus_expected": "Positive means more observed INT than the retrospective estimate.",
+    "difference_per_100_passes": "100*(observed_interceptions-expected_interceptions)/eligible_passes; unit is interceptions per 100 eligible passes.",
+    "small_support": "Below 100 passes, descriptive visibility flag; retain all rows.",
+    "player_interval_status": "not_estimated; no skill or player uncertainty intervals in v1."
+  },
+  "arithmetic": "Binary64. Per-player stored total is constructed by adding the two stored contributions; JSON consumer reconstructs that exact canonical addition. Cross-player and pass summation use tolerance atol=1e-10 due to floating-point associativity. Numerical equivalence does not imply byte equality.",
+  "interpretation": "Residual cannot automatically identify luck, blame, decision quality, drops, or individual responsibility. The annotation may know the outcome. Known seasons evaluated temporally out of fit, not untouched confirmation.",
+  "attribution": "FTN Data via nflverse · CC BY-SA 4.0; transformed data, no endorsement. Other sources per manifests. No external publication authorized by this package."
+}

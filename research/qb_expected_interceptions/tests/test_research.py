@@ -8,6 +8,22 @@ from risk_model import features, fit_context, predict, fit_reference, blocks, IN
 from evaluate import aggregate, paired, metrics, performance, calibration
 
 @pytest.fixture
+def current(passes):
+    from data import renamed
+    p,f=raw(passes);p=p.copy();f=f.copy()
+    for d in [p,f]:
+        d['season']=2026;d['game_id']=d.game_id.str.replace('2022','2026')
+    p['game_date']=p.week.map({1:'2026-09-13',2:'2026-09-20'})
+    p['home_team']='B';p['away_team']='A';p['total_home_score']=0;p['total_away_score']=0
+    endings=p.groupby('game_id').tail(1).copy();endings['desc']='END GAME';endings['play_type']='no_play';endings['play_id']+=5000
+    p=pd.concat([p,endings],ignore_index=True)
+    s=pd.DataFrame([dict(game_id=f'2026_{i+1:02}_A_B',season=2026,game_type='REG',week=i+1,
+        gameday='2026-09-13' if i==0 else '2026-09-20',home_team='B',away_team='A',
+        home_score=0 if i<2 else np.nan,away_score=0 if i<2 else np.nan,result=0 if i<2 else np.nan) for i in range(272)])
+    r=pd.DataFrame([dict(gsis_id='00-0000001',season=2026,week=w,team='A',game_type='REG',position='QB',full_name='Actual QB') for w in [1,2]])
+    return p,f,s,r
+
+@pytest.fixture
 def passes():
     rng=np.random.default_rng(71);n=240
     d=pd.DataFrame(dict(game_id=['2022_01_A_B']*120+['2022_02_A_B']*120,play_id=np.arange(n),
@@ -124,3 +140,48 @@ def test_pinned_research_and_product_no_import_of_new_model():
     for base in [ROOT/'web-ui/src',ROOT/'etl-pipeline/src',ROOT/'core-api/src']:
         for p in base.rglob('*'):
             if p.is_file():assert b'qb_expected_interceptions' not in p.read_bytes()
+
+@pytest.mark.parametrize('missing',['chart','target','gsis','context','end_marker'])
+def test_partial_week_keeps_other_valid_game_and_records_gap(current,missing):
+    from data import current_frames
+    p,f,s,r=current
+    if missing=='chart':f=f.iloc[1:]
+    elif missing=='target':p.loc[0,'interception']=np.nan
+    elif missing=='gsis':p.loc[0,'passer_player_id']=None
+    elif missing=='context':p.loc[0,'down']=np.nan
+    else:p.loc[p.game_id.eq('2026_01_A_B')&p.desc.eq('END GAME'),'desc']='not finalized'
+    d,cov=current_frames(p,f,s)
+    assert cov['included_games']==1 and len(cov['pending_games'])==1
+    assert set(d.game_id)=={'2026_02_A_B'} and cov['pending_games'][0]['game_id']=='2026_01_A_B'
+
+def test_current_final_score_conflict_is_fatal(current):
+    from data import current_frames
+    p,f,s,r=current;p.loc[p.desc.eq('END GAME'),'total_home_score']=6
+    with pytest.raises(ValueError,match='score'):current_frames(p,f,s)
+
+def test_update_applies_fixed_model_without_any_fit(current,tmp_path,monkeypatch):
+    from common import write,sha,HERE,read
+    from update import apply_current
+    import run
+    p,f,s,r=current;src=tmp_path/'sources';src.mkdir();p.to_parquet(src/'pbp.parquet',index=False);f.to_parquet(src/'ftn.parquet',index=False);s.to_csv(src/'schedule.csv',index=False);r.to_parquet(src/'roster.parquet',index=False)
+    records=[dict(role=role,path=role+('.csv' if role=='schedule' else '.parquet'),sha256=sha(src/(role+('.csv' if role=='schedule' else '.parquet'))),bytes=(src/(role+('.csv' if role=='schedule' else '.parquet'))).stat().st_size) for role in ['pbp','ftn','schedule','roster']]
+    write(src/'sources.json',dict(files=records))
+    d=p[p.play_type.eq('pass')].merge(f[KEY+['is_interception_worthy']],on=KEY,validate='one_to_one');d['season']=2025
+    final=tmp_path/'final';final.mkdir();m=fit_reference(d,'B2',2026);m['model_id']='XINT-test-fixed';write(final/'model.json',m)
+    write(final/'fixed.json',dict(model_id=m['model_id'],selected='B2',model_sha256=sha(final/'model.json'),code_sha256={q.name:sha(q) for q in [HERE/'common.py',HERE/'risk_model.py']}))
+    def no_fit(*a,**kw):raise AssertionError('Data updates cannot fit models')
+    monkeypatch.setattr(run,'fit_reference',no_fit);monkeypatch.setattr(run,'fit_context',no_fit)
+    apply_current(src,final,tmp_path/'application')
+    q=read(tmp_path/'application/consumer/index.json');assert q['model']['model_sha256']==sha(final/'model.json')
+    for player in q['players']:
+        assert player['expected_interceptions']==player['expected_from_ftn_1']+player['expected_from_ftn_0']
+    before=sha(final/'model.json')
+    with pytest.raises(FileExistsError):apply_current(src,final,tmp_path/'application')
+    assert sha(final/'model.json')==before
+
+def test_wrong_fixed_model_hash_refused_before_inference(tmp_path):
+    from common import write
+    from run import load_fixed
+    write(tmp_path/'model.json',dict(target='interception'))
+    write(tmp_path/'fixed.json',dict(model_sha256='bad'))
+    with pytest.raises(ValueError,match='hash'):load_fixed(tmp_path)
