@@ -118,3 +118,30 @@ def test_closed_game_gate_partial_score_and_final_conflict():
 def test_missing_roster_does_not_invent_identity():
  p=play(qb_scramble=1,pass_attempt=0,rush_attempt=1,play_type='run',passer_player_id=None,rusher_player_id='00-0000001');p.update(week=1,posteam='A',passer_player_name=None,rusher_player_name='QB');p.pop('position');p.pop('identity_status')
  roster=pd.DataFrame(columns=['season','week','team','gsis_id','position','full_name','game_type']);d=identity(pd.DataFrame([p]),roster);assert d.identity_status.iloc[0]=='unknown_or_conflicting' and classify(d.iloc[0].to_dict())['category']=='indeterminate'
+
+def test_end_to_end_frozen_source_revision(tmp_path):
+ """Exercise raw files, closure gate, roster, fixed rules and immutable revisions offline."""
+ import shutil
+ from run import build
+ from verify import verify_package
+ s=tmp_path/'sources';s.mkdir();records=[]
+ def put(rel,df):
+  p=s/rel;p.parent.mkdir(exist_ok=True);df.to_parquet(p,index=False);records.append(dict(path=rel,bytes=p.stat().st_size,sha256=sha(p)))
+ for year in range(2022,2027):
+  gid=f'{year}_01_A_B';rows=[];ft=[]
+  for i in [1,2,3,4]:
+   r={col:None for col in PBP};r.update(game_id=gid,play_id=i,season=year,season_type='REG',week=1,game_date=f'{year}-09-01',home_team='A',away_team='B',posteam='A',defteam='B',play_type='pass',qb_dropback=1,play_deleted=0,qb_spike=0,qb_kneel=0,two_point_attempt=0,aborted_play=0,pass_attempt=1,rush_attempt=0,qb_scramble=0,sack=0,complete_pass=0,interception=0,passer_player_id='00-0000001',passer_player_name='QB',epa=float(i),penalty=0,desc='fixture',time='10:00',yrdln='A 30',total_home_score=10,total_away_score=7,down=1,ydstogo=10,yardline_100=70,qtr=1,quarter_seconds_remaining=600,score_differential=0)
+   if i==2:r.update(qb_scramble=1,pass_attempt=0,rush_attempt=1,play_type='run',passer_player_id=None,rusher_player_id='00-0000001',rusher_player_name='QB')
+   if i==3:r.update(sack=1)
+   if i==4:r.update(desc='END GAME',qb_dropback=0,play_type=None)
+   rows.append(r)
+   t={k:False for k in FTN};t.update(nflverse_game_id=gid,nflverse_play_id=i,season=year,week=1,read_thrown='1' if i==1 else 'SD');ft.append(t)
+  put('current/pbp.parquet' if year==2026 else f'raw/pbp_{year}.parquet',pd.DataFrame(rows));put('current/ftn.parquet' if year==2026 else f'raw/ftn_{year}.parquet',pd.DataFrame(ft))
+  put(f'rosters/{year}.parquet',pd.DataFrame([dict(season=year,week=1,team='A',gsis_id='00-0000001',position='QB',full_name='QB One',game_type='REG')]))
+ schedule=pd.DataFrame([dict(season=2026,game_type='REG',game_id='2026_01_A_B',week=1,gameday='2026-09-01',home_team='A',away_team='B',home_score=10,away_score=7,result=3)]);schedule.to_csv(s/'current/schedule.csv',index=False);p=s/'current/schedule.csv';records.append(dict(path='current/schedule.csv',bytes=p.stat().st_size,sha256=sha(p)));write(s/'sources.json',dict(files=records,currentSeason=2026))
+ base=build(s,tmp_path/'baseline');before=sha(base/'manifest.json');assert verify_package(base)['main_rows']==12
+ ns=tmp_path/'revised_sources';shutil.copytree(s,ns);p=ns/'current/pbp.parquet';raw=pd.read_parquet(p);raw.loc[raw.play_id.eq(1),'epa']=9.;raw.to_parquet(p,index=False);manifest=read(ns/'sources.json')
+ for r in manifest['files']:
+  if r['path']=='current/pbp.parquet':r.update(bytes=p.stat().st_size,sha256=sha(p))
+ write(ns/'sources.json',manifest);out=build(ns,tmp_path/'revised',base);rev=read(out/'revision.json');assert len(rev['changed'])==1 and rev['changed'][0]['fields']==['epa'] and not rev['added'] and not rev['removed'];assert sha(base/'manifest.json')==before;assert verify_package(out)['passed']
+ with pytest.raises(FileExistsError):build(ns,tmp_path/'baseline')

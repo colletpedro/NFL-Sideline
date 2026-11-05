@@ -23,7 +23,7 @@ def render(p,out,s):
  write(out/'evidence/examples.json',cases)
  pop=[]
  for y,g in main.groupby('season'):
-  pop.append(dict(temporada=y,dropbacks=len(g),lançamentos=int(g.event_type.eq('pass').sum()),sacks_PBP=int(g.sack.eq(1).sum()),scrambles_PBP=int(g.qb_scramble.eq(1).sum()),jogos=g.game_id.nunique(),QB=int(g.position_class.eq('qb').sum()),outras_posições=int(g.position_class.eq('other').sum()),FTN_ausente=int((~g.charting_present).sum()),EPA_ausente=int(g.epa.isna().sum())))
+  pop.append(dict(temporada=y,dropbacks=len(g),lançamentos=int(g.event_type.eq('pass').sum()),sacks_PBP=int(g.sack.eq(1).sum()),scrambles_PBP=int(g.qb_scramble.eq(1).sum()),jogos=g.game_id.nunique(),dropbacks_QB=int(g.position_class.eq('qb').sum()),dropbacks_outras_posições=int(g.position_class.eq('other').sum()),FTN_ausente=int((~g.charting_present).sum()),EPA_ausente=int(g.epa.isna().sum())))
  pop=pd.DataFrame(pop);pop.to_csv(out/'tables/population.csv',index=False)
  leagues=[];flips=[]
  for y,g in l.groupby('season'):
@@ -69,7 +69,7 @@ O residual de 799 jogadas contém 797 `DES`, um aborto e um scramble de WR. Logo
 
 ## Produção principal e sensibilidades
 
-Médias da liga são ponderadas por jogadas de QB verificados, usando toda a população elegível da temporada, inclusive QB com pouco suporte individual. A figura principal mostra somente o corte de legibilidade congelado: ≥100 EPA válidos em A, ≥25 em B e ≥5 jogos com A/B. Em 2026 passam 15 dos 57 QB; 37 têm pouco suporte e cinco não têm oportunidades nos dois lados. Isso não garante robustez; as tabelas completas conservam todos os participantes e zeros de oportunidade como indisponíveis.
+Médias da liga são ponderadas por jogadas de QB verificados, usando toda a população elegível da temporada, inclusive QB com pouco suporte individual. A figura principal mostra somente o corte de legibilidade congelado: ≥100 EPA válidos em A, ≥25 em B e ≥5 jogos com A/B. Em 2026 passam 15 dos 57 QB; 37 têm pouco suporte e cinco não têm oportunidades em pelo menos um dos lados. Isso não garante robustez; as tabelas completas conservam todos os participantes e zeros de oportunidade como indisponíveis.
 
 '''+table(leagues[leagues['definição'].eq('main')])+'''
 A diferença é **média A − média B**. Positivo significa maior produção observada em A. Uma diferença alta pode vir de A excepcional; sempre mostrar os dois níveis e volumes. Não concluir incapacidade de improvisar. A diagonal do scatter indica diferença zero, sem interpretação de desempenho ideal. As referências de liga são médias condicionais de populações diferentes de jogadas, não uma comparação pareada de oportunidades equivalentes.
@@ -107,7 +107,7 @@ A métrica principal conserva todos os EPA, inclusive extremos. Como diagnóstic
 Os critérios foram congelados antes das comparações: maior diferença com A acima da liga; maior nível B; menor diferença absoluta; maior deslocamento S2; menor B positivo com A≥100 e B<25. Desempate por GSIS; não houve substituição posterior para confirmar o vídeo.
 
 '''+table(selected)+'''
-Mahomes combina A acima da liga com B próximo de zero neste recorte; isso não mede dependência causal. Maye tem maior B entre os elegíveis, e a diferença troca de sinal em S2. Willis fica próximo de zero na principal, embora S3 dê diferença +0,737 com só 20 passes SD. Stroud é o caso mais sensível a S2: −0,405 → +0,635; já S1 muda para +0,037. Stafford tem só sete eventos B (três SD e quatro scrambles), volume inadequado para a figura principal, apesar de 265 A.
+Mahomes combina A acima da liga com B próximo de zero neste recorte; isso não mede dependência causal. Maye tem maior B entre os elegíveis, e a diferença troca de sinal em S2. Willis fica próximo de zero na principal, embora S3 dê diferença +0,737 com só 20 passes SD. Stroud é o caso mais sensível a S2: −0,405 → +0,635; já S1 muda para +0,037. Seus 15 sacks somam −28,445 EPA; de S1 para S2, B cai de +0,258 para −0,340 EPA/jogada. Stafford tem só sete eventos B (três SD e quatro scrambles), volume inadequado para a figura principal, apesar de 265 A.
 
 '''
  for case in cases:
@@ -115,7 +115,7 @@ Mahomes combina A acima da liga com B próximo de zero neste recorte; isso não 
   for cat,part in g.groupby('category'):
    e=part.assign(abs_epa=part.epa.abs()).sort_values(['abs_epa','game_id','play_id'],ascending=[False,True,True]).iloc[0]
    rows.append(dict(categoria=cat,jogo=e.game_id,jogada=int(e.play_id),regra=e.rule,descida=e.down,distância=e.ydstogo,quarto=e.qtr,relógio=e.time,campo=e.yrdln,EPA=e.epa))
-  report+=f"### {r['audited_name']} · {pid}\n\n"+table(pd.DataFrame(rows))+f"\nUma jogada por categoria, escolhida por maior |EPA|, somente para localizar contribuições. [Todas as {len(g)} jogadas e descrições da fonte]({p/case['all_plays']}) · [12 extremos com descrição literal](tables/{case['criterion']}_extremes.csv). As regras e evidências brutas constam em cada linha. Não inferir intenção ou culpa a partir do texto.\n\n"
+  report+=f"### {r['audited_name']} · {pid}\n\n"+table(pd.DataFrame(rows))+f"\nUma jogada por categoria, escolhida por maior |EPA|, somente para localizar contribuições. [Todas as {len(g)} jogadas e descrições da fonte](<{p/case['all_plays']}>) · [12 extremos com descrição literal](tables/{case['criterion']}_extremes.csv). As regras e evidências brutas constam em cada linha. Não inferir intenção ou culpa a partir do texto.\n\n"
  report+='''## Limites e recomendação de apresentação
 
 EPA é o `epa` da jogada PBP: produção do ataque, com contribuição de recebedores/YAC, adversários, proteção e penalidades válidas. Não isola o QB; `qb_epa`, WPA ou resultado de vitória não foram substitutos. Charting FTN é retrospectivo e revisável; `date_pulled` não comprova anotação cega. Não há medida completa de pressão; qb_hit, blitzers e saída do pocket não foram usados como tal. O pocket pode ser abandonado por desenho, e segunda/terceira leitura podem ocorrer dentro da estrutura. Não identificamos alternativas não escolhidas.
