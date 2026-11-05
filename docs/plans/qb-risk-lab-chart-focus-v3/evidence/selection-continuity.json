@@ -1,0 +1,14 @@
+{
+  "before": {
+    "scroll": 616.5,
+    "x": 653.0325317382812,
+    "y": 313.078125
+  },
+  "after": {
+    "rosterScroll": 295,
+    "scroll": 616.5,
+    "selected": "Daniel Jones",
+    "selectedRowVisible": true,
+    "url": "http://127.0.0.1:18124/?view=risk-lab&season=2026&player=00-0035710"
+  }
+}

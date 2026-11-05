@@ -1,0 +1,9 @@
+{
+  "back": {
+    "legacy": "Este link contém uma marca da versão anterior, associada a Anthony Richardson. Os grupos dependiam do tamanho da tela; agora todos os nomes estão na lista abaixo. A seleção de Daniel Jones foi preservada. Remover a marca antiga.",
+    "selected": "Daniel Jones",
+    "url": "http://127.0.0.1:18124/?view=risk-lab&season=2026&player=00-0035710&group=00-0039164"
+  },
+  "forward": "http://127.0.0.1:18124/?view=risk-lab&season=2026&player=00-0035710&scale=per100",
+  "reloadedLegacyPlayerPreserved": true
+}
