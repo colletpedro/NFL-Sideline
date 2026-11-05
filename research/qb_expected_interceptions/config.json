@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "model_family": "observed-interception-given-ftn-v1",
+  "target": "interception",
+  "risk_input": "is_interception_worthy",
+  "development_years": [2023, 2024],
+  "evaluation_year": 2025,
+  "application_year": 2026,
+  "C_grid": [0.01, 0.1, 1.0],
+  "solver": "lbfgs",
+  "max_iter": 2000,
+  "tol": 1e-9,
+  "seed": 20261105,
+  "bootstrap_replicates": 2000,
+  "calibration_edges": [0, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0000001],
+  "selection": "C minimum pooled development log loss; promote only if paired game-bootstrap log-loss upper95<0 versus BOTH B1 and B2, Brier delta<=0.0001 versus both, and pooled development O/E in [0.8,1.25] in EACH FTN group. Otherwise choose B1 or B2 with lowest pooled development log loss; tie prefers B1. Never select using 2025/2026.",
+  "support": "Rate k/n when 0<k<n; boundary k=0 or k=n uses (k+0.5)/(n+1). Missing FTN group falls back to full training global rate with explicit fallback record; empty full training fails.",
+  "player_intervals": "none",
+  "scope": "Retrospective temporal evaluation, already examined periods; no untouched confirmation or pre-snap prediction. FTN may know the outcome."
+}
