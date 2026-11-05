@@ -43,3 +43,7 @@ Figuras PNG/SVG: distribuição categorias por ano; X=média B/Y=média A, refer
 ## Reprodução e preservação
 
 Fontes próprias copiadas após verificar manifest/hashes anteriores; atualizar somente em diretório novo, com classificação fixa, recebimento explícito, revisão por chave/campo, versões anteriores preservadas. Reproduzir offline em destino novo; verificar tanto bytes quanto equivalência numérica (tolerância explícita). Reconciliação independente SQL dos brutos, sem chamar classificador/agrupador principal. Testes offline nunca adquirem. Package index v1, métrica/classificação 1.0.0, evidências elementares e detalhes por jogador, fontes/hashes/status. Nada em ponteiros M3/B2, frontend, public/data, backend, DB ou ETL operacional. Sem merge/push/deploy, segredos ou serviços pagos.
+
+### Esclarecimento de identidade após auditoria, antes da entrega
+
+A exigência de posição QB para integrar a categoria `scramble` não significa que a identidade de um corredor WR verificado seja desconhecida. A primeira implementação conservou nomes/posição, mas agrupou esses GSIS no residual sem ID. Corrigido: conservar GSIS de rusher validado pelo tipo de evento e roster também para outras posições, com `position_class=other`, categoria residual e motivo `scramble_non_qb_position`. Não reinterpretar como scramble de QB nem remover a jogada. Nenhuma seleção, nível, frequência ou comparação dos QB é alterada por esse esclarecimento. O pacote inicial parcial e a primeira saída de desenvolvimento permanecem no store; só o pacote final indicado é candidato de consumo.
