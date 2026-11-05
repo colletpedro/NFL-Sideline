@@ -1,0 +1,26 @@
+season  category      
+2023    progression       14386
+        indeterminate      1940
+        sack               1408
+        scramble_drill     1183
+        scramble           1032
+        throwaway           744
+2024    progression       13881
+        indeterminate      1974
+        sack               1314
+        scramble_drill     1188
+        scramble           1060
+        throwaway           699
+2025    progression       13965
+        indeterminate      1673
+        sack               1287
+        scramble           1087
+        scramble_drill     1000
+        throwaway           722
+2026    progression        6342
+        indeterminate       799
+        sack                557
+        scramble_drill      475
+        scramble            434
+        throwaway           355
+{'passed': True, 'files': 257, 'rows': 89715, 'main_rows': 69505, 'categories_exclusive_exhaustive': True, 'all_player_sensitivity_formulas_and_denominators': True, 'manifest_sha256': 'dde7f8443d66cfe8ac124f648cccc30e745849be3d21bd6e3f308c782dc6d7ac', 'comparison': {'passed': True, 'byte_identical': 256, 'total_files': 257, 'different_bytes': ['index.json'], 'numerical_equivalence': True, 'numeric_absolute_tolerance': 1e-12, 'tables': ['categories.csv', 'comparisons.csv', 'league.csv', 'context_bins.csv', 'context_summary.csv', 'extreme_diagnostics.csv', 'group_extremes.csv', 'stability.csv'], 'elementary_plays_exact': True, 'manifests_byte_identical': False}, 'independent_reconciliation': [{'season': 2022, 'passed': True, 'rows': 20210, 'sum_epa': 312.7142920788971, 'matched_nonempty_aggregates': 0, 'missing_epa': 0, 'method': 'Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means', 'sum_tolerance_absolute': 1e-10, 'keys_categories_identity_exact': True}, {'season': 2023, 'passed': True, 'rows': 20693, 'sum_epa': -23.40540909167341, 'matched_nonempty_aggregates': 464, 'missing_epa': 0, 'method': 'Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means', 'sum_tolerance_absolute': 1e-10, 'keys_categories_identity_exact': True}, {'season': 2024, 'passed': True, 'rows': 20116, 'sum_epa': 1053.0901503345729, 'matched_nonempty_aggregates': 443, 'missing_epa': 0, 'method': 'Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means', 'sum_tolerance_absolute': 1e-10, 'keys_categories_identity_exact': True}, {'season': 2025, 'passed': True, 'rows': 19734, 'sum_epa': 851.425626643646, 'matched_nonempty_aggregates': 436, 'missing_epa': 0, 'method': 'Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means', 'sum_tolerance_absolute': 1e-10, 'keys_categories_identity_exact': True}, {'season': 2026, 'passed': True, 'rows': 8962, 'sum_epa': 479.1925021017711, 'matched_nonempty_aggregates': 300, 'missing_epa': 0, 'method': 'Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means', 'sum_tolerance_absolute': 1e-10, 'keys_categories_identity_exact': True}], 'network_disabled': True}

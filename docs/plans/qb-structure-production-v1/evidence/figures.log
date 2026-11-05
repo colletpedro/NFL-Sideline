@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/offline-env-proof/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 4484, in pandas._libs.hashtable.Int32HashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 4508, in pandas._libs.hashtable.Int32HashTable.get_item
+KeyError: 0
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/pedrocollet/.codex/worktrees/qb-structure-production-v1/NFL Sideline/research/qb_structure_production/figures.py", line 77, in <module>
+    a=argparse.ArgumentParser();a.add_argument('--package',required=True);a.add_argument('--out');v=a.parse_args();print(generate(v.package,v.out))
+                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrocollet/.codex/worktrees/qb-structure-production-v1/NFL Sideline/research/qb_structure_production/figures.py", line 39, in generate
+    if v>=3:ax.text(left[i]+v/2,i,f'{v:.1f}%',ha='center',va='center',fontsize=9,color='white' if cat in ['progression','sack'] else '#18252d')
+                    ~~~~^^^
+  File "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/offline-env-proof/lib/python3.11/site-packages/pandas/core/series.py", line 1133, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/offline-env-proof/lib/python3.11/site-packages/pandas/core/series.py", line 1249, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/offline-env-proof/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 0

@@ -1,0 +1,382 @@
+{
+  "acquisitionCompletedAt": "2026-11-05T17:34:52.773643+00:00",
+  "files": [
+    {
+      "acquiredAt": "2026-11-04T07:25:30.466362+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 20426548,
+      "copiedAt": "2026-11-05T17:34:41.364840+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "raw/pbp_2022.parquet",
+      "role": "historical_raw/pbp_2022.parquet",
+      "sha256": "931121d8897779d7944e2a293e92ed8799c8e5cceef84096ac42339003fedc09",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2022.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T07:25:41.880779+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 501910,
+      "copiedAt": "2026-11-05T17:34:41.378824+00:00",
+      "headers": {},
+      "license": "CC BY-SA 4.0",
+      "path": "raw/ftn_2022.parquet",
+      "role": "historical_raw/ftn_2022.parquet",
+      "sha256": "2846ef9bcc5f7298a5c783fb9a5edc85b3820c0b4943bf60a1217398e412985b",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/ftn_charting/ftn_charting_2022.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T07:25:42.826188+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 20534088,
+      "copiedAt": "2026-11-05T17:34:41.379477+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "raw/pbp_2023.parquet",
+      "role": "historical_raw/pbp_2023.parquet",
+      "sha256": "bd3484731408def6b0ec93225bba2bd7b2c65769ca707a2b9444d891abdc6776",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2023.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T07:25:44.725437+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 567781,
+      "copiedAt": "2026-11-05T17:34:41.395992+00:00",
+      "headers": {},
+      "license": "CC BY-SA 4.0",
+      "path": "raw/ftn_2023.parquet",
+      "role": "historical_raw/ftn_2023.parquet",
+      "sha256": "162f0f48a8fca23f86a334c78e27f8daa7443e6b383beada0416b65c593b2c0e",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/ftn_charting/ftn_charting_2023.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T07:25:45.649328+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 20597560,
+      "copiedAt": "2026-11-05T17:34:41.396823+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "raw/pbp_2024.parquet",
+      "role": "historical_raw/pbp_2024.parquet",
+      "sha256": "3fd2896bc0b911b615142d2f1fabae54a4bbba5ab7b73b28187b118ef8af6a3b",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2024.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T07:26:01.723787+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 563180,
+      "copiedAt": "2026-11-05T17:34:41.418036+00:00",
+      "headers": {},
+      "license": "CC BY-SA 4.0",
+      "path": "raw/ftn_2024.parquet",
+      "role": "historical_raw/ftn_2024.parquet",
+      "sha256": "9396c95effac1a81cc30efcf9c4c87ab89855548ae605404318ae949d4356119",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/ftn_charting/ftn_charting_2024.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T07:26:02.613031+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 20337029,
+      "copiedAt": "2026-11-05T17:34:41.419157+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "raw/pbp_2025.parquet",
+      "role": "historical_raw/pbp_2025.parquet",
+      "sha256": "c6ecedd6d678cc37ed316b23ef84ee1ec6abb69c514bb11868a7ebd5a367df29",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2025.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T07:26:04.197891+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 556492,
+      "copiedAt": "2026-11-05T17:34:41.436719+00:00",
+      "headers": {},
+      "license": "CC BY-SA 4.0",
+      "path": "raw/ftn_2025.parquet",
+      "role": "historical_raw/ftn_2025.parquet",
+      "sha256": "2ee4b11962f4c91d426e0edeca5bbded078616ce0efab0710aa2b40b4cfad898",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/ftn_charting/ftn_charting_2025.parquet"
+    },
+    {
+      "acquiredAt": null,
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 175930,
+      "copiedAt": "2026-11-05T17:34:41.438151+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "lineage/v1-sources.json",
+      "role": "lineage",
+      "sha256": "9a8274510ef2231e8b12e5181b905326cce5abf3867eeb6d93da6f4876fdc729",
+      "url": null
+    },
+    {
+      "acquiredAt": null,
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 1037565,
+      "copiedAt": "2026-11-05T17:34:41.439603+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "lineage/historical-dataset.parquet",
+      "role": "lineage",
+      "sha256": "10e90375f22a187f361007e7db84a6f5bf2c81451171be4be4e805d7cc67c296",
+      "url": null
+    },
+    {
+      "acquiredAt": "2026-11-04T14:47:06.530473+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 9035092,
+      "copiedAt": "2026-11-05T17:34:41.448036+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "previous-lab/pbp.parquet",
+      "role": "previous_lab",
+      "sha256": "09b2bb5b93d6e825d96ab750f8a89ced4963c021ef1663f474bd15f4ed02ca03",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T14:47:09.304403+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 258662,
+      "copiedAt": "2026-11-05T17:34:41.454913+00:00",
+      "headers": {},
+      "license": "CC BY-SA 4.0",
+      "path": "previous-lab/ftn.parquet",
+      "role": "previous_lab",
+      "sha256": "923a2b83fa3f9788aac4301975234d22c70f00d277fb57b8f3d5acb3a0018f5c",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/ftn_charting/ftn_charting_2026.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-04T14:47:10.706793+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 2188274,
+      "copiedAt": "2026-11-05T17:34:41.455498+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "previous-lab/schedule.csv",
+      "role": "previous_lab",
+      "sha256": "cea8fbb1705fee0a23c9e7d58aaee7b37f6e76557609c03731611c3c26d034eb",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+    },
+    {
+      "acquiredAt": "2026-11-04T14:47:12.060095+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 836804,
+      "copiedAt": "2026-11-05T17:34:41.457580+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "previous-lab/roster.parquet",
+      "role": "previous_lab",
+      "sha256": "881037e48d9f6ff6c72a36044622c66cfb9948f4ac5eeebd42716623195683a6",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2026.parquet"
+    },
+    {
+      "acquiredAt": null,
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 169,
+      "copiedAt": "2026-11-05T17:34:41.458936+00:00",
+      "headers": {},
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "lineage/lab-current.json",
+      "role": "lineage",
+      "sha256": "c5dc8fd0897ce7bd6b30b8c5592bcb880b875db00948d7a39f83ac29fd76eb75",
+      "url": null
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:41.459499+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 9035103,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "9035103",
+        "ETag": "\"0x8DF3B614D76D0B6\"",
+        "Last-Modified": "Thu, 05 Nov 2026 17:22:00 GMT"
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "current/pbp.parquet",
+      "role": "pbp",
+      "sha256": "05f87e005252fdcf0c1e6a729fe50b88ddf647f9a2bf2a79cd6e4f463a44a652",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:42.987693+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 258662,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "258662",
+        "ETag": "\"0x8DF3AC8E0A1E5AC\"",
+        "Last-Modified": "Wed, 04 Nov 2026 23:10:54 GMT"
+      },
+      "license": "CC BY-SA 4.0",
+      "path": "current/ftn.parquet",
+      "role": "ftn",
+      "sha256": "2ced5686b154ba623357e23ae7406d673ae953be26f8e4080e686cdd60619375",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/ftn_charting/ftn_charting_2026.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:43.991104+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 2188869,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "2188869",
+        "ETag": "\"6897c6c3031565133f404946a248200cc2c5e7330762402f6793fd2c3331f830\"",
+        "Last-Modified": null
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "current/schedule.csv",
+      "role": "schedule",
+      "sha256": "53b4a667ce0ee9ffef6401b202b0be210a22ecbd7199230336c44c4edb991fec",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:44.412748+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 803573,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "803573",
+        "ETag": "\"0x8DBB3F6F5D4B0AE\"",
+        "Last-Modified": "Wed, 13 Sep 2023 01:15:47 GMT"
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "rosters/2022.parquet",
+      "role": "roster_2022",
+      "sha256": "063c0da93f612811e1c4a4c12727a56fd2716197864795f15aa2f10a591b00c0",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2022.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:45.529749+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 794392,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "794392",
+        "ETag": "\"0x8DC43F6DC3A6065\"",
+        "Last-Modified": "Thu, 14 Mar 2024 07:17:51 GMT"
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "rosters/2023.parquet",
+      "role": "roster_2023",
+      "sha256": "0fa5abf9b462a087ecb17f3268ed7233ce9935e95d77be94ad6bac66adf8e281",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2023.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:46.559857+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 829272,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "829272",
+        "ETag": "\"0x8DD62C816A4A019\"",
+        "Last-Modified": "Fri, 14 Mar 2025 07:16:06 GMT"
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "rosters/2024.parquet",
+      "role": "roster_2024",
+      "sha256": "4b144e8eda5a159f36037b02e8b7d5a7861acb65b0816b0a063244992038dcf8",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2024.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:47.638386+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 850871,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "850871",
+        "ETag": "\"0x8DE819BEEC326EE\"",
+        "Last-Modified": "Sat, 14 Mar 2026 07:33:05 GMT"
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "rosters/2025.parquet",
+      "role": "roster_2025",
+      "sha256": "a8764c947bfe6a9d8f122a194e3f026973c8efcc8a3456c67cbfac4371c20342",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2025.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:48.704586+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 823575,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "823575",
+        "ETag": "\"0x8DF3B5128627FBC\"",
+        "Last-Modified": "Thu, 05 Nov 2026 15:26:26 GMT"
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "rosters/2026.parquet",
+      "role": "roster_2026",
+      "sha256": "e98ea21d7a64511f54304ba8417fc9fe0c48713e87b9b57ee659759e7e629b87",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2026.parquet"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:50.892416+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 39127,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "39127",
+        "ETag": "\"83d4148181b77bf9dfc51918207a7400ce0b108e4fd1b96e9908ec749269a6ef\"",
+        "Last-Modified": null
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "documentation/pbp_dictionary.csv",
+      "role": "documentation",
+      "sha256": "137f3c1ae4794e2a1a4bc55ac543d807d36c6c3c24c8088e0489dd7a5c156f33",
+      "url": "https://raw.githubusercontent.com/nflverse/nflreadr/main/data-raw/dictionary_pbp.csv"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:51.220181+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 2551,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "2551",
+        "ETag": "\"6128cd6c2770c9332ef6397e3e8a01183e454065f9aa83b7d0a9123479f64083\"",
+        "Last-Modified": null
+      },
+      "license": "CC BY-SA 4.0",
+      "path": "documentation/ftn_dictionary.csv",
+      "role": "documentation",
+      "sha256": "561f76818200cd6bb88a1fa3a74a4640c80e5e0fcf59ade9d01dac18c312e1f4",
+      "url": "https://raw.githubusercontent.com/nflverse/nflreadr/main/data-raw/dictionary_ftn_charting.csv"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:51.509164+00:00",
+      "attribution": "FTN Data via nflverse",
+      "bytes": 16453,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "16453",
+        "ETag": "\"6aabe1a0-4045\"",
+        "Last-Modified": "Thu, 17 Sep 2026 12:48:32 GMT"
+      },
+      "license": "CC BY-SA 4.0",
+      "path": "documentation/ftn_loader.html",
+      "role": "documentation",
+      "sha256": "749ecb84e2187684d986d6e8f3513e6f0fc4b262d3f3871ef609089603903f4f",
+      "url": "https://nflreadr.nflverse.com/reference/load_ftn_charting.html"
+    },
+    {
+      "acquiredAt": "2026-11-05T17:34:52.407689+00:00",
+      "attribution": "nflverse / NFL.com; nflreadr contributors",
+      "bytes": 18651,
+      "copiedAt": null,
+      "headers": {
+        "Content-Length": "18651",
+        "ETag": "\"a1c256369c4f2fed723fff7eef159aee78cce8b3f7b8daa5e2df0d3528b4f97c\"",
+        "Last-Modified": null
+      },
+      "license": "nflverse-data CC BY 4.0; underlying scope not legally certified",
+      "path": "documentation/license.md",
+      "role": "documentation",
+      "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111",
+      "url": "https://raw.githubusercontent.com/nflverse/nflverse-data/main/LICENSE.md"
+    }
+  ],
+  "historicalRevisions": "Pinned 2022–2025 reused unchanged, not redownloaded",
+  "noPaidServices": true,
+  "originalSourcesManifestSha256": "9a8274510ef2231e8b12e5181b905326cce5abf3867eeb6d93da6f4876fdc729",
+  "previousLabPackageId": "d3739e3d9103c48fda1c417a",
+  "schemaVersion": 1
+}

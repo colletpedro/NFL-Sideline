@@ -1,0 +1,9 @@
+{
+  "archive": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-structure-production-v1/20261105-v1/recovery-final/frozen-sources-and-code.tar.gz",
+  "bytes": 81557756,
+  "code_verified": true,
+  "restored_sources": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-structure-production-v1/20261105-v1/recovery-final/restored/sources",
+  "sha256": "0d1be52b73f84e00a94dd0bf536f39cd20d91c0be72754d07d55a4a6428bbef1",
+  "source_files_byte_identical": 23,
+  "status": "local_durable_copy_verified_no_remote_backup_claim"
+}

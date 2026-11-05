@@ -1,0 +1,57 @@
+[
+  {
+    "keys_categories_identity_exact": true,
+    "matched_nonempty_aggregates": 0,
+    "method": "Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means",
+    "missing_epa": 0,
+    "passed": true,
+    "rows": 20210,
+    "season": 2022,
+    "sum_epa": 312.7142920788971,
+    "sum_tolerance_absolute": 1e-10
+  },
+  {
+    "keys_categories_identity_exact": true,
+    "matched_nonempty_aggregates": 463,
+    "method": "Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means",
+    "missing_epa": 0,
+    "passed": true,
+    "rows": 20693,
+    "season": 2023,
+    "sum_epa": -23.40540909167341,
+    "sum_tolerance_absolute": 1e-10
+  },
+  {
+    "keys_categories_identity_exact": true,
+    "matched_nonempty_aggregates": 444,
+    "method": "Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means",
+    "missing_epa": 0,
+    "passed": true,
+    "rows": 20116,
+    "season": 2024,
+    "sum_epa": 1053.0901503345729,
+    "sum_tolerance_absolute": 1e-10
+  },
+  {
+    "keys_categories_identity_exact": true,
+    "matched_nonempty_aggregates": 435,
+    "method": "Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means",
+    "missing_epa": 0,
+    "passed": true,
+    "rows": 19734,
+    "season": 2025,
+    "sum_epa": 851.425626643646,
+    "sum_tolerance_absolute": 1e-10
+  },
+  {
+    "keys_categories_identity_exact": true,
+    "matched_nonempty_aggregates": 300,
+    "method": "Independent SQLite raw WHERE + LEFT JOIN roster + CASE event precedence + key/GSIS/class comparison + raw SQL counts/sums/means",
+    "missing_epa": 0,
+    "passed": true,
+    "rows": 8962,
+    "season": 2026,
+    "sum_epa": 479.1925021017711,
+    "sum_tolerance_absolute": 1e-10
+  }
+]
