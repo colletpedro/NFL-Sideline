@@ -1,0 +1,35 @@
+{
+  "format": "xint-ftn-reference-v1",
+  "global_rate": {
+    "boundary_adjusted": false,
+    "events": 1235,
+    "n": 53996,
+    "probability": 0.022872064597377582
+  },
+  "groups": {
+    "0": {
+      "boundary_adjusted": false,
+      "events": 151,
+      "fallback_global": false,
+      "group_n": 51726,
+      "n": 51726,
+      "probability": 0.002919228241116653
+    },
+    "1": {
+      "boundary_adjusted": false,
+      "events": 1084,
+      "fallback_global": false,
+      "group_n": 2270,
+      "n": 2270,
+      "probability": 0.4775330396475771
+    }
+  },
+  "kind": "B0",
+  "risk_input": "is_interception_worthy",
+  "target": "interception",
+  "train_years": [
+    2022,
+    2023,
+    2024
+  ]
+}

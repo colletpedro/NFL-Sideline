@@ -1,0 +1,118 @@
+{
+  "C_grid_scores": [
+    {
+      "C": 0.01,
+      "pooled_log_loss": 0.04733184184795346
+    },
+    {
+      "C": 0.1,
+      "pooled_log_loss": 0.04702175615377407
+    },
+    {
+      "C": 1.0,
+      "pooled_log_loss": 0.047043919591350264
+    }
+  ],
+  "chosen_C": 0.1,
+  "context_calibration_gate": false,
+  "context_useful": false,
+  "decision_data_years": [
+    2023,
+    2024
+  ],
+  "no_2025_or_2026_selection": true,
+  "paired": {
+    "B1-B0": {
+      "brier": {
+        "delta": -0.009539585739048404,
+        "games": 544,
+        "high": -0.008617215918034679,
+        "low": -0.010475062702061121,
+        "reps": 2000,
+        "seed": 20261105
+      },
+      "log_loss": {
+        "delta": -0.06146061193575985,
+        "games": 544,
+        "high": -0.056963674971637825,
+        "low": -0.06606681480177314,
+        "reps": 2000,
+        "seed": 20261105
+      }
+    },
+    "B2-B1": {
+      "brier": {
+        "delta": -0.0001713893217167199,
+        "games": 544,
+        "high": -8.445739833121175e-05,
+        "low": -0.0002619751859861443,
+        "reps": 2000,
+        "seed": 20261105
+      },
+      "log_loss": {
+        "delta": -0.0003536603283691718,
+        "games": 544,
+        "high": -0.0001784899453830356,
+        "low": -0.0005405858705615894,
+        "reps": 2000,
+        "seed": 20261105
+      }
+    },
+    "C-B0": {
+      "brier": {
+        "delta": -0.009499561969786836,
+        "games": 544,
+        "high": -0.008563363367998103,
+        "low": -0.010444502489490286,
+        "reps": 2000,
+        "seed": 20261105
+      },
+      "log_loss": {
+        "delta": -0.06136603719601083,
+        "games": 544,
+        "high": -0.05683871520754716,
+        "low": -0.06596881460397963,
+        "reps": 2000,
+        "seed": 20261105
+      }
+    },
+    "C-B1": {
+      "brier": {
+        "delta": 4.002376926156791e-05,
+        "games": 544,
+        "high": 0.000127176426115526,
+        "low": -5.15506266214928e-05,
+        "reps": 2000,
+        "seed": 20261105
+      },
+      "log_loss": {
+        "delta": 9.457473974901173e-05,
+        "games": 544,
+        "high": 0.000317720434748721,
+        "low": -0.00012594789553850772,
+        "reps": 2000,
+        "seed": 20261105
+      }
+    },
+    "C-B2": {
+      "brier": {
+        "delta": 0.0002114130909782878,
+        "games": 544,
+        "high": 0.0003395184004942328,
+        "low": 8.741382446096243e-05,
+        "reps": 2000,
+        "seed": 20261105
+      },
+      "log_loss": {
+        "delta": 0.0004482350681181835,
+        "games": 544,
+        "high": 0.00075288114106456,
+        "low": 0.00016492675650043586,
+        "reps": 2000,
+        "seed": 20261105
+      }
+    }
+  },
+  "rule": "C minimum pooled development log loss; promote only if paired game-bootstrap log-loss upper95<0 versus BOTH B1 and B2, Brier delta<=0.0001 versus both, and pooled development O/E in [0.8,1.25] in EACH FTN group. Otherwise choose B1 or B2 with lowest pooled development log loss; tie prefers B1. Never select using 2025/2026.",
+  "selected": "B2"
+}

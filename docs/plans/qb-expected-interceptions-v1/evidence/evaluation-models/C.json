@@ -1,0 +1,137 @@
+{
+  "C": 0.1,
+  "categorical_columns": [
+    "down",
+    "qtr"
+  ],
+  "categories": [
+    [
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0
+    ]
+  ],
+  "category_imputation": [
+    1.0,
+    2.0
+  ],
+  "coefficients": [
+    -0.05203944405220475,
+    0.12333418667893353,
+    -0.07804465664205965,
+    -0.0823566899037758,
+    -0.0315415209278954,
+    -0.061317236416832926,
+    -0.07581993879370863,
+    0.01715913606862893,
+    0.0059971008079216185,
+    1.1476648047155298,
+    0.01827275251773301,
+    -0.0295341216007114,
+    0.050577342281980055,
+    -0.039322879262127734,
+    -0.13671314660848863,
+    -0.02722494594181442,
+    0.03283979208236252,
+    0.14922557316511012,
+    -0.0181341787602976
+  ],
+  "feature_names": [
+    "num__ydstogo",
+    "num__log_ydstogo",
+    "num__yardline_100",
+    "num__redzone_distance",
+    "num__quarter_seconds_remaining",
+    "num__score_differential",
+    "num__deficit",
+    "num__end_half",
+    "num__deficit_end_half",
+    "num__is_interception_worthy",
+    "cat__down_1.0",
+    "cat__down_2.0",
+    "cat__down_3.0",
+    "cat__down_4.0",
+    "cat__qtr_1.0",
+    "cat__qtr_2.0",
+    "cat__qtr_3.0",
+    "cat__qtr_4.0",
+    "cat__qtr_5.0"
+  ],
+  "format": "xint-ftn-logistic-json-v1",
+  "intercept": -5.609248659558407,
+  "iterations": 97,
+  "kind": "C",
+  "mean": [
+    8.887899103637306,
+    2.193773859456707,
+    51.71375657456108,
+    1.1620490406696793,
+    416.6539002889103,
+    -2.6295095933032075,
+    5.025372249796281,
+    0.14993703237276834,
+    0.8586561967553152,
+    0.04204015112230536
+  ],
+  "median": [
+    10.0,
+    2.3978952727983707,
+    55.0,
+    0.0,
+    402.0,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "missing_indicators": [],
+  "numeric_columns": [
+    "ydstogo",
+    "log_ydstogo",
+    "yardline_100",
+    "redzone_distance",
+    "quarter_seconds_remaining",
+    "score_differential",
+    "deficit",
+    "end_half",
+    "deficit_end_half",
+    "is_interception_worthy"
+  ],
+  "raw_features": [
+    "down",
+    "qtr",
+    "ydstogo",
+    "yardline_100",
+    "quarter_seconds_remaining",
+    "score_differential",
+    "is_interception_worthy"
+  ],
+  "risk_input": "is_interception_worthy",
+  "scale": [
+    4.017348973042561,
+    0.47870795622597107,
+    23.385211888648413,
+    3.6357304656995013,
+    274.9335823493981,
+    9.902990210850813,
+    7.015485659614401,
+    0.35700968991902277,
+    3.3576842776941342,
+    0.20068078337478437
+  ],
+  "target": "interception",
+  "train_years": [
+    2022,
+    2023,
+    2024
+  ]
+}
