@@ -1,0 +1,19 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/progression --reporter=default
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/qb-progression-improvisation-lab-v1/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/progression/model.test.ts (5 tests) 230ms
+stderr | broadcast-journey/progression/Entry.test.tsx > restores direct DES evidence, category URL and unchanged player totals
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ broadcast-journey/progression/Entry.test.tsx (5 tests) 521ms
+
+ Test Files  2 passed (2)
+      Tests  10 passed (10)
+   Start at  23:58:21
+   Duration  1.23s (transform 143ms, setup 0ms, collect 180ms, tests 751ms, environment 291ms, prepare 113ms)
+

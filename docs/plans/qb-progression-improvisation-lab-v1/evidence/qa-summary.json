@@ -1,0 +1,35 @@
+{
+  "browser": {
+    "allFiveCasesReconciled": true,
+    "hover": true,
+    "keyboard": true,
+    "noAutoScrollMeasured": true,
+    "text200At320": true,
+    "touch": "emulated PointerEvent touch + click, not physical",
+    "viewports": [
+      1440,
+      390,
+      320
+    ]
+  },
+  "date": "2026-11-06",
+  "frontend": {
+    "expectedFailures": 5,
+    "ordinaryPasses": 420,
+    "skips": 0,
+    "totalPassed": 425,
+    "unexpectedFailures": 0
+  },
+  "lint": "0 errors; 1 preexisting warning in reading-polish/main.tsx",
+  "preserved": {
+    "B2": 33,
+    "M3": 23,
+    "researchV1": 42
+  },
+  "pythonNew": {
+    "failed": 0,
+    "passed": 15,
+    "skips": 0
+  },
+  "typescript": "passed"
+}

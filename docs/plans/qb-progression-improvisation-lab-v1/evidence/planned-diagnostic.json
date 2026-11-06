@@ -1,0 +1,38 @@
+[
+  {
+    "des_epa": -0.07905557761812651,
+    "des_n": 1918,
+    "planned_epa": 0.14211915928266,
+    "planned_n": 16290,
+    "progression_epa": 0.17163579895533665,
+    "progression_n": 14372,
+    "season": 2023
+  },
+  {
+    "des_epa": 0.0216660853364817,
+    "des_n": 1954,
+    "planned_epa": 0.1991516879432602,
+    "planned_n": 15820,
+    "progression_epa": 0.2241630010467973,
+    "progression_n": 13866,
+    "season": 2024
+  },
+  {
+    "des_epa": -0.010450916513812173,
+    "des_n": 1664,
+    "planned_epa": 0.19673503908535067,
+    "planned_n": 15620,
+    "progression_epa": 0.22143820833993702,
+    "progression_n": 13956,
+    "season": 2025
+  },
+  {
+    "des_epa": -0.0431276978989223,
+    "des_n": 790,
+    "planned_epa": 0.19982696492152044,
+    "planned_n": 7130,
+    "progression_epa": 0.23010049546223807,
+    "progression_n": 6340,
+    "season": 2026
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "font": "32px",
+    "inlinePreview": true,
+    "overflow": false,
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "font": "16px",
+    "navLinks": 3,
+    "overflow": false,
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "font": "16px",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "font": "16px",
+    "overflow": false,
+    "width": 1440
+  }
+]

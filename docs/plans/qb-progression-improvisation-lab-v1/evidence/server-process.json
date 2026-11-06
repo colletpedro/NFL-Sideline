@@ -1,0 +1,10 @@
+{
+  "pid": 83548,
+  "cwd": "/Users/pedrocollet/.codex/worktrees/qb-progression-improvisation-lab-v1/NFL Sideline",
+  "port": 18127,
+  "command": [
+    "node",
+    "web-ui/scripts/progression-dev.mjs"
+  ],
+  "ownServerRestartedWithReferenceSourceConfigs": true
+}

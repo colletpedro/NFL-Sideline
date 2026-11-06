@@ -1,0 +1,11 @@
+{
+  "currentMigrated": 797,
+  "currentQBResidual": 1,
+  "currentResidual": 2,
+  "identityExactlyPreserved": true,
+  "mainABKeysAndEPAExactlyPreserved": true,
+  "mainPopulation": 69505,
+  "migrated": 7986,
+  "passed": true,
+  "population": 89715
+}

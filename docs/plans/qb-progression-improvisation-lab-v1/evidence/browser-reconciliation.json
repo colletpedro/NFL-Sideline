@@ -1,0 +1,8 @@
+{
+  "cases": 5,
+  "comparedPointCoordinates": 260,
+  "numericalTolerance": 1e-12,
+  "packageId": "5b780052143352a5abf8ffec",
+  "passed": true,
+  "summaryAndAllCategoriesExact": true
+}
