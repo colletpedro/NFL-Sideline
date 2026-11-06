@@ -34,3 +34,9 @@ def test_replay_failure_keeps_pointer_and_recovers(tmp_path):
  with pytest.raises(OSError):p.publish(store=tmp_path,fail_pointer=True)
  assert (tmp_path/'current.json').read_bytes()==before and p.sha(root/'index.json')==digest
  assert p.publish(store=tmp_path)==root and not (tmp_path/'.updating').exists();assert p.check_package(root)['schemaVersion']==2
+
+def test_update_rejects_changed_fixed_code_before_writing(tmp_path):
+ import subprocess,json
+ bad=tmp_path/'bad.json';bad.write_text(json.dumps(dict(schemaVersion=2,classificationVersion='2.0.0',codeSha256='0'*64)))
+ out=tmp_path/'should-not-exist';result=subprocess.run([sys.executable,str(Path(__file__).with_name('update.py')),'--fixed-index',str(bad),'--frozen-science',str(p.SCI/'package-release'),'--store',str(tmp_path/'store'),'--out',str(out)],capture_output=True,text=True)
+ assert result.returncode!=0 and 'Fixed v2 classification differs' in result.stderr and not out.exists()
