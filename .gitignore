@@ -101,3 +101,8 @@ web-ui/curve-dist/
 # Isolated laboratory build; never part of the approved public build.
 web-ui/risk-lab-dist/
 web-ui/risk-outcomes-dist/
+
+# MLflow local: índice dos experimentos (docs/plans/mlflow-tracking-v1); nunca versionado.
+/editorial/local-artifacts/mlflow/
+# Stores científicos completos dos experimentos QB; evidências pequenas ficam em docs/plans/qb-*.
+/editorial/local-artifacts/qb-*/

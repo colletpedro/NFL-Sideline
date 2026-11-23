@@ -1,0 +1,146 @@
+{
+  "models": {
+    "38b9933535dada0f8b0ed22842ef247fe8e9beeca2a4c3469f4abc54b2b535a6": {
+      "alias": "champion",
+      "experiment": "qb-risk-temporal-v2",
+      "importerGitCommit": "ed2a008afffdf40f2a485b17228ff5046821dba5",
+      "name": "qb-iw-m3",
+      "numbers": {
+        "candidate2025.M3.brier": {
+          "metricKey": "brier",
+          "runId": "aa040c51d5a54c4e9f7f66595422e2b4",
+          "value": 0.03074277899215753
+        },
+        "candidate2025.M3.log_loss": {
+          "metricKey": "log_loss",
+          "runId": "aa040c51d5a54c4e9f7f66595422e2b4",
+          "value": 0.13966077421760636
+        },
+        "candidate2025.M3.observed_expected": {
+          "metricKey": "observed_expected",
+          "runId": "aa040c51d5a54c4e9f7f66595422e2b4",
+          "value": 0.9480987330447663
+        },
+        "candidate2025.M3.pr_auc_average_precision": {
+          "metricKey": "pr_auc_average_precision",
+          "runId": "aa040c51d5a54c4e9f7f66595422e2b4",
+          "value": 0.045524074639917936
+        },
+        "candidate2025.M3.roc_auc": {
+          "metricKey": "roc_auc",
+          "runId": "aa040c51d5a54c4e9f7f66595422e2b4",
+          "value": 0.5859075998327803
+        },
+        "candidate2026.M3.brier": {
+          "metricKey": "brier",
+          "runId": "1ac7b96c7c2d48adaeb9bc4ebdba2f2c",
+          "value": 0.029770426986323484
+        },
+        "candidate2026.M3.log_loss": {
+          "metricKey": "log_loss",
+          "runId": "1ac7b96c7c2d48adaeb9bc4ebdba2f2c",
+          "value": 0.13632541358974393
+        },
+        "candidate2026.M3.observed_expected": {
+          "metricKey": "observed_expected",
+          "runId": "1ac7b96c7c2d48adaeb9bc4ebdba2f2c",
+          "value": 0.9685173517984116
+        },
+        "candidate2026.M3.pr_auc_average_precision": {
+          "metricKey": "pr_auc_average_precision",
+          "runId": "1ac7b96c7c2d48adaeb9bc4ebdba2f2c",
+          "value": 0.05107774897845832
+        },
+        "candidate2026.M3.roc_auc": {
+          "metricKey": "roc_auc",
+          "runId": "1ac7b96c7c2d48adaeb9bc4ebdba2f2c",
+          "value": 0.5742720220016139
+        }
+      },
+      "runId": "21436784aa284a6f8dcfb287e23ba867",
+      "sourceFreezeSha256": "3af75413a0f8bdb9a5fa788cc3b769272deaa66f523b734aa5fe739a90b723ca",
+      "sourceParentRunId": "1adc6240bb4448e9bb38bd3092327656",
+      "sourceStore": "qb-risk-temporal-calibration-v2/20261104-v2",
+      "version": "3"
+    },
+    "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8": {
+      "alias": "champion",
+      "experiment": "xint-ftn-v1",
+      "importerGitCommit": "ed2a008afffdf40f2a485b17228ff5046821dba5",
+      "name": "xint-ftn",
+      "numbers": {
+        "evaluation2025.B1.all.log_loss": {
+          "metricKey": "all.log_loss",
+          "runId": "565f441310974cbda2d5c08d1989729f",
+          "value": 0.05029813324690858
+        },
+        "evaluation2025.B2.all.average_precision": {
+          "metricKey": "all.average_precision",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 0.4470018440457666
+        },
+        "evaluation2025.B2.all.brier": {
+          "metricKey": "all.brier",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 0.012187694142121633
+        },
+        "evaluation2025.B2.all.expected_interceptions": {
+          "metricKey": "all.expected_interceptions",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 364.50562063822224
+        },
+        "evaluation2025.B2.all.log_loss": {
+          "metricKey": "all.log_loss",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 0.04985274183852961
+        },
+        "evaluation2025.B2.all.observed_interceptions": {
+          "metricKey": "all.observed_interceptions",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 380.0
+        },
+        "evaluation2025.B2.all.roc_auc": {
+          "metricKey": "all.roc_auc",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 0.8940122201486754
+        },
+        "evaluation2025.B2.ftn_0.expected_interceptions": {
+          "metricKey": "ftn_0.expected_interceptions",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 52.916788150912595
+        },
+        "evaluation2025.B2.ftn_0.observed_interceptions": {
+          "metricKey": "ftn_0.observed_interceptions",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 75.0
+        },
+        "evaluation2025.B2.ftn_1.expected_interceptions": {
+          "metricKey": "ftn_1.expected_interceptions",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 311.58883248730956
+        },
+        "evaluation2025.B2.ftn_1.observed_interceptions": {
+          "metricKey": "ftn_1.observed_interceptions",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 305.0
+        },
+        "evaluation2025.C.all.log_loss": {
+          "metricKey": "all.log_loss",
+          "runId": "3cb21a4e4eaf4ce98ae94d2029d59759",
+          "value": 0.050521123265684885
+        },
+        "evaluation2025.bootstrap.replicates": {
+          "paramKey": "paired.all.B2-B1.log_loss.reps",
+          "runId": "12da623dcc9a47d492c904755a128dc3",
+          "value": 2000
+        }
+      },
+      "runId": "9c30b09049944f0a8f35711ee3208c2d",
+      "sourceFreezeSha256": "db3274be82a6eeaf292875097dbc0cefbf6e7fc0599515c8dcc67048776b5856",
+      "sourceParentRunId": "060cd1cc6ea04dc384474bd232f2c2e9",
+      "sourceStore": "qb-expected-interceptions-v1/20261105-v1",
+      "version": "3"
+    }
+  },
+  "schemaVersion": 1
+}
