@@ -1,6 +1,6 @@
 # ADR-011: MLflow local como índice dos experimentos de ML
 
-Status: proposto (23/11/2026). Aguarda aceitação do dono do projeto; implementação em andamento no branch
+Status: aceito (24/11/2026, pelo dono do projeto; proposto em 23/11/2026). Implementado no branch
 `codex/mlflow-tracking-v1`. Plano: [docs/plans/mlflow-tracking-v1](../plans/mlflow-tracking-v1/PLAN.md).
 
 ## Contexto
