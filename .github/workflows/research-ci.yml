@@ -47,6 +47,37 @@ jobs:
           NFL_MLFLOW_HOME: ${{ runner.temp }}/mlflow-home
         run: python -m pytest research/mlflow_tracking -q -rs
 
+  model-hub:
+    name: model_hub (sintético)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      MLFLOW_DISABLE_AGENT_HINT: "1"
+    steps:
+      # Histórico completo: hubtrack registra git_commit/git_dirty com `git rev-parse`/`git status`.
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: research/model_hub/requirements.lock
+
+      - name: Install dependencies
+        run: pip install -r research/model_hub/requirements.lock
+
+      # Testes `real_data` procuram o cache real do hub em NFL_HUB_HOME (aqui inexistente) e se pulam;
+      # o conftest bloqueia socket em todos os demais.
+      - name: Test model_hub
+        env:
+          NFL_HUB_HOME: ${{ runner.temp }}/no-hub
+          NFL_MLFLOW_HOME: ${{ runner.temp }}/mlflow-home
+        run: python -m pytest research/model_hub -q -rs
+
   experiments:
     name: ${{ matrix.name }}
     runs-on: ubuntu-latest
