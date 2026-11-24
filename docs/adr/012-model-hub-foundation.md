@@ -1,6 +1,6 @@
 # ADR-012: fundação do hub de modelos de ML
 
-Status: proposto (24/11/2026). Plano: [docs/plans/model-hub-v1](../plans/model-hub-v1/PLAN.md). Depende do
+Status: aceito (24/11/2026, pelo dono do projeto). Plano: [docs/plans/model-hub-v1](../plans/model-hub-v1/PLAN.md). Depende do
 [ADR-011](011-local-mlflow-tracking.md).
 
 ## Contexto
