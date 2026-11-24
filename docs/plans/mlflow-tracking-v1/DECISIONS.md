@@ -8,7 +8,7 @@ anotado.
 |---|---|---|---|---|---|
 | D1 | 23/11/2026 | Trabalhar no branch novo `codex/mlflow-tracking-v1` a partir de `ed2a008` (ponta da cadeia `qb-*`), numa worktree em `.claude/worktrees/mlflow-tracking-v1` | Padrão do orquestrador (recomendação aceita no pedido) | Revisável | Rebase do branch sobre outra base |
 | D2 | 23/11/2026 | Importar os três experimentos, começando pela v1 para validar o importador | Padrão do orquestrador | Revisável | Remover experimentos no MLflow |
-| D3 | 23/11/2026 | A Fase 5 pode alterar o laboratório de desfechos (`risk-outcomes/Lab.tsx` e fronteira Vite), só para ler a proveniência | Padrão do orquestrador; previsto no plano | **Confirmar com o dono antes do merge** | Reverter arquivos do `web-ui` da Fase 5 |
+| D3 | 23/11/2026 | A Fase 5 pode alterar o laboratório de desfechos (`risk-outcomes/Lab.tsx` e fronteira Vite), só para ler a proveniência | Padrão do orquestrador; previsto no plano | Aceita pelo dono em 24/11/2026 | Reverter arquivos do `web-ui` da Fase 5 |
 | D4 | 23/11/2026 | Adicionar ao `.gitignore` o store do MLflow e os stores `qb-*` na Fase 1, em bloco separado | Padrão do orquestrador | Revisável | Remover as linhas |
 | D5 | 23/11/2026 | MLflow como índice alimentado por importador só leitura, sem instrumentar código congelado | Fase 0 | Aceita no plano | Alto (exigiria descongelar código) |
 | D6 | 23/11/2026 | `mlflow==3.17.2` (21/10/2026, último patch da 3.17; 3.18.0 tem 20 dias) | Orquestrador | Revisável | Trocar a versão no lock e reimportar |
@@ -23,5 +23,4 @@ anotado.
 
 ## Perguntas abertas
 
-- D3 precisa de confirmação explícita antes de qualquer merge.
-- ADR-011 está como "proposto"; aceitar ou ajustar é decisão do dono.
+- Nenhuma. D3 e ADR-011 aceitos pelo dono em 24/11/2026.

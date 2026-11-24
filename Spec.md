@@ -426,7 +426,7 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 | ADR-008 | Supabase migrations como fonte versionada do schema | Mudanças futuras devem evoluir a partir da baseline em `supabase/migrations/`. |
 | ADR-009 | Substituído pelo ADR-010 | O proxy hospedado não possui consumidor no desenho estático. |
 | ADR-010 | Java exporta snapshots públicos; Production é estática | Sem servidor permanente; regras BASIC/FULL do novo motor local ainda pendentes. |
-| ADR-011 | Proposto: MLflow local (SQLite) como índice dos experimentos de ML, alimentado por importador só leitura | Sem servidor nem custo; stores e hashes seguem como fonte de verdade; plano em `docs/plans/mlflow-tracking-v1/`. |
+| ADR-011 | Aceito: MLflow local (SQLite) como índice dos experimentos de ML, alimentado por importador só leitura | Sem servidor nem custo; stores e hashes seguem como fonte de verdade; plano em `docs/plans/mlflow-tracking-v1/`. |
 
 ## 12. Riscos e pendências
 
