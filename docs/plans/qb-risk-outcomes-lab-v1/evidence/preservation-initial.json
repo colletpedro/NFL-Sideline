@@ -1,0 +1,41 @@
+{
+  "approvedListener": [
+    "node      27026 pedrocollet   16u  IPv4 0xffe5a4240f61c005      0t0  TCP 127.0.0.1:18124 (LISTEN)"
+  ],
+  "base": "a2466636dec1d7feb8c3975cf984d7b505711dde",
+  "checkouts": {
+    "b2": {
+      "head": "a2466636dec1d7feb8c3975cf984d7b505711dde",
+      "status": ""
+    },
+    "main": {
+      "head": "98cca81929f740cd026737a3acb2d8d625fcecae",
+      "status": "?? Handoff.md\n?? docs/plans/broadcast-comprehension-v1/\n?? docs/plans/visual-broadcast/\n?? editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/user-prompt.txt\n?? editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/user-prompt.txt\n?? editorial/evaluations/2026-09-26/diagnose_both_keys.py\n?? editorial/evaluations/2026-09-26/diagnose_prod_key.py\n?? editorial/evaluations/2026-09-26/provenance/ClaimRenderer.baseline.java.txt\n?? editorial/evaluations/2026-09-26/provenance/PromptCatalog.baseline.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiClient.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GenerationFailure.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted-remainder/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/adjusted/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/GeminiClient.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/GenerationFailure.java.txt\n?? editorial/evaluations/2026-09-26/provenance/final/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/ClaimRenderer.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/EvaluationApplication.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/GeminiRequest.java.txt\n?? editorial/evaluations/2026-09-26/provenance/initial/PromptCatalog.java.txt\n?? editorial/evaluations/2026-09-26/run_authorized.py\n?? editorial/local-artifacts/\n?? reports/\n?? research_notes/"
+    },
+    "visual": {
+      "head": "5d7d7769ce71a6864edce4c7393a75913563595f",
+      "status": ""
+    }
+  },
+  "passed": true,
+  "protectedPaths": [
+    "web-ui/src",
+    "web-ui/public",
+    "web-ui/package.json",
+    "web-ui/package-lock.json",
+    "web-ui/vite.config.ts",
+    "core-api",
+    "etl-pipeline",
+    "supabase",
+    "editorial",
+    "research/qb_interception_risk",
+    "research/qb_risk_temporal_v2",
+    "research/qb_expected_interceptions",
+    "research/qb_risk_lab",
+    "docs/plans/qb-expected-interceptions-v1",
+    "docs/plans/qb-risk-lab-chart-focus-v3",
+    "Spec.md",
+    "docs/static-snapshot-contract.md"
+  ],
+  "sourceFiles": 28295
+}

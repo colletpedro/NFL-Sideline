@@ -1,0 +1,19 @@
+
+> web-ui@0.0.0 test
+> vitest run local-editorial/observations/directions.test.tsx local-editorial/observations/presentation.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/visual-reading-e5c4/NFL Sideline/web-ui
+
+ ✓ local-editorial/observations/directions.test.tsx (4 tests) 24ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  23:52:57
+   Duration  358ms (transform 61ms, setup 0ms, collect 81ms, tests 24ms, environment 0ms, prepare 45ms)
+
+npm notice
+npm notice New major version of npm available! 11.12.1 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

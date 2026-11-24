@@ -1,0 +1,7 @@
+{
+  "description": "Retrospective temporal out-of-fit evaluation; previously examined season",
+  "evaluation_year": 2025,
+  "freeze_sha256": "db3274be82a6eeaf292875097dbc0cefbf6e7fc0599515c8dcc67048776b5856",
+  "no_test_correction": true,
+  "selected": "B2"
+}

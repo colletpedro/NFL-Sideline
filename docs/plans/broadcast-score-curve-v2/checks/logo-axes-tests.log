@@ -1,0 +1,15 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/score-curve/curve.test.tsx broadcast-journey/game-story/story.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-score-curve-v2/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/game-story/story.test.tsx (11 tests) 100ms
+ ✓ broadcast-journey/score-curve/curve.test.tsx (8 tests) 41ms
+
+ Test Files  2 passed (2)
+      Tests  19 passed (19)
+   Start at  17:20:02
+   Duration  599ms (transform 129ms, setup 0ms, collect 454ms, tests 141ms, environment 0ms, prepare 91ms)
+

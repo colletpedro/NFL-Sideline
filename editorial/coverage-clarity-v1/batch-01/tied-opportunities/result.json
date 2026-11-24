@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:47.055546Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "296a186f0932f4ae963d665c066338918962fbff7ae36248626d9118ad3a5cf2",
+  "contextSha256" : "1f3112a3bcf18308697b955dd3d35ea49881e4239bffe376c9d163a4b83563a0",
+  "gameId" : "tied-opportunities",
+  "resultIdentity" : "6bbb2958e5bdd0bdd35ba6667817554a83650a2a240a3b406d9bebbd5c39391e",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

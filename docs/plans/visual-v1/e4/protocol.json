@@ -1,0 +1,428 @@
+{
+  "version": "e4-protocol-1.0.0",
+  "base": "793ac7b0059b77c22a41236aeb77427140c87108",
+  "frozenBeforeUiChanges": true,
+  "method": "internal-agent-inspection",
+  "humanParticipants": 0,
+  "humanTimes": null,
+  "designHypothesisSeconds": [
+    10,
+    15
+  ],
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      740
+    ]
+  ],
+  "zoomMethod": "200% font-only override in isolated evaluation server stylesheet, viewport fixed; baseline and doubled computed font sizes recorded. This is text enlargement, not viewport reduction or browser zoom.",
+  "cases": [
+    {
+      "id": "complete-matchup",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/complete-matchup.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "opportunity",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/opportunity.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "opposition",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/opposition.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "attack-not-demonstrated",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/attack-not-demonstrated.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "both-negative",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/both-negative.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "variation",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/variation.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "zero",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/zero.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "tiny-sign",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/tiny-sign.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "tie",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/tie.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "both-sides",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/both-sides.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "partial",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/partial.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "missing",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/missing.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "historical",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/historical.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "coverage-gap",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/coverage-gap.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "two-weeks",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/two-weeks.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "general-represented",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/general-represented.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "uneven-weeks",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/uneven-weeks.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "negative-tiny-sign",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/negative-tiny-sign.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "outlier",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/outlier.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "independent-opportunity",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/independent-opportunity.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "2026_03_BAL_DAL",
+      "kind": "real-known-regression",
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_BAL_DAL.json",
+      "tasks": [
+        "equivalent-text-visual",
+        "history",
+        "reload"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "2025_08_CHI_BAL",
+      "kind": "real-known-regression",
+      "source": "editorial/coverage-clarity-v1/batch-01/2025_08_CHI_BAL/context.json",
+      "tasks": [
+        "equivalent-text-visual",
+        "history",
+        "reload"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    },
+    {
+      "id": "2026_03_NE_JAX",
+      "kind": "real-known-regression",
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_NE_JAX.json",
+      "tasks": [
+        "equivalent-text-visual",
+        "history",
+        "reload"
+      ],
+      "human": null,
+      "before": null,
+      "after": null
+    }
+  ],
+  "legacy": "Generate a known valid synthetic WC context from Java test resources; v3 text without compatible visual. Do not expand enum.",
+  "operational": [
+    "catalogue -> explicit POST -> visual GET -> history -> reload",
+    "owned API unavailable -> refresh -> restart -> recover without automatic POST",
+    "lost POST response: existing client test; no browser transport interception supported",
+    "rapid context switch; old response must not enter new workspace"
+  ],
+  "criteria": [
+    "opposite signed positions",
+    "shared scale includes general extrema",
+    "zero distinct from absence",
+    "tiny exact signs preserved",
+    "axis formatting cannot change coordinates",
+    "unilateral evidence visible",
+    "ties preserved",
+    "keyboard details/table/focus",
+    "text contrast 4.5:1; essential chart 3:1"
+  ],
+  "independentEvaluation": "pending: no supported unused local cohort",
+  "humanRound": "human-round.md; equivalent questions; alternate text/visual first across participants; no invented answers/times"
+}

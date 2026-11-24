@@ -1,0 +1,9 @@
+{
+  "checked_url": "http://127.0.0.1:18125/?view=risk-lab&season=2026",
+  "conclusion": "Reference unavailable before/after; files and active packages preserved, availability not demonstrated",
+  "final_curl_no_proxy_exit": 7,
+  "final_lsof_listener_count": 0,
+  "final_urllib": "URLError",
+  "initial_urllib": "URLError",
+  "processes_started_stopped_or_reconfigured": 0
+}

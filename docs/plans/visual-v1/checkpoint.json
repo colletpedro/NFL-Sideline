@@ -1,0 +1,184 @@
+{
+  "baseCommit": "0eb25a0eb3ec774df10831a1ef5201d2f4a2f92e",
+  "date": "2026-10-06",
+  "scope": "Checkpoint da interface local anterior; sem mudança de comportamento nesta preparação",
+  "included": [
+    {
+      "path": ".gitignore",
+      "sha256": "708384da018c68c13a8e169e0907548a0849832b3d9a7e8dd42aa696c9fb0344"
+    },
+    {
+      "path": "README.md",
+      "sha256": "61885bffca5c00ef5f1366c040709f5ac930f24f3e82dbbb816e56b081d62c9b"
+    },
+    {
+      "path": "Spec.md",
+      "sha256": "f1283b54bd1544c2aa1a43e9a76212b03bd4bc1e2be8872b384e0c14fb4aee12"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalAnalysisServer.java",
+      "sha256": "373b5b694aba58510776fcb99888d18384c6754c2fc43d784db70137de31a8ed"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalContextCatalog.java",
+      "sha256": "3bb1526d8f14523be5077dc25c2200ee222ea94fbee87d093a499fef897dbaad"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalResultStore.java",
+      "sha256": "17fbdda4e65649409092b99fee0885ea041683d60d8e1ed17eb77b0e7c6962db"
+    },
+    {
+      "path": "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalIntegrationTest.java",
+      "sha256": "7495145f6382b88c650737f0d49e672aa94038597ff98c7b7aca1d8ed54a215d"
+    },
+    {
+      "path": "core-api/src/test/java/com/nflsideline/coreapi/editorial/local/LocalServerTest.java",
+      "sha256": "24c27b629ab5d1fe117d7f7dd19b3a586e43390e191716e92c6cc56c2710647a"
+    },
+    {
+      "path": "docs/current-state.md",
+      "sha256": "d1bdd8039a1b2699b20f380b1d887ef4cb2063d39f4ae0536c14ef3709d401bd"
+    },
+    {
+      "path": "docs/local-editorial-api.md",
+      "sha256": "3b487fa61e8f7906f4ee7e7cfc7f8e7049f0ecd204852987c7384dec55bc42d2"
+    },
+    {
+      "path": "docs/local-editorial-ui.md",
+      "sha256": "2476e206a0b91ba780d0c556151ba302d080be8476c8638a2929c02e7bcf0e62"
+    },
+    {
+      "path": "editorial/local-interface-v1/REPORT.md",
+      "sha256": "62d21c2cda92d9977399eab735679016a158c3201fea615ec53641a446680a5e"
+    },
+    {
+      "path": "editorial/local-interface-v1/verification.json",
+      "sha256": "3a6a72a2d4b2873db89963368630d36b4bb4e618682154670db5f82d40c1080a"
+    },
+    {
+      "path": "scripts/verify_local_editorial_ui.py",
+      "sha256": "2081bc0107995d2963b65789fbe69a1ca8b46dc562ad382f3a959d83372236f3"
+    },
+    {
+      "path": "web-ui/build/local-editorial.ts",
+      "sha256": "c04af852c3cca83481002c186bf4d6e43dbaccea8364ada9076768ffbcb8cb87"
+    },
+    {
+      "path": "web-ui/local-editorial/App.tsx",
+      "sha256": "abdbf7dd25f5f46f24fbd24065366c47dbb213ffa34ca0bdf67fee91ef887984"
+    },
+    {
+      "path": "web-ui/local-editorial/client.ts",
+      "sha256": "3a2a3cea0c056b2aff1e2a8f9d273a1c961b23659da69fe38722aaee08f8dfaf"
+    },
+    {
+      "path": "web-ui/local-editorial/index.html",
+      "sha256": "5e66f925fee8d8cee85c99aaaa9c7f895d2340014b462c4f50620cbc97155658"
+    },
+    {
+      "path": "web-ui/local-editorial/local.test.tsx",
+      "sha256": "79f3521ec7e87a2625a2aedeb0897bea49eca0fa18aa6787602c2eece55d1211"
+    },
+    {
+      "path": "web-ui/local-editorial/main.tsx",
+      "sha256": "660c19ace773014e29044cde6c524541e39091729fff206704543277e8036d4a"
+    },
+    {
+      "path": "web-ui/local-editorial/style.css",
+      "sha256": "8f9c7fb01fd19d1c61d04d2b3cee038f114d2abcdba3aceda366541dce231833"
+    },
+    {
+      "path": "web-ui/package.json",
+      "sha256": "f07a76c99d99e975e03dedcdc37c928be63436e36d6cea5a1c09b76a85b53721"
+    },
+    {
+      "path": "web-ui/scripts/editorial-dev.mjs",
+      "sha256": "54abed96406b42c779bb9e8c79285e8f7c5960251c4a789af1c003a7db5b227f"
+    },
+    {
+      "path": "web-ui/tsconfig.app.json",
+      "sha256": "61f57bf19f4828187bd5c2ecd74cee3dc387090c6a05f8811e88f1db31cf3cc2"
+    },
+    {
+      "path": "web-ui/tsconfig.node.json",
+      "sha256": "b36c2a38798e89300cf79c035378ec2cee07a4a97ccf81b014b7e4c57db401e3"
+    },
+    {
+      "path": "web-ui/vite.editorial.config.ts",
+      "sha256": "cb7aa965ee5f222071d7f9b5773815925c7830fa24130a57c06ac6f6bb7b902c"
+    }
+  ],
+  "excludedUntracked": [
+    "Handoff.md",
+    "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/user-prompt.txt",
+    "editorial/evaluations/2026-09-26/diagnose_both_keys.py",
+    "editorial/evaluations/2026-09-26/diagnose_prod_key.py",
+    "editorial/evaluations/2026-09-26/provenance/ClaimRenderer.baseline.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/PromptCatalog.baseline.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/ClaimRenderer.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/EvaluationApplication.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiClient.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiRequest.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GenerationFailure.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/PromptCatalog.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted/ClaimRenderer.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted/EvaluationApplication.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted/GeminiRequest.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/adjusted/PromptCatalog.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/final/ClaimRenderer.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/final/EvaluationApplication.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/final/GeminiClient.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/final/GeminiRequest.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/final/GenerationFailure.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/final/PromptCatalog.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/initial/ClaimRenderer.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/initial/EvaluationApplication.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/initial/GeminiRequest.java.txt",
+    "editorial/evaluations/2026-09-26/provenance/initial/PromptCatalog.java.txt",
+    "editorial/evaluations/2026-09-26/run_authorized.py"
+  ],
+  "protectedUnchanged": [
+    {
+      "path": "editorial/analysis-selections.json",
+      "sha256": "b9ffb3177a0ece8f96b8721ac352008a2aad65508659234a9b9331df47b3a600"
+    },
+    {
+      "path": "supabase/migrations/20260908201813_baseline_schema.sql",
+      "sha256": "0f4c0e79cbf56dd2437a8f9fd720585cc069ffaa538b4abe674eda6fb6fe940e"
+    },
+    {
+      "path": "supabase/migrations/20260908224641_harden_data_api_access.sql",
+      "sha256": "70abdc879e6884a13f2990d56897969c71fecb1d26d7f49bc5b8b6801bb2258d"
+    },
+    {
+      "path": "web-ui/public/data/manifest.json",
+      "sha256": "deca3888625d74dd2ac81e4b500a0c1f767251387dd38a60f016be04f81dc71d"
+    },
+    {
+      "path": "web-ui/public/data/seasons/2026.json",
+      "sha256": "9c378a2951c3333015d02b083e9a450424becc0bf1083fdffd34694cf08d867d"
+    }
+  ],
+  "verification": {
+    "java": {
+      "tests": 118,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "frontendTests": 48,
+    "lint": "PASS",
+    "build": "PASS",
+    "etlTests": 79,
+    "httpBrowser": "Evidência histórica da entrega de 05/10; não repetida no checkpoint"
+  }
+}

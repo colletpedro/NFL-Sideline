@@ -1,0 +1,32 @@
+[
+  {
+    "method": "Independent SQLite raw WHERE + LEFT JOIN + four-cell counts and denominators per season/week/game; all keys, GSIS, FTN, INT exact",
+    "passed": true,
+    "rows": 18008,
+    "season": 2022
+  },
+  {
+    "method": "Independent SQLite raw WHERE + LEFT JOIN + four-cell counts and denominators per season/week/game; all keys, GSIS, FTN, INT exact",
+    "passed": true,
+    "rows": 18248,
+    "season": 2023
+  },
+  {
+    "method": "Independent SQLite raw WHERE + LEFT JOIN + four-cell counts and denominators per season/week/game; all keys, GSIS, FTN, INT exact",
+    "passed": true,
+    "rows": 17740,
+    "season": 2024
+  },
+  {
+    "method": "Independent SQLite raw WHERE + LEFT JOIN + four-cell counts and denominators per season/week/game; all keys, GSIS, FTN, INT exact",
+    "passed": true,
+    "rows": 17358,
+    "season": 2025
+  },
+  {
+    "method": "Independent SQLite raw WHERE + LEFT JOIN + four-cell counts and denominators per season/week/game; all keys, GSIS, FTN, INT exact",
+    "passed": true,
+    "rows": 7970,
+    "season": 2026
+  }
+]

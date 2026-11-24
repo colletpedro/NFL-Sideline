@@ -1,0 +1,6 @@
+{
+  "status" : "GENERATION_FAILED",
+  "category" : "HTTP_4XX",
+  "diagnosticTypes" : [ "org.springframework.web.client.HttpClientErrorException" ],
+  "httpStatus" : 402
+}

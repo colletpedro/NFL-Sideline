@@ -1,0 +1,179 @@
+{
+  "code_sha256": {
+    "common.py": "230b04fad28052eb96cdf9dac3ef8749f0d37e1658672d97171d18918b883588",
+    "data.py": "30d2089f2e9e8c2ecf49644011927975531bda746ddd2b72816e3c95930d0241",
+    "evaluate.py": "f3a31caaf3a1dc51baadf39c93dab9ba512ee0f22f61f377335bf10af63eba16",
+    "risk_model.py": "2161619135fea8654aa79e9fc337adc1b333d5686a2d4e3a66f77a7539e0fec0",
+    "run.py": "9573d49874ef45156974920c717acae82c2757a21e630667224ad2818bce9b72"
+  },
+  "config": {
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "application_year": 2026,
+    "bootstrap_replicates": 2000,
+    "calibration_edges": [
+      0,
+      0.002,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0000001
+    ],
+    "development_years": [
+      2023,
+      2024
+    ],
+    "evaluation_year": 2025,
+    "max_iter": 2000,
+    "model_family": "observed-interception-given-ftn-v1",
+    "player_intervals": "none",
+    "risk_input": "is_interception_worthy",
+    "scope": "Retrospective temporal evaluation, already examined periods; no untouched confirmation or pre-snap prediction. FTN may know the outcome.",
+    "seed": 20261105,
+    "selection": "C minimum pooled development log loss; promote only if paired game-bootstrap log-loss upper95<0 versus BOTH B1 and B2, Brier delta<=0.0001 versus both, and pooled development O/E in [0.8,1.25] in EACH FTN group. Otherwise choose B1 or B2 with lowest pooled development log loss; tie prefers B1. Never select using 2025/2026.",
+    "solver": "lbfgs",
+    "support": "Rate k/n when 0<k<n; boundary k=0 or k=n uses (k+0.5)/(n+1). Missing FTN group falls back to full training global rate with explicit fallback record; empty full training fails.",
+    "target": "interception",
+    "tol": 1e-09,
+    "version": "1.0.0"
+  },
+  "config_sha256": "77e200f158fb0bff357d8c4ed97a08cbc89a563609d307cbc4cc63f264259d83",
+  "contract_sha256": "4c5532eda941c169506d7312c2a9a77aeeb53e17bf059aca609d38dbffcf846b",
+  "evaluation_model_hashes": {
+    "B0": "9c4710c3c988909a21941dcd14141d626bc32a0ff5a3c592060b7843f9b5e889",
+    "B1": "e4fbc89b69c78d51a31e94a2fd7bca59975f5b0a0e7d8920bd584bdf05ac6a41",
+    "B2": "008f820eda1d582525695b4492a6970c24f6a7c0ec2028e9215024ab6a972ddc",
+    "C": "4ba9e28038e29cf62ac3ce415842f05cbb098f6671394591e8987711535a9b88"
+  },
+  "format": "xint-research-freeze-v1",
+  "not_M3": true,
+  "retrospective_temporal": true,
+  "selection": {
+    "C_grid_scores": [
+      {
+        "C": 0.01,
+        "pooled_log_loss": 0.04733184184795346
+      },
+      {
+        "C": 0.1,
+        "pooled_log_loss": 0.04702175615377407
+      },
+      {
+        "C": 1.0,
+        "pooled_log_loss": 0.047043919591350264
+      }
+    ],
+    "chosen_C": 0.1,
+    "context_calibration_gate": false,
+    "context_useful": false,
+    "decision_data_years": [
+      2023,
+      2024
+    ],
+    "no_2025_or_2026_selection": true,
+    "paired": {
+      "B1-B0": {
+        "brier": {
+          "delta": -0.009539585739048404,
+          "games": 544,
+          "high": -0.008617215918034679,
+          "low": -0.010475062702061121,
+          "reps": 2000,
+          "seed": 20261105
+        },
+        "log_loss": {
+          "delta": -0.06146061193575985,
+          "games": 544,
+          "high": -0.056963674971637825,
+          "low": -0.06606681480177314,
+          "reps": 2000,
+          "seed": 20261105
+        }
+      },
+      "B2-B1": {
+        "brier": {
+          "delta": -0.0001713893217167199,
+          "games": 544,
+          "high": -8.445739833121175e-05,
+          "low": -0.0002619751859861443,
+          "reps": 2000,
+          "seed": 20261105
+        },
+        "log_loss": {
+          "delta": -0.0003536603283691718,
+          "games": 544,
+          "high": -0.0001784899453830356,
+          "low": -0.0005405858705615894,
+          "reps": 2000,
+          "seed": 20261105
+        }
+      },
+      "C-B0": {
+        "brier": {
+          "delta": -0.009499561969786836,
+          "games": 544,
+          "high": -0.008563363367998103,
+          "low": -0.010444502489490286,
+          "reps": 2000,
+          "seed": 20261105
+        },
+        "log_loss": {
+          "delta": -0.06136603719601083,
+          "games": 544,
+          "high": -0.05683871520754716,
+          "low": -0.06596881460397963,
+          "reps": 2000,
+          "seed": 20261105
+        }
+      },
+      "C-B1": {
+        "brier": {
+          "delta": 4.002376926156791e-05,
+          "games": 544,
+          "high": 0.000127176426115526,
+          "low": -5.15506266214928e-05,
+          "reps": 2000,
+          "seed": 20261105
+        },
+        "log_loss": {
+          "delta": 9.457473974901173e-05,
+          "games": 544,
+          "high": 0.000317720434748721,
+          "low": -0.00012594789553850772,
+          "reps": 2000,
+          "seed": 20261105
+        }
+      },
+      "C-B2": {
+        "brier": {
+          "delta": 0.0002114130909782878,
+          "games": 544,
+          "high": 0.0003395184004942328,
+          "low": 8.741382446096243e-05,
+          "reps": 2000,
+          "seed": 20261105
+        },
+        "log_loss": {
+          "delta": 0.0004482350681181835,
+          "games": 544,
+          "high": 0.00075288114106456,
+          "low": 0.00016492675650043586,
+          "reps": 2000,
+          "seed": 20261105
+        }
+      }
+    },
+    "rule": "C minimum pooled development log loss; promote only if paired game-bootstrap log-loss upper95<0 versus BOTH B1 and B2, Brier delta<=0.0001 versus both, and pooled development O/E in [0.8,1.25] in EACH FTN group. Otherwise choose B1 or B2 with lowest pooled development log loss; tie prefers B1. Never select using 2025/2026.",
+    "selected": "B2"
+  },
+  "target": "interception"
+}

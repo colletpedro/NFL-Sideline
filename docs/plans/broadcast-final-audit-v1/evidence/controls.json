@@ -1,0 +1,562 @@
+[
+  {
+    "id": "2026_01_NE_SEA",
+    "foundations": [
+      {
+        "foundation": "classified_pass",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_01_NE_SEA&season=2026&week=1&returnWeek=1&foundation=classified_pass",
+        "values": [
+          "−0,128",
+          "+0,168"
+        ]
+      },
+      {
+        "foundation": "classified_rush",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_01_NE_SEA&season=2026&week=1&returnWeek=1&foundation=classified_rush",
+        "values": [
+          "−0,088",
+          "−0,061"
+        ]
+      },
+      {
+        "foundation": "general",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_01_NE_SEA&season=2026&week=1&returnWeek=1&foundation=general",
+        "values": [
+          "−0,110",
+          "+0,066"
+        ]
+      }
+    ],
+    "quarters": [
+      {
+        "invalid": false,
+        "markers": 0,
+        "pressed": "1º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 1,
+        "pressed": "2º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "3º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 5,
+        "pressed": "4º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 5,
+        "pressed": "Jogo inteiro"
+      }
+    ],
+    "ranking": {
+      "groups": [
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "Conversões de terceira — ataques na W1",
+          "summaryRows": 2
+        },
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "TDs em campanhas de red zone — ataques na W1",
+          "summaryRows": 2
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_01_NE_SEA&season=2026&week=1&returnWeek=1&foundation=general&rank=week"
+    },
+    "visits": {
+      "count": 4,
+      "open": true,
+      "overflow": false,
+      "plays": 8
+    }
+  },
+  {
+    "id": "2026_02_DET_BUF",
+    "foundations": [
+      {
+        "foundation": "classified_pass",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_02_DET_BUF&season=2026&week=2&returnWeek=2&foundation=classified_pass",
+        "values": [
+          "+0,442",
+          "+0,456"
+        ]
+      },
+      {
+        "foundation": "classified_rush",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_02_DET_BUF&season=2026&week=2&returnWeek=2&foundation=classified_rush",
+        "values": [
+          "−0,208",
+          "+0,413"
+        ]
+      },
+      {
+        "foundation": "general",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_02_DET_BUF&season=2026&week=2&returnWeek=2&foundation=general",
+        "values": [
+          "+0,232",
+          "+0,435"
+        ]
+      }
+    ],
+    "quarters": [
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "1º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 4,
+        "pressed": "2º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "3º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 3,
+        "pressed": "4º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 5,
+        "pressed": "Jogo inteiro"
+      }
+    ],
+    "ranking": {
+      "groups": [
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "Conversões de terceira — ataques na W2",
+          "summaryRows": 2
+        },
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "TDs em campanhas de red zone — ataques na W2",
+          "summaryRows": 2
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_02_DET_BUF&season=2026&week=2&returnWeek=2&foundation=general&rank=week"
+    },
+    "visits": {
+      "count": 10,
+      "open": true,
+      "overflow": false,
+      "plays": 22
+    }
+  },
+  {
+    "id": "2026_03_ATL_GB",
+    "foundations": [
+      {
+        "foundation": "classified_pass",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_03_ATL_GB&season=2026&week=3&returnWeek=3&foundation=classified_pass",
+        "values": [
+          "+0,338",
+          "+0,066"
+        ]
+      },
+      {
+        "foundation": "classified_rush",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_03_ATL_GB&season=2026&week=3&returnWeek=3&foundation=classified_rush",
+        "values": [
+          "+0,309",
+          "−0,301"
+        ]
+      },
+      {
+        "foundation": "general",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_03_ATL_GB&season=2026&week=3&returnWeek=3&foundation=general",
+        "values": [
+          "+0,320",
+          "+0,014"
+        ]
+      }
+    ],
+    "quarters": [
+      {
+        "invalid": false,
+        "markers": 3,
+        "pressed": "1º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "2º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 1,
+        "pressed": "3º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 4,
+        "pressed": "4º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 7,
+        "pressed": "Jogo inteiro"
+      }
+    ],
+    "ranking": {
+      "groups": [
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "Conversões de terceira — ataques na W3",
+          "summaryRows": 2
+        },
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "TDs em campanhas de red zone — ataques na W3",
+          "summaryRows": 2
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_03_ATL_GB&season=2026&week=3&returnWeek=3&foundation=general&rank=week"
+    },
+    "visits": {
+      "count": 9,
+      "open": true,
+      "overflow": false,
+      "plays": 24
+    }
+  },
+  {
+    "id": "2026_04_PIT_CLE",
+    "foundations": [
+      {
+        "foundation": "classified_pass",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_04_PIT_CLE&season=2026&week=4&returnWeek=4&foundation=classified_pass",
+        "values": [
+          "+0,075",
+          "+0,262"
+        ]
+      },
+      {
+        "foundation": "classified_rush",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_04_PIT_CLE&season=2026&week=4&returnWeek=4&foundation=classified_rush",
+        "values": [
+          "+0,063",
+          "−0,129"
+        ]
+      },
+      {
+        "foundation": "general",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_04_PIT_CLE&season=2026&week=4&returnWeek=4&foundation=general",
+        "values": [
+          "+0,071",
+          "+0,099"
+        ]
+      }
+    ],
+    "quarters": [
+      {
+        "invalid": false,
+        "markers": 1,
+        "pressed": "1º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 5,
+        "pressed": "2º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 1,
+        "pressed": "3º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 5,
+        "pressed": "4º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 8,
+        "pressed": "Jogo inteiro"
+      }
+    ],
+    "ranking": {
+      "groups": [
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "Conversões de terceira — ataques na W4",
+          "summaryRows": 2
+        },
+        {
+          "expanded": "true",
+          "fullRows": 32,
+          "name": "TDs em campanhas de red zone — ataques na W4",
+          "summaryRows": 2
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_04_PIT_CLE&season=2026&week=4&returnWeek=4&foundation=general&rank=week"
+    },
+    "visits": {
+      "count": 5,
+      "open": true,
+      "overflow": false,
+      "plays": 19
+    }
+  },
+  {
+    "id": "2026_05_TB_DAL",
+    "foundations": [
+      {
+        "foundation": "classified_pass",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_TB_DAL&season=2026&week=5&returnWeek=5&foundation=classified_pass",
+        "values": [
+          "+0,226",
+          "−0,056"
+        ]
+      },
+      {
+        "foundation": "classified_rush",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_TB_DAL&season=2026&week=5&returnWeek=5&foundation=classified_rush",
+        "values": [
+          "+0,116",
+          "+0,051"
+        ]
+      },
+      {
+        "foundation": "general",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_TB_DAL&season=2026&week=5&returnWeek=5&foundation=general",
+        "values": [
+          "+0,162",
+          "−0,030"
+        ]
+      }
+    ],
+    "quarters": [
+      {
+        "invalid": false,
+        "markers": 1,
+        "pressed": "1º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "2º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 5,
+        "pressed": "3º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "4º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 7,
+        "pressed": "Jogo inteiro"
+      }
+    ],
+    "ranking": {
+      "groups": [
+        {
+          "expanded": "true",
+          "fullRows": 30,
+          "name": "Conversões de terceira — ataques na W5",
+          "summaryRows": 2
+        },
+        {
+          "expanded": "true",
+          "fullRows": 30,
+          "name": "TDs em campanhas de red zone — ataques na W5",
+          "summaryRows": 2
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_TB_DAL&season=2026&week=5&returnWeek=5&foundation=general&rank=week"
+    },
+    "visits": {
+      "count": 7,
+      "open": true,
+      "overflow": false,
+      "plays": 19
+    }
+  },
+  {
+    "id": "2026_06_SEA_DEN",
+    "foundations": [
+      {
+        "foundation": "classified_pass",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_06_SEA_DEN&season=2026&week=6&returnWeek=6&foundation=classified_pass",
+        "values": [
+          "−0,143",
+          "−0,210"
+        ]
+      },
+      {
+        "foundation": "classified_rush",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_06_SEA_DEN&season=2026&week=6&returnWeek=6&foundation=classified_rush",
+        "values": [
+          "−0,015",
+          "−0,073"
+        ]
+      },
+      {
+        "foundation": "general",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_06_SEA_DEN&season=2026&week=6&returnWeek=6&foundation=general",
+        "values": [
+          "−0,101",
+          "−0,144"
+        ]
+      }
+    ],
+    "quarters": [
+      {
+        "invalid": false,
+        "markers": 1,
+        "pressed": "1º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 3,
+        "pressed": "2º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 0,
+        "pressed": "3º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "4º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 5,
+        "pressed": "Jogo inteiro"
+      }
+    ],
+    "ranking": {
+      "groups": [
+        {
+          "expanded": "true",
+          "fullRows": 28,
+          "name": "Conversões de terceira — ataques na W6",
+          "summaryRows": 2
+        },
+        {
+          "expanded": "true",
+          "fullRows": 28,
+          "name": "TDs em campanhas de red zone — ataques na W6",
+          "summaryRows": 2
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_06_SEA_DEN&season=2026&week=6&returnWeek=6&foundation=general&rank=week"
+    },
+    "visits": {
+      "count": 4,
+      "open": true,
+      "overflow": false,
+      "plays": 8
+    }
+  },
+  {
+    "id": "2026_07_NE_CHI",
+    "foundations": [
+      {
+        "foundation": "classified_pass",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_07_NE_CHI&season=2026&week=7&returnWeek=7&foundation=classified_pass",
+        "values": [
+          "+0,370",
+          "+0,377"
+        ]
+      },
+      {
+        "foundation": "classified_rush",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_07_NE_CHI&season=2026&week=7&returnWeek=7&foundation=classified_rush",
+        "values": [
+          "−0,165",
+          "−0,030"
+        ]
+      },
+      {
+        "foundation": "general",
+        "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_07_NE_CHI&season=2026&week=7&returnWeek=7&foundation=general",
+        "values": [
+          "+0,185",
+          "+0,195"
+        ]
+      }
+    ],
+    "quarters": [
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "1º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 4,
+        "pressed": "2º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "3º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 2,
+        "pressed": "4º quarto"
+      },
+      {
+        "invalid": false,
+        "markers": 7,
+        "pressed": "Jogo inteiro"
+      }
+    ],
+    "ranking": {
+      "groups": [
+        {
+          "expanded": "true",
+          "fullRows": 28,
+          "name": "Conversões de terceira — ataques na W7",
+          "summaryRows": 2
+        },
+        {
+          "expanded": "true",
+          "fullRows": 28,
+          "name": "TDs em campanhas de red zone — ataques na W7",
+          "summaryRows": 2
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_07_NE_CHI&season=2026&week=7&returnWeek=7&foundation=general&rank=week"
+    },
+    "visits": {
+      "count": 6,
+      "open": true,
+      "overflow": false,
+      "plays": 12
+    }
+  }
+]

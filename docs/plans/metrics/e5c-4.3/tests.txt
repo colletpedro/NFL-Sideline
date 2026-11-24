@@ -1,0 +1,25 @@
+
+> web-ui@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/visual-broadcast-refinement-e5c43/NFL Sideline/web-ui
+
+ ✓ src/services/staticDataClient.test.ts (8 tests) 11ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 19ms
+ ✓ local-editorial/observations/directions.test.tsx (4 tests) 31ms
+ ✓ local-editorial/broadcast/refinement.test.tsx (5 tests) 33ms
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 29ms
+ ✓ local-editorial/broadcast/broadcast.test.tsx (5 tests) 30ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 10ms
+ ✓ src/services/market.test.tsx (14 tests) 31ms
+ ✓ src/services/runtimeClient.test.ts (2 tests) 2ms
+ ✓ local-editorial/local.test.tsx (7 tests) 10ms
+ ✓ src/services/calendar.test.ts (9 tests) 5ms
+ ✓ src/services/api.test.ts (2 tests) 1ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 136ms
+
+ Test Files  13 passed (13)
+      Tests  151 passed (151)
+   Start at  00:02:38
+   Duration  1.09s (transform 1.36s, setup 0ms, collect 3.73s, tests 347ms, environment 1ms, prepare 745ms)

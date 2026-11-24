@@ -1,0 +1,54 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "AAA",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "AAA:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:AAA:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2,3", "rw:2026:BBB:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2,3" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "LIMITED_WINDOW",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "AAA",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:AAA:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:AAA:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2,3", "rw:2026:BBB:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2,3" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "AAA:OFF_EPA_PASS" ],
+    "vantagem_tatica" : [ "AAA:OFF_EPA_PASS" ],
+    "alerta_vermelho" : [ "limit:AAA:OFF_EPA_PASS" ],
+    "veredito" : [ "AAA:OFF_EPA_PASS", "limitation", "limit:AAA:OFF_EPA_PASS" ]
+  },
+  "links" : [ {
+    "from" : "limit:AAA:OFF_EPA_PASS",
+    "to" : "AAA:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  } ],
+  "contract_version" : 5,
+  "thesis_team" : "NONE"
+}

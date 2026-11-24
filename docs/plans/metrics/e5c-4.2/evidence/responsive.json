@@ -1,0 +1,19 @@
+[
+  {
+    "client": 305,
+    "scroll": 305,
+    "viewport": 320
+  },
+  {
+    "client": 1009,
+    "scroll": 1009,
+    "viewport": 1024
+  },
+  {
+    "client": 1009,
+    "mode": "text200",
+    "motion": true,
+    "scroll": 1009,
+    "viewport": 1024
+  }
+]

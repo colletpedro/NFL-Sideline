@@ -1,0 +1,164 @@
+{
+  "startedAt" : "2026-09-27T12:40:05.594820Z",
+  "mode" : "LIVE",
+  "model" : "gemini-3.1-pro-preview",
+  "promptVersion" : "editorial-claims-v3",
+  "split" : "development",
+  "manifestSha256" : "d9c3b251086ea0f4cdacda5e83d4106f69b811bb382fdab32d5a27c260e6f942",
+  "publicationApproved" : false,
+  "manifest" : {
+    "frozenAt" : "2026-09-26",
+    "publicationApproved" : false,
+    "policy" : "Quatro casos de desenvolvimento e dois reservados. Uma rodada de ajustes antes de abrir respostas reservadas. Sem regeneração seletiva.",
+    "cases" : [ {
+      "gameId" : "2026_03_ARI_SF",
+      "sourceCacheId" : 57,
+      "split" : "development",
+      "depth" : "FULL",
+      "context" : "contexts/2026_03_ARI_SF.json",
+      "reason" : "Extremo semanal de SF no passe; não esconder sinais opostos de ARI."
+    }, {
+      "gameId" : "2026_03_BAL_DAL",
+      "sourceCacheId" : 58,
+      "split" : "development",
+      "depth" : "FULL",
+      "context" : "contexts/2026_03_BAL_DAL.json",
+      "reason" : "Oportunidade do passe de BAL contra defesa de DAL; buscar contraponto pertinente."
+    }, {
+      "gameId" : "2026_03_NE_JAX",
+      "sourceCacheId" : 67,
+      "split" : "development",
+      "depth" : "FULL",
+      "context" : "contexts/2026_03_NE_JAX.json",
+      "reason" : "Sinais conflitantes: passe de JAX muda de sinal, defesa de NE também."
+    }, {
+      "gameId" : "2025_08_CHI_BAL",
+      "sourceCacheId" : null,
+      "split" : "development",
+      "depth" : "FULL",
+      "context" : "uneven-context/2025_08_CHI_BAL.json",
+      "reason" : "Semanas diferentes: BAL 4/5/6; CHI 4/6/7. Retrospectivo com métricas hoje disponíveis, não reconstrução da ingestão de 2025."
+    }, {
+      "gameId" : "2026_03_SEA_WAS",
+      "sourceCacheId" : 69,
+      "split" : "holdout",
+      "depth" : "FULL",
+      "context" : "contexts/2026_03_SEA_WAS.json",
+      "reason" : "Transferência da seleção ataque–defesa, sem adaptar prompt ao resultado."
+    }, {
+      "gameId" : "2026_03_MIN_TB",
+      "sourceCacheId" : 66,
+      "split" : "holdout",
+      "depth" : "FULL",
+      "context" : "contexts/2026_03_MIN_TB.json",
+      "reason" : "Transferência para sinais divergentes, sem adaptar prompt ao resultado."
+    } ]
+  },
+  "systemPrompt" : "Você seleciona claims tipadas; o servidor valida relações e redige os quatro textos. Responda somente no contrato JSON v3: contract_version=3, thesis_team (time ou NONE), verdict (INCONCLUSIVE, SLIGHT_HOME, SLIGHT_AWAY), claims e sections. Cada claim tem claim_id, type (OBSERVATION, COMPARISON, WINDOW_COMPARISON, MATCHUP, LIMITATION), subject, predicate, period (CURRENT, HISTORICAL, NONE), evidence_ids, role (SUPPORT, COUNTER, LIMITATION) e thesis_id para contraponto. Toda claim deve ser usada; pode reaparecer em seções diferentes, nunca duplicada na mesma seção. COMPARISON usa duas evidências da mesma métrica, temporada e semana, em ordem sujeito/oponente. WINDOW_COMPARISON usa dois IDs rw de recent_windows: mesma métrica, temporada, origem e aggregation; as semanas podem diferir. Use GREATER_THAN ou LESS_THAN na ordem sujeito/oponente. MATCHUP relaciona o ataque do subject à defesa adversária no mesmo fundamento: OFF_EPA_PASS/DEF_EPA_PASS, OFF_EPA_RUSH/DEF_EPA_RUSH ou OFF_EPA_PLAY/DEF_EPA_PLAY. evidence_ids contém os dois IDs rw, ataque primeiro. ATTACK_DEFENSE_PROFILE usa role LIMITATION e apenas descreve o encontro; permite veredito INCONCLUSIVE. POSITIVE_EPA_CONVERGENCE usa role SUPPORT ou COUNTER, period CURRENT, apenas quando minimum > 0 nas duas janelas e missingMetricWeeks está vazio em ambas. É convergência descritiva de sinais, não qualidade relativa à liga nem exploração comprovada. Não compare numericamente EPA ofensivo com EPA defensivo nem use média positiva para esconder semanas negativas. fator_chave tem uma claim principal. vantagem_tatica tem uma MATCHUP ou limitação NO_MATCHUP_SUPPORT. Inclinação só pode apoiar MATCHUP POSITIVE_EPA_CONVERGENCE do time da tese; inconclusivo continua permitido. NO_MATCHUP_SUPPORT só vale se não existir convergência elegível para nenhum time. Um PROFILE não nega a existência de sinais. alerta_vermelho tem um contraponto favorável ao adversário (COMPARISON, WINDOW_COMPARISON ou MATCHUP) com thesis_id igual à claim do fator_chave, ou uma limitação factual. veredito tem uma limitação. Limitações: NO_DATA (nenhuma métrica), PARTIAL_DATA (um time sem métricas), HISTORICAL_ONLY (só histórico), SMALL_SAMPLE (algum dado atual e ao menos um time com até duas semanas atuais), LIMITED_WINDOW (até três semanas), UNEVEN_WINDOWS (semanas atuais diferentes entre times), MIXED_SIGNALS (EPA positivo e negativo numa mesma janela). Prefira recortes completos e contrapontos relevantes ao fundamento da tese; trate observação isolada como secundária. Não use mercado, previsão causal ou identidade permanente. Cobertura de dados não é suficiência de amostra.",
+  "generationConfig" : {
+    "responseMimeType" : "application/json",
+    "responseJsonSchema" : {
+      "additionalProperties" : false,
+      "properties" : {
+        "thesis_team" : {
+          "type" : "string",
+          "minLength" : 1
+        },
+        "claims" : {
+          "type" : "array",
+          "items" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "subject" : {
+                "type" : "string",
+                "minLength" : 1
+              },
+              "type" : {
+                "type" : "string",
+                "enum" : [ "OBSERVATION", "COMPARISON", "WINDOW_COMPARISON", "MATCHUP", "LIMITATION" ]
+              },
+              "predicate" : {
+                "type" : "string",
+                "enum" : [ "RECORDED", "GREATER_THAN", "LESS_THAN", "ATTACK_DEFENSE_PROFILE", "POSITIVE_EPA_CONVERGENCE", "NO_DATA", "HISTORICAL_ONLY", "SMALL_SAMPLE", "LIMITED_WINDOW", "NO_MATCHUP_SUPPORT", "UNEVEN_WINDOWS", "MIXED_SIGNALS", "PARTIAL_DATA" ]
+              },
+              "role" : {
+                "type" : "string",
+                "enum" : [ "SUPPORT", "COUNTER", "LIMITATION" ]
+              },
+              "period" : {
+                "type" : "string",
+                "enum" : [ "CURRENT", "HISTORICAL", "NONE" ]
+              },
+              "evidence_ids" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "string",
+                  "minLength" : 1
+                }
+              },
+              "thesis_id" : {
+                "type" : "string",
+                "minLength" : 1
+              },
+              "claim_id" : {
+                "type" : "string",
+                "minLength" : 1
+              }
+            },
+            "type" : "object",
+            "required" : [ "claim_id", "type", "subject", "predicate", "period", "evidence_ids", "role" ]
+          }
+        },
+        "sections" : {
+          "additionalProperties" : false,
+          "properties" : {
+            "veredito" : {
+              "minItems" : 1,
+              "items" : {
+                "type" : "string",
+                "minLength" : 1
+              },
+              "type" : "array"
+            },
+            "alerta_vermelho" : {
+              "minItems" : 1,
+              "items" : {
+                "type" : "string",
+                "minLength" : 1
+              },
+              "type" : "array"
+            },
+            "vantagem_tatica" : {
+              "minItems" : 1,
+              "items" : {
+                "type" : "string",
+                "minLength" : 1
+              },
+              "type" : "array"
+            },
+            "fator_chave" : {
+              "minItems" : 1,
+              "items" : {
+                "type" : "string",
+                "minLength" : 1
+              },
+              "type" : "array"
+            }
+          },
+          "type" : "object",
+          "required" : [ "fator_chave", "vantagem_tatica", "alerta_vermelho", "veredito" ]
+        },
+        "verdict" : {
+          "type" : "string",
+          "enum" : [ "INCONCLUSIVE", "SLIGHT_HOME", "SLIGHT_AWAY" ]
+        },
+        "contract_version" : {
+          "type" : "integer",
+          "enum" : [ 3 ]
+        }
+      },
+      "type" : "object",
+      "required" : [ "contract_version", "thesis_team", "verdict", "claims", "sections" ]
+    }
+  }
+}

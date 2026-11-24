@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:45.756059Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "c7019c73dbd4252b375af51225f9eddff64368c9038905913256cb589c69a990",
+  "contextSha256" : "bb7ce8186ce6576b24f7d9cae04cc2d9aa77344050854f0558dd833d41ed422d",
+  "gameId" : "2026_03_SEA_WAS",
+  "resultIdentity" : "fa9f943ebddcad663b321d6168da02386f1934910577deb8ff82b987e1d6a05c",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

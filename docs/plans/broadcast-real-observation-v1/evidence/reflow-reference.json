@@ -1,0 +1,42 @@
+{
+  "case": "stats-title p; 320px, root 32px (200% text)",
+  "measurements": [
+    {
+      "name": "reference-before",
+      "port": 18089,
+      "viewport": 320,
+      "pageWidth": 362,
+      "whiteSpace": "nowrap",
+      "fontSize": "26px",
+      "text": "Jardas e número de jogadas.",
+      "height": 39,
+      "localChartScroll": [
+        {
+          "width": 260,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "isolated-fix",
+      "port": 18091,
+      "viewport": 320,
+      "pageWidth": 320,
+      "whiteSpace": "normal",
+      "fontSize": "26px",
+      "text": "Jardas e número de jogadas.",
+      "height": 78,
+      "localChartScroll": [
+        {
+          "width": 260,
+          "scrollWidth": 512,
+          "overflowX": "auto"
+        }
+      ]
+    }
+  ],
+  "noFontReduction": true,
+  "localChartScrollAssessedSeparately": true,
+  "temporaryServerClosedInFinally": true
+}

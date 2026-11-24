@@ -1,0 +1,18 @@
+{
+  "byes": true,
+  "expanded": "true",
+  "rows": 28,
+  "summary": [
+    {
+      "position": "3",
+      "team": "DAL",
+      "text": "3ºDAL61,5%8 de 13"
+    },
+    {
+      "position": "14",
+      "team": "PHI",
+      "text": "14ºPHI41,7%5 de 12"
+    }
+  ],
+  "url": "http://127.0.0.1:18109/?view=matchup-season&game=2026_07_DAL_PHI#mr-third"
+}

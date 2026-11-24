@@ -1,0 +1,23 @@
+[
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n1º tempo · Passe\n\nDAL tem EPA menos negativo.\n\nOs dois ataques tiveram EPA negativo no passe; a média de Dallas foi menos negativa.\n\n0,100 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 1440,
+    "url": "http://127.0.0.1:18088/confronto/dallas-new-england?round=7&period=first&play=pass",
+    "width": 1440
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n1º tempo · Passe\n\nDAL tem EPA menos negativo.\n\nOs dois ataques tiveram EPA negativo no passe; a média de Dallas foi menos negativa.\n\n0,100 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 390,
+    "url": "http://127.0.0.1:18088/confronto/dallas-new-england?round=7&period=first&play=pass",
+    "width": 390
+  },
+  {
+    "chartNote": "EPA positivo indica ganho de pontos esperados; negativo indica perda. Zero é a referência.",
+    "reading": "LEITURA DO RECORTE\n\n1º tempo · Passe\n\nDAL tem EPA menos negativo.\n\nOs dois ataques tiveram EPA negativo no passe; a média de Dallas foi menos negativa.\n\n0,100 EPA/jogada\nDiferença entre médias",
+    "scrollWidth": 320,
+    "url": "http://127.0.0.1:18088/confronto/dallas-new-england?round=7&period=first&play=pass",
+    "width": 320
+  }
+]

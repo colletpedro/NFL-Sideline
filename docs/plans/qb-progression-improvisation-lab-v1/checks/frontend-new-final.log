@@ -1,0 +1,39 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/progression --reporter=default
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/qb-progression-improvisation-lab-v1/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/progression/model.test.ts (5 tests) 236ms
+stderr | broadcast-journey/progression/Entry.test.tsx > restores direct DES evidence, category URL and unchanged player totals
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ❯ broadcast-journey/progression/Entry.test.tsx (5 tests | 1 failed) 427ms
+   × restores direct DES evidence, category URL and unchanged player totals 135ms
+     → expected <li class="rl-play" …(2)>…(1)</li>
+…(24) to have a length of 44 but got 25
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  broadcast-journey/progression/Entry.test.tsx > restores direct DES evidence, category URL and unchanged player totals
+AssertionError: expected <li class="rl-play" …(2)>…(1)</li>
+…(24) to have a length of 44 but got 25
+
+- Expected
++ Received
+
+- 44
++ 25
+
+ ❯ broadcast-journey/progression/Entry.test.tsx:15:691
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 9 passed (10)
+   Start at  23:51:46
+   Duration  1.14s (transform 134ms, setup 0ms, collect 184ms, tests 663ms, environment 309ms, prepare 67ms)
+

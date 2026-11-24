@@ -1,0 +1,11 @@
+{
+  "fontSize": "32px",
+  "inlinePreview": "rl-point-preview rl-preview-inline rl-preview-enlarged",
+  "metricTexts": [
+    "Interceptações sofridas9Desfecho registrado no PBP",
+    "Interceptações esperadas10,49Soma das probabilidades da referência B2",
+    "Sofridas menos esperadas-1,49Diferença descritiva, sem atribuição de causa"
+  ],
+  "scrollWidth": 305,
+  "width": 320
+}

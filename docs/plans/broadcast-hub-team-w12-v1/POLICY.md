@@ -1,0 +1,11 @@
+# Política de agregação de time 1.0.0
+
+Contrato novo broadcast-team-w12-v1. Somente 2026 REG W1–2, dois jogos exatos por time, perspectivas off (produção do time) e def (produção real dos ataques adversários). A segunda não confirma a primeira, não há nota de qualidade ou inferência de independência. Não altera políticas/garantias/estados dos contratos anteriores.
+
+`aggregate` requer dois componentes, W1 e W2, mesmos jogos esperados, definição/população/unidade/coluna/fonte compatíveis, procedência/integridade verificadas, numeradores/denominadores válidos, unidades únicas, sem ambiguidades. União real e soma exata de numeradores/denominadores; nunca média de taxas por jogo. SOURCE_ABSENT ou INSUFFICIENT bloqueiam o agregado pretendido, preservando componentes individuais sem omitir semana. NO_OPPORTUNITIES válido contribui zero; agregado 0/0 continua sem taxa, não 0%. Ausência de eventos esperados não é completude certificada.
+
+EPA: classified-scrimmage-v1, definição/adapter 1.0.0, soma decimal exata / jogadas com EPA finito. Preserva elegíveis, faltantes, não finitos, observações originais e IDs. Modelo UNKNOWN. Terceiras: conversões / tentativas elegíveis, união distância × tipo × conversão real. Red zone: TD ofensivo / campanhas elegíveis; uma campanha por ID, nunca multiplicada pelas entradas.
+
+`display` autoriza observação verificada AVAILABLE ou NO_OPPORTUNITIES; razão só com denominador positivo. `sideBySide` exige duas exibições e taxas definidas, mesmo recorte/definição/população/fonte; descreve duas produções distintas nos mesmos jogos, sem qualidade ajustada. `difference` não solicitada e `leagueReference` agregada fora do escopo são recusadas. Fatos próprios apenas contagens/razões de observações com display permitido, vinculados aos IDs e unidades. Sem mínimo arbitrário de amostra.
+
+Reconciliar a nova soma com os agregados originais W1–2 EPA e situacional (ambas as perspectivas) presentes nas fontes da coleção. Essa conferência não é nova garantia dos contratos antigos. Completude, cobertura esperada, identificação/certificação EPA e disponibilidade histórica permanecem UNKNOWN. Retrospectiva, não temporada completa, tendência, causalidade do placar ou previsão. Mercado permanece somente nas páginas de confronto, arquivado e temporalmente não certificado. Sem ranking, percentil ou distribuição W1–2.

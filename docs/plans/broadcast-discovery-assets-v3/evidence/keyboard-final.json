@@ -1,0 +1,47 @@
+[
+  {
+    "tag": "INPUT",
+    "id": "game-search",
+    "text": "",
+    "outline": "3px",
+    "visibleFocus": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "text": "Buscar",
+    "outline": "3px",
+    "visibleFocus": true
+  },
+  {
+    "tag": "SUMMARY",
+    "id": "",
+    "text": "Semana 1 · 2026Busca nesta semana · todos os jogosAjustar seleção e busca",
+    "outline": "3px",
+    "visibleFocus": true
+  },
+  {
+    "settingsExpanded": true
+  },
+  {
+    "tag": "SELECT",
+    "label": "Semana",
+    "text": "123456789101112131415161718",
+    "outline": "3px"
+  },
+  {
+    "tag": "SELECT",
+    "label": "Buscar em",
+    "text": "Esta semanaTemporada 2026",
+    "outline": "3px"
+  },
+  {
+    "tag": "SUMMARY",
+    "label": null,
+    "text": "Filtro: todos os jogos",
+    "outline": "3px"
+  },
+  {
+    "filterExpanded": true
+  }
+]

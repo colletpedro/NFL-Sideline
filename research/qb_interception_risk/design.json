@@ -1,0 +1,19 @@
+{
+  "version": "qb-iw-research-v1",
+  "seed": 20261104,
+  "bootstrap_replicates": 2000,
+  "C_grid": [0.01, 0.1, 1.0, 10.0],
+  "selection": "pooled pass-weighted validation log loss, 2023 and 2024; ties prefer smaller C",
+  "folds": [{"train": [2022], "validation": 2023}, {"train": [2022, 2023], "validation": 2024}],
+  "final_train": [2022, 2023, 2024],
+  "final_test": 2025,
+  "application_train": [2022, 2023, 2024, 2025],
+  "application": {"season": 2026, "weeks": [1, 7]},
+  "calibration_edges": [0, 0.02, 0.03, 0.04, 0.05, 0.075, 0.1, 0.15, 0.25, 1],
+  "environment": "excluded from both variants: unstable wind/temp coverage and unverified pre-play measurement timestamp; no zero wind imputation",
+  "variants": ["context", "depth"],
+  "posthoc_calibration": false,
+  "solver": "lbfgs",
+  "max_iter": 2000,
+  "tol": 1e-9
+}

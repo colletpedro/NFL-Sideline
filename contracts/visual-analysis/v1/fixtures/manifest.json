@@ -1,0 +1,88 @@
+{
+  "fixtureVersion": "visual-fixtures-1.0.0",
+  "provenance": "SYNTHETIC_CONTRACT_EXAMPLES_NOT_ENGINE_OUTPUT",
+  "valid": [
+    "valid/complete-matchup.json",
+    "valid/opportunity.json",
+    "valid/opposition.json",
+    "valid/attack-not-demonstrated.json",
+    "valid/both-negative.json",
+    "valid/variation.json",
+    "valid/zero.json",
+    "valid/tiny-sign.json",
+    "valid/tie.json",
+    "valid/both-sides.json",
+    "valid/partial.json",
+    "valid/missing.json",
+    "valid/historical.json",
+    "valid/coverage-gap.json",
+    "valid/two-weeks.json",
+    "valid/general-represented.json",
+    "valid/uneven-weeks.json",
+    "valid/negative-tiny-sign.json",
+    "valid/outlier.json",
+    "valid/independent-opportunity.json"
+  ],
+  "invalid": [
+    {
+      "file": "invalid/dangling-reference.json",
+      "expectedError": "INVALID_REFERENCE"
+    },
+    {
+      "file": "invalid/future-week.json",
+      "expectedError": "TEMPORAL_LEAK"
+    },
+    {
+      "file": "invalid/same-week.json",
+      "expectedError": "TEMPORAL_LEAK"
+    },
+    {
+      "file": "invalid/foreign-team.json",
+      "expectedError": "TEAM_MISMATCH"
+    },
+    {
+      "file": "invalid/duplicate-evidence.json",
+      "expectedError": "DUPLICATE_ID"
+    },
+    {
+      "file": "invalid/false-pattern.json",
+      "expectedError": "SIGN_MISMATCH"
+    },
+    {
+      "file": "invalid/false-relation.json",
+      "expectedError": "RELATION_MISMATCH"
+    },
+    {
+      "file": "invalid/market-contamination.json",
+      "expectedError": "SCHEMA"
+    },
+    {
+      "file": "invalid/hidden-limitation.json",
+      "expectedError": "INVALID_REFERENCE"
+    },
+    {
+      "file": "invalid/denominator-invented.json",
+      "expectedError": "DENOMINATOR_MISMATCH"
+    },
+    {
+      "file": "invalid/rounded-sign-lost.json",
+      "expectedError": "DISPLAY_MISMATCH"
+    },
+    {
+      "file": "invalid/tie-dropped.json",
+      "expectedError": "TIE_MISMATCH"
+    },
+    {
+      "file": "invalid/wrong-metric-role.json",
+      "expectedError": "SERIES_MISMATCH"
+    },
+    {
+      "file": "invalid/free-text-causality.json",
+      "expectedError": "COPY_MISMATCH"
+    },
+    {
+      "file": "invalid/non-finite.json",
+      "expectedError": "SCHEMA"
+    }
+  ]
+}

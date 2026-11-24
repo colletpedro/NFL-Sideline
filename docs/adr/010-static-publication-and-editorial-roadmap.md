@@ -1,7 +1,7 @@
 # ADR-010: publicação estática e roadmap editorial
 
-Status: aceito; fundação estática publicada. Fast track editorial v0 implementado localmente e validado offline,
-ainda não integrado a banco/Gemini reais nem publicado.
+Status: aceito; fundação estática publicada. O fluxo editorial manual permanece, com geração tática v2 por
+claims implementada e testada offline. Não houve avaliação com Gemini real nem nova publicação.
 
 ## Decisão atual
 
@@ -22,11 +22,14 @@ Calendário é independente de mercado. Jogos sem odds são persistidos e public
 O fast track não altera o schema do banco. Os tipos internos são `matchup_full_v0` e `matchup_basic_v0`; registros
 legados `matchup` são não classificados e não entram automaticamente na seleção nova.
 
-O manifesto permanece vazio nesta implementação. O primeiro rollout editorial deverá preencher manualmente as
+Na adoção inicial deste ADR o manifesto estava vazio; o primeiro rollout editorial precisava preencher manualmente as
 seis análises pregame legacy da Week 1 já publicadas, sem atualizar/clonar linhas: cada entrada usará o ID e os
 hashes da linha imutável, `depth: "LEGACY_PUBLISHED"`, e só será aceita para jogo encerrado quando conteúdo e
 `createdAt` coincidirem exatamente com o snapshot público anterior. Esse modo interno não altera o schema
 público v1, que continua expondo `analysisType: "matchup"`.
+
+Estado posterior: o manifesto versionado possui seleções aprovadas de entregas anteriores. Para o estado
+operacional atual, consulte [current-state.md](../current-state.md).
 
 Para FULL/BASIC, publicação reconstitui a janela tanto em `asOfDate` da geração quanto no `--as-of` explícito
 do snapshot. Revisão posterior ao gameday é rejeitada. O corte de métricas da postseason permanece limitado pelo

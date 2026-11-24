@@ -1,0 +1,6 @@
+{
+  "ownServerStopped": true,
+  "loopbackPort": 18083,
+  "bindProbe": "PASS",
+  "noOtherServerStopped": true
+}

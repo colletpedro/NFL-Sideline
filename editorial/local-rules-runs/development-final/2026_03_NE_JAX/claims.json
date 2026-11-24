@@ -1,0 +1,69 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "JAX",
+    "predicate" : "CONFLICTING_EPA_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "JAX:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:JAX:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:NE:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "JAX",
+    "predicate" : "CONFLICTING_EPA_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "JAX:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:JAX:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:NE:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "NE",
+    "predicate" : "CONFLICTING_EPA_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "NE:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:NE:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:JAX:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "NE",
+    "predicate" : "CONFLICTING_EPA_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "NE:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:NE:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:JAX:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "JAX:OFF_EPA_PASS", "JAX:OFF_EPA_RUSH", "NE:OFF_EPA_PASS", "NE:OFF_EPA_RUSH" ],
+    "vantagem_tatica" : [ "JAX:OFF_EPA_PASS", "JAX:OFF_EPA_RUSH", "NE:OFF_EPA_PASS", "NE:OFF_EPA_RUSH" ],
+    "alerta_vermelho" : [ "JAX:OFF_EPA_PASS", "JAX:OFF_EPA_RUSH", "NE:OFF_EPA_PASS", "NE:OFF_EPA_RUSH" ],
+    "veredito" : [ "limitation", "JAX:OFF_EPA_PASS", "JAX:OFF_EPA_RUSH", "NE:OFF_EPA_PASS", "NE:OFF_EPA_RUSH" ]
+  },
+  "links" : [ {
+    "from" : "JAX:OFF_EPA_PASS",
+    "to" : "JAX:OFF_EPA_PASS",
+    "relation" : "DIRECT_CONFLICT"
+  }, {
+    "from" : "JAX:OFF_EPA_RUSH",
+    "to" : "JAX:OFF_EPA_RUSH",
+    "relation" : "DIRECT_CONFLICT"
+  }, {
+    "from" : "NE:OFF_EPA_PASS",
+    "to" : "NE:OFF_EPA_PASS",
+    "relation" : "DIRECT_CONFLICT"
+  }, {
+    "from" : "NE:OFF_EPA_RUSH",
+    "to" : "NE:OFF_EPA_RUSH",
+    "relation" : "DIRECT_CONFLICT"
+  } ],
+  "contract_version" : 4,
+  "thesis_team" : "NONE"
+}

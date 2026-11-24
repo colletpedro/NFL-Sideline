@@ -1,0 +1,47 @@
+
+> web-ui@0.0.0 journey:build
+> tsc -p tsconfig.journey.json && vite build --config vite.journey.config.ts
+
+vite v5.4.21 building for production...
+transforming...
+✓ 87 modules transformed.
+rendering chunks...
+computing gzip size...
+../journey-dist/index.html                                      0.38 kB │ gzip:  0.28 kB
+../journey-dist/assets/nyg-B7GEzpDk.png                         7.57 kB
+../journey-dist/assets/cin-DAWVRKmj.png                        26.63 kB
+../journey-dist/assets/was-BcwmxSCJ.png                        30.42 kB
+../journey-dist/assets/sea-Bs6vHzbc.png                        32.08 kB
+../journey-dist/assets/ne-CjQy7Z4T.png                         32.08 kB
+../journey-dist/assets/dal-DumH5f6I.png                        32.37 kB
+../journey-dist/assets/lac-G0yXcTHr.png                        32.85 kB
+../journey-dist/assets/hou-BTtnUu_J.png                        35.77 kB
+../journey-dist/assets/car-CGu1pDhv.png                        36.64 kB
+../journey-dist/assets/buf-C8E5u14Q.png                        38.00 kB
+../journey-dist/assets/la-Cnbeu6OW.png                         38.71 kB
+../journey-dist/assets/gb-Kq_Dl-1v.png                         39.19 kB
+../journey-dist/assets/kc-qEo7C-YT.png                         40.23 kB
+../journey-dist/assets/den-ZMwN9Kj8.png                        40.95 kB
+../journey-dist/assets/ari-SWmA0hjl.png                        41.99 kB
+../journey-dist/assets/ind-BjFZCeSx.png                        42.08 kB
+../journey-dist/assets/sf-VDD_-KP9.png                         48.70 kB
+../journey-dist/assets/ten-BjiV9AWL.png                        50.73 kB
+../journey-dist/assets/atl-BOcCry6n.png                        51.78 kB
+../journey-dist/assets/no-CRvSwJHd.png                         52.02 kB
+../journey-dist/assets/bal-B02a8qg4.png                        55.99 kB
+../journey-dist/assets/pit-CVCA5Q0Z.png                        56.62 kB
+../journey-dist/assets/det-DOjjcZuE.png                        57.47 kB
+../journey-dist/assets/mia-pvajL4QF.png                        64.41 kB
+../journey-dist/assets/min-DxdqfIZ7.png                        69.69 kB
+../journey-dist/assets/phi-DVPW4bAp.png                        70.33 kB
+../journey-dist/assets/lv-BdvUO8u-.png                         77.77 kB
+../journey-dist/assets/jax-DFcKN7bi.png                        78.81 kB
+../journey-dist/assets/chi-BAA7PtZp.png                        93.59 kB
+../journey-dist/assets/cle-CjWlBQek.png                        94.48 kB
+../journey-dist/assets/tb-B-m6i7aa.png                         96.11 kB
+../journey-dist/assets/nyj-No6xqtcN.png                       130.61 kB
+../journey-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf  371.62 kB
+../journey-dist/assets/Archivo-Variable-DuIT1y7V.ttf          658.60 kB
+../journey-dist/assets/index-n4qEdHfQ.css                      90.90 kB │ gzip: 16.93 kB
+../journey-dist/assets/index-DWWaOPnG.js                      215.79 kB │ gzip: 69.47 kB
+✓ built in 368ms

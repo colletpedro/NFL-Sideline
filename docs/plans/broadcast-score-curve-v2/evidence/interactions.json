@@ -1,0 +1,91 @@
+[
+  {
+    "focus": "PHI: Turnover, 4º quarto · 07:55, DAL 31 a 21 PHI",
+    "kind": "keyboard-turnover",
+    "readout": "4º quarto · 07:55PHI · TurnoverMudança de posse · interceptação: PHI → DALDAL31 × 21PHI",
+    "sequenceOpen": false
+  },
+  {
+    "buttons": [
+      "DAL · Field goal · 12:35",
+      "DAL · TD + extra · 05:32"
+    ],
+    "kind": "group",
+    "readout": "1º quarto · 12:35DAL · Field goal +3Pontuação do jogoDAL3 × 0PHIDAL · Field goal · 12:35DAL · TD + extra · 05:32"
+  },
+  {
+    "kind": "sequence-open",
+    "moments": 11,
+    "open": true
+  },
+  {
+    "kind": "zoom",
+    "overflow": -15,
+    "scrollWidth": 640,
+    "width": 300
+  },
+  {
+    "kind": "desktop-turnover",
+    "readout": "4º quarto · 07:55PHI · TurnoverMudança de posse · interceptação: PHI → DALDAL31 × 21PHI",
+    "selected": "PHI: Turnover, 4º quarto · 07:55, DAL 31 a 21 PHI",
+    "sequenceOpen": false
+  },
+  {
+    "invalid": false,
+    "kind": "special-case",
+    "markers": [
+      "BAL: TD + extra +7, OT · 03:01–02:57, BAL 30 a 23 ATL",
+      "ATL: Turnover, OT · 02:11, BAL 30 a 23 ATL"
+    ],
+    "notes": [
+      "O recorte começa em BAL 23 × 23 ATL. As taxas acima continuam sendo do jogo inteiro."
+    ],
+    "readout": "OT · 03:01–02:57BAL · TD + extra +7Campanha da red zoneBAL30 × 23ATL",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_BAL_ATL#mr-redzone"
+  },
+  {
+    "invalid": false,
+    "kind": "special-case",
+    "markers": [
+      "CHI: Turnover, 1º quarto · 14:06, CHI 0 a 0 CAR",
+      "CAR: TD + extra +7, 1º quarto · 11:40–11:33, CHI 0 a 7 CAR",
+      "CHI: TD + extra +7, 1º quarto · 06:03–05:52, CHI 7 a 7 CAR",
+      "CHI: TD + extra +7, 1º quarto · 02:03–01:59, CHI 14 a 7 CAR",
+      "CHI: TD + extra +7, 2º quarto · 14:05–13:57, CHI 21 a 7 CAR",
+      "CAR: TD + extra +7, 2º quarto · 12:49–12:40, CHI 21 a 14 CAR",
+      "CAR: TD + extra +7, 2º quarto · 08:51–08:42, CHI 21 a 21 CAR. 2 eventos próximos, selecionar para consultar",
+      "CHI: Field goal +3, 2º quarto · 05:24, CHI 24 a 21 CAR",
+      "CAR: Field goal +3, 2º quarto · 02:39, CHI 24 a 24 CAR",
+      "CHI: TD + extra +7, 2º quarto · 00:32–00:22, CHI 31 a 24 CAR",
+      "CAR: Turnover, 2º quarto · 00:11, CHI 31 a 24 CAR",
+      "CAR: TD + extra +7, 3º quarto · 09:06–09:02, CHI 31 a 31 CAR",
+      "CHI: TD + extra +7, 3º quarto · 03:08–03:05, CHI 38 a 31 CAR",
+      "CHI: TD + extra +7, 3º quarto · 00:50–00:40, CHI 45 a 31 CAR",
+      "CAR: Turnover, 4º quarto · 15:00, CHI 45 a 31 CAR",
+      "CHI: TD + extra +7, 4º quarto · 06:32–06:27, CHI 52 a 31 CAR",
+      "CAR: Touchdown +6, 4º quarto · 04:05, CHI 52 a 37 CAR",
+      "CHI: TD + extra +7, 4º quarto · 03:47–03:40, CHI 59 a 37 CAR"
+    ],
+    "notes": [],
+    "readout": "1º quarto · 11:40–11:33CAR · TD + extra +7Campanha da red zoneCHI0 × 7CAR",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_01_CHI_CAR#mr-redzone"
+  },
+  {
+    "invalid": false,
+    "kind": "special-case",
+    "markers": [
+      "PIT: Field goal +3, 1º quarto · 08:34, ATL 0 a 3 PIT",
+      "PIT: Turnover, 1º quarto · 02:48, ATL 0 a 3 PIT",
+      "ATL: TD + extra +7, 1º quarto · 01:19–01:13, ATL 7 a 3 PIT",
+      "PIT: Field goal +3, 2º quarto · 12:31, ATL 7 a 6 PIT",
+      "ATL: Turnover, 2º quarto · 12:17, ATL 7 a 6 PIT",
+      "PIT: TD + extra +7, 2º quarto · 10:44–10:39, ATL 7 a 13 PIT",
+      "ATL: Field goal +3, 3º quarto · 01:55, ATL 10 a 13 PIT",
+      "PIT: TD + extra +7, 4º quarto · 14:16–14:05, ATL 10 a 20 PIT",
+      "ATL: Field goal +3, 4º quarto · 10:39, ATL 13 a 20 PIT"
+    ],
+    "notes": [],
+    "readout": "1º quarto · 08:34PIT · Field goal +3Pontuação do jogoATL0 × 3PIT",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_01_ATL_PIT#mr-redzone"
+  }
+]

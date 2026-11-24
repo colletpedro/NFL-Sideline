@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-09-29T11:43:05.929541+00:00",
+  "model": "gemini-3.1-pro-preview",
+  "credentialSource": "GEMINI_API_KEY",
+  "requestText": "Responda apenas OK.",
+  "httpStatus": 402,
+  "providerCode": 402,
+  "providerStatus": "RESOURCE_EXHAUSTED",
+  "providerReasons": [],
+  "safeReason": "QUOTA_OR_RATE_LIMIT_REPORTED_BY_PROVIDER",
+  "finishReason": null,
+  "hasText": false,
+  "isExactlyOK": false,
+  "outcome": "HTTP_REJECTED",
+  "editorialEvaluation": false,
+  "holdoutOpened": false,
+  "retry": false,
+  "budgetAttempt": 8,
+  "completedAt": "2026-09-29T11:43:06.556683+00:00"
+}

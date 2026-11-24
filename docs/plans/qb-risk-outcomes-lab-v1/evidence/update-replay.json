@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "offline": true,
+  "allPassRecordsAndProbabilitiesExact": 7970,
+  "allPlayerAndGameAggregatesExact": true,
+  "modelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+  "activePackageUnchanged": "404d23007ba98d989940f117",
+  "qaActivatedPackage": "7a06817ccdca4eac4ee8a3d3",
+  "noM3Update": true,
+  "noRetraining": true
+}

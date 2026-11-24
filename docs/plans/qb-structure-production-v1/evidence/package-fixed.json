@@ -1,0 +1,40 @@
+{
+  "categories": [
+    "progression",
+    "scramble_drill",
+    "scramble",
+    "throwaway",
+    "sack",
+    "indeterminate"
+  ],
+  "classificationVersion": "1.0.0",
+  "code": {
+    "classify.py": "766ea5d132471c33d589282764ef278a3f2f19b67b56e712e6c3b48335c4f78f",
+    "common.py": "27c0f24a33fbc40f820a0657d35afba16d71e74ad64d58989b5dd3a00c9267d2",
+    "run.py": "31d8c7c96d065ba74f666cd6920d3aebf7369e8367cc88be48c3a760ef5c873a"
+  },
+  "contractSha256": "7d641a79b12d1546e3d33893dea6b42cb293da3b7f304b7b460b320fd9ffdfc0",
+  "current_season": 2026,
+  "groups": {
+    "S1": [
+      "scramble_drill",
+      "scramble",
+      "throwaway"
+    ],
+    "S2": [
+      "scramble_drill",
+      "scramble",
+      "throwaway",
+      "sack"
+    ],
+    "S3": [
+      "scramble_drill"
+    ],
+    "main": [
+      "scramble_drill",
+      "scramble"
+    ]
+  },
+  "main_start": 2023,
+  "metricVersion": "1.0.0"
+}

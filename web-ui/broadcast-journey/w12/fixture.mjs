@@ -1,0 +1,2 @@
+import {readFileSync} from 'node:fs';
+export function fixture(){const root=process.env.NFL_W12_QA_BUNDLE;if(!root)return null;const index=JSON.parse(readFileSync(root+'/index.json','utf8'));return {oracle:JSON.parse(readFileSync(new URL('../../../docs/plans/broadcast-matchup-w12-v1/checks/reconciliation.json',import.meta.url),'utf8')),index,documents:Object.fromEntries(index.games.map(e=>[e.gameId,readFileSync(root+'/'+e.path,'utf8')]))};}

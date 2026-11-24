@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-06",
+  "scope": "E0/E1 preparation; projector and integrated visual UI not implemented",
+  "checkpointCommit": "3a06bbb",
+  "java": {
+    "tests": 118,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "command": "Java 21 mvn -f core-api/pom.xml -o clean verify",
+    "scope": "checkpoint code; no Java changes afterward"
+  },
+  "frontend": {
+    "vitestTotal": 54,
+    "ordinaryPassing": 49,
+    "expectedFailures": 5,
+    "knownDefectsStillOpen": [
+      "TIME-01",
+      "TIME-02",
+      "TIME-03",
+      "TIME-04",
+      "SIGN-01"
+    ],
+    "lint": "PASS",
+    "build": "PASS"
+  },
+  "etl": {
+    "tests": 79,
+    "result": "PASS",
+    "runtime": "existing etl-pipeline/.venv; no package installation"
+  },
+  "visualContract": {
+    "validFixtures": 20,
+    "invalidFixturesRejected": 15,
+    "stdlibUnitTests": 12,
+    "independentDraft7ShapeCheck": "AJV already present in frontend toolchain; 20 valid fixtures accepted; no new dependency",
+    "provenance": "all fixtures synthetic, not engine output",
+    "freezeFiles": 39,
+    "engineProvenanceVerified": false
+  },
+  "browser": {
+    "type": "static wireframe in in-app browser; real loopback HTTP",
+    "port": 18084,
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        900
+      ],
+      [
+        320,
+        900
+      ]
+    ],
+    "scenariosPerViewport": 20,
+    "layoutChecks": 60,
+    "horizontalOverflowFailures": 0,
+    "missingFourCardGridFailures": 0,
+    "pointsOutsideScaleFailures": 0,
+    "expandedTableAt320": "no horizontal overflow",
+    "consoleWarningsOrErrorsObserved": 0,
+    "comprehensionStudy": false,
+    "fullAccessibilityAudit": false,
+    "contrastRatios": {
+      "textOnPanel": 15.37,
+      "mutedOnPanel": 9.08,
+      "attackPointOnPanel": 14.19,
+      "defensePointOnPanel": 10.68,
+      "zeroLineOnPanel": 7.86
+    },
+    "keyboardDetailsToggle": "PASS: Enter closes the previously expanded native details"
+  },
+  "protectedFilesUnchanged": 5,
+  "notPerformed": [
+    "Gemini or local model generation",
+    "remote database access",
+    "reading .env",
+    "public snapshot changes",
+    "push",
+    "deployment",
+    "new backend/frontend sessions",
+    "correction of the five legacy defects"
+  ]
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "period": "first",
+    "play": "all",
+    "decision": "cross",
+    "title": "DAL no passe; NE na corrida.",
+    "context": "1º tempo / Todas as jogadas\nDAL: 34 jogadas · NE: 30 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=first&play=all"
+  },
+  {
+    "period": "first",
+    "play": "pass",
+    "decision": "split",
+    "title": "DAL soma valor; NE perde.",
+    "context": "1º tempo / Passe\nDAL: 20 jogadas · NE: 17 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=first&play=pass"
+  },
+  {
+    "period": "first",
+    "play": "rush",
+    "decision": "divergence",
+    "title": "Maior EPA, menos sucesso.",
+    "context": "1º tempo / Corrida\nDAL: 14 jogadas · NE: 13 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=first&play=rush"
+  },
+  {
+    "period": "second",
+    "play": "all",
+    "decision": "efficiency",
+    "title": "NE tem maior EPA por jogada.",
+    "context": "2º tempo / Todas as jogadas\nDAL: 30 jogadas · NE: 34 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=all"
+  },
+  {
+    "period": "second",
+    "play": "pass",
+    "decision": "efficiency",
+    "title": "NE tem maior EPA por jogada.",
+    "context": "2º tempo / Passe\nDAL: 18 jogadas · NE: 20 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=pass"
+  },
+  {
+    "period": "second",
+    "play": "rush",
+    "decision": "split",
+    "title": "NE soma valor; DAL perde.",
+    "context": "2º tempo / Corrida\nDAL: 12 jogadas · NE: 14 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=rush"
+  },
+  {
+    "period": "game",
+    "play": "all",
+    "decision": "cross",
+    "title": "DAL no passe; NE na corrida.",
+    "context": "Jogo completo / Todas as jogadas\nDAL: 64 jogadas · NE: 64 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=game&play=all"
+  },
+  {
+    "period": "game",
+    "play": "pass",
+    "decision": "efficiency",
+    "title": "DAL tem maior EPA por jogada.",
+    "context": "Jogo completo / Passe\nDAL: 38 jogadas · NE: 37 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=game&play=pass"
+  },
+  {
+    "period": "game",
+    "play": "rush",
+    "decision": "split",
+    "title": "NE soma valor; DAL perde.",
+    "context": "Jogo completo / Corrida\nDAL: 26 jogadas · NE: 27 jogadas",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=game&play=rush"
+  },
+  {
+    "case": "missing-recovery-and-expanded-axis",
+    "url": "http://127.0.0.1:18087/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "axis": "−0,20\n0\n+0,20\n+0,40\n+0,60",
+    "rows": [
+      "KC+0,500",
+      "BUF+0,250"
+    ],
+    "reading": "LEITURA DO RECORTE\n\n1º tempo · Passe\n\nKC tem maior EPA por jogada.\n\nKansas City teve a maior média de EPA no passe, considerando apenas o período selecionado.\n\n0,250EPA/jogada\nDiferença entre médias"
+  },
+  {
+    "case": "divergent",
+    "reading": "LEITURA DO RECORTE\n\nJogo completo · Passe\n\nMaior EPA, menos sucesso.\n\nBaltimore teve o maior EPA por jogada; Pittsburgh teve sucesso em uma parcela maior das jogadas.\n\n0,149EPA/jogada\nDiferença entre médias\n9,7p.p.\nDiferença de sucesso"
+  }
+]

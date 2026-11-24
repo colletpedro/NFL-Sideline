@@ -1,0 +1,12 @@
+{
+  "bundles": [
+    {
+      "dataKind": "REAL_ARCHIVE",
+      "entryId": "w12-expansion-v1",
+      "expectedBundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a",
+      "label": "Arquivo 2026 W1–2 · 32 times; NE POST2025; lacuna BAL W3",
+      "path": "/Users/pedrocollet/.codex/worktrees/broadcast-w12-expansion-v1/NFL Sideline/editorial/local-artifacts/broadcast-w12-expansion-v1/20261022-v1/bundle"
+    }
+  ],
+  "configVersion": "metrics-lab-config-v1"
+}

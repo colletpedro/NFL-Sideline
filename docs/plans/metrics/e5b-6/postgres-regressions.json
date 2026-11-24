@@ -1,0 +1,18 @@
+{
+  "candidate": "679587a5f01e3ea537c2ae0d7deb306a64c6a5c2",
+  "instance": {
+    "database": "nfl_e5b2_930f4f8eeefc",
+    "instance_id": "930f4f8e-eefc-4ed7-818f-1b9954bbf278",
+    "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+    "port": 54777,
+    "purpose": "metrics-persistence-e5b2-disposable"
+  },
+  "log": "...................................................                      [100%]\n51 passed in 6.76s\n",
+  "returncode": 0,
+  "scope": "REAL_OWN_POSTGRESQL_E5B2_REGRESSIONS",
+  "shutdown": {
+    "pgCtlStatus": 3,
+    "pidAbsent": true,
+    "portBindReleased": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "attribution": "FTN Data via nflverse, CC BY-SA 4.0",
+  "cohort": {
+    "current_n": 15,
+    "minimum_A_epa": 100,
+    "minimum_B_epa": 25,
+    "minimum_games": 5,
+    "position": "qb"
+  },
+  "diagonal": "equality indicates zero difference, not ideal performance",
+  "files": [
+    "01_distribution.png",
+    "01_distribution.svg",
+    "02_progression_vs_improvisation.png",
+    "02_progression_vs_improvisation.svg",
+    "03_frequency_vs_production.png",
+    "03_frequency_vs_production.svg",
+    "04_sensitivity.png",
+    "04_sensitivity.svg",
+    "05_historical.png",
+    "05_historical.svg",
+    "distribution_support.csv",
+    "historical_support.csv",
+    "scatter_support.csv",
+    "sensitivity_support.csv"
+  ],
+  "metricVersion": "1.0.0",
+  "units": "EPA per play; frequency denominator all eligible dropbacks"
+}

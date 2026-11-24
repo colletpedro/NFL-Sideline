@@ -1,0 +1,53 @@
+{
+  "width1024": [
+    {
+      "d": "A",
+      "client": 1009,
+      "scroll": 1009
+    },
+    {
+      "d": "B",
+      "client": 1009,
+      "scroll": 1009
+    },
+    {
+      "d": "C",
+      "client": 1009,
+      "scroll": 1009
+    }
+  ],
+  "width320": [
+    {
+      "client": 305,
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 305,
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 305,
+      "scroll": 305,
+      "width": 320
+    }
+  ],
+  "zoomChecks": [
+    {
+      "reduced": true,
+      "scroll": 1009,
+      "width": 1009
+    },
+    {
+      "reduced": true,
+      "scroll": 1009,
+      "width": 1009
+    },
+    {
+      "reduced": true,
+      "scroll": 1009,
+      "width": 1009
+    }
+  ]
+}

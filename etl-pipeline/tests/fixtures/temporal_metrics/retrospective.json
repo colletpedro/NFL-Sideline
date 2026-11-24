@@ -1,0 +1,17 @@
+{
+  "calculations": {
+    "calendar-v1/alpha": "revision:alpha-corrected",
+    "calendar-v1/beta": "revision:beta",
+    "calendar-v1/gap": null,
+    "calendar-v1/target": null
+  },
+  "calendars": {
+    "2026/REG": "calendar-v1"
+  },
+  "states": {
+    "calendar-v1/alpha": "state:alpha",
+    "calendar-v1/beta": "state:beta",
+    "calendar-v1/gap": "state:gap",
+    "calendar-v1/target": "state:target"
+  }
+}

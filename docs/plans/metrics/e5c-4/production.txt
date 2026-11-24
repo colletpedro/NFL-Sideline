@@ -1,0 +1,20 @@
+
+> web-ui@0.0.0 build
+> tsc -b && vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 1874 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.82 kB │ gzip:  0.44 kB
+dist/assets/index-BIYXDnRB.css   23.61 kB │ gzip:  4.66 kB
+dist/assets/index-BTsQyTsc.js   198.42 kB │ gzip: 62.57 kB
+✓ built in 4.74s
+{
+  "proof": "STATIC_PRODUCTION_IDENTICAL_WITH_VITE_FLAGS",
+  "assets": {
+    "assets/index-BIYXDnRB.css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+    "assets/index-BTsQyTsc.js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5"
+  }
+}

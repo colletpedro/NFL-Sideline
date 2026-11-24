@@ -1,0 +1,11 @@
+{
+  "allKeysUnique": true,
+  "allPlayerSums": true,
+  "exactStoredDecomposition": true,
+  "integrityAllScientificFiles": true,
+  "interceptions": 170,
+  "passed": true,
+  "passes": 7970,
+  "players": 66,
+  "unchangedFixedModelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8"
+}

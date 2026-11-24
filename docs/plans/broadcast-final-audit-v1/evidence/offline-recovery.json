@@ -1,0 +1,14 @@
+{
+  "auditOffline": {
+    "alert": "Esta leitura não está disponívelA fonte local não pôde ser carregada. Nenhum outro jogo ou período foi usado.Tentar carregar novamenteVoltar à semana",
+    "oldDataVisible": false,
+    "state": "offline",
+    "url": "http://127.0.0.1:18111/?rank=season&view=matchup-season&game=2026_07_CIN_BAL&season=2026&week=7&returnWeek=7"
+  },
+  "auditRecovered": {
+    "alert": false,
+    "state": "recovered",
+    "title": "CIN × BAL",
+    "url": "http://127.0.0.1:18111/?rank=season&view=matchup-season&game=2026_07_CIN_BAL&season=2026&week=7&returnWeek=7"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "startedUnderFreeze": true,
+  "results": [
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_ATL_GB",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_CAR_CLE",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_CIN_PIT",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_HOU_IND",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_LAC_BUF",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_LA_DEN",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_NYJ_DET",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_PHI_CHI",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "2026_03_TEN_NYG",
+      "cohort": "regression",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "both-teams",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "opposing-signs",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "tied-opportunities",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    },
+    {
+      "gameId": "weekly-variation",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": []
+    }
+  ],
+  "manifestSha256": "d1e79eeacc3848675ab6992ad55c8a2e87dddffd254dfc3629bfd25c90fcf9cd"
+}

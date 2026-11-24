@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-06",
+  "scope": "Read-only code/data inspection and isolated reproduction; planning only",
+  "head": "0eb25a0eb3ec774df10831a1ef5201d2f4a2f92e",
+  "workspace": "Includes uncommitted local interface delivery; hashes describe inspected working files, not clean HEAD",
+  "files": [
+    {
+      "path": "web-ui/src/pages/MatchupDashboard.tsx",
+      "sha256": "a9adc5039ddd3ef71952d53179d778b7e9dc06557d131b4c6c149e605951677b"
+    },
+    {
+      "path": "web-ui/src/components/TacticalComparison.tsx",
+      "sha256": "c1f118aa02f5c895ba965359fc40ce45ddcb431ca79892ad294c07b820dff33f"
+    },
+    {
+      "path": "web-ui/src/components/OverviewPanel.tsx",
+      "sha256": "142a9addfdc164d57172debf7a29433a03324f64815be20f784c7e60cf191d86"
+    },
+    {
+      "path": "web-ui/src/services/staticDataClient.ts",
+      "sha256": "9eca96b1dc2b720abc8f7c954e181f0f46cae95497f8cbd8ec947e4f2aabafe5"
+    },
+    {
+      "path": "web-ui/src/services/dataClient.ts",
+      "sha256": "49aa367c73e001db39e39d8fc897a548375e9eb41ff87de4283d5bc70b85974a"
+    },
+    {
+      "path": "web-ui/local-editorial/App.tsx",
+      "sha256": "abdbf7dd25f5f46f24fbd24065366c47dbb213ffa34ca0bdf67fee91ef887984"
+    },
+    {
+      "path": "web-ui/local-editorial/client.ts",
+      "sha256": "3a2a3cea0c056b2aff1e2a8f9d273a1c961b23659da69fe38722aaee08f8dfaf"
+    },
+    {
+      "path": "etl-pipeline/load_metrics.py",
+      "sha256": "43a628482457391ecca271f080aad1884165507754d1178a8fc9fbd7dc3eb159"
+    },
+    {
+      "path": "supabase/migrations/20260908201813_baseline_schema.sql",
+      "sha256": "0f4c0e79cbf56dd2437a8f9fd720585cc069ffaa538b4abe674eda6fb6fe940e"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/AnalysisContextBuilder.java",
+      "sha256": "c2c162d79b1e8f9689db0d31bb04e55571fde213d9649b91b36921867871eba6"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/MetricCatalog.java",
+      "sha256": "24d8fee2115b64af4940ca09abd63ca95f619573e186a5ffb98fd9a718af18b1"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/EvidenceWindow.java",
+      "sha256": "94e9328b17b90496abde153db3001ed874023be4f682fd4f771c6285d1550c64"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/SignalClaimValidator.java",
+      "sha256": "1042e77006d28feaa8bc05305c15517b8462b9eecdcb2c08a70fa3d81d10e908"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalResultStore.java",
+      "sha256": "17fbdda4e65649409092b99fee0885ea041683d60d8e1ed17eb77b0e7c6962db"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalRuleSelector.java",
+      "sha256": "dd22077f112835792a5051e748b4530d3f7e0d34e22a9bda099c1d10173a1675"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/FrozenContext.java",
+      "sha256": "c06ec022b38cdae26f4d68c608df624bba13eece8571f8d297490f7fec978c99"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/editorial/ApprovedAnalysisSelector.java",
+      "sha256": "4ad79f9dc07ab1b838f66df4c078bccfd065583ee630fc146c51665b4ac41fa4"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/snapshot/SnapshotContract.java",
+      "sha256": "d40017f7e67075a2aead35a7109406f8362d51a10beccfe79c762563231ae054"
+    },
+    {
+      "path": "core-api/src/main/java/com/nflsideline/coreapi/snapshot/SnapshotAssembler.java",
+      "sha256": "3b8bf6cffdcf12ab6ecc538e3b9d651727569815ea14c50a645d439815131bbf"
+    },
+    {
+      "path": "web-ui/public/data/seasons/2026.json",
+      "sha256": "9c378a2951c3333015d02b083e9a450424becc0bf1083fdffd34694cf08d867d"
+    },
+    {
+      "path": "editorial/analysis-selections.json",
+      "sha256": "b9ffb3177a0ece8f96b8721ac352008a2aad65508659234a9b9331df47b3a600"
+    },
+    {
+      "path": ".github/workflows/ci-java.yml",
+      "sha256": "9081ca368e6d507b14fb1668fa8de5e7e53d949d24f2847808fc30943f4fab32"
+    }
+  ],
+  "metricSelectionReproduction": {
+    "method": "Extracted metricForWeek from MatchupDashboard.tsx, transpiled with installed TypeScript, executed in isolated node:vm",
+    "cases": [
+      {
+        "availableWeeks": [
+          4
+        ],
+        "targetWeek": 3,
+        "selectedWeek": 4
+      },
+      {
+        "availableWeeks": [
+          2
+        ],
+        "targetWeek": 3,
+        "selectedWeek": 2
+      },
+      {
+        "availableWeeks": [
+          3
+        ],
+        "targetWeek": 3,
+        "selectedWeek": 3
+      }
+    ]
+  },
+  "barGeometry": {
+    "method": "Reproduction of abs(value)/maxAbs from TacticalComparison.tsx",
+    "values": [
+      -0.4,
+      0.1
+    ],
+    "widthPercent": [
+      100,
+      25
+    ]
+  },
+  "localSnapshot": {
+    "schemaVersion": 1,
+    "games": 272,
+    "metricRows": 64,
+    "metricWeeks": [
+      1,
+      2
+    ],
+    "analyses": 52,
+    "approvedSelections": 69,
+    "productionStateVerified": false
+  },
+  "notPerformed": [
+    "Remote database inspection",
+    "External model generation",
+    "Source code implementation or deletion",
+    "Schema migration",
+    "Public snapshot modification",
+    "Deployment",
+    "Commit or push",
+    "Rerun of complete test suites"
+  ],
+  "primaryReferences": [
+    "https://www.w3.org/WAI/tutorials/images/complex/",
+    "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "https://nflverse.r-universe.dev/nflfastR/doc/manual.html"
+  ],
+  "interpretation": "Reproduction confirms existing selection and geometry behavior, not a statistical or editorial model evaluation."
+}

@@ -1,0 +1,11 @@
+{
+  "pid": 57181,
+  "port": 18104,
+  "host": "127.0.0.1",
+  "strictPort": true,
+  "log": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/server.log",
+  "pidFile": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/server.pid",
+  "cwd": "/Users/pedrocollet/.codex/worktrees/broadcast-matchup-w12-v1/NFL Sideline",
+  "sourceConfig": "/Users/pedrocollet/.codex/worktrees/broadcast-matchup-w12-v1/NFL Sideline/docs/plans/broadcast-matchup-w12-v1/source-config.json",
+  "mode": "detached own process; previous own 49178 terminated after exact listener check; six previous servers untouched"
+}

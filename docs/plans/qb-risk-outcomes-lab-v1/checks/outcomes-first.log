@@ -1,0 +1,39 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/risk-outcomes
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui
+
+stderr | broadcast-journey/risk-outcomes/Entry.test.tsx > two readings, history and pinned asynchronous versions > keeps old URLs on M3 and preserves player/period/scale/position across readings and history
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ❯ broadcast-journey/risk-outcomes/model.test.tsx (6 tests | 1 failed) 32ms
+   × explicit outcome contract, arithmetic and presentation > normalizes both axes without moving coordinates or aggregating coincident players 3ms
+     → expected 27.80000139887756 to be 27.800001398877562 // Object.is equality
+ ✓ broadcast-journey/risk-outcomes/Entry.test.tsx (8 tests) 196ms
+ ✓ broadcast-journey/risk-outcomes/artifact.test.tsx (1 test) 500ms
+   ✓ all pinned outcome players and periods through rendered presentation > reconciles all scientific pass probabilities, periods, two contributions, DOM numbers and chart units 499ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  broadcast-journey/risk-outcomes/model.test.tsx > explicit outcome contract, arithmetic and presentation > normalizes both axes without moving coordinates or aggregating coincident players
+AssertionError: expected 27.80000139887756 to be 27.800001398877562 // Object.is equality
+
+- Expected
++ Received
+
+- 27.800001398877562
++ 27.80000139887756
+
+ ❯ broadcast-journey/risk-outcomes/model.test.tsx:13:175
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 14 passed (15)
+   Start at  16:02:51
+   Duration  1.23s (transform 206ms, setup 0ms, collect 448ms, tests 728ms, environment 991ms, prepare 138ms)
+

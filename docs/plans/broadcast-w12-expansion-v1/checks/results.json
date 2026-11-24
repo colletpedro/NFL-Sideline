@@ -1,0 +1,39 @@
+{
+  "pythonTests": 110,
+  "frontendTests": 235,
+  "frontendFiles": 23,
+  "legacyExpectedFailuresUnchanged": 5,
+  "lint": "PASS",
+  "builds": {
+    "journey": "PASS",
+    "real": "PASS",
+    "experience": "PASS",
+    "public": "PASS"
+  },
+  "expansion": 576,
+  "individual": 384,
+  "inclusive": 192,
+  "retained": 12,
+  "active": 588,
+  "httpExact": 588,
+  "httpNegativeCases": 10,
+  "participantContexts": 64,
+  "destinations": 768,
+  "independentRoundedValues": 1552,
+  "layoutCases": 22,
+  "screenshots": 12,
+  "finalCommandReproduction": {
+    "passed": true,
+    "sameBundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a",
+    "newNominalSelectionBeforeGeneration": true,
+    "independentReconciliationRepeated": true,
+    "copiedReaderOriginalRootsDenied": true
+  },
+  "server": {
+    "origin": "http://127.0.0.1:18096",
+    "pid": 85128,
+    "strictPort": true,
+    "bind": "127.0.0.1"
+  },
+  "humanAcceptance": "PENDING"
+}

@@ -1,0 +1,18 @@
+
+> web-ui@0.0.0 journey:build
+> tsc -p tsconfig.journey.json && vite build --config vite.journey.config.ts
+
+vite v5.4.21 building for production...
+transforming...
+✓ 54 modules transformed.
+rendering chunks...
+computing gzip size...
+../journey-dist/index.html                                      0.38 kB │ gzip:  0.28 kB
+../journey-dist/assets/ne-CjQy7Z4T.png                         32.08 kB
+../journey-dist/assets/dal-DumH5f6I.png                        32.37 kB
+../journey-dist/assets/bal-B02a8qg4.png                        55.99 kB
+../journey-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf  371.62 kB
+../journey-dist/assets/Archivo-Variable-DuIT1y7V.ttf          658.60 kB
+../journey-dist/assets/index-iAEuppL_.css                      69.51 kB │ gzip: 13.68 kB
+../journey-dist/assets/index-Cy6tkUhK.js                      202.39 kB │ gzip: 65.06 kB
+✓ built in 338ms

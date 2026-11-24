@@ -1,0 +1,10 @@
+{
+  "proof": "REAL_HTTP_SYNTHETIC_SESSION_FREEZE",
+  "frozenBytesIdenticalBeforeRestart": true,
+  "restartInvalidEntry": "ERROR",
+  "oldSessionStatus": 409,
+  "oldSessionId": "sha256:a9c839a6e35f753ef446a66ec82a3f4d1c5a29747dc91801b2276f7a13b474c9",
+  "newSessionId": "sha256:5ea1fb900620251dd72b2715dc27cd1fdd8b65dd6fe325ca13a032aeb8bfe40a",
+  "syntheticDiskBytesRestored": true,
+  "restoredObservationSha256": "0c0755d1d6b32431144693848a1fb5071690d3ef21f7eeeb72a5fb2a28779297"
+}

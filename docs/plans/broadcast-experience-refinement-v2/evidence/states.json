@@ -1,0 +1,19 @@
+[
+  {
+    "case": "pregame",
+    "url": "http://127.0.0.1:18087/confronto/green-bay-chicago?round=7",
+    "scores": 0,
+    "charts": 0,
+    "controls": 0,
+    "copy": "ANTES DO KICKOFF\nSem estatísticas desta partida.\n\nNão há jogadas disputadas neste cenário. Período, fundamento e placar ficam disponíveis quando a partida começa; nenhum histórico de outro jogo preenche esses campos.\n\nInício demonstrativo\nDomingo · 19h25\nLocal\nGreen Bay · Wisconsin\nDados oferecidos\nAgenda e identidade dos times"
+  },
+  {
+    "case": "missing",
+    "url": "http://127.0.0.1:18087/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "reading": "LEITURA DO RECORTE\n\n2º tempo · Passe\n\nFalta uma parte deste recorte.\n\nBuffalo sem fonte para passe neste período. Os valores disponíveis continuam visíveis; não há comparação completa.\n\nRecortes com fonte completa\n2º tempo · Corrida\n1º tempo · Passe",
+    "bars": [
+      "KC−0,300",
+      "BUFSem fonte"
+    ]
+  }
+]

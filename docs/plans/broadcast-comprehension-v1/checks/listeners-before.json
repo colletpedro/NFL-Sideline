@@ -1,0 +1,7 @@
+{
+  "18098": "COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    30244 pedrocollet   45u  IPv4 0x9e404837eb2deaf2      0t0  TCP 127.0.0.1:18098 (LISTEN)",
+  "18099": "COMMAND   PID        USER   FD   TYPE            DEVICE SIZE/OFF NODE NAME\nnode    30251 pedrocollet   45u  IPv4 0x5438e05eaaf2b3a      0t0  TCP 127.0.0.1:18099 (LISTEN)",
+  "18100": "COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    30265 pedrocollet   45u  IPv4 0x2d500cda347f614a      0t0  TCP 127.0.0.1:18100 (LISTEN)",
+  "18101": "COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nPython  95101 pedrocollet    6u  IPv4 0x8957dacb8d00f234      0t0  TCP 127.0.0.1:18101 (LISTEN)",
+  "18102": "COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    97976 pedrocollet   16u  IPv4 0xeb4336b98bffbba2      0t0  TCP 127.0.0.1:18102 (LISTEN)"
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "visual-analysis-1.0.0",
+  "projectorVersion": "visual-projector-1.0.0",
+  "mode": "LOCAL_RULES_DEVELOPMENT",
+  "publicationApproved": false,
+  "source": {
+    "kind": "CONTRACT_FIXTURE",
+    "fixtureId": "missing"
+  },
+  "game": {
+    "gameId": "2026_04_AAA_BBB",
+    "season": 2026,
+    "week": 4,
+    "phase": "REG",
+    "awayTeam": "AAA",
+    "homeTeam": "BBB"
+  },
+  "scope": {
+    "moment": "PREGAME",
+    "declaredAsOfDate": null,
+    "temporalGuarantee": "WEEK_ORDER_ONLY",
+    "expectedCurrentWeeks": [
+      1,
+      2,
+      3
+    ],
+    "opponentAdjusted": false
+  },
+  "evidence": [],
+  "series": [],
+  "encounters": [
+    {
+      "id": "AAA:PASS",
+      "attackTeam": "AAA",
+      "defenseTeam": "BBB",
+      "foundation": "PASS",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "AAA:RUSH",
+      "attackTeam": "AAA",
+      "defenseTeam": "BBB",
+      "foundation": "RUSH",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "AAA:GENERAL",
+      "attackTeam": "AAA",
+      "defenseTeam": "BBB",
+      "foundation": "GENERAL",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "BBB:PASS",
+      "attackTeam": "BBB",
+      "defenseTeam": "AAA",
+      "foundation": "PASS",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "BBB:RUSH",
+      "attackTeam": "BBB",
+      "defenseTeam": "AAA",
+      "foundation": "RUSH",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "BBB:GENERAL",
+      "attackTeam": "BBB",
+      "defenseTeam": "AAA",
+      "foundation": "GENERAL",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    }
+  ],
+  "findings": [],
+  "restrictions": [
+    {
+      "id": "r:temporal",
+      "claimId": null,
+      "code": "TEMPORAL_AVAILABILITY_UNKNOWN",
+      "encounterIds": [],
+      "evidenceIds": [],
+      "text": "Corte por semanas; disponibilidade histórica na data da análise não verificada."
+    },
+    {
+      "id": "r:adjustment",
+      "claimId": null,
+      "code": "NO_OPPONENT_ADJUSTMENT",
+      "encounterIds": [],
+      "evidenceIds": [],
+      "text": "Recortes sem ajuste por adversário. Esta análise não estima vencedor."
+    }
+  ],
+  "links": [],
+  "presentation": {
+    "highlightFindingIds": [],
+    "equivalentHighlightGroups": [],
+    "globalRestrictionIds": [
+      "r:temporal",
+      "r:adjustment"
+    ],
+    "chartPolicy": "SHARED_SYMMETRIC_ZERO_V1"
+  }
+}

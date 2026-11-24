@@ -1,0 +1,32 @@
+[
+  {
+    "step": "B2 selected",
+    "beforeY": 693,
+    "scrollY": 693,
+    "selected": "Daniel Jones",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&position=all&period=8&scale=per100&player=00-0035710"
+  },
+  {
+    "metrics": "Passes classificados como interceptáveis2Classificação do provedor FTNPasses interceptáveis esperados1,03Soma das probabilidades do M3Interceptações sofridas2O que aconteceu nesses passes",
+    "period": "8",
+    "selected": "Daniel Jones",
+    "step": "M3 after switch",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=passes&position=all&period=8&scale=per100&player=00-0035710"
+  },
+  {
+    "metrics": "Interceptações sofridas2Desfecho registrado no PBPInterceptações esperadas1,22Soma das probabilidades da referência B2Sofridas menos esperadas+0,78Diferença descritiva, sem atribuição de causa",
+    "selected": "Daniel Jones",
+    "step": "back B2",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&position=all&period=8&scale=per100&player=00-0035710"
+  },
+  {
+    "selected": "Daniel Jones",
+    "step": "forward M3",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=passes&position=all&period=8&scale=per100&player=00-0035710"
+  },
+  {
+    "selected": "Daniel Jones",
+    "step": "reload M3",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=passes&position=all&period=8&scale=per100&player=00-0035710"
+  }
+]

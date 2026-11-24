@@ -24,7 +24,7 @@ import static org.assertj.core.api.Assertions.*;
 class GeminiClientTest {
     @Test void classifiesWithoutRetainingRemoteDetails() throws Exception {
         int[] statuses = {400,401,403,404,429,500,503,418};
-        String[] categories = {"HTTP_400","HTTP_401","HTTP_403","HTTP_404","HTTP_429","HTTP_5XX","HTTP_5XX","UNKNOWN"};
+        String[] categories = {"HTTP_400","HTTP_401","HTTP_403","HTTP_404","HTTP_429","HTTP_5XX","HTTP_5XX","HTTP_4XX"};
         for (int i=0; i<statuses.length; i++) {
             var remote = new RestClientResponseException("SECRET", statuses[i], "SECRET", null, "SECRET".getBytes(), null);
             var safe = new GenerationFailure(GenerationFailure.classify(new RuntimeException(remote)));
@@ -38,15 +38,26 @@ class GeminiClientTest {
         assertThat(GenerationFailure.classify(new RuntimeException("SECRET"))).isEqualTo(GenerationFailure.Category.UNKNOWN);
     }
 
-    @Test void structuredSchemaRequiresEditorialFieldsAndScalarCitations() throws Exception {
+    @Test void unlistedClientErrorsKeepStatusWithoutSensitiveDetails() {
+        var remote = new RestClientResponseException("SECRET", 402, "SECRET", null, "SECRET".getBytes(), null);
+        var safe = GenerationFailure.sanitized(remote);
+        assertThat(safe.httpStatus()).isEqualTo(402);
+        assertThat(safe.getMessage()).isEqualTo("HTTP_4XX");
+        assertThat(safe.getCause()).isNull();
+        assertThat(safe.diagnosticTypes()).containsExactly("org.springframework.web.client.RestClientResponseException");
+    }
+
+    @Test void structuredSchemaRequiresClaimsAndSectionReferences() throws Exception {
         var schema = new ObjectMapper().valueToTree(GeminiRequest.GenerationConfig.editorial());
         assertThat(schema.path("responseMimeType").asText()).isEqualTo("application/json");
         var json = schema.path("responseJsonSchema");
         assertThat(json.path("required").size()).isEqualTo(5);
-        for (String key : new String[]{"fator_chave","vantagem_tatica","alerta_vermelho","veredito"}) {
-            assertThat(json.path("properties").path(key).path("minLength").asInt()).isEqualTo(1);
-        }
-        assertThat(json.path("properties").path("metricas_citadas").path("additionalProperties").path("type").asText()).isEqualTo("number");
+        assertThat(json.path("properties").path("contract_version").path("enum").get(0).asInt()).isEqualTo(3);
+        assertThat(json.path("properties").path("claims").path("items").path("properties")
+                .path("predicate").path("enum").toString()).contains("GREATER_THAN", "NO_MATCHUP_SUPPORT",
+                        "ATTACK_DEFENSE_PROFILE", "POSITIVE_EPA_CONVERGENCE", "UNEVEN_WINDOWS", "MIXED_SIGNALS");
+        assertThat(json.path("properties").path("sections").path("properties")
+                .path("fator_chave").path("type").asText()).isEqualTo("array");
     }
 
     @Test void collectsAllNonemptyTextPartsAndClassifiesBadResponses() throws Exception {

@@ -1,0 +1,52 @@
+[
+  {
+    "selector": ".brand",
+    "fonts": [
+      {
+        "familyName": "Archivo SemiBold",
+        "glyphCount": 8,
+        "isCustomFont": true,
+        "postScriptName": "ArchivoRoman-Black"
+      },
+      {
+        "familyName": "Archivo SemiBold",
+        "glyphCount": 4,
+        "isCustomFont": true,
+        "postScriptName": "ArchivoRoman-ExtraBold"
+      }
+    ]
+  },
+  {
+    "selector": ".team-name strong",
+    "fonts": [
+      {
+        "familyName": "Archivo SemiBold",
+        "glyphCount": 6,
+        "isCustomFont": true,
+        "postScriptName": "Archivo-SemiBold_wght2EE0000_wdth"
+      }
+    ]
+  },
+  {
+    "selector": ".matchup-summary p",
+    "fonts": [
+      {
+        "familyName": "Archivo SemiBold",
+        "glyphCount": 134,
+        "isCustomFont": true,
+        "postScriptName": "ArchivoRoman-Regular"
+      }
+    ]
+  },
+  {
+    "selector": ".epa-row strong",
+    "fonts": [
+      {
+        "familyName": "Roboto Condensed",
+        "glyphCount": 6,
+        "isCustomFont": true,
+        "postScriptName": "RobotoCondensed-SemiBold"
+      }
+    ]
+  }
+]

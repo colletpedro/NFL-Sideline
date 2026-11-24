@@ -1,0 +1,23 @@
+{
+  "gap": {
+    "relation": "gap",
+    "values": 0,
+    "bars": 0,
+    "url": "http://127.0.0.1:18094/?season=2026&week=3&filter=participants&game=2026_03_BAL_DAL&entry=real-recovery&observation=sha256%3A31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257"
+  },
+  "historical": {
+    "relation": "archive",
+    "period": "Período solicitado2025 · Pós-temporada · Semanas 19, 20, 21, 22 · Referência histórica",
+    "url": "http://127.0.0.1:18094/?season=2026&week=3&filter=participants&game=2026_03_NE_JAX&entry=real-recovery&observation=sha256%3Aad890fc8e4b41cba0c623bd3d20bfc363e2519146d9bd8589c4b799a0aa74302"
+  },
+  "inclusive": {
+    "relation": "includes",
+    "members": 2,
+    "url": "http://127.0.0.1:18094/?season=2026&week=2&filter=participants&game=2026_02_NO_BAL&team=BAL&entry=real-recovery&observation=sha256%3A1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b"
+  },
+  "incompatible": {
+    "relation": "incompatible",
+    "readings": 0,
+    "values": 0
+  }
+}

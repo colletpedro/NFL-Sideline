@@ -1,0 +1,28 @@
+
+> web-ui@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-copy-polish-v3/NFL Sideline/web-ui
+
+ ✓ src/services/staticDataClient.test.ts (8 tests) 12ms
+ ✓ broadcast-experience/fixtures.test.ts (4 tests) 49ms
+ ✓ broadcast-experience/editorial.test.ts (10 tests) 9ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 30ms
+ ✓ local-editorial/observations/directions.test.tsx (4 tests) 62ms
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 39ms
+ ✓ local-editorial/broadcast/refinement.test.tsx (5 tests) 30ms
+ ✓ src/services/calendar.test.ts (9 tests) 4ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 20ms
+ ✓ local-editorial/broadcast/broadcast.test.tsx (5 tests) 44ms
+ ✓ src/services/market.test.tsx (14 tests) 39ms
+ ✓ local-editorial/local.test.tsx (7 tests) 9ms
+ ✓ src/services/runtimeClient.test.ts (2 tests) 4ms
+ ✓ src/services/api.test.ts (2 tests) 2ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 163ms
+
+ Test Files  15 passed (15)
+      Tests  165 passed (165)
+   Start at  17:13:10
+   Duration  1.60s (transform 1.64s, setup 0ms, collect 4.92s, tests 516ms, environment 3ms, prepare 1.20s)
+

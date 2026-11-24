@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:43.152378Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "bbf0777d9cd422d4362370dac0504a5248e405eb36218b60bcc9675716abb301",
+  "contextSha256" : "f92882f0b83038db5b97503a998748bf4afc5f49e8d29ee3bc287653c6148d94",
+  "gameId" : "2026_03_KC_MIA",
+  "resultIdentity" : "6ad41335a272234bef5c17255b329cafa4071845b94dc2d1395b58f3613a2e4b",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

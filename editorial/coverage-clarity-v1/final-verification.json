@@ -1,0 +1,119 @@
+{
+  "java21CleanVerify": {
+    "tests": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "logSha256": "1b814b0d13cadd010d6310e6630007959126e0b7e1e76d843ad0520402499a07"
+  },
+  "harnessTests": 11,
+  "calendarTests": 3,
+  "pageSourceTests": {
+    "mode": "source_unit_test_not_browser",
+    "cards": 21,
+    "filterOptionsTested": 19,
+    "combinedFilters": true,
+    "detailsMarkup": true,
+    "fourBlocks": true,
+    "noExternalAssets": true
+  },
+  "frozenFilesVerified": 138,
+  "freezeMismatches": [],
+  "protectedFilesVerified": 394,
+  "protectedMismatches": [],
+  "perCaseIntegrity": [
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_ATL_GB",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_CAR_CLE",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_CIN_PIT",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_HOU_IND",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_LAC_BUF",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_LA_DEN",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_NYJ_DET",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_PHI_CHI",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "2026_03_TEN_NYG",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "both-teams",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "opposing-signs",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "tied-opportunities",
+      "artifactIntegrity": true
+    },
+    {
+      "gameId": "weekly-variation",
+      "artifactIntegrity": true
+    }
+  ],
+  "browserInspection": {
+    "completed": false,
+    "fileUrl": "Blocked by browser URL policy",
+    "httpServer": "Sandbox denied loopback bind; no server started",
+    "fallback": "HTML escaping/structure and JavaScript filter unit tests; no visual/native details interaction verified"
+  },
+  "externalGenerationCalls": 0,
+  "remoteDatabaseAccess": false,
+  "publication": false
+}

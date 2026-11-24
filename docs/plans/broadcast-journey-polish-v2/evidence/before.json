@@ -1,0 +1,28 @@
+[
+  {
+    "screen": "matchup",
+    "height": 4944,
+    "readingLinks": 24,
+    "width": 1440
+  },
+  {
+    "screen": "matchup",
+    "height": 7201,
+    "readingLinks": 24,
+    "width": 390
+  },
+  {
+    "screen": "reading",
+    "chartY": 1395.8828125,
+    "height": 2457,
+    "readingY": 834.4765625,
+    "width": 1440
+  },
+  {
+    "screen": "reading",
+    "chartY": 2129.6484375,
+    "height": 3527,
+    "readingY": 1081.2421875,
+    "width": 390
+  }
+]

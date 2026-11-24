@@ -1,0 +1,55 @@
+{
+  "activeUniqueScopes": 588,
+  "bundleHashes": {
+    "COMPLETED.json": "5f777b2f82c4147930450d2454e0e0d2c4ca9b969ecb4c293a3259301296007a",
+    "manifest.json": "e15e03995713645af2ea2077267fa389d04de8ff0336803371528109503f83d7",
+    "observations.json": "d48831e3b619c184baeda70b20b6ee5a64a8d088555da763b3c38be63de21410",
+    "request.json": "a6752dba04296f85a0f0e87a4783e694883345b367d4f309043bfec3eff5e224",
+    "shared-source/COMPLETED.json": "a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+    "shared-source/input.json": "e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+    "shared-source/lineage.json": "e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1"
+  },
+  "bundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a",
+  "bundlePath": "/Users/pedrocollet/.codex/worktrees/broadcast-w12-expansion-v1/NFL Sideline/editorial/local-artifacts/broadcast-w12-expansion-v1/20261022-v1/bundle",
+  "categories": {
+    "inclusive": 192,
+    "individual": 384,
+    "retained": 12
+  },
+  "documents": 588,
+  "expectationDifference": 0,
+  "games": 32,
+  "humanAcceptance": "PENDING",
+  "kind": "REAL_ARCHIVE_INDEPENDENT_RAW_LEDGER",
+  "memberGroupsReconciled": 792,
+  "originalGroupsFromRaw": 3804,
+  "overlapPolicy": "Sum distinct original games only within one nominal observation; never sum observations; raw Fraction ledger independent of projector.",
+  "portableFreshReaderWithOriginalRootsDenied": {
+    "bundleId": "sha256:05541d2703de6ad55e8858ebfbc17115a6d2747c01a2f73bad78d1eb7566876a",
+    "count": 588
+  },
+  "portablePath": "/Users/pedrocollet/.codex/worktrees/broadcast-w12-expansion-v1/NFL Sideline/editorial/local-artifacts/broadcast-w12-expansion-v1/20261022-v1-portable",
+  "preservedCopiesUnchanged": true,
+  "rawFileHashes": {
+    "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e.parquet": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+    "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91.parquet": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91",
+    "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef.parquet": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef",
+    "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d.parquet": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d"
+  },
+  "retainedLegacyDocumentsSameSemanticIdentity": 12,
+  "roundedValuesChecked": 1552,
+  "sampleMissingEpa": 0,
+  "source": {
+    "materializationId": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+    "temporalInputId": "sha256:9dc7e6de11af1d0e494877c82f6cc234be3cbe002ab5ee47bf29cc2cf1d3a0e6"
+  },
+  "teams": 32,
+  "unknown": [
+    "completeness",
+    "coverageExpectation",
+    "epaModel",
+    "historicalAvailability",
+    "historicalIngestion",
+    "eventFinal"
+  ]
+}

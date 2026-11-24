@@ -1,0 +1,9 @@
+{
+  "all_player_sensitivity_formulas_and_denominators": true,
+  "categories_exclusive_exhaustive": true,
+  "files": 257,
+  "main_rows": 69505,
+  "manifest_sha256": "d01f4ef5767fee43df78e3ee360fd9c05eb22134df5004889585fa287501d472",
+  "passed": true,
+  "rows": 89715
+}

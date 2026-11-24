@@ -1,0 +1,1644 @@
+{
+  "base": "f2d946593d1e6b2ed32ad1aa331c630f271c44db",
+  "fullDeliveryComplete": true,
+  "instance": {
+    "database": "nfl_e5b2_febe76306d21",
+    "host": "127.0.0.1",
+    "instance_id": "febe7630-6d21-4377-9055-6d589c2666c1",
+    "port": 55485
+  },
+  "originalBatch": {
+    "allRowsIncludingPersistedAtUnchanged": true,
+    "archiveAfterHashes": {
+      "ARCHIVE.json": "71fef73a4b506f5ab0fe2bc6ea5d66c9ec59ab0d1205b8775a43e4a15a95f293",
+      "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+      "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+      "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+      "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+      "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+      "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "receipts/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41.json": "f5308d7fd160417b6f9c02cca9484dfdee3a618a99ce76ab75ff5af8aa080ad6",
+      "receipts/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d.json": "a7d5e6878caeaeedfe674886493923f2f1faea12bafdfcb1c873940bc524267f",
+      "receipts/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b.json": "55e6ed58bb42f93c882977ed2ef55b2dea08335419501ab10deba53678886bb9",
+      "receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "5dce34f0d45d24f91f4320fe1f22033822596e9ec571c783600a34c3dc1cf552",
+      "receipts/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170.json": "91a8d65c1f0f02017678d005c1af16e0b6be17f3c4bc5c8c1b74f94ed5c2581e",
+      "receipts/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166.json": "e5b1ea2bd9cf29f4e89504797c561bb3f9fb2c8e761f6fd2ef0bcdd9479c51ea",
+      "receipts/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6.json": "59f88da3abd58eb9a781e728e5b7adf149483baf9332293c57aac8b410a0888c",
+      "receipts/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b.json": "1837236b6fddfeaa9f71662096c1e061649a05960ae5b10cf4f05a2f7412cd49",
+      "receipts/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65.json": "92372e7a71c8a5bf75d57e07a55483fbbc1eeebbe02d902ce34aeb2a49bae365"
+    },
+    "archiveBeforeHashes": {
+      "ARCHIVE.json": "71fef73a4b506f5ab0fe2bc6ea5d66c9ec59ab0d1205b8775a43e4a15a95f293",
+      "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+      "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+      "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+      "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+      "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+      "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "receipts/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41.json": "f5308d7fd160417b6f9c02cca9484dfdee3a618a99ce76ab75ff5af8aa080ad6",
+      "receipts/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d.json": "a7d5e6878caeaeedfe674886493923f2f1faea12bafdfcb1c873940bc524267f",
+      "receipts/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b.json": "55e6ed58bb42f93c882977ed2ef55b2dea08335419501ab10deba53678886bb9",
+      "receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "5dce34f0d45d24f91f4320fe1f22033822596e9ec571c783600a34c3dc1cf552",
+      "receipts/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170.json": "91a8d65c1f0f02017678d005c1af16e0b6be17f3c4bc5c8c1b74f94ed5c2581e",
+      "receipts/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166.json": "e5b1ea2bd9cf29f4e89504797c561bb3f9fb2c8e761f6fd2ef0bcdd9479c51ea",
+      "receipts/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6.json": "59f88da3abd58eb9a781e728e5b7adf149483baf9332293c57aac8b410a0888c",
+      "receipts/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b.json": "1837236b6fddfeaa9f71662096c1e061649a05960ae5b10cf4f05a2f7412cd49",
+      "receipts/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65.json": "92372e7a71c8a5bf75d57e07a55483fbbc1eeebbe02d902ce34aeb2a49bae365"
+    },
+    "archiveBlobsReceiptsMarkerUnchanged": true,
+    "associations": [
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+        "game_id": "synthetic-1"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+        "game_id": "synthetic-6"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+        "game_id": "synthetic-5"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308",
+        "game_id": "synthetic-3"
+      }
+    ],
+    "coverageIds": [
+      "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+      "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+      "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+      "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308"
+    ],
+    "java": {
+      "pit": "sha256:bab53e679a5d32310d18b669042549945cc60a6c3fff0a36f040eec2f812f834 sha256:d46af612b5e7e88d1caa10bd63449bc05991a75451e3dea3e41b33162a8d0df3 POINT_IN_TIME",
+      "reconstruction": "sha256:70948e15f0f8fc8f78da813900ec0d10cba6a135a3540f73183c6e838e6becd1 sha256:ad90dc43df4e34367e04ae38d9212d443add34946670c9a7e6ebefc14217eba9 EVENT_RECONSTRUCTION\ndef/classified_pass COMPLETE EPA=null volume=0\noff/classified_pass COMPLETE EPA=null volume=0\ndef/classified_rush COMPLETE EPA=null volume=0\noff/classified_rush COMPLETE EPA=null volume=0\ndef/general COMPLETE EPA=null volume=0\noff/general COMPLETE EPA=null volume=0\ndef/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/general AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\noff/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=123456789012345678901234567890123456789/1000000000000000000000000000000000000000 volume=1\noff/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=-1123456789012345678901234567890123456789/2000000000000000000000000000000000000000 volume=2\noff/general AUDITABLE_SUBSET_UNKNOWN EPA=-1/3 volume=3"
+    },
+    "materialization_id": "sha256:2d035c691ad3479936e27bec8c82ba6074059d92267dfe76e71cceb0458b338d",
+    "originalIds": [
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7"
+      }
+    ],
+    "pit": {
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": false,
+        "closedWeeks": [],
+        "expectationFailures": [
+          {
+            "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+          }
+        ],
+        "expectedGames": null,
+        "gaps": [],
+        "knownEligibleGameIds": [],
+        "metricObservedGameIds": [],
+        "observedCompleteGameIds": [],
+        "observedGameIds": [],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": null,
+        "uncertainGameIds": []
+      },
+      "guarantees": {
+        "historicalAvailability": "ONLY_SELECTED_SOURCES_PROVEN_BY_POLICY",
+        "knowledgeAtCutoff": "CONDITIONAL_ON_MATERIALIZED_POLICY_EVIDENCE",
+        "laterKnowledgePermitted": false,
+        "limits": [
+          "Trust origins and materialized timestamps are premises, not external authentication.",
+          "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+          "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+          "No historical local dataset certified by synthetic fixtures."
+        ],
+        "postCutoffEvidenceIds": [],
+        "postCutoffResourceIds": [],
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "temporalMode": "POINT_IN_TIME",
+        "unknownKnowledgeResourceIds": []
+      },
+      "result_id": "sha256:bab53e679a5d32310d18b669042549945cc60a6c3fff0a36f040eec2f812f834"
+    },
+    "receipts": [
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+        "observed_at": "2026-10-12T04:01:50.369508+00:00",
+        "persisted_at": "2026-10-12T04:01:50.419550+00:00",
+        "receipt_id": "sha256:ea721780d8b5c4a423ee969d52ea76ea7d29f3de57bdbd7e337328e711cefdb3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+          "observed_at": "2026-10-12T04:01:50.369508Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "game-audit.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:ea721780d8b5c4a423ee969d52ea76ea7d29f3de57bdbd7e337328e711cefdb3",
+          "sha256": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41"
+        },
+        "sha256": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+        "observed_at": "2026-10-12T04:01:50.370556+00:00",
+        "persisted_at": "2026-10-12T04:01:50.420505+00:00",
+        "receipt_id": "sha256:5314de2ccd023cf4f9f02e2b9fcc57fdb80e4d5b94e65527c7f9c0d32b93fab8",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+          "observed_at": "2026-10-12T04:01:50.370556Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "reconciliation.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:5314de2ccd023cf4f9f02e2b9fcc57fdb80e4d5b94e65527c7f9c0d32b93fab8",
+          "sha256": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d"
+        },
+        "sha256": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "observed_at": "2026-10-12T04:01:50.371388+00:00",
+        "persisted_at": "2026-10-12T04:01:50.420850+00:00",
+        "receipt_id": "sha256:71a0b3c0da53e0a95e535270d98cadd3bfff2ea17184bc231312d7c0ff29e086",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "observed_at": "2026-10-12T04:01:50.371388Z",
+          "origin": {
+            "kind": "pbp",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/pbp-a.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:71a0b3c0da53e0a95e535270d98cadd3bfff2ea17184bc231312d7c0ff29e086",
+          "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+        "observed_at": "2026-10-12T04:01:50.372217+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421122+00:00",
+        "receipt_id": "sha256:499296ca288269f5258a878c0368b32a557930be70eb320eceb86223cad356c3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+          "observed_at": "2026-10-12T04:01:50.372217Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "limitations.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:499296ca288269f5258a878c0368b32a557930be70eb320eceb86223cad356c3",
+          "sha256": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4"
+        },
+        "sha256": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+        "observed_at": "2026-10-12T04:01:50.373116+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421383+00:00",
+        "receipt_id": "sha256:a019a69194d7737c7b5190432ba3382fc07c2db7e03342c01d9c73d0e32819d3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+          "observed_at": "2026-10-12T04:01:50.373116Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "COMPLETED.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:a019a69194d7737c7b5190432ba3382fc07c2db7e03342c01d9c73d0e32819d3",
+          "sha256": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170"
+        },
+        "sha256": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+        "observed_at": "2026-10-12T04:01:50.373937+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421636+00:00",
+        "receipt_id": "sha256:217e0e3adf3a4353779874d894250ee05108ebb2f00e22b330d33c28264d1c6f",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "observed_at": "2026-10-12T04:01:50.373937Z",
+          "origin": {
+            "kind": "pbp",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/pbp-b.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:217e0e3adf3a4353779874d894250ee05108ebb2f00e22b330d33c28264d1c6f",
+          "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        },
+        "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+        "observed_at": "2026-10-12T04:01:50.374813+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421902+00:00",
+        "receipt_id": "sha256:ed3c026b636dca64c01ae4a76110c677154bb87f9f199fb4f616450c1165dabe",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+          "observed_at": "2026-10-12T04:01:50.374813Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "manifest.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:ed3c026b636dca64c01ae4a76110c677154bb87f9f199fb4f616450c1165dabe",
+          "sha256": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6"
+        },
+        "sha256": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+        "observed_at": "2026-10-12T04:01:50.375730+00:00",
+        "persisted_at": "2026-10-12T04:01:50.422226+00:00",
+        "receipt_id": "sha256:225a811d481382f38b195ccccb308dcd7d603c72df4c353c080f6f0488d7b444",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+          "observed_at": "2026-10-12T04:01:50.375730Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "statistics.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:225a811d481382f38b195ccccb308dcd7d603c72df4c353c080f6f0488d7b444",
+          "sha256": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b"
+        },
+        "sha256": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+        "observed_at": "2026-10-12T04:01:50.376573+00:00",
+        "persisted_at": "2026-10-12T04:01:50.422640+00:00",
+        "receipt_id": "sha256:6dfbfc62f25ff61e03bd99a3dca42e51b83307a5ef79f9f9e4c96e90a5f616b3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+          "observed_at": "2026-10-12T04:01:50.376573Z",
+          "origin": {
+            "kind": "calendar",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/calendar.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:6dfbfc62f25ff61e03bd99a3dca42e51b83307a5ef79f9f9e4c96e90a5f616b3",
+          "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+      }
+    ],
+    "reconstruction": {
+      "calculationIds": [
+        "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7"
+      ],
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": true,
+        "closedWeeks": [],
+        "expectationFailures": [],
+        "expectedGames": 3,
+        "gaps": [
+          {
+            "details": [
+              "SOURCE_UNKNOWN"
+            ],
+            "gameId": "synthetic-5",
+            "reason": "SOURCE_UNKNOWN"
+          }
+        ],
+        "knownEligibleGameIds": [
+          "synthetic-1",
+          "synthetic-5",
+          "synthetic-6"
+        ],
+        "metricObservedGameIds": [
+          "synthetic-1"
+        ],
+        "observedCompleteGameIds": [
+          "synthetic-6"
+        ],
+        "observedGameIds": [
+          "synthetic-1",
+          "synthetic-6"
+        ],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": {
+          "denominator": 3,
+          "exact": "1/3",
+          "numerator": 1
+        },
+        "uncertainGameIds": []
+      },
+      "general": {
+        "comparisonEligible": false,
+        "comparisonFailures": [
+          "EPA_MODEL_UNKNOWN",
+          "INCOMPLETE_SOURCE_COVERAGE",
+          "SOURCE_SUBSET"
+        ],
+        "definitionVersion": "1.0.0",
+        "epa": {
+          "denominator": 3,
+          "exact": "-1/3",
+          "numerator": "-1"
+        },
+        "foundation": "general",
+        "foundationCoverage": {
+          "eligibleN": 3,
+          "epaN": 3,
+          "epaObservedGameIds": [
+            "synthetic-1"
+          ],
+          "expectedGames": 3,
+          "noEligiblePlaysGameIds": [],
+          "noEpaObservationsGameIds": [],
+          "observedSourceGames": 1,
+          "sourceRatio": null
+        },
+        "frequency": null,
+        "gameIds": [
+          "synthetic-1"
+        ],
+        "model": "UNKNOWN",
+        "populationVersion": "classified-scrimmage-v1",
+        "role": "off",
+        "scope": "AUDITABLE_SUBSET_UNKNOWN",
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "successRate": {
+          "denominator": 3,
+          "exact": "1/3",
+          "numerator": 1
+        },
+        "sums": {
+          "eligible_n": 3,
+          "epa_missing_n": 0,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1",
+          "success_n": 1
+        },
+        "volume": 3
+      },
+      "guarantees": {
+        "historicalAvailability": "UNKNOWN_OR_NOT_PROVEN",
+        "knowledgeAtCutoff": "NOT_DEMONSTRATED",
+        "laterKnowledgePermitted": true,
+        "limits": [
+          "Trust origins and materialized timestamps are premises, not external authentication.",
+          "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+          "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+          "No historical local dataset certified by synthetic fixtures."
+        ],
+        "postCutoffEvidenceIds": [
+          "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+          "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+          "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+          "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+          "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+          "sha256:cb72d286dfeac0b5e931ecbba7dcbc82864a42774ee6f3f4557a4dc80f5c5a8c"
+        ],
+        "postCutoffResourceIds": [
+          "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        ],
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "temporalMode": "EVENT_RECONSTRUCTION",
+        "unknownKnowledgeResourceIds": [
+          "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+          "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+          "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+          "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+          "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+          "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+          "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        ]
+      },
+      "result_id": "sha256:70948e15f0f8fc8f78da813900ec0d10cba6a135a3540f73183c6e838e6becd1"
+    },
+    "relationCounts": {
+      "game_metric_coverage_revision": 4,
+      "metric_archive_blob": 9,
+      "metric_archive_receipt": 9,
+      "metric_artifact": 1,
+      "metric_artifact_file": 6,
+      "metric_calculation": 1,
+      "metric_calculation_coverage": 4,
+      "metric_source_member": 4,
+      "metric_source_revision": 3,
+      "metric_source_set": 2,
+      "team_game_metric_sums": 24
+    },
+    "snapshotAfterSha256": "sha256:1c90d0b883a735907e7be11ca81a3c20b44031f2a11319a8097d1afb2efdc615",
+    "snapshotBeforeSha256": "sha256:1c90d0b883a735907e7be11ca81a3c20b44031f2a11319a8097d1afb2efdc615",
+    "sourceIds": [
+      "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    ],
+    "temporalInputId": "sha256:a0cd9a9d2e5bbdf143c12b2fe5016accef78c11ca7c120b7677dd82656a3b99d"
+  },
+  "scope": "REAL_POSTGRESQL_AND_JAVA_FULL_BATCH",
+  "sharedCoverageModelChange": {
+    "allRowsIncludingPersistedAtUnchanged": true,
+    "archiveAfterHashes": {
+      "ARCHIVE.json": "71fef73a4b506f5ab0fe2bc6ea5d66c9ec59ab0d1205b8775a43e4a15a95f293",
+      "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+      "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+      "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+      "blobs/sha256/65/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070": "65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070",
+      "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+      "blobs/sha256/df/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0": "df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0",
+      "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+      "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "receipts/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41.json": "f5308d7fd160417b6f9c02cca9484dfdee3a618a99ce76ab75ff5af8aa080ad6",
+      "receipts/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d.json": "a7d5e6878caeaeedfe674886493923f2f1faea12bafdfcb1c873940bc524267f",
+      "receipts/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b.json": "55e6ed58bb42f93c882977ed2ef55b2dea08335419501ab10deba53678886bb9",
+      "receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "5dce34f0d45d24f91f4320fe1f22033822596e9ec571c783600a34c3dc1cf552",
+      "receipts/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170.json": "91a8d65c1f0f02017678d005c1af16e0b6be17f3c4bc5c8c1b74f94ed5c2581e",
+      "receipts/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070.json": "b5366b37e50359fd348d9569e882db884c10435a91ad8bd9068a46f99866b14e",
+      "receipts/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166.json": "e5b1ea2bd9cf29f4e89504797c561bb3f9fb2c8e761f6fd2ef0bcdd9479c51ea",
+      "receipts/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6.json": "59f88da3abd58eb9a781e728e5b7adf149483baf9332293c57aac8b410a0888c",
+      "receipts/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0.json": "d8263b813b0771bf7842e13d29f880547bdc3c69fa5d873cb5ce7bd73dfeef10",
+      "receipts/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b.json": "1837236b6fddfeaa9f71662096c1e061649a05960ae5b10cf4f05a2f7412cd49",
+      "receipts/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65.json": "92372e7a71c8a5bf75d57e07a55483fbbc1eeebbe02d902ce34aeb2a49bae365"
+    },
+    "archiveBeforeHashes": {
+      "ARCHIVE.json": "71fef73a4b506f5ab0fe2bc6ea5d66c9ec59ab0d1205b8775a43e4a15a95f293",
+      "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+      "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+      "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+      "blobs/sha256/65/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070": "65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070",
+      "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+      "blobs/sha256/df/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0": "df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0",
+      "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+      "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "receipts/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41.json": "f5308d7fd160417b6f9c02cca9484dfdee3a618a99ce76ab75ff5af8aa080ad6",
+      "receipts/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d.json": "a7d5e6878caeaeedfe674886493923f2f1faea12bafdfcb1c873940bc524267f",
+      "receipts/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b.json": "55e6ed58bb42f93c882977ed2ef55b2dea08335419501ab10deba53678886bb9",
+      "receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "5dce34f0d45d24f91f4320fe1f22033822596e9ec571c783600a34c3dc1cf552",
+      "receipts/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170.json": "91a8d65c1f0f02017678d005c1af16e0b6be17f3c4bc5c8c1b74f94ed5c2581e",
+      "receipts/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070.json": "b5366b37e50359fd348d9569e882db884c10435a91ad8bd9068a46f99866b14e",
+      "receipts/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166.json": "e5b1ea2bd9cf29f4e89504797c561bb3f9fb2c8e761f6fd2ef0bcdd9479c51ea",
+      "receipts/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6.json": "59f88da3abd58eb9a781e728e5b7adf149483baf9332293c57aac8b410a0888c",
+      "receipts/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0.json": "d8263b813b0771bf7842e13d29f880547bdc3c69fa5d873cb5ce7bd73dfeef10",
+      "receipts/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b.json": "1837236b6fddfeaa9f71662096c1e061649a05960ae5b10cf4f05a2f7412cd49",
+      "receipts/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65.json": "92372e7a71c8a5bf75d57e07a55483fbbc1eeebbe02d902ce34aeb2a49bae365"
+    },
+    "archiveBlobsReceiptsMarkerUnchanged": true,
+    "associations": [
+      {
+        "calculation_id": "sha256:41c21564f1c56fa78c230c0c7c2958d999610708f8cfa3b3a819c231c55edb0b",
+        "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+        "game_id": "synthetic-1"
+      },
+      {
+        "calculation_id": "sha256:41c21564f1c56fa78c230c0c7c2958d999610708f8cfa3b3a819c231c55edb0b",
+        "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+        "game_id": "synthetic-6"
+      },
+      {
+        "calculation_id": "sha256:41c21564f1c56fa78c230c0c7c2958d999610708f8cfa3b3a819c231c55edb0b",
+        "coverage_revision_id": "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+        "game_id": "synthetic-5"
+      },
+      {
+        "calculation_id": "sha256:41c21564f1c56fa78c230c0c7c2958d999610708f8cfa3b3a819c231c55edb0b",
+        "coverage_revision_id": "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308",
+        "game_id": "synthetic-3"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+        "game_id": "synthetic-1"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+        "game_id": "synthetic-6"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+        "game_id": "synthetic-5"
+      },
+      {
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+        "coverage_revision_id": "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308",
+        "game_id": "synthetic-3"
+      }
+    ],
+    "coverageIds": [
+      "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+      "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+      "sha256:6d0e6f26a0b42db630590d9763c23c16d248b0fa21b61f51404a0078d166c757",
+      "sha256:80a69a4c1890ef6a4cc746fe4c583b1cce0ddde19c571a554568bf040cf3d308"
+    ],
+    "java": {
+      "pit": "sha256:bab53e679a5d32310d18b669042549945cc60a6c3fff0a36f040eec2f812f834 sha256:771b25a0daa8d2d9b535561f44e069cb1de7b49a76b3f65da14a4c187ca8204c POINT_IN_TIME",
+      "reconstruction": "sha256:1652392f2958cd010035ddcc055efef6f76560e62338f11edd7143462a771e9d sha256:095b922f0548383b6cf68dd1977ae7c9241169f4593ebec383d3df0efee8bbf7 EVENT_RECONSTRUCTION\ndef/classified_pass COMPLETE EPA=null volume=0\noff/classified_pass COMPLETE EPA=null volume=0\ndef/classified_rush COMPLETE EPA=null volume=0\noff/classified_rush COMPLETE EPA=null volume=0\ndef/general COMPLETE EPA=null volume=0\noff/general COMPLETE EPA=null volume=0\ndef/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/general AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\noff/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=123456789012345678901234567890123456789/1000000000000000000000000000000000000000 volume=1\noff/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=-1123456789012345678901234567890123456789/2000000000000000000000000000000000000000 volume=2\noff/general AUDITABLE_SUBSET_UNKNOWN EPA=-1/3 volume=3"
+    },
+    "materialization_id": "sha256:ca8234721f0454cf2728f1f96baa46aab0dd742a022c63d8f7d1be1913d11909",
+    "originalIds": [
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+        "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "artifact_id": "sha256:5597d46ca1b21f7d5ff898e3b5255525a60dcce13c7a05b71ef6b5fc4a50252d",
+        "calculation_id": "sha256:41c21564f1c56fa78c230c0c7c2958d999610708f8cfa3b3a819c231c55edb0b"
+      }
+    ],
+    "pit": {
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": false,
+        "closedWeeks": [],
+        "expectationFailures": [
+          {
+            "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+          }
+        ],
+        "expectedGames": null,
+        "gaps": [],
+        "knownEligibleGameIds": [],
+        "metricObservedGameIds": [],
+        "observedCompleteGameIds": [],
+        "observedGameIds": [],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": null,
+        "uncertainGameIds": []
+      },
+      "guarantees": {
+        "historicalAvailability": "ONLY_SELECTED_SOURCES_PROVEN_BY_POLICY",
+        "knowledgeAtCutoff": "CONDITIONAL_ON_MATERIALIZED_POLICY_EVIDENCE",
+        "laterKnowledgePermitted": false,
+        "limits": [
+          "Trust origins and materialized timestamps are premises, not external authentication.",
+          "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+          "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+          "No historical local dataset certified by synthetic fixtures."
+        ],
+        "postCutoffEvidenceIds": [],
+        "postCutoffResourceIds": [],
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "temporalMode": "POINT_IN_TIME",
+        "unknownKnowledgeResourceIds": []
+      },
+      "result_id": "sha256:bab53e679a5d32310d18b669042549945cc60a6c3fff0a36f040eec2f812f834"
+    },
+    "receipts": [
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+        "observed_at": "2026-10-12T04:01:50.369508+00:00",
+        "persisted_at": "2026-10-12T04:01:50.419550+00:00",
+        "receipt_id": "sha256:ea721780d8b5c4a423ee969d52ea76ea7d29f3de57bdbd7e337328e711cefdb3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+          "observed_at": "2026-10-12T04:01:50.369508Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "game-audit.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:ea721780d8b5c4a423ee969d52ea76ea7d29f3de57bdbd7e337328e711cefdb3",
+          "sha256": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41"
+        },
+        "sha256": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+        "observed_at": "2026-10-12T04:01:50.370556+00:00",
+        "persisted_at": "2026-10-12T04:01:50.420505+00:00",
+        "receipt_id": "sha256:5314de2ccd023cf4f9f02e2b9fcc57fdb80e4d5b94e65527c7f9c0d32b93fab8",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+          "observed_at": "2026-10-12T04:01:50.370556Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "reconciliation.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:5314de2ccd023cf4f9f02e2b9fcc57fdb80e4d5b94e65527c7f9c0d32b93fab8",
+          "sha256": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d"
+        },
+        "sha256": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "observed_at": "2026-10-12T04:01:50.371388+00:00",
+        "persisted_at": "2026-10-12T04:01:50.420850+00:00",
+        "receipt_id": "sha256:71a0b3c0da53e0a95e535270d98cadd3bfff2ea17184bc231312d7c0ff29e086",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "observed_at": "2026-10-12T04:01:50.371388Z",
+          "origin": {
+            "kind": "pbp",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/pbp-a.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:71a0b3c0da53e0a95e535270d98cadd3bfff2ea17184bc231312d7c0ff29e086",
+          "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+        "observed_at": "2026-10-12T04:01:50.372217+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421122+00:00",
+        "receipt_id": "sha256:499296ca288269f5258a878c0368b32a557930be70eb320eceb86223cad356c3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+          "observed_at": "2026-10-12T04:01:50.372217Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "limitations.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:499296ca288269f5258a878c0368b32a557930be70eb320eceb86223cad356c3",
+          "sha256": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4"
+        },
+        "sha256": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+        "observed_at": "2026-10-12T04:01:50.373116+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421383+00:00",
+        "receipt_id": "sha256:a019a69194d7737c7b5190432ba3382fc07c2db7e03342c01d9c73d0e32819d3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+          "observed_at": "2026-10-12T04:01:50.373116Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "COMPLETED.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:a019a69194d7737c7b5190432ba3382fc07c2db7e03342c01d9c73d0e32819d3",
+          "sha256": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170"
+        },
+        "sha256": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/65/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070",
+        "observed_at": "2026-10-12T04:01:51.047712+00:00",
+        "persisted_at": "2026-10-12T04:01:51.093188+00:00",
+        "receipt_id": "sha256:37c8ac5fa1d01c7a1fdbeefdedd127d727fa7b653f3d32da58360a8b1d17e0ce",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/65/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070",
+          "observed_at": "2026-10-12T04:01:51.047712Z",
+          "origin": {
+            "artifact_id": "sha256:5597d46ca1b21f7d5ff898e3b5255525a60dcce13c7a05b71ef6b5fc4a50252d",
+            "filename": "COMPLETED.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:37c8ac5fa1d01c7a1fdbeefdedd127d727fa7b653f3d32da58360a8b1d17e0ce",
+          "sha256": "65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070"
+        },
+        "sha256": "65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+        "observed_at": "2026-10-12T04:01:50.373937+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421636+00:00",
+        "receipt_id": "sha256:217e0e3adf3a4353779874d894250ee05108ebb2f00e22b330d33c28264d1c6f",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "observed_at": "2026-10-12T04:01:50.373937Z",
+          "origin": {
+            "kind": "pbp",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/pbp-b.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:217e0e3adf3a4353779874d894250ee05108ebb2f00e22b330d33c28264d1c6f",
+          "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        },
+        "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+        "observed_at": "2026-10-12T04:01:50.374813+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421902+00:00",
+        "receipt_id": "sha256:ed3c026b636dca64c01ae4a76110c677154bb87f9f199fb4f616450c1165dabe",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+          "observed_at": "2026-10-12T04:01:50.374813Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "manifest.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:ed3c026b636dca64c01ae4a76110c677154bb87f9f199fb4f616450c1165dabe",
+          "sha256": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6"
+        },
+        "sha256": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/df/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0",
+        "observed_at": "2026-10-12T04:01:51.049421+00:00",
+        "persisted_at": "2026-10-12T04:01:51.093908+00:00",
+        "receipt_id": "sha256:3be4f942b0dff1ff3c7dd46c6dbebcd5f7d9a5af5e52f7973b5bc01ae79191bd",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/df/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0",
+          "observed_at": "2026-10-12T04:01:51.049421Z",
+          "origin": {
+            "artifact_id": "sha256:5597d46ca1b21f7d5ff898e3b5255525a60dcce13c7a05b71ef6b5fc4a50252d",
+            "filename": "manifest.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:3be4f942b0dff1ff3c7dd46c6dbebcd5f7d9a5af5e52f7973b5bc01ae79191bd",
+          "sha256": "df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0"
+        },
+        "sha256": "df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+        "observed_at": "2026-10-12T04:01:50.375730+00:00",
+        "persisted_at": "2026-10-12T04:01:50.422226+00:00",
+        "receipt_id": "sha256:225a811d481382f38b195ccccb308dcd7d603c72df4c353c080f6f0488d7b444",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+          "observed_at": "2026-10-12T04:01:50.375730Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "statistics.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:225a811d481382f38b195ccccb308dcd7d603c72df4c353c080f6f0488d7b444",
+          "sha256": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b"
+        },
+        "sha256": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+        "observed_at": "2026-10-12T04:01:50.376573+00:00",
+        "persisted_at": "2026-10-12T04:01:50.422640+00:00",
+        "receipt_id": "sha256:6dfbfc62f25ff61e03bd99a3dca42e51b83307a5ef79f9f9e4c96e90a5f616b3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+          "observed_at": "2026-10-12T04:01:50.376573Z",
+          "origin": {
+            "kind": "calendar",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/calendar.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:6dfbfc62f25ff61e03bd99a3dca42e51b83307a5ef79f9f9e4c96e90a5f616b3",
+          "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+      }
+    ],
+    "reconstruction": {
+      "calculationIds": [
+        "sha256:41c21564f1c56fa78c230c0c7c2958d999610708f8cfa3b3a819c231c55edb0b",
+        "sha256:41c21564f1c56fa78c230c0c7c2958d999610708f8cfa3b3a819c231c55edb0b"
+      ],
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": true,
+        "closedWeeks": [],
+        "expectationFailures": [],
+        "expectedGames": 3,
+        "gaps": [
+          {
+            "details": [
+              "SOURCE_UNKNOWN"
+            ],
+            "gameId": "synthetic-5",
+            "reason": "SOURCE_UNKNOWN"
+          }
+        ],
+        "knownEligibleGameIds": [
+          "synthetic-1",
+          "synthetic-5",
+          "synthetic-6"
+        ],
+        "metricObservedGameIds": [
+          "synthetic-1"
+        ],
+        "observedCompleteGameIds": [
+          "synthetic-6"
+        ],
+        "observedGameIds": [
+          "synthetic-1",
+          "synthetic-6"
+        ],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": {
+          "denominator": 3,
+          "exact": "1/3",
+          "numerator": 1
+        },
+        "uncertainGameIds": []
+      },
+      "general": {
+        "comparisonEligible": false,
+        "comparisonFailures": [
+          "EPA_MODEL_UNKNOWN",
+          "INCOMPLETE_SOURCE_COVERAGE",
+          "SOURCE_SUBSET"
+        ],
+        "definitionVersion": "1.0.0",
+        "epa": {
+          "denominator": 3,
+          "exact": "-1/3",
+          "numerator": "-1"
+        },
+        "foundation": "general",
+        "foundationCoverage": {
+          "eligibleN": 3,
+          "epaN": 3,
+          "epaObservedGameIds": [
+            "synthetic-1"
+          ],
+          "expectedGames": 3,
+          "noEligiblePlaysGameIds": [],
+          "noEpaObservationsGameIds": [],
+          "observedSourceGames": 1,
+          "sourceRatio": null
+        },
+        "frequency": null,
+        "gameIds": [
+          "synthetic-1"
+        ],
+        "model": "UNKNOWN",
+        "populationVersion": "classified-scrimmage-v1",
+        "role": "off",
+        "scope": "AUDITABLE_SUBSET_UNKNOWN",
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "successRate": {
+          "denominator": 3,
+          "exact": "1/3",
+          "numerator": 1
+        },
+        "sums": {
+          "eligible_n": 3,
+          "epa_missing_n": 0,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1",
+          "success_n": 1
+        },
+        "volume": 3
+      },
+      "guarantees": {
+        "historicalAvailability": "UNKNOWN_OR_NOT_PROVEN",
+        "knowledgeAtCutoff": "NOT_DEMONSTRATED",
+        "laterKnowledgePermitted": true,
+        "limits": [
+          "Trust origins and materialized timestamps are premises, not external authentication.",
+          "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+          "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+          "No historical local dataset certified by synthetic fixtures."
+        ],
+        "postCutoffEvidenceIds": [
+          "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+          "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+          "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+          "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+          "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+          "sha256:cb72d286dfeac0b5e931ecbba7dcbc82864a42774ee6f3f4557a4dc80f5c5a8c"
+        ],
+        "postCutoffResourceIds": [
+          "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        ],
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "temporalMode": "EVENT_RECONSTRUCTION",
+        "unknownKnowledgeResourceIds": [
+          "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+          "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+          "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+          "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+          "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+          "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+          "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        ]
+      },
+      "result_id": "sha256:1652392f2958cd010035ddcc055efef6f76560e62338f11edd7143462a771e9d"
+    },
+    "relationCounts": {
+      "game_metric_coverage_revision": 4,
+      "metric_archive_blob": 11,
+      "metric_archive_receipt": 11,
+      "metric_artifact": 2,
+      "metric_artifact_file": 12,
+      "metric_calculation": 2,
+      "metric_calculation_coverage": 8,
+      "metric_source_member": 4,
+      "metric_source_revision": 3,
+      "metric_source_set": 2,
+      "team_game_metric_sums": 24
+    },
+    "snapshotAfterSha256": "sha256:c8713737c8e6d02f4b7ead25fc3909bef05a047ae53af8ba74d9fd342d4599d8",
+    "snapshotBeforeSha256": "sha256:c8713737c8e6d02f4b7ead25fc3909bef05a047ae53af8ba74d9fd342d4599d8",
+    "sourceIds": [
+      "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    ],
+    "temporalInputId": "sha256:5dd44cb7c2768884246ca16ab2c1bda5041089ce40189e334e26b391f0094477"
+  },
+  "supabaseStackAndAdvisors": "PENDING_SEPARATE",
+  "transactionReadOnlyEnforced": true,
+  "twoNonemptyAndEmpty": {
+    "allRowsIncludingPersistedAtUnchanged": true,
+    "archiveAfterHashes": {
+      "ARCHIVE.json": "71fef73a4b506f5ab0fe2bc6ea5d66c9ec59ab0d1205b8775a43e4a15a95f293",
+      "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+      "blobs/sha256/07/0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198": "0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198",
+      "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+      "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "blobs/sha256/5b/5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80": "5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80",
+      "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+      "blobs/sha256/62/62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec": "62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec",
+      "blobs/sha256/65/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070": "65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070",
+      "blobs/sha256/a3/a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599": "a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599",
+      "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "blobs/sha256/ad/ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb": "ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb",
+      "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+      "blobs/sha256/df/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0": "df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0",
+      "blobs/sha256/e1/e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4": "e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4",
+      "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+      "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "receipts/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41.json": "f5308d7fd160417b6f9c02cca9484dfdee3a618a99ce76ab75ff5af8aa080ad6",
+      "receipts/0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198.json": "0227742cc3d4d2e0910898d691d5a376f1e62f806f69313f157d60088366c8c2",
+      "receipts/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d.json": "a7d5e6878caeaeedfe674886493923f2f1faea12bafdfcb1c873940bc524267f",
+      "receipts/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b.json": "55e6ed58bb42f93c882977ed2ef55b2dea08335419501ab10deba53678886bb9",
+      "receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "5dce34f0d45d24f91f4320fe1f22033822596e9ec571c783600a34c3dc1cf552",
+      "receipts/5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80.json": "3ce663a1ba96bc8a6aef2bfc1398685f0172951272f8b70853525a0874cfaa54",
+      "receipts/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170.json": "91a8d65c1f0f02017678d005c1af16e0b6be17f3c4bc5c8c1b74f94ed5c2581e",
+      "receipts/62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec.json": "933d784f4f538ba71fc0a0d134a8ae845cfd9e2fcf8f9979285ddfef49998d05",
+      "receipts/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070.json": "b5366b37e50359fd348d9569e882db884c10435a91ad8bd9068a46f99866b14e",
+      "receipts/a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599.json": "262ec36d1f38c3384c6d32a4bc51aa7e7f05f22f72d8651ff9f13984dea95472",
+      "receipts/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166.json": "e5b1ea2bd9cf29f4e89504797c561bb3f9fb2c8e761f6fd2ef0bcdd9479c51ea",
+      "receipts/ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb.json": "7a36ab91cf6fe8cdd76aa18aa20c3a18766ffaaefbeb634f4767830a49963df8",
+      "receipts/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6.json": "59f88da3abd58eb9a781e728e5b7adf149483baf9332293c57aac8b410a0888c",
+      "receipts/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0.json": "d8263b813b0771bf7842e13d29f880547bdc3c69fa5d873cb5ce7bd73dfeef10",
+      "receipts/e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4.json": "d6445963883b0aee2dfc066c88dc3c5fe8d46a1a4c95d976446f29a1c51e3799",
+      "receipts/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b.json": "1837236b6fddfeaa9f71662096c1e061649a05960ae5b10cf4f05a2f7412cd49",
+      "receipts/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65.json": "92372e7a71c8a5bf75d57e07a55483fbbc1eeebbe02d902ce34aeb2a49bae365"
+    },
+    "archiveBeforeHashes": {
+      "ARCHIVE.json": "71fef73a4b506f5ab0fe2bc6ea5d66c9ec59ab0d1205b8775a43e4a15a95f293",
+      "blobs/sha256/06/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41": "066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41",
+      "blobs/sha256/07/0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198": "0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198",
+      "blobs/sha256/0a/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d": "0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d",
+      "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "blobs/sha256/5b/5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80": "5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80",
+      "blobs/sha256/5b/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170": "5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170",
+      "blobs/sha256/62/62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec": "62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec",
+      "blobs/sha256/65/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070": "65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070",
+      "blobs/sha256/a3/a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599": "a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599",
+      "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "blobs/sha256/ad/ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb": "ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb",
+      "blobs/sha256/d7/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6": "d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6",
+      "blobs/sha256/df/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0": "df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0",
+      "blobs/sha256/e1/e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4": "e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4",
+      "blobs/sha256/f5/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b": "f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b",
+      "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "receipts/066e823f661facb57c51ddd6f53d6c03ef6f6fa0f80528f7e4349d8ed1935b41.json": "f5308d7fd160417b6f9c02cca9484dfdee3a618a99ce76ab75ff5af8aa080ad6",
+      "receipts/0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198.json": "0227742cc3d4d2e0910898d691d5a376f1e62f806f69313f157d60088366c8c2",
+      "receipts/0afce01cdf8a7f86b21324f230fdf6b3a00face0375b41d2fb21bdf660ada82d.json": "a7d5e6878caeaeedfe674886493923f2f1faea12bafdfcb1c873940bc524267f",
+      "receipts/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b.json": "55e6ed58bb42f93c882977ed2ef55b2dea08335419501ab10deba53678886bb9",
+      "receipts/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4.json": "5dce34f0d45d24f91f4320fe1f22033822596e9ec571c783600a34c3dc1cf552",
+      "receipts/5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80.json": "3ce663a1ba96bc8a6aef2bfc1398685f0172951272f8b70853525a0874cfaa54",
+      "receipts/5bf333424a4b196f1854aa24c41097160c4f4dc015d0f272b97c46332e537170.json": "91a8d65c1f0f02017678d005c1af16e0b6be17f3c4bc5c8c1b74f94ed5c2581e",
+      "receipts/62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec.json": "933d784f4f538ba71fc0a0d134a8ae845cfd9e2fcf8f9979285ddfef49998d05",
+      "receipts/65f0ebd8034b3d83467e41b69efab335122d63b80d9e9ce5c6d179afafe5d070.json": "b5366b37e50359fd348d9569e882db884c10435a91ad8bd9068a46f99866b14e",
+      "receipts/a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599.json": "262ec36d1f38c3384c6d32a4bc51aa7e7f05f22f72d8651ff9f13984dea95472",
+      "receipts/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166.json": "e5b1ea2bd9cf29f4e89504797c561bb3f9fb2c8e761f6fd2ef0bcdd9479c51ea",
+      "receipts/ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb.json": "7a36ab91cf6fe8cdd76aa18aa20c3a18766ffaaefbeb634f4767830a49963df8",
+      "receipts/d7460d77e5f9527da2f1c421f6d00a25a3c714750ff3305eaff2d24b895f2ed6.json": "59f88da3abd58eb9a781e728e5b7adf149483baf9332293c57aac8b410a0888c",
+      "receipts/df400ce764f0cf006f93153c2de727fd26ef0277db6c28f22d48b119ad0642e0.json": "d8263b813b0771bf7842e13d29f880547bdc3c69fa5d873cb5ce7bd73dfeef10",
+      "receipts/e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4.json": "d6445963883b0aee2dfc066c88dc3c5fe8d46a1a4c95d976446f29a1c51e3799",
+      "receipts/f5ec97bab2236093e44c7a9bb47af7a051736895a7122a664d8b824bafb87d9b.json": "1837236b6fddfeaa9f71662096c1e061649a05960ae5b10cf4f05a2f7412cd49",
+      "receipts/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65.json": "92372e7a71c8a5bf75d57e07a55483fbbc1eeebbe02d902ce34aeb2a49bae365"
+    },
+    "archiveBlobsReceiptsMarkerUnchanged": true,
+    "associations": [
+      {
+        "calculation_id": "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3",
+        "coverage_revision_id": "sha256:641953479a235d54727e1eb90bb3cb8e8f50aae0627e81c22512d19f87fde0ea",
+        "game_id": "synthetic-5"
+      },
+      {
+        "calculation_id": "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3",
+        "coverage_revision_id": "sha256:9c2995a8e6f36eaab0aaa034cf4e6a2107dc09b68a1160f4ce7650ba3938aef9",
+        "game_id": "synthetic-3"
+      },
+      {
+        "calculation_id": "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3",
+        "coverage_revision_id": "sha256:f2f4ccccb9f9f085870a0c7bb370a97a761cdb268f071450e5312d432bc7d87e",
+        "game_id": "synthetic-1"
+      },
+      {
+        "calculation_id": "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3",
+        "coverage_revision_id": "sha256:f4e13815aa75ba53d7b948737a3e9239ca0d6ffab0ee87b3c379582e73345944",
+        "game_id": "synthetic-6"
+      }
+    ],
+    "coverageIds": [
+      "sha256:f4e13815aa75ba53d7b948737a3e9239ca0d6ffab0ee87b3c379582e73345944",
+      "sha256:641953479a235d54727e1eb90bb3cb8e8f50aae0627e81c22512d19f87fde0ea",
+      "sha256:9c2995a8e6f36eaab0aaa034cf4e6a2107dc09b68a1160f4ce7650ba3938aef9",
+      "sha256:f2f4ccccb9f9f085870a0c7bb370a97a761cdb268f071450e5312d432bc7d87e"
+    ],
+    "java": {
+      "pit": "sha256:a5484086194b1f08b01d987670dc9b5aeb14f0284bad905326042272262ecbc0 sha256:fbc1a7a8ae12aa35df978d91daca18d4595257aa13b7a6a4d139c9d56f09d1a1 POINT_IN_TIME",
+      "reconstruction": "sha256:427121b091bf9821698014794089a2856acad67d383951991493f4517f84c98a sha256:3349f73f430d1e58dba83cf3f77d948652926ce8a412e5a7b22e96abd7bd7176 EVENT_RECONSTRUCTION\ndef/classified_pass COMPLETE EPA=null volume=0\noff/classified_pass COMPLETE EPA=null volume=0\ndef/classified_rush COMPLETE EPA=null volume=0\noff/classified_rush COMPLETE EPA=null volume=0\ndef/general COMPLETE EPA=null volume=0\noff/general COMPLETE EPA=null volume=0\ndef/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\ndef/general AUDITABLE_SUBSET_UNKNOWN EPA=null volume=0\noff/classified_rush AUDITABLE_SUBSET_UNKNOWN EPA=123456789012345678901234567890123456789/1000000000000000000000000000000000000000 volume=1\noff/classified_pass AUDITABLE_SUBSET_UNKNOWN EPA=-1123456789012345678901234567890123456789/1500000000000000000000000000000000000000 volume=3\noff/general AUDITABLE_SUBSET_UNKNOWN EPA=-2123456789012345678901234567890123456789/4000000000000000000000000000000000000000 volume=4"
+    },
+    "materialization_id": "sha256:c1f15dd49d6c618546019749eef742d187d28cd79b2cb2cdc5f4f69ac5d9f8a6",
+    "originalIds": [
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "artifact_id": "sha256:9d5ef850f0deb1f1b671b85081e0c335f8fee6fb88da16ee65d88a491cacb486",
+        "calculation_id": "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3"
+      }
+    ],
+    "pit": {
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": false,
+        "closedWeeks": [],
+        "expectationFailures": [
+          {
+            "reason": "CALENDAR_INELIGIBLE_OR_UNKNOWN"
+          }
+        ],
+        "expectedGames": null,
+        "gaps": [],
+        "knownEligibleGameIds": [],
+        "metricObservedGameIds": [],
+        "observedCompleteGameIds": [],
+        "observedGameIds": [],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": null,
+        "uncertainGameIds": []
+      },
+      "guarantees": {
+        "historicalAvailability": "ONLY_SELECTED_SOURCES_PROVEN_BY_POLICY",
+        "knowledgeAtCutoff": "CONDITIONAL_ON_MATERIALIZED_POLICY_EVIDENCE",
+        "laterKnowledgePermitted": false,
+        "limits": [
+          "Trust origins and materialized timestamps are premises, not external authentication.",
+          "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+          "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+          "No historical local dataset certified by synthetic fixtures."
+        ],
+        "postCutoffEvidenceIds": [],
+        "postCutoffResourceIds": [],
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "temporalMode": "POINT_IN_TIME",
+        "unknownKnowledgeResourceIds": []
+      },
+      "result_id": "sha256:a5484086194b1f08b01d987670dc9b5aeb14f0284bad905326042272262ecbc0"
+    },
+    "receipts": [
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/07/0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198",
+        "observed_at": "2026-10-12T04:01:51.626705+00:00",
+        "persisted_at": "2026-10-12T04:01:51.676831+00:00",
+        "receipt_id": "sha256:5a3d4b97ec26e926a37d6c4de431f10b2df01391bcc84b0086c3ccf3f7ff7d32",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/07/0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198",
+          "observed_at": "2026-10-12T04:01:51.626705Z",
+          "origin": {
+            "artifact_id": "sha256:9d5ef850f0deb1f1b671b85081e0c335f8fee6fb88da16ee65d88a491cacb486",
+            "filename": "COMPLETED.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:5a3d4b97ec26e926a37d6c4de431f10b2df01391bcc84b0086c3ccf3f7ff7d32",
+          "sha256": "0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198"
+        },
+        "sha256": "0763cc99759f514dc9a482c3018da44c8dd47567a1172af4c34e2f44a23e3198"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "observed_at": "2026-10-12T04:01:50.371388+00:00",
+        "persisted_at": "2026-10-12T04:01:50.420850+00:00",
+        "receipt_id": "sha256:71a0b3c0da53e0a95e535270d98cadd3bfff2ea17184bc231312d7c0ff29e086",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/1a/1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "observed_at": "2026-10-12T04:01:50.371388Z",
+          "origin": {
+            "kind": "pbp",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/pbp-a.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:71a0b3c0da53e0a95e535270d98cadd3bfff2ea17184bc231312d7c0ff29e086",
+          "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+        },
+        "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+        "observed_at": "2026-10-12T04:01:50.372217+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421122+00:00",
+        "receipt_id": "sha256:499296ca288269f5258a878c0368b32a557930be70eb320eceb86223cad356c3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/48/48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+          "observed_at": "2026-10-12T04:01:50.372217Z",
+          "origin": {
+            "artifact_id": "sha256:21eb2f436c4550e859203f00d1def30732191e40293f6b424730cf113b496fef",
+            "filename": "limitations.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:499296ca288269f5258a878c0368b32a557930be70eb320eceb86223cad356c3",
+          "sha256": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4"
+        },
+        "sha256": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/5b/5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80",
+        "observed_at": "2026-10-12T04:01:51.629324+00:00",
+        "persisted_at": "2026-10-12T04:01:51.678258+00:00",
+        "receipt_id": "sha256:64795c7f07496d2371895c4e6ac5c82d5808fff9b119e018636e42d4b86e395c",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/5b/5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80",
+          "observed_at": "2026-10-12T04:01:51.629324Z",
+          "origin": {
+            "artifact_id": "sha256:9d5ef850f0deb1f1b671b85081e0c335f8fee6fb88da16ee65d88a491cacb486",
+            "filename": "reconciliation.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:64795c7f07496d2371895c4e6ac5c82d5808fff9b119e018636e42d4b86e395c",
+          "sha256": "5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80"
+        },
+        "sha256": "5b5b7fc79835836432106f72e9223414c76bab2928a21e96e244e82d01c6ab80"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/62/62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec",
+        "observed_at": "2026-10-12T04:01:51.630240+00:00",
+        "persisted_at": "2026-10-12T04:01:51.678551+00:00",
+        "receipt_id": "sha256:35c9965f4137e6ed6398fe9aca3a763b14d5ed6a3e28b17884ec705c0552bc65",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/62/62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec",
+          "observed_at": "2026-10-12T04:01:51.630240Z",
+          "origin": {
+            "artifact_id": "sha256:9d5ef850f0deb1f1b671b85081e0c335f8fee6fb88da16ee65d88a491cacb486",
+            "filename": "manifest.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:35c9965f4137e6ed6398fe9aca3a763b14d5ed6a3e28b17884ec705c0552bc65",
+          "sha256": "62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec"
+        },
+        "sha256": "62470db4039dc98c2b70c4b1fa810dbf1ab6fd401f873e5b7692ba29b1c109ec"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/a3/a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599",
+        "observed_at": "2026-10-12T04:01:51.631184+00:00",
+        "persisted_at": "2026-10-12T04:01:51.678850+00:00",
+        "receipt_id": "sha256:9d50838d24138ef06836e17f1b57a4f5aabe6f17f05571b52f1f272fc43e4fab",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/a3/a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599",
+          "observed_at": "2026-10-12T04:01:51.631184Z",
+          "origin": {
+            "artifact_id": "sha256:9d5ef850f0deb1f1b671b85081e0c335f8fee6fb88da16ee65d88a491cacb486",
+            "filename": "statistics.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:9d50838d24138ef06836e17f1b57a4f5aabe6f17f05571b52f1f272fc43e4fab",
+          "sha256": "a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599"
+        },
+        "sha256": "a376f9f8566fb21036df968ecc9196704a11f60291e26d2ff1a6428585b38599"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+        "observed_at": "2026-10-12T04:01:50.373937+00:00",
+        "persisted_at": "2026-10-12T04:01:50.421636+00:00",
+        "receipt_id": "sha256:217e0e3adf3a4353779874d894250ee05108ebb2f00e22b330d33c28264d1c6f",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/aa/aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "observed_at": "2026-10-12T04:01:50.373937Z",
+          "origin": {
+            "kind": "pbp",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/pbp-b.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:217e0e3adf3a4353779874d894250ee05108ebb2f00e22b330d33c28264d1c6f",
+          "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+        },
+        "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/ad/ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb",
+        "observed_at": "2026-10-12T04:01:51.632882+00:00",
+        "persisted_at": "2026-10-12T04:01:51.679647+00:00",
+        "receipt_id": "sha256:93be2da353d498a0b577741d6c51d10f54ee604799ed18d032f2dc8326b0620c",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/ad/ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb",
+          "observed_at": "2026-10-12T04:01:51.632882Z",
+          "origin": {
+            "kind": "pbp",
+            "source_format": ".json",
+            "supplied_path": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/second/second-game.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:93be2da353d498a0b577741d6c51d10f54ee604799ed18d032f2dc8326b0620c",
+          "sha256": "ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb"
+        },
+        "sha256": "ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/e1/e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4",
+        "observed_at": "2026-10-12T04:01:51.633814+00:00",
+        "persisted_at": "2026-10-12T04:01:51.679946+00:00",
+        "receipt_id": "sha256:fb992bcd9f20945ee7c78dd8e47907f67bda250ef8a3cae83fa5089856d4a2cd",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/e1/e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4",
+          "observed_at": "2026-10-12T04:01:51.633814Z",
+          "origin": {
+            "artifact_id": "sha256:9d5ef850f0deb1f1b671b85081e0c335f8fee6fb88da16ee65d88a491cacb486",
+            "filename": "game-audit.json",
+            "type": "artifact_file"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:fb992bcd9f20945ee7c78dd8e47907f67bda250ef8a3cae83fa5089856d4a2cd",
+          "sha256": "e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4"
+        },
+        "sha256": "e1d4993fe6bd097389e199d03db075c9dacb2e0f8885369423ec79baf6e473a4"
+      },
+      {
+        "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+        "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+        "locator": "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+        "observed_at": "2026-10-12T04:01:50.376573+00:00",
+        "persisted_at": "2026-10-12T04:01:50.422640+00:00",
+        "receipt_id": "sha256:6dfbfc62f25ff61e03bd99a3dca42e51b83307a5ef79f9f9e4c96e90a5f616b3",
+        "receipt_json": {
+          "archive_id": "72c1fcf6-f5d9-4df6-bd88-29650ed64560",
+          "archive_root": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3/original/archive",
+          "locator": "blobs/sha256/fd/fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+          "observed_at": "2026-10-12T04:01:50.376573Z",
+          "origin": {
+            "kind": "calendar",
+            "source_format": ".json",
+            "supplied_path": "/Users/pedrocollet/.codex/worktrees/metrics-identities-e5b34/NFL Sideline/etl-pipeline/tests/fixtures/metrics_materialization/calendar.json",
+            "type": "explicit_source"
+          },
+          "receiptVersion": 1,
+          "receipt_id": "sha256:6dfbfc62f25ff61e03bd99a3dca42e51b83307a5ef79f9f9e4c96e90a5f616b3",
+          "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        },
+        "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+      }
+    ],
+    "reconstruction": {
+      "calculationIds": [
+        "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3",
+        "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3",
+        "sha256:9b23b510cd6c36540790171a07f56618c17edf34c28cf59afa3ae8304816f3e3"
+      ],
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": true,
+        "closedWeeks": [],
+        "expectationFailures": [],
+        "expectedGames": 4,
+        "gaps": [
+          {
+            "details": [
+              "SOURCE_UNKNOWN"
+            ],
+            "gameId": "synthetic-5",
+            "reason": "SOURCE_UNKNOWN"
+          }
+        ],
+        "knownEligibleGameIds": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-5",
+          "synthetic-6"
+        ],
+        "metricObservedGameIds": [
+          "synthetic-1",
+          "synthetic-3"
+        ],
+        "observedCompleteGameIds": [
+          "synthetic-6"
+        ],
+        "observedGameIds": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-6"
+        ],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": {
+          "denominator": 4,
+          "exact": "1/4",
+          "numerator": 1
+        },
+        "uncertainGameIds": []
+      },
+      "general": {
+        "comparisonEligible": false,
+        "comparisonFailures": [
+          "EPA_MODEL_UNKNOWN",
+          "INCOMPLETE_SOURCE_COVERAGE",
+          "SOURCE_SUBSET"
+        ],
+        "definitionVersion": "1.0.0",
+        "epa": {
+          "denominator": 4,
+          "exact": "-2123456789012345678901234567890123456789/4000000000000000000000000000000000000000",
+          "numerator": "-2.123456789012345678901234567890123456789"
+        },
+        "foundation": "general",
+        "foundationCoverage": {
+          "eligibleN": 4,
+          "epaN": 4,
+          "epaObservedGameIds": [
+            "synthetic-1",
+            "synthetic-3"
+          ],
+          "expectedGames": 4,
+          "noEligiblePlaysGameIds": [],
+          "noEpaObservationsGameIds": [],
+          "observedSourceGames": 2,
+          "sourceRatio": null
+        },
+        "frequency": null,
+        "gameIds": [
+          "synthetic-1",
+          "synthetic-3"
+        ],
+        "model": "UNKNOWN",
+        "populationVersion": "classified-scrimmage-v1",
+        "role": "off",
+        "scope": "AUDITABLE_SUBSET_UNKNOWN",
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "successRate": {
+          "denominator": 4,
+          "exact": "1/4",
+          "numerator": 1
+        },
+        "sums": {
+          "eligible_n": 4,
+          "epa_missing_n": 0,
+          "epa_n": 4,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-2.123456789012345678901234567890123456789",
+          "success_n": 1
+        },
+        "volume": 4
+      },
+      "guarantees": {
+        "historicalAvailability": "UNKNOWN_OR_NOT_PROVEN",
+        "knowledgeAtCutoff": "NOT_DEMONSTRATED",
+        "laterKnowledgePermitted": true,
+        "limits": [
+          "Trust origins and materialized timestamps are premises, not external authentication.",
+          "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+          "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+          "No historical local dataset certified by synthetic fixtures."
+        ],
+        "postCutoffEvidenceIds": [
+          "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+          "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+          "sha256:6a85e3575419ad0ee8595de6e4e857f6b5ae9ea6ab4e5c4b6704e8f81ba72534",
+          "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+          "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+          "sha256:b3527eb350108013c3a7757553a6e2ba4706c31a7d3a4cef0ac7b0222f7de309",
+          "sha256:ec61c2a1b5577b6922174f75558f3ff05461ab904f653cda33208c7e19a21b36",
+          "sha256:f6612d62a63d4477e953596412873ad689bcc742959f80eac86f7cc59ff0592a"
+        ],
+        "postCutoffResourceIds": [
+          "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "sha256:ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb",
+          "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        ],
+        "statisticalUncertainty": "NOT_ESTIMATED",
+        "temporalMode": "EVENT_RECONSTRUCTION",
+        "unknownKnowledgeResourceIds": [
+          "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+          "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+          "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+          "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+          "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+          "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+          "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+          "sha256:ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb",
+          "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+          "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+        ]
+      },
+      "result_id": "sha256:427121b091bf9821698014794089a2856acad67d383951991493f4517f84c98a"
+    },
+    "relationCounts": {
+      "game_metric_coverage_revision": 8,
+      "metric_archive_blob": 17,
+      "metric_archive_receipt": 17,
+      "metric_artifact": 3,
+      "metric_artifact_file": 18,
+      "metric_calculation": 3,
+      "metric_calculation_coverage": 12,
+      "metric_source_member": 8,
+      "metric_source_revision": 4,
+      "metric_source_set": 3,
+      "team_game_metric_sums": 60
+    },
+    "snapshotAfterSha256": "sha256:7332f7ad437098afa0649fcd89e7964bf96726751075656d09ac7ff479db042d",
+    "snapshotBeforeSha256": "sha256:7332f7ad437098afa0649fcd89e7964bf96726751075656d09ac7ff479db042d",
+    "sourceIds": [
+      "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "sha256:ad8126f21e2af83c420e9a633e8ef8eab4af96e18bbd004af402528419847ddb",
+      "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    ],
+    "temporalInputId": "sha256:0202820effb8472f415d69c8831276bdfd8a54de6953286b4819f0cb578e78a5"
+  },
+  "workspace": "/private/tmp/nfl-e5b34-db-proof-final-20261012-7c89d3",
+  "writerReports": [
+    {
+      "conflicts": 0,
+      "inserted": 67,
+      "reused": 0
+    },
+    {
+      "conflicts": 0,
+      "inserted": 16,
+      "reused": 51
+    },
+    {
+      "conflicts": 0,
+      "inserted": 70,
+      "reused": 13
+    }
+  ]
+}

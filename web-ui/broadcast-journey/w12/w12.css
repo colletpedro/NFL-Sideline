@@ -1,0 +1,7 @@
+.mr .mr-team>.team-logo{filter:var(--logo-contrast-filter,none)}
+.mr-individual>div+div{margin-top:24px;padding-top:18px;border-top:1px solid var(--mr-line)}
+.mr .mr-participant-point{border:2px solid #15232c;width:16px;height:16px}
+.mr-campaigns>button{max-width:100%;overflow-wrap:anywhere}.mr-campaigns>button strong{max-width:100%;font-size:1.375rem}
+.mr-switch{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px 0 20px}.mr-switch a{min-height:44px;align-content:center;text-decoration:underline}
+.mr .mr-totals>div{min-width:0}.mr .mr-market-values{min-width:0}
+@media(max-width:360px){.mr .mr-totals{grid-template-columns:1fr}.mr .mr-team>div strong{overflow-wrap:normal;hyphens:auto}}

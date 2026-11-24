@@ -1,0 +1,33 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "requestText": "Responda apenas OK.",
+  "attempts": [
+    {
+      "attempt": 8,
+      "credentialSource": "GEMINI_API_KEY",
+      "outcome": "HTTP_REJECTED",
+      "httpStatus": 402,
+      "providerCode": 402,
+      "providerStatus": "RESOURCE_EXHAUSTED",
+      "hasText": false
+    },
+    {
+      "attempt": 9,
+      "credentialSource": "GEMINI_API_KEY_PROD",
+      "outcome": "HTTP_REJECTED",
+      "httpStatus": 402,
+      "providerCode": 402,
+      "providerStatus": "RESOURCE_EXHAUSTED",
+      "hasText": false
+    }
+  ],
+  "interpretation": "As duas credenciais foram rejeitadas com o mesmo status HTTP 402 / RESOURCE_EXHAUSTED. Isso indica a mesma classe ampla de exaustão de recurso/cota nas duas chamadas, mas não confirma saldo zerado nem identifica uma causa específica de cobrança, projeto, permissão ou vínculo entre as chaves.",
+  "budget": {
+    "maximum": 10,
+    "consumed": 9,
+    "remainingDevelopment": 0,
+    "remainingReserved": 1,
+    "holdoutEditorialCasesOpened": 0
+  },
+  "retries": 0
+}

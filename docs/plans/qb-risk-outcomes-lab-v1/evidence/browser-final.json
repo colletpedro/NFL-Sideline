@@ -1,0 +1,27 @@
+{
+  "state": {
+    "expectedTotal": 10.491869562199756,
+    "fontSize": "16px",
+    "metrics": "Interceptações sofridas9Desfecho registrado no PBPInterceptações esperadas10,49Soma das probabilidades da referência B2Sofridas menos esperadas-1,49Diferença descritiva, sem atribuição de causa",
+    "scrollWidth": 1425,
+    "selected": "Daniel Jones",
+    "title": "Laboratório — interceptações sofridas · NFL Sideline",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0035710",
+    "viewport": 1440
+  },
+  "logs": [
+    {
+      "level": "warn",
+      "message": "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+      "timestamp": "2026-11-05T19:21:51.319Z",
+      "url": "http://127.0.0.1:18125/@fs/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL%20Sideline/web-ui/node_modules/.vite-risk-outcomes/deps/react-router-dom.js?v=ab693a98"
+    },
+    {
+      "level": "warn",
+      "message": "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+      "timestamp": "2026-11-05T19:21:51.319Z",
+      "url": "http://127.0.0.1:18125/@fs/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL%20Sideline/web-ui/node_modules/.vite-risk-outcomes/deps/react-router-dom.js?v=ab693a98"
+    }
+  ],
+  "temporaryEmulationRemoved": true
+}

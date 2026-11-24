@@ -34,14 +34,19 @@ class SnapshotAssemblerTest {
     @Test
     void latestCacheWinsWithIdAsDeterministicTieBreaker() {
         String gameId = "game-a";
+        var latest = SnapshotFixtures.analysis(3, gameId, "2026-09-10T12:00:00Z",
+                SnapshotFixtures.validAnalysis("winner").replace("}", ",\"claim_id\":\"private\"}"));
+        latest.setContextJson("{\"evidence_ids\":[\"private\"]}");
         var result = assembler.assemble(2026, time(),
                 List.of(SnapshotFixtures.game(gameId, 1, "BBB", "AAA")), List.of(), List.of(
                         SnapshotFixtures.analysis(1, gameId, "2026-09-10T11:00:00Z", SnapshotFixtures.validAnalysis("old")),
                         SnapshotFixtures.analysis(2, gameId, "2026-09-10T12:00:00Z", SnapshotFixtures.validAnalysis("lower-id")),
-                        SnapshotFixtures.analysis(3, gameId, "2026-09-10T12:00:00Z", SnapshotFixtures.validAnalysis("winner"))));
+                        latest));
 
         assertThat(result.snapshot().analysesByGame().get(gameId).veredito()).isEqualTo("verdict winner");
         assertThat(result.validAnalyses()).isOne();
+        assertThat(objectMapper.valueToTree(result.snapshot()).toString())
+                .doesNotContain("claim_id", "evidence_ids", "private");
     }
 
     @Test
@@ -58,7 +63,8 @@ class SnapshotAssemblerTest {
         assertThat(result.rejectedAnalyses()).isOne();
         assertThat(result.missingAnalyses()).isEqualTo(2);
         String json = objectMapper.writeValueAsString(result.snapshot());
-        assertThat(json).doesNotContain("contextJson", "context_json", "promptHash", "prompt_hash", "modelName");
+        assertThat(json).doesNotContain("contextJson", "context_json", "promptHash", "prompt_hash", "modelName",
+                "claim_id", "evidence_ids", "contract_version");
     }
 
     private OffsetDateTime time() {

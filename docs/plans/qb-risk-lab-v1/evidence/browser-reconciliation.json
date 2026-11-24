@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "rows": 33,
+  "allObservedExact": true,
+  "allSupportExact": true,
+  "expectedDifferencePer100MatchRoundedArtifacts": true,
+  "roundingTolerance": 0.00500001,
+  "packageId": "d3739e3d9103c48fda1c417a"
+}

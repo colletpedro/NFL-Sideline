@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": { "tsBuildInfoFile": "./node_modules/.tmp/experience.tsbuildinfo" },
+  "include": ["broadcast-experience", "src/vite-env.d.ts"]
+}

@@ -1,0 +1,490 @@
+[
+  {
+    "C": 0.01,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03880798244171848,
+      "expected": 953.4587183255455,
+      "log_loss": 0.1693086761130206,
+      "mean_probability": 0.05225003936461779,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.05655858755684309,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5777488744333473
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "context"
+  },
+  {
+    "C": 0.01,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.032280957037787765,
+      "expected": 821.2630771212877,
+      "log_loss": 0.1469664245022419,
+      "mean_probability": 0.04629442373851678,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.052965669449552576,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5716718570656569
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "context"
+  },
+  {
+    "C": 0.1,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03880634500409381,
+      "expected": 952.6946378702751,
+      "log_loss": 0.16912281636152288,
+      "mean_probability": 0.05220816735369767,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.05820609259660234,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.576798507705237
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "context"
+  },
+  {
+    "C": 0.1,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03227238927603301,
+      "expected": 820.1226162799226,
+      "log_loss": 0.14680295113185876,
+      "mean_probability": 0.046230136205181654,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.05776977158210094,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5737132857342024
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "context"
+  },
+  {
+    "C": 1.0,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.038830431599337335,
+      "expected": 952.6875342313638,
+      "log_loss": 0.16918891777205677,
+      "mean_probability": 0.05220777807054821,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.058952674690332676,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5761621698170152
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "context"
+  },
+  {
+    "C": 1.0,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.032276359891960704,
+      "expected": 819.961935884236,
+      "log_loss": 0.14679798389075477,
+      "mean_probability": 0.04622107868569538,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.058395693867428225,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5740447095571916
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "context"
+  },
+  {
+    "C": 10.0,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03883427952351664,
+      "expected": 952.6945788420148,
+      "log_loss": 0.16920053649265349,
+      "mean_probability": 0.05220816411891795,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.05893934387994383,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5760720935307583
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "context"
+  },
+  {
+    "C": 10.0,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03227694684682138,
+      "expected": 819.9493679926159,
+      "log_loss": 0.146797954022665,
+      "mean_probability": 0.04622037023633686,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.058454660468734036,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5740837818507025
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "context"
+  },
+  {
+    "C": 0.01,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.037935516505822664,
+      "expected": 957.5013382300153,
+      "log_loss": 0.16077759532322564,
+      "mean_probability": 0.052471577062144635,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.10184436052330702,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.703828396936168
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "depth"
+  },
+  {
+    "C": 0.01,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03157527424889859,
+      "expected": 822.1262301335958,
+      "log_loss": 0.1386115069793241,
+      "mean_probability": 0.04634307948892873,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.0897543725713466,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.714830224471313
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "depth"
+  },
+  {
+    "C": 0.1,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03802414489858675,
+      "expected": 960.1170128190727,
+      "log_loss": 0.16037566857897728,
+      "mean_probability": 0.052614917405692276,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.09803475409712675,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.7053877846031458
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "depth"
+  },
+  {
+    "C": 0.1,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.0315754607332831,
+      "expected": 823.3252136969365,
+      "log_loss": 0.13812332652232182,
+      "mean_probability": 0.04641066593556576,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.09113122711702279,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.7171659780174935
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "depth"
+  },
+  {
+    "C": 1.0,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03806836882797322,
+      "expected": 960.6857317580934,
+      "log_loss": 0.1604332680086889,
+      "mean_probability": 0.05264608350274515,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.09660456306425358,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.7052446995058186
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "depth"
+  },
+  {
+    "C": 1.0,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03158232658626726,
+      "expected": 823.5216191500456,
+      "log_loss": 0.1380837752397228,
+      "mean_probability": 0.046421737268886445,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.09131149279487485,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.7174770763544641
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "depth"
+  },
+  {
+    "C": 10.0,
+    "constant": {
+      "brier": 0.03894668692832417,
+      "expected": 953.5410928476234,
+      "log_loss": 0.17087086787939768,
+      "mean_probability": 0.05225455353176367,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.040442788250767206,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.038074150673983204,
+      "expected": 960.7560696614726,
+      "log_loss": 0.16044301674072586,
+      "mean_probability": 0.05264993805685404,
+      "n": 18248,
+      "positives": 738,
+      "pr_auc_average_precision": 0.0963294699416827,
+      "prevalence": 0.040442788250767206,
+      "roc_auc": 0.7052153705431972
+    },
+    "train_years": [
+      2022
+    ],
+    "validation": 2023,
+    "variant": "depth"
+  },
+  {
+    "C": 10.0,
+    "constant": {
+      "brier": 0.032373555483613224,
+      "expected": 821.5318843777579,
+      "log_loss": 0.14819233578615013,
+      "mean_probability": 0.0463095763459841,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "model": {
+      "brier": 0.03158320588468961,
+      "expected": 823.5494668079381,
+      "log_loss": 0.13807997237773464,
+      "mean_probability": 0.04642330703539674,
+      "n": 17740,
+      "positives": 591,
+      "pr_auc_average_precision": 0.09129374301738956,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.7175286794087732
+    },
+    "train_years": [
+      2022,
+      2023
+    ],
+    "validation": 2024,
+    "variant": "depth"
+  }
+]

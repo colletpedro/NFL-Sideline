@@ -1,0 +1,14 @@
+{
+  "simulation": "Network.setBlockedURLs for B2 index only, cleared before retry",
+  "failure": {
+    "message": "A leitura de interceptações não pôde ser carregadaOs dados de interceptações não puderam ser carregados. Tente novamente.Tentar carregar novamente",
+    "points": 0,
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0034771"
+  },
+  "recovered": {
+    "heading": "Quem sofreu mais interceptações que a referência esperava?",
+    "points": 57,
+    "selected": "Mason Rudolph",
+    "url": "http://127.0.0.1:18125/?view=risk-lab&season=2026&reading=interceptions&player=00-0034771"
+  }
+}

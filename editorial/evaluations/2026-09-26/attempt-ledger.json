@@ -1,0 +1,113 @@
+{
+  "maximum": 10,
+  "consumed": 9,
+  "remainingDevelopment": 0,
+  "remainingHoldout": 1,
+  "automaticContinuation": false,
+  "attempts": [
+    {
+      "phase": "initial",
+      "gameId": "2026_03_ARI_SF",
+      "startedAt": "2026-09-27T12:40:05.668502Z",
+      "result": {
+        "status": "GENERATION_FAILED",
+        "category": "UNKNOWN"
+      },
+      "artifact": "authorized-initial/2026_03_ARI_SF",
+      "authorizedAttemptNumber": 1
+    },
+    {
+      "phase": "initial",
+      "gameId": "2026_03_BAL_DAL",
+      "startedAt": "2026-09-27T12:40:06.468854Z",
+      "result": {
+        "status": "GENERATION_FAILED",
+        "category": "UNKNOWN"
+      },
+      "artifact": "authorized-initial/2026_03_BAL_DAL",
+      "authorizedAttemptNumber": 2
+    },
+    {
+      "phase": "initial",
+      "gameId": "2026_03_NE_JAX",
+      "startedAt": "2026-09-27T12:40:07.112935Z",
+      "result": {
+        "status": "GENERATION_FAILED",
+        "category": "UNKNOWN"
+      },
+      "artifact": "authorized-initial/2026_03_NE_JAX",
+      "authorizedAttemptNumber": 3
+    },
+    {
+      "phase": "initial",
+      "gameId": "2025_08_CHI_BAL",
+      "startedAt": "2026-09-27T12:40:07.713955Z",
+      "result": {
+        "status": "GENERATION_FAILED",
+        "category": "UNKNOWN"
+      },
+      "artifact": "authorized-initial/2025_08_CHI_BAL",
+      "authorizedAttemptNumber": 4
+    },
+    {
+      "phase": "adjusted",
+      "gameId": "2026_03_ARI_SF",
+      "startedAt": "2026-09-27T12:43:38.577483Z",
+      "result": {
+        "status": "GENERATION_FAILED",
+        "category": "UNKNOWN",
+        "diagnosticTypes": [
+          "org.springframework.web.client.HttpClientErrorException"
+        ]
+      },
+      "artifact": "authorized-adjusted/2026_03_ARI_SF",
+      "authorizedAttemptNumber": 5
+    },
+    {
+      "phase": "adjusted",
+      "gameId": "2026_03_BAL_DAL",
+      "startedAt": "2026-09-27T12:45:36.563770Z",
+      "result": {
+        "status": "GENERATION_FAILED",
+        "category": "HTTP_4XX",
+        "diagnosticTypes": [
+          "org.springframework.web.client.HttpClientErrorException"
+        ],
+        "httpStatus": 402
+      },
+      "artifact": "authorized-adjusted/2026_03_BAL_DAL",
+      "authorizedAttemptNumber": 6
+    },
+    {
+      "authorizedAttemptNumber": 7,
+      "phase": "technical_diagnostic_development",
+      "startedAt": "2026-09-27T16:22:29.028526+00:00",
+      "credentialSource": "GEMINI_API_KEY_PROD",
+      "artifact": "credential-diagnostic-prod",
+      "status": "HTTP_REJECTED",
+      "httpStatus": 402
+    },
+    {
+      "authorizedAttemptNumber": 8,
+      "phase": "credential_diagnostic",
+      "startedAt": "2026-09-29T11:43:05.927881+00:00",
+      "credentialSource": "GEMINI_API_KEY",
+      "artifact": "credential-diagnostic-both/GEMINI_API_KEY",
+      "status": "HTTP_REJECTED",
+      "httpStatus": 402,
+      "providerStatus": "RESOURCE_EXHAUSTED"
+    },
+    {
+      "authorizedAttemptNumber": 9,
+      "phase": "credential_diagnostic",
+      "startedAt": "2026-09-29T11:43:05.928455+00:00",
+      "credentialSource": "GEMINI_API_KEY_PROD",
+      "artifact": "credential-diagnostic-both/GEMINI_API_KEY_PROD",
+      "status": "HTTP_REJECTED",
+      "httpStatus": 402,
+      "providerStatus": "RESOURCE_EXHAUSTED"
+    }
+  ],
+  "holdoutsOpened": 0,
+  "technicalCallsAllocatedFromReservedBudget": 1
+}

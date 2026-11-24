@@ -1,0 +1,14 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/matchup/matchup.test.tsx src/components/visual-preparation-regressions.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-comprehension-v1/NFL Sideline/web-ui
+
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 16ms
+ ✓ broadcast-journey/matchup/matchup.test.tsx (12 tests) 100ms
+
+ Test Files  2 passed (2)
+      Tests  18 passed (18)
+   Start at  17:17:36
+   Duration  666ms (transform 209ms, setup 0ms, collect 531ms, tests 116ms, environment 0ms, prepare 119ms)

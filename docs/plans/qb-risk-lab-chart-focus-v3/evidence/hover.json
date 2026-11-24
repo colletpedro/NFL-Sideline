@@ -1,0 +1,7 @@
+{
+  "before": "http://127.0.0.1:18124/?view=risk-lab&season=2026",
+  "after": "http://127.0.0.1:18124/?view=risk-lab&season=2026",
+  "selected": 0,
+  "requests": [],
+  "detailsRequested": 0
+}

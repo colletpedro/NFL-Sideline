@@ -1,0 +1,15 @@
+{
+  "proof": "REAL_HTTP_REAL_ARCHIVE_E5C41",
+  "sessionId": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+  "documents": 48,
+  "refusals": 12,
+  "entries": [
+    {
+      "entryId": "real-recovery",
+      "status": "READY",
+      "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+      "errorCode": null
+    }
+  ],
+  "completeDtoEqualityToAcceptedReader": 48
+}

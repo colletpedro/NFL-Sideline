@@ -1,0 +1,81 @@
+[
+  {
+    "all_cells": 72,
+    "empty_or_low_support_cells_removed": 33,
+    "included_cells": [
+      "d12|8-10|middle|q123|behind",
+      "d12|8-10|middle|q123|not_behind",
+      "d12|8-10|middle|q4ot|behind",
+      "d12|8-10|middle|q4ot|not_behind",
+      "d12|8-10|own20|q123|behind",
+      "d12|8-10|own20|q123|not_behind",
+      "d12|8-10|own20|q4ot|behind",
+      "d12|8-10|own20|q4ot|not_behind",
+      "d12|8-10|red|q123|behind",
+      "d12|8-10|red|q123|not_behind",
+      "d12|8-10|red|q4ot|behind",
+      "d12|<=7|middle|q123|behind",
+      "d12|<=7|middle|q123|not_behind",
+      "d12|<=7|middle|q4ot|behind",
+      "d12|<=7|middle|q4ot|not_behind",
+      "d12|<=7|red|q123|behind",
+      "d12|<=7|red|q123|not_behind",
+      "d12|<=7|red|q4ot|behind",
+      "d12|>10|middle|q123|behind",
+      "d12|>10|middle|q123|not_behind",
+      "d12|>10|middle|q4ot|behind",
+      "d12|>10|middle|q4ot|not_behind",
+      "d12|>10|own20|q123|not_behind",
+      "d34|8-10|middle|q123|behind",
+      "d34|8-10|middle|q123|not_behind",
+      "d34|8-10|middle|q4ot|behind",
+      "d34|8-10|middle|q4ot|not_behind",
+      "d34|<=7|middle|q123|behind",
+      "d34|<=7|middle|q123|not_behind",
+      "d34|<=7|middle|q4ot|behind",
+      "d34|<=7|middle|q4ot|not_behind",
+      "d34|<=7|own20|q123|not_behind",
+      "d34|<=7|red|q123|behind",
+      "d34|<=7|red|q123|not_behind",
+      "d34|<=7|red|q4ot|behind",
+      "d34|>10|middle|q123|behind",
+      "d34|>10|middle|q123|not_behind",
+      "d34|>10|middle|q4ot|behind",
+      "d34|>10|own20|q123|not_behind"
+    ],
+    "initial_common_cells": 39,
+    "max_weight": 5,
+    "min_cell_n": 30,
+    "reference_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "removed_by_weight": [],
+    "spec": "primary"
+  },
+  {
+    "all_cells": 8,
+    "empty_or_low_support_cells_removed": 0,
+    "included_cells": [
+      "d12|<=10|behind",
+      "d12|<=10|not_behind",
+      "d12|>10|behind",
+      "d12|>10|not_behind",
+      "d34|<=10|behind",
+      "d34|<=10|not_behind",
+      "d34|>10|behind",
+      "d34|>10|not_behind"
+    ],
+    "initial_common_cells": 8,
+    "max_weight": 5,
+    "min_cell_n": 30,
+    "reference_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "removed_by_weight": [],
+    "spec": "coarse"
+  }
+]

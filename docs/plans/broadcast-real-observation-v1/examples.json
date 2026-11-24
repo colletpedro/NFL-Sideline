@@ -1,0 +1,725 @@
+[
+  {
+    "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+    "dtoId": "sha256:88431d09ad9a9a39176a71aa67c29d429be8342185afc20165511dbc7f6c50a4",
+    "dtoVersion": "metrics-lab-observation-v1",
+    "entryId": "real-recovery",
+    "fieldScopes": {
+      "eligibleN,epaN,successN,epaMissingN,epaNonfiniteN,epaSum": "original selected game/team/role/foundation statistics",
+      "generalEligibleN": "same game/team/role/revisions: statistics foundation=general",
+      "unknownFilterFlagsN": "GAME_CONTEXT: original.coverage.unknown_filter_flags_n; not measured by team/role/foundation; sum once per distinct game within one observation; never sum across observations/groups"
+    },
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "reasonCodes": [],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": null,
+        "expectedCount": null,
+        "reasonCodes": [
+          "EXPECTATION_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "integrity": {
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2026_01_BAL_IND"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2026_02_NO_BAL"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "EXPECTATION_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "2026_01_BAL_IND"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "2026_02_NO_BAL"
+      }
+    ],
+    "members": [
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2026_01_BAL_IND",
+        "round": "REG",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "60",
+          "epaMissingN": "0",
+          "epaN": "60",
+          "epaNonfiniteN": "0",
+          "epaSum": "19.289034585357575636",
+          "generalEligibleN": "60",
+          "successN": "30",
+          "unknownFilterFlagsN": "0"
+        },
+        "week": 1
+      },
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2026_02_NO_BAL",
+        "round": "REG",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "55",
+          "epaMissingN": "0",
+          "epaN": "55",
+          "epaNonfiniteN": "0",
+          "epaSum": "6.389627305493191436",
+          "generalEligibleN": "55",
+          "successN": "35",
+          "unknownFilterFlagsN": "0"
+        },
+        "week": 2
+      }
+    ],
+    "observationId": "sha256:1c585c0ae1e0b24df3ef8815e01d0af5de065c4a504b35420728bca810e24e9b",
+    "observed": {
+      "actualWeeks": [
+        1,
+        2
+      ],
+      "includedGameIds": [
+        "2026_01_BAL_IND",
+        "2026_02_NO_BAL"
+      ]
+    },
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          1,
+          2
+        ]
+      },
+      "phase": "REG",
+      "season": 2026
+    },
+    "scope": {
+      "aggregation": "MULTI_GAME",
+      "population": "OBSERVED_SAMPLE"
+    },
+    "subject": {
+      "foundation": "general",
+      "role": "off",
+      "team": "BAL"
+    },
+    "totals": {
+      "eligibleN": "115",
+      "epaMissingN": "0",
+      "epaN": "115",
+      "epaNonfiniteN": "0",
+      "epaSum": "25.678661890850767072",
+      "generalEligibleN": "115",
+      "successN": "65",
+      "unknownFilterFlagsN": "0"
+    },
+    "values": {
+      "epa": {
+        "denominator": "115",
+        "numerator": "25.678661890850767072"
+      },
+      "frequency": null,
+      "successRate": {
+        "denominator": "115",
+        "numerator": "65"
+      },
+      "volume": {
+        "denominator": "1",
+        "numerator": "115"
+      }
+    }
+  },
+  {
+    "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+    "dtoId": "sha256:c7afc7a4108e74a896ac5cd0e7dc5902162ef442068e4a07a76f8d0337f7b249",
+    "dtoVersion": "metrics-lab-observation-v1",
+    "entryId": "real-recovery",
+    "fieldScopes": {
+      "eligibleN,epaN,successN,epaMissingN,epaNonfiniteN,epaSum": "original selected game/team/role/foundation statistics",
+      "generalEligibleN": "same game/team/role/revisions: statistics foundation=general",
+      "unknownFilterFlagsN": "GAME_CONTEXT: original.coverage.unknown_filter_flags_n; not measured by team/role/foundation; sum once per distinct game within one observation; never sum across observations/groups"
+    },
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "reasonCodes": [],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": null,
+        "expectedCount": null,
+        "reasonCodes": [
+          "EXPECTATION_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "integrity": {
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "DAL"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "DAL"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2026_02_WAS_DAL"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "DAL"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "DAL"
+      },
+      {
+        "code": "EXPECTATION_UNKNOWN",
+        "subjectId": "DAL"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "DAL"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "2026_02_WAS_DAL"
+      }
+    ],
+    "members": [
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2026_02_WAS_DAL",
+        "round": "REG",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "35",
+          "epaMissingN": "0",
+          "epaN": "35",
+          "epaNonfiniteN": "0",
+          "epaSum": "1.212177313656378383",
+          "generalEligibleN": "67",
+          "successN": "17",
+          "unknownFilterFlagsN": "0"
+        },
+        "week": 2
+      }
+    ],
+    "observationId": "sha256:f02add308d9a10eb6be139305c60d2327edf703ea109bd572f9dca06bac4116d",
+    "observed": {
+      "actualWeeks": [
+        2
+      ],
+      "includedGameIds": [
+        "2026_02_WAS_DAL"
+      ]
+    },
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          2
+        ]
+      },
+      "phase": "REG",
+      "season": 2026
+    },
+    "scope": {
+      "aggregation": "SINGLE_GAME",
+      "population": "OBSERVED_SAMPLE"
+    },
+    "subject": {
+      "foundation": "classified_pass",
+      "role": "def",
+      "team": "DAL"
+    },
+    "totals": {
+      "eligibleN": "35",
+      "epaMissingN": "0",
+      "epaN": "35",
+      "epaNonfiniteN": "0",
+      "epaSum": "1.212177313656378383",
+      "generalEligibleN": "67",
+      "successN": "17",
+      "unknownFilterFlagsN": "0"
+    },
+    "values": {
+      "epa": {
+        "denominator": "35",
+        "numerator": "1.212177313656378383"
+      },
+      "frequency": {
+        "denominator": "67",
+        "numerator": "35"
+      },
+      "successRate": {
+        "denominator": "35",
+        "numerator": "17"
+      },
+      "volume": {
+        "denominator": "1",
+        "numerator": "35"
+      }
+    }
+  },
+  {
+    "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+    "dtoId": "sha256:87b2be47cd51a6d4947f07b0fa53f5bf5f963abd6ddc2f6697012ade4e00d645",
+    "dtoVersion": "metrics-lab-observation-v1",
+    "entryId": "real-recovery",
+    "fieldScopes": {
+      "eligibleN,epaN,successN,epaMissingN,epaNonfiniteN,epaSum": "original selected game/team/role/foundation statistics",
+      "generalEligibleN": "same game/team/role/revisions: statistics foundation=general",
+      "unknownFilterFlagsN": "GAME_CONTEXT: original.coverage.unknown_filter_flags_n; not measured by team/role/foundation; sum once per distinct game within one observation; never sum across observations/groups"
+    },
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "reasonCodes": [],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": null,
+        "expectedCount": null,
+        "reasonCodes": [
+          "EXPECTATION_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "integrity": {
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "NE"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "NE"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2025_19_LAC_NE"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2025_20_HOU_NE"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2025_21_NE_DEN"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2025_22_SEA_NE"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "NE"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "NE"
+      },
+      {
+        "code": "EXPECTATION_UNKNOWN",
+        "subjectId": "NE"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "NE"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "2025_19_LAC_NE"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "2025_20_HOU_NE"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "2025_21_NE_DEN"
+      },
+      {
+        "code": "UNKNOWN_FILTER_FLAGS_GAME_SCOPE",
+        "subjectId": "2025_22_SEA_NE"
+      }
+    ],
+    "members": [
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2025_19_LAC_NE",
+        "round": "WC",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "22",
+          "epaMissingN": "0",
+          "epaN": "22",
+          "epaNonfiniteN": "0",
+          "epaSum": "-1.72316337814962491",
+          "generalEligibleN": "59",
+          "successN": "8",
+          "unknownFilterFlagsN": "0"
+        },
+        "week": 19
+      },
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2025_20_HOU_NE",
+        "round": "DIV",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "22",
+          "epaMissingN": "0",
+          "epaN": "22",
+          "epaNonfiniteN": "0",
+          "epaSum": "-5.77547533338656596",
+          "generalEligibleN": "72",
+          "successN": "7",
+          "unknownFilterFlagsN": "0"
+        },
+        "week": 20
+      },
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2025_21_NE_DEN",
+        "round": "CON",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "24",
+          "epaMissingN": "0",
+          "epaN": "24",
+          "epaNonfiniteN": "0",
+          "epaSum": "-2.60688656625797153",
+          "generalEligibleN": "58",
+          "successN": "9",
+          "unknownFilterFlagsN": "0"
+        },
+        "week": 21
+      },
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2025_22_SEA_NE",
+        "round": "SB",
+        "sourceState": "PRESENT",
+        "statistics": {
+          "eligibleN": "32",
+          "epaMissingN": "0",
+          "epaN": "32",
+          "epaNonfiniteN": "0",
+          "epaSum": "-3.94291347293753741",
+          "generalEligibleN": "71",
+          "successN": "9",
+          "unknownFilterFlagsN": "0"
+        },
+        "week": 22
+      }
+    ],
+    "observationId": "sha256:d4af4e3e200c4009fc9057bee52f527e38539b0d28cc0a8b559d53a04ca02f95",
+    "observed": {
+      "actualWeeks": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "includedGameIds": [
+        "2025_19_LAC_NE",
+        "2025_20_HOU_NE",
+        "2025_21_NE_DEN",
+        "2025_22_SEA_NE"
+      ]
+    },
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "origin": "HISTORICAL_REFERENCE",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      "phase": "POST",
+      "season": 2025
+    },
+    "scope": {
+      "aggregation": "MULTI_GAME",
+      "population": "OBSERVED_SAMPLE"
+    },
+    "subject": {
+      "foundation": "classified_rush",
+      "role": "def",
+      "team": "NE"
+    },
+    "totals": {
+      "eligibleN": "100",
+      "epaMissingN": "0",
+      "epaN": "100",
+      "epaNonfiniteN": "0",
+      "epaSum": "-14.04843875073169981",
+      "generalEligibleN": "260",
+      "successN": "33",
+      "unknownFilterFlagsN": "0"
+    },
+    "values": {
+      "epa": {
+        "denominator": "100",
+        "numerator": "-14.04843875073169981"
+      },
+      "frequency": {
+        "denominator": "260",
+        "numerator": "100"
+      },
+      "successRate": {
+        "denominator": "100",
+        "numerator": "33"
+      },
+      "volume": {
+        "denominator": "1",
+        "numerator": "100"
+      }
+    }
+  },
+  {
+    "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+    "dtoId": "sha256:fb2f9ce336578a0d5336428850b4f682166ab2f76929b6d71c9c6858a5ad8b69",
+    "dtoVersion": "metrics-lab-observation-v1",
+    "entryId": "real-recovery",
+    "fieldScopes": {
+      "eligibleN,epaN,successN,epaMissingN,epaNonfiniteN,epaSum": "original selected game/team/role/foundation statistics",
+      "generalEligibleN": "same game/team/role/revisions: statistics foundation=general",
+      "unknownFilterFlagsN": "GAME_CONTEXT: original.coverage.unknown_filter_flags_n; not measured by team/role/foundation; sum once per distinct game within one observation; never sum across observations/groups"
+    },
+    "guarantees": {
+      "compatibility": {
+        "epaModel": {
+          "id": null,
+          "state": "UNKNOWN"
+        },
+        "reasonCodes": [],
+        "state": "KNOWN"
+      },
+      "completeness": {
+        "reasonCodes": [
+          "COMPLETENESS_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "coverage": {
+        "coverageRatio": null,
+        "expectedCount": null,
+        "reasonCodes": [
+          "EXPECTATION_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      },
+      "integrity": {
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "temporal": {
+        "reasonCodes": [
+          "AVAILABLE_AT_UNKNOWN",
+          "EVENT_TIME_UNKNOWN",
+          "INGESTED_AT_UNKNOWN"
+        ],
+        "state": "UNKNOWN"
+      }
+    },
+    "limitations": [
+      {
+        "code": "ARCHIVED_OBSERVATION_NOT_POINT_IN_TIME",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "AVAILABLE_AT_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "COMPLETENESS_UNKNOWN",
+        "subjectId": "2026_03_BAL_DAL"
+      },
+      {
+        "code": "EPA_MODEL_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "EVENT_TIME_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "EXPECTATION_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "INGESTED_AT_UNKNOWN",
+        "subjectId": "BAL"
+      },
+      {
+        "code": "NO_SOURCE_OBSERVATION",
+        "subjectId": "2026_03_BAL_DAL"
+      }
+    ],
+    "members": [
+      {
+        "completeness": "UNKNOWN",
+        "gameId": "2026_03_BAL_DAL",
+        "round": "REG",
+        "sourceState": "ABSENT",
+        "statistics": null,
+        "week": 3
+      }
+    ],
+    "observationId": "sha256:31a25efd933623bc532ea1f323fab742e71214565b5445340b5f50a7507a6257",
+    "observed": {
+      "actualWeeks": [],
+      "includedGameIds": []
+    },
+    "presentation": {
+      "epaDecimals": 3,
+      "ratePercentDecimals": 1,
+      "rounding": "HALF_UP"
+    },
+    "request": {
+      "origin": "CURRENT",
+      "period": {
+        "kind": "DECLARED_WEEKS",
+        "weeks": [
+          3
+        ]
+      },
+      "phase": "REG",
+      "season": 2026
+    },
+    "scope": {
+      "aggregation": "NO_OBSERVATION",
+      "population": "OBSERVED_SAMPLE"
+    },
+    "subject": {
+      "foundation": "general",
+      "role": "off",
+      "team": "BAL"
+    },
+    "totals": null,
+    "values": {
+      "epa": null,
+      "frequency": null,
+      "successRate": null,
+      "volume": null
+    }
+  }
+]

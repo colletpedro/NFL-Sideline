@@ -1,0 +1,714 @@
+{
+  "baseHead": "d82d4a6eafb85acb3cd9c94736a2160a4036281f",
+  "games": [
+    {
+      "away": "ARI",
+      "gameId": "2026_01_ARI_LAC",
+      "home": "LAC",
+      "week": 1,
+      "states": {
+        "ARI": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "LAC": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "ATL",
+      "gameId": "2026_01_ATL_PIT",
+      "home": "PIT",
+      "week": 1,
+      "states": {
+        "ATL": {
+          "third": "AVAILABLE",
+          "redZone": "NO_OPPORTUNITIES"
+        },
+        "PIT": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "BAL",
+      "gameId": "2026_01_BAL_IND",
+      "home": "IND",
+      "week": 1,
+      "states": {
+        "BAL": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "IND": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "BUF",
+      "gameId": "2026_01_BUF_HOU",
+      "home": "HOU",
+      "week": 1,
+      "states": {
+        "BUF": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "HOU": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "CHI",
+      "gameId": "2026_01_CHI_CAR",
+      "home": "CAR",
+      "week": 1,
+      "states": {
+        "CHI": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "CAR": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "CLE",
+      "gameId": "2026_01_CLE_JAX",
+      "home": "JAX",
+      "week": 1,
+      "states": {
+        "CLE": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "JAX": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "DAL",
+      "gameId": "2026_01_DAL_NYG",
+      "home": "NYG",
+      "week": 1,
+      "states": {
+        "DAL": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "NYG": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "DEN",
+      "gameId": "2026_01_DEN_KC",
+      "home": "KC",
+      "week": 1,
+      "states": {
+        "DEN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "KC": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "GB",
+      "gameId": "2026_01_GB_MIN",
+      "home": "MIN",
+      "week": 1,
+      "states": {
+        "GB": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "MIN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "MIA",
+      "gameId": "2026_01_MIA_LV",
+      "home": "LV",
+      "week": 1,
+      "states": {
+        "MIA": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "LV": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "NE",
+      "gameId": "2026_01_NE_SEA",
+      "home": "SEA",
+      "week": 1,
+      "states": {
+        "NE": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "SEA": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "NO",
+      "gameId": "2026_01_NO_DET",
+      "home": "DET",
+      "week": 1,
+      "states": {
+        "NO": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "DET": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "NYJ",
+      "gameId": "2026_01_NYJ_TEN",
+      "home": "TEN",
+      "week": 1,
+      "states": {
+        "NYJ": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "TEN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "SF",
+      "gameId": "2026_01_SF_LA",
+      "home": "LA",
+      "week": 1,
+      "states": {
+        "SF": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "LA": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "TB",
+      "gameId": "2026_01_TB_CIN",
+      "home": "CIN",
+      "week": 1,
+      "states": {
+        "TB": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "CIN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "WAS",
+      "gameId": "2026_01_WAS_PHI",
+      "home": "PHI",
+      "week": 1,
+      "states": {
+        "WAS": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "PHI": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "CAR",
+      "gameId": "2026_02_CAR_ATL",
+      "home": "ATL",
+      "week": 2,
+      "states": {
+        "CAR": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "ATL": {
+          "third": "AVAILABLE",
+          "redZone": "NO_OPPORTUNITIES"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "CIN",
+      "gameId": "2026_02_CIN_HOU",
+      "home": "HOU",
+      "week": 2,
+      "states": {
+        "CIN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "HOU": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "CLE",
+      "gameId": "2026_02_CLE_TB",
+      "home": "TB",
+      "week": 2,
+      "states": {
+        "CLE": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "TB": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "DET",
+      "gameId": "2026_02_DET_BUF",
+      "home": "BUF",
+      "week": 2,
+      "states": {
+        "DET": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "BUF": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "GB",
+      "gameId": "2026_02_GB_NYJ",
+      "home": "NYJ",
+      "week": 2,
+      "states": {
+        "GB": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "NYJ": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "IND",
+      "gameId": "2026_02_IND_KC",
+      "home": "KC",
+      "week": 2,
+      "states": {
+        "IND": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "KC": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "JAX",
+      "gameId": "2026_02_JAX_DEN",
+      "home": "DEN",
+      "week": 2,
+      "states": {
+        "JAX": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "DEN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "LV",
+      "gameId": "2026_02_LV_LAC",
+      "home": "LAC",
+      "week": 2,
+      "states": {
+        "LV": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "LAC": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "MIA",
+      "gameId": "2026_02_MIA_SF",
+      "home": "SF",
+      "week": 2,
+      "states": {
+        "MIA": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "SF": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "MIN",
+      "gameId": "2026_02_MIN_CHI",
+      "home": "CHI",
+      "week": 2,
+      "states": {
+        "MIN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "CHI": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "NO",
+      "gameId": "2026_02_NO_BAL",
+      "home": "BAL",
+      "week": 2,
+      "states": {
+        "NO": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "BAL": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "NYG",
+      "gameId": "2026_02_NYG_LA",
+      "home": "LA",
+      "week": 2,
+      "states": {
+        "NYG": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "LA": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "PHI",
+      "gameId": "2026_02_PHI_TEN",
+      "home": "TEN",
+      "week": 2,
+      "states": {
+        "PHI": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "TEN": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "PIT",
+      "gameId": "2026_02_PIT_NE",
+      "home": "NE",
+      "week": 2,
+      "states": {
+        "PIT": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "NE": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "SEA",
+      "gameId": "2026_02_SEA_ARI",
+      "home": "ARI",
+      "week": 2,
+      "states": {
+        "SEA": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "ARI": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    },
+    {
+      "away": "WAS",
+      "gameId": "2026_02_WAS_DAL",
+      "home": "DAL",
+      "week": 2,
+      "states": {
+        "WAS": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        },
+        "DAL": {
+          "third": "AVAILABLE",
+          "redZone": "AVAILABLE"
+        }
+      },
+      "sources": [
+        "situational-v1",
+        "observations588/classified-scrimmage-v1",
+        "shared-source/input.json/calendar"
+      ],
+      "epaObservations": 6
+    }
+  ],
+  "productions": 64,
+  "situationalPin": "sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339c",
+  "pilotPin": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "situationalSource": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comparison-foundation-v1/20261023-v1/bundle-reconciled/sources/situational",
+  "observationSource": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comparison-foundation-v1/20261023-v1/bundle-reconciled/sources/observations"
+}

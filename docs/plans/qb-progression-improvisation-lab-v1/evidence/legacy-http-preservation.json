@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "indexAndModelAndPlayerPredictionsExact": true,
+      "packageId": "d3739e3d9103c48fda1c417a",
+      "reading": "qb-risk-lab-v1"
+    },
+    {
+      "indexAndModelAndPlayerPredictionsExact": true,
+      "packageId": "404d23007ba98d989940f117",
+      "reading": "qb-risk-outcomes-lab-v1"
+    }
+  ],
+  "passed": true
+}

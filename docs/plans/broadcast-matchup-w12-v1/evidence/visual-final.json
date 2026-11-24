@@ -1,0 +1,113 @@
+{
+  "bundleId": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "cases": [
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "width": 1440,
+      "height": 5085,
+      "scrollWidth": 1425,
+      "states": [],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "width": 1440,
+      "height": 5190,
+      "scrollWidth": 1425,
+      "states": [
+        "Fonte presente, sem oportunidades elegíveis. Sem taxa (0/0)."
+      ],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_02_CAR_ATL",
+      "width": 1440,
+      "height": 5290,
+      "scrollWidth": 1425,
+      "states": [
+        "Fonte presente, sem oportunidades elegíveis. Sem taxa (0/0)."
+      ],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_02_JAX_DEN",
+      "width": 1440,
+      "height": 5283,
+      "scrollWidth": 1425,
+      "states": [],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "width": 390,
+      "height": 6766,
+      "scrollWidth": 375,
+      "states": [],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "width": 390,
+      "height": 6504,
+      "scrollWidth": 375,
+      "states": [
+        "Fonte presente, sem oportunidades elegíveis. Sem taxa (0/0)."
+      ],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_02_CAR_ATL",
+      "width": 390,
+      "height": 6848,
+      "scrollWidth": 375,
+      "states": [
+        "Fonte presente, sem oportunidades elegíveis. Sem taxa (0/0)."
+      ],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_02_JAX_DEN",
+      "width": 390,
+      "height": 6978,
+      "scrollWidth": 375,
+      "states": [],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "width": 320,
+      "height": 7517,
+      "scrollWidth": 305,
+      "states": [],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "width": 320,
+      "height": 7304,
+      "scrollWidth": 305,
+      "states": [
+        "Fonte presente, sem oportunidades elegíveis. Sem taxa (0/0)."
+      ],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_02_CAR_ATL",
+      "width": 320,
+      "height": 7632,
+      "scrollWidth": 305,
+      "states": [
+        "Fonte presente, sem oportunidades elegíveis. Sem taxa (0/0)."
+      ],
+      "textOverflow": []
+    },
+    {
+      "gameId": "2026_02_JAX_DEN",
+      "width": 320,
+      "height": 7769,
+      "scrollWidth": 305,
+      "states": [],
+      "textOverflow": []
+    }
+  ]
+}

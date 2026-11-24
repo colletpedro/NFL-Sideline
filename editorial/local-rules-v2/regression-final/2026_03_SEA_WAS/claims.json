@@ -1,0 +1,130 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "SEA",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "POSITIVE_CONVERGENCE"
+    },
+    "claim_id" : "SEA:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:SEA:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:WAS:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "SEA",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "SEA:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:SEA:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:WAS:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "WAS",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "FAVORABLE_ATTACK_AND_DEFENSE"
+    },
+    "claim_id" : "WAS:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:WAS:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:SEA:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "WAS",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "FAVORABLE_ATTACK_AND_DEFENSE"
+    },
+    "claim_id" : "WAS:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:WAS:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:SEA:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "SEA",
+    "predicate" : "SAMPLE_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:SEA:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:SEA:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:WAS:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "SEA:OFF_EPA_PASS" ],
+    "vantagem_tatica" : [ "SEA:OFF_EPA_PASS" ],
+    "alerta_vermelho" : [ "limit:SEA:OFF_EPA_PASS", "SEA:OFF_EPA_RUSH" ],
+    "veredito" : [ "SEA:OFF_EPA_PASS", "SEA:OFF_EPA_RUSH", "WAS:OFF_EPA_PASS", "WAS:OFF_EPA_RUSH", "limitation", "limit:SEA:OFF_EPA_PASS" ]
+  },
+  "links" : [ {
+    "from" : "limit:SEA:OFF_EPA_PASS",
+    "to" : "SEA:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "SEA:OFF_EPA_RUSH",
+    "to" : "SEA:OFF_EPA_PASS",
+    "relation" : "ADDITIONAL_RESTRICTION"
+  } ],
+  "groupings" : [ {
+    "candidateId" : "SEA:OFF_EPA_PLAY",
+    "representedBy" : [ "SEA:OFF_EPA_PASS" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  }, {
+    "candidateId" : "WAS:OFF_EPA_PLAY",
+    "representedBy" : [ "WAS:OFF_EPA_PASS", "WAS:OFF_EPA_RUSH" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  } ],
+  "contract_version" : 5,
+  "thesis_team" : "NONE"
+}

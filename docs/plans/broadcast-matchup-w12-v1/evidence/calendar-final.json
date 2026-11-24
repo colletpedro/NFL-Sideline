@@ -1,0 +1,71 @@
+{
+  "cards": [
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_ARI_LAC&returnWeek=1",
+      "id": "2026_01_ARI_LAC"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_ATL_PIT&returnWeek=1",
+      "id": "2026_01_ATL_PIT"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_BAL_IND&returnWeek=1",
+      "id": "2026_01_BAL_IND"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_BUF_HOU&returnWeek=1",
+      "id": "2026_01_BUF_HOU"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_CHI_CAR&returnWeek=1",
+      "id": "2026_01_CHI_CAR"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_CLE_JAX&returnWeek=1",
+      "id": "2026_01_CLE_JAX"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_DAL_NYG&returnWeek=1",
+      "id": "2026_01_DAL_NYG"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_DEN_KC&returnWeek=1",
+      "id": "2026_01_DEN_KC"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_GB_MIN&returnWeek=1",
+      "id": "2026_01_GB_MIN"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_MIA_LV&returnWeek=1",
+      "id": "2026_01_MIA_LV"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_NE_SEA&returnWeek=1",
+      "id": "2026_01_NE_SEA"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_NO_DET&returnWeek=1",
+      "id": "2026_01_NO_DET"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_NYJ_TEN&returnWeek=1",
+      "id": "2026_01_NYJ_TEN"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_SF_LA&returnWeek=1",
+      "id": "2026_01_SF_LA"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_TB_CIN&returnWeek=1",
+      "id": "2026_01_TB_CIN"
+    },
+    {
+      "href": "/?season=2026&week=1&view=matchup-w12&game=2026_01_WAS_PHI&returnWeek=1",
+      "id": "2026_01_WAS_PHI"
+    }
+  ],
+  "overflow": false,
+  "rootFont": "16px",
+  "title": "Calendário W1–2 · NFL Sideline"
+}

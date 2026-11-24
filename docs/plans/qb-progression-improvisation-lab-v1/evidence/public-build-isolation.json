@@ -1,0 +1,8 @@
+{
+  "byteIdentical": true,
+  "candidate": "/Users/pedrocollet/.codex/worktrees/qb-progression-improvisation-lab-v1/NFL Sideline/web-ui/dist",
+  "containsProgression": false,
+  "files": 5,
+  "passed": true,
+  "reference": "/Users/pedrocollet/.codex/worktrees/qb-risk-outcomes-lab-v1/NFL Sideline/web-ui/dist"
+}

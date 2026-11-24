@@ -1,0 +1,5 @@
+/* E4 evaluation only. Append temporarily to the owned laboratory stylesheet. */
+html { font-size:32px !important; }
+.page-heading h1 { font-size:76px !important; }
+.visual-intro h2 { font-size:68px !important; }
+@media(max-width:650px) { .page-heading h1 { font-size:56px !important; } .visual-intro h2 { font-size:46px !important; } }

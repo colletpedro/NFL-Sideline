@@ -1,0 +1,2269 @@
+{
+  "algorithmVersion": "metrics-temporal-1.1.0",
+  "asOfDateMapping": null,
+  "audit_id": "sha256:7ea65041fe9e76be03e494454ef8f40214a299cc88860e38cd5d65d0cc85bff1",
+  "blocks": [
+    {
+      "actualWeeks": [
+        1,
+        6
+      ],
+      "aggregates": [
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "classified_pass",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-6"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": {
+              "denominator": 3,
+              "exact": "1/3",
+              "numerator": 1
+            }
+          },
+          "frequency": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "gameIds": [
+            "synthetic-6"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "def",
+          "scope": "COMPLETE",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "classified_pass",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-6"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": {
+              "denominator": 3,
+              "exact": "1/3",
+              "numerator": 1
+            }
+          },
+          "frequency": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "gameIds": [
+            "synthetic-6"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "off",
+          "scope": "COMPLETE",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "classified_rush",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-6"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": {
+              "denominator": 3,
+              "exact": "1/3",
+              "numerator": 1
+            }
+          },
+          "frequency": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "gameIds": [
+            "synthetic-6"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "def",
+          "scope": "COMPLETE",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "classified_rush",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-6"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": {
+              "denominator": 3,
+              "exact": "1/3",
+              "numerator": 1
+            }
+          },
+          "frequency": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "gameIds": [
+            "synthetic-6"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "off",
+          "scope": "COMPLETE",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "general",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-6"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": {
+              "denominator": 3,
+              "exact": "1/3",
+              "numerator": 1
+            }
+          },
+          "frequency": null,
+          "gameIds": [
+            "synthetic-6"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "def",
+          "scope": "COMPLETE",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "general",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-6"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": {
+              "denominator": 3,
+              "exact": "1/3",
+              "numerator": 1
+            }
+          },
+          "frequency": null,
+          "gameIds": [
+            "synthetic-6"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "off",
+          "scope": "COMPLETE",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS",
+            "SOURCE_SUBSET"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "classified_pass",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-1"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": null
+          },
+          "frequency": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "gameIds": [
+            "synthetic-1"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "def",
+          "scope": "AUDITABLE_SUBSET_UNKNOWN",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS",
+            "SOURCE_SUBSET"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "classified_rush",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-1"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": null
+          },
+          "frequency": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "gameIds": [
+            "synthetic-1"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "def",
+          "scope": "AUDITABLE_SUBSET_UNKNOWN",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "NO_EPA_OBSERVATIONS",
+            "SOURCE_SUBSET"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": null
+          },
+          "foundation": "general",
+          "foundationCoverage": {
+            "eligibleN": 0,
+            "epaN": 0,
+            "epaObservedGameIds": [],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [
+              "synthetic-1"
+            ],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": null
+          },
+          "frequency": null,
+          "gameIds": [
+            "synthetic-1"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "def",
+          "scope": "AUDITABLE_SUBSET_UNKNOWN",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 0,
+            "exact": null,
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 0,
+            "epa_missing_n": 0,
+            "epa_n": 0,
+            "epa_nonfinite_n": 0,
+            "epa_sum": null,
+            "success_n": 0
+          },
+          "volume": 0
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "SOURCE_SUBSET"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 1,
+            "exact": "123456789012345678901234567890123456789/1000000000000000000000000000000000000000",
+            "numerator": "0.123456789012345678901234567890123456789"
+          },
+          "foundation": "classified_rush",
+          "foundationCoverage": {
+            "eligibleN": 1,
+            "epaN": 1,
+            "epaObservedGameIds": [
+              "synthetic-1"
+            ],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": null
+          },
+          "frequency": {
+            "denominator": 3,
+            "exact": "1/3",
+            "numerator": 1
+          },
+          "gameIds": [
+            "synthetic-1"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "off",
+          "scope": "AUDITABLE_SUBSET_UNKNOWN",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          },
+          "sums": {
+            "eligible_n": 1,
+            "epa_missing_n": 0,
+            "epa_n": 1,
+            "epa_nonfinite_n": 0,
+            "epa_sum": "0.123456789012345678901234567890123456789",
+            "success_n": 1
+          },
+          "volume": 1
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "SOURCE_SUBSET"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 2,
+            "exact": "-1123456789012345678901234567890123456789/2000000000000000000000000000000000000000",
+            "numerator": "-1.123456789012345678901234567890123456789"
+          },
+          "foundation": "classified_pass",
+          "foundationCoverage": {
+            "eligibleN": 2,
+            "epaN": 2,
+            "epaObservedGameIds": [
+              "synthetic-1"
+            ],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": null
+          },
+          "frequency": {
+            "denominator": 3,
+            "exact": "2/3",
+            "numerator": 2
+          },
+          "gameIds": [
+            "synthetic-1"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "off",
+          "scope": "AUDITABLE_SUBSET_UNKNOWN",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 2,
+            "exact": "0",
+            "numerator": 0
+          },
+          "sums": {
+            "eligible_n": 2,
+            "epa_missing_n": 0,
+            "epa_n": 2,
+            "epa_nonfinite_n": 0,
+            "epa_sum": "-1.123456789012345678901234567890123456789",
+            "success_n": 0
+          },
+          "volume": 2
+        },
+        {
+          "comparisonEligible": false,
+          "comparisonFailures": [
+            "EPA_MODEL_UNKNOWN",
+            "INCOMPLETE_SOURCE_COVERAGE",
+            "SOURCE_SUBSET"
+          ],
+          "definitionVersion": "1.0.0",
+          "epa": {
+            "denominator": 3,
+            "exact": "-1/3",
+            "numerator": "-1"
+          },
+          "foundation": "general",
+          "foundationCoverage": {
+            "eligibleN": 3,
+            "epaN": 3,
+            "epaObservedGameIds": [
+              "synthetic-1"
+            ],
+            "expectedGames": 3,
+            "noEligiblePlaysGameIds": [],
+            "noEpaObservationsGameIds": [],
+            "observedSourceGames": 1,
+            "sourceRatio": null
+          },
+          "frequency": null,
+          "gameIds": [
+            "synthetic-1"
+          ],
+          "model": "UNKNOWN",
+          "populationVersion": "classified-scrimmage-v1",
+          "role": "off",
+          "scope": "AUDITABLE_SUBSET_UNKNOWN",
+          "statisticalUncertainty": "NOT_ESTIMATED",
+          "successRate": {
+            "denominator": 3,
+            "exact": "1/3",
+            "numerator": 1
+          },
+          "sums": {
+            "eligible_n": 3,
+            "epa_missing_n": 0,
+            "epa_n": 3,
+            "epa_nonfinite_n": 0,
+            "epa_sum": "-1",
+            "success_n": 1
+          },
+          "volume": 3
+        }
+      ],
+      "calendarRevisionId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "coverage": {
+        "availabilityKnownGameIds": [],
+        "calendarComplete": true,
+        "closedWeeks": [],
+        "expectationFailures": [],
+        "expectedGames": 3,
+        "gaps": [
+          {
+            "details": [
+              "SOURCE_UNKNOWN"
+            ],
+            "gameId": "synthetic-5",
+            "reason": "SOURCE_UNKNOWN"
+          }
+        ],
+        "knownEligibleGameIds": [
+          "synthetic-1",
+          "synthetic-5",
+          "synthetic-6"
+        ],
+        "metricObservedGameIds": [
+          "synthetic-1"
+        ],
+        "observedCompleteGameIds": [
+          "synthetic-6"
+        ],
+        "observedGameIds": [
+          "synthetic-1",
+          "synthetic-6"
+        ],
+        "outsideCutoffGameIds": [],
+        "sourceRatio": {
+          "denominator": 3,
+          "exact": "1/3",
+          "numerator": 1
+        },
+        "uncertainGameIds": []
+      },
+      "events": [
+        {
+          "calculationId": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+          "calculationRevisionId": "sha256:465585a7e2ed41d38438df522cc2f24c569db9df425ad75c9698bad1951b82af",
+          "completeness": "UNKNOWN",
+          "completenessQualification": "ACCEPTED_BY_POLICY",
+          "coverageRevisionId": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+          "epaModel": "UNKNOWN",
+          "eventEligible": true,
+          "eventUncertain": false,
+          "eventUpperBound": {
+            "evidence_id": "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+            "value": "2026-09-28T11:59:59.999999999999Z"
+          },
+          "game": {
+            "away_team": "B",
+            "game_id": "synthetic-1",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 1
+          },
+          "modelQualification": "UNKNOWN",
+          "reasons": [],
+          "sourceCause": "SOURCE_UNKNOWN",
+          "sourceModels": {
+            "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "UNKNOWN",
+            "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "UNKNOWN"
+          },
+          "sourceSetId": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+          "sourceState": "PARTIAL",
+          "stateRevisionId": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+          "unknownFilterFlagsN": 0
+        },
+        {
+          "calculationId": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+          "calculationRevisionId": "sha256:7a1af99c5a24a5ffcdb24cebe3d587b083ee3d04891c61cd5b71d8c836134b12",
+          "completeness": "COMPLETE",
+          "completenessQualification": "ACCEPTED_BY_POLICY",
+          "coverageRevisionId": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+          "epaModel": "UNKNOWN",
+          "eventEligible": true,
+          "eventUncertain": false,
+          "eventUpperBound": {
+            "evidence_id": "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+            "value": "2026-09-28T11:59:59.999999999999Z"
+          },
+          "game": {
+            "away_team": "B",
+            "game_id": "synthetic-6",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 6
+          },
+          "modelQualification": "UNKNOWN",
+          "reasons": [],
+          "sourceCause": "SOURCE_UNKNOWN",
+          "sourceModels": {
+            "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": "UNKNOWN",
+            "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": "UNKNOWN"
+          },
+          "sourceSetId": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+          "sourceState": "OBSERVED",
+          "stateRevisionId": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+          "unknownFilterFlagsN": 0
+        },
+        {
+          "calculationId": null,
+          "calculationRevisionId": null,
+          "completeness": "UNKNOWN",
+          "coverageRevisionId": null,
+          "eventEligible": false,
+          "eventUncertain": false,
+          "game": {
+            "away_team": "B",
+            "game_id": "synthetic-3",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 3
+          },
+          "reasons": [
+            "TARGET_GAME_EXCLUDED"
+          ],
+          "sourceSetId": null,
+          "sourceState": "SOURCE_UNKNOWN",
+          "stateRevisionId": null
+        },
+        {
+          "calculationId": null,
+          "calculationRevisionId": null,
+          "completeness": "UNKNOWN",
+          "coverageRevisionId": null,
+          "eventEligible": true,
+          "eventUncertain": false,
+          "eventUpperBound": {
+            "evidence_id": "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+            "value": "2026-09-28T11:59:59.999999999999Z"
+          },
+          "game": {
+            "away_team": "B",
+            "game_id": "synthetic-5",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 5
+          },
+          "reasons": [
+            "SOURCE_UNKNOWN"
+          ],
+          "sourceCause": "SOURCE_UNKNOWN",
+          "sourceSetId": null,
+          "sourceState": "SOURCE_UNKNOWN",
+          "stateRevisionId": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e"
+        }
+      ],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "requestedPeriod": {
+        "cutoff": "2026-10-01T12:00:00Z",
+        "mode": "EVENT_RECONSTRUCTION",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "eventEndBefore": "2026-10-01T12:00:00Z"
+        },
+        "window": "SEASON_TO_CUTOFF"
+      },
+      "requestedWeeks": [
+        1,
+        3,
+        5,
+        6
+      ],
+      "scheduledGameIds": [
+        "synthetic-1",
+        "synthetic-3",
+        "synthetic-5",
+        "synthetic-6"
+      ],
+      "season": 2026,
+      "weeklyStates": [
+        {
+          "gameIds": [
+            "synthetic-1"
+          ],
+          "status": "NOT_YET_CLOSED",
+          "week": 1
+        },
+        {
+          "gameIds": [
+            "synthetic-5"
+          ],
+          "status": "NOT_YET_CLOSED",
+          "week": 5
+        },
+        {
+          "gameIds": [
+            "synthetic-6"
+          ],
+          "status": "NOT_YET_CLOSED",
+          "week": 6
+        },
+        {
+          "gameIds": [],
+          "status": "NOT_YET_CLOSED",
+          "week": 3
+        }
+      ],
+      "window": "SEASON_TO_CUTOFF"
+    }
+  ],
+  "calculationsUsed": [
+    {
+      "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+      "calendar_revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "completeness": {
+        "evidence_id": "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+        "value": "UNKNOWN"
+      },
+      "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+      "game": {
+        "away_team": "B",
+        "game_id": "synthetic-1",
+        "home_team": "A",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 1
+      },
+      "metadata_revision_ids": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "model": null,
+      "original": {
+        "coverage": {
+          "away_team": "B",
+          "calendar_duplicate_rows_ignored": 0,
+          "calendar_revision_id": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64",
+          "completeness": "UNKNOWN",
+          "coverage_revision_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+          "declared_completeness": "UNKNOWN",
+          "duplicate_rows_ignored": 2,
+          "eligible_content_n": 3,
+          "excluded_n": 0,
+          "exclusions": {},
+          "expected_raw_unique_count_matches": null,
+          "expected_unique_rows": null,
+          "game_id": "synthetic-1",
+          "home_team": "A",
+          "outside_pass_run_null_teams_n": 0,
+          "pbp_content_id": "sha256:477f90f8922fe5e86fe740c84750dd64be6bba5ae0d4d3b7fb8665c5521b3aa9",
+          "pbp_revision_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+          "phase": "REG",
+          "provenance": {
+            "available_at": null,
+            "event_upper_bound": null,
+            "ingested_at": null
+          },
+          "raw_n": 5,
+          "round": "REG",
+          "scope": "AUDITABLE_SUBSET",
+          "season": 2026,
+          "statistics_status": "PARTIAL",
+          "unique_n": 3,
+          "unknown_filter_flags_n": 0,
+          "week": 1
+        },
+        "manifest": {
+          "artifactVersion": "metrics-offline-v1",
+          "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+          "inputs": [
+            {
+              "bytes": 758,
+              "kind": "calendar",
+              "raw_rows": 4,
+              "relevant_schema": {
+                "away_team": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "game_type": "JSON scalar (validated per row)",
+                "home_team": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+              "source_revision_id": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+            },
+            {
+              "bytes": 1642,
+              "kind": "pbp",
+              "raw_rows": 2,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+              "source_revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+            },
+            {
+              "bytes": 1642,
+              "kind": "pbp",
+              "raw_rows": 2,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+              "source_revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+            },
+            {
+              "bytes": 1056,
+              "kind": "pbp",
+              "raw_rows": 1,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+              "source_revision_id": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+            }
+          ],
+          "limitations": [
+            "Completeness UNKNOWN unless explicitly evidenced for these input bytes.",
+            "AUDITABLE_SUBSET counts describe present content, not certified full-game volume.",
+            "Absent rows do not identify bye, source delay or ingestion failure.",
+            "Evidence assertions are supplied by the caller, not independently authenticated.",
+            "EPA model version UNKNOWN unless explicitly evidenced; adapter version is separate.",
+            "No certified temporal window, revision selection, pregame or POINT_IN_TIME guarantee."
+          ],
+          "metadata": {
+            "games": {
+              "synthetic-6": {
+                "completeness": "COMPLETE",
+                "evidence": {
+                  "basis": "SYNTHETIC_FIXTURE",
+                  "reference": "fixture-ledger"
+                },
+                "expected_unique_rows": 0
+              }
+            },
+            "metadataVersion": 1,
+            "sources": {}
+          },
+          "mode": "OFFLINE_DRY_RUN",
+          "replica_projection": {
+            "calendar": [
+              "game_id",
+              "season",
+              "game_type",
+              "week",
+              "home_team",
+              "away_team"
+            ],
+            "normalization": "Numeric round-trip decimals, binary flags, phase/round; additional columns ignored. Drive and all raw contract fields participate, even outside pass/run.",
+            "pbp": [
+              "game_id",
+              "play_id",
+              "drive",
+              "season",
+              "season_type",
+              "week",
+              "posteam",
+              "defteam",
+              "play_type",
+              "qb_kneel",
+              "qb_spike",
+              "play_deleted",
+              "special_teams_play",
+              "two_point_attempt",
+              "epa"
+            ]
+          },
+          "requested_seasons": [
+            2026
+          ],
+          "source_model_versions": {
+            "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": {
+              "evidence": null,
+              "value": "UNKNOWN"
+            },
+            "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": {
+              "evidence": null,
+              "value": "UNKNOWN"
+            }
+          },
+          "versions": {
+            "adapter": "1.0.0",
+            "artifact": "metrics-offline-v1",
+            "definition": "1.0.0",
+            "population": "classified-scrimmage-v1"
+          }
+        }
+      },
+      "pbp_revision_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+      "revision_id": "sha256:465585a7e2ed41d38438df522cc2f24c569db9df425ad75c9698bad1951b82af",
+      "source_models": {
+        "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": null,
+        "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": null
+      },
+      "statistics": [
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 0,
+          "epa_n": 1,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.123456789012345678901234567890123456789",
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 1,
+          "team": "B"
+        },
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 0,
+          "epa_n": 1,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.123456789012345678901234567890123456789",
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 1,
+          "team": "A"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1.123456789012345678901234567890123456789",
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1.123456789012345678901234567890123456789",
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 3,
+          "epa_missing_n": 0,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1",
+          "foundation": "general",
+          "role": "def",
+          "success_n": 1,
+          "team": "B"
+        },
+        {
+          "eligible_n": 3,
+          "epa_missing_n": 0,
+          "epa_n": 3,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-1",
+          "foundation": "general",
+          "role": "off",
+          "success_n": 1,
+          "team": "A"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    },
+    {
+      "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+      "calendar_revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "completeness": {
+        "evidence_id": "sha256:cb72d286dfeac0b5e931ecbba7dcbc82864a42774ee6f3f4557a4dc80f5c5a8c",
+        "value": "COMPLETE"
+      },
+      "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+      "game": {
+        "away_team": "B",
+        "game_id": "synthetic-6",
+        "home_team": "A",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 6
+      },
+      "metadata_revision_ids": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "model": null,
+      "original": {
+        "coverage": {
+          "away_team": "B",
+          "calendar_duplicate_rows_ignored": 0,
+          "calendar_revision_id": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64",
+          "completeness": "COMPLETE",
+          "coverage_revision_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+          "declared_completeness": "COMPLETE",
+          "duplicate_rows_ignored": 0,
+          "eligible_content_n": 0,
+          "excluded_n": 0,
+          "exclusions": {},
+          "expected_raw_unique_count_matches": true,
+          "expected_unique_rows": 0,
+          "game_id": "synthetic-6",
+          "home_team": "A",
+          "outside_pass_run_null_teams_n": 0,
+          "pbp_content_id": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "pbp_revision_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+          "phase": "REG",
+          "provenance": {
+            "available_at": null,
+            "completeness": "COMPLETE",
+            "event_upper_bound": null,
+            "evidence": {
+              "basis": "SYNTHETIC_FIXTURE",
+              "reference": "fixture-ledger"
+            },
+            "expected_unique_rows": 0,
+            "ingested_at": null
+          },
+          "raw_n": 0,
+          "round": "REG",
+          "scope": "FULL_GAME_CONTENT",
+          "season": 2026,
+          "statistics_status": "COMPLETE",
+          "unique_n": 0,
+          "unknown_filter_flags_n": 0,
+          "week": 6
+        },
+        "manifest": {
+          "artifactVersion": "metrics-offline-v1",
+          "calculation_id": "sha256:9344d1b8902207a39b5321f939da1bae8aaddbb848b33b1155152ac1a38eeca7",
+          "inputs": [
+            {
+              "bytes": 758,
+              "kind": "calendar",
+              "raw_rows": 4,
+              "relevant_schema": {
+                "away_team": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "game_type": "JSON scalar (validated per row)",
+                "home_team": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+              "source_revision_id": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+            },
+            {
+              "bytes": 1642,
+              "kind": "pbp",
+              "raw_rows": 2,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+              "source_revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+            },
+            {
+              "bytes": 1642,
+              "kind": "pbp",
+              "raw_rows": 2,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+              "source_revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+            },
+            {
+              "bytes": 1056,
+              "kind": "pbp",
+              "raw_rows": 1,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+              "source_revision_id": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+            }
+          ],
+          "limitations": [
+            "Completeness UNKNOWN unless explicitly evidenced for these input bytes.",
+            "AUDITABLE_SUBSET counts describe present content, not certified full-game volume.",
+            "Absent rows do not identify bye, source delay or ingestion failure.",
+            "Evidence assertions are supplied by the caller, not independently authenticated.",
+            "EPA model version UNKNOWN unless explicitly evidenced; adapter version is separate.",
+            "No certified temporal window, revision selection, pregame or POINT_IN_TIME guarantee."
+          ],
+          "metadata": {
+            "games": {
+              "synthetic-6": {
+                "completeness": "COMPLETE",
+                "evidence": {
+                  "basis": "SYNTHETIC_FIXTURE",
+                  "reference": "fixture-ledger"
+                },
+                "expected_unique_rows": 0
+              }
+            },
+            "metadataVersion": 1,
+            "sources": {}
+          },
+          "mode": "OFFLINE_DRY_RUN",
+          "replica_projection": {
+            "calendar": [
+              "game_id",
+              "season",
+              "game_type",
+              "week",
+              "home_team",
+              "away_team"
+            ],
+            "normalization": "Numeric round-trip decimals, binary flags, phase/round; additional columns ignored. Drive and all raw contract fields participate, even outside pass/run.",
+            "pbp": [
+              "game_id",
+              "play_id",
+              "drive",
+              "season",
+              "season_type",
+              "week",
+              "posteam",
+              "defteam",
+              "play_type",
+              "qb_kneel",
+              "qb_spike",
+              "play_deleted",
+              "special_teams_play",
+              "two_point_attempt",
+              "epa"
+            ]
+          },
+          "requested_seasons": [
+            2026
+          ],
+          "source_model_versions": {
+            "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": {
+              "evidence": null,
+              "value": "UNKNOWN"
+            },
+            "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": {
+              "evidence": null,
+              "value": "UNKNOWN"
+            }
+          },
+          "versions": {
+            "adapter": "1.0.0",
+            "artifact": "metrics-offline-v1",
+            "definition": "1.0.0",
+            "population": "classified-scrimmage-v1"
+          }
+        }
+      },
+      "pbp_revision_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+      "revision_id": "sha256:7a1af99c5a24a5ffcdb24cebe3d587b083ee3d04891c61cd5b71d8c836134b12",
+      "source_models": {
+        "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b": null,
+        "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166": null
+      },
+      "statistics": [
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "B"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "A"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "B"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    }
+  ],
+  "derivedAt": "2026-10-11T12:00:00.000000000001Z",
+  "evidenceQualifications": [
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "ACCEPTED_BY_POLICY",
+      "subjectId": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "sha256:26e892803ce97804cda72807816403fc1377b141507445d78738a9f5392420fa",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-12T04:00:40.099893Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "ACCEPTED_BY_POLICY",
+      "subjectId": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "ACCEPTED_BY_POLICY",
+      "subjectId": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "sha256:4616143eafecfe17b49c60f8717c257226de8f29cd463fcfc3da702f846c891e",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-12T04:00:40.093946Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+    },
+    {
+      "conditionalCapabilities": [
+        "CALENDAR_COMPLETENESS"
+      ],
+      "evidence_id": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+      "externallyAuthenticated": false,
+      "kind": "CALENDAR_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "ACCEPTED_BY_POLICY",
+      "subjectId": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "ACCEPTED_BY_POLICY",
+      "subjectId": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e"
+    },
+    {
+      "conditionalCapabilities": [
+        "LOCAL_BYTE_OBSERVATION",
+        "CONSERVATIVE_AVAILABILITY_AT_OBSERVATION"
+      ],
+      "evidence_id": "sha256:9ec2b7c055396e79eac851be1209773f687ef04b78e217502b91615d61c40959",
+      "externallyAuthenticated": false,
+      "kind": "ARCHIVE_OBSERVATION",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-12T04:00:40.096840Z",
+      "status": "DECLARATION_UNPROVEN",
+      "subjectId": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+    },
+    {
+      "conditionalCapabilities": [
+        "SOURCE_COMPLETENESS_DECLARATION_ACCEPTED"
+      ],
+      "evidence_id": "sha256:cb72d286dfeac0b5e931ecbba7dcbc82864a42774ee6f3f4557a4dc80f5c5a8c",
+      "externallyAuthenticated": false,
+      "kind": "PBP_COMPLETE",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "ACCEPTED_BY_POLICY",
+      "subjectId": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3"
+    },
+    {
+      "conditionalCapabilities": [
+        "DOCUMENTED_EVENT_UPPER_BOUND"
+      ],
+      "evidence_id": "sha256:ec61c2a1b5577b6922174f75558f3ff05461ab904f653cda33208c7e19a21b36",
+      "externallyAuthenticated": false,
+      "kind": "EVENT_END_BOUND",
+      "knownBeforeCutoff": false,
+      "originalRecordedAt": "2026-10-11T12:00:00.000000000001Z",
+      "status": "NOT_USED_OR_BINDING_UNPROVEN",
+      "subjectId": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b"
+    }
+  ],
+  "evidenceUsed": [
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+      "kind": "EVENT_END_BOUND",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+      "value": "2026-09-28T11:59:59.999999999999Z"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+      "kind": "EVENT_END_BOUND",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+      "value": "2026-09-28T11:59:59.999999999999Z"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+      "kind": "PBP_COMPLETE",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:0f12273867a7a145cd9a8d4a39035f8982495077a6e47ea0da639448aa2e9b00",
+      "value": "UNKNOWN"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+      "kind": "CALENDAR_COMPLETE",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "value": true
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+      "kind": "EVENT_END_BOUND",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+      "value": "2026-09-28T11:59:59.999999999999Z"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:cb72d286dfeac0b5e931ecbba7dcbc82864a42774ee6f3f4557a4dc80f5c5a8c",
+      "kind": "PBP_COMPLETE",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:3459ef521fe8b262f7e25ac17127b3fa2b2431d16e76633dbd42d3d868bf6cd3",
+      "value": "COMPLETE"
+    }
+  ],
+  "guarantees": {
+    "historicalAvailability": "UNKNOWN_OR_NOT_PROVEN",
+    "knowledgeAtCutoff": "NOT_DEMONSTRATED",
+    "laterKnowledgePermitted": true,
+    "limits": [
+      "Trust origins and materialized timestamps are premises, not external authentication.",
+      "Hashes prove byte integrity only; receipts do not prove earlier availability, event closure or completeness.",
+      "Coverage is not statistical confidence; partial/unknown content is not full-game volume.",
+      "No historical local dataset certified by synthetic fixtures."
+    ],
+    "postCutoffEvidenceIds": [
+      "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+      "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+      "sha256:37aeb4965d956256c98531964a33ba2323d5bae23d299c3b9171e9c28179b49c",
+      "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+      "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+      "sha256:cb72d286dfeac0b5e931ecbba7dcbc82864a42774ee6f3f4557a4dc80f5c5a8c"
+    ],
+    "postCutoffResourceIds": [
+      "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    ],
+    "statisticalUncertainty": "NOT_ESTIMATED",
+    "temporalMode": "EVENT_RECONSTRUCTION",
+    "unknownKnowledgeResourceIds": [
+      "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+      "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+      "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+      "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+      "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+      "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    ]
+  },
+  "input_id": "sha256:5991c83b5d276f7d6f46c0c7a207d133232d237adfc0b8610486491eef12dbcc",
+  "policy": {
+    "policyVersion": "materialized-evidence-v1",
+    "trustedOrigins": [
+      "synthetic-e5b4"
+    ]
+  },
+  "pregame": {
+    "kickoff": null,
+    "targetGameExcluded": true,
+    "timeStatus": "PREGAME_TIME_UNVERIFIED"
+  },
+  "request": {
+    "asOfInstant": "2026-10-01T12:00:00Z",
+    "mode": "EVENT_RECONSTRUCTION",
+    "phase": "REG",
+    "season": 2026,
+    "targetGameId": "synthetic-3",
+    "targetWeek": 4,
+    "team": "A",
+    "windows": [
+      "SEASON_TO_CUTOFF"
+    ]
+  },
+  "resourceDecisions": [
+    {
+      "reasons": [],
+      "revision_id": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    },
+    {
+      "reasons": [],
+      "revision_id": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+      "usage": "USED_IN_SELECTED_LINEAGE",
+      "used": true
+    }
+  ],
+  "resourcesUsed": [
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+        "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:141903bc1e9410d38717c213aa87661c726cc49edcd8741aa891b63330e998ee",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-6",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+        "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:2a56f99fa732e137ae28aa3175661f596e4aaf4b5fa67898bf90c7a27476bcd1",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-1",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+        "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:8ce9934dbcd3223f8b8ebfb9d14414e1393270f87596e28300a8785f3ac3f865",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-5",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+        "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:ec61c2a1b5577b6922174f75558f3ff05461ab904f653cda33208c7e19a21b36",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-3",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc",
+        "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+      ],
+      "ingested_at": null,
+      "kind": "CALENDAR",
+      "payload": {
+        "closed_weeks": [],
+        "complete": {
+          "evidence_id": "sha256:6fa30ddfc401b54779f7a67d23b9856d010db1d38a0489e8e42d4580eeb07540",
+          "value": true
+        },
+        "games": [
+          {
+            "away_team": "B",
+            "game_id": "synthetic-1",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 1
+          },
+          {
+            "away_team": "B",
+            "game_id": "synthetic-3",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 3
+          },
+          {
+            "away_team": "B",
+            "game_id": "synthetic-5",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 5
+          },
+          {
+            "away_team": "B",
+            "game_id": "synthetic-6",
+            "home_team": "A",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 6
+          }
+        ],
+        "phase": "REG",
+        "season": 2026
+      },
+      "revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "pbp",
+        "source_set_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4"
+      },
+      "revision_id": "sha256:49af3bbf3ee7736cddea7d275305b7c93c29fd296cedae37b4e1d645ed58f3e4"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "calendar",
+        "source_set_id": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+      },
+      "revision_id": "sha256:7e74d932c3188d111fa71cad015d7eccaad8bf8e1cefc6722158b520bab84d64"
+    },
+    {
+      "available_at": null,
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "METADATA",
+      "payload": {
+        "document": {
+          "content": {
+            "assertion": "Synthetic calendar/states/completeness; not authenticated"
+          },
+          "documentVersion": "metrics-auxiliary-document-v1",
+          "origin": "synthetic-e5b4",
+          "received_at": "2026-10-11T12:00:00Z",
+          "reference": "versioned-fixture-ledger"
+        },
+        "origin": "synthetic-e5b4"
+      },
+      "revision_id": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+    },
+    {
+      "available_at": {
+        "evidence_id": "sha256:26e892803ce97804cda72807816403fc1377b141507445d78738a9f5392420fa",
+        "value": "2026-10-12T04:00:40.099893Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "ewogICJjb2x1bW5zIjogWwogICAgImdhbWVfaWQiLAogICAgInNlYXNvbiIsCiAgICAiZ2FtZV90eXBlIiwKICAgICJ3ZWVrIiwKICAgICJob21lX3RlYW0iLAogICAgImF3YXlfdGVhbSIKICBdLAogICJyb3dzIjogWwogICAgewogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMSIsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAiZ2FtZV90eXBlIjogIlJFRyIsCiAgICAgICJ3ZWVrIjogMSwKICAgICAgImhvbWVfdGVhbSI6ICJBIiwKICAgICAgImF3YXlfdGVhbSI6ICJCIgogICAgfSwKICAgIHsKICAgICAgImdhbWVfaWQiOiAic3ludGhldGljLTMiLAogICAgICAic2Vhc29uIjogMjAyNiwKICAgICAgImdhbWVfdHlwZSI6ICJSRUciLAogICAgICAid2VlayI6IDMsCiAgICAgICJob21lX3RlYW0iOiAiQSIsCiAgICAgICJhd2F5X3RlYW0iOiAiQiIKICAgIH0sCiAgICB7CiAgICAgICJnYW1lX2lkIjogInN5bnRoZXRpYy01IiwKICAgICAgInNlYXNvbiI6IDIwMjYsCiAgICAgICJnYW1lX3R5cGUiOiAiUkVHIiwKICAgICAgIndlZWsiOiA1LAogICAgICAiaG9tZV90ZWFtIjogIkEiLAogICAgICAiYXdheV90ZWFtIjogIkIiCiAgICB9LAogICAgewogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtNiIsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAiZ2FtZV90eXBlIjogIlJFRyIsCiAgICAgICJ3ZWVrIjogNiwKICAgICAgImhvbWVfdGVhbSI6ICJBIiwKICAgICAgImF3YXlfdGVhbSI6ICJCIgogICAgfQogIF0KfQo=",
+        "origin": "local-archive",
+        "sha256": "fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65",
+        "source_revision_id": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+      },
+      "revision_id": "sha256:fda17cc53f5fa185486431b5e670a2e0c368cd0e97daddcd14f2b401bdd19b65"
+    },
+    {
+      "available_at": {
+        "evidence_id": "sha256:4616143eafecfe17b49c60f8717c257226de8f29cd463fcfc3da702f846c891e",
+        "value": "2026-10-12T04:00:40.093946Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "ewogICJjb2x1bW5zIjogWwogICAgImdhbWVfaWQiLAogICAgInBsYXlfaWQiLAogICAgImRyaXZlIiwKICAgICJzZWFzb24iLAogICAgInNlYXNvbl90eXBlIiwKICAgICJ3ZWVrIiwKICAgICJwb3N0ZWFtIiwKICAgICJkZWZ0ZWFtIiwKICAgICJwbGF5X3R5cGUiLAogICAgInFiX2tuZWVsIiwKICAgICJxYl9zcGlrZSIsCiAgICAicGxheV9kZWxldGVkIiwKICAgICJzcGVjaWFsX3RlYW1zX3BsYXkiLAogICAgInR3b19wb2ludF9hdHRlbXB0IiwKICAgICJlcGEiLAogICAgInFiX2Ryb3BiYWNrIiwKICAgICJzYWNrIiwKICAgICJxYl9zY3JhbWJsZSIsCiAgICAicGFzc19hdHRlbXB0IiwKICAgICJpbnRlcmNlcHRpb24iLAogICAgInBlbmFsdHkiLAogICAgInF0ciIsCiAgICAiYWJvcnRlZF9wbGF5IiwKICAgICJ3cCIKICBdLAogICJyb3dzIjogWwogICAgewogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMSIsCiAgICAgICJwbGF5X2lkIjogMSwKICAgICAgImRyaXZlIjogMSwKICAgICAgInNlYXNvbiI6IDIwMjYsCiAgICAgICJzZWFzb25fdHlwZSI6ICJSRUciLAogICAgICAid2VlayI6IDEsCiAgICAgICJwb3N0ZWFtIjogIkEiLAogICAgICAiZGVmdGVhbSI6ICJCIiwKICAgICAgInBsYXlfdHlwZSI6ICJwYXNzIiwKICAgICAgInFiX2tuZWVsIjogMCwKICAgICAgInFiX3NwaWtlIjogMCwKICAgICAgInBsYXlfZGVsZXRlZCI6IDAsCiAgICAgICJzcGVjaWFsX3RlYW1zX3BsYXkiOiAwLAogICAgICAidHdvX3BvaW50X2F0dGVtcHQiOiAwLAogICAgICAiZXBhIjogIi0xLjEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OSIsCiAgICAgICJxYl9kcm9wYmFjayI6IG51bGwsCiAgICAgICJzYWNrIjogbnVsbCwKICAgICAgInFiX3NjcmFtYmxlIjogbnVsbCwKICAgICAgInBhc3NfYXR0ZW1wdCI6IG51bGwsCiAgICAgICJpbnRlcmNlcHRpb24iOiBudWxsLAogICAgICAicGVuYWx0eSI6IG51bGwsCiAgICAgICJxdHIiOiBudWxsLAogICAgICAiYWJvcnRlZF9wbGF5IjogbnVsbCwKICAgICAgIndwIjogbnVsbAogICAgfSwKICAgIHsKICAgICAgImdhbWVfaWQiOiAic3ludGhldGljLTEiLAogICAgICAicGxheV9pZCI6IDIsCiAgICAgICJkcml2ZSI6IDEsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAic2Vhc29uX3R5cGUiOiAiUkVHIiwKICAgICAgIndlZWsiOiAxLAogICAgICAicG9zdGVhbSI6ICJBIiwKICAgICAgImRlZnRlYW0iOiAiQiIsCiAgICAgICJwbGF5X3R5cGUiOiAicGFzcyIsCiAgICAgICJxYl9rbmVlbCI6IDAsCiAgICAgICJxYl9zcGlrZSI6IDAsCiAgICAgICJwbGF5X2RlbGV0ZWQiOiAwLAogICAgICAic3BlY2lhbF90ZWFtc19wbGF5IjogMCwKICAgICAgInR3b19wb2ludF9hdHRlbXB0IjogMCwKICAgICAgImVwYSI6ICIwIiwKICAgICAgInFiX2Ryb3BiYWNrIjogbnVsbCwKICAgICAgInNhY2siOiBudWxsLAogICAgICAicWJfc2NyYW1ibGUiOiBudWxsLAogICAgICAicGFzc19hdHRlbXB0IjogbnVsbCwKICAgICAgImludGVyY2VwdGlvbiI6IG51bGwsCiAgICAgICJwZW5hbHR5IjogbnVsbCwKICAgICAgInF0ciI6IG51bGwsCiAgICAgICJhYm9ydGVkX3BsYXkiOiBudWxsLAogICAgICAid3AiOiBudWxsCiAgICB9CiAgXQp9Cg==",
+        "origin": "local-archive",
+        "sha256": "1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b",
+        "source_revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+      },
+      "revision_id": "sha256:1adc06c2a39ae6c74b9a3989ca8d0445cdd85b485e76309a119a197c5a8f160b"
+    },
+    {
+      "available_at": {
+        "evidence_id": "sha256:9ec2b7c055396e79eac851be1209773f687ef04b78e217502b91615d61c40959",
+        "value": "2026-10-12T04:00:40.096840Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "ewogICJjb2x1bW5zIjogWwogICAgImdhbWVfaWQiLAogICAgInBsYXlfaWQiLAogICAgImRyaXZlIiwKICAgICJzZWFzb24iLAogICAgInNlYXNvbl90eXBlIiwKICAgICJ3ZWVrIiwKICAgICJwb3N0ZWFtIiwKICAgICJkZWZ0ZWFtIiwKICAgICJwbGF5X3R5cGUiLAogICAgInFiX2tuZWVsIiwKICAgICJxYl9zcGlrZSIsCiAgICAicGxheV9kZWxldGVkIiwKICAgICJzcGVjaWFsX3RlYW1zX3BsYXkiLAogICAgInR3b19wb2ludF9hdHRlbXB0IiwKICAgICJlcGEiLAogICAgInFiX2Ryb3BiYWNrIiwKICAgICJzYWNrIiwKICAgICJxYl9zY3JhbWJsZSIsCiAgICAicGFzc19hdHRlbXB0IiwKICAgICJpbnRlcmNlcHRpb24iLAogICAgInBlbmFsdHkiLAogICAgInF0ciIsCiAgICAiYWJvcnRlZF9wbGF5IiwKICAgICJ3cCIKICBdLAogICJyb3dzIjogWwogICAgewogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMSIsCiAgICAgICJwbGF5X2lkIjogMywKICAgICAgImRyaXZlIjogMSwKICAgICAgInNlYXNvbiI6IDIwMjYsCiAgICAgICJzZWFzb25fdHlwZSI6ICJSRUciLAogICAgICAid2VlayI6IDEsCiAgICAgICJwb3N0ZWFtIjogIkEiLAogICAgICAiZGVmdGVhbSI6ICJCIiwKICAgICAgInBsYXlfdHlwZSI6ICJydW4iLAogICAgICAicWJfa25lZWwiOiAwLAogICAgICAicWJfc3Bpa2UiOiAwLAogICAgICAicGxheV9kZWxldGVkIjogMCwKICAgICAgInNwZWNpYWxfdGVhbXNfcGxheSI6IDAsCiAgICAgICJ0d29fcG9pbnRfYXR0ZW1wdCI6IDAsCiAgICAgICJlcGEiOiAiMC4xMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkiLAogICAgICAicWJfZHJvcGJhY2siOiBudWxsLAogICAgICAic2FjayI6IG51bGwsCiAgICAgICJxYl9zY3JhbWJsZSI6IG51bGwsCiAgICAgICJwYXNzX2F0dGVtcHQiOiBudWxsLAogICAgICAiaW50ZXJjZXB0aW9uIjogbnVsbCwKICAgICAgInBlbmFsdHkiOiBudWxsLAogICAgICAicXRyIjogbnVsbCwKICAgICAgImFib3J0ZWRfcGxheSI6IG51bGwsCiAgICAgICJ3cCI6IG51bGwKICAgIH0KICBdCn0K",
+        "origin": "local-archive",
+        "sha256": "aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166",
+        "source_revision_id": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+      },
+      "revision_id": "sha256:aaa0e6b16e159c8a6eaaf80961a45757c2e1c1307c8e817de7d9d15f21a9a166"
+    }
+  ],
+  "resultVersion": "metrics-temporal-result-v3",
+  "result_id": "sha256:71d4f7daa6c8d4a68083525ed83c0789b29a0a5317c32992d168ef5791b42e69",
+  "revisionDecisions": [
+    {
+      "category": "calculations",
+      "key": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce/synthetic-1",
+      "reasons": [],
+      "revision_id": "sha256:465585a7e2ed41d38438df522cc2f24c569db9df425ad75c9698bad1951b82af",
+      "selected": true,
+      "selectionOrderAvailableAtEpochSeconds": "1791720000000000000001/1000000000000"
+    },
+    {
+      "category": "calculations",
+      "key": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce/synthetic-6",
+      "reasons": [],
+      "revision_id": "sha256:7a1af99c5a24a5ffcdb24cebe3d587b083ee3d04891c61cd5b71d8c836134b12",
+      "selected": true,
+      "selectionOrderAvailableAtEpochSeconds": "1791720000000000000001/1000000000000"
+    },
+    {
+      "category": "calendars",
+      "key": "2026/REG",
+      "reasons": [],
+      "revision_id": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce",
+      "selected": true,
+      "selectionOrderAvailableAtEpochSeconds": null
+    },
+    {
+      "category": "states",
+      "key": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce/synthetic-1",
+      "reasons": [],
+      "revision_id": "sha256:c006b872af499c34db65bbe318e6eb415a5fcdffe97f3b3df0857073a988ccdf",
+      "selected": true,
+      "selectionOrderAvailableAtEpochSeconds": null
+    },
+    {
+      "category": "states",
+      "key": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce/synthetic-3",
+      "reasons": [],
+      "revision_id": "sha256:285ee2a1151b5c3c27e0b5abed9192f8aebcab993ea2e89eb75295474507b17b",
+      "selected": true,
+      "selectionOrderAvailableAtEpochSeconds": null
+    },
+    {
+      "category": "states",
+      "key": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce/synthetic-5",
+      "reasons": [],
+      "revision_id": "sha256:44111f7932709588754bc127ece673ea09e596f634b4ae54863dfd3cf7788a0e",
+      "selected": true,
+      "selectionOrderAvailableAtEpochSeconds": null
+    },
+    {
+      "category": "states",
+      "key": "sha256:39dba0afa602c89c4864ba0b2a07780051b80e5b83edc1d61828f410232ea0ce/synthetic-6",
+      "reasons": [],
+      "revision_id": "sha256:69e42622f535814ce8ce4e4f4512f1ee1a406dea0f4e15926d3666718116f392",
+      "selected": true,
+      "selectionOrderAvailableAtEpochSeconds": null
+    }
+  ],
+  "structuralValidation": "PASSED",
+  "temporalEligibility": [
+    {
+      "calendarEligible": true,
+      "eligibleGameIds": [
+        "synthetic-1",
+        "synthetic-5",
+        "synthetic-6"
+      ],
+      "uncertainGameIds": [],
+      "window": "SEASON_TO_CUTOFF"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+..............................................ss..........s.s            [100%]
+=========================== short test summary info ============================
+SKIPPED [1] etl-pipeline/tests/test_matchup_w12.py:82: Explicit frozen collection required
+SKIPPED [1] etl-pipeline/tests/test_matchup_w12.py:92: Explicit frozen collection required
+SKIPPED [1] etl-pipeline/tests/test_team_w12.py:47: Real frozen team bundle not operator configured
+SKIPPED [1] etl-pipeline/tests/test_team_w12.py:69: Real frozen team bundle required
+57 passed, 4 skipped in 77.17s (0:01:17)

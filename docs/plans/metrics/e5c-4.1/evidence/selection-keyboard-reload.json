@@ -1,0 +1,10 @@
+{
+  "identityBefore": "sha256:f83bb3b85ce7546bcefe4c05b2363304137242d740a47fb80265387cb8256e25",
+  "identityAfter": "sha256:f83bb3b85ce7546bcefe4c05b2363304137242d740a47fb80265387cb8256e25",
+  "directionPreserved": "true",
+  "focus": {
+    "focused": true,
+    "outline": "solid"
+  },
+  "observationRequestsOnDirectionChange": 0
+}

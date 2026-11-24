@@ -1,0 +1,13 @@
+{
+  "reference": "http://127.0.0.1:18103/?view=matchup-reading",
+  "new": "http://127.0.0.1:18104/?view=matchup-w12&game=2026_01_NYJ_TEN",
+  "oldPin": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "newPin": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "originalEpaEqual": true,
+  "epaUnitPopulationsEqual": true,
+  "thirdUnitsEqual": true,
+  "campaignEvidenceEqual": true,
+  "weeklyPointsAndPooledEqual": true,
+  "marketEqual": true,
+  "changes": "New contract/operation policy; generic factual wording, calendar binding, temporal context, routes and 32 matchups; approved visual structure retained"
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "case": "visual-zoom200",
+    "scale": 2,
+    "visibleWidth": 712.5,
+    "width": 1440
+  },
+  {
+    "case": "text200-home-1440",
+    "identities": [
+      {
+        "logo": [
+          129.515625,
+          293.671875
+        ],
+        "overlap": false,
+        "score": [
+          306.6796875,
+          524.5
+        ],
+        "wing": [
+          72.5,
+          552.5
+        ]
+      },
+      {
+        "logo": [
+          787.25,
+          1004.5
+        ],
+        "overlap": true,
+        "score": [
+          589.5,
+          807.3203125
+        ],
+        "wing": [
+          552.5,
+          1032.5
+        ]
+      }
+    ],
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "case": "text200-home-390",
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "case": "text200-identity-after",
+    "measure": [
+      {
+        "labelScoreOverlap": false,
+        "logoScoreOverlap": false
+      },
+      {
+        "labelScoreOverlap": false,
+        "logoScoreOverlap": false
+      }
+    ]
+  },
+  {
+    "case": "text200-matchup-390",
+    "client": 390,
+    "scroll": 390,
+    "width": 390
+  },
+  {
+    "case": "skip-link",
+    "focus": "main"
+  },
+  {
+    "case": "keyboard-focus",
+    "outline": "rgb(23, 70, 106) solid 3px",
+    "text": "Todos",
+    "visible": true
+  },
+  {
+    "case": "keyboard-actions",
+    "url": "http://127.0.0.1:18087/confronto/dallas-new-england?round=7&period=second&play=pass&details=open",
+    "details": "true"
+  },
+  {
+    "case": "reduced-motion",
+    "reduced": true,
+    "transition": "0s"
+  }
+]

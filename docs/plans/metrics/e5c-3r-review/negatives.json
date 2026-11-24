@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "case": "invented_epa",
+      "disposableCopy": true,
+      "externallyRehashed": true,
+      "outcome": "REFUSED",
+      "reason": "Observation derivation differs from accepted originals/nominal request"
+    },
+    {
+      "case": "missing_dependency",
+      "disposableCopy": true,
+      "externallyRehashed": false,
+      "outcome": "REFUSED",
+      "reason": "Package file/dependency missing or unexpected"
+    },
+    {
+      "case": "mandatory_field_removed",
+      "disposableCopy": true,
+      "externallyRehashed": true,
+      "outcome": "REFUSED",
+      "reason": "Observation derivation differs from accepted originals/nominal request"
+    },
+    {
+      "case": "mandatory_limit_removed",
+      "disposableCopy": true,
+      "externallyRehashed": true,
+      "outcome": "REFUSED",
+      "reason": "Observation derivation differs from accepted originals/nominal request"
+    },
+    {
+      "case": "isolated_extract",
+      "disposableCopy": true,
+      "externallyRehashed": false,
+      "outcome": "REFUSED",
+      "reason": "Package file/dependency missing or unexpected"
+    },
+    {
+      "case": "wrong_pin",
+      "disposableCopy": true,
+      "outcome": "REFUSED",
+      "reason": "BUNDLE_ID_MISMATCH"
+    }
+  ],
+  "preservedBundleUnchanged": true,
+  "proof": "REAL_BUNDLE_DISPOSABLE_COUNTEREXAMPLES"
+}

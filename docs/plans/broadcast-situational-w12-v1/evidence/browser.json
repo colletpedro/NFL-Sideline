@@ -1,0 +1,259 @@
+{
+  "origin": "http://127.0.0.1:18098",
+  "flows": [
+    {
+      "name": "NYJ defense inclusive RZ",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=2026%2FREG%2F1%2C2&analysis=redzone",
+      "id": "NYJ/def/1-2",
+      "family": "redzone",
+      "rate": "60,0%",
+      "ratio": "3 / 5",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "NYJ defense inclusive thirds",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=2026%2FREG%2F1%2C2&analysis=third",
+      "id": "NYJ/def/1-2",
+      "family": "third",
+      "rate": "23,8%",
+      "ratio": "5 / 21",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "reload preserves full selection",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=2026%2FREG%2F1%2C2&analysis=third",
+      "id": "NYJ/def/1-2",
+      "family": "third",
+      "rate": "23,8%",
+      "ratio": "5 / 21",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "back restores redzone",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=2026%2FREG%2F1%2C2&analysis=redzone",
+      "id": "NYJ/def/1-2",
+      "family": "redzone",
+      "rate": "60,0%",
+      "ratio": "3 / 5",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "forward restores thirds",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=2026%2FREG%2F1%2C2&analysis=third",
+      "id": "NYJ/def/1-2",
+      "family": "third",
+      "rate": "23,8%",
+      "ratio": "5 / 21",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "Keyboard summary",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=2026%2FREG%2F1%2C2&analysis=summary&entry=w12-expansion-v1&observation=sha256%3A30b8803c3392391f0a723524323a3c50af58208285de1ea2353b07b1cccf0d9f",
+      "fundamentoVisible": 1
+    },
+    {
+      "name": "keyboard thirds restores period and side",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=2026%2FREG%2F1%2C2&analysis=third",
+      "id": "NYJ/def/1-2",
+      "family": "third",
+      "rate": "23,8%",
+      "ratio": "5 / 21",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "rapid family side period switches",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=game&analysis=third",
+      "id": "NYJ/def/1",
+      "family": "third",
+      "rate": "33,3%",
+      "ratio": "4 / 12",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "rapid switches use frozen in-memory snapshot",
+      "networkRequests": 0
+    },
+    {
+      "name": "redzone320 individual defense",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=def&play=classified_pass&reading=game&analysis=redzone",
+      "id": "NYJ/def/1",
+      "family": "redzone",
+      "rate": "100,0%",
+      "ratio": "1 / 1",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "search keyboard MIN W2 thirds",
+      "url": "http://127.0.0.1:18098/?season=2026&week=2&analysis=third&game=2026_02_MIN_CHI&team=MIN&q=Minnesota&scope=season",
+      "id": "MIN/off/2",
+      "family": "third",
+      "rate": "25,0%",
+      "ratio": "3 / 12",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "MIN W2 redzone",
+      "url": "http://127.0.0.1:18098/?season=2026&week=2&analysis=redzone&game=2026_02_MIN_CHI&team=MIN&q=Minnesota&scope=season&reading=game",
+      "id": "MIN/off/2",
+      "family": "redzone",
+      "rate": "0,0%",
+      "ratio": "0 / 1",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "return to search",
+      "url": "http://127.0.0.1:18098/?season=2026&week=2&analysis=redzone&team=MIN&q=Minnesota&scope=season",
+      "query": "Minnesota"
+    },
+    {
+      "name": "real ATL zero opportunities",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_ATL_PIT&team=ATL&analysis=redzone",
+      "id": "ATL/off/1",
+      "family": "redzone",
+      "rate": "Sem taxa",
+      "ratio": "0 / 0",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "switch participant PIT",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_ATL_PIT&team=PIT&analysis=redzone&reading=game",
+      "id": "PIT/off/1",
+      "family": "redzone",
+      "rate": "50,0%",
+      "ratio": "1 / 2",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "W3 source absent",
+      "url": "http://127.0.0.1:18098/?season=2026&week=3&game=2026_03_BAL_DAL&team=BAL&analysis=redzone",
+      "text": "Sem fonte situacional deste jogo.\n\nO PBP preservado desta entrega contém somente 2026 REG W1–2. Este calendário não demonstra fonte para a semana 3. Ausência de fonte não é zero oportunidades.",
+      "numericPanel": 0
+    },
+    {
+      "name": "invalid team URL",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=INVALID&analysis=third",
+      "numericPanel": 0
+    },
+    {
+      "name": "invalid analysis URL",
+      "numericPanel": 0
+    },
+    {
+      "name": "final redzone W1",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=off&analysis=redzone&reading=game",
+      "id": "NYJ/off/1",
+      "family": "redzone",
+      "rate": "66,7%",
+      "ratio": "2 / 3",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "final third W1",
+      "url": "http://127.0.0.1:18098/?season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=off&analysis=third&reading=game",
+      "id": "NYJ/off/1",
+      "family": "third",
+      "rate": "20,0%",
+      "ratio": "2 / 10",
+      "realRawAuditMatched": true
+    },
+    {
+      "name": "keyboard methodology expands",
+      "open": true,
+      "text200NoOverflow": true
+    }
+  ],
+  "layouts": [
+    {
+      "name": "redzone-def-inclusive-390",
+      "fontSize": "16px",
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "name": "third-def-inclusive-320",
+      "fontSize": "16px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "third-320-text200",
+      "fontSize": "32px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "third-320-text200-refined",
+      "fontSize": "32px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "redzone-320",
+      "fontSize": "16px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "min-redzone-w2-390",
+      "fontSize": "16px",
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "name": "zero-opportunities-390",
+      "fontSize": "16px",
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "name": "source-absent-320",
+      "fontSize": "16px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "redzone-1440-final",
+      "fontSize": "16px",
+      "height": 1000,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "name": "third-1440-final",
+      "fontSize": "16px",
+      "height": 1000,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "name": "third-320-final",
+      "fontSize": "16px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "redzone-320-text200",
+      "fontSize": "32px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "name": "redzone-320-text200-refined",
+      "fontSize": "32px",
+      "height": 844,
+      "scrollWidth": 305,
+      "width": 320
+    }
+  ],
+  "humanAcceptance": "PENDING"
+}

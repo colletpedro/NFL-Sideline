@@ -1,0 +1,52 @@
+[
+  {
+    "team": "PIT",
+    "url": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+    "source": "Same ESPN 500px variant already referenced in public snapshot team registry; copied as asset only",
+    "sha256": "806bcb72e75ed184a99bea34df458e6cd87145fc9a863945f3356b01122aeb6f",
+    "bytes": 56620,
+    "width": 500,
+    "height": 500,
+    "retrievedAt": "2026-10-21T18:40:45.684924+00:00"
+  },
+  {
+    "team": "GB",
+    "url": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",
+    "source": "Same ESPN 500px variant already referenced in public snapshot team registry; copied as asset only",
+    "sha256": "7ea8154cdbff5db84d248f235c1f1c78a1a8b4cb8c14335b5886ec10ee20b00e",
+    "bytes": 39188,
+    "width": 500,
+    "height": 500,
+    "retrievedAt": "2026-10-21T18:40:45.950225+00:00"
+  },
+  {
+    "team": "CHI",
+    "url": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png",
+    "source": "Same ESPN 500px variant already referenced in public snapshot team registry; copied as asset only",
+    "sha256": "fd7b5a207b9ad443f950b384d43dba6cb367c5737ad50a51a15e3893fa31753b",
+    "bytes": 93593,
+    "width": 500,
+    "height": 500,
+    "retrievedAt": "2026-10-21T18:40:46.228919+00:00"
+  },
+  {
+    "team": "KC",
+    "url": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+    "source": "Same ESPN 500px variant already referenced in public snapshot team registry; copied as asset only",
+    "sha256": "3d77958dc6373768919bb2681cbe1b143f56c07a1f013460def665a5026a7f3d",
+    "bytes": 40228,
+    "width": 500,
+    "height": 500,
+    "retrievedAt": "2026-10-21T18:40:46.346855+00:00"
+  },
+  {
+    "team": "BUF",
+    "url": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
+    "source": "Same ESPN 500px variant already referenced in public snapshot team registry; copied as asset only",
+    "sha256": "79b71e2f536ee29f9d23834e89828883af2d95bf6968cbd07a505444229cdd20",
+    "bytes": 38004,
+    "width": 500,
+    "height": 500,
+    "retrievedAt": "2026-10-21T18:40:46.454501+00:00"
+  }
+]

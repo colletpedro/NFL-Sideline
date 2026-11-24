@@ -1,0 +1,138 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "BAL",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "POSITIVE_CONVERGENCE"
+    },
+    "claim_id" : "BAL:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:BAL:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:DAL:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "BAL",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "POSITIVE_CONVERGENCE"
+    },
+    "claim_id" : "BAL:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:BAL:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:DAL:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "DAL",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "DAL:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:DAL:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:BAL:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "DAL",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "DAL:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:DAL:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:BAL:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "BAL",
+    "predicate" : "SAMPLE_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:BAL:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:BAL:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:DAL:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "BAL",
+    "predicate" : "SAMPLE_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:BAL:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:BAL:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:DAL:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "BAL:OFF_EPA_PASS", "BAL:OFF_EPA_RUSH" ],
+    "vantagem_tatica" : [ "BAL:OFF_EPA_PASS", "BAL:OFF_EPA_RUSH" ],
+    "alerta_vermelho" : [ "limit:BAL:OFF_EPA_PASS", "limit:BAL:OFF_EPA_RUSH" ],
+    "veredito" : [ "BAL:OFF_EPA_PASS", "BAL:OFF_EPA_RUSH", "DAL:OFF_EPA_PASS", "DAL:OFF_EPA_RUSH", "limitation", "limit:BAL:OFF_EPA_PASS", "limit:BAL:OFF_EPA_RUSH" ]
+  },
+  "links" : [ {
+    "from" : "limit:BAL:OFF_EPA_PASS",
+    "to" : "BAL:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:BAL:OFF_EPA_RUSH",
+    "to" : "BAL:OFF_EPA_RUSH",
+    "relation" : "INTERNAL_LIMITATION"
+  } ],
+  "groupings" : [ {
+    "candidateId" : "BAL:OFF_EPA_PLAY",
+    "representedBy" : [ "BAL:OFF_EPA_PASS", "BAL:OFF_EPA_RUSH" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  }, {
+    "candidateId" : "DAL:OFF_EPA_PLAY",
+    "representedBy" : [ "DAL:OFF_EPA_PASS" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  } ],
+  "contract_version" : 5,
+  "thesis_team" : "NONE"
+}

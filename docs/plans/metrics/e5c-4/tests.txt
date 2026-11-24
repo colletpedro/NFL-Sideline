@@ -1,0 +1,23 @@
+
+> web-ui@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/visual-reading-e5c4/NFL Sideline/web-ui
+
+ ✓ src/services/calendar.test.ts (9 tests) 3ms
+ ✓ src/services/runtimeClient.test.ts (2 tests) 2ms
+ ✓ src/services/staticDataClient.test.ts (8 tests) 8ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 44ms
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 30ms
+ ✓ src/services/api.test.ts (2 tests) 2ms
+ ✓ src/services/market.test.tsx (14 tests) 27ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 9ms
+ ✓ local-editorial/local.test.tsx (7 tests) 13ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 97ms
+
+ Test Files  10 passed (10)
+      Tests  137 passed (137)
+   Start at  01:32:11
+   Duration  937ms (transform 1.09s, setup 0ms, collect 2.51s, tests 235ms, environment 1ms, prepare 976ms)
+

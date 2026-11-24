@@ -1,0 +1,39 @@
+{
+  "candidateHead": "6f2ad34eb7dc6a04e031acd352ec8f7151559aaa",
+  "finalIntegratedProofPassed": true,
+  "historicalUntrackedFilesPreserved": 36,
+  "initialCandidateInstanceShutdown": {
+    "filesPreserved": true,
+    "pgCtlStatus": 3,
+    "pidAbsent": true,
+    "portBindReleased": true
+  },
+  "initialCandidateProofPassed": true,
+  "integrationTestedHead": "8391b8823bc2aa7eb8daedf1e443f10ff507ff2f",
+  "javaBuild": "OFFLINE_CLEAN_PACKAGE_TESTS_SKIPPED_JAVA_UNCHANGED",
+  "javaJarSha256": "02570bb30f5700873bc021c4152674ac1df57d78662f0eb9ac79c3ac3b4c0c65",
+  "mainHead": "5096a585f0cc5455160ff9c2ee64555cfcb59fc0",
+  "oldJavaLogWhitespaceLinesCleaned": 9,
+  "originalJavaLogSha256": "b0fe1e262c6e65692031f122512cfcabd838bbfdbc0a080ec945b4e444dc35fc",
+  "protectedPathsUnchanged": [
+    "contracts/metrics/e5a-v1",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_materialization",
+    "etl-pipeline/src/nfl_sideline_etl/temporal_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/seasons.py",
+    "etl-pipeline/load_games.py",
+    "etl-pipeline/load_metrics.py",
+    "etl-pipeline/seed_teams.py",
+    "etl-pipeline/run_local.py",
+    "supabase",
+    "core-api",
+    "web-ui",
+    ".github",
+    "Spec.md"
+  ],
+  "reviewFixCommit": "8391b8823bc2aa7eb8daedf1e443f10ff507ff2f",
+  "sourceHashesChecked": 52,
+  "startAcknowledgementRegression": "SIMULATED_CONDITION_TWO_TESTS_PASSED_NOT_A_REAL_NETWORK_FAILURE",
+  "updatedJavaLogSha256": "b0294692eff2292a095fa0e0586370a80c865820f7b428663c35479d74944fc7"
+}

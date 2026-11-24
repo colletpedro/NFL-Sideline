@@ -1,0 +1,260 @@
+{
+  "rawRows": 5489,
+  "thirdCandidates": 882,
+  "fields": {
+    "third_down_converted": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 1.0,
+          "count": 323
+        },
+        {
+          "value": 0.0,
+          "count": 559
+        }
+      ]
+    },
+    "third_down_failed": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 400
+        },
+        {
+          "value": 1.0,
+          "count": 482
+        }
+      ]
+    },
+    "play_deleted": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 882
+        }
+      ]
+    },
+    "aborted_play": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 877
+        },
+        {
+          "value": 1.0,
+          "count": 5
+        }
+      ]
+    },
+    "qb_kneel": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 869
+        },
+        {
+          "value": 1.0,
+          "count": 13
+        }
+      ]
+    },
+    "qb_spike": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 882
+        }
+      ]
+    },
+    "first_down_penalty": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 839
+        },
+        {
+          "value": 1.0,
+          "count": 43
+        }
+      ]
+    },
+    "sack": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 824
+        },
+        {
+          "value": 1.0,
+          "count": 58
+        }
+      ]
+    },
+    "qb_scramble": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 1.0,
+          "count": 45
+        },
+        {
+          "value": 0.0,
+          "count": 837
+        }
+      ]
+    },
+    "qb_dropback": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 1.0,
+          "count": 635
+        },
+        {
+          "value": 0.0,
+          "count": 247
+        }
+      ]
+    },
+    "pass_attempt": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 0.0,
+          "count": 290
+        },
+        {
+          "value": 1.0,
+          "count": 592
+        }
+      ]
+    },
+    "rush_attempt": {
+      "nulls": 0,
+      "values": [
+        {
+          "value": 1.0,
+          "count": 213
+        },
+        {
+          "value": 0.0,
+          "count": 669
+        }
+      ]
+    }
+  },
+  "thirdTypes": {
+    "run": 200,
+    "pass": 592,
+    "qb_kneel": 13,
+    "no_play": 75,
+    "field_goal": 2
+  },
+  "conversionFlagGroups": [
+    {
+      "playType": "field_goal",
+      "converted": 0.0,
+      "failed": 0.0,
+      "penaltyFirstDown": 0.0,
+      "rows": 2
+    },
+    {
+      "playType": "no_play",
+      "converted": 0.0,
+      "failed": 0.0,
+      "penaltyFirstDown": 0.0,
+      "rows": 48
+    },
+    {
+      "playType": "no_play",
+      "converted": 0.0,
+      "failed": 0.0,
+      "penaltyFirstDown": 1.0,
+      "rows": 27
+    },
+    {
+      "playType": "pass",
+      "converted": 0.0,
+      "failed": 1.0,
+      "penaltyFirstDown": 0.0,
+      "rows": 368
+    },
+    {
+      "playType": "pass",
+      "converted": 0.0,
+      "failed": 1.0,
+      "penaltyFirstDown": 1.0,
+      "rows": 2
+    },
+    {
+      "playType": "pass",
+      "converted": 1.0,
+      "failed": 0.0,
+      "penaltyFirstDown": 0.0,
+      "rows": 215
+    },
+    {
+      "playType": "pass",
+      "converted": 1.0,
+      "failed": 0.0,
+      "penaltyFirstDown": 1.0,
+      "rows": 7
+    },
+    {
+      "playType": "qb_kneel",
+      "converted": 0.0,
+      "failed": 1.0,
+      "penaltyFirstDown": 0.0,
+      "rows": 13
+    },
+    {
+      "playType": "run",
+      "converted": 0.0,
+      "failed": 1.0,
+      "penaltyFirstDown": 0.0,
+      "rows": 95
+    },
+    {
+      "playType": "run",
+      "converted": 0.0,
+      "failed": 1.0,
+      "penaltyFirstDown": 1.0,
+      "rows": 4
+    },
+    {
+      "playType": "run",
+      "converted": 1.0,
+      "failed": 0.0,
+      "penaltyFirstDown": 0.0,
+      "rows": 98
+    },
+    {
+      "playType": "run",
+      "converted": 1.0,
+      "failed": 0.0,
+      "penaltyFirstDown": 1.0,
+      "rows": 3
+    }
+  ],
+  "positiveThirdFlagsOutsideDown3": 0,
+  "duplicateGamePlayIds": 0,
+  "flagsRetainedOnNullifiedScrambles": [
+    {
+      "gameId": "2026_02_MIA_SF",
+      "playId": 3490.0
+    },
+    {
+      "gameId": "2026_02_WAS_DAL",
+      "playId": 3116.0
+    }
+  ],
+  "distanceMissing": 0
+}

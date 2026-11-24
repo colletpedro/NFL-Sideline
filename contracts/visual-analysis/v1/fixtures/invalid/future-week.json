@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "visual-analysis-1.0.0",
+  "projectorVersion": "visual-projector-1.0.0",
+  "mode": "LOCAL_RULES_DEVELOPMENT",
+  "publicationApproved": false,
+  "source": {
+    "kind": "CONTRACT_FIXTURE",
+    "fixtureId": "opportunity"
+  },
+  "game": {
+    "gameId": "2026_04_AAA_BBB",
+    "season": 2026,
+    "week": 4,
+    "phase": "REG",
+    "awayTeam": "AAA",
+    "homeTeam": "BBB"
+  },
+  "scope": {
+    "moment": "PREGAME",
+    "declaredAsOfDate": null,
+    "temporalGuarantee": "WEEK_ORDER_ONLY",
+    "expectedCurrentWeeks": [
+      1,
+      2,
+      3
+    ],
+    "opponentAdjusted": false
+  },
+  "evidence": [
+    {
+      "id": "tw:2026:1:AAA:OFF_EPA_PASS",
+      "metric": "OFF_EPA_PASS",
+      "team": "AAA",
+      "season": 2026,
+      "week": 5,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "0.1",
+      "displayValue": "+0,100",
+      "unit": "EPA_PER_PLAY",
+      "plays": null
+    },
+    {
+      "id": "tw:2026:2:AAA:OFF_EPA_PASS",
+      "metric": "OFF_EPA_PASS",
+      "team": "AAA",
+      "season": 2026,
+      "week": 2,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "0.2",
+      "displayValue": "+0,200",
+      "unit": "EPA_PER_PLAY",
+      "plays": null
+    },
+    {
+      "id": "tw:2026:3:AAA:OFF_EPA_PASS",
+      "metric": "OFF_EPA_PASS",
+      "team": "AAA",
+      "season": 2026,
+      "week": 3,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "0.3",
+      "displayValue": "+0,300",
+      "unit": "EPA_PER_PLAY",
+      "plays": null
+    },
+    {
+      "id": "tw:2026:1:BBB:DEF_EPA_PASS",
+      "metric": "DEF_EPA_PASS",
+      "team": "BBB",
+      "season": 2026,
+      "week": 1,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "0.3",
+      "displayValue": "+0,300",
+      "unit": "EPA_PER_PLAY",
+      "plays": null
+    },
+    {
+      "id": "tw:2026:2:BBB:DEF_EPA_PASS",
+      "metric": "DEF_EPA_PASS",
+      "team": "BBB",
+      "season": 2026,
+      "week": 2,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "0.2",
+      "displayValue": "+0,200",
+      "unit": "EPA_PER_PLAY",
+      "plays": null
+    },
+    {
+      "id": "tw:2026:3:BBB:DEF_EPA_PASS",
+      "metric": "DEF_EPA_PASS",
+      "team": "BBB",
+      "season": 2026,
+      "week": 3,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "0.1",
+      "displayValue": "+0,100",
+      "unit": "EPA_PER_PLAY",
+      "plays": null
+    }
+  ],
+  "series": [
+    {
+      "id": "s:AAA:OFF:PASS",
+      "evidenceIds": [
+        "tw:2026:1:AAA:OFF_EPA_PASS",
+        "tw:2026:2:AAA:OFF_EPA_PASS",
+        "tw:2026:3:AAA:OFF_EPA_PASS"
+      ]
+    },
+    {
+      "id": "s:BBB:DEF:PASS",
+      "evidenceIds": [
+        "tw:2026:1:BBB:DEF_EPA_PASS",
+        "tw:2026:2:BBB:DEF_EPA_PASS",
+        "tw:2026:3:BBB:DEF_EPA_PASS"
+      ]
+    }
+  ],
+  "encounters": [
+    {
+      "id": "AAA:PASS",
+      "attackTeam": "AAA",
+      "defenseTeam": "BBB",
+      "foundation": "PASS",
+      "attackSeriesId": "s:AAA:OFF:PASS",
+      "defenseSeriesId": "s:BBB:DEF:PASS",
+      "state": "COMPARABLE",
+      "unavailableReason": null,
+      "representedByFindingIds": []
+    },
+    {
+      "id": "AAA:RUSH",
+      "attackTeam": "AAA",
+      "defenseTeam": "BBB",
+      "foundation": "RUSH",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "AAA:GENERAL",
+      "attackTeam": "AAA",
+      "defenseTeam": "BBB",
+      "foundation": "GENERAL",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "BBB:PASS",
+      "attackTeam": "BBB",
+      "defenseTeam": "AAA",
+      "foundation": "PASS",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "BBB:RUSH",
+      "attackTeam": "BBB",
+      "defenseTeam": "AAA",
+      "foundation": "RUSH",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    },
+    {
+      "id": "BBB:GENERAL",
+      "attackTeam": "BBB",
+      "defenseTeam": "AAA",
+      "foundation": "GENERAL",
+      "attackSeriesId": null,
+      "defenseSeriesId": null,
+      "state": "UNAVAILABLE",
+      "unavailableReason": "MISSING_BOTH",
+      "representedByFindingIds": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "f:AAA:PASS",
+      "claimId": "fixture:claim:AAA:PASS",
+      "encounterId": "AAA:PASS",
+      "relation": "POSITIVE_CONVERGENCE",
+      "attackPattern": "ALL_POSITIVE",
+      "defensePattern": "ALL_POSITIVE",
+      "title": "EPA positivo no ataque e no permitido pela defesa",
+      "summary": "Sinais compatíveis com uma oportunidade localizada; não demonstram exploração no jogo.",
+      "primaryRestrictionId": "r:AAA:PASS"
+    }
+  ],
+  "restrictions": [
+    {
+      "id": "r:temporal",
+      "claimId": null,
+      "code": "TEMPORAL_AVAILABILITY_UNKNOWN",
+      "encounterIds": [],
+      "evidenceIds": [],
+      "text": "Corte por semanas; disponibilidade histórica na data da análise não verificada."
+    },
+    {
+      "id": "r:adjustment",
+      "claimId": null,
+      "code": "NO_OPPONENT_ADJUSTMENT",
+      "encounterIds": [],
+      "evidenceIds": [],
+      "text": "Recortes sem ajuste por adversário. Esta análise não estima vencedor."
+    },
+    {
+      "id": "r:AAA:PASS",
+      "claimId": "fixture:limit:AAA:PASS",
+      "code": "LIMITED_SCOPE",
+      "encounterIds": [
+        "AAA:PASS"
+      ],
+      "evidenceIds": [
+        "tw:2026:1:AAA:OFF_EPA_PASS",
+        "tw:2026:2:AAA:OFF_EPA_PASS",
+        "tw:2026:3:AAA:OFF_EPA_PASS",
+        "tw:2026:1:BBB:DEF_EPA_PASS",
+        "tw:2026:2:BBB:DEF_EPA_PASS",
+        "tw:2026:3:BBB:DEF_EPA_PASS"
+      ],
+      "text": "O recorte observado não estabelece uma característica permanente."
+    }
+  ],
+  "links": [],
+  "presentation": {
+    "highlightFindingIds": [
+      "f:AAA:PASS"
+    ],
+    "equivalentHighlightGroups": [],
+    "globalRestrictionIds": [
+      "r:temporal",
+      "r:adjustment"
+    ],
+    "chartPolicy": "SHARED_SYMMETRIC_ZERO_V1"
+  }
+}

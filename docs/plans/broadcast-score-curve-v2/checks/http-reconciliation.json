@@ -1,0 +1,10 @@
+{
+  "httpChecks": 150,
+  "oldSeasonDocuments": 140,
+  "sourceStoryUnchanged": true,
+  "turnovers": 262,
+  "games": 107,
+  "sourceScoringEvents": 1418,
+  "divergences": 0,
+  "pin": "sha256:86fd64d2e3ac628cf8a99ca1befe95d4528e8cf7acba1f4937235fe9fb3f7ecd"
+}

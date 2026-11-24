@@ -1,0 +1,6 @@
+{
+  "bound": false,
+  "error": "PermissionError",
+  "errno": 1,
+  "message": "[Errno 1] Operation not permitted"
+}

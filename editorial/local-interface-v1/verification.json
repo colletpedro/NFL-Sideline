@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-05",
+  "baseCommit": "0eb25a0eb3ec774df10831a1ef5201d2f4a2f92e",
+  "java": {
+    "gate": "Java 21 mvn -f core-api/pom.xml -o clean verify",
+    "tests": 118,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "historicalParityCases": 21
+  },
+  "frontend": {
+    "tests": 48,
+    "lint": "PASS",
+    "build": "PASS",
+    "editorialBuildRejected": true,
+    "editorialProductionModeRejected": true,
+    "publicBundleLocalMarkersAbsent": true
+  },
+  "python": {
+    "runtime": "etl-pipeline/.venv/bin/python (3.11)",
+    "tests": 15,
+    "result": "PASS",
+    "initialSystemPython": "Failed to import polars; rerun with existing ETL virtualenv passed; no dependency installation"
+  },
+  "http": {
+    "transport": "real HTTP on loopback",
+    "catalogCount": 16,
+    "checks": [
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/",
+        "status": 200
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/",
+        "status": 200
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF?x=1",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/%2e%2e",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "OPTIONS",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 403
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/missing/attempts",
+        "status": 404
+      },
+      {
+        "port": 18081,
+        "method": "GET",
+        "path": "/api/v1/local-analysis/",
+        "status": 400
+      },
+      {
+        "port": 18081,
+        "method": "GET",
+        "path": "/api/v1/local-analysis/",
+        "status": 200
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/2026_03_ARI_SF/attempts",
+        "status": 200
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 201
+      },
+      {
+        "port": 18083,
+        "method": "POST",
+        "path": "/__editorial/2026_03_ARI_SF",
+        "status": 201
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/2026_03_ARI_SF/a03ddd9f-83be-46eb-98c4-46099bce0604",
+        "status": 200
+      },
+      {
+        "port": 18083,
+        "method": "GET",
+        "path": "/__editorial/2026_03_ARI_SF/attempts",
+        "status": 200
+      }
+    ],
+    "attempts": [
+      "a03ddd9f-83be-46eb-98c4-46099bce0604",
+      "b2e43691-80ad-4ac1-a8fe-f018d4ca0bb0"
+    ],
+    "status": "PASS"
+  },
+  "browser": {
+    "viewports": [
+      [
+        1440,
+        1000
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "flows": [
+      "API stopped: reconnect message",
+      "Reconnect loads 16 known contexts",
+      "BAL-DAL generation",
+      "Second generation preserves first",
+      "Retrieve first from history",
+      "API stopped: recoverable history error preserves displayed analysis",
+      "Restart API and reload page: retrieve original attempt",
+      "LV-NO generation on mobile with inequality and expanded audit"
+    ],
+    "horizontalOverflow": false,
+    "consoleAfterReload": {
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "protectedTrackedFilesUnchanged": 433,
+  "limits": [
+    "Known fixtures only; not independent editorial evaluation",
+    "No BASIC/FULL policy defined",
+    "Optional dates are source metadata, not point-in-time reconstruction",
+    "History scans and verifies the store; no pagination",
+    "Screenshots and generated attempts are local ignored artifacts"
+  ],
+  "commitPushDeploy": false
+}

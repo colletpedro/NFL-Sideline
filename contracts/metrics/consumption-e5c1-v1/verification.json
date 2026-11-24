@@ -1,0 +1,97 @@
+{
+  "candidate": true,
+  "base": "fed166d1682a818b0cca8dd11325ff23ea672c07",
+  "branch": "codex/metrics-consumption-e5c1",
+  "documentCommit": "886082f",
+  "initialWorktree": "CLEAN_AT_EXACT_BASE",
+  "commands": [
+    {
+      "command": "python3 -B contracts/metrics/consumption-e5c1-v1/verify.py",
+      "exitCode": 0,
+      "observations": 34,
+      "cases": 17,
+      "operationDecisions": 476,
+      "invalid": 12,
+      "schema": "Draft 2020-12"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s contracts/metrics/consumption-e5c1-v1 -p 'test_*.py'",
+      "exitCode": 0,
+      "tests": 12
+    },
+    {
+      "command": "git diff --check fed166d1682a818b0cca8dd11325ff23ea672c07",
+      "exitCode": 0
+    }
+  ],
+  "runtime": {
+    "python": "3.14.6",
+    "jsonschema": "4.26.0",
+    "installedForThisTask": false
+  },
+  "preservation": {
+    "trackedOutsidePackageChanged": [],
+    "originalHead": "fed166d1682a818b0cca8dd11325ff23ea672c07",
+    "originalStatusUnchanged": true,
+    "historicalUntrackedCount": 36,
+    "historicalHashesUnchanged": true,
+    "historicalHashes": {
+      "Handoff.md": "b9622fbd1d5c9fa0fc345abc014b873bfc645762aab36d2668825ff7a5c40e64",
+      "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/user-prompt.txt": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e",
+      "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/user-prompt.txt": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a",
+      "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/user-prompt.txt": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326",
+      "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/user-prompt.txt": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e",
+      "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/user-prompt.txt": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a",
+      "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/user-prompt.txt": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8",
+      "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/user-prompt.txt": "a0c7cbe1a185f13dc3eb7a65b91ade2ff0ff82f663e353cd88fd0833fd817326",
+      "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/user-prompt.txt": "5054e18589dd4e13937ef7b022ae6ba54cdc885dcd8869a43cae98fd008cd84e",
+      "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/user-prompt.txt": "fa244970f412d8122cb31101cbe7407f1103b27dbb0d67681a7a51cd8973229a",
+      "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/user-prompt.txt": "195ffbd3ff4aa95802738847148fbe663d8f243e1978937cc7f2abfcab352be8",
+      "editorial/evaluations/2026-09-26/diagnose_both_keys.py": "6cc1cd4b24bc318db90e014c081efebbcbf1e77c0730636cd8ac5f064bf5d4e5",
+      "editorial/evaluations/2026-09-26/diagnose_prod_key.py": "47eeb3356bf4e80749e5af3b78322ff73a883453ff201a2c5a29aad741d9742c",
+      "editorial/evaluations/2026-09-26/provenance/ClaimRenderer.baseline.java.txt": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643",
+      "editorial/evaluations/2026-09-26/provenance/PromptCatalog.baseline.java.txt": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976",
+      "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/ClaimRenderer.java.txt": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643",
+      "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/EvaluationApplication.java.txt": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78",
+      "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiClient.java.txt": "6b546badebbfeef7b0a177151af9a8ca7f27c79bdb9762cecb40b950dbaaecfe",
+      "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GeminiRequest.java.txt": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d",
+      "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/GenerationFailure.java.txt": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1",
+      "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/PromptCatalog.java.txt": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976",
+      "editorial/evaluations/2026-09-26/provenance/adjusted/ClaimRenderer.java.txt": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643",
+      "editorial/evaluations/2026-09-26/provenance/adjusted/EvaluationApplication.java.txt": "db0558bfc643c7f851ef7d6f5a2efbe0a8f12e74659a48a4326298c316494247",
+      "editorial/evaluations/2026-09-26/provenance/adjusted/GeminiRequest.java.txt": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d",
+      "editorial/evaluations/2026-09-26/provenance/adjusted/PromptCatalog.java.txt": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976",
+      "editorial/evaluations/2026-09-26/provenance/final/ClaimRenderer.java.txt": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643",
+      "editorial/evaluations/2026-09-26/provenance/final/EvaluationApplication.java.txt": "0e76d838e6f2f79833604f611252819b39474cf529b5537ada3253e54244db78",
+      "editorial/evaluations/2026-09-26/provenance/final/GeminiClient.java.txt": "73889cceac497594f504594fc1242379b777ccb67dbcf9f2cb534687133b77d5",
+      "editorial/evaluations/2026-09-26/provenance/final/GeminiRequest.java.txt": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d",
+      "editorial/evaluations/2026-09-26/provenance/final/GenerationFailure.java.txt": "8cde45da8906bfd963b181abb702abf372533c4053b0c90b4cab5867937e15a1",
+      "editorial/evaluations/2026-09-26/provenance/final/PromptCatalog.java.txt": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976",
+      "editorial/evaluations/2026-09-26/provenance/initial/ClaimRenderer.java.txt": "354587a2159118c1f272787b5eae567506525a7bdad460f7456d00629c889643",
+      "editorial/evaluations/2026-09-26/provenance/initial/EvaluationApplication.java.txt": "2c394dd66f345051a3177d0d3059b2adc06b825d4aab587985746315f0a9f0d8",
+      "editorial/evaluations/2026-09-26/provenance/initial/GeminiRequest.java.txt": "dd6b4940745ff8cc6040960f01de24a1d6165be79cfc41ec3989fe277e43243d",
+      "editorial/evaluations/2026-09-26/provenance/initial/PromptCatalog.java.txt": "7e5082be426cc02cf42e44cb064416b1546c56b3525a8acea12aa78b130c5976",
+      "editorial/evaluations/2026-09-26/run_authorized.py": "3cfe30c9048b7a4956ec0af561690a864e86c470340373834b439153324867a3"
+    }
+  },
+  "packageFileSha256": {
+    "CONTRACT.md": "42c3aa52a69c46a339ab0c613839548056f9fbf0f181bd23c6020e5f9173a2a7",
+    "DECISIONS.md": "65267649dfabf2b24b49c803f16564fb281f6df038b993fb9aead767d683686f",
+    "EXAMPLES.md": "ee3cf88af77e32b6b4fc94e6b9f72e8da3927fbcc84b9f74ccb52d3576e8587c",
+    "GUARANTEES.md": "8e699474a49813789422b079b176e84c70aef3ff09c8f8bf192acdd0ee600935",
+    "OPERATIONS.md": "d7ce242c422ef6200bb2739119ed37a45dabada23cc4293696e76f089afd8694",
+    "PROVENANCE.md": "00e360cb30ce58503e7b96a86879cbe6d11ff86af5c2bc839dfbc076c9108d1a",
+    "README.md": "cc5a467b64279efa46b6f8e4b67b8bae023c68441787f119d2326c74c60a9fa9",
+    "VERIFICATION.md": "91618ca38eaa2e5a568bcce67632db153a5a2dd4b686032424d9616022d54c3d",
+    "examples.json": "94654536696e0dadbd1232025e50f3b3bbfb7bdf19037ccce3ec26262f1f97cd",
+    "observation.schema.json": "85928f26c74cad5873479b781f15717376540aa69b8073578565257d17dc0100",
+    "test_contract.py": "846c004eb9bdc3d44aa0054974f90f6e9967eb015ef88cdcb82ea8e082273494",
+    "verify.py": "79f27bd2e7af2458d35778f160e62c2d11bdce6df275999ef7a8d0d3192376e7"
+  },
+  "limits": [
+    "synthetic fixtures are not provenance",
+    "no PBP recalculation or temporal selector",
+    "no operational suites repeated",
+    "no consumer integration or publication"
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "schemaVersion" : "visual-analysis-1.0.0",
+  "projectorVersion" : "visual-projector-1.0.0",
+  "mode" : "LOCAL_RULES_DEVELOPMENT",
+  "publicationApproved" : false,
+  "source" : {
+    "kind" : "VALIDATED_LOCAL_RESULT",
+    "resultIdentity" : "2e3a1b83b787ba85715b588d07bb751413fa0c758da48f006749c1031ce68ea8",
+    "contextSha256" : "f92882f0b83038db5b97503a998748bf4afc5f49e8d29ee3bc287653c6148d94",
+    "claimsContractVersion" : 5,
+    "selectorVersion" : "2.0.0"
+  },
+  "game" : {
+    "gameId" : "2026_03_KC_MIA",
+    "season" : 2026,
+    "week" : 3,
+    "phase" : "REG",
+    "awayTeam" : "KC",
+    "homeTeam" : "MIA"
+  },
+  "scope" : {
+    "moment" : "PREGAME",
+    "declaredAsOfDate" : "2026-09-22",
+    "temporalGuarantee" : "WEEK_ORDER_ONLY",
+    "expectedCurrentWeeks" : [ 1, 2 ],
+    "opponentAdjusted" : false
+  },
+  "evidence" : [ {
+    "id" : "tw:2026:1:KC:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.44941849297356384",
+    "displayValue" : "-0,449",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:KC:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.3438534488302752",
+    "displayValue" : "-0,344",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 46
+  }, {
+    "id" : "tw:2026:1:KC:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.10256191935990122",
+    "displayValue" : "-0,103",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:KC:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.07937349637153422",
+    "displayValue" : "-0,079",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:KC:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.1644273404200703",
+    "displayValue" : "+0,164",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 64
+  }, {
+    "id" : "tw:2026:1:KC:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.36643374804739975",
+    "displayValue" : "+0,366",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:MIA:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.013106488745309857",
+    "displayValue" : "+0,013",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:MIA:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.0391491414700979",
+    "displayValue" : "-0,039",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 64
+  }, {
+    "id" : "tw:2026:1:MIA:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.08525705048369299",
+    "displayValue" : "-0,085",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:MIA:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.288433956995324",
+    "displayValue" : "-0,288",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:MIA:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.2358898858888132",
+    "displayValue" : "-0,236",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 50
+  }, {
+    "id" : "tw:2026:1:MIA:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.14247820392168295",
+    "displayValue" : "-0,142",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:KC:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.1898822895365752",
+    "displayValue" : "+0,190",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:KC:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.15447865081683082",
+    "displayValue" : "+0,154",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 63
+  }, {
+    "id" : "tw:2026:2:KC:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.12018137580707844",
+    "displayValue" : "+0,120",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:KC:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.2739705127419756",
+    "displayValue" : "+0,274",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:KC:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.2289512070492979",
+    "displayValue" : "+0,229",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 78
+  }, {
+    "id" : "tw:2026:2:KC:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "KC",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.15288410432718735",
+    "displayValue" : "+0,153",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:MIA:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "1.060473342105979",
+    "displayValue" : "+1,060",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:MIA:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.46044827118872644",
+    "displayValue" : "+0,460",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 47
+  }, {
+    "id" : "tw:2026:2:MIA:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.06757379121845589",
+    "displayValue" : "-0,068",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:MIA:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.16495987969437334",
+    "displayValue" : "+0,165",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:MIA:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.0010013722625109103",
+    "displayValue" : "-0,001",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 56
+  }, {
+    "id" : "tw:2026:2:MIA:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "MIA",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.15551702063616177",
+    "displayValue" : "-0,156",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  } ],
+  "series" : [ {
+    "id" : "s:KC:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:KC:DEF_EPA_PLAY", "tw:2026:2:KC:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:KC:DEF:PASS",
+    "evidenceIds" : [ "tw:2026:1:KC:DEF_EPA_PASS", "tw:2026:2:KC:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:KC:DEF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:KC:DEF_EPA_RUSH", "tw:2026:2:KC:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:KC:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_PLAY", "tw:2026:2:KC:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:KC:OFF:PASS",
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_PASS", "tw:2026:2:KC:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:KC:OFF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_RUSH", "tw:2026:2:KC:OFF_EPA_RUSH" ]
+  }, {
+    "id" : "s:MIA:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:MIA:DEF_EPA_PLAY", "tw:2026:2:MIA:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:MIA:DEF:PASS",
+    "evidenceIds" : [ "tw:2026:1:MIA:DEF_EPA_PASS", "tw:2026:2:MIA:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:MIA:DEF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:MIA:DEF_EPA_RUSH", "tw:2026:2:MIA:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:MIA:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:MIA:OFF_EPA_PLAY", "tw:2026:2:MIA:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:MIA:OFF:PASS",
+    "evidenceIds" : [ "tw:2026:1:MIA:OFF_EPA_PASS", "tw:2026:2:MIA:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:MIA:OFF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:MIA:OFF_EPA_RUSH", "tw:2026:2:MIA:OFF_EPA_RUSH" ]
+  } ],
+  "encounters" : [ {
+    "id" : "KC:PASS",
+    "attackTeam" : "KC",
+    "defenseTeam" : "MIA",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:KC:OFF:PASS",
+    "defenseSeriesId" : "s:MIA:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "KC:RUSH",
+    "attackTeam" : "KC",
+    "defenseTeam" : "MIA",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:KC:OFF:RUSH",
+    "defenseSeriesId" : "s:MIA:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "KC:GENERAL",
+    "attackTeam" : "KC",
+    "defenseTeam" : "MIA",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:KC:OFF:GENERAL",
+    "defenseSeriesId" : "s:MIA:DEF:GENERAL",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "MIA:PASS",
+    "attackTeam" : "MIA",
+    "defenseTeam" : "KC",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:MIA:OFF:PASS",
+    "defenseSeriesId" : "s:KC:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "MIA:RUSH",
+    "attackTeam" : "MIA",
+    "defenseTeam" : "KC",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:MIA:OFF:RUSH",
+    "defenseSeriesId" : "s:KC:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "MIA:GENERAL",
+    "attackTeam" : "MIA",
+    "defenseTeam" : "KC",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:MIA:OFF:GENERAL",
+    "defenseSeriesId" : "s:KC:DEF:GENERAL",
+    "state" : "REPRESENTED_BY",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ "f:MIA:RUSH" ]
+  } ],
+  "findings" : [ {
+    "id" : "f:KC:PASS",
+    "claimId" : "KC:OFF_EPA_PASS",
+    "encounterId" : "KC:PASS",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "ALL_POSITIVE",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:KC:PASS"
+  }, {
+    "id" : "f:KC:RUSH",
+    "claimId" : "KC:OFF_EPA_RUSH",
+    "encounterId" : "KC:RUSH",
+    "relation" : "FAVORABLE_ATTACK_AND_DEFENSE",
+    "attackPattern" : "ALL_POSITIVE",
+    "defensePattern" : "ALL_NEGATIVE",
+    "title" : "Ataque e defesa com indicadores favoráveis",
+    "summary" : "O ataque produziu EPA positivo; a defesa permitiu EPA negativo. O recorte não estabelece quem prevalece.",
+    "primaryRestrictionId" : "r:KC:RUSH"
+  }, {
+    "id" : "f:KC:GENERAL",
+    "claimId" : "KC:OFF_EPA_PLAY",
+    "encounterId" : "KC:GENERAL",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "ALL_POSITIVE",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:KC:GENERAL"
+  }, {
+    "id" : "f:MIA:PASS",
+    "claimId" : "MIA:OFF_EPA_PASS",
+    "encounterId" : "MIA:PASS",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:MIA:PASS"
+  }, {
+    "id" : "f:MIA:RUSH",
+    "claimId" : "MIA:OFF_EPA_RUSH",
+    "encounterId" : "MIA:RUSH",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "ALL_NEGATIVE",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:MIA:RUSH"
+  } ],
+  "restrictions" : [ {
+    "id" : "r:temporal",
+    "claimId" : null,
+    "code" : "TEMPORAL_AVAILABILITY_UNKNOWN",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Corte por semanas; disponibilidade histórica na data da análise não verificada."
+  }, {
+    "id" : "r:adjustment",
+    "claimId" : null,
+    "code" : "NO_OPPONENT_ADJUSTMENT",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Recortes sem ajuste por adversário. Esta análise não estima vencedor."
+  }, {
+    "id" : "r:global",
+    "claimId" : "limitation",
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ "tw:2026:1:KC:DEF_EPA_PASS", "tw:2026:1:KC:DEF_EPA_PLAY", "tw:2026:1:KC:DEF_EPA_RUSH", "tw:2026:1:KC:OFF_EPA_PASS", "tw:2026:1:KC:OFF_EPA_PLAY", "tw:2026:1:KC:OFF_EPA_RUSH", "tw:2026:1:MIA:DEF_EPA_PASS", "tw:2026:1:MIA:DEF_EPA_PLAY", "tw:2026:1:MIA:DEF_EPA_RUSH", "tw:2026:1:MIA:OFF_EPA_PASS", "tw:2026:1:MIA:OFF_EPA_PLAY", "tw:2026:1:MIA:OFF_EPA_RUSH", "tw:2026:2:KC:DEF_EPA_PASS", "tw:2026:2:KC:DEF_EPA_PLAY", "tw:2026:2:KC:DEF_EPA_RUSH", "tw:2026:2:KC:OFF_EPA_PASS", "tw:2026:2:KC:OFF_EPA_PLAY", "tw:2026:2:KC:OFF_EPA_RUSH", "tw:2026:2:MIA:DEF_EPA_PASS", "tw:2026:2:MIA:DEF_EPA_PLAY", "tw:2026:2:MIA:DEF_EPA_RUSH", "tw:2026:2:MIA:OFF_EPA_PASS", "tw:2026:2:MIA:OFF_EPA_PLAY", "tw:2026:2:MIA:OFF_EPA_RUSH" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:KC:PASS",
+    "claimId" : "limit:KC:OFF_EPA_PASS",
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "KC:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_PASS", "tw:2026:2:KC:OFF_EPA_PASS", "tw:2026:1:MIA:DEF_EPA_PASS", "tw:2026:2:MIA:DEF_EPA_PASS" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:KC:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "KC:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_PASS", "tw:2026:2:KC:OFF_EPA_PASS", "tw:2026:1:MIA:DEF_EPA_PASS", "tw:2026:2:MIA:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:KC:RUSH",
+    "claimId" : "limit:KC:OFF_EPA_RUSH",
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ "KC:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_RUSH", "tw:2026:2:KC:OFF_EPA_RUSH", "tw:2026:1:MIA:DEF_EPA_RUSH", "tw:2026:2:MIA:DEF_EPA_RUSH" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:denominator:KC:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "KC:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_RUSH", "tw:2026:2:KC:OFF_EPA_RUSH", "tw:2026:1:MIA:DEF_EPA_RUSH", "tw:2026:2:MIA:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:KC:GENERAL",
+    "claimId" : null,
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "KC:GENERAL" ],
+    "evidenceIds" : [ "tw:2026:1:KC:OFF_EPA_PLAY", "tw:2026:2:KC:OFF_EPA_PLAY", "tw:2026:1:MIA:DEF_EPA_PLAY", "tw:2026:2:MIA:DEF_EPA_PLAY" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:MIA:PASS",
+    "claimId" : "limit:MIA:OFF_EPA_PASS",
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "MIA:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:MIA:OFF_EPA_PASS", "tw:2026:2:MIA:OFF_EPA_PASS", "tw:2026:1:KC:DEF_EPA_PASS", "tw:2026:2:KC:DEF_EPA_PASS" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:MIA:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "MIA:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:MIA:OFF_EPA_PASS", "tw:2026:2:MIA:OFF_EPA_PASS", "tw:2026:1:KC:DEF_EPA_PASS", "tw:2026:2:KC:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:MIA:RUSH",
+    "claimId" : "limit:MIA:OFF_EPA_RUSH",
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "MIA:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:MIA:OFF_EPA_RUSH", "tw:2026:2:MIA:OFF_EPA_RUSH", "tw:2026:1:KC:DEF_EPA_RUSH", "tw:2026:2:KC:DEF_EPA_RUSH" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:MIA:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "MIA:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:MIA:OFF_EPA_RUSH", "tw:2026:2:MIA:OFF_EPA_RUSH", "tw:2026:1:KC:DEF_EPA_RUSH", "tw:2026:2:KC:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  } ],
+  "links" : [ ],
+  "presentation" : {
+    "highlightFindingIds" : [ "f:KC:PASS", "f:KC:RUSH", "f:MIA:PASS", "f:MIA:RUSH" ],
+    "equivalentHighlightGroups" : [ [ "f:KC:PASS", "f:KC:RUSH", "f:MIA:PASS", "f:MIA:RUSH" ] ],
+    "globalRestrictionIds" : [ "r:temporal", "r:adjustment", "r:global" ],
+    "chartPolicy" : "SHARED_SYMMETRIC_ZERO_V1"
+  }
+}

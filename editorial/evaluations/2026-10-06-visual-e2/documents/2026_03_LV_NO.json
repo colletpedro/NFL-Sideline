@@ -1,0 +1,542 @@
+{
+  "schemaVersion" : "visual-analysis-1.0.0",
+  "projectorVersion" : "visual-projector-1.0.0",
+  "mode" : "LOCAL_RULES_DEVELOPMENT",
+  "publicationApproved" : false,
+  "source" : {
+    "kind" : "VALIDATED_LOCAL_RESULT",
+    "resultIdentity" : "75926d826296422688839469e0884c5958efcae96dc04787a90e00adfe4122ef",
+    "contextSha256" : "6c0e5a36be0dbb375ac266a28342ed2ad4b8051a9b123461db8efa6ac672267e",
+    "claimsContractVersion" : 5,
+    "selectorVersion" : "2.0.0"
+  },
+  "game" : {
+    "gameId" : "2026_03_LV_NO",
+    "season" : 2026,
+    "week" : 3,
+    "phase" : "REG",
+    "awayTeam" : "LV",
+    "homeTeam" : "NO"
+  },
+  "scope" : {
+    "moment" : "PREGAME",
+    "declaredAsOfDate" : "2026-09-22",
+    "temporalGuarantee" : "WEEK_ORDER_ONLY",
+    "expectedCurrentWeeks" : [ 1, 2 ],
+    "opponentAdjusted" : false
+  },
+  "evidence" : [ {
+    "id" : "tw:2026:1:LV:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.288433956995324",
+    "displayValue" : "-0,288",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:LV:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.2358898858888132",
+    "displayValue" : "-0,236",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 50
+  }, {
+    "id" : "tw:2026:1:LV:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.14247820392168295",
+    "displayValue" : "-0,142",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:LV:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.013106488745309857",
+    "displayValue" : "+0,013",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:LV:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.0391491414700979",
+    "displayValue" : "-0,039",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 64
+  }, {
+    "id" : "tw:2026:1:LV:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.08525705048369299",
+    "displayValue" : "-0,085",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:NO:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.018428114368014337",
+    "displayValue" : "+0,018",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:NO:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.00040982694171410976",
+    "displayValue" : "0 < EPA < 0,0005",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 73
+  }, {
+    "id" : "tw:2026:1:NO:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.021430521453801317",
+    "displayValue" : "-0,021",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:NO:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.016098134454466003",
+    "displayValue" : "-0,016",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:1:NO:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.03067701875351575",
+    "displayValue" : "-0,031",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 86
+  }, {
+    "id" : "tw:2026:1:NO:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 1,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.06624949644319714",
+    "displayValue" : "-0,066",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:LV:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.018771120971534928",
+    "displayValue" : "-0,019",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:LV:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.2610780212410818",
+    "displayValue" : "-0,261",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 62
+  }, {
+    "id" : "tw:2026:2:LV:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.48824074024378206",
+    "displayValue" : "-0,488",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:LV:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.19266906147447205",
+    "displayValue" : "+0,193",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:LV:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.09649105059279298",
+    "displayValue" : "-0,096",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 57
+  }, {
+    "id" : "tw:2026:2:LV:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "LV",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.4412588765191474",
+    "displayValue" : "-0,441",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NO:DEF_EPA_PASS",
+    "metric" : "DEF_EPA_PASS",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.10288045879708729",
+    "displayValue" : "+0,103",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NO:DEF_EPA_PLAY",
+    "metric" : "DEF_EPA_PLAY",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.11617504191805803",
+    "displayValue" : "+0,116",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 55
+  }, {
+    "id" : "tw:2026:2:NO:DEF_EPA_RUSH",
+    "metric" : "DEF_EPA_RUSH",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.13611691659951414",
+    "displayValue" : "+0,136",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NO:OFF_EPA_PASS",
+    "metric" : "OFF_EPA_PASS",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.29537792824557496",
+    "displayValue" : "+0,295",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  }, {
+    "id" : "tw:2026:2:NO:OFF_EPA_PLAY",
+    "metric" : "OFF_EPA_PLAY",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "0.14905746861808833",
+    "displayValue" : "+0,149",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : 64
+  }, {
+    "id" : "tw:2026:2:NO:OFF_EPA_RUSH",
+    "metric" : "OFF_EPA_RUSH",
+    "team" : "NO",
+    "season" : 2026,
+    "week" : 2,
+    "origin" : "CURRENT_SEASON_PRIOR_WEEKS",
+    "value" : "-0.051455753834393346",
+    "displayValue" : "-0,051",
+    "unit" : "EPA_PER_PLAY",
+    "plays" : null
+  } ],
+  "series" : [ {
+    "id" : "s:LV:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:LV:DEF_EPA_PLAY", "tw:2026:2:LV:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:LV:DEF:PASS",
+    "evidenceIds" : [ "tw:2026:1:LV:DEF_EPA_PASS", "tw:2026:2:LV:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:LV:DEF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:LV:DEF_EPA_RUSH", "tw:2026:2:LV:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:LV:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_PLAY", "tw:2026:2:LV:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:LV:OFF:PASS",
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_PASS", "tw:2026:2:LV:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:LV:OFF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_RUSH", "tw:2026:2:LV:OFF_EPA_RUSH" ]
+  }, {
+    "id" : "s:NO:DEF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:NO:DEF_EPA_PLAY", "tw:2026:2:NO:DEF_EPA_PLAY" ]
+  }, {
+    "id" : "s:NO:DEF:PASS",
+    "evidenceIds" : [ "tw:2026:1:NO:DEF_EPA_PASS", "tw:2026:2:NO:DEF_EPA_PASS" ]
+  }, {
+    "id" : "s:NO:DEF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:NO:DEF_EPA_RUSH", "tw:2026:2:NO:DEF_EPA_RUSH" ]
+  }, {
+    "id" : "s:NO:OFF:GENERAL",
+    "evidenceIds" : [ "tw:2026:1:NO:OFF_EPA_PLAY", "tw:2026:2:NO:OFF_EPA_PLAY" ]
+  }, {
+    "id" : "s:NO:OFF:PASS",
+    "evidenceIds" : [ "tw:2026:1:NO:OFF_EPA_PASS", "tw:2026:2:NO:OFF_EPA_PASS" ]
+  }, {
+    "id" : "s:NO:OFF:RUSH",
+    "evidenceIds" : [ "tw:2026:1:NO:OFF_EPA_RUSH", "tw:2026:2:NO:OFF_EPA_RUSH" ]
+  } ],
+  "encounters" : [ {
+    "id" : "LV:PASS",
+    "attackTeam" : "LV",
+    "defenseTeam" : "NO",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:LV:OFF:PASS",
+    "defenseSeriesId" : "s:NO:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "LV:RUSH",
+    "attackTeam" : "LV",
+    "defenseTeam" : "NO",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:LV:OFF:RUSH",
+    "defenseSeriesId" : "s:NO:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "LV:GENERAL",
+    "attackTeam" : "LV",
+    "defenseTeam" : "NO",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:LV:OFF:GENERAL",
+    "defenseSeriesId" : "s:NO:DEF:GENERAL",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "NO:PASS",
+    "attackTeam" : "NO",
+    "defenseTeam" : "LV",
+    "foundation" : "PASS",
+    "attackSeriesId" : "s:NO:OFF:PASS",
+    "defenseSeriesId" : "s:LV:DEF:PASS",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "NO:RUSH",
+    "attackTeam" : "NO",
+    "defenseTeam" : "LV",
+    "foundation" : "RUSH",
+    "attackSeriesId" : "s:NO:OFF:RUSH",
+    "defenseSeriesId" : "s:LV:DEF:RUSH",
+    "state" : "COMPARABLE",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ ]
+  }, {
+    "id" : "NO:GENERAL",
+    "attackTeam" : "NO",
+    "defenseTeam" : "LV",
+    "foundation" : "GENERAL",
+    "attackSeriesId" : "s:NO:OFF:GENERAL",
+    "defenseSeriesId" : "s:LV:DEF:GENERAL",
+    "state" : "REPRESENTED_BY",
+    "unavailableReason" : null,
+    "representedByFindingIds" : [ "f:NO:PASS" ]
+  } ],
+  "findings" : [ {
+    "id" : "f:LV:PASS",
+    "claimId" : "LV:OFF_EPA_PASS",
+    "encounterId" : "LV:PASS",
+    "relation" : "POSITIVE_CONVERGENCE",
+    "attackPattern" : "ALL_POSITIVE",
+    "defensePattern" : "ALL_POSITIVE",
+    "title" : "EPA positivo no ataque e no permitido pela defesa",
+    "summary" : "Sinais compatíveis com uma oportunidade localizada; não demonstram exploração no jogo.",
+    "primaryRestrictionId" : "r:LV:PASS"
+  }, {
+    "id" : "f:LV:RUSH",
+    "claimId" : "LV:OFF_EPA_RUSH",
+    "encounterId" : "LV:RUSH",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "ALL_NEGATIVE",
+    "defensePattern" : "MIXED_SIGNS",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:LV:RUSH"
+  }, {
+    "id" : "f:LV:GENERAL",
+    "claimId" : "LV:OFF_EPA_PLAY",
+    "encounterId" : "LV:GENERAL",
+    "relation" : "ATTACK_NOT_DEMONSTRATED",
+    "attackPattern" : "ALL_NEGATIVE",
+    "defensePattern" : "ALL_POSITIVE",
+    "title" : "EPA positivo não demonstrado pelo ataque",
+    "summary" : "A defesa permitiu EPA positivo, mas o ataque não demonstrou produção positiva neste recorte.",
+    "primaryRestrictionId" : "r:LV:GENERAL"
+  }, {
+    "id" : "f:NO:PASS",
+    "claimId" : "NO:OFF_EPA_PASS",
+    "encounterId" : "NO:PASS",
+    "relation" : "WEEKLY_SIGN_VARIATION",
+    "attackPattern" : "MIXED_SIGNS",
+    "defensePattern" : "ALL_NEGATIVE",
+    "title" : "Os sinais mudam entre semanas",
+    "summary" : "Há semanas positivas e negativas. Observe separadamente as duas séries.",
+    "primaryRestrictionId" : "r:NO:PASS"
+  }, {
+    "id" : "f:NO:RUSH",
+    "claimId" : "NO:OFF_EPA_RUSH",
+    "encounterId" : "NO:RUSH",
+    "relation" : "BOTH_NEGATIVE",
+    "attackPattern" : "ALL_NEGATIVE",
+    "defensePattern" : "ALL_NEGATIVE",
+    "title" : "EPA negativo nos dois recortes",
+    "summary" : "O ataque produziu EPA negativo e a defesa permitiu EPA negativo; isso não estima o resultado do encontro.",
+    "primaryRestrictionId" : "r:NO:RUSH"
+  } ],
+  "restrictions" : [ {
+    "id" : "r:temporal",
+    "claimId" : null,
+    "code" : "TEMPORAL_AVAILABILITY_UNKNOWN",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Corte por semanas; disponibilidade histórica na data da análise não verificada."
+  }, {
+    "id" : "r:adjustment",
+    "claimId" : null,
+    "code" : "NO_OPPONENT_ADJUSTMENT",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ ],
+    "text" : "Recortes sem ajuste por adversário. Esta análise não estima vencedor."
+  }, {
+    "id" : "r:global",
+    "claimId" : "limitation",
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ ],
+    "evidenceIds" : [ "tw:2026:1:LV:DEF_EPA_PASS", "tw:2026:1:LV:DEF_EPA_PLAY", "tw:2026:1:LV:DEF_EPA_RUSH", "tw:2026:1:LV:OFF_EPA_PASS", "tw:2026:1:LV:OFF_EPA_PLAY", "tw:2026:1:LV:OFF_EPA_RUSH", "tw:2026:1:NO:DEF_EPA_PASS", "tw:2026:1:NO:DEF_EPA_PLAY", "tw:2026:1:NO:DEF_EPA_RUSH", "tw:2026:1:NO:OFF_EPA_PASS", "tw:2026:1:NO:OFF_EPA_PLAY", "tw:2026:1:NO:OFF_EPA_RUSH", "tw:2026:2:LV:DEF_EPA_PASS", "tw:2026:2:LV:DEF_EPA_PLAY", "tw:2026:2:LV:DEF_EPA_RUSH", "tw:2026:2:LV:OFF_EPA_PASS", "tw:2026:2:LV:OFF_EPA_PLAY", "tw:2026:2:LV:OFF_EPA_RUSH", "tw:2026:2:NO:DEF_EPA_PASS", "tw:2026:2:NO:DEF_EPA_PLAY", "tw:2026:2:NO:DEF_EPA_RUSH", "tw:2026:2:NO:OFF_EPA_PASS", "tw:2026:2:NO:OFF_EPA_PLAY", "tw:2026:2:NO:OFF_EPA_RUSH" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:LV:PASS",
+    "claimId" : "limit:LV:OFF_EPA_PASS",
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ "LV:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_PASS", "tw:2026:2:LV:OFF_EPA_PASS", "tw:2026:1:NO:DEF_EPA_PASS", "tw:2026:2:NO:DEF_EPA_PASS" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:denominator:LV:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "LV:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_PASS", "tw:2026:2:LV:OFF_EPA_PASS", "tw:2026:1:NO:DEF_EPA_PASS", "tw:2026:2:NO:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:LV:RUSH",
+    "claimId" : null,
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "LV:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_RUSH", "tw:2026:2:LV:OFF_EPA_RUSH", "tw:2026:1:NO:DEF_EPA_RUSH", "tw:2026:2:NO:DEF_EPA_RUSH" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:LV:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "LV:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_RUSH", "tw:2026:2:LV:OFF_EPA_RUSH", "tw:2026:1:NO:DEF_EPA_RUSH", "tw:2026:2:NO:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:LV:GENERAL",
+    "claimId" : null,
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ "LV:GENERAL" ],
+    "evidenceIds" : [ "tw:2026:1:LV:OFF_EPA_PLAY", "tw:2026:2:LV:OFF_EPA_PLAY", "tw:2026:1:NO:DEF_EPA_PLAY", "tw:2026:2:NO:DEF_EPA_PLAY" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:NO:PASS",
+    "claimId" : null,
+    "code" : "SIGN_VARIATION_LIMIT",
+    "encounterIds" : [ "NO:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:NO:OFF_EPA_PASS", "tw:2026:2:NO:OFF_EPA_PASS", "tw:2026:1:LV:DEF_EPA_PASS", "tw:2026:2:LV:DEF_EPA_PASS" ],
+    "text" : "A média esconderia semanas de sinais diferentes."
+  }, {
+    "id" : "r:denominator:NO:PASS",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "NO:PASS" ],
+    "evidenceIds" : [ "tw:2026:1:NO:OFF_EPA_PASS", "tw:2026:2:NO:OFF_EPA_PASS", "tw:2026:1:LV:DEF_EPA_PASS", "tw:2026:2:LV:DEF_EPA_PASS" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  }, {
+    "id" : "r:NO:RUSH",
+    "claimId" : null,
+    "code" : "SAMPLE_LIMIT",
+    "encounterIds" : [ "NO:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:NO:OFF_EPA_RUSH", "tw:2026:2:NO:OFF_EPA_RUSH", "tw:2026:1:LV:DEF_EPA_RUSH", "tw:2026:2:LV:DEF_EPA_RUSH" ],
+    "text" : "Até duas observações semanais não estabelecem um padrão duradouro."
+  }, {
+    "id" : "r:denominator:NO:RUSH",
+    "claimId" : null,
+    "code" : "UNAVAILABLE_DENOMINATORS",
+    "encounterIds" : [ "NO:RUSH" ],
+    "evidenceIds" : [ "tw:2026:1:NO:OFF_EPA_RUSH", "tw:2026:2:NO:OFF_EPA_RUSH", "tw:2026:1:LV:DEF_EPA_RUSH", "tw:2026:2:LV:DEF_EPA_RUSH" ],
+    "text" : "Volume de jogadas por fundamento não informado."
+  } ],
+  "links" : [ {
+    "fromFindingId" : "f:LV:RUSH",
+    "toFindingId" : "f:LV:PASS",
+    "relation" : "ADDITIONAL_RESTRICTION"
+  }, {
+    "fromFindingId" : "f:LV:GENERAL",
+    "toFindingId" : "f:LV:PASS",
+    "relation" : "ADDITIONAL_RESTRICTION"
+  } ],
+  "presentation" : {
+    "highlightFindingIds" : [ "f:LV:PASS" ],
+    "equivalentHighlightGroups" : [ ],
+    "globalRestrictionIds" : [ "r:temporal", "r:adjustment", "r:global" ],
+    "chartPolicy" : "SHARED_SYMMETRIC_ZERO_V1"
+  }
+}

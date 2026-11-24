@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.node.json","include":["vite.w12.config.ts","build/**/*.ts"]}

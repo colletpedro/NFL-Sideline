@@ -1,0 +1,998 @@
+{
+  "2024_M0": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.018904357348311515,
+      "n": 2,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.6576280471103807,
+      "wilson_low": 0.0
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.02806302904203466,
+      "n": 1181,
+      "observed_rate": 0.02032176121930567,
+      "positives": 24,
+      "wilson_high": 0.030060468838655423,
+      "wilson_low": 0.01369356545588656
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.035224565160234644,
+      "n": 5414,
+      "observed_rate": 0.026782415958625783,
+      "positives": 145,
+      "wilson_high": 0.03143008518959558,
+      "wilson_low": 0.02280583045622174
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.0448718270177097,
+      "n": 5760,
+      "observed_rate": 0.030729166666666665,
+      "positives": 177,
+      "wilson_high": 0.03550841614379696,
+      "wilson_low": 0.02657545514093785
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.057968277538550196,
+      "n": 4711,
+      "observed_rate": 0.04309063893016345,
+      "positives": 203,
+      "wilson_high": 0.049271147223426646,
+      "wilson_low": 0.037654699871839496
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08298477148796331,
+      "n": 448,
+      "observed_rate": 0.044642857142857144,
+      "positives": 20,
+      "wilson_high": 0.0679463222902789,
+      "wilson_low": 0.029082370950892344
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.12226093925384117,
+      "n": 220,
+      "observed_rate": 0.08181818181818182,
+      "positives": 18,
+      "wilson_high": 0.1256119501697727,
+      "wilson_low": 0.0523782000078529
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": 0.15292778012554514,
+      "n": 4,
+      "observed_rate": 1.0,
+      "positives": 4,
+      "wilson_high": 1.0,
+      "wilson_low": 0.5100999795960008
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2024_M1": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.0404427882507672,
+      "n": 17740,
+      "observed_rate": 0.03331454340473506,
+      "positives": 591,
+      "wilson_high": 0.03605804877886938,
+      "wilson_low": 0.03077311589969718
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2024_M2": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.019280845289998252,
+      "n": 15,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.20388926630434784,
+      "wilson_low": -1.3877787807814457e-17
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.026265478097850934,
+      "n": 3516,
+      "observed_rate": 0.026166097838452786,
+      "positives": 92,
+      "wilson_high": 0.03198213320343698,
+      "wilson_low": 0.02138435919781198
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.03499060408358394,
+      "n": 6181,
+      "observed_rate": 0.02782721242517392,
+      "positives": 172,
+      "wilson_high": 0.032230164967272566,
+      "wilson_low": 0.024010822675806287
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.04419866645874884,
+      "n": 5113,
+      "observed_rate": 0.038529239194210835,
+      "positives": 197,
+      "wilson_high": 0.04416080389587722,
+      "wilson_low": 0.03359059649924152
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.0585273063812294,
+      "n": 2569,
+      "observed_rate": 0.0397041650447645,
+      "positives": 102,
+      "wilson_high": 0.04796787489523617,
+      "wilson_low": 0.03281502289372992
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08416026941503398,
+      "n": 311,
+      "observed_rate": 0.06752411575562701,
+      "positives": 21,
+      "wilson_high": 0.10101666554224412,
+      "wilson_low": 0.04458544040563572
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.10838292730370153,
+      "n": 35,
+      "observed_rate": 0.2,
+      "positives": 7,
+      "wilson_high": 0.35891936609462516,
+      "wilson_low": 0.10042319445900802
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2024_M3": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.018635254630264324,
+      "n": 20,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.16113012549493322,
+      "wilson_low": -1.3877787807814457e-17
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.02721138476408946,
+      "n": 3240,
+      "observed_rate": 0.024691358024691357,
+      "positives": 80,
+      "wilson_high": 0.030624188670054835,
+      "wilson_low": 0.01988431951357534
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.03478644407271231,
+      "n": 7052,
+      "observed_rate": 0.02765173000567215,
+      "positives": 195,
+      "wilson_high": 0.0317436137630039,
+      "wilson_low": 0.024074192577773365
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.0444384612518509,
+      "n": 4594,
+      "observed_rate": 0.039616891597736174,
+      "positives": 182,
+      "wilson_high": 0.045652871886242646,
+      "wilson_low": 0.03435023217893436
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.057142669855330515,
+      "n": 2468,
+      "observed_rate": 0.04213938411669368,
+      "positives": 104,
+      "wilson_high": 0.05080315543247379,
+      "wilson_low": 0.034898776277066175
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08429058586723165,
+      "n": 189,
+      "observed_rate": 0.047619047619047616,
+      "positives": 9,
+      "wilson_high": 0.08801024924988489,
+      "wilson_low": 0.02525161955850501
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.11857443351253799,
+      "n": 177,
+      "observed_rate": 0.11864406779661017,
+      "positives": 21,
+      "wilson_high": 0.174567219822763,
+      "wilson_low": 0.07892312753094319
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2025_M0": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.018872799074224397,
+      "n": 23,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.14312112541726274,
+      "wilson_low": -1.3877787807814457e-17
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.027390179540959854,
+      "n": 2283,
+      "observed_rate": 0.02058694699956198,
+      "positives": 47,
+      "wilson_high": 0.027267675943381385,
+      "wilson_low": 0.015516922692571362
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.03492806156241217,
+      "n": 6576,
+      "observed_rate": 0.026916058394160582,
+      "positives": 177,
+      "wilson_high": 0.03111248052591986,
+      "wilson_low": 0.02327205055458518
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.04450812049870029,
+      "n": 4987,
+      "observed_rate": 0.03188289552837377,
+      "positives": 159,
+      "wilson_high": 0.03713081642552435,
+      "wilson_low": 0.02735562209418342
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.05765678040366201,
+      "n": 3003,
+      "observed_rate": 0.04628704628704629,
+      "positives": 139,
+      "wilson_high": 0.05439904743114961,
+      "wilson_low": 0.039334390339566344
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08336048392028073,
+      "n": 304,
+      "observed_rate": 0.049342105263157895,
+      "positives": 15,
+      "wilson_high": 0.0798052629487407,
+      "wilson_low": 0.030126598112272498
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.11742343769004616,
+      "n": 182,
+      "observed_rate": 0.08791208791208792,
+      "positives": 16,
+      "wilson_high": 0.13802458472009144,
+      "wilson_low": 0.05483643240416924
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2025_M1": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.03331454340473507,
+      "n": 17358,
+      "observed_rate": 0.031858509044820835,
+      "positives": 553,
+      "wilson_high": 0.03457654989376892,
+      "wilson_low": 0.029347636581933064
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2025_M2": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.01786589885911032,
+      "n": 573,
+      "observed_rate": 0.02617801047120419,
+      "positives": 15,
+      "wilson_high": 0.042739928376538665,
+      "wilson_low": 0.015927130309936095
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.026234863701325814,
+      "n": 6565,
+      "observed_rate": 0.025285605483625285,
+      "positives": 166,
+      "wilson_high": 0.029369897642851035,
+      "wilson_low": 0.021756559722173566
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.034324158865230964,
+      "n": 6767,
+      "observed_rate": 0.032362937786315944,
+      "positives": 219,
+      "wilson_high": 0.03685177386625868,
+      "wilson_low": 0.02840475199900451
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.044038563180584724,
+      "n": 2481,
+      "observed_rate": 0.04312777106005643,
+      "positives": 107,
+      "wilson_high": 0.05185279569865635,
+      "wilson_low": 0.035815408182025624
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.0574468669886252,
+      "n": 865,
+      "observed_rate": 0.04971098265895954,
+      "positives": 43,
+      "wilson_high": 0.06629083131836115,
+      "wilson_low": 0.03711305726155951
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08451511050519887,
+      "n": 102,
+      "observed_rate": 0.029411764705882353,
+      "positives": 3,
+      "wilson_high": 0.0829319669745838,
+      "wilson_low": 0.010052266068000588
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.10330217760759286,
+      "n": 5,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.43449149475208104,
+      "wilson_low": -2.7755575615628914e-17
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2025_M3": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.01895833067700178,
+      "n": 455,
+      "observed_rate": 0.013186813186813187,
+      "positives": 6,
+      "wilson_high": 0.02846801529743591,
+      "wilson_low": 0.006057189043234164
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.02536957854189335,
+      "n": 6937,
+      "observed_rate": 0.024073807121233963,
+      "positives": 167,
+      "wilson_high": 0.02795287256838312,
+      "wilson_low": 0.020721570600007292
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.03444826351847799,
+      "n": 6563,
+      "observed_rate": 0.03230230077708365,
+      "positives": 212,
+      "wilson_high": 0.03686091039580001,
+      "wilson_low": 0.02829089713371311
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.043959137241308795,
+      "n": 2287,
+      "observed_rate": 0.045911674682990816,
+      "positives": 105,
+      "wilson_high": 0.055277576436547446,
+      "wilson_low": 0.03806872913080386
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.05737644061006482,
+      "n": 878,
+      "observed_rate": 0.04783599088838269,
+      "positives": 42,
+      "wilson_high": 0.06402903419691539,
+      "wilson_low": 0.03558250601620228
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08705032857132514,
+      "n": 188,
+      "observed_rate": 0.10106382978723404,
+      "positives": 19,
+      "wilson_high": 0.15244687986732924,
+      "wilson_low": 0.06565805670534319
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.10594604862832974,
+      "n": 50,
+      "observed_rate": 0.04,
+      "positives": 2,
+      "wilson_high": 0.13460337877954667,
+      "wilson_low": 0.011038652660826577
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2026_M0": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.018528522396847494,
+      "n": 4,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.48990002040399916,
+      "wilson_low": 0.0
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.027121262234491867,
+      "n": 1349,
+      "observed_rate": 0.02446256486286138,
+      "positives": 33,
+      "wilson_high": 0.034154949733693846,
+      "wilson_low": 0.017470902102914382
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.034943305086862664,
+      "n": 2937,
+      "observed_rate": 0.02519577800476677,
+      "positives": 74,
+      "wilson_high": 0.03151412334354087,
+      "wilson_low": 0.02011789927202605
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.04424409814209868,
+      "n": 1833,
+      "observed_rate": 0.03600654664484452,
+      "positives": 66,
+      "wilson_high": 0.04555219874590238,
+      "wilson_low": 0.028401701252878143
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.05762287975662808,
+      "n": 858,
+      "observed_rate": 0.04312354312354312,
+      "positives": 37,
+      "wilson_high": 0.05887420439111647,
+      "wilson_low": 0.03144587298737163
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.0866432671130559,
+      "n": 73,
+      "observed_rate": 0.0136986301369863,
+      "positives": 1,
+      "wilson_high": 0.0735991326912731,
+      "wilson_low": 0.0024221890927605197
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.11538773606667442,
+      "n": 51,
+      "observed_rate": 0.13725490196078433,
+      "positives": 7,
+      "wilson_high": 0.25721952342631627,
+      "wilson_low": 0.06811015331542726
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": 0.15043323654003796,
+      "n": 1,
+      "observed_rate": 1.0,
+      "positives": 1,
+      "wilson_high": 1.0,
+      "wilson_low": 0.20654329147389294
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2026_M1": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.03185850904482085,
+      "n": 7106,
+      "observed_rate": 0.030819026175063328,
+      "positives": 219,
+      "wilson_high": 0.03509786003048254,
+      "wilson_low": 0.027047209418040754
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2026_M2": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.01879277348414762,
+      "n": 471,
+      "observed_rate": 0.029723991507430998,
+      "positives": 14,
+      "wilson_high": 0.04927041102464305,
+      "wilson_low": 0.017786898191735633
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.025108548494563482,
+      "n": 3096,
+      "observed_rate": 0.025193798449612403,
+      "positives": 78,
+      "wilson_high": 0.031330376194299396,
+      "wilson_low": 0.02023406503392336
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.0343756724810418,
+      "n": 2420,
+      "observed_rate": 0.032231404958677684,
+      "positives": 78,
+      "wilson_high": 0.04004295755497539,
+      "wilson_low": 0.025902605884483686
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.04371331224254485,
+      "n": 757,
+      "observed_rate": 0.036988110964332896,
+      "positives": 28,
+      "wilson_high": 0.05293900346094202,
+      "wilson_low": 0.025712847331653983
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.05893107920629761,
+      "n": 305,
+      "observed_rate": 0.05901639344262295,
+      "positives": 18,
+      "wilson_high": 0.09135040674524723,
+      "wilson_low": 0.03765293995416112
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08286203301662097,
+      "n": 43,
+      "observed_rate": 0.046511627906976744,
+      "positives": 2,
+      "wilson_high": 0.15455775923863058,
+      "wilson_low": 0.012848990317319689
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.1121123894075455,
+      "n": 13,
+      "observed_rate": 0.07692307692307693,
+      "positives": 1,
+      "wilson_high": 0.3331453392824736,
+      "wilson_low": 0.013710066379696323
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": 0.1596665343051584,
+      "n": 1,
+      "observed_rate": 0.0,
+      "positives": 0,
+      "wilson_high": 0.7934567085261071,
+      "wilson_low": 0.0
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ],
+  "2026_M3": [
+    {
+      "bin": "[0.0, 0.02)",
+      "mean_probability": 0.018423068066590744,
+      "n": 205,
+      "observed_rate": 0.03414634146341464,
+      "positives": 7,
+      "wilson_high": 0.06879435521075036,
+      "wilson_low": 0.016636899864866765
+    },
+    {
+      "bin": "[0.02, 0.03)",
+      "mean_probability": 0.025302870502542332,
+      "n": 3356,
+      "observed_rate": 0.024731823599523244,
+      "positives": 83,
+      "wilson_high": 0.030554820979208846,
+      "wilson_low": 0.019995657352864907
+    },
+    {
+      "bin": "[0.03, 0.04)",
+      "mean_probability": 0.034326452356876355,
+      "n": 2498,
+      "observed_rate": 0.03242594075260208,
+      "positives": 81,
+      "wilson_high": 0.04012181964610677,
+      "wilson_low": 0.026165990101720587
+    },
+    {
+      "bin": "[0.04, 0.05)",
+      "mean_probability": 0.04385462984387015,
+      "n": 720,
+      "observed_rate": 0.03888888888888889,
+      "positives": 28,
+      "wilson_high": 0.0556313996065898,
+      "wilson_low": 0.027040831445065687
+    },
+    {
+      "bin": "[0.05, 0.075)",
+      "mean_probability": 0.0572131604457245,
+      "n": 280,
+      "observed_rate": 0.04642857142857143,
+      "positives": 13,
+      "wilson_high": 0.07780399721711873,
+      "wilson_low": 0.027330697626766046
+    },
+    {
+      "bin": "[0.075, 0.1)",
+      "mean_probability": 0.08523631265559516,
+      "n": 43,
+      "observed_rate": 0.13953488372093023,
+      "positives": 6,
+      "wilson_high": 0.27263876594425684,
+      "wilson_low": 0.06555634267713947
+    },
+    {
+      "bin": "[0.1, 0.15)",
+      "mean_probability": 0.10449975839567048,
+      "n": 4,
+      "observed_rate": 0.25,
+      "positives": 1,
+      "wilson_high": 0.6993639475573634,
+      "wilson_low": 0.045586062644636216
+    },
+    {
+      "bin": "[0.15, 0.25)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    },
+    {
+      "bin": "[0.25, 1.0)",
+      "mean_probability": null,
+      "n": 0,
+      "observed_rate": null,
+      "positives": 0,
+      "wilson_high": null,
+      "wilson_low": null
+    }
+  ]
+}

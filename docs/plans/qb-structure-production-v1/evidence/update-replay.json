@@ -1,0 +1,29 @@
+{
+  "added": 0,
+  "changed": 0,
+  "comparison": {
+    "byte_identical": 256,
+    "different_bytes": [
+      "revision.json"
+    ],
+    "elementary_plays_exact": true,
+    "manifests_byte_identical": false,
+    "numeric_absolute_tolerance": 1e-12,
+    "numerical_equivalence": true,
+    "passed": true,
+    "tables": [
+      "categories.csv",
+      "comparisons.csv",
+      "league.csv",
+      "context_bins.csv",
+      "context_summary.csv",
+      "extreme_diagnostics.csv",
+      "group_extremes.csv",
+      "stability.csv"
+    ],
+    "total_files": 257
+  },
+  "passed": true,
+  "previous_package_unchanged": true,
+  "removed": 0
+}

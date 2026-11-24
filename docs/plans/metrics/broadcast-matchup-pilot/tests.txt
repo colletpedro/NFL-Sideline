@@ -1,0 +1,26 @@
+
+> web-ui@0.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-matchup-pilot/NFL Sideline/web-ui
+
+ ✓ src/services/staticDataClient.test.ts (8 tests) 7ms
+ ✓ src/components/MatchupHero.test.tsx (8 tests) 17ms
+ ✓ local-editorial/observations/directions.test.tsx (4 tests) 33ms
+ ✓ local-editorial/broadcast/refinement.test.tsx (5 tests) 24ms
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 28ms
+ ✓ local-editorial/broadcast/broadcast.test.tsx (5 tests) 26ms
+ ✓ src/components/visual-preparation-regressions.test.tsx (6 tests) 10ms
+ ✓ src/services/market.test.tsx (14 tests) 30ms
+ ✓ src/services/calendar.test.ts (9 tests) 5ms
+ ✓ local-editorial/local.test.tsx (7 tests) 8ms
+ ✓ src/services/runtimeClient.test.ts (2 tests) 2ms
+ ✓ src/services/api.test.ts (2 tests) 1ms
+ ✓ src/features/analysis-visual/visual.test.tsx (69 tests) 106ms
+
+ Test Files  13 passed (13)
+      Tests  151 passed (151)
+   Start at  01:14:25
+   Duration  907ms (transform 1.21s, setup 0ms, collect 2.97s, tests 299ms, environment 1ms, prepare 720ms)
+

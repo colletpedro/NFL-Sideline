@@ -1,0 +1,233 @@
+[
+  {
+    "comparison": "FTN: 17 passes interceptáveis; modelo: 8,66 esperados; diferença +8,34.",
+    "id": "00-0035710",
+    "name": "Daniel Jones",
+    "per100": "+3,12 por 100 passes",
+    "support": "267 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 13 passes interceptáveis; modelo: 7,42 esperados; diferença +5,58.",
+    "id": "00-0036355",
+    "name": "Justin Herbert",
+    "per100": "+2,66 por 100 passes",
+    "support": "210 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 13 passes interceptáveis; modelo: 8,95 esperados; diferença +4,05.",
+    "id": "00-0026498",
+    "name": "Matthew Stafford",
+    "per100": "+1,35 por 100 passes",
+    "support": "300 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 13 passes interceptáveis; modelo: 9,60 esperados; diferença +3,40.",
+    "id": "00-0036264",
+    "name": "Jordan Love",
+    "per100": "+1,09 por 100 passes",
+    "support": "312 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 9 passes interceptáveis; modelo: 7,03 esperados; diferença +1,97.",
+    "id": "00-0039851",
+    "name": "Drake Maye",
+    "per100": "+0,85 por 100 passes",
+    "support": "233 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 7 passes interceptáveis; modelo: 5,35 esperados; diferença +1,65.",
+    "id": "00-0039917",
+    "name": "Michael Penix Jr.",
+    "per100": "+0,99 por 100 passes",
+    "support": "167 passes · 6 jogos "
+  },
+  {
+    "comparison": "FTN: 7 passes interceptáveis; modelo: 5,78 esperados; diferença +1,22.",
+    "id": "00-0036971",
+    "name": "Trevor Lawrence",
+    "per100": "+0,62 por 100 passes",
+    "support": "197 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 8 passes interceptáveis; modelo: 6,80 esperados; diferença +1,20.",
+    "id": "00-0034869",
+    "name": "Sam Darnold",
+    "per100": "+0,57 por 100 passes",
+    "support": "209 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 7 passes interceptáveis; modelo: 5,98 esperados; diferença +1,02.",
+    "id": "00-0034857",
+    "name": "Josh Allen",
+    "per100": "+0,50 por 100 passes",
+    "support": "205 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 6 passes interceptáveis; modelo: 5,19 esperados; diferença +0,81.",
+    "id": "00-0031503",
+    "name": "Jameis Winston",
+    "per100": "+0,51 por 100 passes",
+    "support": "158 passes · 5 jogos "
+  },
+  {
+    "comparison": "FTN: 4 passes interceptáveis; modelo: 3,35 esperados; diferença +0,65.",
+    "id": "00-0035993",
+    "name": "Tyler Huntley",
+    "per100": "+0,59 por 100 passes",
+    "support": "110 passes · 5 jogos "
+  },
+  {
+    "comparison": "FTN: 6 passes interceptáveis; modelo: 5,88 esperados; diferença +0,12.",
+    "id": "00-0037834",
+    "name": "Brock Purdy",
+    "per100": "+0,06 por 100 passes",
+    "support": "209 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 8 passes interceptáveis; modelo: 7,96 esperados; diferença +0,04.",
+    "id": "00-0039732",
+    "name": "Bo Nix",
+    "per100": "+0,02 por 100 passes",
+    "support": "250 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 9 passes interceptáveis; modelo: 9,20 esperados; diferença -0,20.",
+    "id": "00-0040743",
+    "name": "Tyler Shough",
+    "per100": "-0,08 por 100 passes",
+    "support": "272 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 4 passes interceptáveis; modelo: 4,66 esperados; diferença -0,66.",
+    "id": "00-0035228",
+    "name": "Kyler Murray",
+    "per100": "-0,43 por 100 passes",
+    "support": "153 passes · 6 jogos "
+  },
+  {
+    "comparison": "FTN: 6 passes interceptáveis; modelo: 6,83 esperados; diferença -0,83.",
+    "id": "00-0033873",
+    "name": "Patrick Mahomes",
+    "per100": "-0,36 por 100 passes",
+    "support": "232 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 3 passes interceptáveis; modelo: 4,03 esperados; diferença -1,03.",
+    "id": "00-0038400",
+    "name": "Tanner McKee",
+    "per100": "-0,90 por 100 passes",
+    "support": "114 passes · 3 jogos "
+  },
+  {
+    "comparison": "FTN: 4 passes interceptáveis; modelo: 5,15 esperados; diferença -1,15.",
+    "id": "00-0036389",
+    "name": "Jalen Hurts",
+    "per100": "-0,75 por 100 passes",
+    "support": "154 passes · 5 jogos "
+  },
+  {
+    "comparison": "FTN: 5 passes interceptáveis; modelo: 6,16 esperados; diferença -1,16.",
+    "id": "00-0038128",
+    "name": "Malik Willis",
+    "per100": "-0,64 por 100 passes",
+    "support": "182 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 2 passes interceptáveis; modelo: 3,58 esperados; diferença -1,58.",
+    "id": "00-0034855",
+    "name": "Baker Mayfield",
+    "per100": "-1,44 por 100 passes",
+    "support": "110 passes · 5 jogos "
+  },
+  {
+    "comparison": "FTN: 6 passes interceptáveis; modelo: 7,99 esperados; diferença -1,99.",
+    "id": "00-0036442",
+    "name": "Joe Burrow",
+    "per100": "-0,75 por 100 passes",
+    "support": "267 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 8 passes interceptáveis; modelo: 10,14 esperados; diferença -2,14.",
+    "id": "00-0033119",
+    "name": "Jacoby Brissett",
+    "per100": "-0,71 por 100 passes",
+    "support": "303 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 7 passes interceptáveis; modelo: 9,19 esperados; diferença -2,19.",
+    "id": "00-0029604",
+    "name": "Kirk Cousins",
+    "per100": "-0,78 por 100 passes",
+    "support": "280 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 6 passes interceptáveis; modelo: 8,40 esperados; diferença -2,40.",
+    "id": "00-0033537",
+    "name": "Deshaun Watson",
+    "per100": "-0,96 por 100 passes",
+    "support": "249 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 7 passes interceptáveis; modelo: 9,55 esperados; diferença -2,55.",
+    "id": "00-0033077",
+    "name": "Dak Prescott",
+    "per100": "-0,84 por 100 passes",
+    "support": "302 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 5 passes interceptáveis; modelo: 7,61 esperados; diferença -2,61.",
+    "id": "00-0030565",
+    "name": "Geno Smith",
+    "per100": "-1,10 por 100 passes",
+    "support": "238 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 5 passes interceptáveis; modelo: 8,39 esperados; diferença -3,39.",
+    "id": "00-0040676",
+    "name": "Cam Ward",
+    "per100": "-1,37 por 100 passes",
+    "support": "248 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 5 passes interceptáveis; modelo: 8,53 esperados; diferença -3,53.",
+    "id": "00-0023459",
+    "name": "Aaron Rodgers",
+    "per100": "-1,24 por 100 passes",
+    "support": "284 passes · 8 jogos "
+  },
+  {
+    "comparison": "FTN: 1 passes interceptáveis; modelo: 4,53 esperados; diferença -3,53.",
+    "id": "00-0039918",
+    "name": "Caleb Williams",
+    "per100": "-2,24 por 100 passes",
+    "support": "158 passes · 5 jogos "
+  },
+  {
+    "comparison": "FTN: 4 passes interceptáveis; modelo: 7,83 esperados; diferença -3,83.",
+    "id": "00-0033106",
+    "name": "Jared Goff",
+    "per100": "-1,55 por 100 passes",
+    "support": "248 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 4 passes interceptáveis; modelo: 8,47 esperados; diferença -4,47.",
+    "id": "00-0039150",
+    "name": "Bryce Young",
+    "per100": "-1,68 por 100 passes",
+    "support": "267 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 3 passes interceptáveis; modelo: 7,53 esperados; diferença -4,53.",
+    "id": "00-0039163",
+    "name": "C.J. Stroud",
+    "per100": "-1,86 por 100 passes",
+    "support": "243 passes · 7 jogos "
+  },
+  {
+    "comparison": "FTN: 0 passes interceptáveis; modelo: 4,60 esperados; diferença -4,60.",
+    "id": "00-0039910",
+    "name": "Jayden Daniels",
+    "per100": "-3,21 por 100 passes",
+    "support": "143 passes · 5 jogos "
+  }
+]

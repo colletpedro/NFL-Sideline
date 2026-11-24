@@ -1,0 +1,11 @@
+{
+  "ownServerPidsAbsent": [
+    92915,
+    92957,
+    92960
+  ],
+  "loopbackPort": 18083,
+  "bindProbe": "PASS",
+  "browserClosedByHarness": true,
+  "databaseStartedInReview": false
+}

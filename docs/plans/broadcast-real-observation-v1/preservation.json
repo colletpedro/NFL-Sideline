@@ -1,0 +1,18 @@
+{
+  "primaryBackupHashesMatchPreflight": true,
+  "sameSessionForSameContent": true,
+  "originalHead": "98cca81929f740cd026737a3acb2d8d625fcecae",
+  "referenceHead": "b59a8deb60aec318a6ed984a55b87a993b44b14d",
+  "referenceClean": true,
+  "originalTrackedDiffEmpty": true,
+  "ownServerPid": 21282,
+  "ownLoopbackPort": 18090,
+  "previousListenerPidsUnchanged": {
+    "18086": 69029,
+    "18087": 770,
+    "18088": 4041,
+    "18089": 15045
+  },
+  "temporary18091Closed": true,
+  "browserClosed": true
+}

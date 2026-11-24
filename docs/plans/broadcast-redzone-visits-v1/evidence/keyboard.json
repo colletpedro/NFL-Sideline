@@ -1,0 +1,10 @@
+{
+  "before": {
+    "focus": "Jogadas por visita à red zone Situação inicial → jogadas → resultado",
+    "open": true
+  },
+  "after": {
+    "focus": "Jogadas por visita à red zone Situação inicial → jogadas → resultado",
+    "open": false
+  }
+}

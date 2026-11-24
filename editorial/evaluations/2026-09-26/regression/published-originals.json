@@ -1,0 +1,146 @@
+{
+  "2026_03_ATL_GB": {
+    "gameId": "2026_03_ATL_GB",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:47:52.290098Z",
+    "fatorChave": "O fator central deste confronto é a extrema dificuldade do ataque aéreo de Atlanta, que registrou eficácia negativa no passe nas últimas semanas, destacando-se o valor de -0.7157339613721461 na semana dois. Green Bay tentará explorar essa limitação controlando o ritmo do jogo.",
+    "vantagemTatica": "Avaliando a forma recente, a defesa terrestre de Green Bay demonstrou força na semana dois ao limitar os oponentes com a marca de -0.4385823352624559 no EPA terrestre. Em contrapartida, o ataque de Atlanta também sofreu pelo ar na semana um, com -0.6063287474406966 de EPA no passe, facilitando o trabalho da defesa mandante ao neutralizar a principal ameaça adversária.",
+    "alertaVermelho": "O principal risco para os mandantes reside no próprio ataque terrestre, que teve desempenho ineficiente de -0.44114246292802917 na segunda semana, além de um ataque aéreo que registrou -0.09901575894680531 de EPA. Caso a defesa aérea de Atlanta resgate o nível da primeira semana, quando obteve -0.32394570725482785 no EPA de passe, o jogo pode ficar imprevisível.",
+    "veredito": "Apesar das limitações ofensivas de Green Bay, a profunda deficiência de passe de Atlanta torna a equipe visitante unidimensional e vulnerável. O veredito direto é uma vantagem clara para os mandantes, cuja defesa terrestre tem capacidade comprovada para anular as limitadas alternativas de ataque adversárias sem depender de modelos para atestar sua superioridade neste embate."
+  },
+  "2026_03_ARI_SF": {
+    "gameId": "2026_03_ARI_SF",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:48:28.23208Z",
+    "fatorChave": "O fator central deste embate é a discrepância no jogo aéreo, com San Francisco anotando um EPA ofensivo por passe de 1.060473342105979 na segunda semana, enquanto Arizona ruiu com um EPA ofensivo por passe de -0.2694760061431831 no mesmo período.",
+    "vantagemTatica": "San Francisco contrapõe seu potente ataque aéreo a uma defesa de Arizona que cedeu 0.5958990921469789 de EPA por passe na semana dois. Do outro lado, o ineficiente ataque terrestre de Arizona, com EPA de -0.42363597910769063, encara uma defesa de San Francisco sólida contra corridas, com EPA de -0.15551702063616177.",
+    "alertaVermelho": "O principal risco repousa na estagnação do ataque terrestre de San Francisco, que registrou EPA por corrida de -0.06757379121845589 recentemente, frente a uma defesa de Arizona capaz de conter o chão, como demonstrado pelo EPA defensivo terrestre de -0.32544013614200856 na semana inicial.",
+    "veredito": "Com base nas métricas das últimas semanas elegíveis, o veredito é favorável a San Francisco, que tem capacidade de explorar a vulnerabilidade aérea de Arizona e superar qualquer limitação no próprio jogo terrestre."
+  },
+  "2026_03_BAL_DAL": {
+    "gameId": "2026_03_BAL_DAL",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:48:56.183665Z",
+    "fatorChave": "O confronto entre a capacidade de passe de DAL, que atingiu uma marca altamente positiva na rodada anterior com offEpaPass de 0.4576977571097905, e a oscilante defesa aerea de BAL, que marcou -0.46160670501400386 na jornada inicial mas cedeu 0.29537792824557496 na partida passada.",
+    "vantagemTatica": "BAL demonstra forte capacidade no jogo terrestre, anotando offEpaRush de 0.2797712992813336 na abertura e 0.13611691659951414 na rodada mais recente. Como a defesa de DAL permitiu defEpaRush de 0.06072637816353509 e 0.10605991343891219 nos mesmos periodos, o ataque pelo chao favorece nitidamente os visitantes.",
+    "alertaVermelho": "A defesa de DAL demonstrou enorme fragilidade contra o passe logo na primeira partida, registrando um preocupante defEpaPass de 0.7068532854290454. Essa falha de cobertura grave pode ser letal caso o time visitante consiga alinhar play-actions eficientes.",
+    "veredito": "As deficiencias defensivas globais da equipe mandante, especialmente contendo o passe inicial e sofrendo contra corridas fisicas nas rodadas recentes, permitem a BAL ditar a cadencia no ataque terrestre e encontrar aberturas criticas para garantir um resultado positivo."
+  },
+  "2026_03_CAR_CLE": {
+    "gameId": "2026_03_CAR_CLE",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:49:27.896809Z",
+    "fatorChave": "O fator central desta partida reside no desempenho aéreo consistente do ataque de Carolina. Nas semanas elegíveis da atual temporada, Carolina apresentou um impacto positivo contínuo passando a bola, marcando 0.2510585687112924 na semana um e ampliando para 0.29131670526042663 na semana dois.",
+    "vantagemTatica": "Contrapondo os setores, Carolina confia no ataque aéreo, mas seu jogo terrestre despencou de 0.05513089502082122 para -0.12791345240215637. A defesa de Cleveland melhorou ao conter oponentes para -0.3665024664633411 por passe na semana dois, mas cedeu 0.1802316443726886 no jogo terrestre. Pelo lado de Cleveland, o ataque terrestre caiu acentuadamente para -0.470350549018587 na semana dois, enfrentando agora uma defesa de Carolina que foi efetiva contra corridas, permitindo apenas -0.20828559875917563 em sua partida mais recente.",
+    "alertaVermelho": "O principal risco para Carolina é a inconsistência defensiva da semana um ressurgir, quando a unidade permitiu 0.4093816948714201 por jogada no geral. Além disso, Cleveland demonstrou forte recuperação em seu jogo aéreo na semana dois, registrando 0.3241815717890828 de eficiência ofensiva pelo passe.",
+    "veredito": "Carolina desponta com melhor estruturação ofensiva, especialmente pelo ar. Avaliando as duas últimas semanas, a estabilidade do time visitante no passe deve se sobrepor às intensas oscilações setoriais de Cleveland."
+  },
+  "2026_03_CIN_PIT": {
+    "gameId": "2026_03_CIN_PIT",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:49:50.959772Z",
+    "fatorChave": "O fator central do confronto é a extrema ineficiência do ataque aéreo de Pittsburgh, que nas duas primeiras semanas não conseguiu produzir de forma consistente. Na semana dois, a equipe da casa registrou um EPA ofensivo de passe de -0.49607501720644526, o que compromete a sustentabilidade de suas campanhas ofensivas.",
+    "vantagemTatica": "Contrapondo os ataques e defesas, Cincinnati apresenta uma defesa terrestre muito forte, evidenciada pelo EPA defensivo contra o jogo terrestre de -0.538290933463281 na segunda semana. No ataque, Cincinnati teve sucesso pelo chão na primeira semana com um EPA ofensivo terrestre de 0.09731624911364634. Por outro lado, o grande destaque de Pittsburgh é sua contenção aérea, tendo alcançado um EPA defensivo de passe de -0.6063287474406966 na semana de abertura, o que pode forçar Cincinnati a depender mais das corridas e menos dos passes.",
+    "alertaVermelho": "O principal risco para Cincinnati é a queda abrupta na eficiência geral de seu ataque, já que sua taxa de sucesso ofensivo caiu para 0.3103448275862069 na segunda semana, mostrando vulnerabilidades consideráveis quando a equipe é forçada a sustentar posses longas sob pressão.",
+    "veredito": "A solidez defensiva de Cincinnati, especialmente contra a corrida, somada à incapacidade crônica de Pittsburgh em mover a bola pelo ar, aponta para uma vantagem técnica e tática dos visitantes. O sucesso da equipe de Cincinnati é o desfecho mais provável com base nas atuações de ambas as defesas nas semanas anteriores."
+  },
+  "2026_03_HOU_IND": {
+    "gameId": "2026_03_HOU_IND",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:50:26.995663Z",
+    "fatorChave": "O fator central deste confronto reside na divergencia defensiva entre as equipes nas semanas anteriores elegiveis. A defesa de Houston apresentou grande melhora na segunda partida com um EPA por jogada de -0.09192282372122056, enquanto a defesa de Indianapolis tem cedido espaco consistentemente, marcando um EPA por jogada de 0.2289512070492979 no mesmo periodo.",
+    "vantagemTatica": "Contrapondo os ataques e defesas, o jogo terrestre do ataque de Indianapolis registrou um EPA de corrida de 0.12018137580707844 no seu compromisso mais recente, mas enfrentara a forte defesa de Houston, que limitou o ataque terrestre adversario a um EPA de corrida de -0.21744537200852807. Pelo ar, Houston teve uma taxa de recuo de 0.7631578947368421 na sua ultima exibicao e podera explorar a defesa aerea de Indianapolis, que permitiu um EPA de passe de 0.2739705127419756.",
+    "alertaVermelho": "O principal risco recai sobre o declinio abrupto do ataque de Houston. Na ultima semana avaliada, o jogo terrestre da equipe foi nulo, com um EPA de corrida de -0.538290933463281, resultando em uma taxa de sucesso ofensivo de 0.32894736842105265.",
+    "veredito": "Embora o ataque terrestre de Houston apresente serias dificuldades recentes, a superioridade da sua unidade defensiva fornece a estabilidade necessaria para o confronto, definindo a vitoria para o time visitante em embate contra a fragil defesa de Indianapolis."
+  },
+  "2026_03_KC_MIA": {
+    "gameId": "2026_03_KC_MIA",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:51:16.658748Z",
+    "fatorChave": "O fator central deste confronto é a disparidade entre o ataque aéreo do time visitante e a defesa aérea do time da casa. Na segunda semana, o visitante registrou eficiência ofensiva de passe de 0.2739705127419756, enquanto a defesa mandante cedeu expressivos 1.060473342105979 em eficiência aos oponentes.",
+    "vantagemTatica": "No jogo terrestre, o ataque do visitante demonstrou forte teto com eficiência de 0.36643374804739975 na primeira semana, projetando superioridade contra a defesa terrestre do mandante que marcou -0.08525705048369299 na mesma rodada. Em contrapartida, o ataque terrestre mandante segue inoperante com -0.15551702063616177 na segunda semana, mesmo contra uma defesa terrestre do visitante que cedeu 0.12018137580707844 no período mais recente.",
+    "alertaVermelho": "O principal risco defensivo para o visitante reside na evolução do ataque aéreo mandante, que atingiu 0.16495987969437334 na segunda semana, o que pode explorar o fato de que a defesa aérea do visitante cedeu 0.1898822895365752 na mesma rodada.",
+    "veredito": "As graves vulnerabilidades da defesa do time da casa contra o passe, combinadas com o forte potencial aéreo e terrestre do visitante, ratificam os valores de -850 para a vitória visitante contra 575 para o mandante. O cenário aponta para uma vitória direta de quem atua fora de casa."
+  },
+  "2026_03_LAC_BUF": {
+    "gameId": "2026_03_LAC_BUF",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:51:48.552805Z",
+    "fatorChave": "O ataque aereo de BUF tem se mostrado extremamente eficiente nas partidas iniciais da atual temporada e confronta diretamente uma defesa de LAC que tem cedido muito espaco.",
+    "vantagemTatica": "O ataque de BUF chega embalado com um EPA por passe de 0.45602448594361317 e uma taxa de sucesso ofensivo de 0.5757575757575758 na rodada mais recente. Do outro lado, LAC apresentou deficiencia terrestre com EPA por corrida de -0.48824074024378206 no mesmo periodo, enquanto sua defesa cedeu EPA por passe de 0.2371806496092959 no inicio da campanha. A eficiencia aerea dos mandantes vai de encontro aos problemas estruturais dos visitantes.",
+    "alertaVermelho": "Apesar do bom momento ofensivo, a defesa de BUF mostrou sinais de fragilidade contra o passe no jogo passado, permitindo um EPA aereo defensivo de 0.442292541556526 aos oponentes. Se o ataque de LAC conseguir proteger seu passador, pode capitalizar sobre essa brecha.",
+    "veredito": "Com base na forte producao aerea e no controle das trincheiras demonstrado pela taxa de sucesso nas rodadas elegiveis, BUF tem clara superioridade para sair vencedor neste confronto."
+  },
+  "2026_03_LA_DEN": {
+    "gameId": "2026_03_LA_DEN",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:52:23.607489Z",
+    "fatorChave": "O fator central para este confronto reside no embate entre a forte evolução do ataque aéreo da equipe visitante e a unidade defensiva mandante. Na segunda semana, LA registrou uma eficiência de passe formidável de 0.5955571624104895, que será intensamente testada contra a defesa aérea de DEN, a qual alcançou a marca de -0.13274366642350774 na mesma rodada.",
+    "vantagemTatica": "Avaliando o jogo terrestre, ambas as equipes apresentam dificuldades ofensivas recentes, ilustradas pela eficiência de DEN marcando apenas -0.05845795505465658 correndo com a bola. Contudo, a vantagem tática pertence à equipe visitante pelo ar: o ataque aéreo mandante enfrentará o verdadeiro trunfo de LA, sua defesa contra o passe, que atingiu notáveis -0.5178310023432936, aliada a uma contenção geral que forçou uma taxa de sucesso defensivo adversária de apenas 0.2727272727272727 na rodada passada.",
+    "alertaVermelho": "O risco primário para a equipe mandante é a vulnerabilidade de sua defesa terrestre, que permitiu 0.36643374804739975 pelo solo logo na primeira rodada. Caso LA explore esse caminho e fuja de sua limitação pelo chão, as fragilidades do plano de jogo defensivo local ficarão mais expostas.",
+    "veredito": "Sustentado por uma probabilidade justa implícita de 0.5427435387673956 a seu favor, LA apresenta clara superioridade defensiva e um teto mais alto no jogo aéreo. A expectativa direta é de vitória para a equipe visitante neste duelo."
+  },
+  "2026_03_LV_NO": {
+    "gameId": "2026_03_LV_NO",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:52:59.604293Z",
+    "fatorChave": "O confronto central destaca o embate entre o ataque aereo ascendente do time mandante e a consistencia da defesa dos visitantes. A unidade defensiva de Las Vegas conteve seus oponentes de forma notavel, marcando um EPA por jogada de -0.2358898858888132 na rodada inicial e -0.2610780212410818 na jornada seguinte.",
+    "vantagemTatica": "Ao contrapor os setores, New Orleans apresentou um EPA por passe de 0.29537792824557496 recentemente, indicando clara superioridade aerea, embora seu jogo terrestre tenha sido ineficiente com EPA de -0.051455753834393346. Las Vegas possui uma muralha contra corridas, permitindo EPA de -0.48824074024378206, mas ataca muito mal pelo solo, produzindo EPA de -0.4412588765191474, o que minimiza a vulnerabilidade da defesa terrestre de New Orleans, que cedeu EPA de 0.13611691659951414 no mesmo periodo.",
+    "alertaVermelho": "O risco primordial para New Orleans e a alarmante taxa de sucesso concedida por sua defesa, que atingiu 0.6363636363636364, sinalizando que Las Vegas pode encontrar ritmo. Entretanto, os visitantes enfrentam seu proprio obstaculo grave ao gerar uma taxa de sucesso ofensiva global de apenas 0.3508771929824561.",
+    "veredito": "A eficiencia pelo passe de New Orleans e o diferencial que fornece a sustentacao necessaria para superar o limitadissimo ataque dos visitantes, incapaz de ditar o ritmo terrestre. O triunfo favorece a equipe da casa em virtude do abismo de producao quando possuem a bola frente ao inoperante setor ofensivo rival."
+  },
+  "2026_03_MIN_TB": {
+    "gameId": "2026_03_MIN_TB",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:54:01.15707Z",
+    "fatorChave": "O fator central é a dominância da defesa do MIN contra a corrida. Nas semanas anteriores elegíveis, a unidade registrou -0.4290321110262691 de EPA terrestre defensivo.",
+    "vantagemTatica": "Contrapondo ataques e defesas: o jogo aéreo do MIN marcou 0.022317555060179083 de EPA e leva ampla vantagem contra o TB, que cedeu 0.3241815717890828 de EPA por passe. Pelo chão, o TB conseguiu 0.1802316443726886 de EPA ofensivo, batendo de frente com a forte unidade terrestre defensiva do MIN. Em compensação, o ataque terrestre do MIN oscilou para -0.16020020804509322 de EPA, e a defesa terrestre do TB registrou 0.09731624911364634 de EPA em seu jogo inicial.",
+    "alertaVermelho": "O principal risco para o TB é o seu ineficiente ataque aéreo, que afundou para -0.3665024664633411 de EPA por passe, limitando severamente o potencial da equipe.",
+    "veredito": "O desempenho recente indica superioridade do MIN nos confrontos diretos de passe e trincheiras defensivas. O moneyline de visitante está estabelecido em -122."
+  },
+  "2026_03_NE_JAX": {
+    "gameId": "2026_03_NE_JAX",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:55:00.121535Z",
+    "fatorChave": "O fator central para este confronto reside no embate entre a defesa aerea de New England, que limitou o passe a -0.49607501720644526 de EPA na segunda semana, e o potencial explosivo de Jacksonville, evidenciado pelo EPA de passe de 0.792561489448417 na primeira semana.",
+    "vantagemTatica": "A vantagem tatica terrestre pende para a defesa de New England, registrando EPA defensivo contra corrida de -0.08726424818261243 na segunda semana e -0.06119518151085469 na primeira semana. Por outro lado, o ataque terrestre de Jacksonville mostrou capacidade positiva atingindo 0.06245600875627133 de EPA na segunda semana. No jogo aereo, o ataque de New England e ineficiente, com -0.21121075473070086 de EPA e taxa de sucesso ofensivo de 0.4117647058823529 na segunda semana, o que atenua a vulnerabilidade da defesa de Jacksonville que cedeu 0.27196343148877683 de EPA no passe na mesma rodada.",
+    "alertaVermelho": "O principal risco recai sobre a severa volatilidade ofensiva de Jacksonville, cuja taxa de sucesso despencou de 0.6037735849056604 na primeira semana para 0.43636363636363634 na segunda semana. Essa queda abrupta de rendimento contra uma defesa que limitou oponentes a uma taxa de sucesso de apenas 0.373134328358209 na rodada mais recente gera incerteza.",
+    "veredito": "Embora Jacksonville jogue em casa e possua maior teto ofensivo demonstrado inicialmente, a consistencia defensiva de New England projeta um duelo travado. A ineficiencia cronica ofensiva do visitante, refletida no EPA geral de jogada de -0.1096282705405689 na primeira semana, inviabiliza um dominio amplo, apontando para uma disputa resolvida em detalhes defensivos."
+  },
+  "2026_03_NYJ_DET": {
+    "gameId": "2026_03_NYJ_DET",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:55:45.763678Z",
+    "fatorChave": "O fator central reside no embate aereo e terrestre de Detroit contra a forte defesa de New York nas ultimas semanas elegiveis. Detroit obteve EPA de passe de 0.442292541556526 na semana dois, enfrentando uma defesa contra o passe do Jets que cedeu EPA de -0.21003582130091553 na semana um. No solo, o ataque terrestre de Detroit teve EPA de corrida de -0.20833964896041035 na semana dois, encarando uma defesa terrestre do Jets formidavel com EPA de -0.44114246292802917 na mesma rodada.",
+    "vantagemTatica": "No reverso, o ataque aereo do Jets mostrou forca inicial com EPA de passe de 0.4064521710191151 na semana um, buscando explorar a defesa contra o passe de Detroit que sofreu um colapso e permitiu EPA de 0.45602448594361317 na semana dois. A defesa contra corrida de Detroit tentara se impor apos registrar EPA de -0.06624949644319714 na primeira semana elegivel, visando conter o ataque terrestre de New York, que obteve EPA de -0.4385823352624559 na semana dois.",
+    "alertaVermelho": "O principal risco e a vulnerabilidade geral exibida pela defesa de Detroit em sua ultima partida, com EPA por jogada defensiva geral de 0.43463837910685194. A taxa de sucesso ofensivo do Jets precisa aproveitar essa brecha e se recuperar da fracao ruim de 0.38028169014084506 vista na semana dois.",
+    "veredito": "A solidez defensiva dos visitantes tem todas as ferramentas para anular as tentativas aereas e terrestres de Detroit, criando as condicoes ideais para que o ataque do Jets explore as graves falhas defensivas recentes do time mandante."
+  },
+  "2026_03_SEA_WAS": {
+    "gameId": "2026_03_SEA_WAS",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:56:24.023721Z",
+    "fatorChave": "O fator central deste confronto e o enorme desequilibrio entre o ataque aereo do visitante e a defesa aerea do mandante. Na segunda semana, o time visitante gerou uma taxa impressionante de 0.5958990921469789 de EPA por jogada de passe, enquanto a equipe da casa cedeu longos 0.4576977571097905 de EPA por passe em sua defesa.",
+    "vantagemTatica": "A grande vantagem reside na solidez defensiva terrestre do visitante, capaz de anular a forca do mandante pelo chao. Apesar do ataque terrestre da casa ter gerado 0.10605991343891219 de EPA na segunda semana, o front do visitante limitou seus adversarios a -0.42363597910769063 de EPA por corrida no mesmo periodo.",
+    "alertaVermelho": "O principal risco para o visitante e a ineficiencia cronica de seu proprio ataque terrestre. Com um rendimento muito ruim de -0.17837541937697096 de EPA por corrida na semana dois, eles encaram uma defesa mandante que se portou bem ao ceder apenas -0.1364267110891108 de EPA nas tentativas terrestres, o que pode forcar um plano de jogo unidimensional.",
+    "veredito": "O dominio aereo absoluto do visitante contra uma secundaria fragil deve pautar o ritmo do jogo. Refletido pela probabilidade justa de 0.7179705215419501 no mercado, a vitoria do time de Seattle surge como desfecho esperado, suportada por uma defesa imponente que impedira a equipe de Washington de controlar o relogio pelo chao."
+  },
+  "2026_03_TEN_NYG": {
+    "gameId": "2026_03_TEN_NYG",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:57:01.778688Z",
+    "fatorChave": "A instabilidade ofensiva do New York Giants dita o rumo da partida. A equipe registrou uma taxa de sucesso ofensivo de 0.6 na semana de abertura, mas despencou bruscamente para 0.2727272727272727 na rodada seguinte contra defesas ajustadas.",
+    "vantagemTatica": "O jogo terrestre do Tennessee Titans leva clara vantagem. O ataque registrou um valor de 0.13530821932716397 em avancos pelo chao na segunda rodada. Do outro lado da bola, a defesa terrestre de Tennessee marcou -0.18627309525982128 no mesmo periodo, o que deve neutralizar as corridas de Nova York, que registraram uma limitacao ofensiva de -0.2856979613886553 recentemente.",
+    "alertaVermelho": "A defesa aerea do New York Giants permitiu marcas altissimas, cedendo 0.5955571624104895 por jogada na segunda semana de disputa. Isso oferece uma janela perigosa para Tennessee corrigir seu ataque aereo, que marcou -0.21003582130091553 na primeira semana e precisa de engrenagem.",
+    "veredito": "Nova York precisa resgatar o desempenho aereo de 0.7068532854290454 da rodada inicial para sustentar suas posses. A consistencia terrestre do Tennessee Titans dita o ritmo e pode explorar as atuais fragilidades defensivas dos donos da casa em um confronto decidido primariamente pelas trincheiras."
+  },
+  "2026_03_PHI_CHI": {
+    "gameId": "2026_03_PHI_CHI",
+    "analysisType": "matchup",
+    "createdAt": "2026-09-22T04:58:00.029798Z",
+    "fatorChave": "O fator central deste confronto é a volatilidade ofensiva da equipe local. A taxa de sucesso ofensivo caiu drasticamente de 0.5428571428571428 na primeira rodada para 0.3188405797101449 na segunda, demonstrando profunda instabilidade na movimentação de jardas.",
+    "vantagemTatica": "No embate aéreo, o ataque de Philadelphia, com EPA de 0.21917532933203726, sobressai. Por sua vez, o ataque aéreo de Chicago recuou para um EPA de passe de -0.0971088150688405. Pelo chão, as corridas de Philadelphia encontrarão resistência na defesa de Chicago, que obteve EPA terrestre de -0.16020020804509322. Já o ineficiente jogo corrido de Chicago, de EPA -0.159965540487127, medirá forças com a defesa terrestre de Philadelphia, que cedeu EPA de 0.13530821932716397.",
+    "alertaVermelho": "O alerta principal recai sobre a vulnerabilidade terrestre visitante citada pelo EPA defensivo de 0.13530821932716397. Se os mandantes corrigirem as rotas e abusarem das corridas, poderão dominar o controle da posse de bola e impor desgastes severos à linha defensiva de Philadelphia.",
+    "veredito": "Com evolução ofensiva aérea consolidada, os visitantes possuem as ferramentas para definir o embate. A justa implícita posiciona o mandante em 0.39076376554174067 contra 0.6092362344582593 dos visitantes. O triunfo da franquia forasteira é o desfecho projetado, dada a notória superioridade nos fundamentos aéreos."
+  }
+}

@@ -1,0 +1,24 @@
+// @vitest-environment jsdom
+import {describe,it,expect} from 'vitest';
+import {readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {Evaluation} from './Lab';
+import {B2_SHA} from './model';
+import {bundledProvenance,evaluationFor,activeEvaluation,fmt,B2_KEYS} from './provenance';
+import real from './provenance.json';
+// Texto de Lab.tsx (linha 28 antes da ligação com o MLflow), copiado literalmente.
+const PARA1='Na avaliação de 2025, fora dos dados de ajuste, foram 380 interceptações observadas contra 364,51 esperadas no total. No grupo não classificado como interceptável, houve 75 observadas contra aproximadamente 52,92 esperadas. Um total global próximo pode esconder erros entre grupos. No grupo classificado como interceptável, foram 305 observadas para 311,59 esperadas.';
+const PARA2='Log loss de B2: 0,049853; Brier: 0,012188; average precision: 0,447002; ROC-AUC: 0,894012. B1 teve log loss 0,050298; a regressão contextual, 0,050521. O ganho sobre B1 foi pequeno. Bootstrap pareado de jogos, 2.000 réplicas; os períodos já tinham estatísticas examinadas, portanto não se trata de confirmação intocada. Nenhuma recalibração usou os próprios rótulos de avaliação.';
+const render=(source?:unknown,sha=B2_SHA)=>[...new DOMParser().parseFromString(renderToStaticMarkup(<Evaluation sha={sha} source={source}/>),'text/html').body.querySelectorAll('p')];
+const clone=()=>JSON.parse(JSON.stringify(real)) as {models:Record<string,{numbers:Record<string,{value:unknown;runId:unknown}>}>};
+describe('proveniência do B2 no laboratório de desfechos',()=>{
+ it('renderiza, caractere a caractere, o mesmo texto de antes com a proveniência real',()=>{const p=render();expect(p[0].textContent).toBe(PARA1);expect(p[1].textContent).toBe(PARA2);});
+ it('mostra a fonte: run_id curto, modelo e versão, sem link externo',()=>{const p=render(),src=p[2],e=activeEvaluation(B2_SHA)!;expect(src.textContent).toBe(`Fonte: execução MLflow ${e.numbers['evaluation2025.B2.all.log_loss'].runId.slice(0,8)} · modelo xint-ftn v${e.version}`);expect(src.textContent).toMatch(/^Fonte: execução MLflow [0-9a-f]{8} · modelo xint-ftn v\d+$/);expect(src.querySelector('a')).toBeNull();});
+ it('aceita a proveniência embutida e rejeita sha divergente do modelo ativo',()=>{expect(evaluationFor(bundledProvenance,B2_SHA)).not.toBeNull();expect(activeEvaluation('0'.repeat(64))).toBeNull();expect(activeEvaluation(B2_SHA,{schemaVersion:2,models:{}})).toBeNull();});
+ it('mostra texto neutro, sem números, se o sha do pacote ativo não bate',()=>{const p=render(undefined,'0'.repeat(64));expect(p).toHaveLength(1);expect(p[0].textContent).toMatch(/não estão disponíveis/);expect(p[0].textContent!.replace('2025','')).not.toMatch(/\d/);});
+ it('mostra texto neutro se a chave do modelo diverge ou um número não é finito',()=>{const other=clone();other.models['f'.repeat(64)]=other.models[B2_SHA];delete other.models[B2_SHA];for(const bad of [other,(()=>{const d=clone();d.models[B2_SHA].numbers['evaluation2025.B2.all.log_loss'].value=Infinity;return d;})(),(()=>{const d=clone();d.models[B2_SHA].numbers['evaluation2025.B2.all.roc_auc'].value=NaN;return d;})(),(()=>{const d=clone();d.models[B2_SHA].numbers['evaluation2025.B2.all.brier'].value='0,01';return d;})(),(()=>{const d=clone();delete d.models[B2_SHA].numbers['evaluation2025.C.all.log_loss'];return d;})(),(()=>{const d=clone();d.models[B2_SHA].numbers['evaluation2025.bootstrap.replicates'].value=0;return d;})(),(()=>{const d=clone();d.models[B2_SHA].numbers['evaluation2025.B2.all.log_loss'].runId='';return d;})(),null,'x']){const p=render(bad);expect(p).toHaveLength(1);expect(p[0].textContent).toMatch(/não estão disponíveis/);expect(p[0].textContent!.replace('2025','')).not.toMatch(/\d/);}});
+ it('a proveniência cobre todas as chaves exigidas e cada número cita run_id e chave',()=>{const e=activeEvaluation(B2_SHA)!;for(const k of B2_KEYS){const n=e.numbers[k];expect(Number.isFinite(n.value)).toBe(true);expect(n.runId).toMatch(/^[0-9a-f]{32}$/);expect(n.metricKey??n.paramKey).toBeTruthy();}expect(e.numbers['evaluation2025.B2.all.log_loss'].value).toBe(0.04985274183852961);});
+ it('formata em pt-BR com a mesma precisão do texto anterior',()=>{expect(fmt.int(2000)).toBe('2.000');expect(fmt.int(380)).toBe('380');expect(fmt.int(1234567)).toBe('1.234.567');expect(fmt.two(364.50562063822224)).toBe('364,51');expect(fmt.six(0.04985274183852961)).toBe('0,049853');});
+ it('Lab.tsx não contém literais de métrica de avaliação',()=>{const src=readFileSync(resolve(process.cwd(),'broadcast-journey/risk-outcomes/Lab.tsx'),'utf8');for(const re of [/0,0\d{3,}/,/0,\d{4,}/,/\d+,\d{2} esperad/,/Log loss de B2: 0/,/\b380\b/,/\b364\b/,/\b311\b/,/\b52,\d/,/2\.000/,/\b305 observadas/,/\b75 observadas/,/\b2000\b/])expect(src,String(re)).not.toMatch(re);});
+});

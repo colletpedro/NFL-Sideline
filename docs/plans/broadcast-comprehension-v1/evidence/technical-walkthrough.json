@@ -1,0 +1,57 @@
+{
+  "kind": "AGENT_TECHNICAL_WALKTHROUGH",
+  "humanParticipants": 0,
+  "actions": [
+    {
+      "hash": "#mr-third",
+      "long": "7+ jardasNYJ com a bola1/5Passe: 1/4 · Corrida: 0/1 conversões / tentativasTEN com a bola1/5Passe: 1/5 · Corrida: 0/0 conversões / tentativas",
+      "task": 1,
+      "thirdMarks": 22
+    },
+    {
+      "campaigns": 4,
+      "hash": "#mr-redzone",
+      "readout": "NYJ contra TEN · Campanha 5 · Field goal.Entrada demonstrada nas jogadas 1442, 1464, 1486, 1510, 1533; desfecho na(s) jogada(s) 1533.ID 2026_01_NYJ_TEN:drive:5.0",
+      "redZone": "NYJ com a bolacontra a defesa de TEN2/366,7%2 TDs em 3 campanhas observadas.TDCampanha 1FGCampanha 5TDCampanha 10Desfechos: 2 TDs · 1 field goalTEN com a bolacontra a defesa de NYJ1/1100,0%1 TD em 1 campanha observada.TDCampanha 19Desfechos: 1 TD",
+      "task": 3
+    },
+    {
+      "foundation": "classified_pass",
+      "hash": "#mr-epa",
+      "task": 4,
+      "values": [
+        {
+          "team": "NYJ",
+          "text": "NYJ com a bolacontra a defesa de TEN+0,40624 jogadas com EPA válido"
+        },
+        {
+          "team": "TEN",
+          "text": "TEN com a bolacontra a defesa de NYJ−0,21035 jogadas com EPA válido"
+        }
+      ]
+    },
+    {
+      "points": 63,
+      "readout": "NYJ: 2/10, 20,0%",
+      "task": 5
+    },
+    {
+      "hash": "#mr-method",
+      "methodOpen": true,
+      "ruleOpen": true,
+      "task": 6
+    },
+    {
+      "context": "Resultado registrado · 13 de setembro de 2026 · 2026 REG · Semana 1",
+      "retrospective": "Leitura retrospectiva deste jogo.",
+      "task": 2
+    }
+  ],
+  "restored": {
+    "font": "16px",
+    "foundation": "general",
+    "hash": "",
+    "openDetails": 0,
+    "width": 1280
+  }
+}

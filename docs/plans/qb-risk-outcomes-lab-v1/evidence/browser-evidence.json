@@ -1,0 +1,40 @@
+{
+  "crossesRodgers": {
+    "crosses": [
+      {
+        "count": 284,
+        "text": "Todos os passes284"
+      },
+      {
+        "count": 1,
+        "text": "Classificado como interceptável · com interceptação1"
+      },
+      {
+        "count": 4,
+        "text": "Classificado como interceptável · sem interceptação4"
+      },
+      {
+        "count": 5,
+        "text": "Não classificado como interceptável · com interceptação5"
+      },
+      {
+        "count": 274,
+        "text": "Não classificado como interceptável · sem interceptação274"
+      }
+    ],
+    "plays": [
+      "rl-evidence-2026_02_PIT_NE:3736",
+      "rl-evidence-2026_03_CIN_PIT:1841",
+      "rl-evidence-2026_04_PIT_CLE:4673",
+      "rl-evidence-2026_06_PIT_TB:352",
+      "rl-evidence-2026_08_CLE_PIT:2962"
+    ],
+    "selected": "Aaron Rodgers · detalhe das interceptações"
+  },
+  "evidenceState": {
+    "description": "(5:16) (Shotgun) 8-A.Rodgers pass short right intended for 17-G.Bernard INTERCEPTED by 50-G.Jacas (22-C.Woods) at NE 21. 50-G.Jacas to NE 32 for 11 yards (8-A.Rodgers).",
+    "directHref": "/?view=risk-lab&season=2026&reading=interceptions&player=00-0023459&cross=01&play=2026_02_PIT_NE%3A3736",
+    "reference": "0.004462957453139",
+    "source": "nflverse PBP + FTN Data via nflverse · 2026_02_PIT_NE:3736 · GSIS 00-0023459"
+  }
+}

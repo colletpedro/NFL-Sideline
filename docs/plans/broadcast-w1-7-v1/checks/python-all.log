@@ -1,0 +1,21 @@
+.........................................sss............................ [ 10%]
+..................ss.................................................... [ 20%]
+........................................................................ [ 31%]
+........................................................................ [ 41%]
+........................................................................ [ 51%]
+........................................................................ [ 62%]
+........ss.............................................................. [ 72%]
+....................................s.s................................. [ 82%]
+........................................................................ [ 93%]
+..............................................                           [100%]
+=========================== short test summary info ============================
+SKIPPED [1] etl-pipeline/tests/test_comparison_foundation.py:116: Explicit private comparison QA bundle required
+SKIPPED [1] etl-pipeline/tests/test_comparison_foundation.py:124: Explicit private comparison QA bundle required
+SKIPPED [1] etl-pipeline/tests/test_comparison_foundation.py:137: Explicit private comparison QA bundle required
+SKIPPED [1] etl-pipeline/tests/test_matchup_w12.py:82: Explicit frozen collection required
+SKIPPED [1] etl-pipeline/tests/test_matchup_w12.py:92: Explicit frozen collection required
+SKIPPED [1] etl-pipeline/tests/test_redzone_epa.py:112: Explicit private red zone EPA QA source required
+SKIPPED [1] etl-pipeline/tests/test_redzone_epa.py:120: Explicit private red zone EPA QA source required
+SKIPPED [1] etl-pipeline/tests/test_team_w12.py:47: Real frozen team bundle not operator configured
+SKIPPED [1] etl-pipeline/tests/test_team_w12.py:69: Real frozen team bundle required
+685 passed, 9 skipped in 13.99s

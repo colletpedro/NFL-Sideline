@@ -1,0 +1,776 @@
+[
+  {
+    "M1": {
+      "brier": 0.032255496477054064,
+      "expected": 717.4550635686101,
+      "log_loss": 0.14677662549388334,
+      "mean_probability": 0.0404427882507672,
+      "n": 17740,
+      "observed_expected": 0.8237449702569182,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.5673598666879434,
+      "joint_intercept_ci": [
+        -1.3606060590321452,
+        0.24626375493069086
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.3425959741132276,
+      "offset_intercept_ci": [
+        -0.4262301070739633,
+        -0.25830255229738547
+      ],
+      "slope": 0.9246402403503359,
+      "slope_ci": [
+        0.6581874491952521,
+        1.203318802608892
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M0",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": 1.68927989789445e-05,
+        "high": 0.00013301433471390978,
+        "low": -0.00011726435984459422
+      },
+      "log_loss": {
+        "delta": 2.632563797540078e-05,
+        "high": 0.0009902623879918136,
+        "low": -0.0010389247335985021
+      }
+    },
+    "model": {
+      "brier": 0.03227238927603301,
+      "expected": 820.1226162799226,
+      "log_loss": 0.14680295113185876,
+      "mean_probability": 0.046230136205181654,
+      "n": 17740,
+      "observed_expected": 0.7206239509413567,
+      "positives": 591,
+      "pr_auc_average_precision": 0.05776977158210094,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5737132857342024
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2024
+  },
+  {
+    "M1": {
+      "brier": 0.032255496477054064,
+      "expected": 717.4550635686101,
+      "log_loss": 0.14677662549388334,
+      "mean_probability": 0.0404427882507672,
+      "n": 17740,
+      "observed_expected": 0.8237449702569182,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 0,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": null,
+      "joint_intercept_ci": null,
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.2012955237706231,
+      "offset_intercept_ci": [
+        -0.2862978050943536,
+        -0.11594466524345087
+      ],
+      "slope": null,
+      "slope_ci": null,
+      "status": "constant_slope_unidentifiable"
+    },
+    "candidate": "M1",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": 0.0,
+        "high": 0.0,
+        "low": 0.0
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "high": 0.0,
+        "low": 0.0
+      }
+    },
+    "model": {
+      "brier": 0.032255496477054064,
+      "expected": 717.4550635686101,
+      "log_loss": 0.14677662549388334,
+      "mean_probability": 0.0404427882507672,
+      "n": 17740,
+      "observed_expected": 0.8237449702569182,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2024
+  },
+  {
+    "M1": {
+      "brier": 0.032255496477054064,
+      "expected": 717.4550635686101,
+      "log_loss": 0.14677662549388334,
+      "mean_probability": 0.0404427882507672,
+      "n": 17740,
+      "observed_expected": 0.8237449702569182,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.6359151494265427,
+      "joint_intercept_ci": [
+        -1.482361922532917,
+        0.2283944212079694
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.19879595050698484,
+      "offset_intercept_ci": [
+        -0.2822478602170379,
+        -0.11482771024749122
+      ],
+      "slope": 0.8603702789216394,
+      "slope_ci": [
+        0.5858280545835097,
+        1.1416294837982819
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M2",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": -8.253945131693963e-05,
+        "high": -4.432389776077528e-06,
+        "low": -0.00017030312112102997
+      },
+      "log_loss": {
+        "delta": -0.0011393672734598046,
+        "high": -0.0002841650538894585,
+        "low": -0.0020501399528215815
+      }
+    },
+    "model": {
+      "brier": 0.03217295702573713,
+      "expected": 715.2272354526924,
+      "log_loss": 0.1456372582204236,
+      "mean_probability": 0.040317206057085254,
+      "n": 17740,
+      "observed_expected": 0.8263108152277442,
+      "positives": 591,
+      "pr_auc_average_precision": 0.048772758118638015,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5700497648805004
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2024
+  },
+  {
+    "M1": {
+      "brier": 0.032255496477054064,
+      "expected": 717.4550635686101,
+      "log_loss": 0.14677662549388334,
+      "mean_probability": 0.0404427882507672,
+      "n": 17740,
+      "observed_expected": 0.8237449702569182,
+      "positives": 591,
+      "pr_auc_average_precision": 0.03331454340473506,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.46960990899529637,
+      "joint_intercept_ci": [
+        -1.2986287613250482,
+        0.3899123974376452
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.19997234621425172,
+      "offset_intercept_ci": [
+        -0.2839658951334674,
+        -0.11544084823632862
+      ],
+      "slope": 0.913710836849978,
+      "slope_ci": [
+        0.6479116860689379,
+        1.1883385466568457
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M3",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": -0.00011264773249550073,
+        "high": -8.8917544288491e-06,
+        "low": -0.00023148878329503863
+      },
+      "log_loss": {
+        "delta": -0.0013824462158826816,
+        "high": -0.0004535818848115408,
+        "low": -0.0024191410038316864
+      }
+    },
+    "model": {
+      "brier": 0.03214284874455856,
+      "expected": 715.9485909836071,
+      "log_loss": 0.1453941792780007,
+      "mean_probability": 0.04035786871384482,
+      "n": 17740,
+      "observed_expected": 0.8254782640022431,
+      "positives": 591,
+      "pr_auc_average_precision": 0.05456064375073514,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5722705708965286
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "same_structure_before_offset_diagnostic": {
+      "brier": 0.032479240843070814,
+      "expected": 924.2656406387173,
+      "log_loss": 0.14880626941769284,
+      "mean_probability": 0.05210065618031101,
+      "n": 17740,
+      "observed_expected": 0.6394265609523115,
+      "positives": 591,
+      "pr_auc_average_precision": 0.05456064375073514,
+      "prevalence": 0.03331454340473506,
+      "roc_auc": 0.5722705708965286
+    },
+    "year": 2024
+  },
+  {
+    "M1": {
+      "brier": 0.03084566448231916,
+      "expected": 578.2738444193913,
+      "log_loss": 0.14117772155557853,
+      "mean_probability": 0.03331454340473507,
+      "n": 17358,
+      "observed_expected": 0.9562943324113731,
+      "positives": 553,
+      "pr_auc_average_precision": 0.031858509044820835,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.4695177140141418,
+      "joint_intercept_ci": [
+        -1.3408840687026038,
+        0.3999530580326998
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.2959159181900021,
+      "offset_intercept_ci": [
+        -0.3832053011627829,
+        -0.2118975165725332
+      ],
+      "slope": 0.9435094538177743,
+      "slope_ci": [
+        0.6618112750606928,
+        1.2279781279234534
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M0",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": 2.8101107076223733e-05,
+        "high": 0.00013944929402249763,
+        "low": -9.371268827660873e-05
+      },
+      "log_loss": {
+        "delta": 2.3852781595921154e-05,
+        "high": 0.001199169927797457,
+        "low": -0.001298828656719489
+      }
+    },
+    "model": {
+      "brier": 0.030873765589395377,
+      "expected": 734.47074835571,
+      "log_loss": 0.14120157433717448,
+      "mean_probability": 0.042313097612381036,
+      "n": 17358,
+      "observed_expected": 0.7529231099237429,
+      "positives": 553,
+      "pr_auc_average_precision": 0.04476199597735799,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5842720967506765
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2025
+  },
+  {
+    "M1": {
+      "brier": 0.03084566448231916,
+      "expected": 578.2738444193913,
+      "log_loss": 0.14117772155557853,
+      "mean_probability": 0.03331454340473507,
+      "n": 17358,
+      "observed_expected": 0.9562943324113731,
+      "positives": 553,
+      "pr_auc_average_precision": 0.031858509044820835,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 0,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": null,
+      "joint_intercept_ci": null,
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.04619461418680296,
+      "offset_intercept_ci": [
+        -0.13261531408769467,
+        0.03657988625027186
+      ],
+      "slope": null,
+      "slope_ci": null,
+      "status": "constant_slope_unidentifiable"
+    },
+    "candidate": "M1",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": 0.0,
+        "high": 0.0,
+        "low": 0.0
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "high": 0.0,
+        "low": 0.0
+      }
+    },
+    "model": {
+      "brier": 0.03084566448231916,
+      "expected": 578.2738444193913,
+      "log_loss": 0.14117772155557853,
+      "mean_probability": 0.03331454340473507,
+      "n": 17358,
+      "observed_expected": 0.9562943324113731,
+      "positives": 553,
+      "pr_auc_average_precision": 0.031858509044820835,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2025
+  },
+  {
+    "M1": {
+      "brier": 0.03084566448231916,
+      "expected": 578.2738444193913,
+      "log_loss": 0.14117772155557853,
+      "mean_probability": 0.03331454340473507,
+      "n": 17358,
+      "observed_expected": 0.9562943324113731,
+      "positives": 553,
+      "pr_auc_average_precision": 0.031858509044820835,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.5358711017903051,
+      "joint_intercept_ci": [
+        -1.6446010356159901,
+        0.5307056551344168
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.05447333849711745,
+      "offset_intercept_ci": [
+        -0.1413515187836546,
+        0.029745756454837912
+      ],
+      "slope": 0.8552594474276315,
+      "slope_ci": [
+        0.5253681680661546,
+        1.1785308211011132
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M2",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": -6.029640971140906e-05,
+        "high": 2.6285811126680356e-06,
+        "low": -0.00012922124920158968
+      },
+      "log_loss": {
+        "delta": -0.0009123224771180841,
+        "high": -2.7231887738660862e-05,
+        "low": -0.001812318071806592
+      }
+    },
+    "model": {
+      "brier": 0.030785368072607747,
+      "expected": 582.8288906422518,
+      "log_loss": 0.1402653990784605,
+      "mean_probability": 0.03357696109242147,
+      "n": 17358,
+      "observed_expected": 0.948820500971766,
+      "positives": 553,
+      "pr_auc_average_precision": 0.042402218624973204,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5709514465739067
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2025
+  },
+  {
+    "M1": {
+      "brier": 0.03084566448231916,
+      "expected": 578.2738444193913,
+      "log_loss": 0.14117772155557853,
+      "mean_probability": 0.03331454340473507,
+      "n": 17358,
+      "observed_expected": 0.9562943324113731,
+      "positives": 553,
+      "pr_auc_average_precision": 0.031858509044820835,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.1770497177436158,
+      "joint_intercept_ci": [
+        -1.1191652924419582,
+        0.7512090581571667
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.05531758753927164,
+      "offset_intercept_ci": [
+        -0.14273849653605195,
+        0.028533932414976065
+      ],
+      "slope": 0.9632378123916329,
+      "slope_ci": [
+        0.6834131744208166,
+        1.2431649390292192
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M3",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": -0.00010288549016162002,
+        "high": -2.3672476352377607e-05,
+        "low": -0.00019062212522711263
+      },
+      "log_loss": {
+        "delta": -0.0015169473379722008,
+        "high": -0.000541877743789119,
+        "low": -0.002592064866186194
+      }
+    },
+    "model": {
+      "brier": 0.03074277899215753,
+      "expected": 583.2725862042566,
+      "log_loss": 0.13966077421760636,
+      "mean_probability": 0.03360252253740389,
+      "n": 17358,
+      "observed_expected": 0.9480987330447663,
+      "positives": 553,
+      "pr_auc_average_precision": 0.045524074639917936,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5859075998327803
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "same_structure_before_offset_diagnostic": {
+      "brier": 0.030983617362756496,
+      "expected": 809.2256766501606,
+      "log_loss": 0.14237217592419274,
+      "mean_probability": 0.046619753234828934,
+      "n": 17358,
+      "observed_expected": 0.6833693195317003,
+      "positives": 553,
+      "pr_auc_average_precision": 0.045524074639917936,
+      "prevalence": 0.031858509044820835,
+      "roc_auc": 0.5859075998327803
+    },
+    "year": 2025
+  },
+  {
+    "M1": {
+      "brier": 0.029870294325320602,
+      "expected": 226.38656527249694,
+      "log_loss": 0.1375954619596301,
+      "mean_probability": 0.03185850904482085,
+      "n": 7106,
+      "observed_expected": 0.9673718921279366,
+      "positives": 219,
+      "pr_auc_average_precision": 0.030819026175063328,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.3468362318408708,
+      "joint_intercept_ci": [
+        -1.5342891295505654,
+        0.7212580384164357
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.2637220824793385,
+      "offset_intercept_ci": [
+        -0.4131360137682328,
+        -0.12166578592563755
+      ],
+      "slope": 0.973543999026948,
+      "slope_ci": [
+        0.6054814408399848,
+        1.3151541125059616
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M0",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": -2.7124626938415035e-05,
+        "high": 0.0001353813921318719,
+        "low": -0.0001975582582781177
+      },
+      "log_loss": {
+        "delta": -0.0002524082710983739,
+        "high": 0.00141493704337648,
+        "low": -0.0020010102040229198
+      }
+    },
+    "model": {
+      "brier": 0.02984316969838219,
+      "expected": 282.18921288487985,
+      "log_loss": 0.13734305368853172,
+      "mean_probability": 0.03971140063113986,
+      "n": 7106,
+      "observed_expected": 0.7760750234252997,
+      "positives": 219,
+      "pr_auc_average_precision": 0.05282409165714033,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5780969770986697
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2026
+  },
+  {
+    "M1": {
+      "brier": 0.029870294325320602,
+      "expected": 226.38656527249694,
+      "log_loss": 0.1375954619596301,
+      "mean_probability": 0.03185850904482085,
+      "n": 7106,
+      "observed_expected": 0.9673718921279366,
+      "positives": 219,
+      "pr_auc_average_precision": 0.030819026175063328,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 0,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": null,
+      "joint_intercept_ci": null,
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.03424538709132606,
+      "offset_intercept_ci": [
+        -0.18586042473724343,
+        0.10596295434614177
+      ],
+      "slope": null,
+      "slope_ci": null,
+      "status": "constant_slope_unidentifiable"
+    },
+    "candidate": "M1",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": 0.0,
+        "high": 0.0,
+        "low": 0.0
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "high": 0.0,
+        "low": 0.0
+      }
+    },
+    "model": {
+      "brier": 0.029870294325320602,
+      "expected": 226.38656527249694,
+      "log_loss": 0.1375954619596301,
+      "mean_probability": 0.03185850904482085,
+      "n": 7106,
+      "observed_expected": 0.9673718921279366,
+      "positives": 219,
+      "pr_auc_average_precision": 0.030819026175063328,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2026
+  },
+  {
+    "M1": {
+      "brier": 0.029870294325320602,
+      "expected": 226.38656527249694,
+      "log_loss": 0.1375954619596301,
+      "mean_probability": 0.03185850904482085,
+      "n": 7106,
+      "observed_expected": 0.9673718921279366,
+      "positives": 219,
+      "pr_auc_average_precision": 0.030819026175063328,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -1.1346154694318915,
+      "joint_intercept_ci": [
+        -2.394944598602457,
+        0.0320404130681639
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.03270400788388241,
+      "offset_intercept_ci": [
+        -0.18232186878941414,
+        0.10913179033560955
+      ],
+      "slope": 0.6742262957083789,
+      "slope_ci": [
+        0.31836882819548307,
+        1.0162095935135893
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M2",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": -2.9826262985687398e-05,
+        "high": 5.62321907327384e-05,
+        "low": -0.00012321075623211158
+      },
+      "log_loss": {
+        "delta": -0.0005307201484152203,
+        "high": 0.0005666492041994903,
+        "low": -0.0016920836096881158
+      }
+    },
+    "model": {
+      "brier": 0.02984046806233492,
+      "expected": 226.02174139616838,
+      "log_loss": 0.1370647418112149,
+      "mean_probability": 0.031807168786401406,
+      "n": 7106,
+      "observed_expected": 0.9689333364445646,
+      "positives": 219,
+      "pr_auc_average_precision": 0.04022918996141585,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5595868199831195
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "year": 2026
+  },
+  {
+    "M1": {
+      "brier": 0.029870294325320602,
+      "expected": 226.38656527249694,
+      "log_loss": 0.1375954619596301,
+      "mean_probability": 0.03185850904482085,
+      "n": 7106,
+      "observed_expected": 0.9673718921279366,
+      "positives": 219,
+      "pr_auc_average_precision": 0.030819026175063328,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5
+    },
+    "calibration_diagnostic": {
+      "bootstrap_requested": 2000,
+      "bootstrap_valid_joint": 2000,
+      "bootstrap_valid_offset": 2000,
+      "joint_intercept": -0.13059549206673512,
+      "joint_intercept_ci": [
+        -1.5232086426601938,
+        1.1509007330974053
+      ],
+      "method": "game bootstrap; diagnostic MLE, not applied to predictions",
+      "offset_intercept": -0.03312518420857966,
+      "offset_intercept_ci": [
+        -0.18269513619524202,
+        0.10907258173787049
+      ],
+      "slope": 0.9711174533896342,
+      "slope_ci": [
+        0.5638029235211253,
+        1.3455476214586557
+      ],
+      "status": "diagnostic_only"
+    },
+    "candidate": "M3",
+    "difference_vs_M1": {
+      "brier": {
+        "delta": -9.986733899712703e-05,
+        "high": -7.794188398922551e-06,
+        "low": -0.00020243303629352905
+      },
+      "log_loss": {
+        "delta": -0.0012700483698861954,
+        "high": -0.00015240731531538892,
+        "low": -0.002429235862903927
+      }
+    },
+    "model": {
+      "brier": 0.029770426986323484,
+      "expected": 226.11881923782295,
+      "log_loss": 0.13632541358974393,
+      "mean_probability": 0.031820830177008576,
+      "n": 7106,
+      "observed_expected": 0.9685173517984116,
+      "positives": 219,
+      "pr_auc_average_precision": 0.05107774897845832,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5742720220016139
+    },
+    "period_status": "known_retrospective_diagnostic",
+    "same_structure_before_offset_diagnostic": {
+      "brier": 0.02981104065960865,
+      "expected": 263.5920647327956,
+      "log_loss": 0.1368948591968338,
+      "mean_probability": 0.037094295628032035,
+      "n": 7106,
+      "observed_expected": 0.830829259682006,
+      "positives": 219,
+      "pr_auc_average_precision": 0.05107774897845832,
+      "prevalence": 0.030819026175063328,
+      "roc_auc": 0.5742720220016139
+    },
+    "year": 2026
+  }
+]

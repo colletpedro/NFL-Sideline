@@ -1,0 +1,20 @@
+{
+  "active_store_files_unchanged": {
+    "qb-risk-lab-v1": 16095,
+    "qb-risk-outcomes-lab-v1": 233
+  },
+  "all_20_own_sources_reverified": true,
+  "all_27_parent_sources_reverified": true,
+  "lab_branch": "codex/qb-risk-outcomes-lab-v1",
+  "lab_head": "01f23cfc64fee10f5b16dafae7eb4dabeff8579c",
+  "lab_status": "",
+  "main_head": "98cca81929f740cd026737a3acb2d8d625fcecae",
+  "main_status_preserved": true,
+  "passed": true,
+  "scope": "Only new research/qb_structure_production and docs/plans/qb-structure-production-v1; no frontend/backend/operational ETL/database/public snapshot changes",
+  "server_unchanged": {
+    "error": "URLError",
+    "status": "unreachable"
+  },
+  "tracked_lab_files_unchanged": 3399
+}

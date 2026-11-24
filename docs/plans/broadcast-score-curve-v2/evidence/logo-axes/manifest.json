@@ -1,0 +1,21 @@
+[
+  {
+    "file": "desktop-1440.png",
+    "bytes": 61552,
+    "sha256": "29ea0d398e1a3265e9237774ad33b2609718fb0522ee75938a9b79565b69f741",
+    "width": 65536,
+    "height": 4292542531
+  },
+  {
+    "file": "layouts.json",
+    "bytes": 1828,
+    "sha256": "42cc5510525b6bcdde33855fc9c76c8da19705cdba4e7f6c50131475bbe1541e"
+  },
+  {
+    "file": "panel-532.png",
+    "bytes": 39816,
+    "sha256": "8f0e96fb41b9323b427b788010f3f2dd958c15e8a290b104a5f3c1b2d7bb7d3e",
+    "width": 65536,
+    "height": 4292542531
+  }
+]

@@ -1,0 +1,13 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/redzone-epa/redzone-epa.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-redzone-epa-v1/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/redzone-epa/redzone-epa.test.tsx (8 tests) 62ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  16:59:28
+   Duration  453ms (transform 40ms, setup 0ms, collect 63ms, tests 62ms, environment 0ms, prepare 42ms)

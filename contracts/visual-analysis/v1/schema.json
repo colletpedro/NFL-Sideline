@@ -1,0 +1,660 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VisualAnalysisDocument interno v1 — contrato de implementação",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "projectorVersion",
+    "mode",
+    "publicationApproved",
+    "source",
+    "game",
+    "scope",
+    "evidence",
+    "series",
+    "encounters",
+    "findings",
+    "restrictions",
+    "links",
+    "presentation"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        "visual-analysis-1.0.0"
+      ]
+    },
+    "projectorVersion": {
+      "enum": [
+        "visual-projector-1.0.0"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "LOCAL_RULES_DEVELOPMENT"
+      ]
+    },
+    "publicationApproved": {
+      "enum": [
+        false
+      ]
+    },
+    "source": {
+      "$ref": "#/definitions/source"
+    },
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gameId",
+        "season",
+        "week",
+        "phase",
+        "awayTeam",
+        "homeTeam"
+      ],
+      "properties": {
+        "gameId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "season": {
+          "type": "integer",
+          "minimum": 1999,
+          "maximum": 2200
+        },
+        "week": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 30
+        },
+        "phase": {
+          "enum": [
+            "REG",
+            "POST"
+          ]
+        },
+        "awayTeam": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "homeTeam": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "moment",
+        "declaredAsOfDate",
+        "temporalGuarantee",
+        "expectedCurrentWeeks",
+        "opponentAdjusted"
+      ],
+      "properties": {
+        "moment": {
+          "enum": [
+            "PREGAME"
+          ]
+        },
+        "declaredAsOfDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "temporalGuarantee": {
+          "enum": [
+            "WEEK_ORDER_ONLY"
+          ]
+        },
+        "expectedCurrentWeeks": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 30
+          },
+          "minItems": 0,
+          "maxItems": 3,
+          "uniqueItems": true
+        },
+        "opponentAdjusted": {
+          "enum": [
+            false
+          ]
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/evidence"
+      },
+      "minItems": 0,
+      "maxItems": 36
+    },
+    "series": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/series"
+      },
+      "minItems": 0,
+      "maxItems": 12
+    },
+    "encounters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/encounter"
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/finding"
+      },
+      "minItems": 0,
+      "maxItems": 6
+    },
+    "restrictions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/restriction"
+      },
+      "minItems": 1,
+      "maxItems": 30
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/link"
+      },
+      "minItems": 0,
+      "maxItems": 12
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "highlightFindingIds",
+        "equivalentHighlightGroups",
+        "globalRestrictionIds",
+        "chartPolicy"
+      ],
+      "properties": {
+        "highlightFindingIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+          },
+          "minItems": 0,
+          "maxItems": 6,
+          "uniqueItems": true
+        },
+        "equivalentHighlightGroups": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+            },
+            "minItems": 2,
+            "maxItems": 6,
+            "uniqueItems": true
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "globalRestrictionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+          },
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true
+        },
+        "chartPolicy": {
+          "enum": [
+            "SHARED_SYMMETRIC_ZERO_V1"
+          ]
+        }
+      }
+    }
+  },
+  "definitions": {
+    "source": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "fixtureId"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "CONTRACT_FIXTURE"
+              ]
+            },
+            "fixtureId": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "resultIdentity",
+            "contextSha256",
+            "claimsContractVersion",
+            "selectorVersion"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "VALIDATED_LOCAL_RESULT"
+              ]
+            },
+            "resultIdentity": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "contextSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "claimsContractVersion": {
+              "enum": [
+                5
+              ]
+            },
+            "selectorVersion": {
+              "enum": [
+                "2.0.0"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "metric",
+        "team",
+        "season",
+        "week",
+        "origin",
+        "value",
+        "displayValue",
+        "unit",
+        "plays"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "metric": {
+          "enum": [
+            "OFF_EPA_PASS",
+            "OFF_EPA_RUSH",
+            "OFF_EPA_PLAY",
+            "DEF_EPA_PASS",
+            "DEF_EPA_RUSH",
+            "DEF_EPA_PLAY"
+          ]
+        },
+        "team": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "season": {
+          "type": "integer",
+          "minimum": 1999,
+          "maximum": 2200
+        },
+        "week": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 30
+        },
+        "origin": {
+          "enum": [
+            "CURRENT_SEASON_PRIOR_WEEKS",
+            "HISTORICAL_REFERENCE"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+          "maxLength": 400
+        },
+        "displayValue": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "unit": {
+          "enum": [
+            "EPA_PER_PLAY"
+          ]
+        },
+        "plays": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "series": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "evidenceIds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+          },
+          "minItems": 1,
+          "maxItems": 3,
+          "uniqueItems": true
+        }
+      }
+    },
+    "encounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "attackTeam",
+        "defenseTeam",
+        "foundation",
+        "attackSeriesId",
+        "defenseSeriesId",
+        "state",
+        "unavailableReason",
+        "representedByFindingIds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "attackTeam": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "defenseTeam": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "foundation": {
+          "enum": [
+            "PASS",
+            "RUSH",
+            "GENERAL"
+          ]
+        },
+        "attackSeriesId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "defenseSeriesId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "enum": [
+            "COMPARABLE",
+            "UNAVAILABLE",
+            "REPRESENTED_BY"
+          ]
+        },
+        "unavailableReason": {
+          "anyOf": [
+            {
+              "enum": [
+                "MISSING_ATTACK",
+                "MISSING_DEFENSE",
+                "MISSING_BOTH",
+                "INCOMPATIBLE_ORIGIN"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "representedByFindingIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+          },
+          "minItems": 0,
+          "maxItems": 4,
+          "uniqueItems": true
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "claimId",
+        "encounterId",
+        "relation",
+        "attackPattern",
+        "defensePattern",
+        "title",
+        "summary",
+        "primaryRestrictionId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "claimId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "encounterId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "relation": {
+          "enum": [
+            "POSITIVE_CONVERGENCE",
+            "POSITIVE_COMPATIBILITY_ONLY",
+            "FAVORABLE_ATTACK_AND_DEFENSE",
+            "ATTACK_NOT_DEMONSTRATED",
+            "BOTH_NEGATIVE",
+            "WEEKLY_SIGN_VARIATION",
+            "ZERO_PROFILE"
+          ]
+        },
+        "attackPattern": {
+          "enum": [
+            "ALL_POSITIVE",
+            "ALL_NEGATIVE",
+            "MIXED_SIGNS",
+            "ZERO_ONLY",
+            "NONNEGATIVE_WITH_ZERO",
+            "NONPOSITIVE_WITH_ZERO"
+          ]
+        },
+        "defensePattern": {
+          "enum": [
+            "ALL_POSITIVE",
+            "ALL_NEGATIVE",
+            "MIXED_SIGNS",
+            "ZERO_ONLY",
+            "NONNEGATIVE_WITH_ZERO",
+            "NONPOSITIVE_WITH_ZERO"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "primaryRestrictionId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        }
+      }
+    },
+    "restriction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "claimId",
+        "code",
+        "encounterIds",
+        "evidenceIds",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "claimId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "code": {
+          "enum": [
+            "SAMPLE_LIMIT",
+            "SIGN_VARIATION_LIMIT",
+            "COVERAGE_LIMIT",
+            "LIMITED_SCOPE",
+            "HISTORICAL_ONLY",
+            "NO_DATA",
+            "PARTIAL_DATA",
+            "UNEVEN_WINDOWS",
+            "UNAVAILABLE_DENOMINATORS",
+            "NO_OPPONENT_ADJUSTMENT",
+            "TEMPORAL_AVAILABILITY_UNKNOWN"
+          ]
+        },
+        "encounterIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+          },
+          "minItems": 0,
+          "maxItems": 6,
+          "uniqueItems": true
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+          },
+          "minItems": 0,
+          "maxItems": 36,
+          "uniqueItems": true
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fromFindingId",
+        "toFindingId",
+        "relation"
+      ],
+      "properties": {
+        "fromFindingId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "toFindingId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_:,.-]{1,180}$"
+        },
+        "relation": {
+          "enum": [
+            "ADDITIONAL_RESTRICTION",
+            "INDEPENDENT_OPPORTUNITY"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "invalid": false,
+    "markers": 2,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_01_NO_DET&season=2026&week=1&returnWeek=1"
+  },
+  {
+    "invalid": false,
+    "markers": 1,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_02_GB_NYJ&season=2026&week=2&returnWeek=2"
+  },
+  {
+    "invalid": false,
+    "markers": 3,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_02_IND_KC&season=2026&week=2&returnWeek=2"
+  },
+  {
+    "invalid": false,
+    "markers": 2,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_BAL_ATL&season=2026&week=5&returnWeek=5"
+  },
+  {
+    "invalid": false,
+    "markers": 2,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_BUF_LA&season=2026&week=5&returnWeek=5"
+  },
+  {
+    "invalid": false,
+    "markers": 1,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_05_NYG_WAS&season=2026&week=5&returnWeek=5"
+  },
+  {
+    "invalid": false,
+    "markers": 1,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_06_PIT_TB&season=2026&week=6&returnWeek=6"
+  },
+  {
+    "invalid": false,
+    "markers": 2,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_06_SEA_DEN&season=2026&week=6&returnWeek=6"
+  },
+  {
+    "invalid": false,
+    "markers": 1,
+    "overflow": false,
+    "quarter": "Prorrogação",
+    "url": "http://127.0.0.1:18111/?view=matchup-season&game=2026_07_NYG_HOU&season=2026&week=7&returnWeek=7"
+  }
+]

@@ -1,0 +1,590 @@
+{
+  "teams": [
+    {
+      "team": "ARI",
+      "gameIds": [
+        "2026_01_ARI_LAC",
+        "2026_02_SEA_ARI"
+      ],
+      "opponents": [
+        "LAC",
+        "SEA"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "ATL",
+      "gameIds": [
+        "2026_01_ATL_PIT",
+        "2026_02_CAR_ATL"
+      ],
+      "opponents": [
+        "PIT",
+        "CAR"
+      ],
+      "offRedZone": "NO_OPPORTUNITIES"
+    },
+    {
+      "team": "BAL",
+      "gameIds": [
+        "2026_01_BAL_IND",
+        "2026_02_NO_BAL"
+      ],
+      "opponents": [
+        "IND",
+        "NO"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "BUF",
+      "gameIds": [
+        "2026_01_BUF_HOU",
+        "2026_02_DET_BUF"
+      ],
+      "opponents": [
+        "HOU",
+        "DET"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "CAR",
+      "gameIds": [
+        "2026_01_CHI_CAR",
+        "2026_02_CAR_ATL"
+      ],
+      "opponents": [
+        "CHI",
+        "ATL"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "CHI",
+      "gameIds": [
+        "2026_01_CHI_CAR",
+        "2026_02_MIN_CHI"
+      ],
+      "opponents": [
+        "CAR",
+        "MIN"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "CIN",
+      "gameIds": [
+        "2026_01_TB_CIN",
+        "2026_02_CIN_HOU"
+      ],
+      "opponents": [
+        "TB",
+        "HOU"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "CLE",
+      "gameIds": [
+        "2026_01_CLE_JAX",
+        "2026_02_CLE_TB"
+      ],
+      "opponents": [
+        "JAX",
+        "TB"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "DAL",
+      "gameIds": [
+        "2026_01_DAL_NYG",
+        "2026_02_WAS_DAL"
+      ],
+      "opponents": [
+        "NYG",
+        "WAS"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "DEN",
+      "gameIds": [
+        "2026_01_DEN_KC",
+        "2026_02_JAX_DEN"
+      ],
+      "opponents": [
+        "KC",
+        "JAX"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "DET",
+      "gameIds": [
+        "2026_01_NO_DET",
+        "2026_02_DET_BUF"
+      ],
+      "opponents": [
+        "NO",
+        "BUF"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "GB",
+      "gameIds": [
+        "2026_01_GB_MIN",
+        "2026_02_GB_NYJ"
+      ],
+      "opponents": [
+        "MIN",
+        "NYJ"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "HOU",
+      "gameIds": [
+        "2026_01_BUF_HOU",
+        "2026_02_CIN_HOU"
+      ],
+      "opponents": [
+        "BUF",
+        "CIN"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "IND",
+      "gameIds": [
+        "2026_01_BAL_IND",
+        "2026_02_IND_KC"
+      ],
+      "opponents": [
+        "BAL",
+        "KC"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "JAX",
+      "gameIds": [
+        "2026_01_CLE_JAX",
+        "2026_02_JAX_DEN"
+      ],
+      "opponents": [
+        "CLE",
+        "DEN"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "KC",
+      "gameIds": [
+        "2026_01_DEN_KC",
+        "2026_02_IND_KC"
+      ],
+      "opponents": [
+        "DEN",
+        "IND"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "LA",
+      "gameIds": [
+        "2026_01_SF_LA",
+        "2026_02_NYG_LA"
+      ],
+      "opponents": [
+        "SF",
+        "NYG"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "LAC",
+      "gameIds": [
+        "2026_01_ARI_LAC",
+        "2026_02_LV_LAC"
+      ],
+      "opponents": [
+        "ARI",
+        "LV"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "LV",
+      "gameIds": [
+        "2026_01_MIA_LV",
+        "2026_02_LV_LAC"
+      ],
+      "opponents": [
+        "MIA",
+        "LAC"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "MIA",
+      "gameIds": [
+        "2026_01_MIA_LV",
+        "2026_02_MIA_SF"
+      ],
+      "opponents": [
+        "LV",
+        "SF"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "MIN",
+      "gameIds": [
+        "2026_01_GB_MIN",
+        "2026_02_MIN_CHI"
+      ],
+      "opponents": [
+        "GB",
+        "CHI"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "NE",
+      "gameIds": [
+        "2026_01_NE_SEA",
+        "2026_02_PIT_NE"
+      ],
+      "opponents": [
+        "SEA",
+        "PIT"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "NO",
+      "gameIds": [
+        "2026_01_NO_DET",
+        "2026_02_NO_BAL"
+      ],
+      "opponents": [
+        "DET",
+        "BAL"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "NYG",
+      "gameIds": [
+        "2026_01_DAL_NYG",
+        "2026_02_NYG_LA"
+      ],
+      "opponents": [
+        "DAL",
+        "LA"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "NYJ",
+      "gameIds": [
+        "2026_01_NYJ_TEN",
+        "2026_02_GB_NYJ"
+      ],
+      "opponents": [
+        "TEN",
+        "GB"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "PHI",
+      "gameIds": [
+        "2026_01_WAS_PHI",
+        "2026_02_PHI_TEN"
+      ],
+      "opponents": [
+        "WAS",
+        "TEN"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "PIT",
+      "gameIds": [
+        "2026_01_ATL_PIT",
+        "2026_02_PIT_NE"
+      ],
+      "opponents": [
+        "ATL",
+        "NE"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "SEA",
+      "gameIds": [
+        "2026_01_NE_SEA",
+        "2026_02_SEA_ARI"
+      ],
+      "opponents": [
+        "NE",
+        "ARI"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "SF",
+      "gameIds": [
+        "2026_01_SF_LA",
+        "2026_02_MIA_SF"
+      ],
+      "opponents": [
+        "LA",
+        "MIA"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "TB",
+      "gameIds": [
+        "2026_01_TB_CIN",
+        "2026_02_CLE_TB"
+      ],
+      "opponents": [
+        "CIN",
+        "CLE"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "TEN",
+      "gameIds": [
+        "2026_01_NYJ_TEN",
+        "2026_02_PHI_TEN"
+      ],
+      "opponents": [
+        "NYJ",
+        "PHI"
+      ],
+      "offRedZone": "AVAILABLE"
+    },
+    {
+      "team": "WAS",
+      "gameIds": [
+        "2026_01_WAS_PHI",
+        "2026_02_WAS_DAL"
+      ],
+      "opponents": [
+        "PHI",
+        "DAL"
+      ],
+      "offRedZone": "AVAILABLE"
+    }
+  ],
+  "epa": 192,
+  "perspectives": 64,
+  "uniqueThirdUnits": 787,
+  "uniqueCampaigns": 208,
+  "rounding": {
+    "ARI/off/general": "\u22120,046",
+    "ARI/off/classified_pass": "+0,014",
+    "ARI/off/classified_rush": "\u22120,131",
+    "ARI/def/general": "\u22120,030",
+    "ARI/def/classified_pass": "+0,184",
+    "ARI/def/classified_rush": "\u22120,229",
+    "ATL/off/general": "\u22120,403",
+    "ATL/off/classified_pass": "\u22120,669",
+    "ATL/off/classified_rush": "\u22120,146",
+    "ATL/def/general": "\u22120,084",
+    "ATL/def/classified_pass": "\u22120,035",
+    "ATL/def/classified_rush": "\u22120,185",
+    "BAL/off/general": "+0,223",
+    "BAL/off/classified_pass": "+0,223",
+    "BAL/off/classified_rush": "+0,223",
+    "BAL/def/general": "\u22120,037",
+    "BAL/def/classified_pass": "\u22120,061",
+    "BAL/def/classified_rush": "+<0,001",
+    "BUF/off/general": "+0,355",
+    "BUF/off/classified_pass": "+0,477",
+    "BUF/off/classified_rush": "+0,208",
+    "BUF/def/general": "+0,144",
+    "BUF/def/classified_pass": "+0,242",
+    "BUF/def/classified_rush": "\u22120,012",
+    "CAR/off/general": "+0,162",
+    "CAR/off/classified_pass": "+0,271",
+    "CAR/off/classified_rush": "\u22120,034",
+    "CAR/def/general": "\u22120,022",
+    "CAR/def/classified_pass": "\u22120,169",
+    "CAR/def/classified_rush": "+0,114",
+    "CHI/off/general": "+0,144",
+    "CHI/off/classified_pass": "+0,148",
+    "CHI/off/classified_rush": "+0,140",
+    "CHI/def/general": "+0,064",
+    "CHI/def/classified_pass": "+0,168",
+    "CHI/def/classified_rush": "\u22120,065",
+    "CIN/off/general": "\u22120,045",
+    "CIN/off/classified_pass": "\u22120,044",
+    "CIN/off/classified_rush": "\u22120,047",
+    "CIN/def/general": "\u22120,222",
+    "CIN/def/classified_pass": "\u22120,189",
+    "CIN/def/classified_rush": "\u22120,303",
+    "CLE/off/general": "\u22120,084",
+    "CLE/off/classified_pass": "+0,009",
+    "CLE/off/classified_rush": "\u22120,211",
+    "CLE/def/general": "+0,077",
+    "CLE/def/classified_pass": "+0,090",
+    "CLE/def/classified_rush": "+0,063",
+    "DAL/off/general": "+0,224",
+    "DAL/off/classified_pass": "+0,380",
+    "DAL/off/classified_rush": "\u22120,045",
+    "DAL/def/general": "+0,217",
+    "DAL/def/classified_pass": "+0,350",
+    "DAL/def/classified_rush": "+0,083",
+    "DEN/off/general": "\u22120,087",
+    "DEN/off/classified_pass": "\u22120,094",
+    "DEN/off/classified_rush": "\u22120,074",
+    "DEN/def/general": "+0,066",
+    "DEN/def/classified_pass": "\u22120,107",
+    "DEN/def/classified_rush": "+0,243",
+    "DET/off/general": "+0,107",
+    "DET/off/classified_pass": "+0,236",
+    "DET/off/classified_rush": "\u22120,092",
+    "DET/def/general": "+0,179",
+    "DET/def/classified_pass": "+0,161",
+    "DET/def/classified_rush": "+0,207",
+    "GB/off/general": "\u22120,195",
+    "GB/off/classified_pass": "\u22120,075",
+    "GB/off/classified_rush": "\u22120,435",
+    "GB/def/general": "\u22120,076",
+    "GB/def/classified_pass": "+0,053",
+    "GB/def/classified_rush": "\u22120,233",
+    "HOU/off/general": "\u22120,092",
+    "HOU/off/classified_pass": "\u22120,077",
+    "HOU/off/classified_rush": "\u22120,123",
+    "HOU/def/general": "+0,069",
+    "HOU/def/classified_pass": "+0,223",
+    "HOU/def/classified_rush": "\u22120,176",
+    "IND/off/general": "\u22120,026",
+    "IND/off/classified_pass": "\u22120,146",
+    "IND/off/classified_rush": "+0,121",
+    "IND/def/general": "+0,269",
+    "IND/def/classified_pass": "+0,309",
+    "IND/def/classified_rush": "+0,221",
+    "JAX/off/general": "+0,142",
+    "JAX/off/classified_pass": "+0,271",
+    "JAX/off/classified_rush": "+0,008",
+    "JAX/def/general": "\u22120,020",
+    "JAX/def/classified_pass": "\u22120,024",
+    "JAX/def/classified_rush": "\u22120,014",
+    "KC/off/general": "+0,200",
+    "KC/off/classified_pass": "+0,143",
+    "KC/off/classified_rush": "+0,270",
+    "KC/def/general": "\u22120,056",
+    "KC/def/classified_pass": "\u22120,135",
+    "KC/def/classified_rush": "+0,052",
+    "LA/off/general": "+0,013",
+    "LA/off/classified_pass": "+0,126",
+    "LA/off/classified_rush": "\u22120,113",
+    "LA/def/general": "\u22120,102",
+    "LA/def/classified_pass": "\u22120,188",
+    "LA/def/classified_rush": "+0,012",
+    "LAC/off/general": "\u22120,253",
+    "LAC/off/classified_pass": "\u22120,103",
+    "LAC/off/classified_rush": "\u22120,424",
+    "LAC/def/general": "+0,035",
+    "LAC/def/classified_pass": "+0,217",
+    "LAC/def/classified_rush": "\u22120,185",
+    "LV/off/general": "\u22120,066",
+    "LV/off/classified_pass": "+0,104",
+    "LV/off/classified_rush": "\u22120,240",
+    "LV/def/general": "\u22120,250",
+    "LV/def/classified_pass": "\u22120,158",
+    "LV/def/classified_rush": "\u22120,364",
+    "MIA/off/general": "\u22120,112",
+    "MIA/off/classified_pass": "\u22120,081",
+    "MIA/off/classified_rush": "\u22120,151",
+    "MIA/def/general": "+0,172",
+    "MIA/def/classified_pass": "+0,456",
+    "MIA/def/classified_rush": "\u22120,078",
+    "MIN/off/general": "\u22120,057",
+    "MIN/off/classified_pass": "\u2212<0,001",
+    "MIN/off/classified_rush": "\u22120,104",
+    "MIN/def/general": "\u22120,150",
+    "MIN/def/classified_pass": "\u22120,076",
+    "MIN/def/classified_rush": "\u22120,269",
+    "NE/off/general": "\u22120,092",
+    "NE/off/classified_pass": "\u22120,162",
+    "NE/off/classified_rush": "\u22120,017",
+    "NE/def/general": "\u22120,182",
+    "NE/def/classified_pass": "\u22120,249",
+    "NE/def/classified_rush": "\u22120,075",
+    "NO/off/general": "+0,046",
+    "NO/off/classified_pass": "+0,112",
+    "NO/off/classified_rush": "\u22120,080",
+    "NO/def/general": "+0,050",
+    "NO/def/classified_pass": "+0,057",
+    "NO/def/classified_rush": "+0,042",
+    "NYG/off/general": "+0,003",
+    "NYG/off/classified_pass": "+0,066",
+    "NYG/off/classified_rush": "\u22120,072",
+    "NYG/def/general": "+0,257",
+    "NYG/def/classified_pass": "+0,444",
+    "NYG/def/classified_rush": "\u22120,026",
+    "NYJ/off/general": "+0,020",
+    "NYJ/off/classified_pass": "+0,207",
+    "NYJ/off/classified_rush": "\u22120,182",
+    "NYJ/def/general": "\u22120,171",
+    "NYJ/def/classified_pass": "\u22120,157",
+    "NYJ/def/classified_rush": "\u22120,200",
+    "PHI/off/general": "+0,052",
+    "PHI/off/classified_pass": "+0,148",
+    "PHI/off/classified_rush": "\u22120,066",
+    "PHI/def/general": "+0,075",
+    "PHI/def/classified_pass": "+0,083",
+    "PHI/def/classified_rush": "+0,067",
+    "PIT/off/general": "\u22120,330",
+    "PIT/off/classified_pass": "\u22120,411",
+    "PIT/off/classified_rush": "\u22120,160",
+    "PIT/def/general": "\u22120,202",
+    "PIT/def/classified_pass": "\u22120,413",
+    "PIT/def/classified_rush": "\u22120,014",
+    "SEA/off/general": "+0,106",
+    "SEA/off/classified_pass": "+0,386",
+    "SEA/off/classified_rush": "\u22120,138",
+    "SEA/def/general": "\u22120,199",
+    "SEA/def/classified_pass": "\u22120,193",
+    "SEA/def/classified_rush": "\u22120,207",
+    "SF/off/general": "+0,298",
+    "SF/off/classified_pass": "+0,503",
+    "SF/off/classified_rush": "+0,090",
+    "SF/def/general": "\u22120,133",
+    "SF/def/classified_pass": "\u22120,120",
+    "SF/def/classified_rush": "\u22120,146",
+    "TB/off/general": "\u22120,164",
+    "TB/off/classified_pass": "\u22120,311",
+    "TB/off/classified_rush": "+0,068",
+    "TB/def/general": "+0,003",
+    "TB/def/classified_pass": "+0,114",
+    "TB/def/classified_rush": "\u22120,156",
+    "TEN/off/general": "\u22120,020",
+    "TEN/off/classified_pass": "\u22120,131",
+    "TEN/off/classified_rush": "+0,127",
+    "TEN/def/general": "+0,098",
+    "TEN/def/classified_pass": "+0,289",
+    "TEN/def/classified_rush": "\u22120,083",
+    "WAS/off/general": "+0,072",
+    "WAS/off/classified_pass": "+0,087",
+    "WAS/off/classified_rush": "+0,056",
+    "WAS/def/general": "+0,151",
+    "WAS/def/classified_pass": "+0,268",
+    "WAS/def/classified_rush": "\u22120,012"
+  },
+  "sourcePin": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "pin": "sha256:8971d767b6ec0557465aeb65aeb00533fd10255a62f4b916954b3854daa15cef",
+  "independentOfProjector": true,
+  "allOriginalAggregatesMatched": true
+}

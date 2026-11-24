@@ -1,0 +1,56 @@
+{
+  "loadAttempts": [
+    {
+      "paths": {
+        "runId": "20261019T024021Z-890e233c",
+        "primary": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024021Z-890e233c",
+        "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/20261019T024021Z-890e233c",
+        "operations": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/operations/20261019T024021Z-890e233c"
+      },
+      "commandExit": 1,
+      "failure": "New wrapper used fractional/offset derivedAt; E5c-2 required UTC whole seconds. Materialization persisted, projection refused before bundle publication.",
+      "shutdown": {
+        "container": "nfl-e5c3r-affa7f45-24af-4d49-a7e6-e5c3960a786c",
+        "containerRunning": false,
+        "filesPreserved": true,
+        "listenerAbsent": true,
+        "pgCtlStatus": 3,
+        "pidAbsent": true,
+        "port": 50049,
+        "portBindReleased": true
+      }
+    },
+    {
+      "paths": {
+        "runId": "20261019T024130Z-50e03b27",
+        "primary": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024130Z-50e03b27",
+        "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/20261019T024130Z-50e03b27",
+        "operations": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/operations/20261019T024130Z-50e03b27"
+      },
+      "commandExit": 1,
+      "loadProjectionStatus": "SUCCEEDED; 48 documents and exact reconciliation passed",
+      "extraProbeFailure": "Raw archive copied to a different physical path was correctly refused by root-bound receipts. Both copies and complete materialization/bundle were intact.",
+      "continuation": "backup-verification.json, restore-drill.json, HTTP and browser passed without new DB load/receipts."
+    }
+  ],
+  "probeCorrections": [
+    {
+      "script": "probes.py",
+      "failure": "Function name http shadowed http.client before any request; renamed http_probe, complete HTTP rerun passed."
+    },
+    {
+      "script": "lifecycle.cjs",
+      "failure": "os.tmpdir returned /var symlink; safe-path guard rejected configuration. New disposable canonical /private/tmp copy passed all lifecycle checks."
+    },
+    {
+      "script": "summarize.py",
+      "failure": "Initial assertion incorrectly expected temporal IDs to differ; accepted identity projection and actual data show temporal associations unchanged. No artifacts or accepted code adjusted."
+    },
+    {
+      "script": "E5c-1 unit tests",
+      "failure": "ETL venv lacks jsonschema; existing system Python 3.14/jsonschema 4.26.0 passed 17 tests and schema validation of 48 new documents."
+    }
+  ],
+  "noHistoricalReportsRewritten": true,
+  "noAcceptedComponentsChanged": true
+}

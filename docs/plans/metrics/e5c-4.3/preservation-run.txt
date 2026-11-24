@@ -1,0 +1,10 @@
+{
+  "ink/paper": 11.55,
+  "muted/paper": 5.79,
+  "muted/limits": 5.18,
+  "controls": 6.8,
+  "BAL/name": 13.18,
+  "DAL/name": 8.59,
+  "NE/name": 14.51,
+  "context": 9.19
+}

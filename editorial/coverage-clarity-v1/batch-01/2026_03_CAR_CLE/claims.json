@@ -1,0 +1,162 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "CAR",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_POSITIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "CAR:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:CAR:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CLE:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "CAR",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "CAR:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:CAR:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CLE:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "CLE",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "CLE:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:CLE:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CAR:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "CLE",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "CLE:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:CLE:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CAR:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "CAR",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:CAR:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:CAR:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CLE:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "CAR",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:CAR:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:CAR:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CLE:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "CLE",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:CLE:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:CLE:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CAR:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "CLE",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:CLE:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:CLE:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:CAR:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "CAR:OFF_EPA_PASS", "CAR:OFF_EPA_RUSH", "CLE:OFF_EPA_PASS", "CLE:OFF_EPA_RUSH" ],
+    "vantagem_tatica" : [ "CAR:OFF_EPA_PASS", "CAR:OFF_EPA_RUSH", "CLE:OFF_EPA_PASS", "CLE:OFF_EPA_RUSH" ],
+    "alerta_vermelho" : [ "limit:CAR:OFF_EPA_PASS", "limit:CAR:OFF_EPA_RUSH", "limit:CLE:OFF_EPA_PASS", "limit:CLE:OFF_EPA_RUSH" ],
+    "veredito" : [ "CAR:OFF_EPA_PASS", "CAR:OFF_EPA_RUSH", "CLE:OFF_EPA_PASS", "CLE:OFF_EPA_RUSH", "limitation", "limit:CAR:OFF_EPA_PASS", "limit:CAR:OFF_EPA_RUSH", "limit:CLE:OFF_EPA_PASS", "limit:CLE:OFF_EPA_RUSH" ]
+  },
+  "links" : [ {
+    "from" : "limit:CAR:OFF_EPA_PASS",
+    "to" : "CAR:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:CAR:OFF_EPA_RUSH",
+    "to" : "CAR:OFF_EPA_RUSH",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:CLE:OFF_EPA_PASS",
+    "to" : "CLE:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:CLE:OFF_EPA_RUSH",
+    "to" : "CLE:OFF_EPA_RUSH",
+    "relation" : "INTERNAL_LIMITATION"
+  } ],
+  "groupings" : [ {
+    "candidateId" : "CAR:OFF_EPA_PLAY",
+    "representedBy" : [ "CAR:OFF_EPA_PASS" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  }, {
+    "candidateId" : "CLE:OFF_EPA_PLAY",
+    "representedBy" : [ "CLE:OFF_EPA_PASS", "CLE:OFF_EPA_RUSH" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  } ],
+  "contract_version" : 5,
+  "thesis_team" : "NONE"
+}

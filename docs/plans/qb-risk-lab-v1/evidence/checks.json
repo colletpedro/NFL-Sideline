@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-04T15:35:19.785887+00:00",
+  "pythonTests": {
+    "new": 12,
+    "preservedV1V2": 47,
+    "passed": 59,
+    "downloads": false
+  },
+  "frontendTests": {
+    "passed": 311,
+    "preexistingSkipped": 68,
+    "new": 9,
+    "legacyItFailsPreserved": 5
+  },
+  "lint": {
+    "errors": 0,
+    "preexistingWarnings": 1
+  },
+  "publicBuild": "PASS",
+  "isolatedBuild": "PASS",
+  "independentRawSQL": "PASS",
+  "offlineReproduction": "70 package files byte equal",
+  "compiledHTTPDocuments": 209,
+  "renderedRowsReconciled": 33,
+  "pythonVersion": "Python 3.11.13",
+  "nodeVersion": "v26.0.0",
+  "labPID": 79971,
+  "labPort": 18121,
+  "preview18122Stopped": true,
+  "approved18111Preserved": true,
+  "noMergePushDeployPaidServices": true
+}

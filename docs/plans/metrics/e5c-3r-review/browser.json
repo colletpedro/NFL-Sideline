@@ -1,0 +1,26 @@
+{
+  "proof": "OWN_CHROME_REAL_HTTP_REAL_ARCHIVE",
+  "chromeVersion": "155.0.8059.82",
+  "sessionId": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+  "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+  "desktop": "1440x1000",
+  "mobile": "390x844",
+  "checks": [
+    "all 48 real recortes selectable and exact fractions visible",
+    "defensive EPA and success allowed labels",
+    "frequency and volume denominators",
+    "POST2025 separated",
+    "BAL W3 absent never zero",
+    "UNKNOWN visible",
+    "keyboard Enter/Space details and focus",
+    "reload and sessionStorage choice persistence",
+    "one observation at a time",
+    "no horizontal mobile overflow",
+    "no page errors"
+  ],
+  "humanComprehension": "NOT_EVALUATED",
+  "browserClosedInFinally": true,
+  "observationsVisited": 48,
+  "fullLocalReport": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/operations/review-20261019-orchestrator/review-evidence/browser/browser.json",
+  "fullLocalReportSha256": "cba893091cba62c0be6a13b551876ce3e7b41485f10cd46d58a5328636016d5f"
+}

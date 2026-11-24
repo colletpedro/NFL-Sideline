@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:43.767290Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "8e28dd4668e61e6f017ce512eaa1e951d5fc19e7961f2418b752e7e2fd06749f",
+  "contextSha256" : "b99ffd94b0e44782fd555646237c39c40b5d37671843d00195a18a39a2f26a23",
+  "gameId" : "2026_03_LA_DEN",
+  "resultIdentity" : "b70367565899dc9d9d175f02bf1118063db5951cbcf16d61da3c85c5b74ae3ac",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "ne-chi",
+    "title": "NE × CHI",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "min-tb",
+    "title": "MIN × TB",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "buf",
+    "title": "Buffalo Bills",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "min",
+    "title": "Minnesota Vikings",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "atl-pit",
+    "title": "ATL × PIT",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "dal-phi",
+    "title": "DAL × PHI",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "ne-chi",
+    "title": "NE × CHI",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "min-tb",
+    "title": "MIN × TB",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "buf",
+    "title": "Buffalo Bills",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "min",
+    "title": "Minnesota Vikings",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "atl-pit",
+    "title": "ATL × PIT",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "dal-phi",
+    "title": "DAL × PHI",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "ne-chi",
+    "title": "NE × CHI",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "min-tb",
+    "title": "MIN × TB",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "buf",
+    "title": "Buffalo Bills",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "min",
+    "title": "Minnesota Vikings",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "atl-pit",
+    "title": "ATL × PIT",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "dal-phi",
+    "title": "DAL × PHI",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "ne-chi",
+    "title": "NE × CHI",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "min-tb",
+    "title": "MIN × TB",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "buf",
+    "title": "Buffalo Bills",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "min",
+    "title": "Minnesota Vikings",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "atl-pit",
+    "title": "ATL × PIT",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "dal-phi",
+    "title": "DAL × PHI",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "ne-chi",
+    "title": "NE × CHI",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "min-tb",
+    "title": "MIN × TB",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "buf",
+    "title": "Buffalo Bills",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "min",
+    "title": "Minnesota Vikings",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "atl-pit",
+    "title": "ATL × PIT",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "dal-phi",
+    "title": "DAL × PHI",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "ne-chi",
+    "title": "NE × CHI",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "min-tb",
+    "title": "MIN × TB",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "buf",
+    "title": "Buffalo Bills",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "min",
+    "title": "Minnesota Vikings",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "atl-pit",
+    "title": "ATL × PIT",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "dal-phi",
+    "title": "DAL × PHI",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "hub7",
+    "title": "Seu próximo confronto.",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "16px",
+    "screen": "hub5",
+    "title": "Seu próximo confronto.",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "hub7",
+    "title": "Seu próximo confronto.",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "16px",
+    "screen": "hub5",
+    "title": "Seu próximo confronto.",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "hub7",
+    "title": "Seu próximo confronto.",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "16px",
+    "screen": "hub5",
+    "title": "Seu próximo confronto.",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "hub7",
+    "title": "Seu próximo confronto.",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 1425,
+    "error": false,
+    "font": "32px",
+    "screen": "hub5",
+    "title": "Seu próximo confronto.",
+    "width": 1440
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "hub7",
+    "title": "Seu próximo confronto.",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 375,
+    "error": false,
+    "font": "32px",
+    "screen": "hub5",
+    "title": "Seu próximo confronto.",
+    "width": 390
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "hub7",
+    "title": "Seu próximo confronto.",
+    "width": 320
+  },
+  {
+    "axisCollisions": [],
+    "doc": 305,
+    "error": false,
+    "font": "32px",
+    "screen": "hub5",
+    "title": "Seu próximo confronto.",
+    "width": 320
+  }
+]

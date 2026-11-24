@@ -1,0 +1,246 @@
+{
+  "derivedAt": "2026-10-15T12:00:00Z",
+  "presentation": {
+    "epaDecimals": 3,
+    "ratePercentDecimals": 1,
+    "rounding": "HALF_UP"
+  },
+  "requestVersion": "metrics-observation-request-v1",
+  "requests": [
+    {
+      "associations": [
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:62a0a307a79537dd424bacfb668cd9e17452f584c4fba7a6c54abd59dce84506",
+          "gameId": "2026_01_BAL_IND",
+          "temporalRevisionId": "sha256:0370e6ef0f45cfccc75ec26e64812811a834faa094d8589c21cf619419fdbf53"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:a6096af3fba11306015120f371b569b74c24af3079eeb4375b75aa5ed7a55d35",
+          "gameId": "2026_01_DAL_NYG",
+          "temporalRevisionId": "sha256:af0dffd18884f6591d437bc28fcdb9b6963b29df0caa472f73c15717d6b67d6f"
+        }
+      ],
+      "calendarRevisionId": "sha256:b49efaedb24ac225e2844f27cd7b8419ca6492d2736c2720821f7e89c25f7ed7",
+      "calendarSourceSetId": "sha256:fc69cfc398e94506dad74affcd343681aba34d9e7b192a4413bfc4bb4f5564bc",
+      "foundations": [
+        "general",
+        "classified_pass",
+        "classified_rush"
+      ],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "roles": [
+        "off",
+        "def"
+      ],
+      "season": 2026,
+      "teams": [
+        "BAL",
+        "DAL"
+      ],
+      "weeks": [
+        1
+      ]
+    },
+    {
+      "associations": [
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:85e7ff69a13850aaceae8aee9d51ebc6dd83da931fe27e707d5c4052d0276d5b",
+          "gameId": "2026_02_NO_BAL",
+          "temporalRevisionId": "sha256:b672814eb7a386a7141523f9b61ed8306d4a770c8733d921737f401fe685935e"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:0f7e513118bce910b2302f24d50557995f30961d058fbffecdde59d88dad3ce7",
+          "gameId": "2026_02_WAS_DAL",
+          "temporalRevisionId": "sha256:1c9d2ffb73a5355db2f2f3112360e0bdd1dd665ec7c2f3a9abba85b624f415b5"
+        }
+      ],
+      "calendarRevisionId": "sha256:b49efaedb24ac225e2844f27cd7b8419ca6492d2736c2720821f7e89c25f7ed7",
+      "calendarSourceSetId": "sha256:fc69cfc398e94506dad74affcd343681aba34d9e7b192a4413bfc4bb4f5564bc",
+      "foundations": [
+        "general",
+        "classified_pass",
+        "classified_rush"
+      ],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "roles": [
+        "off",
+        "def"
+      ],
+      "season": 2026,
+      "teams": [
+        "BAL",
+        "DAL"
+      ],
+      "weeks": [
+        2
+      ]
+    },
+    {
+      "associations": [
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:62a0a307a79537dd424bacfb668cd9e17452f584c4fba7a6c54abd59dce84506",
+          "gameId": "2026_01_BAL_IND",
+          "temporalRevisionId": "sha256:0370e6ef0f45cfccc75ec26e64812811a834faa094d8589c21cf619419fdbf53"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:a6096af3fba11306015120f371b569b74c24af3079eeb4375b75aa5ed7a55d35",
+          "gameId": "2026_01_DAL_NYG",
+          "temporalRevisionId": "sha256:af0dffd18884f6591d437bc28fcdb9b6963b29df0caa472f73c15717d6b67d6f"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:85e7ff69a13850aaceae8aee9d51ebc6dd83da931fe27e707d5c4052d0276d5b",
+          "gameId": "2026_02_NO_BAL",
+          "temporalRevisionId": "sha256:b672814eb7a386a7141523f9b61ed8306d4a770c8733d921737f401fe685935e"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:0f7e513118bce910b2302f24d50557995f30961d058fbffecdde59d88dad3ce7",
+          "gameId": "2026_02_WAS_DAL",
+          "temporalRevisionId": "sha256:1c9d2ffb73a5355db2f2f3112360e0bdd1dd665ec7c2f3a9abba85b624f415b5"
+        }
+      ],
+      "calendarRevisionId": "sha256:b49efaedb24ac225e2844f27cd7b8419ca6492d2736c2720821f7e89c25f7ed7",
+      "calendarSourceSetId": "sha256:fc69cfc398e94506dad74affcd343681aba34d9e7b192a4413bfc4bb4f5564bc",
+      "foundations": [
+        "general",
+        "classified_pass",
+        "classified_rush"
+      ],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "roles": [
+        "off",
+        "def"
+      ],
+      "season": 2026,
+      "teams": [
+        "BAL",
+        "DAL"
+      ],
+      "weeks": [
+        1,
+        2
+      ]
+    },
+    {
+      "associations": [
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+          "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+          "coverageRevisionId": "sha256:c9f63f816457e0b92c1808877ac3c6549ee3a6a50c1ecf10f41acea4bb46bad0",
+          "gameId": "2025_19_LAC_NE",
+          "temporalRevisionId": "sha256:3527b42f6ee3464d5879e35b66f670a59ed7f4090cfc53986c8192ef92634603"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+          "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+          "coverageRevisionId": "sha256:220863ca97f86c5eb3ccc70939be1e4a263da98282851a14b803ed262068e0eb",
+          "gameId": "2025_20_HOU_NE",
+          "temporalRevisionId": "sha256:8cdfd4bbd9ceced993d222bb580d08457e0f7bbd48db46637e2ac4478e1aa04d"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+          "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+          "coverageRevisionId": "sha256:8554755ccc0f7b0cddbb9d536986ceb58fa7b3b5ff03a9add6c6c54fe4beae06",
+          "gameId": "2025_21_NE_DEN",
+          "temporalRevisionId": "sha256:6969013dcc42af8685f13c7fae9ab28b04de494c088deb1177756856be516878"
+        },
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:5065c785a921229a3cbb9d0fc92b9b9993bb82c34febb3f238ca802408aa9dd1",
+          "calculationId": "sha256:8d5c1e68b2e63ebb23663cb108f61b8eb23b3aa68226a6184cbc9e810299ddd3",
+          "coverageRevisionId": "sha256:747c5c8877a32ba48b0706157365683fffea1d0ddf5e7757acfd18b1b2b826a9",
+          "gameId": "2025_22_SEA_NE",
+          "temporalRevisionId": "sha256:61a6c3fb594e3a26a226324ac0f64c1d8765c7ebd56ebf8a0710ce67f053e9af"
+        }
+      ],
+      "calendarRevisionId": "sha256:6745bce1dfa9caf28bb904feab099fa1b0719a282ec00bb837e43a9e0c625aec",
+      "calendarSourceSetId": "sha256:5729647d468e8561f79f23021d36dbbff874d38ca4381cfb46783c750333733b",
+      "foundations": [
+        "general",
+        "classified_pass",
+        "classified_rush"
+      ],
+      "origin": "HISTORICAL_REFERENCE",
+      "phase": "POST",
+      "roles": [
+        "off",
+        "def"
+      ],
+      "season": 2025,
+      "teams": [
+        "NE"
+      ],
+      "weeks": [
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "associations": [
+        {
+          "archiveId": "e12f94ce-9d5d-4646-92af-6ab06a4d9666",
+          "artifactId": "sha256:9283dccd46c76e56ee5246dd8009f07870a6e21eb7e6f5a949840e755593b64e",
+          "calculationId": "sha256:a8dcb12f222da8e1beebf92baf7e75f81413220202cbe26b6190ad356a3b7e37",
+          "coverageRevisionId": "sha256:1eed60cca19626d8eb4e00067cffdc0fe967eb06bcd07cedb614ba7b234b4467",
+          "gameId": "2026_03_BAL_DAL",
+          "temporalRevisionId": null
+        }
+      ],
+      "calendarRevisionId": "sha256:b49efaedb24ac225e2844f27cd7b8419ca6492d2736c2720821f7e89c25f7ed7",
+      "calendarSourceSetId": "sha256:fc69cfc398e94506dad74affcd343681aba34d9e7b192a4413bfc4bb4f5564bc",
+      "foundations": [
+        "general",
+        "classified_pass",
+        "classified_rush"
+      ],
+      "origin": "CURRENT",
+      "phase": "REG",
+      "roles": [
+        "off",
+        "def"
+      ],
+      "season": 2026,
+      "teams": [
+        "BAL"
+      ],
+      "weeks": [
+        3
+      ]
+    }
+  ],
+  "source": {
+    "materializationId": "sha256:8b6c93fcc254fd074aa76f9aa47bd36d41f5ba6381123ac057988686f2dc5e5b",
+    "temporalInputId": "sha256:77e980404fa7b13b4e0f6c1f205d7e7a5a104209dac18ca5947be2e965047bed"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "chosen_C": {
+    "context": 0.1,
+    "depth": 0.1
+  },
+  "constant_prevalence": 0.04204015112230536,
+  "contract_sha256": "644bdde4bc9f753af85f64514b2d845433d4572075bae923737234ace4f8eb65",
+  "dataset_sha256": "10e90375f22a187f361007e7db84a6f5bf2c81451171be4be4e805d7cc67c296",
+  "design": {
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "application": {
+      "season": 2026,
+      "weeks": [
+        1,
+        7
+      ]
+    },
+    "application_train": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "bootstrap_replicates": 2000,
+    "calibration_edges": [
+      0,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.075,
+      0.1,
+      0.15,
+      0.25,
+      1
+    ],
+    "environment": "excluded from both variants: unstable wind/temp coverage and unverified pre-play measurement timestamp; no zero wind imputation",
+    "final_test": 2025,
+    "final_train": [
+      2022,
+      2023,
+      2024
+    ],
+    "folds": [
+      {
+        "train": [
+          2022
+        ],
+        "validation": 2023
+      },
+      {
+        "train": [
+          2022,
+          2023
+        ],
+        "validation": 2024
+      }
+    ],
+    "max_iter": 2000,
+    "posthoc_calibration": false,
+    "seed": 20261104,
+    "selection": "pooled pass-weighted validation log loss, 2023 and 2024; ties prefer smaller C",
+    "solver": "lbfgs",
+    "tol": 1e-09,
+    "variants": [
+      "context",
+      "depth"
+    ],
+    "version": "qb-iw-research-v1"
+  },
+  "design_sha256": "4f22d1114408ccb112edcc27f64589d8bb1d232452fc4821f66a375157f48791",
+  "models": {
+    "context": "5dd05c66b8658e8d62253a9e4c2acf7348eb14a903cdd8d14c228d306da1fe5a",
+    "depth": "933ab576c0df8292a2bc54952de1e98d759d4243177108fbaf98bc7b204b49ed"
+  },
+  "notice": "Created before first final temporal evaluation. No adjustment to 2025 performance permitted.",
+  "version": 1
+}

@@ -1,0 +1,29 @@
+{
+  "bundleId": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "files": {
+    "COMPLETED.json": "sha256:fbb38194beb18cf8fc05400c0c6f376750ed8b48e36498b3c4a05888b4bbd700",
+    "comparison.json": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+    "definitions.md": "sha256:e3e90e4484b780608fdf431648088d1cafbe5b033d89de4c20bcf30a2fbe920a",
+    "policy.md": "sha256:72b1b044ce17199df8aa792a896dfd1089b258e3b3106e04c7e287a9196ed6df",
+    "request.json": "sha256:345c7991c23f8ced79b0e7db12f3b98c8b50231f37cf4cd3e7b5b22ec12078f7",
+    "source-receipt.json": "sha256:f789d8c5928cd572c5cd500e86164488c6b45ee5cebbfeec14aac85e715a0d42",
+    "sources/observations/COMPLETED.json": "sha256:5f777b2f82c4147930450d2454e0e0d2c4ca9b969ecb4c293a3259301296007a",
+    "sources/observations/manifest.json": "sha256:e15e03995713645af2ea2077267fa389d04de8ff0336803371528109503f83d7",
+    "sources/observations/observations.json": "sha256:d48831e3b619c184baeda70b20b6ee5a64a8d088555da763b3c38be63de21410",
+    "sources/observations/request.json": "sha256:a6752dba04296f85a0f0e87a4783e694883345b367d4f309043bfec3eff5e224",
+    "sources/observations/shared-source/COMPLETED.json": "sha256:a22555288758905fd803c52127dd96ae29f86f7529d347677dc922df147a44ca",
+    "sources/observations/shared-source/input.json": "sha256:e7ffe66bd31d60a007368905cd9450b2f55ed7df0f5e1189b3f0213e090220a0",
+    "sources/observations/shared-source/lineage.json": "sha256:e31e8d8e7589b9d1b01eae6954147f6ad47b540a73a2e6f940b752ce615b3ee1",
+    "sources/situational/COMPLETED.json": "sha256:4b9cd98f0113e6ed50888bf5ae5a9ee0b6beb8347a52a2c22fcea9fb74858192",
+    "sources/situational/ledger.json": "sha256:b3a2cd46ae9e08b1438f3cd707d8dbe214c21a3f6f85c147f0fe0bc3ccc8063d",
+    "sources/situational/pbp.parquet": "sha256:4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e",
+    "sources/situational/provenance.json": "sha256:b9e92f57729ef4b5feff793b00053affaab5a8492bfb550ff141b2299bd7904c",
+    "sources/situational/situational.json": "sha256:2af2a33211c09658fb6b831188dc5c5ac3bee9b3fc4b2b6008748921ac7c339c"
+  },
+  "productions": 2,
+  "freshProcessOriginalRootsDenied": true,
+  "primary": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comparison-foundation-v1/20261023-v1/bundle-reconciled",
+  "recoveryCopy": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comparison-foundation-v1/20261023-v1/verified-copy",
+  "physicalCopy": true,
+  "sameDisk": true
+}

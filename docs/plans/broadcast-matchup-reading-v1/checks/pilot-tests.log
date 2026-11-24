@@ -1,0 +1,13 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/matchup/matchup.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/broadcast-matchup-reading-v1/NFL Sideline/web-ui
+
+ ✓ broadcast-journey/matchup/matchup.test.tsx (11 tests) 72ms
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  21:24:10
+   Duration  441ms (transform 71ms, setup 0ms, collect 102ms, tests 72ms, environment 0ms, prepare 53ms)

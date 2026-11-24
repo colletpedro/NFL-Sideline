@@ -1,0 +1,129 @@
+{
+  "candidateGate": "verification.json",
+  "candidateHead": "25ba895bd611811f0d6291c374827d2d76ed6be9",
+  "candidateRuntimeTestsFixturesAndDocsByteIdentical": true,
+  "integratedCounterexamples": {
+    "different_recent_windows": {
+      "bothAggregatesEligible": true,
+      "comparisonEligible": false,
+      "failures": [
+        "MISMATCH_REQUESTED_PERIOD"
+      ],
+      "leftAuditId": "sha256:b9b9176f6eea250650484150f05bf2d6e49a66d943ac43c332bf366bebe52b94",
+      "leftEPA": "1/2",
+      "leftResultId": "sha256:675af976aab000b677098abe0c77068f9ce8aeeb0e1eddc70c266101d897abc2",
+      "leftSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "weeks": [
+            1
+          ]
+        },
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "leftWeeks": [
+        1
+      ],
+      "rightAuditId": "sha256:2d677d33f1e6d67804c5d4c38a9172ed0d01233a78deb7d6686a3f3f5d69ef3d",
+      "rightEPA": "1/2",
+      "rightResultId": "sha256:f9d1c815457ce1830499937c85082fd71d909ce43fc68f21d5357a87220c2411",
+      "rightSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "weeks": [
+            1,
+            2
+          ]
+        },
+        "window": "LAST_3_CALENDAR_WEEKS"
+      },
+      "rightWeeks": [
+        1,
+        2
+      ]
+    },
+    "different_week_observations": {
+      "bothAggregatesEligible": true,
+      "comparisonEligible": false,
+      "failures": [
+        "MISMATCH_REQUESTED_PERIOD"
+      ],
+      "leftAuditId": "sha256:2867e96a014407b489c0d059a2b81c1f46cd0d34d14421edd3333a364de7c9f1",
+      "leftEPA": "1/2",
+      "leftResultId": "sha256:19f4ea42a363430a7343b8059e5b09026463e86c4591d240a395e5b923dde043",
+      "leftSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "week": 1
+        },
+        "window": "WEEK_OBSERVATION"
+      },
+      "leftWeeks": [
+        1
+      ],
+      "rightAuditId": "sha256:713623fc521ebe22f7294c962a83a814ca8a8510f8d691626747f2a633113f7b",
+      "rightEPA": "-1/3",
+      "rightResultId": "sha256:8492b659813dc144284ab7d78796790da3c3e1b9f570a78e090e80e9cbd97588",
+      "rightSignature": {
+        "cutoff": "2026-09-28T12:00:00Z",
+        "mode": "POINT_IN_TIME",
+        "origin": "CURRENT",
+        "phase": "REG",
+        "season": 2026,
+        "selection": {
+          "week": 3
+        },
+        "window": "WEEK_OBSERVATION"
+      },
+      "rightWeeks": [
+        3
+      ]
+    },
+    "season_target_open_week": {
+      "afterExpectationFailures": [],
+      "afterExpectedGames": 3,
+      "afterRequestedWeeks": [
+        1,
+        3,
+        4
+      ],
+      "beforeExpectedGames": 3,
+      "changedAuditId": "sha256:16257cdd0697081cd039bda4db6b0a5a40f29a84098258511949da5cafd4a2d3",
+      "changedResultId": "sha256:236698973028aa0864b0b9be0b5f3912c8411fc92ec7b57d1e683af47acbf2d3",
+      "knownEligibleGameIds": [
+        "alpha",
+        "beta",
+        "gap"
+      ],
+      "originalAuditId": "sha256:27ca5dd073f2814fb487f12d9f0fbbcca889be4b4bf51a9a95b2a2eb7ae14742",
+      "originalResultId": "sha256:1d53ddac69b72b9d68a8b5118bf06f8caa6603c1363702c34dcbb827eada8538"
+    }
+  },
+  "integrationMergeHead": "7ddb43f5db71a7b3d6bd512b87bd5b5da81a8983",
+  "mainHead": "5096a585f0cc5455160ff9c2ee64555cfcb59fc0",
+  "protectedPathsUnchanged": [
+    "contracts/metrics/e5a-v1",
+    "etl-pipeline/src/nfl_sideline_etl/offline_metrics",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_persistence",
+    "docs/plans/metrics/e5b-1",
+    "docs/plans/metrics/e5b-2",
+    "supabase",
+    "core-api",
+    "web-ui",
+    "Spec.md"
+  ],
+  "testedSourceHashesMatched": 8,
+  "untrackedHistoricalPathsPreservedCount": 36
+}

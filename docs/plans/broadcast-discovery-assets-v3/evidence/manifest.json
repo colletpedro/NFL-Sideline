@@ -1,0 +1,58 @@
+{
+  "conditions": {
+    "beforePort": 18093,
+    "afterPort": 18094,
+    "season": 2026,
+    "week": 1,
+    "filter": "all",
+    "viewports": [
+      [
+        1440,
+        1000
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "rootFontPixels": 16,
+    "deviceScaleFactor": 1,
+    "position": "top"
+  },
+  "files": {
+    "after-390.png": "8bf5e4328bae078e48c270cfba2a4218fe382b4bffa57072e3cbf69f3f0909df",
+    "archive.json": "ebf61cad64109e1c73d33abba4a2946dae255775844fe9261c9f0987ab66244a",
+    "before-1440.png": "8c173e6e00bd7098ab96d4693e246ede3e2f01e910b51b0982453ac5a0967308",
+    "before-390.png": "82a507ea881b6e82d40414fc5b98139576706f1520c0770a7f71324c4668e88b",
+    "calendar-1440-text100.png": "9829840b0bcbd7d107c93219cbca1539f4ffa5e89a138f1733346ff3552f6c98",
+    "calendar-320-text100.png": "401bd13543e53ca3e72096eb9c8cae3efcaa4a327b8a20b7dbf9da49ee48dea5",
+    "calendar-320-text200.png": "cd294051185b88d9cddd1add62b17b99dfa92289cfd7f5460cab2ebf51c4d9bd",
+    "calendar-390-text100.png": "ed6a7c9ecbadca465c265fa36ad23166df6dfa8758a9a0d4ca86bf308d352a17",
+    "flows.json": "943eca5f8d3e23e566e615e66e331fa01ed2f99579dc5af9086ae23578f6634f",
+    "gap-390.png": "0fdc21ae656fbb00f9ebab09978fd73942be8fcff2cf57530f61f6867484b636",
+    "historical-390.png": "ce1683566da61761b8d16829c0f996f98c751fc9ce03d48cbe8477308528ad39",
+    "http.json": "75227e4a2764787924f73667903e5d2abb027e54888a6560779cc49bb2fd9982",
+    "keyboard-final.json": "0b017d1b436f5dff6d7f0fb7fd594ba6877cb6e3fe852ddc0549a59667fa1a2d",
+    "keyboard.json": "df43d1df73cae594c14b3b6ace78e19da01f3648a0bcd8d23c72965091bac214",
+    "layouts.json": "e312ee99fd09bd3633ebb08132b5208cead1438222a0c2e5edcc62aa6b46032b",
+    "logo-recovery.json": "5fba711c1c8e638b8b24a6f8ffdc33abda7442828372395cf3f30f2c94525c96",
+    "logos-32.png": "5d18440215306dcb5a65be8909eedef6dd00d7d0dd6c108592f95ec333fb7914",
+    "logos.json": "e9915f72feffa3fb6d0b7759de56e26a7a2c7178075b3f7c001577c48a094c69",
+    "matchup-1440-text100.png": "669a4b20bd7a079bd432f86f6524923984c358529e7d370a0521d582c8929095",
+    "matchup-320-text100.png": "fff71654c326eb18b3df9316153a1cc6801403cec630d3fbea19f8137af87fc9",
+    "matchup-390-text100.png": "16ea757276db7224b5d6880beafa25554740cfcd7a0bf83fcdef08eeae03efa8",
+    "no-results-390.png": "f37484e209aea76ca1687001ca169596e5b13ef5ac94e78231608f8eae42ea1a",
+    "reading-1440-text100.png": "e1fca4190f26c94936f6d75d73f3a53a321a66053ecd36e9a5c6fad38739e2b3",
+    "reading-320-text100.png": "3c8d25ac08608d627e91804aeb82378a7502b6656b2621ffc9fe146dd80d3bff",
+    "reading-390-text100.png": "cfd0cd8b527dd3979adecf08cbd978a5d13e49c6ec800086ee612a36d08f3663",
+    "relations.json": "1577023e60aef040184f94acef42ff355d3e29ea285afdba34dd3a2f5c9fd51b",
+    "round1-1440.png": "b16a7d43d8d1570de4f53c1b0afdde6d9c4ddfa6ba47400b64017fd3b7602e42",
+    "round2-390.png": "b85ffd78095247bf8c50f54aa5b597a2a516b1dd555b82026bb0038d7558ef28",
+    "search-1440-text100.png": "e06ebfc3429f13038197d8fcc8c869caa40dce01f0a6d69c2e30a0d6ad628bc9",
+    "search-320-text100.png": "807ac75cc3886a03fa2259f8753cd723ff48579da60641438b7f43c095528522",
+    "search-320-text200.png": "b9b9adf5b81fafc2028d03053e7bf822d5144d9c2262d60a191323dd58fece7a",
+    "search-390-text100.png": "09e71c17ae5d98bcb814ec9c7275e7a8f8ba49a88bcd43edb6f0363500cd12e5",
+    "settings-320-text200.png": "ddf96d85da3a5e32216f94f1ad76045642a29ce7c1037139dad517f982a8ed45",
+    "touch.json": "8d5372094a12221980cad8b26819cfb5563e2cd4739db772b99d09f8ffcaf176"
+  }
+}

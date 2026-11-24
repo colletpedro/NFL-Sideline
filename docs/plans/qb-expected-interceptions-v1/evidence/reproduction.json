@@ -1,0 +1,971 @@
+{
+  "byte_equal_files": 156,
+  "comparisons": {
+    "application": [
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "sources.json",
+        "sha256": "6a748c78633ae87ffa6f46c152190e6b3017092ea4b64605740f2e63bf2db95a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "model.json",
+        "sha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "calibration.csv",
+        "sha256": "f179bc199cdd7f90f2ac57a2b73e93ccbd12a204def2ffb3d0a3a812a860c726"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "fixed.json",
+        "sha256": "aa986712d6860ce3de739808a5984567454e499581718b1e32d296a052afce50"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "metrics.csv",
+        "sha256": "3020492a0300a1b8de05dc3631addb79f2b999316a4aea4497c5135954024e1b"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "pass_predictions.parquet",
+        "sha256": "a4a1b644abc0474829f4476f47e92f02bf22d6857c2968f359eb7b042a0e71e0"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "players.csv",
+        "sha256": "18840f97ef9a9776b5d44b260fa99215b002556731ca169f7ff6f0ade552ad38"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "cases.json",
+        "sha256": "132dbff6a88e44eeb6cf1c3e710d3ca060e27e14def4e168c1f9ce11171f13ff"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "coverage.json",
+        "sha256": "1a754e1775e053b0098cc2c08ea7eb4f71034906f2767f8a6cde5bed82ab4467"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "integrity.json",
+        "sha256": "1c6f3bda18d0ff69efca6615c61f8466ed05db6c70e8143bee1c7e743eb1df0d"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/near_identity_events_and_ftn.csv",
+        "sha256": "ffaa5d81d4184053a169a8d17604d30b7f0d30ccc56e8c0c200bf08957b91fac"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/above_identity_events_and_ftn.csv",
+        "sha256": "6635ae0600f7765933431262eebf78cf6eef3e6f591155519b2084195dcb9bef"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/low_support_all_plays.csv",
+        "sha256": "1d01a6265c3b123e1c6ef9950a8f2dcca1873e31b9f133dd1f7901046c73b82e"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/low_support_events_and_ftn.csv",
+        "sha256": "1d01a6265c3b123e1c6ef9950a8f2dcca1873e31b9f133dd1f7901046c73b82e"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/below_identity_all_plays.csv",
+        "sha256": "582fa213d8f1a0df485913a4e1169e503ad161f932d2ee582258c04b397c7cae"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/near_identity_all_plays.csv",
+        "sha256": "bb069c9d41dfef296361b68ef06d0895e1b17eb22e26fd7d32447a6ff4e87067"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/interception_in_ftn_0_events_and_ftn.csv",
+        "sha256": "12a68bed5bf480f8136bf0b13da5fd5072b540e5d015cdb9824ecfcaa12d565a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/below_identity_events_and_ftn.csv",
+        "sha256": "974b95fa8eb0ea019926b1ebbf132c5d0eaf9ec8c369ddaa4be7441ab16718c1"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/interception_in_ftn_0_all_plays.csv",
+        "sha256": "6a43eeea7deeb67557c6bc29d4288398a4d898a908105f6914867b1af7f6c4e8"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "cases/above_identity_all_plays.csv",
+        "sha256": "dc8908d80f3da122436806e2827a5e204b503d653d817dc56d920f8c5c84f5a2"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/index.json",
+        "sha256": "83cc9429049ed8572a5fee370bc13c68e314f46346cf1d3755957fdb59deeae2"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040234.json",
+        "sha256": "45e831c6e704f54d5db32860597216f80e750f64464786b2032c2327a7eb8bfa"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0033537.json",
+        "sha256": "0fd1df5250145cac2e2315f93f98d56b0084042fed9674062154c3d0eb0432fe"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0033106.json",
+        "sha256": "094ed1afee83e115059eb26d458d63f6807f5034cfa262b2d57330db185d07c4"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040668.json",
+        "sha256": "f5d213838b3ab402d30cf7cb459b50a00b013760218b6cf3b4fb61d1b6fdaa39"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040691.json",
+        "sha256": "40bb48c825bcf5d3e14d57cfb13ebd2cab6d92238e97a5f4dcc96e80ccddb08b"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0034857.json",
+        "sha256": "ff0a1e6546bda9f990377426df603611f541841152dd95d1c10875b5bccebc8e"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0035704.json",
+        "sha256": "e41cfd1a607cab2ff29ecc9435daa1f6cbeba38362649aa720a42aafd495fcd8"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0036626.json",
+        "sha256": "05445c41df8e807bdce663223ad4a2897ef96a9355fa262ace0a7c7dab8c7e86"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0035289.json",
+        "sha256": "b35e7e654a35029f43a4294d059a03bf9233fcc6637480f14ae7a0e2c891bb0d"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0033873.json",
+        "sha256": "ded019335dd42826b1046e555b05da0c1ce0e0fe3e309a499594b9cff6f02f36"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039910.json",
+        "sha256": "bcc72bd0275e1d77d95569059a122698227c2b4194a369ac36d1b734b465e199"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0034796.json",
+        "sha256": "edcef3480bdaad41ca78185e667dc177c856faf62b89fe024e79eedb9dd6b27d"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040654.json",
+        "sha256": "45f7f9d11623ec01602e51b4df65561fc83bc4802513153b40b7fceac255f314"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0036355.json",
+        "sha256": "408bd661f226db3afec90cc20f820f4fb0b804d11f7854b7ccb6236c163dfd5c"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0041194.json",
+        "sha256": "f95adc855970b1ab5d6deba14c82648169b55479d0d66fb3a40dabb2dadda1bd"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0026498.json",
+        "sha256": "1a3e617aa3c60a96c159f2017e9e2af95f915bd2ebce44c75a9c4f95f29377c4"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039917.json",
+        "sha256": "2ce64888abe19d0e9d9ed5e6f2d0f7b484c2b0ecd5b32c1531f2935e23bfe15c"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040727.json",
+        "sha256": "21338cf86a133227add593661cdc5cba69ef4dcb7aa3ec25c146ef0fed233f41"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0029604.json",
+        "sha256": "edf44232007cb94992d017983de2ff1ce8bf106a5863822777caac2c27952da1"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0027973.json",
+        "sha256": "ba13291a5e706cb194773135084cb0f6128742f12b646a95229fc6b17524f280"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039107.json",
+        "sha256": "e49a651d8d6657b64b86a45438830bc7e002aeb911a84d966887ae62157c6035"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039150.json",
+        "sha256": "bc6cbec5b9fd70e39fa2a1060402d1bb38a0d70a769a746bcc647bcecf0debcf"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0033662.json",
+        "sha256": "c87a3c20b8c4ca2c30ef5b3a44f0e73e49893fc5fae5c602b44c951de226f5d6"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0023459.json",
+        "sha256": "05959b4f1eb2defc2d3d7ab8f53302bf0412db7311e5eed1ad882fbadcfa8d78"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0032950.json",
+        "sha256": "1117a7f45c784907ddad9dc4046499ecdc3615a01259842ebccc89a98310d9b6"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0032268.json",
+        "sha256": "e267d77a6b696a810abdf85532abe434e133a7674e490c75dfc979264a4dc432"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0041117.json",
+        "sha256": "0ad21e9d2eb0aa0bbb2b9a42ccf6c7897599f565dd8f92ce657fe190bb3bf442"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0035190.json",
+        "sha256": "fb89d388d9fbbe3bbb77b0a037daf06bc5858de74972779d8a2939d1a0f9cc70"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039923.json",
+        "sha256": "2b5958cec91476d837a039394abc6e1dcc6ca26a95344dffae6305ab56a63edd"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0038559.json",
+        "sha256": "b25ecce089a57ccde6231cd386357f9f16f47f0f2d885118231d6b3c6320c8ce"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0036212.json",
+        "sha256": "9c767d2b1fed97ae7dc63fcc75288f0a9b56ae3f7340c1c78b2d83ec3bedd205"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040676.json",
+        "sha256": "132d9c163ed13b370aefec9a251aec4596548daaef6cac490e68f27dbab9f3f2"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0038543.json",
+        "sha256": "40c602468d92affdcc3396ac9c5367a6c94fda3b456d77399adedd028afa4730"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0036971.json",
+        "sha256": "e4ec6066d6030b92f7d27728042d55cbcfd59bd0be2b912b607bd8f2f41d138b"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0033119.json",
+        "sha256": "dd7e930b4c518cceb417b690a5f14ef07baee3fe945f27e94776c4223f766453"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039851.json",
+        "sha256": "7acdf37edbfd61a6f5e64b66bc6510ac5c81ad3331e16635fec0f237fe11730a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0038128.json",
+        "sha256": "8ef9f3146bd64ef2a6eadd700db687764402acb838a9f052a0e2225a1f96bce7"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0036264.json",
+        "sha256": "b6e26f354772200c9b3a9e86d3dd47dde6840beed7673775bcf14aeeb440644d"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0037834.json",
+        "sha256": "8f904e0ace69a20a954c5eca74da9101d54a479dfcc921e1130a3278d66cab5d"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0033729.json",
+        "sha256": "fa1ca0971ab1f986fad583a4f5effb8258b20f9287d54a7d8d72b8ada720f52c"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039918.json",
+        "sha256": "ab11c7b8d087e78940f6bf6f54dc52853716c6ed12ed73364f89b048e78e106a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0041251.json",
+        "sha256": "6acf079a47f2ea8a2e27f0183d8c7e80fe027d977abc51530546542e40eaf0e4"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0031503.json",
+        "sha256": "93a67020aed4bc1fa120f446cc222aaf3ef687be8631ef5db6d4cd231072f8df"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039164.json",
+        "sha256": "5444598e2c15a843206c1150d69f7abe6f15a8d5127b33af0185303d4817b36f"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0036442.json",
+        "sha256": "75cba254a7a314a0a93c5147210869ea70a3afff9a0de94ee1bfecf85ccfb602"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0034869.json",
+        "sha256": "d9ce56017c54e6ecccbfbdef284f123fa45214c0a6f375aa3d45d1681982ef22"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0033077.json",
+        "sha256": "7b7388294ed7c8ea6370f9ad29d81ce40cf4596f012b3d5856f107e929040859"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0038400.json",
+        "sha256": "dba3c41c8d8539c4506d25f4985b031652a9af526e82a1223e4d588b5ec1046c"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0038416.json",
+        "sha256": "ea10305575f42e53aab78294dbd477a250e4d0a205702dbc6b46f3feb72be232"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0041562.json",
+        "sha256": "8e59178e2ad7409f88bc1e6717e4dbf51f43988ec21df243b0c387a588c562bb"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0028986.json",
+        "sha256": "faf0ce4b38a2d7ac0c5cba60b3a92fc600b7128a156da2fac899db85b36595a3"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040563.json",
+        "sha256": "b85356ae95dc562fac300a8b09bd594169cff475eea49e44aa3e237bfa7f59ec"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0034771.json",
+        "sha256": "6426365e175166b80875c5b7c3a83d7c294baf4b45645ce7efc56a59d43928ec"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039163.json",
+        "sha256": "6101d1555cc75db9b5b3a573d690eeb8e8d3e0f1f165df75b7aa58cd7e7d5e8f"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0035228.json",
+        "sha256": "b3fe2d91cdf4ca330a8228d633c85a6048128b26dcbfafa9a5f937a3436c2437"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0039732.json",
+        "sha256": "ce77d905a550a134989da67937c69edfdc3ca14f171e00559e4d7d44cb685ff7"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0035993.json",
+        "sha256": "f2c7cc18a6a4107ce9eb87928636a40a5d437ea5877ea3efb4f7bbf9e62f131d"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040743.json",
+        "sha256": "095d98195e43b81e768a92df070e2c00897082b644278c9587a0d7263520e51a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0040981.json",
+        "sha256": "42bbacc4190b6d2279474eb409e857e5aa5acc45375d934d46095d6033315735"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0041040.json",
+        "sha256": "8af9f30b49b45349122385deed5eb374855bc09470806c2ebc9ca7ac8d8fedbd"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0038476.json",
+        "sha256": "037778f9358e6ca9d0897435a473337ecda9525ea9c4e30dfff072a0d3c21b6a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0034855.json",
+        "sha256": "380820a43cfd315fb2a1346d637763e7e76d10d07ab3292385eee9dd10ed6362"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0035710.json",
+        "sha256": "965474467941acc3636980f0b74ea4cb85dddf1989faf689217bece9be591ea6"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0030565.json",
+        "sha256": "8473674b7bbf99e769272e9ea44f08fb26bf5c98670f8e01597f8ae161e87463"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0038102.json",
+        "sha256": "e2da222dad5af6776f7c269eda0999a41e01a462a6060d9ab57c7b60ba7b49ff"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "consumer/players/00-0036389.json",
+        "sha256": "d357a6b647496a824cde6058e92c75ee2e7277dc5e4bd19538b7795aacdab2c4"
+      }
+    ],
+    "build": [
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "splits.csv",
+        "sha256": "ea662a31979b11489c66327973e805dbd62ebeccf12216d73ab479f331745f25"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "revision.json",
+        "sha256": "bdf2c023a77f157af66c8df2abed550e6e5f6413f9faceba256483161039945a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "manifest.json",
+        "sha256": "ba0a99a791d97bdaa33cc0fcbc8c585dfcfe0dec7ae3870e943d2bf4e2da6f81"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "coverage.json",
+        "sha256": "1a754e1775e053b0098cc2c08ea7eb4f71034906f2767f8a6cde5bed82ab4467"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "dataset.parquet",
+        "sha256": "1859ebfa9f8b317d622cad567b5c41b163a9bf41809b456bf3e9d03f6a7e5b37"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/excluded_2022.parquet",
+        "sha256": "c002a819faa012402f0dbf2e707ed134100e8df7636077c72242608a21e5f636"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "audit/raw.json",
+        "sha256": "02496418ded4fa834ad8dc28009c51051066704bde7c194251147c53eaa4ddf8"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/cross_by_season.csv",
+        "sha256": "f6eeeae1d9e68e705d19359d33aaab4c28b0e659f59507752f25f06bd287d7af"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/cross_by_game.csv",
+        "sha256": "5a4c7355f735f6ff1980befe7fa1c0f0ef264daa5c08930c1d5a6776edd7e5a2"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/cross_by_week.csv",
+        "sha256": "7627ba2f3241ed9b4a0f0f94764eb70df8c881e82b5225fdcd866d617be94727"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/identity.csv",
+        "sha256": "89f11f40c4630ec69b1bc271a341acac4ece329656c31a3f340aa6d623798dd0"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/excluded_2023.parquet",
+        "sha256": "37819a98f24fdef085d3c7cb9cf429653aaaaed8122bbf6249ad311bb0dac759"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/excluded_2026.parquet",
+        "sha256": "17fc928048ef5a628d0ac311caf07e1847c3618280907ea2e478cc4c97164b05"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/excluded_2025.parquet",
+        "sha256": "7b1e685efe6e5371fb196b1427b32aa70ad004087408d13b855858b0657f44b0"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "audit/independent.json",
+        "sha256": "1054b35833827c19cbe2ee4db981f3d7e4c0fb6cedae3e81b8e73f0477593ed8"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "audit/excluded_2024.parquet",
+        "sha256": "1715254deb39b632de5f49fd5a1694a8a512a65584897fc21b379442afc8231f"
+      }
+    ],
+    "development": [
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "metrics_2024.csv",
+        "sha256": "2684b1d3a0065b047a54741da14bc48419b69d373dabcf26e89dd998c2f220ee"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "metrics_2023.csv",
+        "sha256": "42b22074bffed29f059f3b46782579827a5bb17539a4275b21ed52d8aae52dd8"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "selection.json",
+        "sha256": "c3343ca7caa6c2720efddc3f3d906927a9e5c80187a281b8e7b4e2ea30c22e49"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "evaluation_models/B2.json",
+        "sha256": "008f820eda1d582525695b4492a6970c24f6a7c0ec2028e9215024ab6a972ddc"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "evaluation_models/B1.json",
+        "sha256": "e4fbc89b69c78d51a31e94a2fd7bca59975f5b0a0e7d8920bd584bdf05ac6a41"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "evaluation_models/B0.json",
+        "sha256": "9c4710c3c988909a21941dcd14141d626bc32a0ff5a3c592060b7843f9b5e889"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "evaluation_models/C.json",
+        "sha256": "4ba9e28038e29cf62ac3ce415842f05cbb098f6671394591e8987711535a9b88"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "development/calibration.csv",
+        "sha256": "84d42953b7df117be48762b715e0e4b17ee44f790a222301992e6187caaacac6"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "development/metrics.csv",
+        "sha256": "c406429f39ac6e7e667ce2f30abf75378ff7d887d11f82ac24b831823faedf88"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "development/players_B0.csv",
+        "sha256": "539ec5509c578e2def4147ee2aab6e68a90d9c49cd8b1ff39ea242460b407bef"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "development/pass_predictions.parquet",
+        "sha256": "5c5523f86c56dc85d60701791cb8b51335543a982573bc717bf2bb440d5f2556"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "development/players_B1.csv",
+        "sha256": "36ba41ebfa899fbe0080b8a2795a35f7acb12c0c0d6ffbbe65680dfdbb48d495"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "development/players_B2.csv",
+        "sha256": "cbbf3df2ed60062529a06120bc9aeaeb5dd4155be72137d20516e175115b6e1a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "development/players_C.csv",
+        "sha256": "cca99a243661796d4d38965b062e7a019e69c57a187aeaa7f92507ff085ea9a6"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "development/paired_bootstrap.json",
+        "sha256": "949fcf4607c66b7b13dbaf58ab8396155bd17e608a423c91b0d97050e04ee56a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/C_0.01_2023.json",
+        "sha256": "cf0f1eb1f452939621d9a7c39e59581353f71791e0746062072c9d330f6a8cd0"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/C_1.0_2023.json",
+        "sha256": "52b53823c7eccb1827018c0c105037dabbe194f0dc4d964d72f728e3d62dc4d2"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/B2_2023.json",
+        "sha256": "4287ca40d5b74e3acbb2e768192ca23de1b1718b42fcf18f61c5112675d903f2"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/B2_2024.json",
+        "sha256": "a68e0bacd3568a697673a299c1b4d4c87b2bc6fcc474d56e2eba69677c9b9944"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/C_1.0_2024.json",
+        "sha256": "af872036379b3de7529033437a331b36e5fb22f217045dedfdf24b68c7dc2cf6"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/C_0.01_2024.json",
+        "sha256": "4aa80a85e54cb35672782afc12764bd259c29f5312aa33be9811fdbb9958dcd3"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/B1_2024.json",
+        "sha256": "663c77144a1fb30e085ee930da542b1822d9845f6a807c48948ac24e62deecca"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/B0_2023.json",
+        "sha256": "3f3ba79729c7a0c83b19876c0f70ae27354ebc3f4c8c993e9fc5095e986c7ec2"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/C_0.1_2024.json",
+        "sha256": "cc6708d2858806d623014e023f26034249755ea1d47eb1fd60ead29b4a048478"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/B0_2024.json",
+        "sha256": "1aa9b9f6e6aa19f5501d3652e4e49ad0b7b24106f225975d8fc42db2f08cb2e5"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/C_0.1_2023.json",
+        "sha256": "8fa086a3a0dad73786076932db4243399359d861cd68ef5a6f397cb843df9df1"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "models/B1_2023.json",
+        "sha256": "844f98c52a20b91810cfe6cb73452377cd1baa92fdd06d2f6e5695bcf0034e47"
+      }
+    ],
+    "evaluation": [
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "calibration.csv",
+        "sha256": "b837589e933a2055275da27b2672f35c2bef5ef7661ba92424fc81da18f25ab0"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "metrics.csv",
+        "sha256": "48f18186924b13d7d26423e76d4970499506c13f68951c3e587b11990ebb68ed"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "players_B0.csv",
+        "sha256": "75278aff447bbe94feb0c31c2bcd284249aff1a9b0eedb2b3b75cb55672f61d7"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "pass_predictions.parquet",
+        "sha256": "1aedbb132ab31094ed18df840a4aed6f4728923d9cbd3d633014bd0d19de06e6"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "players_B1.csv",
+        "sha256": "336182a52030fbbaee9fd45b920fb0a7620071e6419996d457ac2200188d28af"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "players_B2.csv",
+        "sha256": "d34d86559a15f2f3ba6be279d87a877f6a68b0654238f2113fd6eacb404e2db5"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "players_C.csv",
+        "sha256": "7e368675ae5b507ed81ae291a957d8c2fa0219fe579f1427ba17522fe49baa32"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "paired_bootstrap.json",
+        "sha256": "31e9331d332f769f051e7f18436ced3cb11b796ffaefd85c2f48e79c31c3aaac"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "receipt.json",
+        "sha256": "30a87ad02a93c41904a58ff3c13cd4fc54e678a225dcbac9222f564de56744d4"
+      }
+    ],
+    "figures": [
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "calibration_global_and_ftn.png",
+        "sha256": "86074539755e0b88dc18e8e40606e442039eae65de5e608c95e5d6c1468f501f"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "qb_observed_vs_expected_2026.png",
+        "sha256": "2b5a63f2f2ed7bfd89dee9e919d617cf2dc4e4bc5c971b92ef3bfc23e514429a"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "small_support_all_positions_2026.svg",
+        "sha256": "871a4abc435cbc192676b86614250132b30cb8b72212c2e6afef57f5235a9cba"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "performance_vs_references_2025.svg",
+        "sha256": "d34f2ea0919c8d9d4d48229a9d2b097b40a146f7f6cdcdc46c993647fca79d24"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "performance_vs_references_2025.png",
+        "sha256": "4459daef95bd4fbee5140be54dafb5202b8f7abffc727b291b96c908cae87cfc"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "small_support_all_positions_2026.png",
+        "sha256": "f9d5ef96e73bb3ef149ff70222cf9bc302baf846e5748fc44ff1858a5f1ebe8b"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "qb_observed_vs_expected_2026.svg",
+        "sha256": "82539bfa8c95c012bf69a48fd2a746178b5f63f0eadec207514a1e0d8cc06975"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "calibration_global_and_ftn.svg",
+        "sha256": "0b43a4ac95f6cfb066f7e7d5a9b3f424cd1d4d1a115f0f68f6b0fe6c32342d52"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "calibration_support.csv",
+        "sha256": "dc4e35d01ecf3ee102006a633ae79bf2b01e5f900ee88e567530976e49bcc42f"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "expected_decomposition_2026.png",
+        "sha256": "131728f06e9322af497721fd0be8016a2a783a2ba47103013b83fdf752342ee1"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "decomposition_support.csv",
+        "sha256": "592f2a4e16d450b7c4620a7dcb91b1c4c3523528e35e0743eeab4fc55d716fba"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "performance_2025.csv",
+        "sha256": "6c42500552fe9906f06a24a031a113032751c1414af5bf95f8313613bdba9af5"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": true,
+        "path": "all_players_2026.csv",
+        "sha256": "d60a28c86dededc9a898d633f564b564f6725501354aaba23871bafb3a8e9e0d"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "expected_decomposition_2026.svg",
+        "sha256": "3b057c58d6e7f42ddd326912f85dbfb59c98357e760fb6bd1b77f0abef5649f3"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "integrity.json",
+        "sha256": "03a5f1840f377f86891f5bf89e8a042824314f9707e8b741d3012730af46414e"
+      }
+    ],
+    "final": [
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "model.json",
+        "sha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8"
+      },
+      {
+        "byte_equal": true,
+        "numerically_equivalent": null,
+        "path": "fixed.json",
+        "sha256": "aa986712d6860ce3de739808a5984567454e499581718b1e32d296a052afce50"
+      }
+    ]
+  },
+  "exclusions": [
+    "environment.json (runtime inventory)",
+    "development/freeze.json: only run.py hash differs due to recorded cases-directory output fix; specification, configuration, selection, all model JSONs and results exact. Both freezes preserved. Original pre-2025 freeze used only after verifying fresh model byte identity."
+  ],
+  "no_labels_reused_for_calibration": true,
+  "numeric_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  },
+  "offline": true,
+  "output_fix": {
+    "after": "9daee27bdce97fb81ad17fc80960459792a7cae62b2a8cb894a72a8685588523",
+    "before": "9573d49874ef45156974920c717acae82c2757a21e630667224ad2818bce9b72",
+    "original_freeze_sha256": "db3274be82a6eeaf292875097dbc0cefbf6e7fc0599515c8dcc67048776b5856",
+    "reason": "Application failed only when saving case CSVs because cases/ parent was absent. Add mkdir, and exact-hash verification of this output-only repair. Model, features, selection, evaluation, config and contract unchanged. Original freeze and original 2025 evaluation retained."
+  },
+  "passed": true,
+  "source_manifest_sha256": "6a748c78633ae87ffa6f46c152190e6b3017092ea4b64605740f2e63bf2db95a"
+}

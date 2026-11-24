@@ -1,0 +1,19 @@
+{
+  "metadataVersion": 1,
+  "calendar_sha256": [
+    "5909c92a0cda12eedb61b3c2185e63c1268a0b529146e41666775989a77fd4fa"
+  ],
+  "pbp_sha256": [
+    "37944957a69a0013a303253aaf61bb1d344d054217c51cde5e0d9758a7704be0"
+  ],
+  "games": {
+    "synthetic-6": {
+      "completeness": "COMPLETE",
+      "expected_unique_rows": 0,
+      "evidence": {
+        "basis": "SYNTHETIC_COMPLETE_EMPTY_SOURCE",
+        "reference": "fixtures/offline_metrics/README.md#synthetic-6"
+      }
+    }
+  }
+}

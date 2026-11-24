@@ -1,0 +1,121 @@
+name: Research CI
+
+# CI da pesquisa QB (research/**). Somente leitura, sem secrets e sem rede além de `pip install`.
+# Os stores científicos reais (editorial/local-artifacts, ~1 GB, dados FTN CC BY-SA 4.0) nunca existem
+# aqui: NFL_RESEARCH_STORES e NFL_MLFLOW_HOME apontam para diretórios vazios dentro de RUNNER_TEMP.
+
+on:
+  push:
+    paths:
+      - "research/**"
+      - ".github/workflows/research-ci.yml"
+  pull_request:
+    paths:
+      - "research/**"
+      - ".github/workflows/research-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mlflow-tracking:
+    name: mlflow_tracking (sintético)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      MLFLOW_DISABLE_AGENT_HINT: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: research/mlflow_tracking/requirements.lock
+
+      - name: Install dependencies
+        run: pip install -r research/mlflow_tracking/requirements.lock
+
+      # Os testes `real_store` procuram os stores em NFL_RESEARCH_STORES (aqui inexistente) e se pulam
+      # sozinhos com `pytest.skip`/`skipif`; `-rs` lista cada skip no log. Nada é desselecionado.
+      - name: Test mlflow_tracking
+        env:
+          NFL_RESEARCH_STORES: ${{ runner.temp }}/no-stores
+          NFL_MLFLOW_HOME: ${{ runner.temp }}/mlflow-home
+        run: python -m pytest research/mlflow_tracking -q -rs
+
+  experiments:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      MLFLOW_DISABLE_AGENT_HINT: "1"
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: qb_interception_risk
+            lock: research/qb_interception_risk/requirements.lock
+            tests: research/qb_interception_risk/tests
+          - name: qb_risk_temporal_v2
+            lock: research/qb_risk_temporal_v2/requirements.lock
+            tests: research/qb_risk_temporal_v2/tests
+          - name: qb_expected_interceptions
+            lock: research/qb_expected_interceptions/requirements.lock
+            tests: research/qb_expected_interceptions/tests
+          - name: qb_risk_lab
+            lock: research/qb_risk_lab/requirements.lock
+            tests: research/qb_risk_lab/test_pipeline.py
+          # Os pacotes abaixo não têm lock próprio; usam o lock do qb_risk_lab (as versões dos quatro
+          # locks de experimento são idênticas).
+          #
+          # Os testes de qb_risk_outcomes_lab e qb_progression_lab leem, por caminho absoluto fixo
+          # (/Users/pedrocollet/...), os stores científicos reais, que não existem no CI (dados FTN
+          # CC BY-SA 4.0 não saem da máquina). Os testes que dependem do store real são DESSELECIONADOS
+          # por id, nomeados abaixo; os demais do mesmo arquivo (sintéticos) rodam. Os testes de código
+          # congelado não foram editados para isso (GUARDRAILS).
+          - name: qb_risk_outcomes_lab
+            lock: research/qb_risk_lab/requirements.lock
+            tests: research/qb_risk_outcomes_lab/test_package.py
+            # 4 erros de fixture: `baseline` lê SCIENTIFIC/application-complete e M3_STORE (store real).
+            deselect: >-
+              --deselect research/qb_risk_outcomes_lab/test_package.py::test_scientific_keys_and_probabilities_preserved
+              --deselect research/qb_risk_outcomes_lab/test_package.py::test_publication_determinism_and_m3_pointer_untouched
+              --deselect research/qb_risk_outcomes_lab/test_package.py::test_failure_before_atomic_commit_preserves_valid_pointer_and_old_version
+              --deselect research/qb_risk_outcomes_lab/test_package.py::test_missing_charting_never_imputed_and_manifest_tampering_fails
+          - name: qb_progression_lab
+            lock: research/qb_risk_lab/requirements.lock
+            tests: research/qb_progression_lab/test_package.py
+            # Ambos leem package-release/manifest.json do store qb-structure-production-v1 (store real).
+            deselect: >-
+              --deselect research/qb_progression_lab/test_package.py::test_all_categories_preserved_and_main_exact
+              --deselect research/qb_progression_lab/test_package.py::test_replay_failure_keeps_pointer_and_recovers
+          - name: qb_structure_production
+            lock: research/qb_risk_lab/requirements.lock
+            tests: research/qb_structure_production/test_structure.py
+    steps:
+      # Histórico completo: qb_risk_temporal_v2 compara a árvore com o commit-base d654bd6 via `git diff`.
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ${{ matrix.lock }}
+
+      - name: Install dependencies
+        run: pip install -r ${{ matrix.lock }}
+
+      # O contexto `runner` não existe em env de job, por isso as variáveis ficam no passo.
+      - name: Test
+        env:
+          NFL_RESEARCH_STORES: ${{ runner.temp }}/no-stores
+          NFL_MLFLOW_HOME: ${{ runner.temp }}/mlflow-home
+        run: python -m pytest ${{ matrix.tests }} ${{ matrix.deselect }} -q -rs

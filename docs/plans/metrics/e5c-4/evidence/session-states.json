@@ -1,0 +1,9 @@
+{
+  "simulated409": "explicit error and catalog recovery",
+  "simulatedTransportFailure": "explicit error and catalog recovery",
+  "removedPreference": {
+    "beforeReload": 0,
+    "afterSecondReload": 0,
+    "noFallback": true
+  }
+}

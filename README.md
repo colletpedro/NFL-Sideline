@@ -1,8 +1,8 @@
 # NFL Sideline
 
-NFL Sideline é um protótipo funcional para análise tática de confrontos da NFL. O sistema combina métricas semanais de eficiência, contexto de calendário e mercado e uma análise textual estruturada gerada pelo Gemini.
+NFL Sideline é um protótipo funcional para análise tática de confrontos da NFL. O sistema combina métricas semanais de eficiência, contexto de calendário e mercado. O caminho editorial publicado usa análises aprovadas em snapshots; há também geração local descritiva por regras e um caminho Gemini acionado explicitamente.
 
-A prioridade do produto é explicar o confronto entre ataques e defesas. Uma previsão pode aparecer como conclusão secundária da análise, mas ainda não existe um modelo preditivo quantitativo independente. As probabilidades de mercado na interface são probabilidades implícitas sem vig. Sem par válido, o jogo permanece visível sem favorito, probabilidade, confiança ou edge.
+A prioridade do produto é explicar o confronto entre ataques e defesas. Uma previsão pode aparecer como conclusão secundária da análise, mas ainda não existe um modelo preditivo quantitativo independente. As probabilidades exibidas vêm do mercado: as probabilidades fair resultam da remoção proporcional da vig das cotações, e as probabilidades implícitas listadas incluem vig. Isso não as torna probabilidades verdadeiras ou estimativas independentes. A interface não apresenta indicador de confiança editorial nem vantagem de modelo. Sem par válido, o jogo permanece visível sem favorito ou probabilidade. A retirada desses indicadores não altera a geração das análises existentes.
 
 ## Arquitetura atual
 
@@ -58,6 +58,13 @@ cp .env.example .env
 Preencha `SUPABASE_DB_URL`, `SUPABASE_DB_USER` e `SUPABASE_DB_PASSWORD`. `GEMINI_API_KEY` só é necessária quando a API local for explicitamente usada para gerar análise. `PORT` usa `8080` por default. O `.env` contém segredos e não deve ser commitado. Variáveis AWS, quando presentes, não disparam upload: o fluxo S3 legado exige também `--upload-s3`.
 
 `VITE_API_BASE_URL` é pública e só vale em development/test local. Não a cadastre na Vercel: builds de Production usam obrigatoriamente snapshots `/data` e não podem ser desviados por variável Vite. Toda variável `VITE_*` é visível no browser e nunca deve conter secrets.
+
+## Laboratório editorial offline
+
+Para selecionar contextos congelados, gerar por regras locais e consultar tentativas preservadas,
+use a [interface editorial local](docs/local-editorial-ui.md). Ela tem entrada Vite própria
+(`npm --prefix web-ui run editorial:dev`), requer a API de loopback e não usa banco, Gemini
+ou `.env`. O frontend público e sua publicação estática seguem separados.
 
 ## Execução local
 
@@ -173,9 +180,11 @@ versionado [`editorial/analysis-selections.json`](editorial/analysis-selections.
 [`editorial/README.md`](editorial/README.md). O exportador continua read-only, sem Gemini, e projeta BASIC/FULL
 aprovadas como `analysisType: "matchup"` no schema público v1.
 
-Este fast track editorial v0 está implementado localmente e validado offline. Ele ainda não foi integrado a uma
-execução autorizada com banco/Gemini nem publicado. O manifesto permanece vazio; nenhuma aprovação real foi
-criada nesta etapa. O `snapshot-export` exige `--as-of YYYY-MM-DD`, separado do timestamp real `generatedAt`.
+O caminho Gemini usa claims v3. O motor local descritivo usa seletor 2.0.0, claims v5 e
+renderer 5.0.2; não requer Gemini e não prevê vencedor. O manifesto editorial versionado
+contém seleções aprovadas de entregas anteriores; o motor local não criou novas aprovações
+nem publicação. O `snapshot-export` exige `--as-of YYYY-MM-DD`, separado de `generatedAt`.
+Consulte o [estado consolidado](docs/current-state.md) para versões, evidências e próximos passos.
 
 ### 6. Frontend
 
@@ -217,8 +226,8 @@ Em 2026-09-09, a validação local reaplicou as duas migrations intactas e execu
 - Não há modelo preditivo quantitativo próprio; o fair value exibido vem do mercado.
 - `early_down_epa` e `explosive_play_rate` existem no schema, mas não são populadas.
 - A observabilidade é deliberadamente parcial: não há alertas, retenção, dashboard nem tratamento automático de runs presos em `RUNNING`.
-- A validação anti-alucinação verifica somente números enviados em `metricas_citadas`; ela não inspeciona todos os números que possam aparecer nos quatro textos finais.
-- A política editorial de profundidade semanal e postgame está somente registrada no ADR-010; ainda não foi implementada.
+- A validação do caminho Gemini v3 verifica referências e relações restritas, e o Java redige os quatro textos. Isso não avalia se o Gemini selecionou as evidências editoriais mais relevantes nem cria auditoria posterior das claims transitórias.
+- As regras BASIC/FULL para o novo motor local ainda precisam ser definidas; postgame não foi implementado.
 - O ETL semanal usa o orquestrador único e é autossuficiente quanto à ordem, mas ainda não possui evidência de execuções reais suficientes para afirmar confiabilidade contínua em produção.
 - A Data API remota está desativada. Qualquer reativação ou nova migration remota exige revisão de segurança e o fluxo versionado documentado no runbook; a baseline histórica não deve ser executada novamente.
 

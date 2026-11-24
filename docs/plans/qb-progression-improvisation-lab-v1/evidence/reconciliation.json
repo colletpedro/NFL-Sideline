@@ -1,0 +1,39 @@
+{
+  "httpDetails": 68,
+  "httpIndexAndAllDetailsExact": true,
+  "packageId": "5b780052143352a5abf8ffec",
+  "passed": true,
+  "principalAndSensitivitiesExact": true,
+  "raw": [
+    {
+      "des": 1616,
+      "rows": 20210,
+      "season": 2022,
+      "sumEpa": 312.71429207889696
+    },
+    {
+      "des": 1934,
+      "rows": 20693,
+      "season": 2023,
+      "sumEpa": -23.40540909167342
+    },
+    {
+      "des": 1968,
+      "rows": 20116,
+      "season": 2024,
+      "sumEpa": 1053.090150334573
+    },
+    {
+      "des": 1671,
+      "rows": 19734,
+      "season": 2025,
+      "sumEpa": 851.425626643646
+    },
+    {
+      "des": 797,
+      "rows": 8962,
+      "season": 2026,
+      "sumEpa": 479.19250210177114
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "java21Gate": {
+    "tests": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "protectedFiles": 394,
+  "protectedChanged": [],
+  "diffCheckExitCode": 0,
+  "browserInspection": "Blocked: file URL policy; local HTTP bind denied. No browser inspection claimed.",
+  "pageTest": "Source-level filters and markup only"
+}

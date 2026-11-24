@@ -1,0 +1,106 @@
+[
+  {
+    "file": "Barlow-Regular.woff2",
+    "source": "https://raw.githubusercontent.com/jpt/barlow/dc2940e2e04ef4ec96c07e23e0f02aefbddd343b/fonts/woff2/Barlow-Regular.woff2",
+    "kind": "font",
+    "version": "dc2940e2e04ef4ec96c07e23e0f02aefbddd343b",
+    "bytes": 58964,
+    "sha256": "2904d763039d78176366e8e32c2c8cebecf2da19e249a7c077cd8c8a736c5cd4"
+  },
+  {
+    "file": "Barlow-SemiBold.woff2",
+    "source": "https://raw.githubusercontent.com/jpt/barlow/dc2940e2e04ef4ec96c07e23e0f02aefbddd343b/fonts/woff2/Barlow-SemiBold.woff2",
+    "kind": "font",
+    "version": "dc2940e2e04ef4ec96c07e23e0f02aefbddd343b",
+    "bytes": 59936,
+    "sha256": "444b951177325b7a2f1ee61412a0d66c04d0e1ee438ef14430025f1b128d557f"
+  },
+  {
+    "file": "Barlow-Bold.woff2",
+    "source": "https://raw.githubusercontent.com/jpt/barlow/dc2940e2e04ef4ec96c07e23e0f02aefbddd343b/fonts/woff2/Barlow-Bold.woff2",
+    "kind": "font",
+    "version": "dc2940e2e04ef4ec96c07e23e0f02aefbddd343b",
+    "bytes": 60492,
+    "sha256": "5c5c34f0624bf0b164412db94dac2aee11defccc6f374d426501218ab097a01c"
+  },
+  {
+    "file": "BarlowSemiCondensed-SemiBold.woff2",
+    "source": "https://raw.githubusercontent.com/jpt/barlow/dc2940e2e04ef4ec96c07e23e0f02aefbddd343b/fonts/woff2/BarlowSemiCondensed-SemiBold.woff2",
+    "kind": "font",
+    "version": "dc2940e2e04ef4ec96c07e23e0f02aefbddd343b",
+    "bytes": 64440,
+    "sha256": "bae9a20f1461da5276b405097cfd4ad72a888632b65780ca3a0b996cb4aab3ad"
+  },
+  {
+    "file": "BarlowCondensed-Bold.woff2",
+    "source": "https://raw.githubusercontent.com/jpt/barlow/dc2940e2e04ef4ec96c07e23e0f02aefbddd343b/fonts/woff2/BarlowCondensed-Bold.woff2",
+    "kind": "font",
+    "version": "dc2940e2e04ef4ec96c07e23e0f02aefbddd343b",
+    "bytes": 61060,
+    "sha256": "2a68cbc9b65c87d7805b4e912545dc8f2426f9134affc0f07bec252782bd0bd0"
+  },
+  {
+    "file": "Barlow-OFL.txt",
+    "source": "https://raw.githubusercontent.com/jpt/barlow/dc2940e2e04ef4ec96c07e23e0f02aefbddd343b/OFL.txt",
+    "kind": "license",
+    "version": "dc2940e2e04ef4ec96c07e23e0f02aefbddd343b",
+    "bytes": 4377,
+    "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+  },
+  {
+    "file": "IBMPlexSans-Regular.woff2",
+    "source": "https://raw.githubusercontent.com/IBM/plex/71f558992315a12ca1f06a2215d57962a1992162/packages/plex-sans/fonts/complete/woff2/IBMPlexSans-Regular.woff2",
+    "kind": "font",
+    "version": "71f558992315a12ca1f06a2215d57962a1992162",
+    "bytes": 63020,
+    "sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a"
+  },
+  {
+    "file": "IBMPlexSans-Bold.woff2",
+    "source": "https://raw.githubusercontent.com/IBM/plex/71f558992315a12ca1f06a2215d57962a1992162/packages/plex-sans/fonts/complete/woff2/IBMPlexSans-Bold.woff2",
+    "kind": "font",
+    "version": "71f558992315a12ca1f06a2215d57962a1992162",
+    "bytes": 63012,
+    "sha256": "fa7130d854a660b39a7fc9e6e0f2dc23dba5f1346e2adea3e1fe37b6d884133d"
+  },
+  {
+    "file": "IBMPlexSansCondensed-Bold.woff2",
+    "source": "https://raw.githubusercontent.com/IBM/plex/71f558992315a12ca1f06a2215d57962a1992162/packages/plex-sans-condensed/fonts/complete/woff2/IBMPlexSansCondensed-Bold.woff2",
+    "kind": "font",
+    "version": "71f558992315a12ca1f06a2215d57962a1992162",
+    "bytes": 63344,
+    "sha256": "e1481c7a925b4bfb31bcbff09182b43d5f1c1eab7834a2b6ac51ac75b8c3f9a1"
+  },
+  {
+    "file": "IBM-Plex-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/IBM/plex/71f558992315a12ca1f06a2215d57962a1992162/LICENSE.txt",
+    "kind": "license",
+    "version": "71f558992315a12ca1f06a2215d57962a1992162",
+    "bytes": 4456,
+    "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  },
+  {
+    "file": "bal.png",
+    "source": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+    "kind": "team-logo-existing-snapshot-url",
+    "version": "retrieved 2026-10-20; temporal variant not certified",
+    "bytes": 55985,
+    "sha256": "67796023c172c9aeab5bcdac9204823d3590097246ad1cb92971134b5f26dcc0"
+  },
+  {
+    "file": "dal.png",
+    "source": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+    "kind": "team-logo-existing-snapshot-url",
+    "version": "retrieved 2026-10-20; temporal variant not certified",
+    "bytes": 32372,
+    "sha256": "f4ea9a2ec7d7d500f08db94c8c6f1b23f75361ffe39c4d4b480a684a511ce61e"
+  },
+  {
+    "file": "ne.png",
+    "source": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",
+    "kind": "team-logo-existing-snapshot-url",
+    "version": "retrieved 2026-10-20; temporal variant not certified",
+    "bytes": 32083,
+    "sha256": "dac19aa9a573dcf9075e2422bee3e35a4955b9ab494bb3191ab3bacfd3609729"
+  }
+]

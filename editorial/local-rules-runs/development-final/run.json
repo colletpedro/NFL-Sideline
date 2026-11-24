@@ -1,0 +1,43 @@
+{
+  "mode": "LOCAL_RULES_OFFLINE",
+  "split": "development",
+  "cases": [
+    {
+      "gameId": "2026_03_ARI_SF",
+      "sourceCacheId": 57,
+      "split": "development",
+      "depth": "FULL",
+      "context": "contexts/2026_03_ARI_SF.json",
+      "reason": "Extremo semanal de SF no passe; não esconder sinais opostos de ARI."
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "sourceCacheId": 58,
+      "split": "development",
+      "depth": "FULL",
+      "context": "contexts/2026_03_BAL_DAL.json",
+      "reason": "Oportunidade do passe de BAL contra defesa de DAL; buscar contraponto pertinente."
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "sourceCacheId": 67,
+      "split": "development",
+      "depth": "FULL",
+      "context": "contexts/2026_03_NE_JAX.json",
+      "reason": "Sinais conflitantes: passe de JAX muda de sinal, defesa de NE também."
+    },
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "sourceCacheId": null,
+      "split": "development",
+      "depth": "FULL",
+      "context": "uneven-context/2025_08_CHI_BAL.json",
+      "reason": "Semanas diferentes: BAL 4/5/6; CHI 4/6/7. Retrospectivo com métricas hoje disponíveis, não reconstrução da ingestão de 2025."
+    }
+  ],
+  "manifestSha256": "d9c3b251086ea0f4cdacda5e83d4106f69b811bb382fdab32d5a27c260e6f942",
+  "jarSha256": "063955191c7356b4defa4d09839d5ca178da1cdcf1ffcf2e8917319a5f88e914",
+  "freezeSha256": null,
+  "startedAt": "2026-10-01T01:56:02.783383+00:00",
+  "publicationApproved": false
+}

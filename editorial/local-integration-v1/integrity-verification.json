@@ -1,0 +1,13 @@
+{
+  "filesCompared": 692,
+  "expectedChanged": [
+    "Spec.md",
+    "core-api/src/main/java/com/nflsideline/coreapi/CoreApiApplication.java",
+    "core-api/src/main/java/com/nflsideline/coreapi/editorial/local/LocalAnalysisApplication.java"
+  ],
+  "protectedFilesUnchanged": 689,
+  "unexpectedChanges": [],
+  "gitDiffCheckExitCode": 0,
+  "newCliMatchesArchivedBaseline": true,
+  "handlerResponseMatchesNewCli": true
+}

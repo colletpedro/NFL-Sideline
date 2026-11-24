@@ -1,0 +1,46 @@
+[
+  {
+    "selector": ".broadcast-identity h2",
+    "fonts": [
+      {
+        "familyName": "Barlow Condensed",
+        "glyphCount": 7,
+        "isCustomFont": true,
+        "postScriptName": "BarlowCondensed-Bold"
+      }
+    ]
+  },
+  {
+    "selector": ".broadcast-main h3",
+    "fonts": [
+      {
+        "familyName": "Barlow Semi Condensed",
+        "glyphCount": 31,
+        "isCustomFont": true,
+        "postScriptName": "BarlowSemiCondensed-SemiBold"
+      }
+    ]
+  },
+  {
+    "selector": ".broadcast-fact strong",
+    "fonts": [
+      {
+        "familyName": "Barlow",
+        "glyphCount": 5,
+        "isCustomFont": true,
+        "postScriptName": "Barlow-Bold"
+      }
+    ]
+  },
+  {
+    "selector": ".broadcast-stats dt",
+    "fonts": [
+      {
+        "familyName": "Barlow",
+        "glyphCount": 18,
+        "isCustomFont": true,
+        "postScriptName": "Barlow-Regular"
+      }
+    ]
+  }
+]

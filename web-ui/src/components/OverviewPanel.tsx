@@ -1,7 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import type { Game, Predicao, Team } from "../services/types";
-import type { Confidence } from "../services/model";
-import { fmtEdge } from "../services/model";
+import type { Game, Predicao } from "../services/types";
 import { fmtLine } from "../services/types";
 import ProbabilitySplit from "./ProbabilitySplit";
 
@@ -14,12 +12,9 @@ function trim(text: string | undefined, max: number): string | null {
 
 interface OverviewPanelProps {
   game: Game;
-  dogTeam: Team | null;
   favAbbr: string | null;
-  favPct: number | null;
-  dogPct: number | null;
-  confidence: Confidence | null;
-  edge: number | null;
+  awayPct: number | null;
+  homePct: number | null;
   vig: number | null;
   predicao: Predicao | null;
   analysisLoading?: boolean;
@@ -28,24 +23,19 @@ interface OverviewPanelProps {
 
 function OverviewPanel({
   game,
-  dogTeam,
   favAbbr,
-  favPct,
-  dogPct,
-  confidence,
-  edge,
+  awayPct,
+  homePct,
   vig,
   predicao,
   analysisLoading,
   onViewAnalysis,
 }: OverviewPanelProps) {
-  const awayFav = favAbbr === game.awayTeam.teamAbbr;
-  const awayPct = awayFav ? favPct : dogPct;
-  const homePct = awayFav ? dogPct : favPct;
+  const favPct = favAbbr === game.awayTeam.teamAbbr ? awayPct : favAbbr === game.homeTeam.teamAbbr ? homePct : null;
 
   const factors = [
     { no: "01", label: "Key Factor", text: trim(predicao?.fator_chave, 240), red: false },
-    { no: "02", label: "Tactical Edge", text: trim(predicao?.vantagem_tatica, 240), red: false },
+    { no: "02", label: "Tactical Matchup", text: trim(predicao?.vantagem_tatica, 240), red: false },
     { no: "03", label: "Red Flag", text: trim(predicao?.alerta_vermelho, 240), red: true },
   ];
   const verdict = trim(predicao?.veredito, 260);
@@ -60,9 +50,9 @@ function OverviewPanel({
           <span className="pct">{favPct !== null ? `${(favPct * 100).toFixed(1)}%` : "—"}</span>
         </div>
         <span className="winlabel">
-          Win probability{confidence ? ` · ${confidence} confidence` : ""}
+          Market probability
         </span>
-        </> : <p>Market favorite unavailable</p>}
+        </> : <p>{awayPct === null || homePct === null ? "Market unavailable" : "No market favorite"}</p>}
 
         {awayPct !== null && homePct !== null && (
           <ProbabilitySplit
@@ -90,16 +80,13 @@ function OverviewPanel({
           </div>
         </div>
 
-        {edge !== null && dogTeam && <span className="ov-edge">
-          Market edge {fmtEdge(edge)} pts vs. even · {dogTeam.teamName} at{" "}
-          {dogPct !== null ? `${(dogPct * 100).toFixed(1)}%` : "—"}
-        </span>}
+        {awayPct !== null && homePct !== null && <span className="winlabel">Implied probability after proportional vig removal</span>}
       </div>
 
       <div className="ov-factors">
         <div className="ov-factors-head">
           <span className="t">Top 3 Factors</span>
-          <span className="s">Model reasoning</span>
+          <span className="s">Editorial analysis</span>
         </div>
 
         {analysisLoading ? (
@@ -125,7 +112,7 @@ function OverviewPanel({
 
             {verdict && (
               <div className="ov-verdict">
-                <span className="k">Model Verdict</span>
+                <span className="k">Verdict</span>
                 <p className="t">{verdict}</p>
               </div>
             )}

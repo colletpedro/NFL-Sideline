@@ -1,0 +1,17 @@
+{
+  "teamFocus": {
+    "text": "INDIND · Selecionar timeIndianapolis Colts",
+    "visible": true
+  },
+  "teamActivation": {
+    "selected": [
+      "INDIND · SelecionadoIndianapolis Colts"
+    ],
+    "team": "IND"
+  },
+  "sideFocus": {
+    "text": "Defesa",
+    "visible": true
+  },
+  "finalUrl": "http://127.0.0.1:18093/?season=2026&week=1&filter=participants&game=2026_01_BAL_IND&side=def&play=classified_pass&team=BAL"
+}

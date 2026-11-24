@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "packageId": "d3739e3d9103c48fda1c417a",
+  "packageFiles": 70,
+  "packageByteEquality": true,
+  "sourceHashVerification": true,
+  "independentSQL": true,
+  "modelFit": false,
+  "offline": true
+}

@@ -1,0 +1,162 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "JAX",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "JAX:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:JAX:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:NE:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "JAX",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "JAX:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:JAX:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:NE:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "NE",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "ALL_NEGATIVE",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "NE:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:NE:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:JAX:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "NE",
+    "predicate" : "SIGNAL_PROFILE",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "signals" : {
+      "attack" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "defense" : {
+        "pattern" : "MIXED_SIGNS",
+        "valuesVary" : true,
+        "containsZero" : false
+      },
+      "relation" : "WEEKLY_SIGN_VARIATION"
+    },
+    "claim_id" : "NE:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:NE:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:JAX:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "JAX",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:JAX:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:JAX:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:NE:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "JAX",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:JAX:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:JAX:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:NE:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "NE",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:NE:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:NE:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:JAX:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "WINDOW_LIMITATION",
+    "subject" : "NE",
+    "predicate" : "SIGN_VARIATION_LIMIT",
+    "period" : "CURRENT",
+    "role" : "LIMITATION",
+    "claim_id" : "limit:NE:OFF_EPA_RUSH",
+    "evidence_ids" : [ "rw:2026:NE:OFF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:JAX:DEF_EPA_RUSH:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "JAX:OFF_EPA_PASS", "JAX:OFF_EPA_RUSH", "NE:OFF_EPA_PASS", "NE:OFF_EPA_RUSH" ],
+    "vantagem_tatica" : [ "JAX:OFF_EPA_PASS", "JAX:OFF_EPA_RUSH", "NE:OFF_EPA_PASS", "NE:OFF_EPA_RUSH" ],
+    "alerta_vermelho" : [ "limit:JAX:OFF_EPA_PASS", "limit:JAX:OFF_EPA_RUSH", "limit:NE:OFF_EPA_PASS", "limit:NE:OFF_EPA_RUSH" ],
+    "veredito" : [ "JAX:OFF_EPA_PASS", "JAX:OFF_EPA_RUSH", "NE:OFF_EPA_PASS", "NE:OFF_EPA_RUSH", "limitation", "limit:JAX:OFF_EPA_PASS", "limit:JAX:OFF_EPA_RUSH", "limit:NE:OFF_EPA_PASS", "limit:NE:OFF_EPA_RUSH" ]
+  },
+  "links" : [ {
+    "from" : "limit:JAX:OFF_EPA_PASS",
+    "to" : "JAX:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:JAX:OFF_EPA_RUSH",
+    "to" : "JAX:OFF_EPA_RUSH",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:NE:OFF_EPA_PASS",
+    "to" : "NE:OFF_EPA_PASS",
+    "relation" : "INTERNAL_LIMITATION"
+  }, {
+    "from" : "limit:NE:OFF_EPA_RUSH",
+    "to" : "NE:OFF_EPA_RUSH",
+    "relation" : "INTERNAL_LIMITATION"
+  } ],
+  "groupings" : [ {
+    "candidateId" : "JAX:OFF_EPA_PLAY",
+    "representedBy" : [ "JAX:OFF_EPA_PASS" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  }, {
+    "candidateId" : "NE:OFF_EPA_PLAY",
+    "representedBy" : [ "NE:OFF_EPA_PASS" ],
+    "reason" : "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+  } ],
+  "contract_version" : 5,
+  "thesis_team" : "NONE"
+}

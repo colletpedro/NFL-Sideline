@@ -52,7 +52,7 @@ public class GeminiClient implements GeminiGateway {
             response = restClient.post().uri(url).header("x-goog-api-key", apiKey)
                     .body(request).retrieve().body(GeminiResponse.class);
         } catch (RuntimeException failure) {
-            throw new GenerationFailure(GenerationFailure.classify(failure));
+            throw GenerationFailure.sanitized(failure);
         }
 
         if (response == null

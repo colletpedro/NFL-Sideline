@@ -1,0 +1,25 @@
+{
+  "bundleId": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "games": 32,
+  "offensiveProductions": 64,
+  "files": 50,
+  "originalLocationsBlocked": [
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/bundle",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/bundle-reconciled",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/bundle-final",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/verified-copy",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/reproduced-bundle",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-comparison-foundation-v1/",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-situational-w12-v1/",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/",
+    "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/",
+    "/Users/pedrocollet/.codex/worktrees/broadcast-w12-expansion-v1/",
+    "/Users/pedrocollet/.codex/worktrees/broadcast-comprehension-v1/"
+  ],
+  "independentProcess": true,
+  "reproducedFromRecovery": true,
+  "identical": true,
+  "source": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/verified-final-copy",
+  "output": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/broadcast-matchup-w12-v1/20261024-v1/reproduced-final-bundle",
+  "sameDiskOnly": true
+}

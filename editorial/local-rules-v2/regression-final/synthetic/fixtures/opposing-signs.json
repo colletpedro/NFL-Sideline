@@ -1,0 +1,91 @@
+{
+  "contract_version": 3,
+  "game": {
+    "game_id": "opposing-signs",
+    "season": 2026,
+    "week": 4,
+    "phase": "REG"
+  },
+  "home_team": "AAA",
+  "away_team": "BBB",
+  "evidence": [
+    {
+      "id": "tw:2026:1:AAA:OFF_EPA_PASS",
+      "team": "AAA",
+      "metric": "OFF_EPA_PASS",
+      "season": 2026,
+      "week": 1,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": ".2",
+      "unit": "EPA",
+      "volume": null,
+      "sourceTable": "team_week_metrics",
+      "sourceKey": "2026:1:AAA"
+    },
+    {
+      "id": "tw:2026:2:AAA:OFF_EPA_PASS",
+      "team": "AAA",
+      "metric": "OFF_EPA_PASS",
+      "season": 2026,
+      "week": 2,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": ".2",
+      "unit": "EPA",
+      "volume": null,
+      "sourceTable": "team_week_metrics",
+      "sourceKey": "2026:2:AAA"
+    },
+    {
+      "id": "tw:2026:3:AAA:OFF_EPA_PASS",
+      "team": "AAA",
+      "metric": "OFF_EPA_PASS",
+      "season": 2026,
+      "week": 3,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": ".2",
+      "unit": "EPA",
+      "volume": null,
+      "sourceTable": "team_week_metrics",
+      "sourceKey": "2026:3:AAA"
+    },
+    {
+      "id": "tw:2026:1:BBB:DEF_EPA_PASS",
+      "team": "BBB",
+      "metric": "DEF_EPA_PASS",
+      "season": 2026,
+      "week": 1,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "-.15",
+      "unit": "EPA",
+      "volume": null,
+      "sourceTable": "team_week_metrics",
+      "sourceKey": "2026:1:BBB"
+    },
+    {
+      "id": "tw:2026:2:BBB:DEF_EPA_PASS",
+      "team": "BBB",
+      "metric": "DEF_EPA_PASS",
+      "season": 2026,
+      "week": 2,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "-.15",
+      "unit": "EPA",
+      "volume": null,
+      "sourceTable": "team_week_metrics",
+      "sourceKey": "2026:2:BBB"
+    },
+    {
+      "id": "tw:2026:3:BBB:DEF_EPA_PASS",
+      "team": "BBB",
+      "metric": "DEF_EPA_PASS",
+      "season": 2026,
+      "week": 3,
+      "origin": "CURRENT_SEASON_PRIOR_WEEKS",
+      "value": "-.15",
+      "unit": "EPA",
+      "volume": null,
+      "sourceTable": "team_week_metrics",
+      "sourceKey": "2026:3:BBB"
+    }
+  ]
+}

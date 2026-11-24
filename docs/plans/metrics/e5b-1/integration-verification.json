@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-09",
+  "sourceCommit": "9dd9397ca7bdafb91bf3f18361f9c2f74f3ee1ea",
+  "decision": "ACCEPTED_FOR_OFFLINE_SCOPE",
+  "etlOfflineTestsPassed": 162,
+  "e5aExamplesPassed": 26,
+  "e5aTestsPassed": 23,
+  "e5aHashesChecked": 12,
+  "cliExitCode": 0,
+  "identicalRuns": true,
+  "identicalToVersionedSynthetic": true,
+  "completedFileHashesVerified": 5,
+  "calculationIdentityIndependentlyVerified": true,
+  "overwriteRejectedWithoutChanges": true,
+  "invalidCandidateRejectedWithoutFinalOutput": true,
+  "pendingDirectoriesRemaining": 0,
+  "rawRows": 27,
+  "uniqueRows": 26,
+  "eligibleRows": 14,
+  "statisticsRecords": 60,
+  "calculationId": "sha256:2c364020c9c5bf08c2eeaa5fd38eae161920e482cdf23d2b1dda29b4d61a245f",
+  "optionalAuditRerun": true,
+  "javaFrontendRerun": false,
+  "runtimeChangesByOrchestrator": false,
+  "optionalAuditIdenticalToDelivered": true,
+  "optionalInputHashesReconciled": 6,
+  "optionalCounts": [
+    {
+      "season": 2023,
+      "conversions": 126,
+      "outsideNullTeams": 2638,
+      "completenessStates": [
+        "UNKNOWN"
+      ]
+    },
+    {
+      "season": 2025,
+      "conversions": 130,
+      "outsideNullTeams": 2729,
+      "completenessStates": [
+        "UNKNOWN"
+      ]
+    },
+    {
+      "season": 2026,
+      "conversions": 5,
+      "outsideNullTeams": 297,
+      "completenessStates": [
+        "UNKNOWN"
+      ]
+    }
+  ]
+}

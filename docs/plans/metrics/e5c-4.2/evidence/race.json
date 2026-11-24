@@ -1,0 +1,17 @@
+{
+  "raceResults": [
+    {
+      "id": "sha256:68d08b232744467f65d4eec3ce6adf53dc55405dfc5d6f4952163959e8af1471",
+      "status": "responded"
+    },
+    {
+      "id": "sha256:cdd231a9f87a822798b508dee6e3a4828195f03a8ca9f50b94ad441bfa765c39",
+      "status": "cancelled"
+    }
+  ],
+  "raceFinal": {
+    "focused": "Corrida",
+    "observation": "sha256:68d08b232744467f65d4eec3ce6adf53dc55405dfc5d6f4952163959e8af1471",
+    "reading": "AtaqueCorrida2026 · Temporada regular · Semanas 1, 2Arquivo real · leitura histórica"
+  }
+}

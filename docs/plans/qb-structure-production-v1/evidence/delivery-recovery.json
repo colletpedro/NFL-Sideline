@@ -1,0 +1,22 @@
+{
+  "archive": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-structure-production-v1/20261105-v1/delivery-final/frozen-delivery.tar.gz",
+  "byte_identical_files": 415,
+  "bytes": 203445624,
+  "companion_receipt_not_inside_archive": true,
+  "includes_offline_wheels": 23,
+  "manifest_sha256": "5310d8240691c07ef14137d0006535d546aefe817b7326139cb0dfcf591f724c",
+  "package_verification": {
+    "all_player_sensitivity_formulas_and_denominators": true,
+    "categories_exclusive_exhaustive": true,
+    "files": 257,
+    "main_rows": 69505,
+    "manifest_sha256": "d01f4ef5767fee43df78e3ee360fd9c05eb22134df5004889585fa287501d472",
+    "passed": true,
+    "rows": 89715
+  },
+  "passed": true,
+  "restored": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-structure-production-v1/20261105-v1/delivery-final/restored",
+  "sha256": "e7a2da536c8590f01e1464a0b69fa5fb0823d09163d33607c13fffa4fc03d41f",
+  "source_files_verified": 20,
+  "storage": "durable local copy; no remote backup or publication claimed"
+}

@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-07",
+  "status": "LOCAL_E2_E3_INTEGRATED",
+  "branch": "codex/visual-integration-e2-e3",
+  "base": "5096a58",
+  "e2Commits": [
+    "d3b0082",
+    "1b3bb8a",
+    "41d21b5"
+  ],
+  "e3OriginalCommit": "846713a",
+  "e3IntegratedCommit": "916e88f",
+  "contractChanged": false,
+  "publicSnapshotChanged": false,
+  "published": false,
+  "tests": {
+    "javaCleanVerify": 127,
+    "frontend": 116,
+    "frontendExpectedFailuresIncluded": 5,
+    "pythonContract": 12,
+    "validFixtures": 20,
+    "invalidFixturesRejected": 15,
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "http": {
+    "transport": "REAL_HTTP_THROUGH_VITE_PROXY",
+    "generationRequests": 73,
+    "restartGetRequests": 72,
+    "cases": [
+      {
+        "gameId": "2025_08_CHI_BAL",
+        "attemptId": "fbb3b93e-1014-4ab9-9d79-6347a707c651",
+        "resultIdentity": "1f7efcbdb49297d005e57566d4fbdb8a0d459e83063436b56466f68f4527e5b3",
+        "visualIdentity": "9ff0e4ee63f26f9729030743863ba0ebd3f96bbc8c486e095ac2dd80d9833eed"
+      },
+      {
+        "gameId": "2026_03_ARI_SF",
+        "attemptId": "f398c276-a877-4997-becf-7abf466796b3",
+        "resultIdentity": "fa76e2e8054557532dc2fd9802ae5135258cff1c0b38498f536910949eda616b",
+        "visualIdentity": "22c7add541c4f389167f7b9d6fd0190b89c5639b6febbb8080f8bd1773ca7df4"
+      },
+      {
+        "gameId": "2026_03_ATL_GB",
+        "attemptId": "20b22c5d-08f4-45fa-8e05-da4559862704",
+        "resultIdentity": "03bf697f9444f669a0a810db89ab6662a3cdbc68b2b08d8b20ad3f15f5219b9a",
+        "visualIdentity": "df67cc12eb5c06da4ffd71e74ee1012c228b0cb5f00f4aa6eb5612d265fd82c0"
+      },
+      {
+        "gameId": "2026_03_BAL_DAL",
+        "attemptId": "de836cb0-f854-49bb-90d2-73520b9c7f07",
+        "resultIdentity": "2e00e1ffeb249d96a3c3e17468982bb81b8825a2a769f64a1e80a38db5e0a39e",
+        "visualIdentity": "3ab4b665571f6a472e3ef18624a04dd4d6d47544611bec3431f25ada383edb5b"
+      },
+      {
+        "gameId": "2026_03_CAR_CLE",
+        "attemptId": "f57dea23-2a80-4881-8404-d2ceea10c563",
+        "resultIdentity": "e746c501cacd7e36bb36a7f54f89f36aedeaab5a83c86a52e40422001773c012",
+        "visualIdentity": "ccf910caf710e17d1fda247cb5af436adb57b6e276b5cbc7e07ec2cba7c327b7"
+      },
+      {
+        "gameId": "2026_03_CIN_PIT",
+        "attemptId": "6f1f92ef-1f47-4128-9c14-bb4c5c223638",
+        "resultIdentity": "613187bc1239e7670f4bc8a8c2357940ba36385b0c1fc47452af9e6e34160f5c",
+        "visualIdentity": "031b86cc97fc8a97c2ae8cd94bddbbc0836af53652de7d36d5a19929a41b8a73"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "attemptId": "d0323df5-1c33-4c1f-96f1-c78ff1ae1b51",
+        "resultIdentity": "ce98677bfbd86ad8b348ef776526eee6176d427a3122fbbe95f8f577d4750064",
+        "visualIdentity": "c6c3321b82d806d2c1d1de56073768e39b042b89a9cf9541edcaa76797bac5ba"
+      },
+      {
+        "gameId": "2026_03_KC_MIA",
+        "attemptId": "92094a2c-4804-4304-8cf1-6080e0535420",
+        "resultIdentity": "2e3a1b83b787ba85715b588d07bb751413fa0c758da48f006749c1031ce68ea8",
+        "visualIdentity": "dbae491e28c7c3a8844c2df732607b6782b8fe2297f987fdb0a394c142fb4426"
+      },
+      {
+        "gameId": "2026_03_LAC_BUF",
+        "attemptId": "8e330c5c-0e01-4d33-a69d-f97f1bc2534b",
+        "resultIdentity": "a4db8cbbd533dbdb9892c964e6e31497d7ee065deb6e4d94f6505f3ac4e18daa",
+        "visualIdentity": "4f57df31513b4a1c1e3dc10b509cbaca006eb52880417020b36d863a52879b3e"
+      },
+      {
+        "gameId": "2026_03_LA_DEN",
+        "attemptId": "4ca4773f-f041-4696-a1ec-f1007e2a2d03",
+        "resultIdentity": "3ae2f3dc3ccff9618c5a69723fe0399df22d3b925070ff0ae35438d6fa4e3eb6",
+        "visualIdentity": "b2856c682cd815d9e0bd8ac3f537823909987af59f174e9343502ad8d08bcdb6"
+      },
+      {
+        "gameId": "2026_03_LV_NO",
+        "attemptId": "c0d864e4-847e-4627-9ca0-29ed4c29bd8b",
+        "resultIdentity": "75926d826296422688839469e0884c5958efcae96dc04787a90e00adfe4122ef",
+        "visualIdentity": "de2ff19033277936058e6041da65b1cd95859cbc4399ddc975b7622357ac9ce8"
+      },
+      {
+        "gameId": "2026_03_MIN_TB",
+        "attemptId": "ab1af5a8-2b18-406f-ba97-634d6bae19d5",
+        "resultIdentity": "a8daea0802b25ee4b9d75d4953ada2651276f63867934179c7b9e661fd5ed29f",
+        "visualIdentity": "bc67cfabcacbcc35edd2d62e4e503907bda89d6cd748ad4fdbd6869ede3147a9"
+      },
+      {
+        "gameId": "2026_03_NE_JAX",
+        "attemptId": "2ad84d45-e4aa-4c4a-acbd-55696910df8a",
+        "resultIdentity": "6bfaeb5194777a1c04e1ae702337eccbb45fb6824b38b105577d16f132a20a3c",
+        "visualIdentity": "cb6f9caedc3ba108d99540955953d5f73c6204ce56a24c005fd1ea6756dd02a0"
+      },
+      {
+        "gameId": "2026_03_NYJ_DET",
+        "attemptId": "914e11e6-d755-4cbd-93be-a596af113dff",
+        "resultIdentity": "9e5cd1c02ef8da4dd5547778ac2f92cfe79ddb674c556112a5f2a4088dbef6a2",
+        "visualIdentity": "a7ffea1b5b2983b86c3b6d0c6203131ec3b6be3c0f2c27a4c5480d9c5083164b"
+      },
+      {
+        "gameId": "2026_03_PHI_CHI",
+        "attemptId": "db176f85-0012-47ca-a748-10d69e887415",
+        "resultIdentity": "c4407442222723bc1955ef25cb4f5406a072b079015a1ca4bfdd6b9743688bad",
+        "visualIdentity": "3590df93fca20a837265e22fd65c1e1eda47d38f882f7f5fe387faa5f4f7fcc9"
+      },
+      {
+        "gameId": "2026_03_SEA_WAS",
+        "attemptId": "94a9d122-c01f-4ccc-99f2-541bcd21c5ce",
+        "resultIdentity": "27890853c7f6ad0efd058b9c2541e6fa2f819f553eaf9edd7adedb103bf90110",
+        "visualIdentity": "0dd8e52e1b05270a105ccf2a25bed0ec0c2a45aa02e92d4690d188f425608759"
+      },
+      {
+        "gameId": "2026_03_TEN_NYG",
+        "attemptId": "276d3798-0426-4196-ab54-54cf3546d032",
+        "resultIdentity": "70f8bd115f96bc408a95406db0f4804ed75a1b7f236a675699fc1c64b699462e",
+        "visualIdentity": "f07ef90536309a398eb2507dc5a150a40923631d2142624b19da815e14d8e9ba"
+      }
+    ],
+    "legacyV3Count": 1,
+    "persistedBytesUnchangedAfterRestart": true
+  },
+  "browser": {
+    "realCases": [
+      "2026_03_BAL_DAL",
+      "2025_08_CHI_BAL"
+    ],
+    "viewports": [
+      [
+        1440,
+        1000
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "pageHorizontalOverflow": false,
+    "tableInternalScroll": true,
+    "keyboardFocusAndDetails": "PASS",
+    "textCollapsedWithVisual": true,
+    "legacyTextFallback": "PASS",
+    "syntheticModeSeparate": true,
+    "reloadThenHistoryRecovery": "PASS",
+    "automatedBrowserConsoleErrors": [],
+    "textZoom200Percent": "NOT_TESTED"
+  },
+  "protectedFilesChecked": 44,
+  "localOnlyRuntime": "/tmp/nfl-visual-integration-20261007",
+  "localOnlyHttpReports": {
+    "repro-http.json": "72025d0a0fa75d5ac4119a6c56cef0bd4ae762fd1dd7d7a18596fa3ee8bab788",
+    "restart-http.json": "ee2989f49856d8a3aabdefa998037a2d8862b2bd16c365816096395dd7c7948b"
+  },
+  "independentEditorialEvaluation": false,
+  "limitations": [
+    "WC/DIV/CON/SB remain textual v3 under the frozen visual v1 contract",
+    "Five legacy public UI regressions remain expected failures",
+    "BASIC/FULL, richer metrics and publication are not part of this integration"
+  ]
+}

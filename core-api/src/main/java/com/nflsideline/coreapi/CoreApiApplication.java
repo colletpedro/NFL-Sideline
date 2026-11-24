@@ -11,6 +11,30 @@ import java.util.Arrays;
 public class CoreApiApplication {
 
     public static void main(String[] args) {
+        if (args.length > 0 && "metrics-temporal-read".equals(args[0])) {
+            int exitCode = com.nflsideline.coreapi.metrics.temporal.TemporalReadApplication.run(
+                    Arrays.copyOfRange(args, 1, args.length));
+            if (exitCode != 0) System.exit(exitCode);
+            return;
+        }
+        if (args.length > 0 && "editorial-local-serve".equals(args[0])) {
+            int exitCode = com.nflsideline.coreapi.editorial.local.LocalAnalysisServer.run(
+                    Arrays.copyOfRange(args, 1, args.length));
+            if (exitCode != 0) System.exit(exitCode);
+            return;
+        }
+        if (args.length > 0 && "editorial-local".equals(args[0])) {
+            int exitCode = com.nflsideline.coreapi.editorial.local.LocalAnalysisApplication.run(
+                    Arrays.copyOfRange(args, 1, args.length));
+            if (exitCode != 0) System.exit(exitCode);
+            return;
+        }
+        if (args.length > 0 && "editorial-evaluate".equals(args[0])) {
+            int exitCode = com.nflsideline.coreapi.editorial.evaluation.EvaluationApplication.run(
+                    Arrays.copyOfRange(args, 1, args.length));
+            if (exitCode != 0) System.exit(exitCode);
+            return;
+        }
         if (args.length > 0 && "snapshot-export".equals(args[0])) {
             int exitCode = SnapshotBatchApplication.run(Arrays.copyOfRange(args, 1, args.length));
             if (exitCode != 0) {

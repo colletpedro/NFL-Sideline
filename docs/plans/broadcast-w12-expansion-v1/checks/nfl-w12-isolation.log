@@ -1,0 +1,45 @@
+{
+  "base": "cae1fbba71368508681997e6ca167e92b56223f7",
+  "protectedPathsUnchanged": [
+    "web-ui/src",
+    "web-ui/public",
+    "web-ui/local-editorial",
+    "web-ui/build",
+    "web-ui/scripts",
+    "web-ui/vite.config.ts",
+    "web-ui/vite.real.config.ts",
+    "web-ui/vite.experience.config.ts",
+    "web-ui/vite.editorial.config.ts",
+    "web-ui/vite.journey.config.ts",
+    "web-ui/package-lock.json",
+    "web-ui/package.json",
+    "web-ui/vercel.json",
+    "etl-pipeline",
+    "core-api",
+    "supabase",
+    "contracts",
+    ".github",
+    "Spec.md",
+    "docs/static-snapshot-contract.md",
+    "docs/visual-reference",
+    "docs/plans/broadcast-real-observation-v1",
+    "docs/plans/metrics/e5c-3r"
+  ],
+  "publicBuildHashes": {
+    ".css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+    ".js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5"
+  },
+  "snapshotsUnchanged": {
+    "web-ui/public/data/manifest.json": "deca3888625d74dd2ac81e4b500a0c1f767251387dd38a60f016be04f81dc71d",
+    "web-ui/public/data/seasons/2026.json": "9c378a2951c3333015d02b083e9a450424becc0bf1083fdffd34694cf08d867d"
+  },
+  "fiveExpectedLegacyFailuresPreserved": true,
+  "sourceAndBackupFileCount": 162,
+  "sourceAndBackupUnchanged": true,
+  "primaryAndPortableBundleUnchanged": true,
+  "referenceCheckoutCleanAtExactBase": true,
+  "noPrivateArtifactsTracked": true,
+  "noSyntheticEngineInRealJourney": true,
+  "transportBoundaryUnchanged": true,
+  "diffCheck": true
+}

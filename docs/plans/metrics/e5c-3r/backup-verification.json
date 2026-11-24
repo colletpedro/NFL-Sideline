@@ -1,0 +1,13 @@
+{
+  "archiveBlobHashesChecked": true,
+  "archiveRecoveryAtDifferentPath": "NOT_SUPPORTED_BY_ACCEPTED_RECEIPT_CONTRACT",
+  "at": "2026-10-19T03:32:24.713285+00:00",
+  "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/20261019T024130Z-50e03b27",
+  "disasterRecovery": false,
+  "fullFileHashesEqual": true,
+  "materializationAndBundleRead": true,
+  "primary": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/real-recovery/20261019T024130Z-50e03b27",
+  "primaryTemporarilyUnavailable": true,
+  "relocatedArchiveReceiptRefusal": "Archive receipt integrity mismatch",
+  "sameDisk": true
+}

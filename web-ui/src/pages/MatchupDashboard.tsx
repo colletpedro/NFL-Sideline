@@ -10,12 +10,7 @@ import type {
   TeamWeekMetrics,
 } from "../services/types";
 import { favoriteOf } from "../services/types";
-import {
-  confidenceOf,
-  dayDateOf,
-  edgePts,
-  gameProbs,
-} from "../services/model";
+import { dayDateOf, gameProbs } from "../services/market";
 import MatchupHero from "../components/MatchupHero";
 import TabNav from "../components/TabNav";
 import type { TabKey } from "../components/TabNav";
@@ -40,7 +35,7 @@ function metricForWeek(
   return latestBefore ?? series[series.length - 1];
 }
 
-/** Parse the predictive JSON payload; null when not valid JSON. */
+/** Parse the cached editorial JSON payload; null when not valid JSON. */
 function parsePredicao(markdownText: string | undefined): Predicao | null {
   if (!markdownText) return null;
   try {
@@ -148,15 +143,10 @@ function MatchupDashboard() {
   const { game, market } = detail;
   const predicao = parsePredicao(analysis?.markdownText);
   const probs = gameProbs(game, market);
-  const favorite = favoriteOf(game, { home: probs.homeModel, away: probs.awayModel });
+  const favorite = favoriteOf(game, { home: probs.homeFair, away: probs.awayFair });
   const favAbbr = favorite?.teamAbbr ?? null;
-  const dogTeam = favorite ? (favorite === game.homeTeam ? game.awayTeam : game.homeTeam) : null;
-  const awayPct = probs.awayModel;
-  const homePct = probs.homeModel;
-  const favPct = favorite ? (favAbbr === game.homeTeam.teamAbbr ? homePct : awayPct) : null;
-  const dogPct = favPct !== null ? 1 - favPct : null;
-  const confidence = confidenceOf(favPct);
-  const edge = edgePts(favPct);
+  const awayPct = probs.awayFair;
+  const homePct = probs.homeFair;
   const vig = market?.vigPct ?? null;
 
   const homeMetric = metricForWeek(detail.homeMetrics, game.week);
@@ -181,8 +171,6 @@ function MatchupDashboard() {
         awayPct={awayPct}
         homePct={homePct}
         favAbbr={favAbbr}
-        confidence={confidence}
-        edge={edge}
         vig={vig}
         weekLabel={weekLabel}
       />
@@ -195,12 +183,9 @@ function MatchupDashboard() {
         {tab === "overview" && (
           <OverviewPanel
             game={game}
-            dogTeam={dogTeam}
             favAbbr={favAbbr}
-            favPct={favPct}
-            dogPct={dogPct}
-            confidence={confidence}
-            edge={edge}
+            awayPct={awayPct}
+            homePct={homePct}
             vig={vig}
             predicao={predicao}
             analysisLoading={analysisLoading}
@@ -209,7 +194,7 @@ function MatchupDashboard() {
         )}
         {tab === "analysis" && <AnalysisSections predicao={predicao} analysisLoading={analysisLoading} />}
         {tab === "market" && (
-          <MarketComparison game={game} market={market} favAbbr={favAbbr} edge={edge} />
+          <MarketComparison game={game} market={market} />
         )}
         {tab === "matchup" && (
           <TacticalComparison
@@ -228,7 +213,7 @@ function MatchupDashboard() {
 
       <p className="mu-footnote">
         {dayDateOf(game.gameday)} · {weekLabel} · {homePct !== null
-          ? "Probabilities are vig-free fair value derived from the market."
+          ? "Market probability: implied probability after proportional vig removal."
           : "Market probabilities are unavailable."} Lines are informational, not a recommendation.
       </p>
     </article>

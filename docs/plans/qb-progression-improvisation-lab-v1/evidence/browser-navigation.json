@@ -1,0 +1,31 @@
+[
+  {
+    "period": "8",
+    "selected": "Patrick Mahomes",
+    "title": "Quem lançou mais passes interceptáveis que o contexto sugeria?",
+    "url": "http://127.0.0.1:18127/?view=risk-lab&season=2026&reading=passes&player=00-0033873&period=8"
+  },
+  {
+    "period": "8",
+    "selected": "Patrick Mahomes",
+    "title": "Quem sofreu mais interceptações que a referência esperava?",
+    "url": "http://127.0.0.1:18127/?view=risk-lab&season=2026&reading=interceptions&player=00-0033873&period=8"
+  },
+  {
+    "period": "8",
+    "selected": "Patrick Mahomes",
+    "title": "Como o ataque produz quando o quarterback segue a progressão ou improvisa?",
+    "url": "http://127.0.0.1:18127/?view=risk-lab&season=2026&reading=progression&player=00-0033873&period=8"
+  },
+  {
+    "history": "back",
+    "title": "Quem sofreu mais interceptações que a referência esperava?",
+    "url": "http://127.0.0.1:18127/?view=risk-lab&season=2026&reading=interceptions&player=00-0033873&period=8"
+  },
+  {
+    "history": "forward_reload",
+    "period": "8",
+    "selected": "Patrick Mahomes",
+    "url": "http://127.0.0.1:18127/?view=risk-lab&season=2026&reading=progression&player=00-0033873&period=8"
+  }
+]

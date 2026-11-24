@@ -1,0 +1,27 @@
+{
+  "mode": "LOCAL_RULES_OFFLINE",
+  "split": "holdout",
+  "cases": [
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "sourceCacheId": 69,
+      "split": "holdout",
+      "depth": "FULL",
+      "context": "contexts/2026_03_SEA_WAS.json",
+      "reason": "Transferência da seleção ataque–defesa, sem adaptar prompt ao resultado."
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "sourceCacheId": 66,
+      "split": "holdout",
+      "depth": "FULL",
+      "context": "contexts/2026_03_MIN_TB.json",
+      "reason": "Transferência para sinais divergentes, sem adaptar prompt ao resultado."
+    }
+  ],
+  "manifestSha256": "d9c3b251086ea0f4cdacda5e83d4106f69b811bb382fdab32d5a27c260e6f942",
+  "jarSha256": "063955191c7356b4defa4d09839d5ca178da1cdcf1ffcf2e8917319a5f88e914",
+  "freezeSha256": "3af251d52022f17888fb693b7d279f571f19a7a9e558997e07197c62b1d7a67a",
+  "startedAt": "2026-10-01T01:56:29.254829+00:00",
+  "publicationApproved": false
+}

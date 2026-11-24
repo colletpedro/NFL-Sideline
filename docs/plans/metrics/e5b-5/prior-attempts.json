@@ -1,0 +1,105 @@
+{
+  "attempts": [
+    {
+      "diagnostic": "Endpoint textual inet included prefix; fixed normalization before writing ingestion run.",
+      "instance": {
+        "database": "nfl_e5b2_c0b3ea4c905e",
+        "instance_id": "c0b3ea4c-905e-40a1-b9d9-6cfcaea2e5c7",
+        "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+        "port": 65017,
+        "purpose": "metrics-persistence-e5b2-disposable"
+      },
+      "reportPath": "/private/tmp/nfl-e5b5-proof-report-01.json",
+      "reportSha256": "da7f92fc87d3891eee4536e983c0929ea1dd36f2d367f0f490818f2d0ffdd1d9",
+      "shutdown": {
+        "filesPreserved": true,
+        "pgCtlStatus": 3,
+        "pidAbsent": true,
+        "portBindReleased": true
+      },
+      "success": false,
+      "workspace": "/private/tmp/nfl-e5b5-proof-20261012-01"
+    },
+    {
+      "diagnostic": "Initial fixture had offense for only one team; legacy inner join produced no metrics. Fixture corrected, loader unchanged.",
+      "instance": {
+        "database": "nfl_e5b2_c0f509df6997",
+        "instance_id": "c0f509df-6997-4bb4-b55c-cbc56a2f30a6",
+        "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+        "port": 65030,
+        "purpose": "metrics-persistence-e5b2-disposable"
+      },
+      "reportPath": "/private/tmp/nfl-e5b5-proof-report-02.json",
+      "reportSha256": "d5ae46ed376122d412bd8d8254b5c67cde3ef0df8f4674bcae7e5383e96850c4",
+      "shutdown": {
+        "filesPreserved": true,
+        "pgCtlStatus": 3,
+        "pidAbsent": true,
+        "portBindReleased": true
+      },
+      "success": false,
+      "workspace": "/private/tmp/nfl-e5b5-proof-20261012-02"
+    },
+    {
+      "diagnostic": "Earlier successful integration proof.",
+      "instance": {
+        "database": "nfl_e5b2_3b7f3e87fe18",
+        "instance_id": "3b7f3e87-fe18-47ca-9352-8119bee90ae0",
+        "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+        "port": 65049,
+        "purpose": "metrics-persistence-e5b2-disposable"
+      },
+      "reportPath": "/private/tmp/nfl-e5b5-proof-report-03.json",
+      "reportSha256": "69596cd1de279cb9e0327da73566a8d366f8e5de6ab7e5d77ac6868767aa7b85",
+      "shutdown": {
+        "filesPreserved": true,
+        "pgCtlStatus": 3,
+        "pidAbsent": true,
+        "portBindReleased": true
+      },
+      "success": true,
+      "workspace": "/private/tmp/nfl-e5b5-proof-20261012-03"
+    },
+    {
+      "diagnostic": "Earlier successful full integration proof.",
+      "instance": {
+        "database": "nfl_e5b2_2235a98d9070",
+        "instance_id": "2235a98d-9070-4064-9b49-a2ad48c7305b",
+        "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+        "port": 65190,
+        "purpose": "metrics-persistence-e5b2-disposable"
+      },
+      "reportPath": "/private/tmp/nfl-e5b5-proof-report-04.json",
+      "reportSha256": "14fffa01a762cf4f13a40a44b6193d9c4751d2baedc07f9e3fd9adc83aed1523",
+      "shutdown": {
+        "filesPreserved": true,
+        "pgCtlStatus": 3,
+        "pidAbsent": true,
+        "portBindReleased": true
+      },
+      "success": true,
+      "workspace": "/private/tmp/nfl-e5b5-proof-20261012-04"
+    },
+    {
+      "diagnostic": "Earlier successful validation proof.",
+      "instance": {
+        "database": "nfl_e5b2_8ed1c8af9abe",
+        "instance_id": "8ed1c8af-9abe-4730-b686-bf43793d4dd2",
+        "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+        "port": 49453,
+        "purpose": "metrics-persistence-e5b2-disposable"
+      },
+      "reportPath": "/private/tmp/nfl-e5b5-proof-report-final.json",
+      "reportSha256": "824e88666ed48eac351ccf4df72f25800809204622a918a0889848c32a129621",
+      "shutdown": {
+        "filesPreserved": true,
+        "pgCtlStatus": 3,
+        "pidAbsent": true,
+        "portBindReleased": true
+      },
+      "success": true,
+      "workspace": "/private/tmp/nfl-e5b5-proof-20261012-05"
+    }
+  ],
+  "scope": "OWN_INSTANCES_ONLY_PRESERVED"
+}

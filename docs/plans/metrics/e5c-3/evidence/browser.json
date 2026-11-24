@@ -1,0 +1,22 @@
+{
+  "proof": "CHROME_REAL_HTTP_SYNTHETIC_ONLY",
+  "chromeVersion": "155.0.8059.82",
+  "desktop": "1440x1000",
+  "mobile": "390x844",
+  "checks": [
+    "five synthetic bundles",
+    "known zero",
+    "zero denominator with volume",
+    "unknown absent source",
+    "complete empty",
+    "tiny signed EPA",
+    "defensive meaning",
+    "historical POST isolated",
+    "native keyboard focus and expandable details",
+    "no horizontal mobile overflow",
+    "late response discarded",
+    "reload identity preserved",
+    "real unavailable without fallback"
+  ],
+  "humanComprehension": "NOT_EVALUATED"
+}

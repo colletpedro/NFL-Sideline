@@ -1,0 +1,6 @@
+{
+  "fator_chave" : "Passe de SEA contra a defesa de WAS: oportunidade condicional nos sinais observados.",
+  "vantagem_tatica" : "SEA: EPA ofensivo por passe de +0,382 EPA (média das médias semanais, sem ponderação por jogadas; temporada atual, semanas 1, 2; 2 observações semanais; faixa +0,168 EPA a +0,596 EPA). WAS: EPA permitido por passe de +0,252 EPA (média das médias semanais, sem ponderação por jogadas; temporada atual, semanas 1, 2; 2 observações semanais; faixa +0,045 EPA a +0,458 EPA). O ataque produziu EPA positivo e a defesa adversária permitiu EPA positivo em cada semana observada nesse fundamento. É uma oportunidade condicional para SEA, sem demonstrar superioridade geral ou prever exploração no jogo. Nenhuma oportunidade localizada permite escolher o vencedor do jogo.",
+  "alerta_vermelho" : "Limitação: Ao menos um time tem no máximo duas semanas com métricas atuais; a amostra curta limita a leitura.",
+  "veredito" : "O confronto permanece inconclusivo; nenhum time é escolhido. Ao menos um time tem no máximo duas semanas com métricas atuais; a amostra curta limita a leitura. Passe de SEA contra a defesa de WAS: oportunidade condicional nos sinais observados. Panorama por jogada de SEA contra a defesa de WAS: oportunidade condicional nos sinais observados. Os fundamentos podem ser correlacionados e não contam como votos independentes."
+}

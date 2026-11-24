@@ -1,0 +1,8 @@
+@font-face { font-family: "Sideline Barlow"; src: url("./assets/Barlow-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sideline Barlow"; src: url("./assets/Barlow-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sideline Barlow"; src: url("./assets/Barlow-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sideline Barlow Semi"; src: url("./assets/BarlowSemiCondensed-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sideline Barlow Condensed"; src: url("./assets/BarlowCondensed-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sideline Plex"; src: url("./assets/IBMPlexSans-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sideline Plex"; src: url("./assets/IBMPlexSans-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sideline Plex Condensed"; src: url("./assets/IBMPlexSansCondensed-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }

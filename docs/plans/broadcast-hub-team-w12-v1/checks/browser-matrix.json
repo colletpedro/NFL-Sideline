@@ -1,0 +1,13 @@
+{
+  "teams": 32,
+  "identitiesAndComponentGamesMatched": true,
+  "allLogosLoaded": true,
+  "visibleThirdsAndCampaignCountsMatched": true,
+  "generalEpaValuesAndDenominatorsMatched": 64,
+  "viewportAndFontRestored": {
+    "font": "16px",
+    "testFetchWrapper": "undefined",
+    "url": "http://127.0.0.1:18105/?season=2026&week=1",
+    "width": 1280
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "dataset_sha256": "10e90375f22a187f361007e7db84a6f5bf2c81451171be4be4e805d7cc67c296",
+  "gate": "PASS",
+  "independent_raw_reconciliation": true,
+  "rows": 78460,
+  "sources_sha256": "9a8274510ef2231e8b12e5181b905326cce5abf3867eeb6d93da6f4876fdc729"
+}

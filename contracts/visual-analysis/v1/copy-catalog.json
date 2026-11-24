@@ -1,0 +1,46 @@
+{
+  "version": "visual-copy-1.0.0",
+  "relations": {
+    "POSITIVE_CONVERGENCE": {
+      "title": "EPA positivo no ataque e no permitido pela defesa",
+      "summary": "Sinais compatíveis com uma oportunidade localizada; não demonstram exploração no jogo."
+    },
+    "POSITIVE_COMPATIBILITY_ONLY": {
+      "title": "Sinais positivos com cobertura limitada",
+      "summary": "A coincidência dos sinais não atende à cobertura exigida para uma oportunidade localizada."
+    },
+    "FAVORABLE_ATTACK_AND_DEFENSE": {
+      "title": "Ataque e defesa com indicadores favoráveis",
+      "summary": "O ataque produziu EPA positivo; a defesa permitiu EPA negativo. O recorte não estabelece quem prevalece."
+    },
+    "ATTACK_NOT_DEMONSTRATED": {
+      "title": "EPA positivo não demonstrado pelo ataque",
+      "summary": "A defesa permitiu EPA positivo, mas o ataque não demonstrou produção positiva neste recorte."
+    },
+    "BOTH_NEGATIVE": {
+      "title": "EPA negativo nos dois recortes",
+      "summary": "O ataque produziu EPA negativo e a defesa permitiu EPA negativo; isso não estima o resultado do encontro."
+    },
+    "WEEKLY_SIGN_VARIATION": {
+      "title": "Os sinais mudam entre semanas",
+      "summary": "Há semanas positivas e negativas. Observe separadamente as duas séries."
+    },
+    "ZERO_PROFILE": {
+      "title": "O recorte inclui EPA igual a zero",
+      "summary": "Pelo menos uma série contém zero; não se trata de um sinal estritamente positivo ou negativo."
+    }
+  },
+  "restrictions": {
+    "SAMPLE_LIMIT": "Até duas observações semanais não estabelecem um padrão duradouro.",
+    "SIGN_VARIATION_LIMIT": "A média esconderia semanas de sinais diferentes.",
+    "COVERAGE_LIMIT": "O recorte não atende à cobertura exigida para uma oportunidade localizada.",
+    "LIMITED_SCOPE": "O recorte observado não estabelece uma característica permanente.",
+    "HISTORICAL_ONLY": "Referência de outra temporada; não representa a forma atual.",
+    "NO_DATA": "Sem evidências disponíveis neste contexto.",
+    "PARTIAL_DATA": "Há dados ausentes; o confronto não pode ser descrito por completo.",
+    "UNEVEN_WINDOWS": "Os times têm semanas observadas diferentes.",
+    "UNAVAILABLE_DENOMINATORS": "Volume de jogadas por fundamento não informado.",
+    "NO_OPPONENT_ADJUSTMENT": "Recortes sem ajuste por adversário. Esta análise não estima vencedor.",
+    "TEMPORAL_AVAILABILITY_UNKNOWN": "Corte por semanas; disponibilidade histórica na data da análise não verificada."
+  }
+}

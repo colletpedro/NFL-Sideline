@@ -1,0 +1,14 @@
+
+> web-ui@0.0.0 test
+> vitest run local-editorial/observations/observations.test.tsx
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/visual-reading-e5c4/NFL Sideline/web-ui
+
+ ✓ local-editorial/observations/observations.test.tsx (12 tests) 19ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  18:16:48
+   Duration  391ms (transform 81ms, setup 0ms, collect 105ms, tests 19ms, environment 0ms, prepare 73ms)
+

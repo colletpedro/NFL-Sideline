@@ -1,0 +1,111 @@
+{
+  "artifactVersion": "metrics-offline-v1",
+  "calculation_id": "sha256:2c364020c9c5bf08c2eeaa5fd38eae161920e482cdf23d2b1dda29b4d61a245f",
+  "inputs": [
+    {
+      "bytes": 1071,
+      "kind": "calendar",
+      "raw_rows": 6,
+      "relevant_schema": {
+        "away_team": "JSON scalar (validated per row)",
+        "game_id": "JSON scalar (validated per row)",
+        "game_type": "JSON scalar (validated per row)",
+        "home_team": "JSON scalar (validated per row)",
+        "season": "JSON scalar (validated per row)",
+        "week": "JSON scalar (validated per row)"
+      },
+      "sha256": "5909c92a0cda12eedb61b3c2185e63c1268a0b529146e41666775989a77fd4fa",
+      "source_revision_id": "sha256:5909c92a0cda12eedb61b3c2185e63c1268a0b529146e41666775989a77fd4fa"
+    },
+    {
+      "bytes": 16222,
+      "kind": "pbp",
+      "raw_rows": 27,
+      "relevant_schema": {
+        "defteam": "JSON scalar (validated per row)",
+        "drive": "JSON scalar (validated per row)",
+        "epa": "JSON scalar (validated per row)",
+        "game_id": "JSON scalar (validated per row)",
+        "play_deleted": "JSON scalar (validated per row)",
+        "play_id": "JSON scalar (validated per row)",
+        "play_type": "JSON scalar (validated per row)",
+        "posteam": "JSON scalar (validated per row)",
+        "qb_kneel": "JSON scalar (validated per row)",
+        "qb_spike": "JSON scalar (validated per row)",
+        "season": "JSON scalar (validated per row)",
+        "season_type": "JSON scalar (validated per row)",
+        "special_teams_play": "JSON scalar (validated per row)",
+        "two_point_attempt": "JSON scalar (validated per row)",
+        "week": "JSON scalar (validated per row)"
+      },
+      "sha256": "37944957a69a0013a303253aaf61bb1d344d054217c51cde5e0d9758a7704be0",
+      "source_revision_id": "sha256:37944957a69a0013a303253aaf61bb1d344d054217c51cde5e0d9758a7704be0"
+    }
+  ],
+  "limitations": [
+    "Completeness UNKNOWN unless explicitly evidenced for these input bytes.",
+    "AUDITABLE_SUBSET counts describe present content, not certified full-game volume.",
+    "Absent rows do not identify bye, source delay or ingestion failure.",
+    "Evidence assertions are supplied by the caller, not independently authenticated.",
+    "EPA model version UNKNOWN unless explicitly evidenced; adapter version is separate.",
+    "No certified temporal window, revision selection, pregame or POINT_IN_TIME guarantee."
+  ],
+  "metadata": {
+    "games": {
+      "synthetic-6": {
+        "completeness": "COMPLETE",
+        "evidence": {
+          "basis": "SYNTHETIC_COMPLETE_EMPTY_SOURCE",
+          "reference": "fixtures/offline_metrics/README.md#synthetic-6"
+        },
+        "expected_unique_rows": 0
+      }
+    },
+    "metadataVersion": 1,
+    "sources": {}
+  },
+  "mode": "OFFLINE_DRY_RUN",
+  "replica_projection": {
+    "calendar": [
+      "game_id",
+      "season",
+      "game_type",
+      "week",
+      "home_team",
+      "away_team"
+    ],
+    "normalization": "Numeric round-trip decimals, binary flags, phase/round; additional columns ignored. Drive and all raw contract fields participate, even outside pass/run.",
+    "pbp": [
+      "game_id",
+      "play_id",
+      "drive",
+      "season",
+      "season_type",
+      "week",
+      "posteam",
+      "defteam",
+      "play_type",
+      "qb_kneel",
+      "qb_spike",
+      "play_deleted",
+      "special_teams_play",
+      "two_point_attempt",
+      "epa"
+    ]
+  },
+  "requested_seasons": [
+    2026
+  ],
+  "source_model_versions": {
+    "37944957a69a0013a303253aaf61bb1d344d054217c51cde5e0d9758a7704be0": {
+      "evidence": null,
+      "value": "UNKNOWN"
+    }
+  },
+  "versions": {
+    "adapter": "1.0.0",
+    "artifact": "metrics-offline-v1",
+    "definition": "1.0.0",
+    "population": "classified-scrimmage-v1"
+  }
+}

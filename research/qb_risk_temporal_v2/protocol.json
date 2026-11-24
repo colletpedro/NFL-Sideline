@@ -1,0 +1,14 @@
+{
+  "version": "qb-risk-temporal-v2.0",
+  "seed": 20261104,
+  "bootstrap_replicates": 2000,
+  "C": 0.1,
+  "known_evaluation_years": [2024, 2025, 2026],
+  "selection_years": [2024, 2025],
+  "known_2026_weeks": [1, 7],
+  "reserved": {"season": 2026, "weeks": [9, 13], "maturity_days_after_latest_kickoff": 8},
+  "candidates": ["M0", "M1", "M2", "M3"],
+  "selection_rule": "both 2024/2025 LL<M1 and Brier<=M1 and AP>M1; stratified pooled game-bootstrap LL upper95<0; lowest pooled LL among eligible; tie1e-10 prefers M2; else no contextual promotion",
+  "standardization": {"reference_years": [2023, 2024, 2025], "min_cell_per_year": 30, "max_weight": 5},
+  "passer_intervals": "omit all comparative intervals; retain observed support and estimates without latent-risk/hability claims"
+}

@@ -1,0 +1,1041 @@
+{
+  "pin": "sha256:6e6bffd6d2e8fc1e70e9d47e395f250b8dcf2cbc084bedbf4e4a32fb2ccf8af6",
+  "rawRows": 5489,
+  "selectedPlays": 580,
+  "gameProductions": 64,
+  "teamPerspectives": 64,
+  "states": {
+    "AVAILABLE": 62,
+    "NO_OPPORTUNITIES": 2
+  },
+  "games": {
+    "2026_01_ARI_LAC": {
+      "ARI": {
+        "status": "AVAILABLE",
+        "eligibleN": 13,
+        "validN": 13,
+        "mean": -0.14510795471389223,
+        "unitHash": "462c89969a28f8cdfe17275df88fd089ce03fbf8b92f094013e29f4c8606f374"
+      },
+      "LAC": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": -0.18483060895232487,
+        "unitHash": "82eff2af1afa06108d8eba1c3eac38d15c899dd4267327988ab34d6d0da334b8"
+      }
+    },
+    "2026_01_ATL_PIT": {
+      "ATL": {
+        "status": "NO_OPPORTUNITIES",
+        "eligibleN": 0,
+        "validN": 0,
+        "mean": null,
+        "unitHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "PIT": {
+        "status": "AVAILABLE",
+        "eligibleN": 6,
+        "validN": 6,
+        "mean": -0.0021355118195592417,
+        "unitHash": "5e04ad8271bdcfb12d6d2ed40386797b56cf4e551ca056800a6ddc450ad4a08e"
+      }
+    },
+    "2026_01_BAL_IND": {
+      "BAL": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": 0.08251250762259588,
+        "unitHash": "889dece82a9cf75064e6387b4dc24ccdd54bf65079f21b173ad57ec197e893db"
+      },
+      "IND": {
+        "status": "AVAILABLE",
+        "eligibleN": 8,
+        "validN": 8,
+        "mean": 0.7175171831258922,
+        "unitHash": "04c29c07398a3c380de5ec324e34ae9cca5cc91b466abafb8e46ada2d5218593"
+      }
+    },
+    "2026_01_BUF_HOU": {
+      "BUF": {
+        "status": "AVAILABLE",
+        "eligibleN": 8,
+        "validN": 8,
+        "mean": -0.4539419430260532,
+        "unitHash": "549b8ebdfe259ad5c0c61080bfaced612592a4fdf04fd1512b890007ec9a6e93"
+      },
+      "HOU": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": 0.20604539564969443,
+        "unitHash": "7ebb8f81d3a25c8bb65b495a3732a9b8276b57a6f8510e962e076355be56675d"
+      }
+    },
+    "2026_01_CHI_CAR": {
+      "CHI": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.4700675013901976,
+        "unitHash": "896fad447fbc6ce0cc53aceacc18a17a619db5be3289e02d6238d1c94ba9f4d3"
+      },
+      "CAR": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": 0.935546823538607,
+        "unitHash": "6aa6520e2ee356f712c9dcffc8f1e0d2c1d5dec60a9fad2f3a254d26ab3e7509"
+      }
+    },
+    "2026_01_CLE_JAX": {
+      "CLE": {
+        "status": "AVAILABLE",
+        "eligibleN": 7,
+        "validN": 7,
+        "mean": -0.7101598836921196,
+        "unitHash": "ce70fe3115f8aa73c54f8c28a3b45516880730ad9b9bde9ec1b18cb6e6bb757b"
+      },
+      "JAX": {
+        "status": "AVAILABLE",
+        "eligibleN": 3,
+        "validN": 3,
+        "mean": 1.257174892971913,
+        "unitHash": "a8b268514f287869cb665a2ee9bfa26f5ea0908a50cde8185b07137a1770edaa"
+      }
+    },
+    "2026_01_DAL_NYG": {
+      "DAL": {
+        "status": "AVAILABLE",
+        "eligibleN": 9,
+        "validN": 9,
+        "mean": 0.5923635272386795,
+        "unitHash": "9eea5f6ece67f4f3cc6be777d2e1ba41babadcf217f1ff002f73e03ff527d440"
+      },
+      "NYG": {
+        "status": "AVAILABLE",
+        "eligibleN": 12,
+        "validN": 12,
+        "mean": 0.8692721351641619,
+        "unitHash": "547a1d1ace5f7a5d91306e7cf468188b77d7ff0eb8e6f55bd95541dd958d1ed5"
+      }
+    },
+    "2026_01_DEN_KC": {
+      "DEN": {
+        "status": "AVAILABLE",
+        "eligibleN": 4,
+        "validN": 4,
+        "mean": 0.1898840999480622,
+        "unitHash": "86745c5406695462cfb71b63648c9a8b0693d61cf0191031902bc68718f6d330"
+      },
+      "KC": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": 0.3224346800424971,
+        "unitHash": "d3718ba6258bb4936a5889b8d465d0baa1bb228b5445db79c57178e81e91ca9c"
+      }
+    },
+    "2026_01_GB_MIN": {
+      "GB": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": -1.0309003746170542,
+        "unitHash": "1ee184ebe9f255440d98998909c023f35d8dce34d8e7a687f050c454620abad6"
+      },
+      "MIN": {
+        "status": "AVAILABLE",
+        "eligibleN": 13,
+        "validN": 13,
+        "mean": 0.23249898064747662,
+        "unitHash": "ad54268a8cf7cf3c45f56b7eeabdfc25f6aac34e5d2c05cb05cadd0efbd1362f"
+      }
+    },
+    "2026_01_MIA_LV": {
+      "MIA": {
+        "status": "AVAILABLE",
+        "eligibleN": 5,
+        "validN": 5,
+        "mean": -0.014302443505824375,
+        "unitHash": "8e4e323f6870221046b31a1ef7753057e616ea021e0222fc22f93a243481f341"
+      },
+      "LV": {
+        "status": "AVAILABLE",
+        "eligibleN": 12,
+        "validN": 12,
+        "mean": 0.333522859174991,
+        "unitHash": "ba24d48aa86502d1fc6872fc54d5daa47d1151f58ee54665290b5d707373e8b5"
+      }
+    },
+    "2026_01_NE_SEA": {
+      "NE": {
+        "status": "AVAILABLE",
+        "eligibleN": 2,
+        "validN": 2,
+        "mean": -0.9130950444814516,
+        "unitHash": "61567e288eb2129147f35c9b8662cc78e48173e0116caf9c337c035ec371447d"
+      },
+      "SEA": {
+        "status": "AVAILABLE",
+        "eligibleN": 6,
+        "validN": 6,
+        "mean": -0.3050107332265648,
+        "unitHash": "881d0a953104cd0f0f8f05b937709526b0518b57bcc749ddf3e4e180f5cfc717"
+      }
+    },
+    "2026_01_NO_DET": {
+      "NO": {
+        "status": "AVAILABLE",
+        "eligibleN": 12,
+        "validN": 12,
+        "mean": 0.4633049070047238,
+        "unitHash": "6fd5313af5a9d72054d3aef3c7febd641ab4248a2e7b2332e3e4093f690179ae"
+      },
+      "DET": {
+        "status": "AVAILABLE",
+        "eligibleN": 17,
+        "validN": 17,
+        "mean": 0.3954689597663411,
+        "unitHash": "b1ad7a6ab56fa6fccf532114804140b8e6ef9436f15e3921bc14ebfdcc94c145"
+      }
+    },
+    "2026_01_NYJ_TEN": {
+      "NYJ": {
+        "status": "AVAILABLE",
+        "eligibleN": 7,
+        "validN": 7,
+        "mean": 0.3425322317668568,
+        "unitHash": "b93385f6c4cd96e615e5d88ff91d869b5296f41604a015b7d80c7ce93583286a"
+      },
+      "TEN": {
+        "status": "AVAILABLE",
+        "eligibleN": 3,
+        "validN": 3,
+        "mean": 0.7520270827129328,
+        "unitHash": "41a7c8355dd9c9ae92fc3b3341ada09d3eec57e68f61969bdf9867d7a02709f7"
+      }
+    },
+    "2026_01_SF_LA": {
+      "SF": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": 0.30925314499675566,
+        "unitHash": "16d60db4d045f6e95eb5cc5b3d996ca79d0f09dd75e2974ec20075595dc8eaed"
+      },
+      "LA": {
+        "status": "AVAILABLE",
+        "eligibleN": 9,
+        "validN": 9,
+        "mean": -0.8042655602200991,
+        "unitHash": "dafebd5f7f1462fe1dc86e967f1b286a71b2b221484e3e23b3b54bf429ab92a7"
+      }
+    },
+    "2026_01_TB_CIN": {
+      "TB": {
+        "status": "AVAILABLE",
+        "eligibleN": 9,
+        "validN": 9,
+        "mean": -0.1774950430541842,
+        "unitHash": "6e036ec93a4b01373368196a18979edc9bb000b5d2ca153279defb4395fc895a"
+      },
+      "CIN": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.15185566976704928,
+        "unitHash": "3cd5a4b8905b3765ab15ef84bcb00da947118b9f40455ed42edc476c4514ae3a"
+      }
+    },
+    "2026_01_WAS_PHI": {
+      "WAS": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.4828800525981933,
+        "unitHash": "72eb499d47ec2138ddd73726bf517ac75bbe1fc18ad0c00b2d763c7a8c1f908b"
+      },
+      "PHI": {
+        "status": "AVAILABLE",
+        "eligibleN": 6,
+        "validN": 6,
+        "mean": 0.509255411033011,
+        "unitHash": "0a8780ca51d6acf7f3862fa04f88e52a03ba0bc1027a05ff4ea027c5dd1bc093"
+      }
+    },
+    "2026_02_CAR_ATL": {
+      "CAR": {
+        "status": "AVAILABLE",
+        "eligibleN": 24,
+        "validN": 24,
+        "mean": -0.11398214910018208,
+        "unitHash": "efdbf22b021dae4dc1e51150086b30faad01d9a322dee89348b1a9f4cd46995b"
+      },
+      "ATL": {
+        "status": "NO_OPPORTUNITIES",
+        "eligibleN": 0,
+        "validN": 0,
+        "mean": null,
+        "unitHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "2026_02_CIN_HOU": {
+      "CIN": {
+        "status": "AVAILABLE",
+        "eligibleN": 2,
+        "validN": 2,
+        "mean": 1.4280274335760623,
+        "unitHash": "902a1cde4fc8e810eac185ee847d6937ae1491e78b70ce449b6550a76a0f8c44"
+      },
+      "HOU": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": -1.5298929936470995,
+        "unitHash": "6e736ac61e3e47041b387434b97ea918d365fa022d1b39b682b32691ecd65fa3"
+      }
+    },
+    "2026_02_CLE_TB": {
+      "CLE": {
+        "status": "AVAILABLE",
+        "eligibleN": 6,
+        "validN": 6,
+        "mean": -0.12572597521746925,
+        "unitHash": "57f6b1eb1b8377151a75e9d5943da87a0b2a7245e2897dda684ec97c2c7bf50c"
+      },
+      "TB": {
+        "status": "AVAILABLE",
+        "eligibleN": 13,
+        "validN": 13,
+        "mean": -0.19804239076621716,
+        "unitHash": "e197d98604678b18ed3c1f192448594e5e5d7b75031a5f27aa604e2d4e58378b"
+      }
+    },
+    "2026_02_DET_BUF": {
+      "DET": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": 0.3075555778129704,
+        "unitHash": "924ff1b2163e7a8a5383566b0e34e4f9591ae9abb01a5037b8aeccfb6e5f4d73"
+      },
+      "BUF": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": 0.6453650943241717,
+        "unitHash": "b8c0769b9f3898de414fdf6aba01a9fbe286bb2048917df2438164cb3f88f576"
+      }
+    },
+    "2026_02_GB_NYJ": {
+      "GB": {
+        "status": "AVAILABLE",
+        "eligibleN": 8,
+        "validN": 8,
+        "mean": 0.29509678071897505,
+        "unitHash": "c49086aa4f9fb8a117b44d57f35237d79216d5cb3ed72eab31b82fa58ba4f1e8"
+      },
+      "NYJ": {
+        "status": "AVAILABLE",
+        "eligibleN": 8,
+        "validN": 8,
+        "mean": 0.5218264216237003,
+        "unitHash": "915eb98ba027554e8e25a8d91f8e525dade43ffdd3999329b324049d523f4f22"
+      }
+    },
+    "2026_02_IND_KC": {
+      "IND": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": 0.3684830160695128,
+        "unitHash": "72de6bcbc7faf05186eb511aea117e585279602d307cfd4537e3332497b81125"
+      },
+      "KC": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.08891353315620663,
+        "unitHash": "d1c43f5368ab77f1b69b765822a81a06ea565ed8dddadadf0bdd653f6be1b4d3"
+      }
+    },
+    "2026_02_JAX_DEN": {
+      "JAX": {
+        "status": "AVAILABLE",
+        "eligibleN": 6,
+        "validN": 6,
+        "mean": -0.055037525158103,
+        "unitHash": "5a4c8993a25e95109e81d58b5a5b0f1a309cac817501acd92f1348d8d3cf0742"
+      },
+      "DEN": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": -0.5320792768567483,
+        "unitHash": "df427cdbb6392e7b5409be4471c29b410a6fabae3d83c2a4ba773b9b7b4ec929"
+      }
+    },
+    "2026_02_LV_LAC": {
+      "LV": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": -0.18758889129967432,
+        "unitHash": "f367ab274e6e2152999acbb03e97555fd1f0b4c8fe5cdfc8a6bb08952b410575"
+      },
+      "LAC": {
+        "status": "AVAILABLE",
+        "eligibleN": 4,
+        "validN": 4,
+        "mean": 0.7234356053668307,
+        "unitHash": "c93d0f6acab8b1804d27358a930886c3f0b766904eb6d43eb8e98904d4e933fe"
+      }
+    },
+    "2026_02_MIA_SF": {
+      "MIA": {
+        "status": "AVAILABLE",
+        "eligibleN": 12,
+        "validN": 12,
+        "mean": -0.16344435576196376,
+        "unitHash": "3ce63befbe1b503d43317a59a7bb84ede6860804850b7b888f7546b2c7949d04"
+      },
+      "SF": {
+        "status": "AVAILABLE",
+        "eligibleN": 12,
+        "validN": 12,
+        "mean": 0.653494776886267,
+        "unitHash": "0c068157c5f4c32f4af12f563fe31c9a92286e2fc26fa4e33dfe356c88d03fde"
+      }
+    },
+    "2026_02_MIN_CHI": {
+      "MIN": {
+        "status": "AVAILABLE",
+        "eligibleN": 1,
+        "validN": 1,
+        "mean": -1.0466187728814722,
+        "unitHash": "55e03bc29b0b17144a564b5e785e568b13480dd3363b683392320f36d736244d"
+      },
+      "CHI": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": -0.6583896466932309,
+        "unitHash": "795477e63fb86d93477dbc351df99e4588defd367acc3ce2c5e599dfbb7face3"
+      }
+    },
+    "2026_02_NO_BAL": {
+      "NO": {
+        "status": "AVAILABLE",
+        "eligibleN": 8,
+        "validN": 8,
+        "mean": 0.10274487945204186,
+        "unitHash": "29f3e9d7b1ffbac71d8d9ea8b1db43df1125f4cf022015011a3d1356d04cdbdb"
+      },
+      "BAL": {
+        "status": "AVAILABLE",
+        "eligibleN": 7,
+        "validN": 7,
+        "mean": -0.12658784136577417,
+        "unitHash": "c62b9bbd1069b688605a66500c9a615dee7028a61e721cfe2c63ab358e63ede7"
+      }
+    },
+    "2026_02_NYG_LA": {
+      "NYG": {
+        "status": "AVAILABLE",
+        "eligibleN": 4,
+        "validN": 4,
+        "mean": -1.811874895336866,
+        "unitHash": "5c2b77e4a75bfa4d1624b95bf967e381d21ea7c256a6294a95d9bf2c8bc730b1"
+      },
+      "LA": {
+        "status": "AVAILABLE",
+        "eligibleN": 6,
+        "validN": 6,
+        "mean": 0.826472450173848,
+        "unitHash": "e85e8aaddc58a622ef0a925d431b49378b8bbc5ad26e332629e28d5a4010dc2d"
+      }
+    },
+    "2026_02_PHI_TEN": {
+      "PHI": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": -0.5344615989015438,
+        "unitHash": "7c7586a107af75883d8e5dbf7e5b897253c913670ba3a243727be01e604be15a"
+      },
+      "TEN": {
+        "status": "AVAILABLE",
+        "eligibleN": 14,
+        "validN": 14,
+        "mean": 0.07907476924406608,
+        "unitHash": "63ec1219645707be42ee02ea3917fa81abfebc7edde4cb2bbd1a24469434ec3f"
+      }
+    },
+    "2026_02_PIT_NE": {
+      "PIT": {
+        "status": "AVAILABLE",
+        "eligibleN": 2,
+        "validN": 2,
+        "mean": -3.5147065286000725,
+        "unitHash": "3929ab4390d2ca0f5e09dc0f94c2a19f8b5cf1f3c25135c8dc73be2f0fd1d733"
+      },
+      "NE": {
+        "status": "AVAILABLE",
+        "eligibleN": 3,
+        "validN": 3,
+        "mean": -0.684957179412956,
+        "unitHash": "26d87ccb2f46edbc3f34f43fa3fe9f1b175f162643119023de611ed9d7accde6"
+      }
+    },
+    "2026_02_SEA_ARI": {
+      "SEA": {
+        "status": "AVAILABLE",
+        "eligibleN": 21,
+        "validN": 21,
+        "mean": -0.026958281770237656,
+        "unitHash": "dad30fa975e6b18ec82c33048077f449f6ccaf6212e092dcc302a73b9173adbd"
+      },
+      "ARI": {
+        "status": "AVAILABLE",
+        "eligibleN": 5,
+        "validN": 5,
+        "mean": 0.40984200240345675,
+        "unitHash": "3df626bb592049f49fd5a16a1b9eef333c12168ae3918c255be232814a579cc7"
+      }
+    },
+    "2026_02_WAS_DAL": {
+      "WAS": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": -0.27089017629623413,
+        "unitHash": "e71668cda5960159d2c4e2098977a6acce191570b7f2d5c62607d3d49368f396"
+      },
+      "DAL": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": 0.24206962608941732,
+        "unitHash": "9c798fac73eb90eed2fae77d7a7b3b07935c611c2edd10bb3836952a0b61e3d0"
+      }
+    }
+  },
+  "teams": {
+    "ARI": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 18,
+        "validN": 18,
+        "mean": 0.009044811152038038,
+        "unitHash": "a6d4a75c4239f6c63e03ffd918c5366135dba0495513eb6b3987ddc4c77c1163"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 32,
+        "validN": 32,
+        "mean": -0.08122689423908012,
+        "unitHash": "dca6c77e8859780466b61294fc3fa9839d7b8f1351590f92bbc7f313921fee42"
+      }
+    },
+    "ATL": {
+      "off": {
+        "status": "NO_OPPORTUNITIES",
+        "eligibleN": 0,
+        "validN": 0,
+        "mean": null,
+        "unitHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 30,
+        "validN": 30,
+        "mean": -0.09161282164405751,
+        "unitHash": "aae7dba4124e6a8374634bdaa271f33de48a426e769525bdae1ec72e0b0e7b4c"
+      }
+    },
+    "BAL": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 18,
+        "validN": 18,
+        "mean": 0.00119570523822975,
+        "unitHash": "51b6fb532a7c1e5d77f8f23fecb44dde1e4ef1e544f084858aa4e8d4dac9f672"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 16,
+        "validN": 16,
+        "mean": 0.410131031288967,
+        "unitHash": "87b40bebfa646a04c1e4e3e5025deb2332b6b33599c0e9b526084beb98376110"
+      }
+    },
+    "BUF": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 19,
+        "validN": 19,
+        "mean": 0.18249897333460335,
+        "unitHash": "4f732daf59ae930daa286e6f5949b6ed446d0a05ff9ab42dd1d51e82d64f2fde"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 22,
+        "validN": 22,
+        "mean": 0.2568004867313324,
+        "unitHash": "27be9a3a304557f742f0be641654aae7df38e8b2cac88fa77774917b53c42da2"
+      }
+    },
+    "CAR": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 34,
+        "validN": 34,
+        "mean": 0.19470284285240294,
+        "unitHash": "a8b8fb58e5f7b9dd054f5de366c5b1bd1f6f955b7e126b630d89368575f12a0b"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.4700675013901976,
+        "unitHash": "896fad447fbc6ce0cc53aceacc18a17a619db5be3289e02d6238d1c94ba9f4d3"
+      }
+    },
+    "CHI": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 30,
+        "validN": 30,
+        "mean": -0.09416107265151662,
+        "unitHash": "94fd5bfc8ff49aef26b62fb931fdd285dc9550d56ac4648284814d84215f689a"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": 0.7553499511367816,
+        "unitHash": "70df97012a18ab45e9da3702453a5e844c20ce490425889b6b07283f505710ff"
+      }
+    },
+    "CIN": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 17,
+        "validN": 17,
+        "mean": 0.3019935243328155,
+        "unitHash": "77d864678daececb29e8db14dd3a904f54aedd51365bb5c64ace3013f110e1dc"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 19,
+        "validN": 19,
+        "mean": -0.889283438103087,
+        "unitHash": "d2bfc7f0e132291d68151c89c0cbd2f874065463ff96591d325ed557f5d409e6"
+      }
+    },
+    "CLE": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 13,
+        "validN": 13,
+        "mean": -0.4404211567038194,
+        "unitHash": "f77039b79e18a6cb46a195c141ffdeb8778625710422e3ad9ab9deb1a5409887"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 16,
+        "validN": 16,
+        "mean": 0.07481084993468225,
+        "unitHash": "9612244c567c73a2819e05cead9ecdafa245b6b6f970ba4f89e71cac88389319"
+      }
+    },
+    "DAL": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 19,
+        "validN": 19,
+        "mean": 0.4079983161074888,
+        "unitHash": "ed9ac01f4d01702d0607773d7896ba345d4e3a54a4258abf80c788611705e427"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 23,
+        "validN": 23,
+        "mean": 0.32397711663962464,
+        "unitHash": "5b2141735495d8a18ee28c5739712424a5e5b9d5c3cdc88cc91f7fdfd8845200"
+      }
+    },
+    "DEN": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": -0.33955570970879884,
+        "unitHash": "e2548007a84e4cd8bb0fc16882958e03512b95b4e628914c6f8a5adafe84b064"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 16,
+        "validN": 16,
+        "mean": 0.18088260309227205,
+        "unitHash": "872b9e73b5d0715169c678e3738d6b99cd6d42ce7aa085ea7d4976c882355ef3"
+      }
+    },
+    "DET": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 28,
+        "validN": 28,
+        "mean": 0.36093155971323115,
+        "unitHash": "dc66c1610eb696951493f96f31cccb4a7cd037b380bbacaa8f085ddd8795c7a9"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 23,
+        "validN": 23,
+        "mean": 0.5503771705053293,
+        "unitHash": "6b3b1c6acfe60a95c203cced90526db2453357028ca05d83901d23db0b0301f4"
+      }
+    },
+    "GB": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 18,
+        "validN": 18,
+        "mean": -0.441568305578819,
+        "unitHash": "19995c70b2ea571baef85d646979155ea9d1ed65d08f45d0c08f5f65c782c59a"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 21,
+        "validN": 21,
+        "mean": 0.3427189581622285,
+        "unitHash": "28dbf096a632ce017e2907cb50dee14ccb4ec3a61a39db902b5f3269822e2b07"
+      }
+    },
+    "HOU": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 21,
+        "validN": 21,
+        "mean": -0.6205919325868741,
+        "unitHash": "4567ff2f39a26c3785fc28ef57c2b47edd36fbea46ce5f67b2dfb4926d8e8d10"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 10,
+        "validN": 10,
+        "mean": -0.07754806770563007,
+        "unitHash": "11703183d65b10aa53e04bd0ca551d1a057dd37257001d02c055b8a39b1314a0"
+      }
+    },
+    "IND": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 18,
+        "validN": 18,
+        "mean": 0.5236093125390148,
+        "unitHash": "3fe7a61c284783724dbeb312faa472efca62c6eadb1ea156685f69c29870e107"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 26,
+        "validN": 26,
+        "mean": 0.08620540696890977,
+        "unitHash": "5257923bdeaa4b6189a1dde0019b0b7e74e8db3fb7bb07068db8c068564aae91"
+      }
+    },
+    "JAX": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 9,
+        "validN": 9,
+        "mean": 0.382366614218569,
+        "unitHash": "e978571890f25e6e1c2e6a2f4743ec99acb49465c9949dafa3d5f59546cba788"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 18,
+        "validN": 18,
+        "mean": -0.6013328461816149,
+        "unitHash": "0fb05b2b257d0753fb56da712daa63fd82f3e9cc7e7c4d900d04d2933a578092"
+      }
+    },
+    "KC": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 25,
+        "validN": 25,
+        "mean": 0.18232199191072282,
+        "unitHash": "18c516e523d223a0069975cabcacd96e088f88a2ef24b2353e0ad4d6df35e4c0"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 14,
+        "validN": 14,
+        "mean": 0.31745475432052694,
+        "unitHash": "4106071dc41a22ca1dba225ec88a08511dc57708eac11122d94e815825b479c3"
+      }
+    },
+    "LA": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": -0.1519703560625203,
+        "unitHash": "945db41b8712bcb44ae20859466f8b87ceb71e1a5bf2efb90e69228247001d01"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 14,
+        "validN": 14,
+        "mean": -0.2967834379557076,
+        "unitHash": "9cc26cd4641bceaeaf5956f903721e741b88451852edf8ef641f74e23d3b052a"
+      }
+    },
+    "LAC": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.05737371486611663,
+        "unitHash": "e40fa25b7ac39b475002f794d8be99a7d0232559b0e6df6a1f93450d2d89d178"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 23,
+        "validN": 23,
+        "mean": -0.16357792714249314,
+        "unitHash": "ed1a22113e0cc1ef8541e9982c0325ca1d1ce66c94d8a86f1d19bbc5d74eade0"
+      }
+    },
+    "LV": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 22,
+        "validN": 22,
+        "mean": 0.09665388168650678,
+        "unitHash": "7d942a8f4d6d8a75f9b383ce2f46f7401280c8ba95f1617d4e98674b54919216"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 9,
+        "validN": 9,
+        "mean": 0.31358113377091124,
+        "unitHash": "b56bf726836c689f8a20f94ec71ed2495f4d848d8d4ce3db1193c313ca890345"
+      }
+    },
+    "MIA": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 17,
+        "validN": 17,
+        "mean": -0.11957908745133451,
+        "unitHash": "bc132fbab48b2369fe5374c032fdd90f475f50dd34e28b00a8eadd7af5fb19a0"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 24,
+        "validN": 24,
+        "mean": 0.493508818030629,
+        "unitHash": "b279dd8c5c091394b661587db6a1e2d9c6cd04de0d6daee51b6b97c02f2c562d"
+      }
+    },
+    "MIN": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 14,
+        "validN": 14,
+        "mean": 0.14113342682398028,
+        "unitHash": "bf8229fa3963f75c70b107c9103c4efc3a953d64b62d2d2aceef854594d57517"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 25,
+        "validN": 25,
+        "mean": -0.8073939378627601,
+        "unitHash": "fb21f2eb0d7780a1f08405e4890f566ded102fcb5b46f5ffa622fba0b8889781"
+      }
+    },
+    "NE": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 5,
+        "validN": 5,
+        "mean": -0.7762123254403542,
+        "unitHash": "053a59c3e2ebd67a8cabb7ee30fff1ff01cca0c46e5aae33d38e02729c079c73"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 8,
+        "validN": 8,
+        "mean": -1.1074346820699417,
+        "unitHash": "b3d14e964a478b08be290e3d53902fdd5f80a21ec0158f4f7a1a848e4ebbf79c"
+      }
+    },
+    "NO": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 20,
+        "validN": 20,
+        "mean": 0.319080895983651,
+        "unitHash": "d4ce5f012b34c590a5d4394031a002452e4fad950007cc63dff146bebf8c4a56"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 24,
+        "validN": 24,
+        "mean": 0.24320239276947414,
+        "unitHash": "a90e2b770e1a50ff87189db57c059d6cdd8111fa66b4d4b27c2cd1b8de1852a2"
+      }
+    },
+    "NYG": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 16,
+        "validN": 16,
+        "mean": 0.19898537753890494,
+        "unitHash": "9f84ba9a889cc509ee7ebce0170aca10714c7e5466764a324e05b6110f8f375e"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.6860070964127468,
+        "unitHash": "27ce9cd63ebda0f06809fa39f74c003daeb847723d54e52eb07e6dbcdca04b4d"
+      }
+    },
+    "NYJ": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 15,
+        "validN": 15,
+        "mean": 0.43815579969050666,
+        "unitHash": "26de37f78c75ea994bc838e8694803a22236e4e4165993208c146c8136e810cf"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 11,
+        "validN": 11,
+        "mean": 0.41971413580823624,
+        "unitHash": "bc6d920e7f0deb5376096c57d69ac0d73c06bff5784ef219556e718f5fc47db4"
+      }
+    },
+    "PHI": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 17,
+        "validN": 17,
+        "mean": -0.16609088951287737,
+        "unitHash": "4e44e11f6884a2b52b9d1903acce891015b431c08f84fa4a76b423ad200cc7ab"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 29,
+        "validN": 29,
+        "mean": 0.28793957097895945,
+        "unitHash": "48b0dbc128d3c12b43a37f6d80708a7ec4491764e166485539575479e79158a4"
+      }
+    },
+    "PIT": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 8,
+        "validN": 8,
+        "mean": -0.8802782660146876,
+        "unitHash": "724abcbb011b0edf4a2db5142ee5b9f7bc0d247f7bda8b94e1a246d0b41e511c"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 3,
+        "validN": 3,
+        "mean": -0.684957179412956,
+        "unitHash": "26d87ccb2f46edbc3f34f43fa3fe9f1b175f162643119023de611ed9d7accde6"
+      }
+    },
+    "SEA": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 27,
+        "validN": 27,
+        "mean": -0.08874771542719924,
+        "unitHash": "a46931dfdfc0d60981987b096be877487002330bcbc4cfb6c43b8233a22fbae3"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 7,
+        "validN": 7,
+        "mean": 0.03185998900776864,
+        "unitHash": "16879b587783787eb0bab35545d2313610af1c51bd23382c0e1836fb06e09fba"
+      }
+    },
+    "SF": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 22,
+        "validN": 22,
+        "mean": 0.49702130784558,
+        "unitHash": "0d19695c00e39aaf9f5910261e0aee9de9adf79a03c3965be52e71df78a2aff1"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 21,
+        "validN": 21,
+        "mean": -0.43808201481545034,
+        "unitHash": "0be7a01a75cd8dc2ae62560fcfa4b381d2026c1d840f86573fd1f6acdb226eba"
+      }
+    },
+    "TB": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 22,
+        "validN": 22,
+        "mean": -0.18963665761129458,
+        "unitHash": "dc4483277bc15546dae34e626a094d820cd603383e3eabdf827a87381ea03e79"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 21,
+        "validN": 21,
+        "mean": 0.07254662834290114,
+        "unitHash": "fe7f216edf0e5c8d8f3fe65f3110c0645cd6794bf8d60e81daeabc9269653f01"
+      }
+    },
+    "TEN": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 17,
+        "validN": 17,
+        "mean": 0.19783105985621904,
+        "unitHash": "daa3514938adad2b86995f2c47e67b3f7c3b982f6b8e2967473434af97c0a10d"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 18,
+        "validN": 18,
+        "mean": -0.19340844253049905,
+        "unitHash": "0a6aed6c7a9f3eda1812bc9955d0a9fcc395278bc2443e39c757ef981570707c"
+      }
+    },
+    "WAS": {
+      "off": {
+        "status": "AVAILABLE",
+        "eligibleN": 26,
+        "validN": 26,
+        "mean": 0.16397726345055091,
+        "unitHash": "54249e86e297a03d1dd89a102339887b9479429ebfeaac1ad7c49b32c62afff4"
+      },
+      "def": {
+        "status": "AVAILABLE",
+        "eligibleN": 16,
+        "validN": 16,
+        "mean": 0.3422642954432649,
+        "unitHash": "36dcb2d5fb59e407891db49c7d7b46a29eeea30ded9dafcf207d9c1d60ab0f83"
+      }
+    }
+  },
+  "sourceFilesVerified": 49,
+  "differences": 0
+}

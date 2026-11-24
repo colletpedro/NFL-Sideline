@@ -1,0 +1,18 @@
+{
+  "files": {
+    "all_players_2026.csv": "d60a28c86dededc9a898d633f564b564f6725501354aaba23871bafb3a8e9e0d",
+    "calibration_global_and_ftn.png": "86074539755e0b88dc18e8e40606e442039eae65de5e608c95e5d6c1468f501f",
+    "calibration_global_and_ftn.svg": "0b43a4ac95f6cfb066f7e7d5a9b3f424cd1d4d1a115f0f68f6b0fe6c32342d52",
+    "calibration_support.csv": "dc4e35d01ecf3ee102006a633ae79bf2b01e5f900ee88e567530976e49bcc42f",
+    "decomposition_support.csv": "592f2a4e16d450b7c4620a7dcb91b1c4c3523528e35e0743eeab4fc55d716fba",
+    "expected_decomposition_2026.png": "131728f06e9322af497721fd0be8016a2a783a2ba47103013b83fdf752342ee1",
+    "expected_decomposition_2026.svg": "3b057c58d6e7f42ddd326912f85dbfb59c98357e760fb6bd1b77f0abef5649f3",
+    "performance_2025.csv": "6c42500552fe9906f06a24a031a113032751c1414af5bf95f8313613bdba9af5",
+    "performance_vs_references_2025.png": "4459daef95bd4fbee5140be54dafb5202b8f7abffc727b291b96c908cae87cfc",
+    "performance_vs_references_2025.svg": "d34f2ea0919c8d9d4d48229a9d2b097b40a146f7f6cdcdc46c993647fca79d24",
+    "qb_observed_vs_expected_2026.png": "2b5a63f2f2ed7bfd89dee9e919d617cf2dc4e4bc5c971b92ef3bfc23e514429a",
+    "qb_observed_vs_expected_2026.svg": "82539bfa8c95c012bf69a48fd2a746178b5f63f0eadec207514a1e0d8cc06975",
+    "small_support_all_positions_2026.png": "f9d5ef96e73bb3ef149ff70222cf9bc302baf846e5748fc44ff1858a5f1ebe8b",
+    "small_support_all_positions_2026.svg": "871a4abc435cbc192676b86614250132b30cb8b72212c2e6afef57f5235a9cba"
+  }
+}

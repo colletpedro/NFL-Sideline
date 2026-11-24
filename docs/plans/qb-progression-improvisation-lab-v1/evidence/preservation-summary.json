@@ -1,0 +1,17 @@
+{
+  "activeStoresUnchanged": {
+    "qb-risk-lab-v1": 16095,
+    "qb-risk-outcomes-lab-v1": 233
+  },
+  "labHead": "01f23cfc64fee10f5b16dafae7eb4dabeff8579c",
+  "mainStatusPreserved": true,
+  "passed": true,
+  "previousServer": {
+    "error": "URLError",
+    "status": "unreachable"
+  },
+  "publicBuildFilesByteIdentical": 5,
+  "researchV1PackageFilesUnchanged": 257,
+  "sourcesUnchanged": true,
+  "trackedLabFilesUnchanged": 3399
+}

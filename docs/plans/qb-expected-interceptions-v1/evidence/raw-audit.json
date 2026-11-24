@@ -1,0 +1,397 @@
+[
+  {
+    "binary_target": true,
+    "duplicate_keys": 0,
+    "eligible_before_coverage": 18008,
+    "eligible_overtime": 163,
+    "eligible_overtime_int": 5,
+    "eligible_penalty": 225,
+    "eligible_penalty_int": 13,
+    "excluded_deleted_int": 0,
+    "excluded_no_play_worthy": 68,
+    "excluded_two_point_int": 0,
+    "ftn_without_pbp": 0,
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 49434,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2277,
+        "remaining": 47157,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47157,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 27764,
+        "remaining": 19393,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 19393,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1297,
+        "remaining": 18096,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18096,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18096,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 88,
+        "remaining": 18008,
+        "stage": "not_two_point"
+      }
+    ],
+    "gsis_missing_included": 0,
+    "included": 18008,
+    "null_filter_flags": {
+      "pass_attempt": 1493,
+      "play_deleted": 0,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1493,
+      "two_point_attempt": 1493
+    },
+    "raw_eligible_missing_target": 0,
+    "raw_eligible_target_counts": {
+      "0.0": 17590,
+      "1.0": 418
+    },
+    "raw_ftn_rows": 41643,
+    "raw_rows": 49434,
+    "season": 2022,
+    "target_missing_included": 0
+  },
+  {
+    "binary_target": true,
+    "duplicate_keys": 0,
+    "eligible_before_coverage": 18248,
+    "eligible_overtime": 84,
+    "eligible_overtime_int": 0,
+    "eligible_penalty": 241,
+    "eligible_penalty_int": 14,
+    "excluded_deleted_int": 0,
+    "excluded_no_play_worthy": 35,
+    "excluded_two_point_int": 0,
+    "ftn_without_pbp": 0,
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 49665,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2266,
+        "remaining": 47399,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47399,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 27664,
+        "remaining": 19735,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 19735,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1410,
+        "remaining": 18325,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18325,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18325,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 77,
+        "remaining": 18248,
+        "stage": "not_two_point"
+      }
+    ],
+    "gsis_missing_included": 0,
+    "included": 18248,
+    "null_filter_flags": {
+      "pass_attempt": 1488,
+      "play_deleted": 0,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1488,
+      "two_point_attempt": 1488
+    },
+    "raw_eligible_missing_target": 0,
+    "raw_eligible_target_counts": {
+      "0.0": 17818,
+      "1.0": 430
+    },
+    "raw_ftn_rows": 48225,
+    "raw_rows": 49665,
+    "season": 2023,
+    "target_missing_included": 0
+  },
+  {
+    "binary_target": true,
+    "duplicate_keys": 0,
+    "eligible_before_coverage": 17740,
+    "eligible_overtime": 78,
+    "eligible_overtime_int": 1,
+    "eligible_penalty": 230,
+    "eligible_penalty_int": 14,
+    "excluded_deleted_int": 0,
+    "excluded_no_play_worthy": 34,
+    "excluded_two_point_int": 0,
+    "ftn_without_pbp": 0,
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 49492,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2218,
+        "remaining": 47274,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 47274,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 28121,
+        "remaining": 19153,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 19153,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1314,
+        "remaining": 17839,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17839,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17839,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 99,
+        "remaining": 17740,
+        "stage": "not_two_point"
+      }
+    ],
+    "gsis_missing_included": 0,
+    "included": 17740,
+    "null_filter_flags": {
+      "pass_attempt": 1517,
+      "play_deleted": 0,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1517,
+      "two_point_attempt": 1517
+    },
+    "raw_eligible_missing_target": 0,
+    "raw_eligible_target_counts": {
+      "0.0": 17353,
+      "1.0": 387
+    },
+    "raw_ftn_rows": 48031,
+    "raw_rows": 49492,
+    "season": 2024,
+    "target_missing_included": 0
+  },
+  {
+    "binary_target": true,
+    "duplicate_keys": 0,
+    "eligible_before_coverage": 17358,
+    "eligible_overtime": 101,
+    "eligible_overtime_int": 3,
+    "eligible_penalty": 251,
+    "eligible_penalty_int": 19,
+    "excluded_deleted_int": 0,
+    "excluded_no_play_worthy": 25,
+    "excluded_two_point_int": 0,
+    "ftn_without_pbp": 0,
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 48771,
+        "stage": "raw"
+      },
+      {
+        "excluded": 2319,
+        "remaining": 46452,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 46452,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 27711,
+        "remaining": 18741,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 18741,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 1287,
+        "remaining": 17454,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17454,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 17454,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 96,
+        "remaining": 17358,
+        "stage": "not_two_point"
+      }
+    ],
+    "gsis_missing_included": 0,
+    "included": 17358,
+    "null_filter_flags": {
+      "pass_attempt": 1511,
+      "play_deleted": 0,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 1511,
+      "two_point_attempt": 1511
+    },
+    "raw_eligible_missing_target": 0,
+    "raw_eligible_target_counts": {
+      "0.0": 16978,
+      "1.0": 380
+    },
+    "raw_ftn_rows": 47316,
+    "raw_rows": 48771,
+    "season": 2025,
+    "target_missing_included": 0
+  },
+  {
+    "binary_target": true,
+    "duplicate_keys": 0,
+    "eligible_before_coverage": 7970,
+    "eligible_overtime": 82,
+    "eligible_overtime_int": 2,
+    "eligible_penalty": 120,
+    "eligible_penalty_int": 6,
+    "excluded_deleted_int": 0,
+    "excluded_no_play_worthy": 22,
+    "excluded_two_point_int": 0,
+    "ftn_without_pbp": 0,
+    "funnel": [
+      {
+        "excluded": 0,
+        "remaining": 21191,
+        "stage": "raw"
+      },
+      {
+        "excluded": 0,
+        "remaining": 21191,
+        "stage": "regular_season"
+      },
+      {
+        "excluded": 0,
+        "remaining": 21191,
+        "stage": "not_deleted"
+      },
+      {
+        "excluded": 12615,
+        "remaining": 8576,
+        "stage": "pass_type"
+      },
+      {
+        "excluded": 0,
+        "remaining": 8576,
+        "stage": "official_attempt"
+      },
+      {
+        "excluded": 557,
+        "remaining": 8019,
+        "stage": "not_sack"
+      },
+      {
+        "excluded": 0,
+        "remaining": 8019,
+        "stage": "not_scramble"
+      },
+      {
+        "excluded": 0,
+        "remaining": 8019,
+        "stage": "not_spike"
+      },
+      {
+        "excluded": 49,
+        "remaining": 7970,
+        "stage": "not_two_point"
+      }
+    ],
+    "gsis_missing_included": 0,
+    "included": 7970,
+    "null_filter_flags": {
+      "pass_attempt": 639,
+      "play_deleted": 0,
+      "qb_scramble": 0,
+      "qb_spike": 0,
+      "sack": 639,
+      "two_point_attempt": 639
+    },
+    "raw_eligible_missing_target": 0,
+    "raw_eligible_target_counts": {
+      "0.0": 7800,
+      "1.0": 170
+    },
+    "raw_ftn_rows": 20572,
+    "raw_rows": 21191,
+    "season": 2026,
+    "target_missing_included": 0
+  }
+]

@@ -1,0 +1,15 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter} from 'react-router-dom';
+import SeasonApp from '../season/App';
+import {StoryProvider} from '../game-story/Provider';
+import {CurveProvider} from './Provider';
+import '../journey.css';
+import '../live-hub.css';
+import '../situational/situational.css';
+import '../reading-polish/polish.css';
+import '../ranking-redzone/ranking-redzone.css';
+import '../redzone-epa/redzone-epa.css';
+import '../game-story/story.css';
+import './curve.css';
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><StoryProvider><CurveProvider><SeasonApp/></CurveProvider></StoryProvider></BrowserRouter></React.StrictMode>);

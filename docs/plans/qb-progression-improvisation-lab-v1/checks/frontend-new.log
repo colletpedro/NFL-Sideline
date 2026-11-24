@@ -1,0 +1,56 @@
+
+> web-ui@0.0.0 test
+> vitest run broadcast-journey/progression --reporter=default
+
+
+ RUN  v2.1.9 /Users/pedrocollet/.codex/worktrees/qb-progression-improvisation-lab-v1/NFL Sideline/web-ui
+
+ ❯ broadcast-journey/progression/Entry.test.tsx (5 tests | 5 failed) 4ms
+   × restores direct DES evidence, category URL and unchanged player totals 3ms
+     → Element is not defined
+     → Cannot read properties of undefined (reading 'unmount')
+   × preserves player period and inherited scale through all three readings, cleans only category and uses history 0ms
+     → Element is not defined
+     → Cannot read properties of undefined (reading 'unmount')
+   × does not show late player/source responses and keeps detail tied to refreshed package 0ms
+     → Element is not defined
+     → Cannot read properties of undefined (reading 'unmount')
+   × explains missing coverage/player and no opportunities without zero coordinates or replacements 0ms
+     → Element is not defined
+     → Cannot read properties of undefined (reading 'unmount')
+   × recovers from failure and keyboard selection does not scroll or apply per100 0ms
+     → Element is not defined
+     → Cannot read properties of undefined (reading 'unmount')
+ ✓ broadcast-journey/progression/model.test.ts (5 tests) 231ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  broadcast-journey/progression/Entry.test.tsx > restores direct DES evidence, category URL and unchanged player totals
+ FAIL  broadcast-journey/progression/Entry.test.tsx > preserves player period and inherited scale through all three readings, cleans only category and uses history
+ FAIL  broadcast-journey/progression/Entry.test.tsx > does not show late player/source responses and keeps detail tied to refreshed package
+ FAIL  broadcast-journey/progression/Entry.test.tsx > explains missing coverage/player and no opportunities without zero coordinates or replacements
+ FAIL  broadcast-journey/progression/Entry.test.tsx > recovers from failure and keyboard selection does not scroll or apply per100
+ReferenceError: Element is not defined
+ ❯ broadcast-journey/progression/Entry.test.tsx:12:109
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/10]⎯
+
+ FAIL  broadcast-journey/progression/Entry.test.tsx > restores direct DES evidence, category URL and unchanged player totals
+ FAIL  broadcast-journey/progression/Entry.test.tsx > preserves player period and inherited scale through all three readings, cleans only category and uses history
+ FAIL  broadcast-journey/progression/Entry.test.tsx > does not show late player/source responses and keeps detail tied to refreshed package
+ FAIL  broadcast-journey/progression/Entry.test.tsx > explains missing coverage/player and no opportunities without zero coordinates or replacements
+ FAIL  broadcast-journey/progression/Entry.test.tsx > recovers from failure and keyboard selection does not scroll or apply per100
+TypeError: Cannot read properties of undefined (reading 'unmount')
+ ❯ broadcast-journey/progression/Entry.test.tsx:13:45
+
+ ❯ Proxy.act node_modules/react/cjs/react.development.js:2512:16
+ ❯ broadcast-journey/progression/Entry.test.tsx:13:27
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/10]⎯
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  5 failed | 5 passed (10)
+   Start at  23:50:21
+   Duration  539ms (transform 164ms, setup 0ms, collect 239ms, tests 235ms, environment 0ms, prepare 93ms)
+

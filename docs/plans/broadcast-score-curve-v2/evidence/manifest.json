@@ -1,0 +1,45 @@
+[
+  {
+    "path": "desktop-1440.png",
+    "bytes": 80137,
+    "sha256": "26d66bd35946c0071fe3daedd0862f8841c05649f9028f87272445aa633379a7",
+    "width": 65536,
+    "height": 4292542531
+  },
+  {
+    "path": "final-load.json",
+    "bytes": 52,
+    "sha256": "549108b42fc41d019a579578707815481ca95d2264a1592352d1112187e60c18"
+  },
+  {
+    "path": "interactions.json",
+    "bytes": 3905,
+    "sha256": "e0eb8ea7f8544447d457cbda093683919d9baefccdfb5950fa4c9432af99829a"
+  },
+  {
+    "path": "layouts.json",
+    "bytes": 2444,
+    "sha256": "33f4d3e30f71c2840ace55ab92d9ce68f7d384f4e0d351d08d6f41a917f26a24"
+  },
+  {
+    "path": "mobile-390.png",
+    "bytes": 33071,
+    "sha256": "399415eaeed63fb915cb3fce6e1e524373fd94130923003bf0db2c127d9ea41d",
+    "width": 65536,
+    "height": 4292542531
+  },
+  {
+    "path": "text200-320.png",
+    "bytes": 28777,
+    "sha256": "fec72269af7a32bbf174451a0f52dafec49940d5ba9b461f39ff7757b56dcd16",
+    "width": 65536,
+    "height": 4292542531
+  },
+  {
+    "path": "turnover-1440.png",
+    "bytes": 73873,
+    "sha256": "0bd7b4ae42de25d3d35fe40fc04285b2b134a62a5e1141f26266fa1ed7c61e5c",
+    "width": 65536,
+    "height": 4292542531
+  }
+]

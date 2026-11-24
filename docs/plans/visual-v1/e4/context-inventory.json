@@ -1,0 +1,578 @@
+{
+  "roots": [
+    "editorial",
+    "core-api/src/test/resources",
+    "etl-pipeline/tests"
+  ],
+  "contexts": [
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2025_08_CHI_BAL/context.json",
+      "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_ARI_SF/context.json",
+      "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_ATL_GB/context.json",
+      "sha256": "540e88dd779ad65b36cb85fa0d42900693448b9a69cd0cfe6843fb1a3ac1efed",
+      "gameId": "2026_03_ATL_GB",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_BAL_DAL/context.json",
+      "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_CAR_CLE/context.json",
+      "sha256": "739bad1ca7027ceb239f88f80f1d24979823272aa4431e7d631df80866bf93cf",
+      "gameId": "2026_03_CAR_CLE",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_CIN_PIT/context.json",
+      "sha256": "d4a997945f89b1ad75cc943ade5a9cb0ffa02bb1cd6630cefc0782955ab1e767",
+      "gameId": "2026_03_CIN_PIT",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_HOU_IND/context.json",
+      "sha256": "944792b3edd3fc3f58518812237d0b745012b6ae3812bf2361e6a312dedf13cd",
+      "gameId": "2026_03_HOU_IND",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_KC_MIA/context.json",
+      "sha256": "111bdcf82f3dc2b89d0587accbd9fb0589daefc28a0e06dbaf3672f9e3a9debf",
+      "gameId": "2026_03_KC_MIA",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_LAC_BUF/context.json",
+      "sha256": "09c9f50658bc769c6766b6f74211b6e3d87d974ad15c9a30f8479d0ab388ec7c",
+      "gameId": "2026_03_LAC_BUF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_LA_DEN/context.json",
+      "sha256": "1318c7e542499de97b29878423aaf669c810120a22d174e7aae978bf2e3b0f2a",
+      "gameId": "2026_03_LA_DEN",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_LV_NO/context.json",
+      "sha256": "1ea9f661058011b0ba628d432658882b02999984cfb72a7e0e0d90ea06e0d74d",
+      "gameId": "2026_03_LV_NO",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_MIN_TB/context.json",
+      "sha256": "dc4fc18739fc8f8f5bf34ef9e8e1a7d0b3e5b25d2841523de1077959149bea0d",
+      "gameId": "2026_03_MIN_TB",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_NE_JAX/context.json",
+      "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_NYJ_DET/context.json",
+      "sha256": "a28c2f3e770ffe00e5efb3183f11f4a5fcae5546710fda1366a1a0f7dca0e10b",
+      "gameId": "2026_03_NYJ_DET",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_PHI_CHI/context.json",
+      "sha256": "a95a51f7e7020d85a8d9b1ce35d9571bf8a8fa1681ae94b478acf19c0bc33476",
+      "gameId": "2026_03_PHI_CHI",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_SEA_WAS/context.json",
+      "sha256": "66b597560b699b78e751e5334cfd69701acbb02f57414700c093273183dccffa",
+      "gameId": "2026_03_SEA_WAS",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/2026_03_TEN_NYG/context.json",
+      "sha256": "929099c1075a9a1e3e7e26fd4b67417465d29ef9f0378fa627432fba0f572926",
+      "gameId": "2026_03_TEN_NYG",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/both-teams/context.json",
+      "sha256": "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+      "gameId": "both-teams",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/opposing-signs/context.json",
+      "sha256": "cd56cd83694a27d09688876d4f25c458769597e8d9baacc328c178b886f7102f",
+      "gameId": "opposing-signs",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/tied-opportunities/context.json",
+      "sha256": "ff5cb9514fc711f475a0d422a5aa7ce0b68ed2419c63df37567ba576da30d859",
+      "gameId": "tied-opportunities",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/batch-01/weekly-variation/context.json",
+      "sha256": "65c36895567b1bfd064e2b6eb0d29d81ffbd47a5daaea3dcaa94c59528d82072",
+      "gameId": "weekly-variation",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/2025_08_CHI_BAL/context.json",
+      "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/2026_03_ARI_SF/context.json",
+      "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/2026_03_BAL_DAL/context.json",
+      "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/2026_03_MIN_TB/context.json",
+      "sha256": "dc4fc18739fc8f8f5bf34ef9e8e1a7d0b3e5b25d2841523de1077959149bea0d",
+      "gameId": "2026_03_MIN_TB",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/2026_03_NE_JAX/context.json",
+      "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/2026_03_SEA_WAS/context.json",
+      "sha256": "66b597560b699b78e751e5334cfd69701acbb02f57414700c093273183dccffa",
+      "gameId": "2026_03_SEA_WAS",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/both-teams/context.json",
+      "sha256": "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+      "gameId": "both-teams",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/opposing-signs/context.json",
+      "sha256": "cd56cd83694a27d09688876d4f25c458769597e8d9baacc328c178b886f7102f",
+      "gameId": "opposing-signs",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/tied-opportunities/context.json",
+      "sha256": "ff5cb9514fc711f475a0d422a5aa7ce0b68ed2419c63df37567ba576da30d859",
+      "gameId": "tied-opportunities",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/coverage-clarity-v1/known-development/weekly-variation/context.json",
+      "sha256": "65c36895567b1bfd064e2b6eb0d29d81ffbd47a5daaea3dcaa94c59528d82072",
+      "gameId": "weekly-variation",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/context.json",
+      "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/context.json",
+      "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/context.json",
+      "sha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/context.json",
+      "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/context.json",
+      "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/context.json",
+      "sha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/context.json",
+      "sha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/context.json",
+      "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/context.json",
+      "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/context.json",
+      "sha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_ARI_SF.json",
+      "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_ATL_GB.json",
+      "sha256": "50e5ac9900ab101082dc838ed1b22c87c7ed18e2d0b832e3020c307994adf7d5",
+      "gameId": "2026_03_ATL_GB",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_BAL_DAL.json",
+      "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_CAR_CLE.json",
+      "sha256": "aa92f07bc8b22c7d69e88cd48da568a63203a969360105c02c6b4932d8cf2ced",
+      "gameId": "2026_03_CAR_CLE",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_CIN_PIT.json",
+      "sha256": "6f1ed365ecb87a88c6fb2597fd3ee62cbcb2150e9c54dfbede1213c238e126fd",
+      "gameId": "2026_03_CIN_PIT",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_HOU_IND.json",
+      "sha256": "0fe5097c9614ea00f28a3463ba95575bc4511a847e6ea6631eb114c4741b8b6c",
+      "gameId": "2026_03_HOU_IND",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_KC_MIA.json",
+      "sha256": "bbf0777d9cd422d4362370dac0504a5248e405eb36218b60bcc9675716abb301",
+      "gameId": "2026_03_KC_MIA",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LAC_BUF.json",
+      "sha256": "d1e58898f359098b681653d338ce89ad0f7178cc154fa7a8a6018dd12ebe89d5",
+      "gameId": "2026_03_LAC_BUF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LA_DEN.json",
+      "sha256": "8e28dd4668e61e6f017ce512eaa1e951d5fc19e7961f2418b752e7e2fd06749f",
+      "gameId": "2026_03_LA_DEN",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LV_NO.json",
+      "sha256": "ee6b6f9aff1c9277d6e55ace2cd254d59a3c7ecf77954a8f5dbcc61b3d898fbd",
+      "gameId": "2026_03_LV_NO",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_MIN_TB.json",
+      "sha256": "3ed663a50340d0bb0a34aebbe35c6e7fb88e64229df289bf8ab257f82727fc3f",
+      "gameId": "2026_03_MIN_TB",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_NE_JAX.json",
+      "sha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_NYJ_DET.json",
+      "sha256": "05c981bac14590cf65f06d9cc296f52b2f61fd40f3c18ec96aca66b78341c7ed",
+      "gameId": "2026_03_NYJ_DET",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_PHI_CHI.json",
+      "sha256": "ea0592cb77e9e2cc4a57d4916357d33a50716196bada1cce74a52040e1fb206e",
+      "gameId": "2026_03_PHI_CHI",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_SEA_WAS.json",
+      "sha256": "c7019c73dbd4252b375af51225f9eddff64368c9038905913256cb589c69a990",
+      "gameId": "2026_03_SEA_WAS",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_TEN_NYG.json",
+      "sha256": "c84caffcfc0ee855e95fe312274b621facf2dfc8b3c5152a9e186975695825a6",
+      "gameId": "2026_03_TEN_NYG",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/uneven-context/2025_08_CHI_BAL.json",
+      "sha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-integration-v1/baseline-reproduction/context.json",
+      "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-integration-v1/new-cli-validation/context.json",
+      "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-integration-v1/operational/contexts/2026_03_BAL_DAL.json",
+      "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2025_08_CHI_BAL/context.json",
+      "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_ARI_SF/context.json",
+      "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_BAL_DAL/context.json",
+      "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_NE_JAX/context.json",
+      "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_MIN_TB/context.json",
+      "sha256": "dc4fc18739fc8f8f5bf34ef9e8e1a7d0b3e5b25d2841523de1077959149bea0d",
+      "gameId": "2026_03_MIN_TB",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_SEA_WAS/context.json",
+      "sha256": "66b597560b699b78e751e5334cfd69701acbb02f57414700c093273183dccffa",
+      "gameId": "2026_03_SEA_WAS",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2025_08_CHI_BAL/context.json",
+      "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_ARI_SF/context.json",
+      "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_BAL_DAL/context.json",
+      "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_MIN_TB/context.json",
+      "sha256": "dc4fc18739fc8f8f5bf34ef9e8e1a7d0b3e5b25d2841523de1077959149bea0d",
+      "gameId": "2026_03_MIN_TB",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_NE_JAX/context.json",
+      "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_SEA_WAS/context.json",
+      "sha256": "66b597560b699b78e751e5334cfd69701acbb02f57414700c093273183dccffa",
+      "gameId": "2026_03_SEA_WAS",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/both-teams/context.json",
+      "sha256": "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+      "gameId": "both-teams",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/both-teams.json",
+      "sha256": "eb328554225ff9cc35151f8ff09471e4717ec4c89baf51383a08a69dd284312a",
+      "gameId": "both-teams",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/opposing-signs.json",
+      "sha256": "1708af445b075d1dbb4eac2bb6dc5eb4528c7aa0b9ae6154bf97077be7a58c21",
+      "gameId": "opposing-signs",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/tied-opportunities.json",
+      "sha256": "296a186f0932f4ae963d665c066338918962fbff7ae36248626d9118ad3a5cf2",
+      "gameId": "tied-opportunities",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/weekly-variation.json",
+      "sha256": "1035a9a906d7b4e7779c8100f066ce30431b482b59b2a662bf6bde92e3f04577",
+      "gameId": "weekly-variation",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/opposing-signs/context.json",
+      "sha256": "cd56cd83694a27d09688876d4f25c458769597e8d9baacc328c178b886f7102f",
+      "gameId": "opposing-signs",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/tied-opportunities/context.json",
+      "sha256": "ff5cb9514fc711f475a0d422a5aa7ce0b68ed2419c63df37567ba576da30d859",
+      "gameId": "tied-opportunities",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/weekly-variation/context.json",
+      "sha256": "65c36895567b1bfd064e2b6eb0d29d81ffbd47a5daaea3dcaa94c59528d82072",
+      "gameId": "weekly-variation",
+      "cohort": "known-regression-or-synthetic",
+      "unusedInAdjustment": false
+    }
+  ],
+  "independentSampleAvailable": false,
+  "reason": "Censo anterior coverage-clarity manifest: 21 únicos, 17 regressões e 4 sintéticos; arquivos adicionais são cópias/fixtures sem proveniência de não uso. Checkout original também contém somente linhagens históricas nas pastas de contextos pesquisadas."
+}

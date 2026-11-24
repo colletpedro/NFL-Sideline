@@ -1,0 +1,14 @@
+{
+  "instance": {
+    "purpose": "metrics-persistence-e5b2-disposable",
+    "instance_id": "75e2c1d1-48e5-4b0e-8a2f-d80122e5a093",
+    "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+    "port": 55486,
+    "database": "nfl_e5b2_75e2c1d148e5"
+  },
+  "pgCtlStatusExitCode": 3,
+  "postmasterPidAbsent": true,
+  "loopbackPortBindSucceeded": true,
+  "preservedRoot": "/private/tmp/nfl-e5b4-instance-orchestrator-identities-20261012",
+  "stoppedOnlyOwnInstance": true
+}

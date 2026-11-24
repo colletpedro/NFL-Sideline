@@ -1,0 +1,18 @@
+{
+  "artifactVersion" : 2,
+  "startedAt" : "2026-10-01T20:18:42.514008Z",
+  "mode" : "LOCAL_RULES_OFFLINE",
+  "contractVersion" : 5,
+  "rendererVersion" : "controlled-claims-v5.0.1",
+  "publicationApproved" : false,
+  "selector" : {
+    "name" : "local-descriptive-rules",
+    "version" : "2.0.0"
+  },
+  "sourceFileSha256" : "6f1ed365ecb87a88c6fb2597fd3ee62cbcb2150e9c54dfbede1213c238e126fd",
+  "contextSha256" : "d4c0331f46d3617a037b1f99d285cfe325c9f045969a992fb5cee413aa88b32f",
+  "gameId" : "2026_03_CIN_PIT",
+  "resultIdentity" : "2d764c8da5d1dd7f47f1eacf040867ad3e4496c99c137726acfe134782175cf5",
+  "status" : "VALIDATED",
+  "validationFailures" : [ ]
+}

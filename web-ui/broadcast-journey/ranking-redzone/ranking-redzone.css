@@ -1,0 +1,29 @@
+.rr .rr-ranking .rp-league-axis,.rr .rr-ranking .rp-league-rows>li{grid-template-columns:8.5rem minmax(0,1fr) 9rem}
+.rr .rr-identity{display:flex;align-items:center;gap:12px;min-width:0}.rr .rr-position{font-family:'Roboto Condensed',sans-serif;font-size:1.2rem;font-variant-numeric:tabular-nums;min-width:2rem;line-height:1.15}
+.rr .rr-ranking .rp-league-team{padding-left:0}.rr .rr-ranking .rp-league-participant .rr-identity{padding-left:8px}
+.rr .rr-no-rate{grid-column:2/-1;font-size:.9375rem;line-height:1.5;padding:8px 0}.rr .rr-without-rate{margin-top:18px}
+.rr .rr-expand{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:48px;padding:12px 4px;margin-top:16px;background:transparent;border:0;border-top:1px solid #8399A3;border-bottom:1px solid #8399A3;color:#17466A;text-align:left;font:600 1rem Archivo,sans-serif;text-decoration:underline;text-underline-offset:5px;cursor:pointer}
+.rr .rr-expand>.rr-expand-sign{font-size:1.5rem;text-decoration:none}
+.rr .rr-reveal{display:grid;grid-template-rows:0fr;opacity:0;visibility:hidden;transition:grid-template-rows 220ms ease,opacity 180ms ease,visibility 0s linear 220ms;overflow-anchor:none}
+.rr .rr-reveal.is-open{grid-template-rows:1fr;opacity:1;visibility:visible;transition:grid-template-rows 220ms ease,opacity 180ms ease,visibility 0s}
+.rr .rr-reveal-clip{overflow:hidden;min-height:0}.rr .rr-complete{padding-top:8px}
+.rr .rr-campaign-symbol{width:38px;height:38px;flex:0 0 38px;fill:none;stroke:#263C48;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rr .mr-campaigns{gap:10px 18px;align-items:flex-start}
+.rr .mr-campaigns>.rr-campaign-mark{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;border:0;background:transparent;min-width:0;max-width:100%;padding:10px 6px;min-height:80px;color:#15232C;border-radius:0;cursor:pointer}
+.rr .mr-campaigns>.rr-campaign-mark>span{font: .9375rem/1.45 Archivo,sans-serif;max-width:13rem;text-align:center;overflow-wrap:anywhere}
+.rr .mr-campaigns>.rr-campaign-mark strong{font:700 .9375rem Archivo,sans-serif}
+.rr .mr-campaigns>.rr-campaign-mark[aria-pressed=true]{background:#F4F7F9;box-shadow:inset 0 -3px #17628D}
+.rr .mr-campaigns>.rr-campaign-mark:focus-visible{outline:3px solid #17628D;outline-offset:2px}
+.rr .rr-campaign-legend{list-style:none;display:flex;gap:12px 24px;flex-wrap:wrap;padding:16px 0;margin:12px 0;border-top:1px solid #8399A340}
+.rr .rr-campaign-legend li{display:flex;align-items:center;gap:8px;max-width:100%;font-size:.875rem;line-height:1.5}
+.rr .rr-campaign-legend .rr-campaign-symbol{width:28px;height:28px;flex-basis:28px}
+@media(max-width:600px){.rr .rr-ranking .rp-league-axis,.rr .rr-ranking .rp-league-rows>li{grid-template-columns:6.6rem minmax(0,1fr) 4.8rem;gap:6px}.rr .rr-identity{gap:6px}.rr .rr-position{font-size:1.1rem;min-width:1.9rem}.rr .rr-ranking .rp-league-value>span{font-size:.875rem;white-space:nowrap}.rr .rr-ranking .rp-league-team{gap:4px}.rr .rr-ranking .rp-league-team .team-logo{width:20px;height:20px;flex-basis:20px}.rr .rr-ranking .rp-league-participant .rr-identity{padding-left:5px}.rr .mr-campaigns{gap:8px}.rr .rr-campaign-legend{gap:10px 18px}}
+@container(max-width:14rem){.rr .rr-ranking .rp-league-rows>li{grid-template-columns:minmax(0,1fr) auto;gap:8px}.rr .rr-identity{grid-column:1;grid-row:1;flex-wrap:wrap}.rr .rr-ranking .rp-league-team{grid-column:auto;grid-row:auto}.rr .rr-ranking .rp-league-value{grid-column:2;grid-row:1}.rr .rr-ranking .rp-league-track{grid-column:1/-1;grid-row:2}.rr .rr-ranking .rr-no-rate{grid-column:1/-1;grid-row:2}.rr .rr-ranking .rp-league-axis{display:block}.rr .rr-ranking .rp-league-axis>span{display:none}.rr .rr-ranking .rp-league-axis .rp-quarter{display:none}}
+@media(prefers-reduced-motion:reduce){.rr .rr-reveal,.rr .rr-reveal.is-open{transition:none}}
+
+.rr .rr-expand-label{display:grid;min-width:0;line-height:1.4}.rr .rr-expand-label>span{grid-area:1/1}.rr .rr-expand-measure{visibility:hidden;pointer-events:none}
+
+.rr .rr-unpositioned .rr-identity{flex-wrap:wrap}
+.rr .mr-campaigns{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr))}
+
+.rr .rr-campaign-id{display:inline-block;white-space:nowrap}

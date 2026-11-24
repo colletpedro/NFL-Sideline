@@ -1,0 +1,37 @@
+{
+  "code_hashes": {
+    "research/qb_interception_risk/dataset.py": "9a6f86b2259e97255d03ab8d500b15511b6d47a5d5312c8a8997f997c308d330",
+    "research/qb_interception_risk/model.py": "39a18d8ffe504f9bab87ccbb0dc87d3407d0f85bba3fb5dbd7c1308533fc5d80",
+    "research/qb_risk_temporal_v2/calibration_stats.py": "08e7eee55fb4f491cad6e432d40c7cb6e311b16aa59ef5fdb6448ad3c7747799",
+    "research/qb_risk_temporal_v2/common.py": "c2e2ea1aaf5071b54a49b22dd096eee26122d3d3ffbdc72b57e722e26735fdc7",
+    "research/qb_risk_temporal_v2/experiment.py": "5ae8f62a105bed2480b24ed7d3d3f34c8fe83c1be5d7061bce43213cf1f0c651",
+    "research/qb_risk_temporal_v2/reserved.py": "cba1ae9333362a608caf1d51fe5c619937e61cd6c36344051b90a24b6da72677"
+  },
+  "contracts": {
+    "EXPERIMENT-PROTOCOL.md": "662f8694d1bf37bb8e6462ec4f3b8c0068eb6a42121c4bf0e856a70cabd5b8f1",
+    "RESERVED-EVALUATION.md": "cadf7175e6b39b1cd0057d08ea810f87a3b6dd697b9e8c46e74c7c32f5792e1c",
+    "protocol.json": "342d0d8a9a4df65df9b303467d76be086ca9dded0697fb4dc62723962070b34a"
+  },
+  "dataset_sha256": "10e90375f22a187f361007e7db84a6f5bf2c81451171be4be4e805d7cc67c296",
+  "files": {
+    "M0.json": "d75eaa1f09ea552a2bf47f6bfc6c5ed4dbeee867f2bb7f94409a2373b46a18bb",
+    "M1.json": "23d917f4def21a1b3e521a1565bb6d42caa0529686b844adf73fbfea32fcfed5",
+    "M3.json": "38b9933535dada0f8b0ed22842ef247fe8e9beeca2a4c3469f4abc54b2b535a6",
+    "reserved_schedule.csv": "e423fd962b90907befde984260c5ccc061483678738e8aa196e446afa9660e52"
+  },
+  "references": [
+    "M0",
+    "M1"
+  ],
+  "reserved": {
+    "maturity_days_after_latest_kickoff": 8,
+    "season": 2026,
+    "weeks": [
+      9,
+      13
+    ]
+  },
+  "selected": "M3",
+  "status": "awaiting_mature_reserved_window; no independent confirmation yet",
+  "version": 2
+}

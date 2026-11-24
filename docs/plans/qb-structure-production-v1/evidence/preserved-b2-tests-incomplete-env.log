@@ -1,0 +1,20 @@
+
+==================================== ERRORS ====================================
+__ ERROR collecting research/qb_expected_interceptions/tests/test_research.py __
+ImportError while importing test module '/Users/pedrocollet/.codex/worktrees/qb-structure-production-v1/NFL Sideline/research/qb_expected_interceptions/tests/test_research.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.11/3.11.13/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+research/qb_expected_interceptions/tests/test_research.py:5: in <module>
+    from common import eligible, KEY, ROOT
+research/qb_expected_interceptions/common.py:18: in <module>
+    from model import features as context_features, RAW, NUM, CAT
+research/qb_interception_risk/model.py:5: in <module>
+    from sklearn.compose import ColumnTransformer
+E   ModuleNotFoundError: No module named 'sklearn'
+=========================== short test summary info ============================
+ERROR research/qb_expected_interceptions/tests/test_research.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.49s

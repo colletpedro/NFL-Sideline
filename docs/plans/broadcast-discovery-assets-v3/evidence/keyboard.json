@@ -1,0 +1,60 @@
+[
+  {
+    "tag": "INPUT",
+    "id": "game-search",
+    "outline": "3px",
+    "focusVisible": true
+  },
+  {
+    "searchUrl": "http://127.0.0.1:18094/?season=2026&week=1&filter=all&q=BAL"
+  },
+  {
+    "tag": "BUTTON",
+    "text": "Buscar",
+    "label": null,
+    "outline": "3px",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "text": "Limpar",
+    "label": null,
+    "outline": "3px",
+    "focusVisible": true
+  },
+  {
+    "tag": "SELECT",
+    "text": "123456789101112131415161718",
+    "label": "Semana",
+    "outline": "3px",
+    "focusVisible": true
+  },
+  {
+    "tag": "SELECT",
+    "text": "Esta semanaTemporada 2026",
+    "label": "Buscar em",
+    "outline": "3px",
+    "focusVisible": true
+  },
+  {
+    "tag": "SUMMARY",
+    "text": "Filtro: todos os jogos",
+    "label": null,
+    "outline": "3px",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "text": "Abrir confronto",
+    "label": "Abrir confronto BAL IND",
+    "outline": "3px",
+    "focusVisible": true
+  },
+  {
+    "tag": "SUMMARY",
+    "text": "Fontes e atualização do arquivo",
+    "label": null,
+    "outline": "3px",
+    "focusVisible": true
+  }
+]

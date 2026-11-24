@@ -1,0 +1,141 @@
+{
+  "flows": [
+    {
+      "name": "keyboard-suggestion-and-inline-selection",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=def&play=classified_rush&reading=2026%2FREG%2F1%2C2&entry=w12-expansion-v1&observation=sha256%3A674fae8209e9470a6856a3c711ff710fa0a7cd9622e3f6da8a2bdc8b5762ae68",
+      "values": "EPA médio permitido\n−0,083\n\npontos esperados / jogada\n\n68 jogadas com EPA finito\n\nModelo EPA não identificado. EPA da fonte.\n\nVolume enfrentado\n68\n\njogadas elegíveis de corrida\n\nFrequência: 51,5%\n68 / 132 jogadas gerais"
+    },
+    {
+      "name": "reload-inclusive",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=def&play=classified_rush&reading=2026%2FREG%2F1%2C2&entry=w12-expansion-v1&observation=sha256%3A674fae8209e9470a6856a3c711ff710fa0a7cd9622e3f6da8a2bdc8b5762ae68",
+      "context": "TEN · Defesa · Corrida · 2026 · REG · Arquivo da temporada · semanas 1, 2"
+    },
+    {
+      "name": "back-to-individual",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=def&play=classified_rush&reading=game&entry=w12-expansion-v1&observation=sha256%3Ab0dfa5700fe362ee96f24f1af1da493182728511e7bb50cb0459d6c10dbae36b",
+      "context": "TEN · Defesa · Corrida · Deste jogo"
+    },
+    {
+      "name": "immediate-Ataque",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=off&play=classified_rush&reading=2026%2FREG%2F1%2C2&entry=w12-expansion-v1&observation=sha256%3Afcde3d82de58e789d1c25ffde8d38dabbd05704c78bfa667fd223dd6724782f3",
+      "selection": "TEN · Ataque · Corrida · 2026 · REG · Arquivo da temporada · semanas 1, 2",
+      "values": "EPA médio\n+0,127\n\npontos esperados / jogada\n\n43 jogadas com EPA finito\n\nModelo EPA não identificado. EPA da fonte.\n\nVolume observado\n43\n\njogadas elegíveis de corrida\n\nFrequência: 43,0%\n43 / 100 jogadas gerais"
+    },
+    {
+      "name": "immediate-Passe",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=off&play=classified_pass&reading=2026%2FREG%2F1%2C2&entry=w12-expansion-v1&observation=sha256%3A0e76c8ab9d49307104cc39516247543df4d76dc8c9fa3fe41a5d4b08e218e3ee",
+      "selection": "TEN · Ataque · Passe · 2026 · REG · Arquivo da temporada · semanas 1, 2",
+      "values": "EPA médio\n−0,131\n\npontos esperados / jogada\n\n57 jogadas com EPA finito\n\nModelo EPA não identificado. EPA da fonte.\n\nVolume observado\n57\n\njogadas elegíveis de passe\n\nFrequência: 57,0%\n57 / 100 jogadas gerais"
+    },
+    {
+      "name": "immediate-Corrida",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=off&play=classified_rush&reading=2026%2FREG%2F1%2C2&entry=w12-expansion-v1&observation=sha256%3Afcde3d82de58e789d1c25ffde8d38dabbd05704c78bfa667fd223dd6724782f3",
+      "selection": "TEN · Ataque · Corrida · 2026 · REG · Arquivo da temporada · semanas 1, 2",
+      "values": "EPA médio\n+0,127\n\npontos esperados / jogada\n\n43 jogadas com EPA finito\n\nModelo EPA não identificado. EPA da fonte.\n\nVolume observado\n43\n\njogadas elegíveis de corrida\n\nFrequência: 43,0%\n43 / 100 jogadas gerais"
+    },
+    {
+      "name": "immediate-Defesa",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=def&play=classified_rush&reading=2026%2FREG%2F1%2C2&entry=w12-expansion-v1&observation=sha256%3A674fae8209e9470a6856a3c711ff710fa0a7cd9622e3f6da8a2bdc8b5762ae68",
+      "selection": "TEN · Defesa · Corrida · 2026 · REG · Arquivo da temporada · semanas 1, 2",
+      "values": "EPA médio permitido\n−0,083\n\npontos esperados / jogada\n\n68 jogadas com EPA finito\n\nModelo EPA não identificado. EPA da fonte.\n\nVolume enfrentado\n68\n\njogadas elegíveis de corrida\n\nFrequência: 51,5%\n68 / 132 jogadas gerais"
+    },
+    {
+      "name": "immediate-Passe + corrida",
+      "url": "http://127.0.0.1:18097/?season=2026&week=1&q=nyj&scope=season&game=2026_01_NYJ_TEN&team=TEN&side=def&play=general&reading=2026%2FREG%2F1%2C2&entry=w12-expansion-v1&observation=sha256%3Ab5581fb8f6663ee6bc8bc6f7beda1ef64a0050e2d13bb25b97cb31b58405f008",
+      "selection": "TEN · Defesa · Passe + corrida · 2026 · REG · Arquivo da temporada · semanas 1, 2",
+      "values": "EPA médio permitido\n+0,098\n\npontos esperados / jogada\n\n132 jogadas com EPA finito\n\nModelo EPA não identificado. EPA da fonte.\n\nVolume enfrentado\n132\n\njogadas elegíveis de passe + corrida"
+    },
+    {
+      "name": "one-letter-b",
+      "suggestions": [
+        "BAL × INDBaltimore Ravens × Indianapolis ColtsSemana 1 · 13 de setembro de 2026",
+        "BUF × HOUBuffalo Bills × Houston TexansSemana 1 · 13 de setembro de 2026",
+        "CHI × CARChicago Bears × Carolina PanthersSemana 1 · 13 de setembro de 2026",
+        "CLE × JAXCleveland Browns × Jacksonville JaguarsSemana 1 · 13 de setembro de 2026",
+        "Esta semana",
+        "Temporada 2026",
+        "Todos os jogos",
+        "Com recortes dos participantes"
+      ]
+    },
+    {
+      "name": "escape-closes-suggestions",
+      "options": 4
+    },
+    {
+      "name": "gap-immediate",
+      "url": "http://127.0.0.1:18097/?season=2026&week=3&team=BAL&scope=season&game=2026_03_BAL_DAL",
+      "values": 0,
+      "text": "Período solicitado; fonte de jogadas ausente.\n\nSem fonte para este recorte.\n\nO play-by-play não está disponível neste recorte. Volume e eficiência são desconhecidos. Ausência de fonte não é zero.\n\nVer contagens e origem\n↘"
+    },
+    {
+      "name": "bad-nominal-no-fallback",
+      "values": 0,
+      "error": "Recorte não confirmado.\n\nObservação não encontrada. Escolha um recorte disponível para continuar.\n\nMostrar seleção deste jogo"
+    },
+    {
+      "name": "week18-visible-without-search",
+      "url": "http://127.0.0.1:18097/?season=2026&week=18",
+      "games": 16
+    },
+    {
+      "name": "four-suggestions-stable-field",
+      "count": 8
+    }
+  ],
+  "layouts": [
+    {
+      "games": 16,
+      "scroll": 375,
+      "state": "hub",
+      "weeks": 18,
+      "width": 390
+    },
+    {
+      "scroll": 305,
+      "state": "reading",
+      "width": 320
+    },
+    {
+      "scroll": 305,
+      "state": "reading-text200",
+      "width": 320
+    },
+    {
+      "scroll": 1425,
+      "state": "reading",
+      "width": 1440
+    },
+    {
+      "games": 16,
+      "scroll": 305,
+      "state": "hub",
+      "weeks": 18,
+      "width": 320
+    },
+    {
+      "scroll": 305,
+      "state": "hub-text200",
+      "width": 320
+    },
+    {
+      "games": 16,
+      "scroll": 1425,
+      "state": "hub",
+      "weeks": 18,
+      "width": 1440
+    },
+    {
+      "inputHeight": 100,
+      "scroll": 305,
+      "state": "final-hub-text200",
+      "width": 320
+    },
+    {
+      "scroll": 375,
+      "state": "final-reading",
+      "width": 390
+    }
+  ],
+  "networkOnSelection": []
+}

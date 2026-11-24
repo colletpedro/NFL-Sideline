@@ -1,0 +1,106 @@
+[
+  {
+    "options": [
+      "Time · Buffalo Bills (BUF)\nVer time · W1–7"
+    ],
+    "overflow": false,
+    "results": "Resultados para “BUF”\n\n1 time · 0 partidas no acervo da semana 7.\n\nVer time · Buffalo Bills (BUF)",
+    "url": "http://127.0.0.1:18111/?season=2026&week=7&q=BUF&scope=week"
+  },
+  {
+    "options": [
+      "Time · Baltimore Ravens (BAL)\nVer time · W1–7",
+      "Partida · CIN × BAL\nCincinnati Bengals × Baltimore Ravens\nSemana 7 · 25 de outubro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “BAL”\n\n1 time · 1 partida no acervo da semana 7.\n\nVer time · Baltimore Ravens (BAL)\nVer confronto · CIN × BAL · W7",
+    "url": "http://127.0.0.1:18111/?season=2026&week=7&q=BAL&scope=week"
+  },
+  {
+    "options": [
+      "Time · Buffalo Bills (BUF)\nVer time · W1–7",
+      "Partida · BUF × HOU\nBuffalo Bills × Houston Texans\nSemana 1 · 13 de setembro de 2026",
+      "Partida · DET × BUF\nDetroit Lions × Buffalo Bills\nSemana 2 · 17 de setembro de 2026",
+      "Partida · LAC × BUF\nLos Angeles Chargers × Buffalo Bills\nSemana 3 · 27 de setembro de 2026",
+      "Partida · NE × BUF\nNew England Patriots × Buffalo Bills\nSemana 4 · 4 de outubro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “BUF”\n\n1 time · 6 partidas no acervo.\n\nVer time · Buffalo Bills (BUF)\nVer confronto · BUF × HOU · W1\nVer confronto · DET × BUF · W2\nVer confronto · LAC × BUF · W3\nVer confronto · NE × BUF · W4\nVer confronto · BUF × LA · W5\nVer confronto · BUF × LV · W6",
+    "url": "http://127.0.0.1:18111/?season=2026&week=7&q=BUF&scope=season"
+  },
+  {
+    "options": [
+      "Time · Baltimore Ravens (BAL)\nVer time · W1–7",
+      "Partida · CIN × BAL\nCincinnati Bengals × Baltimore Ravens\nSemana 7 · 25 de outubro de 2026",
+      "Partida · BAL × IND\nBaltimore Ravens × Indianapolis Colts\nSemana 1 · 13 de setembro de 2026",
+      "Partida · NO × BAL\nNew Orleans Saints × Baltimore Ravens\nSemana 2 · 20 de setembro de 2026",
+      "Partida · BAL × DAL\nBaltimore Ravens × Dallas Cowboys\nSemana 3 · 27 de setembro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “BAL”\n\n1 time · 7 partidas no acervo.\n\nVer time · Baltimore Ravens (BAL)\nVer confronto · BAL × IND · W1\nVer confronto · NO × BAL · W2\nVer confronto · BAL × DAL · W3\nVer confronto · TEN × BAL · W4\nVer confronto · BAL × ATL · W5\nVer confronto · BAL × CLE · W6\nVer confronto · CIN × BAL · W7",
+    "url": "http://127.0.0.1:18111/?season=2026&week=7&q=BAL&scope=season"
+  },
+  {
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Partida · NE × SEA\nNew England Patriots × Seattle Seahawks\nSemana 1 · 9 de setembro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “NE”\n\n1 time · 1 partida no acervo da semana 1.\n\nVer time · New England Patriots (NE)\nVer confronto · NE × SEA · W1",
+    "url": "http://127.0.0.1:18111/?season=2026&week=1&q=NE&scope=week"
+  },
+  {
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Partida · PIT × NE\nPittsburgh Steelers × New England Patriots\nSemana 2 · 20 de setembro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “NE”\n\n1 time · 1 partida no acervo da semana 2.\n\nVer time · New England Patriots (NE)\nVer confronto · PIT × NE · W2",
+    "url": "http://127.0.0.1:18111/?season=2026&week=2&q=NE&scope=week"
+  },
+  {
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Partida · NE × JAX\nNew England Patriots × Jacksonville Jaguars\nSemana 3 · 27 de setembro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “NE”\n\n1 time · 1 partida no acervo da semana 3.\n\nVer time · New England Patriots (NE)\nVer confronto · NE × JAX · W3",
+    "url": "http://127.0.0.1:18111/?season=2026&week=3&q=NE&scope=week"
+  },
+  {
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Partida · NE × BUF\nNew England Patriots × Buffalo Bills\nSemana 4 · 4 de outubro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “NE”\n\n1 time · 1 partida no acervo da semana 4.\n\nVer time · New England Patriots (NE)\nVer confronto · NE × BUF · W4",
+    "url": "http://127.0.0.1:18111/?season=2026&week=4&q=NE&scope=week"
+  },
+  {
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Partida · LV × NE\nLas Vegas Raiders × New England Patriots\nSemana 5 · 11 de outubro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “NE”\n\n1 time · 1 partida no acervo da semana 5.\n\nVer time · New England Patriots (NE)\nVer confronto · LV × NE · W5",
+    "url": "http://127.0.0.1:18111/?season=2026&week=5&q=NE&scope=week"
+  },
+  {
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Partida · NYJ × NE\nNew York Jets × New England Patriots\nSemana 6 · 18 de outubro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “NE”\n\n1 time · 1 partida no acervo da semana 6.\n\nVer time · New England Patriots (NE)\nVer confronto · NYJ × NE · W6",
+    "url": "http://127.0.0.1:18111/?season=2026&week=6&q=NE&scope=week"
+  },
+  {
+    "options": [
+      "Time · New England Patriots (NE)\nVer time · W1–7",
+      "Partida · NE × CHI\nNew England Patriots × Chicago Bears\nSemana 7 · 22 de outubro de 2026"
+    ],
+    "overflow": false,
+    "results": "Resultados para “NE”\n\n1 time · 1 partida no acervo da semana 7.\n\nVer time · New England Patriots (NE)\nVer confronto · NE × CHI · W7",
+    "url": "http://127.0.0.1:18111/?season=2026&week=7&q=NE&scope=week"
+  }
+]

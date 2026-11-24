@@ -1,0 +1,949 @@
+{
+  "teamPin": "sha256:8971d767b6ec0557465aeb65aeb00533fd10255a62f4b916954b3854daa15cef",
+  "matchupPin": "sha256:f949be3e095b1348fb10feabc7b202ee0fabc46ab737945070755e0f02c757bc",
+  "exactTeams": 32,
+  "exactMatchups": 32,
+  "identicalTo18106": true,
+  "requests": [
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/ARI",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/ARI",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/ATL",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/ATL",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/BAL",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/BAL",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/BUF",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/BUF",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CAR",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CAR",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CHI",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CHI",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CIN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CIN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CLE",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/CLE",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DAL",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DAL",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DEN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DEN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DET",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/DET",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/GB",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/GB",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/HOU",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/HOU",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/IND",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/IND",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/JAX",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/JAX",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/KC",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/KC",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LA",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LA",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LAC",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LAC",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LV",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/LV",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/MIA",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/MIA",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/MIN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/MIN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NE",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NE",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NO",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NO",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NYG",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NYG",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NYJ",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/NYJ",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/PHI",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/PHI",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/PIT",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/PIT",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/SEA",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/SEA",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/SF",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/SF",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/TB",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/TB",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/TEN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/TEN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/WAS",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/WAS",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "POST",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/?path=/tmp/other",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/../other",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 409
+    },
+    {
+      "path": "/__team-w12/ZZZ",
+      "port": 18107,
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "OPTIONS",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "duplicate": "Host",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "duplicate": "Origin",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "duplicate": "X-Local-Team-W12",
+      "status": 403
+    },
+    {
+      "path": "/__team-w12/",
+      "duplicate": "X-Team-Collection",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_ARI_LAC",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_ARI_LAC",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_ATL_PIT",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_ATL_PIT",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_BAL_IND",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_BAL_IND",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_BUF_HOU",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_BUF_HOU",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_CHI_CAR",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_CHI_CAR",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_CLE_JAX",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_CLE_JAX",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_DAL_NYG",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_DAL_NYG",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_DEN_KC",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_DEN_KC",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_GB_MIN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_GB_MIN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_MIA_LV",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_MIA_LV",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NE_SEA",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NE_SEA",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NO_DET",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NO_DET",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NYJ_TEN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_NYJ_TEN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_SF_LA",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_SF_LA",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_TB_CIN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_TB_CIN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_WAS_PHI",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_01_WAS_PHI",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CAR_ATL",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CAR_ATL",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CIN_HOU",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CIN_HOU",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CLE_TB",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_CLE_TB",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_DET_BUF",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_DET_BUF",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_GB_NYJ",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_GB_NYJ",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_IND_KC",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_IND_KC",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_JAX_DEN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_JAX_DEN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_LV_LAC",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_LV_LAC",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_MIA_SF",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_MIA_SF",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_MIN_CHI",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_MIN_CHI",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_NO_BAL",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_NO_BAL",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_NYG_LA",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_NYG_LA",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_PHI_TEN",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_PHI_TEN",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_PIT_NE",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_PIT_NE",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_SEA_ARI",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_SEA_ARI",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_WAS_DAL",
+      "port": 18107,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/2026_02_WAS_DAL",
+      "port": 18106,
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "POST",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/?path=/tmp/other",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/../other",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 409
+    },
+    {
+      "path": "/__matchup-w12/ZZZ",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "OPTIONS",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "port": 18107,
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "duplicate": "Host",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "duplicate": "Origin",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "duplicate": "X-Local-Matchup-W12",
+      "status": 403
+    },
+    {
+      "path": "/__matchup-w12/",
+      "duplicate": "X-Matchup-Collection",
+      "status": 403
+    }
+  ]
+}

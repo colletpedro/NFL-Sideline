@@ -1,0 +1,162 @@
+{
+  "ARI": {
+    "color": "#87213D",
+    "dark": "#48182B",
+    "whiteContrast": 9.071
+  },
+  "ATL": {
+    "color": "#952238",
+    "dark": "#481C28",
+    "whiteContrast": 8.191
+  },
+  "BAL": {
+    "color": "#593D8A",
+    "dark": "#25153D",
+    "whiteContrast": 8.539
+  },
+  "BUF": {
+    "color": "#124B99",
+    "dark": "#102C56",
+    "whiteContrast": 8.427
+  },
+  "CAR": {
+    "color": "#006A9F",
+    "dark": "#103746",
+    "whiteContrast": 5.895
+  },
+  "CHI": {
+    "color": "#243E5B",
+    "dark": "#111F32",
+    "whiteContrast": 10.965
+  },
+  "CIN": {
+    "color": "#A73C16",
+    "dark": "#4D241A",
+    "whiteContrast": 6.362
+  },
+  "CLE": {
+    "color": "#78412A",
+    "dark": "#38251E",
+    "whiteContrast": 8.114
+  },
+  "DAL": {
+    "color": "#2463A0",
+    "dark": "#0B3057",
+    "whiteContrast": 6.236
+  },
+  "DEN": {
+    "color": "#2A4B70",
+    "dark": "#142C49",
+    "whiteContrast": 8.979
+  },
+  "DET": {
+    "color": "#006AA4",
+    "dark": "#153D59",
+    "whiteContrast": 5.837
+  },
+  "GB": {
+    "color": "#245345",
+    "dark": "#152F29",
+    "whiteContrast": 8.756
+  },
+  "HOU": {
+    "color": "#234957",
+    "dark": "#102831",
+    "whiteContrast": 9.713
+  },
+  "IND": {
+    "color": "#17578A",
+    "dark": "#102E52",
+    "whiteContrast": 7.59
+  },
+  "JAX": {
+    "color": "#086475",
+    "dark": "#163A40",
+    "whiteContrast": 6.796
+  },
+  "KC": {
+    "color": "#A82037",
+    "dark": "#5A1728",
+    "whiteContrast": 7.175
+  },
+  "LA": {
+    "color": "#2453A0",
+    "dark": "#163467",
+    "whiteContrast": 7.447
+  },
+  "LAC": {
+    "color": "#006BA3",
+    "dark": "#153C58",
+    "whiteContrast": 5.782
+  },
+  "LV": {
+    "color": "#46525C",
+    "dark": "#222C34",
+    "whiteContrast": 8.01
+  },
+  "MIA": {
+    "color": "#006B71",
+    "dark": "#164247",
+    "whiteContrast": 6.285
+  },
+  "MIN": {
+    "color": "#604187",
+    "dark": "#34274D",
+    "whiteContrast": 8.067
+  },
+  "NE": {
+    "color": "#C90827",
+    "dark": "#870016",
+    "whiteContrast": 5.92
+  },
+  "NO": {
+    "color": "#63573C",
+    "dark": "#353126",
+    "whiteContrast": 7.097
+  },
+  "NYG": {
+    "color": "#294A8A",
+    "dark": "#1A2E52",
+    "whiteContrast": 8.604
+  },
+  "NYJ": {
+    "color": "#245841",
+    "dark": "#18392C",
+    "whiteContrast": 8.244
+  },
+  "PHI": {
+    "color": "#12616A",
+    "dark": "#173C42",
+    "whiteContrast": 7.134
+  },
+  "PIT": {
+    "color": "#55503C",
+    "dark": "#2D2E28",
+    "whiteContrast": 8.08
+  },
+  "SEA": {
+    "color": "#27485D",
+    "dark": "#172E40",
+    "whiteContrast": 9.672
+  },
+  "SF": {
+    "color": "#A72B32",
+    "dark": "#571E27",
+    "whiteContrast": 6.92
+  },
+  "TB": {
+    "color": "#A42C31",
+    "dark": "#54272B",
+    "whiteContrast": 7.04
+  },
+  "TEN": {
+    "color": "#275D86",
+    "dark": "#16364F",
+    "whiteContrast": 7.009
+  },
+  "WAS": {
+    "color": "#782E3C",
+    "dark": "#431E29",
+    "whiteContrast": 9.314
+  }
+}

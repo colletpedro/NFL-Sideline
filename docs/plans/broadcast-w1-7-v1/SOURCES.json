@@ -1,0 +1,20 @@
+[
+  {
+    "file": "pbp.parquet",
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.parquet",
+    "assetId": 681301688,
+    "updatedAt": "2026-10-27T10:51:06Z",
+    "retrievedAt": "2026-10-27T12:41:41.005840+00:00",
+    "bytes": 7976264,
+    "sha256": "sha256:7a5f4fa5b933b24474d8a5a8c76e57b23b8b50b7e62950ab1e5c9ea00cbf4507"
+  },
+  {
+    "file": "schedules.parquet",
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.parquet",
+    "assetId": 681547336,
+    "updatedAt": "2026-10-27T12:33:11Z",
+    "retrievedAt": "2026-10-27T12:41:42.711164+00:00",
+    "bytes": 522726,
+    "sha256": "sha256:32750b052517091fdc38da208ea665b1895a059ba0b15566caa60589187eadd0"
+  }
+]

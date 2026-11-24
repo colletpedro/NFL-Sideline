@@ -1,0 +1,17 @@
+[
+  {
+    "case": "destination_under_backup",
+    "reachedCopyWithoutDisjointnessGuard": true,
+    "copyOperation": "MOCK_ONLY_NO_RECURSIVE_COPY"
+  },
+  {
+    "case": "config_under_backup",
+    "reachedCopyWithoutDisjointnessGuard": true,
+    "copyOperation": "MOCK_ONLY_NO_RECURSIVE_COPY"
+  },
+  {
+    "case": "report_under_backup",
+    "reachedCopyWithoutDisjointnessGuard": true,
+    "copyOperation": "MOCK_ONLY_NO_RECURSIVE_COPY"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "openDetails": 0,
+  "scrollY": 0,
+  "selected": [
+    "Geral"
+  ],
+  "url": "http://127.0.0.1:18102/?view=matchup-reading",
+  "viewport": {
+    "height": 827,
+    "width": 532
+  },
+  "kind": "AI_SIMULATION_TECHNICAL_STATE",
+  "humanParticipants": 0
+}

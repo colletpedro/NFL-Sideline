@@ -1,0 +1,1645 @@
+{
+  "version": "e4-evaluation-1.0.0",
+  "date": "2026-10-07",
+  "status": "PRESENTATION_IMPLEMENTED_INTERNAL_EVALUATION_COMPLETE_HUMAN_PENDING",
+  "branch": "codex/visual-analysis-e4",
+  "base": "793ac7b0059b77c22a41236aeb77427140c87108",
+  "protocolCommit": "35cd8dc",
+  "diagnosisCommit": "c098144",
+  "implementationCommit": "0c42b820644e38847164435a5dc7a6c6af079e8a",
+  "protocolSha256": "6efb70d7d78fc3e584a83206aee2a6fdf019af51df3c0b310cb6aceb57ab4955",
+  "versions": {
+    "claims": 5,
+    "selector": "2.0.0",
+    "renderer": "controlled-claims-v5.0.2",
+    "service": "1.1.0",
+    "http": "1.2.0",
+    "visual": "visual-analysis-1.0.0",
+    "projector": "visual-projector-1.0.0",
+    "copy": "visual-copy-1.0.0",
+    "artifact": 4,
+    "legacyArtifact": 3,
+    "publicSnapshot": 1,
+    "presentationEvaluation": "E4 1.0.0"
+  },
+  "independentSample": {
+    "available": false,
+    "all17E2DocumentsAlreadySeen": true,
+    "oldHoldoutsAlreadyOpened": true,
+    "inventory": "context-inventory.json",
+    "reason": "No locally available context has provenance supporting unused-in-adjustment status.",
+    "supplementalDiscovery": "supplemental-discovery.json",
+    "supplementalDiscoveryStage": "supplemental discovery after implementation; no new tuning or holdout designation"
+  },
+  "human": {
+    "participants": 0,
+    "results": null,
+    "readingTimes": null,
+    "designHypothesisSeconds": [
+      10,
+      15
+    ],
+    "worksheet": "human-round.md",
+    "status": "PENDING"
+  },
+  "cases": [
+    {
+      "id": "complete-matchup",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/complete-matchup.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "a1376861e5cab629050088735c4b0824ddc21a5844c435bbaaeda094e906a75c",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "opportunity",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/opportunity.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "6409cd023f3579899ebf9f049f602039efa44354e37ce9758f7dd87295b619c7",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "opposition",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/opposition.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "811498deb1175b38521f0b2f9c6758a7839fb2ade4725fd0c5cdd80ccf66dc23",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "attack-not-demonstrated",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/attack-not-demonstrated.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "c537f4c3cc3240cf9bbf84f875896771dd2b6235b70e8be8c35f24c5b6120350",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "both-negative",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/both-negative.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "af7ff0f157ff66d1a995dc49634fab3824158b858f2cd8cf57d2ea7e5ae8beeb",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "variation",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/variation.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "3fa1dc3fc01c637c65a220d245960ee60beed32c0853879f579067be8ee0de78",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "zero",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/zero.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "b24c8041c1e07c90c988d9010ae24fc8e4fc658e4f488f4eeafb45907e8e56a9",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "tiny-sign",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/tiny-sign.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "2f5126cafe36472bbb35f7be1b70ddbb235eea70d4b761ed84cb9bde1ba8fef4",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "tie",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/tie.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "a8ffdd51cf21e596b5911d4901e10eda72553d9a3916ab7781f7f6eeef046b0b",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "both-sides",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/both-sides.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "c6d52bb9df867c7fb228c14052a7858a896e7ae891d610b2696ac98b24ae87ee",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "partial",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/partial.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "45f62dee26dce9de7962a456cc33d56867d2a1d17b58e3ef3c1a3edeac48465c",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": "not applicable: no highlight",
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": false,
+        "noHighlightCases": "absence remains explicit in four cards",
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "missing",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/missing.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "8d0fee31537d4786562388d8551d2f1fbcf305abbaf77da98ca17aaf3ece280f",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": "not applicable: no highlight",
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": false,
+        "noHighlightCases": "absence remains explicit in four cards",
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "historical",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/historical.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "6cf2f39176185a24ed20b2e887c796393778ce7d37b4242bfa2468792cf05496",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "coverage-gap",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/coverage-gap.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "93fb7dcd3b535c83a04a735cbcb030d21889b4e88e4131c92ad15ece81527d6e",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "two-weeks",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/two-weeks.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "28a86116049e47520bc209a4447b180c5fa87754f41724cd963ef9307958639a",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "general-represented",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/general-represented.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "5ce4a03ca1ce69f88a3087819303ad35e3098eeb0a65cd14efda78512a412e89",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "uneven-weeks",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/uneven-weeks.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "1d4206875d64b3424ead8506cb550f5adc6327723b1b0ddc6cd79b8e0750ec7b",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "negative-tiny-sign",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/negative-tiny-sign.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "f7241dc609cd3cfaafae6872f8ca819af4898d121bf4978545492f91416c5a26",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "outlier",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/outlier.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "074a9fbbeeabb9c0ae14f70b36ecc51cd92bb91da092f9ac1359a1a8daed3380",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "independent-opportunity",
+      "kind": "synthetic-known-contract",
+      "source": "contracts/visual-analysis/v1/fixtures/valid/independent-opportunity.json",
+      "tasks": [
+        "roles",
+        "foundation",
+        "period",
+        "finding",
+        "restriction",
+        "absence",
+        "no-winner"
+      ],
+      "human": null,
+      "sourceSha256": "3a370c0582eed253b3c3b5b7414d9f7be20df50fc430b736f09829f59905187e",
+      "humanResults": null,
+      "versions": {
+        "schema": "visual-analysis-1.0.0",
+        "projector": "visual-projector-1.0.0",
+        "fixture": "visual-fixtures-1.0.0"
+      },
+      "before": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440
+        ],
+        "quickIncludedDefenseAndPeriod": false,
+        "pageOverflow": false
+      },
+      "after": {
+        "method": "internal browser inspection",
+        "widths": [
+          1440,
+          390,
+          320
+        ],
+        "pageOverflow": false,
+        "quickIncludesRolesAndPeriod": true,
+        "noHighlightCases": null,
+        "properties": "PASS: exact values/coordinates, signs, absence, ties and scale covered by frontend contract/property tests; state-specific meaning inspected internally"
+      }
+    },
+    {
+      "id": "2026_03_BAL_DAL",
+      "kind": "real-known-regression",
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_BAL_DAL.json",
+      "tasks": [
+        "equivalent-text-visual",
+        "history",
+        "reload"
+      ],
+      "human": null,
+      "sourceSha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "humanResults": null,
+      "resultIdentity": "2e00e1ffeb249d96a3c3e17468982bb81b8825a2a769f64a1e80a38db5e0a39e",
+      "visualIdentity": "3ab4b665571f6a472e3ef18624a04dd4d6d47544611bec3431f25ada383edb5b",
+      "before": {
+        "method": "internal same-UI text expanded after visual; no counterbalancing or human timing",
+        "findingRolesPeriodLimitLocated": true,
+        "quickOmittedDefenseAndObservedPeriod": true
+      },
+      "after": {
+        "method": "internal repeated equivalent questions",
+        "findingRolesPeriodLimitLocated": true,
+        "quickRolesAndPeriodExplicit": true,
+        "sameValidatedBackendResult": true,
+        "humanUnderstandingValidated": false
+      }
+    },
+    {
+      "id": "2025_08_CHI_BAL",
+      "kind": "real-known-regression",
+      "source": "editorial/coverage-clarity-v1/batch-01/2025_08_CHI_BAL/context.json",
+      "tasks": [
+        "equivalent-text-visual",
+        "history",
+        "reload"
+      ],
+      "human": null,
+      "sourceSha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+      "humanResults": null,
+      "resultIdentity": "1f7efcbdb49297d005e57566d4fbdb8a0d459e83063436b56466f68f4527e5b3",
+      "visualIdentity": "9ff0e4ee63f26f9729030743863ba0ebd3f96bbc8c486e095ac2dd80d9833eed",
+      "before": {
+        "method": "internal same-UI text expanded after visual; no counterbalancing or human timing",
+        "findingRolesPeriodLimitLocated": true,
+        "quickOmittedDefenseAndObservedPeriod": true
+      },
+      "after": {
+        "method": "internal repeated equivalent questions",
+        "findingRolesPeriodLimitLocated": true,
+        "quickRolesAndPeriodExplicit": true,
+        "sameValidatedBackendResult": true,
+        "humanUnderstandingValidated": false
+      }
+    },
+    {
+      "id": "2026_03_NE_JAX",
+      "kind": "real-known-regression",
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_NE_JAX.json",
+      "tasks": [
+        "equivalent-text-visual",
+        "history",
+        "reload"
+      ],
+      "human": null,
+      "sourceSha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+      "humanResults": null,
+      "resultIdentity": "6bfaeb5194777a1c04e1ae702337eccbb45fb6824b38b105577d16f132a20a3c",
+      "visualIdentity": "cb6f9caedc3ba108d99540955953d5f73c6204ce56a24c005fd1ea6756dd02a0",
+      "before": {
+        "method": "internal same-UI text expanded after visual; no counterbalancing or human timing",
+        "findingRolesPeriodLimitLocated": true,
+        "quickOmittedDefenseAndObservedPeriod": true
+      },
+      "after": {
+        "method": "internal repeated equivalent questions",
+        "findingRolesPeriodLimitLocated": true,
+        "quickRolesAndPeriodExplicit": true,
+        "sameValidatedBackendResult": true,
+        "humanUnderstandingValidated": false
+      }
+    }
+  ],
+  "legacyV3": {
+    "kind": "real-known-integration-history",
+    "attemptId": "adb1bd11-b03d-4193-ba07-21b5b43000f4",
+    "sourceProvenance": {
+      "source": "/tmp/nfl-visual-integration-20261007/results/adb1bd11-b03d-4193-ba07-21b5b43000f4",
+      "cohort": "known-real-v3-integration-history",
+      "attemptId": "adb1bd11-b03d-4193-ba07-21b5b43000f4",
+      "hashes": {
+        "result.json": "d9a4ff3e3f2a587207b9f16fd601315e9f27e4ea1f728ba0a31282843364479e",
+        "complete.json": "62aa44db87cbbafe007072f1f08568ad7d3d99421d67c0579d95f6adc58d70c1",
+        "rendered.json": "667481af9194dc51402125cca1efa9ed7a52049d91b02a99f5ecd5e03197c9d6",
+        "context.json": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+        "selection.json": "b1f08d1a65a013ec21ecd97009b0b54e212fb3d2b38341cd90e38ebce2f21776",
+        "claims.json": "a18ab2e921de6ea8326299ae2a44dca66ce22616624720bfdf60b9560c165992"
+      }
+    },
+    "browserTextVisible": true,
+    "browserVisualAbsent": true,
+    "originalAndCopiedFilesUnchanged": true,
+    "protocolDeviation": "Historical v3 was available locally; used an intact copy instead of constructing the proposed synthetic WC case. WC remains covered by unchanged Java test, not a browser observation."
+  },
+  "beforeAfter": {
+    "firstBALPassCardHeightCssPx": {
+      "before": 646.8125,
+      "after": 562.9453125
+    },
+    "rolesFontCssPx": {
+      "before": 10,
+      "after": 14
+    },
+    "limitPlacement": {
+      "before": "after two series",
+      "after": "before series"
+    },
+    "historyAccess": {
+      "before": "scroll past all cards",
+      "after": "focusable jump link before visual"
+    },
+    "visibleTextTokens": [
+      {
+        "gameId": "2025_08_CHI_BAL",
+        "method": "visible innerText, details closed, whitespace-separated tokens",
+        "before": 729,
+        "after": 739
+      },
+      {
+        "gameId": "2026_03_NE_JAX",
+        "method": "visible innerText, details closed, whitespace-separated tokens",
+        "before": 647,
+        "after": 661
+      }
+    ],
+    "densityInterpretation": "Whole-document visible text grows slightly to expose roles/periods. Card height falls about 13%; this is not a measured human reading-speed improvement."
+  },
+  "browser": {
+    "surface": "Codex IAB via cua_repl",
+    "beforeSyntheticCases": 20,
+    "finalSyntheticInspections": 60,
+    "viewports": [
+      [
+        1440,
+        1000
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "pageOverflow": false,
+    "keyboardSequence": [
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 53.09375,
+          "top": 10
+        },
+        "tag": "A",
+        "text": "Pular para o laboratório"
+      },
+      {
+        "height": 1000,
+        "id": "mode",
+        "outline": "solid",
+        "rect": {
+          "bottom": 308.484375,
+          "top": 264.484375
+        },
+        "tag": "SELECT",
+        "text": "API local · resultados reaisFixtures sintéticas · prévia do contrato"
+      },
+      {
+        "height": 1000,
+        "id": "context",
+        "outline": "solid",
+        "rect": {
+          "bottom": 398.484375,
+          "top": 354.484375
+        },
+        "tag": "SELECT",
+        "text": "CHI @ BAL · 2025 · Semana 8 · 2025_08_CHI_BALARI @ SF · 2026 · Semana 3 · 2026_03_ARI_SFATL @ GB · 2"
+      },
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 527.625,
+          "top": 476.53125
+        },
+        "tag": "BUTTON",
+        "text": "Gerar análise local"
+      },
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 676.46875,
+          "top": 632.46875
+        },
+        "tag": "A",
+        "text": "Ver tentativas salvas"
+      },
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 676.46875,
+          "top": 632.46875
+        },
+        "tag": "A",
+        "text": "Ler texto completo"
+      },
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 999.96875,
+          "top": 850.59375
+        },
+        "tag": "BUTTON",
+        "text": "BAL ataque × DAL defesa · PasseEPA positivo no ataque e no permitido pela defesaLimitação: Até duas "
+      },
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 999.96875,
+          "top": 850.59375
+        },
+        "tag": "BUTTON",
+        "text": "BAL ataque × DAL defesa · CorridaEPA positivo no ataque e no permitido pela defesaLimitação: Até dua"
+      },
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 523.9921875,
+          "top": 475.9921875
+        },
+        "tag": "SUMMARY",
+        "text": "Tabela de evidências e definição"
+      },
+      {
+        "height": 1000,
+        "id": "",
+        "outline": "solid",
+        "rect": {
+          "bottom": 523.9921875,
+          "top": 475.9921875
+        },
+        "tag": "SUMMARY",
+        "text": "Tabela de evidências e definição"
+      }
+    ],
+    "historyJumpFocus": "attempt-history",
+    "generalHighlightKeyboardOpensAndFocusesCard": true,
+    "detailsEnterOpenClose": true,
+    "tableFocusScroll": {
+      "width320": {
+        "normalScrollLeft": 40,
+        "text200ScrollLeft": 76.5,
+        "text200ContentWidth": 1088,
+        "clientWidth": 209
+      },
+      "outline": "solid",
+      "headers": "scope=col/row; caption and named region"
+    },
+    "text200": {
+      "method": "font-only CSS overlay in own local stylesheet; rem root 16->32; pixel clamp headings explicitly doubled; viewport fixed. CSS restored. Not viewport reduction, not native browser page zoom, not screen-reader certification.",
+      "measurements": [
+        {
+          "viewport": [
+            1440,
+            1000
+          ],
+          "fonts": [
+            {
+              "selector": ".brand",
+              "before": "19px",
+              "after": "38px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".page-heading h1",
+              "before": "38px",
+              "after": "76px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".scope-note",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-intro h2",
+              "before": "34px",
+              "after": "68px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-card-head .visual-kicker",
+              "before": "14px",
+              "after": "28px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-card h3",
+              "before": "22px",
+              "after": "44px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-highlights small",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-period",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-value",
+              "before": "13px",
+              "after": "26px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-details summary",
+              "before": "16px",
+              "after": "32px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".attempts code",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            }
+          ],
+          "horizontalPageOverflow": false
+        },
+        {
+          "viewport": [
+            320,
+            740
+          ],
+          "fonts": [
+            {
+              "selector": ".brand",
+              "before": "16px",
+              "after": "32px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".page-heading h1",
+              "before": "28px",
+              "after": "56px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".scope-note",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-intro h2",
+              "before": "23px",
+              "after": "46px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-card-head .visual-kicker",
+              "before": "14px",
+              "after": "28px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-card h3",
+              "before": "19px",
+              "after": "38px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-highlights small",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-period",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-value",
+              "before": "13px",
+              "after": "26px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".visual-details summary",
+              "before": "16px",
+              "after": "32px",
+              "factor": 2.0
+            },
+            {
+              "selector": ".attempts code",
+              "before": "12px",
+              "after": "24px",
+              "factor": 2.0
+            }
+          ],
+          "horizontalPageOverflow": false
+        }
+      ],
+      "finalMobile": {
+        "font": "26px",
+        "overflow": false,
+        "scaleLabels": [
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 150.5
+            },
+            "text": "≈ −0,707"
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 248
+            },
+            "text": "zero"
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 154.5,
+              "right": 248
+            },
+            "text": "≈ +0,707"
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 150.5
+            },
+            "text": "≈ −0,707"
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 248
+            },
+            "text": "zero"
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 154.5,
+              "right": 248
+            },
+            "text": "≈ +0,707"
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 150.5
+            },
+            "text": ""
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 248
+            },
+            "text": ""
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 154.5,
+              "right": 248
+            },
+            "text": ""
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 150.5
+            },
+            "text": ""
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 57,
+              "right": 248
+            },
+            "text": ""
+          },
+          {
+            "cardRight": 276,
+            "rect": {
+              "left": 154.5,
+              "right": 248
+            },
+            "text": ""
+          }
+        ],
+        "trackWidth": 175,
+        "viewport": [
+          320,
+          740
+        ]
+      },
+      "observedAndFixed": [
+        "clipped publication badge",
+        "axis end label clipped inside card",
+        "table exact values wrapped into fragments"
+      ]
+    },
+    "contrast": {
+      "method": "computed visible text foreground and nearest opaque background; conservative gradient endpoints; disabled controls excluded; essential graph CSS pairs; no formal WCAG certification",
+      "samples": 186,
+      "minimumText": {
+        "backgrounds": [
+          "rgb(16, 18, 20)"
+        ],
+        "class": "",
+        "color": "rgb(169, 175, 183)",
+        "tag": "FOOTER",
+        "text": "Regras locais · Dados congelados · Sem publicação A validação mecânica",
+        "ratio": 8.494813622677036
+      },
+      "failures": [],
+      "essentialGraphics": [
+        {
+          "part": "attack",
+          "foreground": "#d7ff3f",
+          "background": "#171e1f",
+          "ratio": 14.70713995711821
+        },
+        {
+          "part": "defense-edge",
+          "foreground": "#d9ecf3",
+          "background": "#171e1f",
+          "ratio": 13.883859434115486
+        },
+        {
+          "part": "zero",
+          "foreground": "#c1d1cc",
+          "background": "#171e1f",
+          "ratio": 10.676638852269594
+        },
+        {
+          "part": "axis-edge",
+          "foreground": "#91a09c",
+          "background": "#171e1f",
+          "ratio": 6.2099722268335915
+        },
+        {
+          "part": "focus",
+          "foreground": "#d7ff3f",
+          "background": "#202728",
+          "ratio": 13.213975781855082
+        }
+      ]
+    },
+    "consoleErrorsExpected": "Vite proxy connection failures during controlled outage/drop; no unrelated browser error observed",
+    "viewportRestored": true
+  },
+  "properties": {
+    "oppositeSignedPositions": "PASS",
+    "sharedScaleIncludesHiddenGeneralExtreme": "PASS new rendered-scale regression",
+    "zeroDifferentFromMissing": "PASS",
+    "tinySignsNotReclassified": "PASS",
+    "axisLabelsLeaveDomainAndCoordinatesExact": "PASS",
+    "unilateralEvidenceVisible": "PASS",
+    "equalHighlightsPreserved": "PASS",
+    "staleContextResponse": "PASS real delayed POST browser",
+    "attemptBoundVisual": "PASS envelope identity tests + real retrieval",
+    "networkOrLostResponseDoesNotRetryPOST": "PASS browser transport log: one dropped successful POST, one new NE attempt"
+  },
+  "operational": {
+    "initialBatchRequests": 71,
+    "initialBatchKnownRealCases": 17,
+    "restartReadOnlyRequests": 72,
+    "restartLegacyV3Cases": 1,
+    "apiUnavailableThenRecovery": "PASS own process stopped, visual retained, explicit refresh after restart",
+    "catalogExplicitGenerationVisualHistoryReload": "PASS real browser",
+    "faultHarness": {
+      "protectedTrackedFiles": 602,
+      "changed": [],
+      "historicalV3FilesUnchanged": 6,
+      "beforeDrop": {
+        "NE": 2,
+        "all": 22
+      },
+      "afterDrop": {
+        "NE": 3,
+        "all": 23
+      },
+      "droppedResponses": [
+        {
+          "method": "POST",
+          "path": "/api/v1/local-analysis/2026_03_NE_JAX",
+          "mode": "drop-once",
+          "backendStatus": 201,
+          "responseDropped": true
+        }
+      ],
+      "delayedPosts": [
+        {
+          "method": "POST",
+          "path": "/api/v1/local-analysis/2026_03_BAL_DAL",
+          "mode": "delay",
+          "backendStatus": 201
+        }
+      ],
+      "allHarnessPosts": [
+        {
+          "method": "POST",
+          "path": "/api/v1/local-analysis/2026_03_BAL_DAL",
+          "mode": "delay",
+          "backendStatus": 201
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/local-analysis/2026_03_NE_JAX",
+          "mode": "drop-once",
+          "backendStatus": 201,
+          "responseDropped": true
+        }
+      ]
+    },
+    "localRunDirectory": "/tmp/nfl-e4-20261007"
+  },
+  "mechanical": {
+    "java21OfflineCleanVerify": {
+      "tests": 127,
+      "failed": 0,
+      "skipped": 0,
+      "when": "fresh worktree before UI edits; Java source unchanged"
+    },
+    "frontend": {
+      "total": 125,
+      "ordinary": 120,
+      "legacyExpectedFailures": 5,
+      "newPropertyTests": 9
+    },
+    "python": {
+      "tests": 12,
+      "validFixtures": 20,
+      "invalidFixturesRejected": 15,
+      "freeze": "unchanged"
+    },
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS",
+    "publicModules": {
+      "parsedModules": 1874,
+      "forbidden": [],
+      "method": "Vite Rollup moduleParsed; all parsed modules, including tree-shaken inputs"
+    },
+    "bundle": {
+      "forbiddenMarkersAbsent": [
+        "__editorial",
+        "LOCAL_RULES_DEVELOPMENT",
+        "visual-analysis-1.0.0",
+        "CONTRACT_FIXTURE",
+        "VALIDATED_LOCAL_RESULT",
+        "FIXTURE SINTÉTICA",
+        "Tentativas salvas",
+        "Quatro encontros do confronto"
+      ],
+      "assetHashes": {
+        "index-BIYXDnRB.css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+        "index-BTsQyTsc.js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5"
+      }
+    }
+  },
+  "preservation": {
+    "protectedTrackedFiles": 602,
+    "changed": [],
+    "originalCheckoutHistoricalUntrackedFiles": "preserved; no edits or cleanup in original checkout",
+    "noRemoteDatabaseEtlOrModels": true,
+    "noPushDeployOrMerge": true
+  },
+  "limitations": [
+    "No human responses or times; human comprehension and 10-15-second hypothesis remain unvalidated.",
+    "No independently unused local cohort; all known cases are regression/evaluation material.",
+    "Short sign-only summaries and repeated E1 restriction phrases persist; versioned copy proposal in REPORT.md.",
+    "No native browser page-zoom or assistive-screen-reader audit; completed font-only text enlargement.",
+    "Pass/rush denominators, source availability and metric definitions remain E5 responsibilities.",
+    "Five legacy public UI regressions remain open; WC/DIV/CON/SB visual enum unchanged."
+  ],
+  "images": {
+    "before-desktop.jpg": "288c3b28462ec85742f63c24a7b8f8dd55733d81f881e425bc15b732757a3ab3",
+    "after-desktop.jpg": "585b9d6d9f54c82940105522ac423f559a61ab54db14f65c0ac5d481f8e6ca7f",
+    "after-390.jpg": "5772bbd5cc81af6f10e0ef00442f858c201956128673f62eeb00713955958a68",
+    "after-320.jpg": "cc9ea5762334abaa7208752aa7a6205b63ad45069241fee7f002666cb6c63f92",
+    "text200-desktop.jpg": "b704bdc3e492fc3589114a814fd638f4b64e532781b543466dd8b5a49b73dd55",
+    "text200-mobile.jpg": "269a63443409a99dfe3c7b703bc36cea8616be4683218ee735afa0163668c037"
+  },
+  "localEvidenceHashes": {
+    "http.json": "e83115ac61160b7ff014a4767903ee768e774340b63983f1e1533f25cd860493",
+    "replay.json": "6113a159797ca0f25217ed7dba108e61e4bdc99abae0b110bbfa1e52ae5ff64c",
+    "before-fixtures.json": "50991ce1d5a0ece69f83aa613506c2b8a6e5559c1b8deffee80589e98cded048",
+    "after-fixtures.json": "2bb985301a737fe8e801ff9993894c7846df763f4ee83a9ac0d8ebb175a4be25",
+    "before-real.json": "26165fe87345bc6f18c5fad16866bbc50530cbd0d138768624de9da729586a02",
+    "after-real.json": "2f23be52535c15c6743211219bf60b58a50734824132844b665b1c6968156b1f",
+    "operations.json": "312e39702340b4a738fbf9f8bb85b219e69e8612daaecee5e4aa6256a1d8b94a",
+    "contrast.json": "83e8111aecc41269d9f626f9f878f582366be6107261b1e52532551a390d8c6f",
+    "keyboard.json": "2c924f348dd9035c7649b68115fa49a3a80d6d784617baa393905e59800c6780",
+    "density.json": "548aabb119a0b8053326b0ab7a93d3b1ec744629da0168b68871cf8cec65eaa8",
+    "public-module-audit.json": "84fbbfbe1efba032094e3a511c77a1b8a1c0f282ad7eefb1617b9da08a1fd973",
+    "supplemental-inventory.json": "b52bff8f884c586bfd6fd74eea5d6305e3afd313a82e0cbfff0e332f70cb4e79",
+    "cleanup.json": "b375357655ad5d42d8193dd54a48f73d4222976d8e9132014bd2ca0fdf6a9bd8"
+  },
+  "cleanup": {
+    "method": "Guarded command and cwd before SIGTERM; only E4-owned listeners",
+    "processesStopped": 4,
+    "portsNoLongerListening": {
+      "18081": true,
+      "18083": true,
+      "18085": true,
+      "18086": true
+    },
+    "browserTabsClosed": true
+  },
+  "protocolHashFile": "protocol.json"
+}

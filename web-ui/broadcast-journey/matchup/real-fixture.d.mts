@@ -1,0 +1,1 @@
+export function comparisonFixture():null|{data:unknown;marker:{bundleId:string};manifest:unknown;calendar:unknown;expected:{epa:Record<string,{text:string;denominator:number}>;third:{numerator:number;denominator:number};redZone:{numerator:number;denominator:number}}};

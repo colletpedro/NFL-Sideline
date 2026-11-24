@@ -1,13 +1,15 @@
 # NFL Sideline — Especificação Técnica
 
-**Versão documental:** 2.2
+**Versão documental:** 2.5
 
 **Status:** protótipo funcional em estabilização
 
 **Baseline documental:** pacote de consistência e observabilidade do ETL validado localmente em 2026-09-09, com rollout estático oficial confirmado em 2026-09-14.
 
-**Estado do editorial v0:** implementado localmente e validado offline. Ainda não foi executado com banco/Gemini
-reais, integrado ao artefato público nem publicado; o manifesto editorial segue vazio e não contém aprovações reais.
+**Estado do editorial:** caminho Gemini por claims v3 preservado; motor descritivo local por regras
+implementado com claims descritivas v5 e execução offline auditável. A validação mecânica não comprova
+qualidade editorial; a avaliação Gemini permanece separada e pendente. Não há novas aprovações ou
+publicação decorrentes desta entrega.
 
 **Autoridade:** esta especificação descreve o comportamento observado no código e no schema nessa baseline. Itens sem evidência são marcados como planejados, não comprovados ou pendentes.
 
@@ -17,7 +19,7 @@ NFL Sideline é uma plataforma de análise tática de confrontos da NFL. Seu obj
 
 Uma conclusão preditiva pode surgir naturalmente dessa análise e aparece hoje no campo `veredito`, mas é uma saída secundária. O produto ainda não possui um modelo quantitativo próprio de previsão, calibração ou backtest.
 
-Odds, spreads, totais e probabilidades implícitas são contexto complementar. Encontrar assimetrias de mercado não é a tese central atual. As probabilidades da UI são fair values sem vig derivados do mercado; não são estimativas de um modelo independente. Na ausência de probabilidade válida, nenhum favorito, confiança ou edge é mostrado.
+Odds, spreads, totais e probabilidades implícitas pertencem ao fluxo de mercado consultável, separado da geração tática. Encontrar assimetrias de mercado não é a tese central atual. As probabilidades exibidas vêm do mercado: a versão fair resulta da remoção proporcional da vig e a versão bruta inclui vig. A normalização não produz uma probabilidade verdadeira nem uma estimativa independente. Esta entrega não exibe indicador de confiança editorial ou vantagem de modelo. Na ausência de probabilidade válida, nenhum favorito ou percentual é mostrado. O caminho Gemini usa claims internas v3; o motor local por regras usa claims v5.
 
 ### 1.1 Escopo implementado
 
@@ -288,31 +290,34 @@ Não existe uma rota separada `/games/{gameId}/market`; o mercado vem no detalhe
 
 ## 7. Análise Gemini e contrato JSON
 
-O backend monta um `context_json` canônico com jogo, odds, mercado e até três semanas elegíveis anteriores ao jogo,
-incluindo temporada/origem e qualidade COMPLETE/PARTIAL/MINIMAL. Fallback da temporada anterior é marcado como
-referência histórica. O hash SHA-256 inclui tipo, versão do prompt, contexto, modelo, `asOfDate` e `revisionKey`;
-`(game_id, analysis_type, prompt_hash)` identifica cada versão imutável.
+O backend monta um `context_json` tático canônico v3 com jogo, cobertura de dados e evidências semanais
+até três semanas elegíveis por time. Odds, spreads, totais, probabilidades e favorito não entram nesse contexto
+nem no prompt; continuam nos fluxos de consulta e publicação de mercado. O hash SHA-256 inclui tipo, versão
+do prompt/contrato (`editorial-claims-v3`), contexto, modelo, `asOfDate` e `revisionKey`; por isso um cache
+v0/v2 não atende uma nova geração v3. Alterar somente mercado não altera contexto ou hash tático.
 
-`ContextQuality` mede somente a cobertura de métricas: COMPLETE requer métricas correntes elegíveis dos dois
-times, PARTIAL representa um time ou cobertura histórica/insuficiente, e MINIMAL representa ausência de métricas
-para ambos. Mercado é metadado separado. Apenas `MarketImplied` coerente acompanhado do par completo de
-moneylines chega ao prompt; qualquer odd, spread ou moneyline parcial é retido como limitação.
+Cada evidência interna identifica time, métrica, temporada, semana, origem corrente/histórica, valor original,
+unidade, volume quando pertinente e disponível, e chave de origem de `team_week_metrics`. O ID deriva da
+chave da linha e da métrica, nunca da ordem. Janelas recentes derivadas preservam IDs de origem, semanas,
+média, método e faixa semanal. Médias usam volumes pertinentes quando completos; passe/corrida usam média
+das médias semanais explicitamente não ponderada. Volumes totais não substituem denominadores específicos. `ContextQuality`/`data_coverage`
+mede cobertura: COMPLETE significa dados correntes dos dois times, não suficiência de amostra, confiança ou
+qualidade preditiva. O catálogo de métricas e o contrato de claims constam em
+`docs/analysis-claims-contract.md`.
 
-O Gemini deve devolver um objeto JSON com:
+O Gemini devolve somente `contract_version`, `thesis_team`, `verdict`, `claims` tipadas e referências em
+`sections`. Claims permitidas são observação, comparação semanal, comparação de janelas recentes da mesma
+métrica/temporada/origem/método, perfil ataque-defesa no mesmo fundamento e limitação factual. O servidor valida IDs, origem/período, time, métrica, predicado, ordem numérica e papéis editoriais,
+então redige integralmente os quatro campos públicos `fator_chave`, `vantagem_tatica`, `alerta_vermelho` e
+`veredito`. A API continua devolvendo esse JSON de quatro campos dentro de `markdownText`.
 
-```json
-{
-  "fator_chave": "texto",
-  "vantagem_tatica": "texto",
-  "alerta_vermelho": "texto",
-  "veredito": "texto",
-  "metricas_citadas": {
-    "nome_interno": 0.0
-  }
-}
-```
-
-Os quatro primeiros campos, todos não vazios, formam o contrato entregue à UI. `metricas_citadas` é usada internamente durante a validação e é removida antes de salvar `response_text`. A API ainda devolve esse JSON serializado dentro do campo legado `markdownText`; o frontend executa `JSON.parse`.
+Uma oportunidade condicional relaciona ataque e defesa adversária no mesmo fundamento, com EPA ofensivo e
+permitido positivos em cada semana observada e cobertura da métrica nas semanas representadas. Não exige
+superioridade da defesa do próprio time nem transforma média positiva com semanas negativas em convergência.
+O perfil descritivo permite inconclusivo; semanas diferentes são admitidas e explicitadas, sem inferir bye.
+A regra de sinais é editorial, não calibrada nem relativa à média da liga. O alerta usa contraponto corrente
+realmente contrário à tese ou limitação factual; o veredito preserva o contraponto. A realização textual fixa
+impede que texto livre do modelo adicione fatos aos quatro campos.
 
 ### 7.1 Janelas temporais
 
@@ -324,16 +329,52 @@ Os quatro primeiros campos, todos não vazios, formam o contrato entregue à UI.
   com `POSTSEASON_METRIC_CUTOFF_UNVERIFIABLE` até que uma evolução de schema resolva o corte sem ambiguidade.
 - O detalhe do jogo retorna a série semanal completa da temporada do jogo.
 
-### 7.2 Limite real da validação anti-alucinação
+### 7.2 Garantias e limite da validação
 
-Todo número detectado nos quatro textos deve aparecer em `metricas_citadas`, e cada valor citado deve existir no
-contexto dentro da tolerância `0.01`. Resposta inválida, falha ou timeout não cria cache utilizável.
+A validação é determinística sobre evidências semanais, janelas derivadas e relações restritas; falha ou timeout não grava cache
+utilizável. EPA usa sinal e três casas, taxas percentual com uma casa, em português. Uma ou duas partidas são
+sempre descritas como desempenho observado, sem identidade duradoura. `response_text` persiste somente os
+quatro textos; `context_json` e o hash/modelo ficam no cache interno. Claims, papéis, referências e o JSON
+bruto do gerador são transitórios e não podem ser auditados retrospectivamente a partir de uma linha salva.
+Esta garantia cobre a consistência mecânica dos textos renderizados, não a escolha editorial do Gemini nem a
+veracidade da fonte. Testes offline com Gemini simulado não avaliam a qualidade comportamental do modelo real.
+
+### 7.3 Motor descritivo local por regras
+
+`ClaimSelector` separa seleção tipada de `ClaimValidator` e `ClaimRenderer`. O seletor
+`local-descriptive-rules` 2.0.0 enumera simetricamente os seis encontros passe/corrida/jogada geral,
+com dimensões separadas para padrões semanais do ataque, da defesa, relação entre eles e cobertura.
+Distingue indicadores favoráveis ao ataque e à defesa, ataque sem produção positiva diante de defesa
+que permitiu EPA positivo, variação semanal, zeros e convergência. Nenhuma categoria prevê exploração.
+
+Recortes atuais, completos e comparáveis têm prioridade; fundamentos específicos adequados precedem
+o panorama geral. Todos os empates são preservados, com números e períodos nos textos públicos.
+Agregações, denominadores e limite de três registros permanecem. Claims próprias de limitação do
+recorte substituem autorreferência como contraponto; vínculos distinguem evidência restritiva adicional
+e oportunidade independente do adversário. Agrupamentos validados evitam repetir panorama redundante
+sem omitir sinais distintos, particularmente do outro time. Política: `docs/local-rules-editorial.md`.
+
+A saída interna v5 mantém `thesis_team=NONE`, `verdict=INCONCLUSIVE`: significa que esta análise
+descritiva não estima o vencedor, **não** que o jogo seja equilibrado ou estatisticamente indecidível.
+O renderer `controlled-claims-v5.0.2` preserva os quatro campos públicos; valores não zero que
+arredondariam a zero são mostrados com desigualdade explícita, sem limiar de relevância prática.
+Documentos v3/v4 mantêm interpretação e textos anteriores. O caminho Gemini continua restrito a v3.
+
+`java -jar core-api/target/core-api-0.1.0.jar editorial-local <contexto-v3.json> <diretorio-novo>`
+executa sem Spring, banco, rede, modelo ou revisão humana obrigatória. Os artefatos atuais v3 incluem contexto,
+hashes, versões, candidatos, dimensões, decisões, groupings, claims, relações, textos e falhas
+sanitizadas. As avaliações históricas preservam artefatos v2. Não grava cache nem snapshots. A interface permanece disponível para seletores futuros.
+
+Os seis casos usados em 1.0.0, inclusive os antigos reservados, agora são **regressão conhecida**.
+`scripts/compare_local_rules.py` compara todos com os artefatos 1.0.0 preservados; não seleciona por
+resultado nem representa avaliação independente. Generalização/qualidade editorial continuam sem
+comprovação, e a avaliação Gemini permanece separada.
 
 ## 8. Frontend
 
 O React Router expõe `/` e `/game/:id`. O contexto de publicação fornece a temporada padrão de `manifest.defaultSeason` e a atualização de `manifest.generatedAt`. No REST, `/api/v1/publication` retorna a temporada NFL corrente e a última atualização dos jogos. Home, header e footer compartilham o contexto, sem constantes sazonais duplicadas. A semana inicial usa intervalos inclusivos de datas UTC: semana contendo hoje; entre semanas, a próxima; antes da temporada, a primeira; depois do último jogo, a última. O seletor manual é preservado. A escolha independe de mercado/análises.
 
-Favorito, confiança e “edge” exigem fair probability válida; empate fair não cria favorito. Sem odds, os jogos permanecem navegáveis com mercado indisponível e análise cacheada independente. O detalhe carrega jogo e análise em paralelo e oferece abas de visão geral, análise, mercado e comparação tática. Métricas estáticas pertencem somente à temporada exportada; ausência de PBP é apresentada honestamente, sem fallback de outra temporada.
+O favorito de mercado exige probabilidade fair válida e desigual; empate fair não cria favorito. A UI identifica as probabilidades fair como probabilidades de mercado após remoção proporcional da vig e diferencia as probabilidades implícitas brutas com vig. Não há indicador de confiança editorial nem vantagem de modelo. Sem odds, os jogos permanecem navegáveis com mercado indisponível e análise cacheada independente. O detalhe carrega jogo e análise em paralelo e oferece abas de visão geral, análise, mercado e comparação tática. Na comparação tática, dropback rate aparece como frequência percentual, sem vencedor. Métricas estáticas pertencem somente à temporada exportada; ausência de PBP é apresentada honestamente, sem fallback de outra temporada. A geração Gemini usa o contrato interno v3; análises já cacheadas e aprovadas continuam legíveis.
 
 `NflDataClient` unifica lista de jogos, detalhe e análise disponível. Development/test usa o Spring local e aceita `VITE_API_BASE_URL`; Production resolve em build um módulo separado que lê `/data/manifest.json` e `/data/seasons/{season}.json`. A seleção estática não pode ser desviada por variável Vite, mantém cache de requests em memória, usa somente GET e devolve erros incompatíveis sanitizados. `Home`, `Layout` e `MatchupDashboard` não conhecem Axios.
 
@@ -381,10 +422,11 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 | ADR-004 | Mercado como contexto complementar | Odds e fair value apoiam a leitura, mas não definem a tese central. |
 | ADR-005 | nflverse/`nflreadpy`, Polars e Parquet local | Este é o fluxo de ingestão implementado. |
 | ADR-006 | Carga direta no Supabase | Os loaders atuais escrevem diretamente no PostgreSQL; S3 é opcional/legado. |
-| ADR-007 | Gemini para narrativa tática estruturada | O LLM recebe somente o contexto serializado e responde em JSON. |
+| ADR-007 | Gemini escolhe claims táticas estruturadas | O Java valida as relações e redige os quatro textos públicos. |
 | ADR-008 | Supabase migrations como fonte versionada do schema | Mudanças futuras devem evoluir a partir da baseline em `supabase/migrations/`. |
 | ADR-009 | Substituído pelo ADR-010 | O proxy hospedado não possui consumidor no desenho estático. |
-| ADR-010 | Java exporta snapshots públicos; Production é estática | Sem servidor permanente; política editorial futura registrada sem implementação. |
+| ADR-010 | Java exporta snapshots públicos; Production é estática | Sem servidor permanente; regras BASIC/FULL do novo motor local ainda pendentes. |
+| ADR-011 | Aceito: MLflow local (SQLite) como índice dos experimentos de ML, alimentado por importador só leitura | Sem servidor nem custo; stores e hashes seguem como fonte de verdade; plano em `docs/plans/mlflow-tracking-v1/`. |
 
 ## 12. Riscos e pendências
 
@@ -394,9 +436,7 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 - Campos avançados sem produtor e temporadas futuras potencialmente sem PBP.
 - `ingestion_runs` oferece auditoria básica, não observabilidade completa: não há alertas, retenção, dashboard nem tratamento automático de runs presos em `RUNNING`.
 - Campo `markdownText` carrega JSON, criando um contrato nominalmente enganoso.
-- Hash do cache não inclui explicitamente o nome do modelo.
-- Cliente Gemini sem timeout explícito.
-- O snapshot público atual contém 272 jogos, mas sua atualização continua manual: o workflow semanal não exporta nem versiona snapshots e não publica a Vercel. A política editorial do ADR-010 continua apenas registrada, sem implementação.
+- O snapshot público atual contém 272 jogos, mas sua atualização continua manual: o workflow semanal não exporta nem versiona snapshots e não publica a Vercel. As regras BASIC/FULL do novo motor local ainda precisam de definição.
 
 ## 13. Glossário mínimo
 
@@ -406,3 +446,47 @@ Nenhuma etapa posterior é considerada concluída apenas pela presença de códi
 - **Vig/overround:** margem implícita no conjunto de odds.
 - **Fair value:** probabilidade normalizada após remoção proporcional da vig; apresentada como probabilidade de mercado na UI.
 - **RAG:** uso de dados recuperados do banco como contexto factual para a geração do Gemini.
+
+
+### Revisão histórica de clareza e avaliação local
+
+Renderer 5.0.1 explicita ataque e defesa adversária no veredito e descreve sinais semanais
+sem inferir trajetória. Seletor 2.0.0 e contrato v5 não mudam; artefatos 5.0.0 e contratos anteriores
+permanecem preservados. O censo, os denominadores e os comandos estão em [avaliação de cobertura](docs/coverage-clarity-evaluation.md).
+O renderer atual 5.0.2 acrescenta a correção de apresentação das faixas; veja [estado consolidado](docs/current-state.md).
+
+### Integração local restrita do motor por regras
+
+A entrada explícita `editorial-local-serve` e a CLI `editorial-local` compartilham
+`LocalGenerationService` 1.1.0. O servidor JDK usa somente loopback, catálogo local v3
+validado na inicialização e tentativas imutáveis em arquivos internos (v4 com visual;
+v3 preservado e usado quando o contexto não cabe no contrato visual).
+Não inicializa Spring, datasource, JPA, Gemini ou exportador; não registra endpoints
+no modo normal/snapshot. Seletor 2.0.0 e claims 5 permanecem iguais; renderer 5.0.2 corrige apenas
+a composição das faixas com desigualdade, identificando mínimo e máximo.
+Comandos, identidade e limites: [API editorial local](docs/local-editorial-api.md).
+A baseline histórica foi arquivada antes das alterações; a implementação nova não
+corresponde aos hashes históricos. Esta integração não aprova nem publica análises.
+
+A validação operacional executou 75 requisições HTTP reais em loopback, com paridade CLI/API e
+consulta após reinício nos 21 casos conhecidos. A página interna foi inspecionada em 1440/390 px,
+com filtros e evidências expansíveis. Não há integração da API local ao frontend público.
+Evidências e comandos: [relatório operacional](editorial/operational-validation-v1/REPORT.md).
+
+### Interface editorial local de desenvolvimento
+
+A entrada Vite separada `editorial:dev` conecta um laboratório em 127.0.0.1:18083 à API
+de loopback em 18081, por proxy com Host/Origin/método/rota/body restritos. A API mantém
+a rejeição de Origin e não oferece CORS. HTTP 1.2.0 mantém o catálogo de metadados e
+histórico de tentativas completas verificado, e acrescenta consulta visual por tentativa.
+A página gera apenas por ação explícita, preserva tentativas anteriores, prioriza os gráficos
+e mantém os quatro textos acessíveis. Identifica resultados como locais, sem aprovação/publicação. Não define BASIC/FULL.
+A entrada pública e o snapshot schemaVersion 1 permanecem inalterados. A configuração
+editorial não admite build/production; o build público não inclui a interface nem seu cliente.
+Contrato, limites das datas informadas e reprodução: [interface local](docs/local-editorial-ui.md).
+
+### Contrato visual e laboratório local — E0 a E3
+
+O [contrato visual interno v1](contracts/visual-analysis/v1/README.md) rege a projeção de evidências/claims validadas para cartões e gráficos locais. E2 persiste `insights.json` em artefatos v4 e oferece GET por tentativa; mantém leitura imutável de v3, cujo visual retorna 409. E3 consome esse envelope no laboratório de desenvolvimento, com gráficos principais e texto expansível. O contrato público de snapshots permanece em v1, sem esse documento interno. O visual aceita `REG`/`POST`; fases `WC`/`DIV`/`CON`/`SB` preservam geração textual v3, até revisão coordenada do enum. [Aceite operacional integrado](docs/plans/visual-v1/integration-report.md).
+
+O primeiro experimento preserva seletor 2.0.0, claims v5 e renderer textual 5.0.2. Não prevê vencedor, não muda o ETL e não publica o documento interno como snapshot. Estado e coordenação: [preparação visual](docs/plans/visual-v1/README.md).

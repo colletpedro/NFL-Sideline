@@ -1,0 +1,6 @@
+{
+  "method": "DOM PointerEvent(pointerType=touch), followed by synthesized click through the actual SVG handler",
+  "nativeGesture": "Not available: Input.dispatchTouchEvent unsupported in IAB; no claim of physical-device test",
+  "hoverSuppressed": true,
+  "selected": "Daniel Jones"
+}

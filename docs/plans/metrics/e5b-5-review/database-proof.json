@@ -1,0 +1,720 @@
+{
+  "absenceAndEmpty": {
+    "empty": {
+      "archive_id": "47db7afd-d947-4831-82bb-5bd85558f7f0",
+      "archive_root": "/private/tmp/nfl-e5b5-orchestrator-integration-proof-20261012/archive",
+      "artifact_id": "sha256:2bfefba57d8ea7e1796f8c76045ab1545130a1b1cf03dd49305a01680cd62dbc",
+      "attempt_id": "8fbe52b1-140e-4b38-84a9-4ca4e832f8c4",
+      "calculation_id": "sha256:3d4fc1f5a553531a90549e40b940339b3ae7e5fb121eacb50b637f4fb33c98b1",
+      "coverage_states": {
+        "FULL_GAME_CONTENT": 1,
+        "NO_SOURCE_OBSERVATION": 3
+      },
+      "coverages": [
+        {
+          "completeness": "UNKNOWN",
+          "coverage_revision_id": "sha256:f3321b4280f1113f4aad34fbd8f0ed479b7184e4f91ced910428cf6f7e8c1fbb",
+          "game_id": "synthetic-1",
+          "scope": "NO_SOURCE_OBSERVATION"
+        },
+        {
+          "completeness": "UNKNOWN",
+          "coverage_revision_id": "sha256:1b89ab840218572d59b2eb907768171e38a44399add537e3ee987deb0e2322f0",
+          "game_id": "synthetic-3",
+          "scope": "NO_SOURCE_OBSERVATION"
+        },
+        {
+          "completeness": "UNKNOWN",
+          "coverage_revision_id": "sha256:b5ba3959f32d431ffd5d62a2faa54b722ec6380241287233b22cbfd8b06b2669",
+          "game_id": "synthetic-5",
+          "scope": "NO_SOURCE_OBSERVATION"
+        },
+        {
+          "completeness": "COMPLETE",
+          "coverage_revision_id": "sha256:0d05dcd0fa576c3f217bd94fdb9a1243d370c49de6bc4114a3fbd6057daa1dbc",
+          "game_id": "synthetic-6",
+          "scope": "FULL_GAME_CONTENT"
+        }
+      ],
+      "database_connected": true,
+      "descriptors": [
+        {
+          "bytes": 4461,
+          "kind": "calendar",
+          "raw_rows": 4,
+          "relevant_schema": {
+            "away_team": "String",
+            "game_id": "String",
+            "game_type": "String",
+            "home_team": "String",
+            "season": "Int64",
+            "week": "Int64"
+          },
+          "sha256": "9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f",
+          "source_revision_id": "sha256:9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f"
+        },
+        {
+          "bytes": 1531,
+          "kind": "pbp",
+          "raw_rows": 0,
+          "relevant_schema": {
+            "defteam": "String",
+            "drive": "Int64",
+            "epa": "Float64",
+            "game_id": "String",
+            "play_deleted": "Int64",
+            "play_id": "Int64",
+            "play_type": "String",
+            "posteam": "String",
+            "qb_kneel": "Int64",
+            "qb_spike": "Int64",
+            "season": "Int64",
+            "season_type": "String",
+            "special_teams_play": "Int64",
+            "two_point_attempt": "Int64",
+            "week": "Int64"
+          },
+          "sha256": "4befa00ccedd1e04726eea76cbafcad8e4ea02cfcba37abc31d58646c2ee47e4",
+          "source_revision_id": "sha256:4befa00ccedd1e04726eea76cbafcad8e4ea02cfcba37abc31d58646c2ee47e4"
+        }
+      ],
+      "file_hashes": {
+        "COMPLETED.json": "bc7662c1acf92df7dc81a36893e40d1e6fa50965cbdbd0e83a4eb2ae2a109ee9",
+        "game-audit.json": "a21bfe69a5da20b1bca1c43f42430f8e33edbac6ad00576664a004fd5373c0cc",
+        "limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+        "manifest.json": "eaa3e725bb1cce074b857994711e85fa83f2d663606cb0e07850d7e452b272ff",
+        "reconciliation.json": "305856d09b968b7231557aec2246daef5b4b1c94db5389f25db3f3b8a58285da",
+        "statistics.json": "25bd85802cc0a7bc17ed913c1c8bc3aa3315593af0603ea4cb5bb23c7a5a8b7a"
+      },
+      "games": 4,
+      "global_status": "SUCCEEDED",
+      "ingestion_run": 10,
+      "instance": {
+        "database": "nfl_e5b2_2fe79eae052d",
+        "host": "127.0.0.1",
+        "instance_id": "2fe79eae-052d-4503-97ac-b73976545bd5",
+        "port": 50500
+      },
+      "mode": "local",
+      "pbp_state": "EMPTY_PRESENT",
+      "previous_stage": "FINISHING_GLOBAL",
+      "receipts": [
+        "sha256:8319d336a9022f9f20023bede9ac66ed5e9622b77c331b63d41a3811ca660f07",
+        "sha256:8a24741ae1f062200ca075f5e8b0dc89d85fc077feb762b6c0925663b7697a9e",
+        "sha256:0d9a441c0e5cc53d34fda68fd00805b02a45be083026de072ec010821c31477d",
+        "sha256:25f5dbea758d4a516e10be2d3e5e834dbc66d4ca8ec1b0c777a69cd94f4346a4",
+        "sha256:d518f7fa593cd36d142eb92eccd24f3450b3f4245192ac066bbee18a2e51c8de",
+        "sha256:7c646d89c69a8c7213e56d48ba8b7ad2e0a5116cdc010eb1e930006d437bb591",
+        "sha256:ac7df8ba2a32661fb9e9cefc097db7cb476fede94e06197255ee3c925ba70307",
+        "sha256:ec1c4079026378904f6673699224b45ae2808b34d8e486f47034b78662a53d12"
+      ],
+      "reconciliation": {
+        "calendar_games_n": 4,
+        "calendar_raw_n": 4,
+        "calendar_without_pbp": [
+          "synthetic-1",
+          "synthetic-3",
+          "synthetic-5",
+          "synthetic-6"
+        ],
+        "checks": {
+          "epa_partition": true,
+          "general_equals_pass_plus_rush": true,
+          "off_equals_opponent_def": true,
+          "raw_equals_unique_plus_duplicates": true,
+          "unique_equals_eligible_plus_excluded": true
+        },
+        "duplicate_rows_ignored": 0,
+        "eligible_content_n": 0,
+        "excluded_n": 0,
+        "exclusions": {},
+        "historical_availability_certified": false,
+        "outside_pass_run_null_teams_n": 0,
+        "pbp_raw_n": 0,
+        "pbp_unique_n": 0
+      },
+      "reportVersion": "metrics-pipeline-attempt-v1",
+      "season": 2026,
+      "sources": 2,
+      "stage": "SUCCEEDED",
+      "stage_result": "PERSISTED",
+      "statistics": 12,
+      "versions": {
+        "adapter": "1.0.0",
+        "artifact": "metrics-offline-v1",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      },
+      "writer_counts": {
+        "conflicts": 0,
+        "inserted": 43,
+        "reused": 7
+      }
+    },
+    "missing": {
+      "attempt_id": "4d8f76d5-5da0-4c50-a202-6b0c574b7688",
+      "descriptors": [
+        {
+          "bytes": 4461,
+          "kind": "calendar",
+          "raw_rows": 4,
+          "relevant_schema": {
+            "away_team": "String",
+            "game_id": "String",
+            "game_type": "String",
+            "home_team": "String",
+            "season": "Int64",
+            "week": "Int64"
+          },
+          "sha256": "9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f",
+          "source_revision_id": "sha256:9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f"
+        }
+      ],
+      "global_status": "SUCCEEDED",
+      "ingestion_run": 9,
+      "instance": {
+        "database": "nfl_e5b2_2fe79eae052d",
+        "host": "127.0.0.1",
+        "instance_id": "2fe79eae-052d-4503-97ac-b73976545bd5",
+        "port": 50500
+      },
+      "mode": "local",
+      "pbp_state": "MISSING",
+      "previous_stage": "FINISHING_GLOBAL",
+      "reportVersion": "metrics-pipeline-attempt-v1",
+      "season": 2026,
+      "sources": [
+        {
+          "bytes": 4461,
+          "frozen": "/private/tmp/nfl-e5b5-orchestrator-integration-proof-20261012/missing/2026-4d8f76d5-5da0-4c50-a202-6b0c574b7688/sources/calendar-0.parquet",
+          "kind": "calendar",
+          "legacy_frozen": "/private/tmp/nfl-e5b5-orchestrator-integration-proof-20261012/missing/2026-4d8f76d5-5da0-4c50-a202-6b0c574b7688/legacy-data/raw/schedules/season=2026/schedules.parquet",
+          "original": "/private/tmp/nfl-e5b5-orchestrator-integration-proof-20261012/data-missing/raw/schedules/season=2026/schedules.parquet",
+          "sha256": "9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f",
+          "state": "PRESENT"
+        }
+      ],
+      "stage": "SUCCEEDED",
+      "stage_result": "UNAVAILABLE_MISSING_PBP",
+      "versions": {
+        "adapter": "1.0.0",
+        "artifact": "metrics-offline-v1",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    },
+    "missingDidNotPersist": true
+  },
+  "adminRefused": true,
+  "afterCommitFailure": {
+    "global": "FAILED",
+    "private": "PERSISTED",
+    "recoveryReused": 78
+  },
+  "base": "b6b244bb68f17d089135f8ad3665747bb6c140c5",
+  "correction": {
+    "corrected": "sha256:092ad747352d1fef69bf9ae7a2062c0ef4d2341813bdbbfbb49105402e54ea38",
+    "first": "sha256:344f7e73d36c24190512ce1004ebee1d0b22186303d8e5a0aed8db2c63fe430f",
+    "previousRowsAndReceiptsPreserved": true
+  },
+  "disabled": {
+    "metrics_attempt": null,
+    "rows_games": 4,
+    "rows_market": 1,
+    "rows_metrics": 2,
+    "rows_pbp": 4,
+    "rows_schedules": 4,
+    "rows_teams": 2,
+    "run_id": 1,
+    "season": 2026
+  },
+  "failureRecovery": {
+    "failedAttempt": "b0900326-3375-4c68-953f-1cf6c0413567",
+    "nextSeasonNotProcessed": true,
+    "privateUnchangedOnFailure": true,
+    "recoveredAttempt": "6ca8ccf7-abc4-4259-913d-bcd494ffaf13",
+    "sameArtifact": true,
+    "sameReceipts": true
+  },
+  "first": {
+    "archive_id": "47db7afd-d947-4831-82bb-5bd85558f7f0",
+    "archive_root": "/private/tmp/nfl-e5b5-orchestrator-integration-proof-20261012/archive",
+    "artifact_id": "sha256:04ff0c748cf2e88b7084c5788bc08f5956477872636cc9ebddca471d9672e2d3",
+    "attempt_id": "4475d8d5-3b5c-4ae7-a8e1-6d244e51705e",
+    "calculation_id": "sha256:344f7e73d36c24190512ce1004ebee1d0b22186303d8e5a0aed8db2c63fe430f",
+    "coverage_states": {
+      "AUDITABLE_SUBSET": 2,
+      "NO_SOURCE_OBSERVATION": 2
+    },
+    "coverages": [
+      {
+        "completeness": "UNKNOWN",
+        "coverage_revision_id": "sha256:2f40110709bb3e82d15811e8a97190a0454bbc364ac192391d699818c8e05a06",
+        "game_id": "synthetic-1",
+        "scope": "AUDITABLE_SUBSET"
+      },
+      {
+        "completeness": "UNKNOWN",
+        "coverage_revision_id": "sha256:c9bb3c70320e97377f284adf93a14c85002ebdf35d9955023ea0540ae3180245",
+        "game_id": "synthetic-3",
+        "scope": "AUDITABLE_SUBSET"
+      },
+      {
+        "completeness": "UNKNOWN",
+        "coverage_revision_id": "sha256:e7c6daf0dd7828463563b62918c36131a87af2fcdfec970ed09f2326efdc042f",
+        "game_id": "synthetic-5",
+        "scope": "NO_SOURCE_OBSERVATION"
+      },
+      {
+        "completeness": "UNKNOWN",
+        "coverage_revision_id": "sha256:0303d1e804034ebe48ab6645133225b9a4627e739f0eae2cbaea64a027d6d7d6",
+        "game_id": "synthetic-6",
+        "scope": "NO_SOURCE_OBSERVATION"
+      }
+    ],
+    "database_connected": true,
+    "descriptors": [
+      {
+        "bytes": 4461,
+        "kind": "calendar",
+        "raw_rows": 4,
+        "relevant_schema": {
+          "away_team": "String",
+          "game_id": "String",
+          "game_type": "String",
+          "home_team": "String",
+          "season": "Int64",
+          "week": "Int64"
+        },
+        "sha256": "9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f",
+        "source_revision_id": "sha256:9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f"
+      },
+      {
+        "bytes": 5353,
+        "kind": "pbp",
+        "raw_rows": 4,
+        "relevant_schema": {
+          "defteam": "String",
+          "drive": "Int64",
+          "epa": "Float64",
+          "game_id": "String",
+          "play_deleted": "Int64",
+          "play_id": "Int64",
+          "play_type": "String",
+          "posteam": "String",
+          "qb_kneel": "Int64",
+          "qb_spike": "Int64",
+          "season": "Int64",
+          "season_type": "String",
+          "special_teams_play": "Int64",
+          "two_point_attempt": "Int64",
+          "week": "Int64"
+        },
+        "sha256": "47a23e0c391a6da6b86a26b7ae5bb9bacb1fce9ea80152c544889feea7fe25c0",
+        "source_revision_id": "sha256:47a23e0c391a6da6b86a26b7ae5bb9bacb1fce9ea80152c544889feea7fe25c0"
+      },
+      {
+        "bytes": 5330,
+        "kind": "pbp",
+        "raw_rows": 2,
+        "relevant_schema": {
+          "defteam": "String",
+          "drive": "Int64",
+          "epa": "Float64",
+          "game_id": "String",
+          "play_deleted": "Int64",
+          "play_id": "Int64",
+          "play_type": "String",
+          "posteam": "String",
+          "qb_kneel": "Int64",
+          "qb_spike": "Int64",
+          "season": "Int64",
+          "season_type": "String",
+          "special_teams_play": "Int64",
+          "two_point_attempt": "Int64",
+          "week": "Int64"
+        },
+        "sha256": "0e262fa3b5e965737b10ad539301e1b4c80b3df9c066ba5cb577bc8d356a94c7",
+        "source_revision_id": "sha256:0e262fa3b5e965737b10ad539301e1b4c80b3df9c066ba5cb577bc8d356a94c7"
+      }
+    ],
+    "file_hashes": {
+      "COMPLETED.json": "81b59af63ff59a0ca38037a22a9680b4602330daaf9cf82efea96c910bbb6cfc",
+      "game-audit.json": "d259741617697b2b4401902df4c905ed8e1d25344fc6d4324ca026d1054a5815",
+      "limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "manifest.json": "5aed04f3a217baefb1649c0a848505836377807e04b2d01f9f8bc38f57711a6a",
+      "reconciliation.json": "4f4b7ab3321a9e033b406ca2da2a035231edcd1259ebacf52ab1a3ea77aa8357",
+      "statistics.json": "1675b79ac39a814b354387e7788dec0945d2bfa421cafc4942d317b0a409c398"
+    },
+    "games": 4,
+    "global_status": "SUCCEEDED",
+    "ingestion_run": 2,
+    "instance": {
+      "database": "nfl_e5b2_2fe79eae052d",
+      "host": "127.0.0.1",
+      "instance_id": "2fe79eae-052d-4503-97ac-b73976545bd5",
+      "port": 50500
+    },
+    "mode": "local",
+    "pbp_state": "PRESENT",
+    "previous_stage": "FINISHING_GLOBAL",
+    "receipts": [
+      "sha256:40418b71bdde0fd4726c0e0a8d6e4819db712e9cfcfa1e35423cf1e9ec8d54e7",
+      "sha256:af1c85a11662b8e3ea07fdf3215134dd289262adef01cd304e571cce23cb1120",
+      "sha256:da775267e32abab529755fbc4c07e3389faddd552afd17e4dbadd27992dedc87",
+      "sha256:0d9a441c0e5cc53d34fda68fd00805b02a45be083026de072ec010821c31477d",
+      "sha256:f52c2497540449d7abf558c9b72734089bae3caa14e1c3866d7c2b0f97e12814",
+      "sha256:87f39918918b2e759697f3e7d25c0f88ebd72116d69250bfd675ccfc6d3e5d91",
+      "sha256:5d5940803c0a8fbf832ed9f7092e880d19c645df0694c9ee856bba97ee610ae8",
+      "sha256:d518f7fa593cd36d142eb92eccd24f3450b3f4245192ac066bbee18a2e51c8de",
+      "sha256:97c41ee205ccbd0662bc67f1ca68cd7bc6f2d48ce70b5a4573d7cc4ec1bc42d1"
+    ],
+    "reconciliation": {
+      "calendar_games_n": 4,
+      "calendar_raw_n": 4,
+      "calendar_without_pbp": [
+        "synthetic-5",
+        "synthetic-6"
+      ],
+      "checks": {
+        "epa_partition": true,
+        "general_equals_pass_plus_rush": true,
+        "off_equals_opponent_def": true,
+        "raw_equals_unique_plus_duplicates": true,
+        "unique_equals_eligible_plus_excluded": true
+      },
+      "duplicate_rows_ignored": 1,
+      "eligible_content_n": 5,
+      "excluded_n": 0,
+      "exclusions": {},
+      "historical_availability_certified": false,
+      "outside_pass_run_null_teams_n": 0,
+      "pbp_raw_n": 6,
+      "pbp_unique_n": 5
+    },
+    "reportVersion": "metrics-pipeline-attempt-v1",
+    "season": 2026,
+    "sources": 3,
+    "stage": "SUCCEEDED",
+    "stage_result": "PERSISTED",
+    "statistics": 24,
+    "versions": {
+      "adapter": "1.0.0",
+      "artifact": "metrics-offline-v1",
+      "definition": "1.0.0",
+      "population": "classified-scrimmage-v1"
+    },
+    "writer_counts": {
+      "conflicts": 0,
+      "inserted": 66,
+      "reused": 0
+    }
+  },
+  "idempotence": {
+    "allPrivateRowsIncludingPersistedAtPreserved": true,
+    "archiveReceiptsPreserved": true,
+    "counts": {
+      "conflicts": 0,
+      "inserted": 0,
+      "reused": 66
+    }
+  },
+  "instance": {
+    "database": "nfl_e5b2_2fe79eae052d",
+    "instance_id": "2fe79eae-052d-4503-97ac-b73976545bd5",
+    "pg_bin": "/private/tmp/nfl-e5b2-pg-runtime/bin",
+    "port": 50500,
+    "purpose": "metrics-persistence-e5b2-disposable"
+  },
+  "newBatch": {
+    "archive_id": "47db7afd-d947-4831-82bb-5bd85558f7f0",
+    "archive_root": "/private/tmp/nfl-e5b5-orchestrator-integration-proof-20261012/archive",
+    "artifact_id": "sha256:d5a82ad18fb82e8f6282bca75c6c369363903dfc1acf6a123cb898db89289a62",
+    "attempt_id": "6ca8ccf7-abc4-4259-913d-bcd494ffaf13",
+    "calculation_id": "sha256:00989e1760f7fbce6eec8d96cefbafe07566b99ce33466e338149031b5d42992",
+    "coverage_states": {
+      "AUDITABLE_SUBSET": 2,
+      "FULL_GAME_CONTENT": 1,
+      "NO_SOURCE_OBSERVATION": 1
+    },
+    "coverages": [
+      {
+        "completeness": "UNKNOWN",
+        "coverage_revision_id": "sha256:2f40110709bb3e82d15811e8a97190a0454bbc364ac192391d699818c8e05a06",
+        "game_id": "synthetic-1",
+        "scope": "AUDITABLE_SUBSET"
+      },
+      {
+        "completeness": "UNKNOWN",
+        "coverage_revision_id": "sha256:c9bb3c70320e97377f284adf93a14c85002ebdf35d9955023ea0540ae3180245",
+        "game_id": "synthetic-3",
+        "scope": "AUDITABLE_SUBSET"
+      },
+      {
+        "completeness": "UNKNOWN",
+        "coverage_revision_id": "sha256:e7c6daf0dd7828463563b62918c36131a87af2fcdfec970ed09f2326efdc042f",
+        "game_id": "synthetic-5",
+        "scope": "NO_SOURCE_OBSERVATION"
+      },
+      {
+        "completeness": "COMPLETE",
+        "coverage_revision_id": "sha256:7fe4822ddad383a209a3f8e1dc791a89171cf5978f1a73d2291e759af07b99ba",
+        "game_id": "synthetic-6",
+        "scope": "FULL_GAME_CONTENT"
+      }
+    ],
+    "database_connected": true,
+    "descriptors": [
+      {
+        "bytes": 4461,
+        "kind": "calendar",
+        "raw_rows": 4,
+        "relevant_schema": {
+          "away_team": "String",
+          "game_id": "String",
+          "game_type": "String",
+          "home_team": "String",
+          "season": "Int64",
+          "week": "Int64"
+        },
+        "sha256": "9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f",
+        "source_revision_id": "sha256:9eec8bd3cdae27e90e812a75a7c76b054d8cec30a8b136bc631e061452de9e0f"
+      },
+      {
+        "bytes": 5353,
+        "kind": "pbp",
+        "raw_rows": 4,
+        "relevant_schema": {
+          "defteam": "String",
+          "drive": "Int64",
+          "epa": "Float64",
+          "game_id": "String",
+          "play_deleted": "Int64",
+          "play_id": "Int64",
+          "play_type": "String",
+          "posteam": "String",
+          "qb_kneel": "Int64",
+          "qb_spike": "Int64",
+          "season": "Int64",
+          "season_type": "String",
+          "special_teams_play": "Int64",
+          "two_point_attempt": "Int64",
+          "week": "Int64"
+        },
+        "sha256": "47a23e0c391a6da6b86a26b7ae5bb9bacb1fce9ea80152c544889feea7fe25c0",
+        "source_revision_id": "sha256:47a23e0c391a6da6b86a26b7ae5bb9bacb1fce9ea80152c544889feea7fe25c0"
+      },
+      {
+        "bytes": 5330,
+        "kind": "pbp",
+        "raw_rows": 2,
+        "relevant_schema": {
+          "defteam": "String",
+          "drive": "Int64",
+          "epa": "Float64",
+          "game_id": "String",
+          "play_deleted": "Int64",
+          "play_id": "Int64",
+          "play_type": "String",
+          "posteam": "String",
+          "qb_kneel": "Int64",
+          "qb_spike": "Int64",
+          "season": "Int64",
+          "season_type": "String",
+          "special_teams_play": "Int64",
+          "two_point_attempt": "Int64",
+          "week": "Int64"
+        },
+        "sha256": "0e262fa3b5e965737b10ad539301e1b4c80b3df9c066ba5cb577bc8d356a94c7",
+        "source_revision_id": "sha256:0e262fa3b5e965737b10ad539301e1b4c80b3df9c066ba5cb577bc8d356a94c7"
+      }
+    ],
+    "file_hashes": {
+      "COMPLETED.json": "95b31389db50f557997ccb3f397d4dc2ab25860a7a19acb86b5ab1823561c5ec",
+      "game-audit.json": "6064681ed38fe88b6e20b85a886efd00518bc4f02ebd86ff16daec893dda6f5d",
+      "limitations.json": "48a2b37314cdc2577b2586cf296215eff5e361945b875cc4650ba0a8b25e4fc4",
+      "manifest.json": "b98e7cb838cea2bd06119119a10498e29633436ef8506bd948a65843bb4fc03a",
+      "reconciliation.json": "4f4b7ab3321a9e033b406ca2da2a035231edcd1259ebacf52ab1a3ea77aa8357",
+      "statistics.json": "54be45f7152e21372a889bad868d26aa6e990d6cf5165804ffbede914d4d0a09"
+    },
+    "games": 4,
+    "global_status": "SUCCEEDED",
+    "ingestion_run": 6,
+    "instance": {
+      "database": "nfl_e5b2_2fe79eae052d",
+      "host": "127.0.0.1",
+      "instance_id": "2fe79eae-052d-4503-97ac-b73976545bd5",
+      "port": 50500
+    },
+    "mode": "local",
+    "pbp_state": "PRESENT",
+    "previous_stage": "FINISHING_GLOBAL",
+    "receipts": [
+      "sha256:40418b71bdde0fd4726c0e0a8d6e4819db712e9cfcfa1e35423cf1e9ec8d54e7",
+      "sha256:da775267e32abab529755fbc4c07e3389faddd552afd17e4dbadd27992dedc87",
+      "sha256:0d9a441c0e5cc53d34fda68fd00805b02a45be083026de072ec010821c31477d",
+      "sha256:f52c2497540449d7abf558c9b72734089bae3caa14e1c3866d7c2b0f97e12814",
+      "sha256:520217a5f3f8be744d84d7ecab116e70866434960c5e2d24b4ee20ec60fd65b0",
+      "sha256:5933964292c281538c12ce9f7d8105d633b241327190057a4c70bea0eaf8a9a6",
+      "sha256:b464f449b5b89dca0a05d8e5a098f00ea2f53670e8c336252ca8cab0372f6547",
+      "sha256:d518f7fa593cd36d142eb92eccd24f3450b3f4245192ac066bbee18a2e51c8de",
+      "sha256:e817b98395db25639334ca2198d2e91291347701410d2aee1d9cd52072793750"
+    ],
+    "reconciliation": {
+      "calendar_games_n": 4,
+      "calendar_raw_n": 4,
+      "calendar_without_pbp": [
+        "synthetic-5",
+        "synthetic-6"
+      ],
+      "checks": {
+        "epa_partition": true,
+        "general_equals_pass_plus_rush": true,
+        "off_equals_opponent_def": true,
+        "raw_equals_unique_plus_duplicates": true,
+        "unique_equals_eligible_plus_excluded": true
+      },
+      "duplicate_rows_ignored": 1,
+      "eligible_content_n": 5,
+      "excluded_n": 0,
+      "exclusions": {},
+      "historical_availability_certified": false,
+      "outside_pass_run_null_teams_n": 0,
+      "pbp_raw_n": 6,
+      "pbp_unique_n": 5
+    },
+    "reportVersion": "metrics-pipeline-attempt-v1",
+    "season": 2026,
+    "sources": 3,
+    "stage": "SUCCEEDED",
+    "stage_result": "PERSISTED",
+    "statistics": 36,
+    "versions": {
+      "adapter": "1.0.0",
+      "artifact": "metrics-offline-v1",
+      "definition": "1.0.0",
+      "population": "classified-scrimmage-v1"
+    },
+    "writer_counts": {
+      "conflicts": 0,
+      "inserted": 33,
+      "reused": 45
+    }
+  },
+  "proofVersion": "metrics-pipeline-proof-v1",
+  "readsDidNotMutateSQLOrArchive": true,
+  "remoteRefused": true,
+  "runs": [
+    [
+      1,
+      2026,
+      "SUCCEEDED",
+      4,
+      4,
+      null
+    ],
+    [
+      2,
+      2026,
+      "SUCCEEDED",
+      4,
+      4,
+      null
+    ],
+    [
+      3,
+      2026,
+      "SUCCEEDED",
+      4,
+      4,
+      null
+    ],
+    [
+      4,
+      2026,
+      "SUCCEEDED",
+      4,
+      4,
+      null
+    ],
+    [
+      5,
+      2026,
+      "FAILED",
+      4,
+      4,
+      "stage=game_metrics exception=RuntimeError: controlled boundary ARCHIVED"
+    ],
+    [
+      6,
+      2026,
+      "SUCCEEDED",
+      4,
+      4,
+      null
+    ],
+    [
+      7,
+      2026,
+      "FAILED",
+      4,
+      4,
+      "stage=game_metrics exception=RuntimeError: controlled boundary PRIVATE_COMMITTED"
+    ],
+    [
+      8,
+      2026,
+      "SUCCEEDED",
+      4,
+      4,
+      null
+    ],
+    [
+      9,
+      2026,
+      "SUCCEEDED",
+      0,
+      4,
+      null
+    ],
+    [
+      10,
+      2026,
+      "SUCCEEDED",
+      0,
+      4,
+      null
+    ]
+  ],
+  "scope": "REAL_OWN_POSTGRESQL_SYNTHETIC",
+  "shutdown": {
+    "filesPreserved": true,
+    "pgCtlStatus": 3,
+    "pidAbsent": true,
+    "portBindReleased": true
+  },
+  "success": true,
+  "supabaseFullAndAdvisors": "PENDING",
+  "temporal": {
+    "PIT": "UNKNOWN_NO_AGGREGATES",
+    "artifact_id": "sha256:d5a82ad18fb82e8f6282bca75c6c369363903dfc1acf6a123cb898db89289a62",
+    "associations": 4,
+    "audit_id": "sha256:87ba45680ebf66656cb2b01422a786ab1da26456de913b8632f388704b5e0f83",
+    "calculation_id": "sha256:00989e1760f7fbce6eec8d96cefbafe07566b99ce33466e338149031b5d42992",
+    "input_id": "sha256:e6a752485de1dcc364289abe5c7b746c0eeee401fcac3dfc5d90d35d832a087f",
+    "jarSha256": "02570bb30f5700873bc021c4152674ac1df57d78662f0eb9ac79c3ac3b4c0c65",
+    "javaOutput": "sha256:6d21c6f13e8c51f6c5e687089f9d4a165f439e99bc5bc6d98d3049d1303b723f sha256:87ba45680ebf66656cb2b01422a786ab1da26456de913b8632f388704b5e0f83 POINT_IN_TIME",
+    "materialization_id": "sha256:ef0e19b5dcb61e84ffcf49f2a7651bedf76054dac2f2bc275b0e6a7ba065fcb9",
+    "result_id": "sha256:6d21c6f13e8c51f6c5e687089f9d4a165f439e99bc5bc6d98d3049d1303b723f",
+    "statisticsRows": 36
+  },
+  "testedHead": "8391b8823bc2aa7eb8daedf1e443f10ff507ff2f",
+  "testedSourceHashes": {
+    "docs/plans/metrics/e5b-5/proof.py": "dac383481bd44886f77aa87d24463387f6026eaa10930ee6058e8d36650f6a3d",
+    "etl-pipeline/run_pipeline.py": "e61e232042096a5e14e6832648eb5a212479474958f8d8d767962e8eabe6d02d",
+    "etl-pipeline/src/nfl_sideline_etl/metrics_pipeline.py": "9219f7e402bbdfd9781fa8ac8ee61240741e5de0a057ba77855b966604f09a45",
+    "etl-pipeline/tests/metrics_pipeline_support.py": "5eea65e597a0868efd957422d07ca0135e1794e9f5ba40ec8de1bf70bb872c88"
+  },
+  "workspace": "/private/tmp/nfl-e5b5-orchestrator-integration-proof-20261012",
+  "writerCannotSeedTeams": true
+}

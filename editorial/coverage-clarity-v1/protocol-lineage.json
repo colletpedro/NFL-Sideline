@@ -1,0 +1,7 @@
+{
+  "manifestProtocolHash": "083bfcefde6ba4e9c692b9f5e0a957dff4e04715c8dcecb85750414537bcba0b",
+  "inventoryProtocolCopy": "PROTOCOL.inventory.md",
+  "frozenExecutionProtocol": "PROTOCOL.md",
+  "executionProtocolSha256": "ddeee09a6249cd27f214d933641677484c30cb517a94c2f0f177da0a0a450d47",
+  "explanation": "Manifest was created before the pre-freeze calendar appendix; its embedded protocol hash refers to the inventory revision. freeze.json independently hashes the final execution protocol and manifest. No execution/protocol/source changed after freeze. Historical revision reconstructed from the unchanged prefix and byte-verified against the recorded hash."
+}

@@ -1,0 +1,4015 @@
+{
+  "version": "coverage-harness-1.0.0",
+  "run": "editorial/coverage-clarity-v1/known-development",
+  "protocolSha256": "ddeee09a6249cd27f214d933641677484c30cb517a94c2f0f177da0a0a450d47",
+  "independentEvaluation": false,
+  "qualityProven": false,
+  "inventory": {
+    "filesInventoried": 263,
+    "contextFiles": 65,
+    "uniqueNormalizedContexts": 21,
+    "duplicateContextFiles": 44,
+    "selectedCases": 21
+  },
+  "excludedFileReasons": {
+    "NOT_TACTICAL_CONTEXT": 192,
+    "NOT_DIRECT_CONTEXT_FORMAT": 6
+  },
+  "inputStrataReal": {
+    "seasonStage": {
+      "middle": 1,
+      "early": 5
+    },
+    "weekCountPairs": {
+      "[3, 3]": 1,
+      "[2, 2]": 5
+    },
+    "differentWeeks": 1
+  },
+  "cases": [
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/evaluations/2026-09-26/uneven-context/2025_08_CHI_BAL.json",
+      "descriptors": {
+        "season": 2025,
+        "gameWeek": 8,
+        "seasonStage": "middle",
+        "weeksByTeam": {
+          "BAL": [
+            4,
+            5,
+            6
+          ],
+          "CHI": [
+            4,
+            6,
+            7
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": true,
+        "signsByTeamMetric": {
+          "BAL:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "BAL:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "BAL:DROPBACK_RATE": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "BAL:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "BAL:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BAL:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CHI:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CHI:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "CHI:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "CHI:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CHI:DROPBACK_RATE": [
+            "positive"
+          ],
+          "CHI:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "BAL": [
+            7
+          ],
+          "CHI": [
+            5
+          ]
+        },
+        "byeConfirmed": true,
+        "byeEvidence": {
+          "gaps": [
+            {
+              "team": "BAL",
+              "week": 7,
+              "byeConfirmed": true,
+              "cause": "bye_confirmed_from_complete_schedule",
+              "scheduledGameIds": []
+            },
+            {
+              "team": "CHI",
+              "week": 5,
+              "byeConfirmed": true,
+              "cause": "bye_confirmed_from_complete_schedule",
+              "scheduledGameIds": []
+            }
+          ],
+          "source": "etl-pipeline/data/raw/schedules/season=2025/schedules.parquet",
+          "byeConfirmed": true,
+          "unknownGap": false
+        },
+        "gapCause": "confirmed_bye"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 6,
+        "adequate": 0,
+        "opportunities": 0,
+        "positivePairs": 0,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 0,
+        "limitations": {
+          "IDENTIFIABLE_CALENDAR_GAPS": 6,
+          "NOT_RECENT_COMPLETE": 6,
+          "DIFFERENT_WEEKS": 6,
+          "UNAVAILABLE_DENOMINATORS": 4,
+          "WEEKLY_VARIATION": 6
+        }
+      },
+      "noOpportunityReason": "SIGN_PATTERN_AND_COVERAGE_LIMITS_COEXIST",
+      "patterns": [
+        "BOTH_NEGATIVE",
+        "WEEKLY_SIGN_VARIATION"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 36,
+          "characters": 193
+        },
+        "vantagem_tatica": {
+          "words": 158,
+          "characters": 902
+        },
+        "alerta_vermelho": {
+          "words": 44,
+          "characters": 290
+        },
+        "veredito": {
+          "words": 215,
+          "characters": 1190
+        },
+        "total": {
+          "words": 453,
+          "characters": 2575
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "BAL:OFF_EPA_PLAY",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "CHI:OFF_EPA_PLAY",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "BAL:OFF_EPA_PLAY",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "CHI:OFF_EPA_PLAY",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "BAL:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "BAL:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "CHI:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "CHI:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:BAL:OFF_EPA_PLAY",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:CHI:OFF_EPA_PLAY",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [],
+      "rendered": {
+        "fator_chave": "Panorama por jogada de BAL contra CHI: EPA negativo no ataque de BAL e no permitido pela defesa de CHI. Panorama por jogada de CHI contra BAL: há semanas com EPA positivo e negativo no recorte.",
+        "vantagem_tatica": "Médias ponderadas pelos volumes de jogadas indicados.\nPanorama por jogada — BAL (ataque): -0,247 EPA, faixa semanal de -0,336 EPA a -0,063 EPA, Temporada 2025, semanas 4, 5, 6 (3 observações por métrica), 167 jogadas; CHI (EPA permitido): -0,181 EPA, faixa semanal de -0,297 EPA a -0,064 EPA, Temporada 2025, semanas 4, 6, 7 (3 observações por métrica), 163 jogadas. O ataque produziu EPA negativo e a defesa permitiu EPA negativo em todas as semanas; isso não projeta o resultado do encontro.\nPanorama por jogada — CHI (ataque): +0,043 EPA, faixa semanal de -0,121 EPA a +0,166 EPA, Temporada 2025, semanas 4, 6, 7 (3 observações por métrica), 188 jogadas; BAL (EPA permitido): +0,216 EPA, faixa semanal de -0,033 EPA a +0,391 EPA, Temporada 2025, semanas 4, 5, 6 (3 observações por métrica), 181 jogadas. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.",
+        "alerta_vermelho": "Em panorama por jogada de BAL e panorama por jogada de CHI, as equipes têm semanas observadas diferentes; não estão cobertas todas as semanas numéricas imediatamente anteriores. Essas diferenças limitam uma leitura conjunta do momento atual; a causa de eventuais lacunas não está informada.",
+        "veredito": "No recorte de passe do ataque de BAL contra a defesa de CHI, no EPA do ataque de BAL, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de CHI, há semanas com valores positivos e negativos. No recorte de corrida do ataque de BAL contra a defesa de CHI, no EPA do ataque de BAL, há semanas com valores positivos e negativos; no EPA permitido pela defesa de CHI, há valores negativos em todas as semanas observadas. No recorte de panorama por jogada do ataque de BAL contra a defesa de CHI, o ataque de BAL apresentou EPA negativo e a defesa de CHI permitiu EPA negativo nas semanas observadas. No recorte de passe do ataque de CHI contra a defesa de BAL, no EPA do ataque de CHI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BAL, há valores positivos em todas as semanas observadas. No recorte de corrida e panorama por jogada do ataque de CHI contra a defesa de BAL, no EPA do ataque de CHI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BAL, há semanas com valores positivos e negativos. As diferenças de cobertura restringem a leitura conjunta. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:38.722529Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+        "contextSha256": "c476428914b36de96c6d097b7089b2e791c0a884cddafbd5199e94d156c67482",
+        "gameId": "2025_08_CHI_BAL",
+        "resultIdentity": "b278a10c55e03606ad3a38f16fa0a06c6e005759f0ccacf52dd92c51215148a7",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_ARI_SF.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "SF": [
+            1,
+            2
+          ],
+          "ARI": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "ARI:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "ARI:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "ARI:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "ARI:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "ARI:DROPBACK_RATE": [
+            "positive"
+          ],
+          "ARI:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "ARI:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "ARI:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "ARI:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "SF:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "SF:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "SF:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "SF:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "SF:DROPBACK_RATE": [
+            "positive"
+          ],
+          "SF:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "SF:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "SF:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "SF:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "SF": [],
+          "ARI": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": {
+          "gaps": [],
+          "source": "etl-pipeline/data/raw/schedules/season=2026/schedules.parquet",
+          "byeConfirmed": false,
+          "unknownGap": false
+        },
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 6,
+        "adequate": 6,
+        "opportunities": 0,
+        "positivePairs": 0,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 6,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 4,
+          "SMALL_OBSERVED_WINDOW": 6,
+          "WEEKLY_VARIATION": 6
+        }
+      },
+      "noOpportunityReason": "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS",
+      "patterns": [
+        "WEEKLY_SIGN_VARIATION"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 32,
+          "characters": 169
+        },
+        "vantagem_tatica": {
+          "words": 200,
+          "characters": 1098
+        },
+        "alerta_vermelho": {
+          "words": 44,
+          "characters": 247
+        },
+        "veredito": {
+          "words": 178,
+          "characters": 963
+        },
+        "total": {
+          "words": 454,
+          "characters": 2477
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "ARI:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "ARI:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "SF:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "SF:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "ARI:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "ARI:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "SF:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "SF:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:ARI:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:ARI:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:SF:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:SF:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [
+        {
+          "candidateId": "ARI:OFF_EPA_PLAY",
+          "representedBy": [
+            "ARI:OFF_EPA_RUSH"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        },
+        {
+          "candidateId": "SF:OFF_EPA_PLAY",
+          "representedBy": [
+            "SF:OFF_EPA_PASS"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        }
+      ],
+      "rendered": {
+        "fator_chave": "Passe e Corrida de ARI contra SF: há semanas com EPA positivo e negativo no recorte. Passe e Corrida de SF contra ARI: há semanas com EPA positivo e negativo no recorte.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — ARI (ataque): -0,016 EPA, faixa semanal de -0,269 EPA a +0,237 EPA; SF (EPA permitido): -0,114 EPA, faixa semanal de -0,394 EPA a +0,165 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — ARI (ataque): -0,197 EPA, faixa semanal de -0,424 EPA a +0,030 EPA; SF (EPA permitido): -0,145 EPA, faixa semanal de -0,156 EPA a -0,135 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.\nPasse — SF (ataque): +0,601 EPA, faixa semanal de +0,142 EPA a +1,060 EPA; ARI (EPA permitido): +0,204 EPA, faixa semanal de -0,187 EPA a +0,596 EPA. Ataque: positivo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — SF (ataque): +0,076 EPA, faixa semanal de -0,068 EPA a +0,221 EPA; ARI (EPA permitido): -0,252 EPA, faixa semanal de -0,325 EPA a -0,178 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.",
+        "alerta_vermelho": "As médias do ataque de ARI (passe e corrida), do EPA permitido pela defesa de SF (passe), do EPA permitido pela defesa de ARI (passe) e do ataque de SF (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+        "veredito": "No recorte de passe do ataque de ARI contra a defesa de SF, no EPA do ataque de ARI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de SF, há semanas com valores positivos e negativos. No recorte de corrida do ataque de ARI contra a defesa de SF, no EPA do ataque de ARI, há semanas com valores positivos e negativos; no EPA permitido pela defesa de SF, há valores negativos em todas as semanas observadas. No recorte de passe do ataque de SF contra a defesa de ARI, no EPA do ataque de SF, há valores positivos em todas as semanas observadas; no EPA permitido pela defesa de ARI, há semanas com valores positivos e negativos. No recorte de corrida do ataque de SF contra a defesa de ARI, no EPA do ataque de SF, há semanas com valores positivos e negativos; no EPA permitido pela defesa de ARI, há valores negativos em todas as semanas observadas. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:39.041718Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+        "contextSha256": "0a5309d6b28aab3ba3a509d6390264fc4c5fedc58aa850f3eb7d63b6651cf644",
+        "gameId": "2026_03_ARI_SF",
+        "resultIdentity": "6b2475461176be838d31c332dd69b06bd974f885dc4c6035b31be8f3c4c6fd8f",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_BAL_DAL.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "DAL": [
+            1,
+            2
+          ],
+          "BAL": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "BAL:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "BAL:DROPBACK_RATE": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "BAL:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "DAL:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "DAL:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "DAL:DEF_EPA_RUSH": [
+            "positive"
+          ],
+          "DAL:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "DAL:DROPBACK_RATE": [
+            "positive"
+          ],
+          "DAL:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "DAL:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "DAL:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "DAL:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "DAL": [],
+          "BAL": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": {
+          "gaps": [],
+          "source": "etl-pipeline/data/raw/schedules/season=2026/schedules.parquet",
+          "byeConfirmed": false,
+          "unknownGap": false
+        },
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 6,
+        "adequate": 6,
+        "opportunities": 3,
+        "positivePairs": 3,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 3,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 4,
+          "SMALL_OBSERVED_WINDOW": 6,
+          "WEEKLY_VARIATION": 6
+        }
+      },
+      "noOpportunityReason": "HAS_OPPORTUNITY",
+      "patterns": [
+        "POSITIVE_CONVERGENCE",
+        "WEEKLY_SIGN_VARIATION"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 13,
+          "characters": 86
+        },
+        "vantagem_tatica": {
+          "words": 109,
+          "characters": 592
+        },
+        "alerta_vermelho": {
+          "words": 24,
+          "characters": 143
+        },
+        "veredito": {
+          "words": 124,
+          "characters": 691
+        },
+        "total": {
+          "words": 270,
+          "characters": 1512
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "BAL:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "BAL:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "BAL:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "BAL:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "DAL:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "DAL:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:BAL:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:BAL:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [
+        {
+          "candidateId": "BAL:OFF_EPA_PLAY",
+          "representedBy": [
+            "BAL:OFF_EPA_PASS",
+            "BAL:OFF_EPA_RUSH"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        },
+        {
+          "candidateId": "DAL:OFF_EPA_PLAY",
+          "representedBy": [
+            "DAL:OFF_EPA_PASS"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        }
+      ],
+      "rendered": {
+        "fator_chave": "Passe e Corrida de BAL contra DAL: sinais compatíveis com uma oportunidade localizada.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — BAL (ataque): +0,239 EPA, faixa semanal de +0,103 EPA a +0,376 EPA; DAL (EPA permitido): +0,371 EPA, faixa semanal de +0,035 EPA a +0,707 EPA.\nCorrida — BAL (ataque): +0,208 EPA, faixa semanal de +0,136 EPA a +0,280 EPA; DAL (EPA permitido): +0,083 EPA, faixa semanal de +0,061 EPA a +0,106 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+        "alerta_vermelho": "Nos recortes de passe e corrida de BAL, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+        "veredito": "No recorte de passe e corrida do ataque de BAL contra a defesa de DAL, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. No recorte de passe do ataque de DAL contra a defesa de BAL, no EPA do ataque de DAL, há valores positivos em todas as semanas observadas; no EPA permitido pela defesa de BAL, há semanas com valores positivos e negativos. No recorte de corrida do ataque de DAL contra a defesa de BAL, no EPA do ataque de DAL, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BAL, há semanas com valores positivos e negativos. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:39.346468Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+        "contextSha256": "c76ef882eca1ed06dfd2f233d5dafca62757dd19f78309e502f9d8bf575fca94",
+        "gameId": "2026_03_BAL_DAL",
+        "resultIdentity": "8d11234e91b80fa02599490d415ddc9cc0d58ccfe62fc72417adbc5d1d63fc17",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_MIN_TB.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "TB": [
+            1,
+            2
+          ],
+          "MIN": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "MIN:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "MIN:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "MIN:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "MIN:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "MIN:DROPBACK_RATE": [
+            "positive"
+          ],
+          "MIN:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "MIN:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "MIN:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "MIN:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "TB:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "TB:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "TB:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "TB:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "TB:DROPBACK_RATE": [
+            "positive"
+          ],
+          "TB:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "TB:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "TB:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "TB:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "TB": [],
+          "MIN": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": {
+          "gaps": [],
+          "source": "etl-pipeline/data/raw/schedules/season=2026/schedules.parquet",
+          "byeConfirmed": false,
+          "unknownGap": false
+        },
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 6,
+        "adequate": 6,
+        "opportunities": 0,
+        "positivePairs": 0,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 6,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 4,
+          "SMALL_OBSERVED_WINDOW": 6,
+          "WEEKLY_VARIATION": 6
+        }
+      },
+      "noOpportunityReason": "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS",
+      "patterns": [
+        "BOTH_NEGATIVE",
+        "WEEKLY_SIGN_VARIATION"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 48,
+          "characters": 249
+        },
+        "vantagem_tatica": {
+          "words": 209,
+          "characters": 1129
+        },
+        "alerta_vermelho": {
+          "words": 53,
+          "characters": 309
+        },
+        "veredito": {
+          "words": 169,
+          "characters": 913
+        },
+        "total": {
+          "words": 479,
+          "characters": 2600
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "MIN:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "MIN:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "TB:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "TB:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "MIN:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "MIN:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "TB:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "TB:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:MIN:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:MIN:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:TB:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:TB:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [
+        {
+          "candidateId": "MIN:OFF_EPA_PLAY",
+          "representedBy": [
+            "MIN:OFF_EPA_RUSH"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        },
+        {
+          "candidateId": "TB:OFF_EPA_PLAY",
+          "representedBy": [
+            "TB:OFF_EPA_PASS"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        }
+      ],
+      "rendered": {
+        "fator_chave": "Passe e Corrida de MIN contra TB: há semanas com EPA positivo e negativo no recorte. Passe de TB contra MIN: EPA negativo no ataque de TB e no permitido pela defesa de MIN. Corrida de TB contra MIN: há semanas com EPA positivo e negativo no recorte.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — MIN (ataque): +0,020 EPA, faixa semanal de +0,019 EPA a +0,022 EPA; TB (EPA permitido): +0,126 EPA, faixa semanal de -0,073 EPA a +0,324 EPA. Ataque: positivo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — MIN (ataque): -0,107 EPA, faixa semanal de -0,160 EPA a -0,054 EPA; TB (EPA permitido): -0,187 EPA, faixa semanal de -0,470 EPA a +0,097 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nPasse — TB (ataque): -0,307 EPA, faixa semanal de -0,367 EPA a -0,247 EPA; MIN (EPA permitido): -0,078 EPA, faixa semanal de -0,097 EPA a -0,059 EPA. O ataque produziu EPA negativo e a defesa permitiu EPA negativo em todas as semanas; isso não projeta o resultado do encontro.\nCorrida — TB (ataque): +0,050 EPA, faixa semanal de -0,081 EPA a +0,180 EPA; MIN (EPA permitido): -0,294 EPA, faixa semanal de -0,429 EPA a -0,160 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.",
+        "alerta_vermelho": "As médias do EPA permitido pela defesa de TB (passe e corrida) e do ataque de TB (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas. Nos recortes de passe de TB, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+        "veredito": "No recorte de passe do ataque de MIN contra a defesa de TB, no EPA do ataque de MIN, há valores positivos em todas as semanas observadas; no EPA permitido pela defesa de TB, há semanas com valores positivos e negativos. No recorte de corrida do ataque de MIN contra a defesa de TB, no EPA do ataque de MIN, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de TB, há semanas com valores positivos e negativos. No recorte de passe do ataque de TB contra a defesa de MIN, o ataque de TB apresentou EPA negativo e a defesa de MIN permitiu EPA negativo nas semanas observadas. No recorte de corrida do ataque de TB contra a defesa de MIN, no EPA do ataque de TB, há semanas com valores positivos e negativos; no EPA permitido pela defesa de MIN, há valores negativos em todas as semanas observadas. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:39.663717Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "3ed663a50340d0bb0a34aebbe35c6e7fb88e64229df289bf8ab257f82727fc3f",
+        "contextSha256": "ab67234cec6039d09d7958454928d3f21e4d204ec5952496cc688296e4588a0f",
+        "gameId": "2026_03_MIN_TB",
+        "resultIdentity": "8fa463178b50487032c59149c53af7caf1486f053d49267538e6c1225e33f51b",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_NE_JAX.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "JAX": [
+            1,
+            2
+          ],
+          "NE": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "JAX:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "JAX:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "JAX:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "JAX:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "JAX:DROPBACK_RATE": [
+            "positive"
+          ],
+          "JAX:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "JAX:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "JAX:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "JAX:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NE:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "NE:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "NE:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "NE:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NE:DROPBACK_RATE": [
+            "positive"
+          ],
+          "NE:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "NE:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "NE:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "NE:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "JAX": [],
+          "NE": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": {
+          "gaps": [],
+          "source": "etl-pipeline/data/raw/schedules/season=2026/schedules.parquet",
+          "byeConfirmed": false,
+          "unknownGap": false
+        },
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 6,
+        "adequate": 6,
+        "opportunities": 0,
+        "positivePairs": 0,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 6,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 4,
+          "SMALL_OBSERVED_WINDOW": 6,
+          "WEEKLY_VARIATION": 6
+        }
+      },
+      "noOpportunityReason": "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS",
+      "patterns": [
+        "WEEKLY_SIGN_VARIATION"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 32,
+          "characters": 169
+        },
+        "vantagem_tatica": {
+          "words": 199,
+          "characters": 1099
+        },
+        "alerta_vermelho": {
+          "words": 46,
+          "characters": 257
+        },
+        "veredito": {
+          "words": 177,
+          "characters": 956
+        },
+        "total": {
+          "words": 454,
+          "characters": 2481
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "JAX:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "JAX:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "NE:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "NE:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "JAX:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "JAX:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "NE:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "NE:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:JAX:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:JAX:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:NE:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:NE:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [
+        {
+          "candidateId": "JAX:OFF_EPA_PLAY",
+          "representedBy": [
+            "JAX:OFF_EPA_PASS"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        },
+        {
+          "candidateId": "NE:OFF_EPA_PLAY",
+          "representedBy": [
+            "NE:OFF_EPA_PASS"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        }
+      ],
+      "rendered": {
+        "fator_chave": "Passe e Corrida de JAX contra NE: há semanas com EPA positivo e negativo no recorte. Passe e Corrida de NE contra JAX: há semanas com EPA positivo e negativo no recorte.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — JAX (ataque): +0,330 EPA, faixa semanal de -0,133 EPA a +0,793 EPA; NE (EPA permitido): -0,164 EPA, faixa semanal de -0,496 EPA a +0,168 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — JAX (ataque): +0,012 EPA, faixa semanal de -0,038 EPA a +0,062 EPA; NE (EPA permitido): -0,074 EPA, faixa semanal de -0,087 EPA a -0,061 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: negativo em todas as semanas.\nPasse — NE (ataque): -0,170 EPA, faixa semanal de -0,211 EPA a -0,128 EPA; JAX (EPA permitido): -0,046 EPA, faixa semanal de -0,364 EPA a +0,272 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas.\nCorrida — NE (ataque): -0,011 EPA, faixa semanal de -0,088 EPA a +0,066 EPA; JAX (EPA permitido): -0,011 EPA, faixa semanal de -0,058 EPA a +0,037 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: semanas positivas e negativas.",
+        "alerta_vermelho": "As médias do ataque de JAX (passe e corrida), do EPA permitido pela defesa de NE (passe), do EPA permitido pela defesa de JAX (passe e corrida) e do ataque de NE (corrida) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+        "veredito": "No recorte de passe do ataque de JAX contra a defesa de NE, no EPA do ataque de JAX, há semanas com valores positivos e negativos; no EPA permitido pela defesa de NE, há semanas com valores positivos e negativos. No recorte de corrida do ataque de JAX contra a defesa de NE, no EPA do ataque de JAX, há semanas com valores positivos e negativos; no EPA permitido pela defesa de NE, há valores negativos em todas as semanas observadas. No recorte de passe do ataque de NE contra a defesa de JAX, no EPA do ataque de NE, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de JAX, há semanas com valores positivos e negativos. No recorte de corrida do ataque de NE contra a defesa de JAX, no EPA do ataque de NE, há semanas com valores positivos e negativos; no EPA permitido pela defesa de JAX, há semanas com valores positivos e negativos. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:39.967023Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+        "contextSha256": "f4fe20090e905b66889f9f874a26f0471d3f1f3fb1d96b937ab511a6db0d2557",
+        "gameId": "2026_03_NE_JAX",
+        "resultIdentity": "56b878388b3e4aa00a6128c919b95cc5550e9b7f9476e3c85f9311592e721e20",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "cohort": "regression",
+      "knownSix": true,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/evaluations/2026-09-26/contexts/2026_03_SEA_WAS.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "WAS": [
+            1,
+            2
+          ],
+          "SEA": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "SEA:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "SEA:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "SEA:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "SEA:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "SEA:DROPBACK_RATE": [
+            "positive"
+          ],
+          "SEA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "SEA:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "SEA:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "SEA:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "WAS:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "WAS:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "WAS:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "WAS:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "WAS:DROPBACK_RATE": [
+            "positive"
+          ],
+          "WAS:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "WAS:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "WAS:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "WAS:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "WAS": [],
+          "SEA": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": {
+          "gaps": [],
+          "source": "etl-pipeline/data/raw/schedules/season=2026/schedules.parquet",
+          "byeConfirmed": false,
+          "unknownGap": false
+        },
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 6,
+        "adequate": 6,
+        "opportunities": 2,
+        "positivePairs": 2,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 4,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 4,
+          "SMALL_OBSERVED_WINDOW": 6,
+          "WEEKLY_VARIATION": 6
+        }
+      },
+      "noOpportunityReason": "HAS_OPPORTUNITY",
+      "patterns": [
+        "FAVORABLE_ATTACK_AND_DEFENSE",
+        "POSITIVE_CONVERGENCE",
+        "WEEKLY_SIGN_VARIATION"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 11,
+          "characters": 76
+        },
+        "vantagem_tatica": {
+          "words": 73,
+          "characters": 412
+        },
+        "alerta_vermelho": {
+          "words": 94,
+          "characters": 556
+        },
+        "veredito": {
+          "words": 123,
+          "characters": 697
+        },
+        "total": {
+          "words": 301,
+          "characters": 1741
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": [
+            "médias das médias semanais sem ponderação por jogadas"
+          ]
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "SEA:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "SEA:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "SEA:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "WAS:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "WAS:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:SEA:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [
+        {
+          "candidateId": "SEA:OFF_EPA_PLAY",
+          "representedBy": [
+            "SEA:OFF_EPA_PASS"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        },
+        {
+          "candidateId": "WAS:OFF_EPA_PLAY",
+          "representedBy": [
+            "WAS:OFF_EPA_PASS",
+            "WAS:OFF_EPA_RUSH"
+          ],
+          "reason": "GENERAL_SAME_SIGNAL_AND_COVERAGE"
+        }
+      ],
+      "rendered": {
+        "fator_chave": "Passe de SEA contra WAS: sinais compatíveis com uma oportunidade localizada.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — SEA (ataque): +0,382 EPA, faixa semanal de +0,168 EPA a +0,596 EPA; WAS (EPA permitido): +0,252 EPA, faixa semanal de +0,045 EPA a +0,458 EPA. O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+        "alerta_vermelho": "A leitura não se estende automaticamente a outro fundamento: Temporada 2026, semanas 1, 2 (2 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nCorrida — SEA (ataque): -0,120 EPA, faixa semanal de -0,178 EPA a -0,061 EPA; WAS (EPA permitido): -0,017 EPA, faixa semanal de -0,136 EPA a +0,102 EPA. Ataque: negativo em todas as semanas. Defesa, em EPA permitido: semanas positivas e negativas. Nos recortes de passe de SEA, há no máximo duas observações semanais por métrica; o recorte curto não estabelece um padrão duradouro.",
+        "veredito": "No recorte de passe do ataque de SEA contra a defesa de WAS, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. No recorte de corrida do ataque de SEA contra a defesa de WAS, no EPA do ataque de SEA, há valores negativos em todas as semanas observadas; no EPA permitido pela defesa de WAS, há semanas com valores positivos e negativos. No recorte de passe e corrida do ataque de WAS contra a defesa de SEA, o ataque de WAS teve EPA positivo e a defesa de SEA permitiu EPA negativo nas semanas observadas; indicadores favoráveis a ambos, sem indicar quem prevalecerá. A leitura se limita a um recorte curto. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:40.275862Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "c7019c73dbd4252b375af51225f9eddff64368c9038905913256cb589c69a990",
+        "contextSha256": "bb7ce8186ce6576b24f7d9cae04cc2d9aa77344050854f0558dd833d41ed422d",
+        "gameId": "2026_03_SEA_WAS",
+        "resultIdentity": "fa9f943ebddcad663b321d6168da02386f1934910577deb8ff82b987e1d6a05c",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "both-teams",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/local-rules-v2/regression-development/synthetic/both-teams/context.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:DEF_EPA_RUSH": [
+            "positive"
+          ],
+          "AAA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:OFF_EPA_RUSH": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 2,
+        "adequate": 2,
+        "opportunities": 2,
+        "positivePairs": 2,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 0,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 2,
+          "MISSING_ATTACK": 4,
+          "MISSING_DEFENSE": 4
+        }
+      },
+      "noOpportunityReason": "HAS_OPPORTUNITY",
+      "patterns": [
+        "POSITIVE_CONVERGENCE",
+        "UNAVAILABLE"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 22,
+          "characters": 155
+        },
+        "vantagem_tatica": {
+          "words": 70,
+          "characters": 427
+        },
+        "alerta_vermelho": {
+          "words": 25,
+          "characters": 148
+        },
+        "veredito": {
+          "words": 66,
+          "characters": 403
+        },
+        "total": {
+          "words": 183,
+          "characters": 1133
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "BBB:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "BBB:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:AAA:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:BBB:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [],
+      "rendered": {
+        "fator_chave": "Passe de AAA contra BBB: sinais compatíveis com uma oportunidade localizada. Corrida de BBB contra AAA: sinais compatíveis com uma oportunidade localizada.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,111 EPA; BBB (EPA permitido): +0,222 EPA.\nCorrida — BBB (ataque): +0,333 EPA; AAA (EPA permitido): +0,444 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+        "alerta_vermelho": "Os recortes de passe de AAA e corrida de BBB cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+        "veredito": "No recorte de passe do ataque de AAA contra a defesa de BBB, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. No recorte de corrida do ataque de BBB contra a defesa de AAA, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:40.582263Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+        "contextSha256": "bc36b1a57444c9dcb3d48fec83e11b9a58aeff9782f96577ed12bea564c1b36f",
+        "gameId": "both-teams",
+        "resultIdentity": "a03a571c9aa98f1b0e72b58c4b8383750d5737d64960150585c1d48edc0a2b2e",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "opposing-signs",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/local-rules-v2/regression-development/synthetic/fixtures/opposing-signs.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "negative"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 1,
+        "adequate": 1,
+        "opportunities": 0,
+        "positivePairs": 0,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 1,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 1,
+          "MISSING_ATTACK": 5,
+          "MISSING_DEFENSE": 5
+        }
+      },
+      "noOpportunityReason": "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS",
+      "patterns": [
+        "FAVORABLE_ATTACK_AND_DEFENSE",
+        "UNAVAILABLE"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 12,
+          "characters": 69
+        },
+        "vantagem_tatica": {
+          "words": 48,
+          "characters": 311
+        },
+        "alerta_vermelho": {
+          "words": 21,
+          "characters": 131
+        },
+        "veredito": {
+          "words": 53,
+          "characters": 310
+        },
+        "total": {
+          "words": 134,
+          "characters": 821
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:AAA:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [],
+      "rendered": {
+        "fator_chave": "Passe de AAA contra BBB: indicadores favoráveis ao ataque e à defesa.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,200 EPA; BBB (EPA permitido): -0,150 EPA. Ataque positivo e EPA permitido negativo em todas as semanas: indicadores favoráveis a ambos, sem estabelecer quem prevalecerá.",
+        "alerta_vermelho": "Os recortes de passe de AAA cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+        "veredito": "No recorte de passe do ataque de AAA contra a defesa de BBB, o ataque de AAA teve EPA positivo e a defesa de BBB permitiu EPA negativo nas semanas observadas; indicadores favoráveis a ambos, sem indicar quem prevalecerá. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:40.867092Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "1708af445b075d1dbb4eac2bb6dc5eb4528c7aa0b9ae6154bf97077be7a58c21",
+        "contextSha256": "4bf1935e595e3772fbbce3706101018e970e25249941dae6d5395875499cf23a",
+        "gameId": "opposing-signs",
+        "resultIdentity": "98f3f57bcaff677f06c84c2ba8e45ea0db788c640072be8195cc9788b3338c9d",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "tied-opportunities",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/local-rules-v2/regression-development/synthetic/fixtures/tied-opportunities.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "AAA:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_RUSH": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 2,
+        "adequate": 2,
+        "opportunities": 2,
+        "positivePairs": 2,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 0,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 2,
+          "MISSING_ATTACK": 4,
+          "MISSING_DEFENSE": 4
+        }
+      },
+      "noOpportunityReason": "HAS_OPPORTUNITY",
+      "patterns": [
+        "POSITIVE_CONVERGENCE",
+        "UNAVAILABLE"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 13,
+          "characters": 86
+        },
+        "vantagem_tatica": {
+          "words": 70,
+          "characters": 427
+        },
+        "alerta_vermelho": {
+          "words": 23,
+          "characters": 141
+        },
+        "veredito": {
+          "words": 42,
+          "characters": 255
+        },
+        "total": {
+          "words": 148,
+          "characters": 909
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "AAA:OFF_EPA_RUSH",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "AAA:OFF_EPA_RUSH",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:AAA:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          },
+          {
+            "claimId": "limit:AAA:OFF_EPA_RUSH",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [],
+      "rendered": {
+        "fator_chave": "Passe e Corrida de AAA contra BBB: sinais compatíveis com uma oportunidade localizada.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,111 EPA; BBB (EPA permitido): +0,222 EPA.\nCorrida — AAA (ataque): +0,333 EPA; BBB (EPA permitido): +0,444 EPA.\nEm cada encontro descrito: O ataque produziu EPA positivo e a defesa permitiu EPA positivo em todas as semanas do recorte; a compatibilidade não demonstra exploração no jogo.",
+        "alerta_vermelho": "Os recortes de passe e corrida de AAA cobrem até três semanas e não têm ajuste por adversário; não estabelecem uma característica permanente.",
+        "veredito": "No recorte de passe e corrida do ataque de AAA contra a defesa de BBB, há uma oportunidade localizada, com EPA ofensivo e permitido positivos nas semanas observadas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:41.159457Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "296a186f0932f4ae963d665c066338918962fbff7ae36248626d9118ad3a5cf2",
+        "contextSha256": "1f3112a3bcf18308697b955dd3d35ea49881e4239bffe376c9d163a4b83563a0",
+        "gameId": "tied-opportunities",
+        "resultIdentity": "6bbb2958e5bdd0bdd35ba6667817554a83650a2a240a3b406d9bebbd5c39391e",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    },
+    {
+      "gameId": "weekly-variation",
+      "cohort": "synthetic",
+      "knownSix": false,
+      "exitCode": 0,
+      "status": "VALIDATED",
+      "failureCategory": [],
+      "source": "editorial/local-rules-v2/regression-development/synthetic/fixtures/weekly-variation.json",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "directionalViolation": false,
+      "coverage": {
+        "encounters": 6,
+        "pairable": 1,
+        "adequate": 1,
+        "opportunities": 0,
+        "positivePairs": 0,
+        "coverageBlockedPositivePairs": 0,
+        "adequateNonPositivePairs": 1,
+        "limitations": {
+          "UNAVAILABLE_DENOMINATORS": 1,
+          "WEEKLY_VARIATION": 1,
+          "MISSING_ATTACK": 5,
+          "MISSING_DEFENSE": 5
+        }
+      },
+      "noOpportunityReason": "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS",
+      "patterns": [
+        "UNAVAILABLE",
+        "WEEKLY_SIGN_VARIATION"
+      ],
+      "length": {
+        "fator_chave": {
+          "words": 14,
+          "characters": 75
+        },
+        "vantagem_tatica": {
+          "words": 64,
+          "characters": 362
+        },
+        "alerta_vermelho": {
+          "words": 20,
+          "characters": 120
+        },
+        "veredito": {
+          "words": 55,
+          "characters": 311
+        },
+        "total": {
+          "words": 153,
+          "characters": 868
+        }
+      },
+      "repetition": [
+        {
+          "fields": [
+            "fator_chave",
+            "vantagem_tatica"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "fator_chave",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "alerta_vermelho"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "vantagem_tatica",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        },
+        {
+          "fields": [
+            "alerta_vermelho",
+            "veredito"
+          ],
+          "exact": false,
+          "normalized": false,
+          "sharedSentences": []
+        }
+      ],
+      "checks": {
+        "issues": [],
+        "observations": [
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "principal_support",
+            "numericAttribution": true,
+            "scopePresent": true,
+            "aggregationPresent": true
+          },
+          {
+            "claimId": "AAA:OFF_EPA_PASS",
+            "type": "verdict_attribution",
+            "pairAndFoundation": true,
+            "contrarySignsAndZero": true
+          },
+          {
+            "claimId": "limit:AAA:OFF_EPA_PASS",
+            "type": "internal_limit",
+            "linkedLimitationPresent": true
+          }
+        ],
+        "commonValidatorApproved": true,
+        "semanticLimit": "Structural realization probes plus common validator; not proof of complete editorial correctness"
+      },
+      "groupings": [],
+      "rendered": {
+        "fator_chave": "Passe de AAA contra BBB: há semanas com EPA positivo e negativo no recorte.",
+        "vantagem_tatica": "Temporada 2026, semanas 1, 2, 3 (3 observações por métrica). Médias das médias semanais, sem ponderação por jogadas.\nPasse — AAA (ataque): +0,167 EPA, faixa semanal de -0,100 EPA a +0,400 EPA; BBB (EPA permitido): +0,200 EPA, faixa semanal de +0,100 EPA a +0,300 EPA. Ataque: semanas positivas e negativas. Defesa, em EPA permitido: positivo em todas as semanas.",
+        "alerta_vermelho": "As médias do ataque de AAA (passe) combinam semanas de sinais diferentes; não descrevem um sinal presente em todas elas.",
+        "veredito": "No recorte de passe do ataque de AAA contra a defesa de BBB, no EPA do ataque de AAA, há semanas com valores positivos e negativos; no EPA permitido pela defesa de BBB, há valores positivos em todas as semanas observadas. A leitura se limita às semanas observadas. Esta análise descritiva não estima o vencedor."
+      },
+      "versions": {
+        "artifactVersion": 2,
+        "startedAt": "2026-10-01T20:12:41.458496Z",
+        "mode": "LOCAL_RULES_OFFLINE",
+        "contractVersion": 5,
+        "rendererVersion": "controlled-claims-v5.0.1",
+        "publicationApproved": false,
+        "selector": {
+          "name": "local-descriptive-rules",
+          "version": "2.0.0"
+        },
+        "sourceFileSha256": "1035a9a906d7b4e7779c8100f066ce30431b482b59b2a662bf6bde92e3f04577",
+        "contextSha256": "c8a21195016e161613bc8b1b667a44ce170e87439621a15b8f2c07a8d43a6ab5",
+        "gameId": "weekly-variation",
+        "resultIdentity": "fe01d36c82d9f4fcab96f6ff22b49ec7f7b3ccec970ebe94134c4829193e637a",
+        "status": "VALIDATED",
+        "validationFailures": []
+      }
+    }
+  ],
+  "all": {
+    "attempted": 10,
+    "validated": 10,
+    "failed": 0,
+    "failureCategories": {},
+    "inputRejections": 0,
+    "harnessProcessFailures": 0,
+    "validationFailures": 0,
+    "directionalViolations": 0,
+    "directionalDenominator": 10,
+    "encountersDenominator": 60,
+    "pairable": 42,
+    "adequate": 36,
+    "opportunities": 9,
+    "noOpportunityReasons": {
+      "SIGN_PATTERN_AND_COVERAGE_LIMITS_COEXIST": 1,
+      "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS": 5,
+      "HAS_OPPORTUNITY": 4
+    },
+    "limitations": {
+      "IDENTIFIABLE_CALENDAR_GAPS": 6,
+      "NOT_RECENT_COMPLETE": 6,
+      "DIFFERENT_WEEKS": 6,
+      "UNAVAILABLE_DENOMINATORS": 30,
+      "WEEKLY_VARIATION": 37,
+      "SMALL_OBSERVED_WINDOW": 30,
+      "MISSING_ATTACK": 18,
+      "MISSING_DEFENSE": 18
+    },
+    "realCasesDenominator": 6,
+    "confirmedByeCases": 1,
+    "unknownGapCauseCases": 0,
+    "textChecks": {
+      "numericAttribution": {
+        "passed": 23,
+        "denominator": 23
+      },
+      "scopePresent": {
+        "passed": 23,
+        "denominator": 23
+      },
+      "aggregationPresent": {
+        "passed": 23,
+        "denominator": 23
+      },
+      "pairAndFoundation": {
+        "passed": 32,
+        "denominator": 32
+      },
+      "contrarySignsAndZero": {
+        "passed": 32,
+        "denominator": 32
+      },
+      "linkedLimitationPresent": {
+        "passed": 23,
+        "denominator": 23
+      }
+    },
+    "textIssueCount": 0,
+    "length": {
+      "fator_chave": {
+        "words": {
+          "n": 10,
+          "values": [
+            11,
+            12,
+            13,
+            13,
+            14,
+            22,
+            32,
+            32,
+            36,
+            48
+          ],
+          "median": 18.0,
+          "p90": 36,
+          "max": 48
+        },
+        "characters": {
+          "n": 10,
+          "values": [
+            69,
+            75,
+            76,
+            86,
+            86,
+            155,
+            169,
+            169,
+            193,
+            249
+          ],
+          "median": 120.5,
+          "p90": 193,
+          "max": 249
+        }
+      },
+      "vantagem_tatica": {
+        "words": {
+          "n": 10,
+          "values": [
+            48,
+            64,
+            70,
+            70,
+            73,
+            109,
+            158,
+            199,
+            200,
+            209
+          ],
+          "median": 91.0,
+          "p90": 200,
+          "max": 209
+        },
+        "characters": {
+          "n": 10,
+          "values": [
+            311,
+            362,
+            412,
+            427,
+            427,
+            592,
+            902,
+            1098,
+            1099,
+            1129
+          ],
+          "median": 509.5,
+          "p90": 1099,
+          "max": 1129
+        }
+      },
+      "alerta_vermelho": {
+        "words": {
+          "n": 10,
+          "values": [
+            20,
+            21,
+            23,
+            24,
+            25,
+            44,
+            44,
+            46,
+            53,
+            94
+          ],
+          "median": 34.5,
+          "p90": 53,
+          "max": 94
+        },
+        "characters": {
+          "n": 10,
+          "values": [
+            120,
+            131,
+            141,
+            143,
+            148,
+            247,
+            257,
+            290,
+            309,
+            556
+          ],
+          "median": 197.5,
+          "p90": 309,
+          "max": 556
+        }
+      },
+      "veredito": {
+        "words": {
+          "n": 10,
+          "values": [
+            42,
+            53,
+            55,
+            66,
+            123,
+            124,
+            169,
+            177,
+            178,
+            215
+          ],
+          "median": 123.5,
+          "p90": 178,
+          "max": 215
+        },
+        "characters": {
+          "n": 10,
+          "values": [
+            255,
+            310,
+            311,
+            403,
+            691,
+            697,
+            913,
+            956,
+            963,
+            1190
+          ],
+          "median": 694.0,
+          "p90": 963,
+          "max": 1190
+        }
+      },
+      "total": {
+        "words": {
+          "n": 10,
+          "values": [
+            134,
+            148,
+            153,
+            183,
+            270,
+            301,
+            453,
+            454,
+            454,
+            479
+          ],
+          "median": 285.5,
+          "p90": 454,
+          "max": 479
+        },
+        "characters": {
+          "n": 10,
+          "values": [
+            821,
+            868,
+            909,
+            1133,
+            1512,
+            1741,
+            2477,
+            2481,
+            2575,
+            2600
+          ],
+          "median": 1626.5,
+          "p90": 2575,
+          "max": 2600
+        }
+      }
+    },
+    "repetition": {
+      "blockPairDenominator": 60,
+      "exactEqualPairs": 0,
+      "normalizedEqualPairs": 0,
+      "pairsWithSharedSentence": 1
+    },
+    "editorialGroupings": 10
+  },
+  "cohorts": {
+    "unseen": {
+      "attempted": 0,
+      "validated": 0,
+      "failed": 0,
+      "failureCategories": {},
+      "inputRejections": 0,
+      "harnessProcessFailures": 0,
+      "validationFailures": 0,
+      "directionalViolations": 0,
+      "directionalDenominator": 0,
+      "encountersDenominator": 0,
+      "pairable": 0,
+      "adequate": 0,
+      "opportunities": 0,
+      "noOpportunityReasons": {},
+      "limitations": {},
+      "realCasesDenominator": 0,
+      "confirmedByeCases": 0,
+      "unknownGapCauseCases": 0,
+      "textChecks": {
+        "numericAttribution": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "scopePresent": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "aggregationPresent": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "pairAndFoundation": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "contrarySignsAndZero": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "linkedLimitationPresent": {
+          "passed": 0,
+          "denominator": 0
+        }
+      },
+      "textIssueCount": 0,
+      "length": {
+        "fator_chave": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "vantagem_tatica": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "alerta_vermelho": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "veredito": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "total": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        }
+      },
+      "repetition": {
+        "blockPairDenominator": 0,
+        "exactEqualPairs": 0,
+        "normalizedEqualPairs": 0,
+        "pairsWithSharedSentence": 0
+      },
+      "editorialGroupings": 0
+    },
+    "regression": {
+      "attempted": 6,
+      "validated": 6,
+      "failed": 0,
+      "failureCategories": {},
+      "inputRejections": 0,
+      "harnessProcessFailures": 0,
+      "validationFailures": 0,
+      "directionalViolations": 0,
+      "directionalDenominator": 6,
+      "encountersDenominator": 36,
+      "pairable": 36,
+      "adequate": 30,
+      "opportunities": 5,
+      "noOpportunityReasons": {
+        "SIGN_PATTERN_AND_COVERAGE_LIMITS_COEXIST": 1,
+        "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS": 3,
+        "HAS_OPPORTUNITY": 2
+      },
+      "limitations": {
+        "IDENTIFIABLE_CALENDAR_GAPS": 6,
+        "NOT_RECENT_COMPLETE": 6,
+        "DIFFERENT_WEEKS": 6,
+        "UNAVAILABLE_DENOMINATORS": 24,
+        "WEEKLY_VARIATION": 36,
+        "SMALL_OBSERVED_WINDOW": 30
+      },
+      "realCasesDenominator": 6,
+      "confirmedByeCases": 1,
+      "unknownGapCauseCases": 0,
+      "textChecks": {
+        "numericAttribution": {
+          "passed": 17,
+          "denominator": 17
+        },
+        "scopePresent": {
+          "passed": 17,
+          "denominator": 17
+        },
+        "aggregationPresent": {
+          "passed": 17,
+          "denominator": 17
+        },
+        "pairAndFoundation": {
+          "passed": 26,
+          "denominator": 26
+        },
+        "contrarySignsAndZero": {
+          "passed": 26,
+          "denominator": 26
+        },
+        "linkedLimitationPresent": {
+          "passed": 17,
+          "denominator": 17
+        }
+      },
+      "textIssueCount": 0,
+      "length": {
+        "fator_chave": {
+          "words": {
+            "n": 6,
+            "values": [
+              11,
+              13,
+              32,
+              32,
+              36,
+              48
+            ],
+            "median": 32.0,
+            "p90": 48,
+            "max": 48
+          },
+          "characters": {
+            "n": 6,
+            "values": [
+              76,
+              86,
+              169,
+              169,
+              193,
+              249
+            ],
+            "median": 169.0,
+            "p90": 249,
+            "max": 249
+          }
+        },
+        "vantagem_tatica": {
+          "words": {
+            "n": 6,
+            "values": [
+              73,
+              109,
+              158,
+              199,
+              200,
+              209
+            ],
+            "median": 178.5,
+            "p90": 209,
+            "max": 209
+          },
+          "characters": {
+            "n": 6,
+            "values": [
+              412,
+              592,
+              902,
+              1098,
+              1099,
+              1129
+            ],
+            "median": 1000.0,
+            "p90": 1129,
+            "max": 1129
+          }
+        },
+        "alerta_vermelho": {
+          "words": {
+            "n": 6,
+            "values": [
+              24,
+              44,
+              44,
+              46,
+              53,
+              94
+            ],
+            "median": 45.0,
+            "p90": 94,
+            "max": 94
+          },
+          "characters": {
+            "n": 6,
+            "values": [
+              143,
+              247,
+              257,
+              290,
+              309,
+              556
+            ],
+            "median": 273.5,
+            "p90": 556,
+            "max": 556
+          }
+        },
+        "veredito": {
+          "words": {
+            "n": 6,
+            "values": [
+              123,
+              124,
+              169,
+              177,
+              178,
+              215
+            ],
+            "median": 173.0,
+            "p90": 215,
+            "max": 215
+          },
+          "characters": {
+            "n": 6,
+            "values": [
+              691,
+              697,
+              913,
+              956,
+              963,
+              1190
+            ],
+            "median": 934.5,
+            "p90": 1190,
+            "max": 1190
+          }
+        },
+        "total": {
+          "words": {
+            "n": 6,
+            "values": [
+              270,
+              301,
+              453,
+              454,
+              454,
+              479
+            ],
+            "median": 453.5,
+            "p90": 479,
+            "max": 479
+          },
+          "characters": {
+            "n": 6,
+            "values": [
+              1512,
+              1741,
+              2477,
+              2481,
+              2575,
+              2600
+            ],
+            "median": 2479.0,
+            "p90": 2600,
+            "max": 2600
+          }
+        }
+      },
+      "repetition": {
+        "blockPairDenominator": 36,
+        "exactEqualPairs": 0,
+        "normalizedEqualPairs": 0,
+        "pairsWithSharedSentence": 1
+      },
+      "editorialGroupings": 10
+    },
+    "synthetic": {
+      "attempted": 4,
+      "validated": 4,
+      "failed": 0,
+      "failureCategories": {},
+      "inputRejections": 0,
+      "harnessProcessFailures": 0,
+      "validationFailures": 0,
+      "directionalViolations": 0,
+      "directionalDenominator": 4,
+      "encountersDenominator": 24,
+      "pairable": 6,
+      "adequate": 6,
+      "opportunities": 4,
+      "noOpportunityReasons": {
+        "HAS_OPPORTUNITY": 2,
+        "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS": 2
+      },
+      "limitations": {
+        "UNAVAILABLE_DENOMINATORS": 6,
+        "MISSING_ATTACK": 18,
+        "MISSING_DEFENSE": 18,
+        "WEEKLY_VARIATION": 1
+      },
+      "realCasesDenominator": 0,
+      "confirmedByeCases": 0,
+      "unknownGapCauseCases": 0,
+      "textChecks": {
+        "numericAttribution": {
+          "passed": 6,
+          "denominator": 6
+        },
+        "scopePresent": {
+          "passed": 6,
+          "denominator": 6
+        },
+        "aggregationPresent": {
+          "passed": 6,
+          "denominator": 6
+        },
+        "pairAndFoundation": {
+          "passed": 6,
+          "denominator": 6
+        },
+        "contrarySignsAndZero": {
+          "passed": 6,
+          "denominator": 6
+        },
+        "linkedLimitationPresent": {
+          "passed": 6,
+          "denominator": 6
+        }
+      },
+      "textIssueCount": 0,
+      "length": {
+        "fator_chave": {
+          "words": {
+            "n": 4,
+            "values": [
+              12,
+              13,
+              14,
+              22
+            ],
+            "median": 13.5,
+            "p90": 22,
+            "max": 22
+          },
+          "characters": {
+            "n": 4,
+            "values": [
+              69,
+              75,
+              86,
+              155
+            ],
+            "median": 80.5,
+            "p90": 155,
+            "max": 155
+          }
+        },
+        "vantagem_tatica": {
+          "words": {
+            "n": 4,
+            "values": [
+              48,
+              64,
+              70,
+              70
+            ],
+            "median": 67.0,
+            "p90": 70,
+            "max": 70
+          },
+          "characters": {
+            "n": 4,
+            "values": [
+              311,
+              362,
+              427,
+              427
+            ],
+            "median": 394.5,
+            "p90": 427,
+            "max": 427
+          }
+        },
+        "alerta_vermelho": {
+          "words": {
+            "n": 4,
+            "values": [
+              20,
+              21,
+              23,
+              25
+            ],
+            "median": 22.0,
+            "p90": 25,
+            "max": 25
+          },
+          "characters": {
+            "n": 4,
+            "values": [
+              120,
+              131,
+              141,
+              148
+            ],
+            "median": 136.0,
+            "p90": 148,
+            "max": 148
+          }
+        },
+        "veredito": {
+          "words": {
+            "n": 4,
+            "values": [
+              42,
+              53,
+              55,
+              66
+            ],
+            "median": 54.0,
+            "p90": 66,
+            "max": 66
+          },
+          "characters": {
+            "n": 4,
+            "values": [
+              255,
+              310,
+              311,
+              403
+            ],
+            "median": 310.5,
+            "p90": 403,
+            "max": 403
+          }
+        },
+        "total": {
+          "words": {
+            "n": 4,
+            "values": [
+              134,
+              148,
+              153,
+              183
+            ],
+            "median": 150.5,
+            "p90": 183,
+            "max": 183
+          },
+          "characters": {
+            "n": 4,
+            "values": [
+              821,
+              868,
+              909,
+              1133
+            ],
+            "median": 888.5,
+            "p90": 1133,
+            "max": 1133
+          }
+        }
+      },
+      "repetition": {
+        "blockPairDenominator": 24,
+        "exactEqualPairs": 0,
+        "normalizedEqualPairs": 0,
+        "pairsWithSharedSentence": 0
+      },
+      "editorialGroupings": 0
+    },
+    "unknown": {
+      "attempted": 0,
+      "validated": 0,
+      "failed": 0,
+      "failureCategories": {},
+      "inputRejections": 0,
+      "harnessProcessFailures": 0,
+      "validationFailures": 0,
+      "directionalViolations": 0,
+      "directionalDenominator": 0,
+      "encountersDenominator": 0,
+      "pairable": 0,
+      "adequate": 0,
+      "opportunities": 0,
+      "noOpportunityReasons": {},
+      "limitations": {},
+      "realCasesDenominator": 0,
+      "confirmedByeCases": 0,
+      "unknownGapCauseCases": 0,
+      "textChecks": {
+        "numericAttribution": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "scopePresent": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "aggregationPresent": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "pairAndFoundation": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "contrarySignsAndZero": {
+          "passed": 0,
+          "denominator": 0
+        },
+        "linkedLimitationPresent": {
+          "passed": 0,
+          "denominator": 0
+        }
+      },
+      "textIssueCount": 0,
+      "length": {
+        "fator_chave": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "vantagem_tatica": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "alerta_vermelho": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "veredito": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        },
+        "total": {
+          "words": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          },
+          "characters": {
+            "n": 0,
+            "values": [],
+            "median": null,
+            "p90": null,
+            "max": null
+          }
+        }
+      },
+      "repetition": {
+        "blockPairDenominator": 0,
+        "exactEqualPairs": 0,
+        "normalizedEqualPairs": 0,
+        "pairsWithSharedSentence": 0
+      },
+      "editorialGroupings": 0
+    }
+  },
+  "knownSix": {
+    "attempted": 6,
+    "validated": 6,
+    "failed": 0,
+    "failureCategories": {},
+    "inputRejections": 0,
+    "harnessProcessFailures": 0,
+    "validationFailures": 0,
+    "directionalViolations": 0,
+    "directionalDenominator": 6,
+    "encountersDenominator": 36,
+    "pairable": 36,
+    "adequate": 30,
+    "opportunities": 5,
+    "noOpportunityReasons": {
+      "SIGN_PATTERN_AND_COVERAGE_LIMITS_COEXIST": 1,
+      "NO_POSITIVE_CONVERGENCE_IN_OBSERVED_SIGNS": 3,
+      "HAS_OPPORTUNITY": 2
+    },
+    "limitations": {
+      "IDENTIFIABLE_CALENDAR_GAPS": 6,
+      "NOT_RECENT_COMPLETE": 6,
+      "DIFFERENT_WEEKS": 6,
+      "UNAVAILABLE_DENOMINATORS": 24,
+      "WEEKLY_VARIATION": 36,
+      "SMALL_OBSERVED_WINDOW": 30
+    },
+    "realCasesDenominator": 6,
+    "confirmedByeCases": 1,
+    "unknownGapCauseCases": 0,
+    "textChecks": {
+      "numericAttribution": {
+        "passed": 17,
+        "denominator": 17
+      },
+      "scopePresent": {
+        "passed": 17,
+        "denominator": 17
+      },
+      "aggregationPresent": {
+        "passed": 17,
+        "denominator": 17
+      },
+      "pairAndFoundation": {
+        "passed": 26,
+        "denominator": 26
+      },
+      "contrarySignsAndZero": {
+        "passed": 26,
+        "denominator": 26
+      },
+      "linkedLimitationPresent": {
+        "passed": 17,
+        "denominator": 17
+      }
+    },
+    "textIssueCount": 0,
+    "length": {
+      "fator_chave": {
+        "words": {
+          "n": 6,
+          "values": [
+            11,
+            13,
+            32,
+            32,
+            36,
+            48
+          ],
+          "median": 32.0,
+          "p90": 48,
+          "max": 48
+        },
+        "characters": {
+          "n": 6,
+          "values": [
+            76,
+            86,
+            169,
+            169,
+            193,
+            249
+          ],
+          "median": 169.0,
+          "p90": 249,
+          "max": 249
+        }
+      },
+      "vantagem_tatica": {
+        "words": {
+          "n": 6,
+          "values": [
+            73,
+            109,
+            158,
+            199,
+            200,
+            209
+          ],
+          "median": 178.5,
+          "p90": 209,
+          "max": 209
+        },
+        "characters": {
+          "n": 6,
+          "values": [
+            412,
+            592,
+            902,
+            1098,
+            1099,
+            1129
+          ],
+          "median": 1000.0,
+          "p90": 1129,
+          "max": 1129
+        }
+      },
+      "alerta_vermelho": {
+        "words": {
+          "n": 6,
+          "values": [
+            24,
+            44,
+            44,
+            46,
+            53,
+            94
+          ],
+          "median": 45.0,
+          "p90": 94,
+          "max": 94
+        },
+        "characters": {
+          "n": 6,
+          "values": [
+            143,
+            247,
+            257,
+            290,
+            309,
+            556
+          ],
+          "median": 273.5,
+          "p90": 556,
+          "max": 556
+        }
+      },
+      "veredito": {
+        "words": {
+          "n": 6,
+          "values": [
+            123,
+            124,
+            169,
+            177,
+            178,
+            215
+          ],
+          "median": 173.0,
+          "p90": 215,
+          "max": 215
+        },
+        "characters": {
+          "n": 6,
+          "values": [
+            691,
+            697,
+            913,
+            956,
+            963,
+            1190
+          ],
+          "median": 934.5,
+          "p90": 1190,
+          "max": 1190
+        }
+      },
+      "total": {
+        "words": {
+          "n": 6,
+          "values": [
+            270,
+            301,
+            453,
+            454,
+            454,
+            479
+          ],
+          "median": 453.5,
+          "p90": 479,
+          "max": 479
+        },
+        "characters": {
+          "n": 6,
+          "values": [
+            1512,
+            1741,
+            2477,
+            2481,
+            2575,
+            2600
+          ],
+          "median": 2479.0,
+          "p90": 2600,
+          "max": 2600
+        }
+      }
+    },
+    "repetition": {
+      "blockPairDenominator": 36,
+      "exactEqualPairs": 0,
+      "normalizedEqualPairs": 0,
+      "pairsWithSharedSentence": 1
+    },
+    "editorialGroupings": 10
+  },
+  "outsideKnownSixReal": {
+    "attempted": 0,
+    "validated": 0,
+    "failed": 0,
+    "failureCategories": {},
+    "inputRejections": 0,
+    "harnessProcessFailures": 0,
+    "validationFailures": 0,
+    "directionalViolations": 0,
+    "directionalDenominator": 0,
+    "encountersDenominator": 0,
+    "pairable": 0,
+    "adequate": 0,
+    "opportunities": 0,
+    "noOpportunityReasons": {},
+    "limitations": {},
+    "realCasesDenominator": 0,
+    "confirmedByeCases": 0,
+    "unknownGapCauseCases": 0,
+    "textChecks": {
+      "numericAttribution": {
+        "passed": 0,
+        "denominator": 0
+      },
+      "scopePresent": {
+        "passed": 0,
+        "denominator": 0
+      },
+      "aggregationPresent": {
+        "passed": 0,
+        "denominator": 0
+      },
+      "pairAndFoundation": {
+        "passed": 0,
+        "denominator": 0
+      },
+      "contrarySignsAndZero": {
+        "passed": 0,
+        "denominator": 0
+      },
+      "linkedLimitationPresent": {
+        "passed": 0,
+        "denominator": 0
+      }
+    },
+    "textIssueCount": 0,
+    "length": {
+      "fator_chave": {
+        "words": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        },
+        "characters": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      },
+      "vantagem_tatica": {
+        "words": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        },
+        "characters": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      },
+      "alerta_vermelho": {
+        "words": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        },
+        "characters": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      },
+      "veredito": {
+        "words": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        },
+        "characters": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      },
+      "total": {
+        "words": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        },
+        "characters": {
+          "n": 0,
+          "values": [],
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      }
+    },
+    "repetition": {
+      "blockPairDenominator": 0,
+      "exactEqualPairs": 0,
+      "normalizedEqualPairs": 0,
+      "pairsWithSharedSentence": 0
+    },
+    "editorialGroupings": 0
+  },
+  "limits": [
+    "Historical cached generation is prior use, not a confirmed unseen case.",
+    "No independent quality estimate or Gemini evaluation claim.",
+    "Byes require the frozen complete local calendar; remaining gaps have unknown causes.",
+    "Text probes and validity do not prove editorial quality."
+  ]
+}

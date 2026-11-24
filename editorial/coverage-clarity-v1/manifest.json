@@ -1,0 +1,3394 @@
+{
+  "version": "coverage-harness-1.0.0",
+  "createdAt": "2026-10-01T20:12:23.436877+00:00",
+  "protocolSha256": "083bfcefde6ba4e9c692b9f5e0a957dff4e04715c8dcecb85750414537bcba0b",
+  "roots": [
+    "editorial",
+    "core-api/src/test/resources",
+    "etl-pipeline/data",
+    "etl-pipeline/tests"
+  ],
+  "selection": "All unique directly consumable local contexts; no sampling",
+  "seed": null,
+  "filesInventoried": 263,
+  "contextFiles": 65,
+  "uniqueNormalizedContexts": 21,
+  "duplicateContextFiles": 44,
+  "selectedCases": 21,
+  "cohorts": {
+    "regression": 17,
+    "synthetic": 4
+  },
+  "cases": [
+    {
+      "path": "editorial/evaluations/2026-09-26/uneven-context/2025_08_CHI_BAL.json",
+      "sha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+      "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d",
+      "contentSha256": "b6a6bd73413e9cfe931fa5397d1a643a955766d72570290d9e2d7f4a2952276e",
+      "gameId": "2025_08_CHI_BAL",
+      "descriptors": {
+        "season": 2025,
+        "gameWeek": 8,
+        "seasonStage": "middle",
+        "weeksByTeam": {
+          "BAL": [
+            4,
+            5,
+            6
+          ],
+          "CHI": [
+            4,
+            6,
+            7
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": true,
+        "signsByTeamMetric": {
+          "BAL:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "BAL:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "BAL:DROPBACK_RATE": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "BAL:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "BAL:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BAL:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CHI:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CHI:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "CHI:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "CHI:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CHI:DROPBACK_RATE": [
+            "positive"
+          ],
+          "CHI:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "BAL": [
+            7
+          ],
+          "CHI": [
+            5
+          ]
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "unknown"
+      },
+      "cohort": "regression",
+      "knownSix": true,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/attempt-ledger.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/cases.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-final/2025_08_CHI_BAL/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-v1/2025_08_CHI_BAL/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-development/2025_08_CHI_BAL/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/2025_08_CHI_BAL/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/uneven-context/2025_08_CHI_BAL.json",
+          "sha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+          "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/context.json",
+          "sha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+          "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/context.json",
+          "sha256": "6068fbf70857eca6420a8da971f59c2ce8976fd9cc6d68130d7350f0faf67a3c",
+          "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-final/2025_08_CHI_BAL/context.json",
+          "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+          "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-v1/2025_08_CHI_BAL/context.json",
+          "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+          "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/2025_08_CHI_BAL/context.json",
+          "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+          "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/2025_08_CHI_BAL/context.json",
+          "sha256": "a9ec4b73c72d2be8d8f4ddbb0a232b6d9cdd988fd39d22cca8d791b60f5849a4",
+          "normalizedSha256": "675da28b50c6e3f9bdacb2a257e42dc5a3dc8a3e7982f67d0146419ce5bb429d"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_ARI_SF.json",
+      "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+      "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1",
+      "contentSha256": "d933fa4ec4db28b1ef81d4d48a8624f1cbd3873c74e15213736b00a9f2f5c69f",
+      "gameId": "2026_03_ARI_SF",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "SF": [
+            1,
+            2
+          ],
+          "ARI": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "ARI:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "ARI:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "ARI:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "ARI:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "ARI:DROPBACK_RATE": [
+            "positive"
+          ],
+          "ARI:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "ARI:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "ARI:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "ARI:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "SF:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "SF:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "SF:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "SF:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "SF:DROPBACK_RATE": [
+            "positive"
+          ],
+          "SF:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "SF:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "SF:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "SF:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "SF": [],
+          "ARI": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": true,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 57
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/attempt-ledger.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/attempt-ledger.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/cases.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-final/2026_03_ARI_SF/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-v1/2026_03_ARI_SF/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-development/2026_03_ARI_SF/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/2026_03_ARI_SF/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_ARI_SF.json",
+          "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/context.json",
+          "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/context.json",
+          "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/context.json",
+          "sha256": "4956fcf6609f35048307cc338f729d8e60a4a2ac93506047e300f8ca9342782d",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-final/2026_03_ARI_SF/context.json",
+          "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-v1/2026_03_ARI_SF/context.json",
+          "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/2026_03_ARI_SF/context.json",
+          "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/2026_03_ARI_SF/context.json",
+          "sha256": "a3392545188f474dcfe4f55f5227048f50dcc95b073186ec2c4f94c5770b7623",
+          "normalizedSha256": "b6d5f3e1b36878d5d45eeb4fb97d5c836ae088af12c6b73aafe6a71ac3e36ff1"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_ATL_GB.json",
+      "sha256": "50e5ac9900ab101082dc838ed1b22c87c7ed18e2d0b832e3020c307994adf7d5",
+      "normalizedSha256": "50d4d22d99c644fd49b97ae0b72c9b5bf4af9d9cf9f2e03fc49c30c16c764520",
+      "contentSha256": "b15fc0d917d99e793a93dd230367886ea5b81c466c29d812897ce69e7695461f",
+      "gameId": "2026_03_ATL_GB",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "GB": [
+            1,
+            2
+          ],
+          "ATL": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "ATL:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "ATL:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "ATL:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "ATL:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "ATL:DROPBACK_RATE": [
+            "positive"
+          ],
+          "ATL:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "ATL:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "ATL:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "ATL:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "GB:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "GB:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "GB:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "GB:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "GB:DROPBACK_RATE": [
+            "positive"
+          ],
+          "GB:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "GB:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "GB:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "GB:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "GB": [],
+          "ATL": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 56
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_ATL_GB.json",
+          "sha256": "50e5ac9900ab101082dc838ed1b22c87c7ed18e2d0b832e3020c307994adf7d5",
+          "normalizedSha256": "50d4d22d99c644fd49b97ae0b72c9b5bf4af9d9cf9f2e03fc49c30c16c764520"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_BAL_DAL.json",
+      "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+      "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa",
+      "contentSha256": "0d7a8e2ec17572a3e6a2001e919d0655c4e6e72baf112e79d2cc8f786bfba1c3",
+      "gameId": "2026_03_BAL_DAL",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "DAL": [
+            1,
+            2
+          ],
+          "BAL": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "BAL:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BAL:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "BAL:DROPBACK_RATE": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "BAL:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "BAL:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "DAL:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "DAL:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "DAL:DEF_EPA_RUSH": [
+            "positive"
+          ],
+          "DAL:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "DAL:DROPBACK_RATE": [
+            "positive"
+          ],
+          "DAL:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "DAL:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "DAL:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "DAL:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "DAL": [],
+          "BAL": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": true,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 58
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/attempt-ledger.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/attempt-ledger.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/cases.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-final/2026_03_BAL_DAL/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-v1/2026_03_BAL_DAL/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-development/2026_03_BAL_DAL/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/2026_03_BAL_DAL/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_BAL_DAL.json",
+          "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/context.json",
+          "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/context.json",
+          "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/context.json",
+          "sha256": "d23245764a60d9ebb5c4d450e0ae42c71e31892f180d613bbd9df43d7447b16a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-final/2026_03_BAL_DAL/context.json",
+          "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-v1/2026_03_BAL_DAL/context.json",
+          "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/2026_03_BAL_DAL/context.json",
+          "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/2026_03_BAL_DAL/context.json",
+          "sha256": "e00a318c78c4fb2b55741642f80ddb655997dd87723e066098ba34e60d8afa0a",
+          "normalizedSha256": "55be73b1347ca8a41190c4d8d0d706257ed75f34dfcf9481da6138843eafaaaa"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_CAR_CLE.json",
+      "sha256": "aa92f07bc8b22c7d69e88cd48da568a63203a969360105c02c6b4932d8cf2ced",
+      "normalizedSha256": "20c6976c45af3fb1664fef82dd752309fd89ff11c7e2988d395242d6aa465b13",
+      "contentSha256": "4db5d95ae798cd75352fbeb8d88bbbb657c8f524c6ecd6e0c41475f5252cb20f",
+      "gameId": "2026_03_CAR_CLE",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "CLE": [
+            1,
+            2
+          ],
+          "CAR": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "CAR:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CAR:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "CAR:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CAR:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CAR:DROPBACK_RATE": [
+            "positive"
+          ],
+          "CAR:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "CAR:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "CAR:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CAR:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CLE:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CLE:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "CLE:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CLE:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CLE:DROPBACK_RATE": [
+            "positive"
+          ],
+          "CLE:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CLE:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "CLE:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CLE:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "CLE": [],
+          "CAR": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 59
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_CAR_CLE.json",
+          "sha256": "aa92f07bc8b22c7d69e88cd48da568a63203a969360105c02c6b4932d8cf2ced",
+          "normalizedSha256": "20c6976c45af3fb1664fef82dd752309fd89ff11c7e2988d395242d6aa465b13"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_CIN_PIT.json",
+      "sha256": "6f1ed365ecb87a88c6fb2597fd3ee62cbcb2150e9c54dfbede1213c238e126fd",
+      "normalizedSha256": "fdd5d54696bc7f12c7c8f0fcf48409717a956959a549562e1a59f00d5411dc54",
+      "contentSha256": "f5ec6bf6132d3c05a5a78327b4b115fd2af87e05b206fce473e5ad72ef372a32",
+      "gameId": "2026_03_CIN_PIT",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "PIT": [
+            1,
+            2
+          ],
+          "CIN": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "CIN:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "CIN:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "CIN:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "CIN:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CIN:DROPBACK_RATE": [
+            "positive"
+          ],
+          "CIN:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "CIN:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "CIN:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CIN:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "PIT:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "PIT:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "PIT:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "PIT:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "PIT:DROPBACK_RATE": [
+            "positive"
+          ],
+          "PIT:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "PIT:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "PIT:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "PIT:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "PIT": [],
+          "CIN": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 60
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_CIN_PIT.json",
+          "sha256": "6f1ed365ecb87a88c6fb2597fd3ee62cbcb2150e9c54dfbede1213c238e126fd",
+          "normalizedSha256": "fdd5d54696bc7f12c7c8f0fcf48409717a956959a549562e1a59f00d5411dc54"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_HOU_IND.json",
+      "sha256": "0fe5097c9614ea00f28a3463ba95575bc4511a847e6ea6631eb114c4741b8b6c",
+      "normalizedSha256": "c4917b5668235056dac328d802156f82b504b5f4f177ef627ae15935a15447b3",
+      "contentSha256": "b3a008679f7367aca45448dc2a09e8ef6620a3a13add0373c63dd824dcc63daf",
+      "gameId": "2026_03_HOU_IND",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "IND": [
+            1,
+            2
+          ],
+          "HOU": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "HOU:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "HOU:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "HOU:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "HOU:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "HOU:DROPBACK_RATE": [
+            "positive"
+          ],
+          "HOU:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "HOU:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "HOU:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "HOU:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "IND:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "IND:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "IND:DEF_EPA_RUSH": [
+            "positive"
+          ],
+          "IND:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "IND:DROPBACK_RATE": [
+            "positive"
+          ],
+          "IND:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "IND:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "IND:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "IND:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "IND": [],
+          "HOU": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 61
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_HOU_IND.json",
+          "sha256": "0fe5097c9614ea00f28a3463ba95575bc4511a847e6ea6631eb114c4741b8b6c",
+          "normalizedSha256": "c4917b5668235056dac328d802156f82b504b5f4f177ef627ae15935a15447b3"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_KC_MIA.json",
+      "sha256": "bbf0777d9cd422d4362370dac0504a5248e405eb36218b60bcc9675716abb301",
+      "normalizedSha256": "156d6fdf2edbf2bfed4536becaa4555bbb3b05cc0f006cd56f68d78d5487a364",
+      "contentSha256": "f7b5e3d141de4e84814abadef87ac8815437a3c8acc3cd4964022671750cbdd8",
+      "gameId": "2026_03_KC_MIA",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "MIA": [
+            1,
+            2
+          ],
+          "KC": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "KC:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "KC:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "KC:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "KC:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "KC:DROPBACK_RATE": [
+            "positive"
+          ],
+          "KC:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "KC:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "KC:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "KC:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "MIA:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "MIA:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "MIA:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "MIA:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "MIA:DROPBACK_RATE": [
+            "positive"
+          ],
+          "MIA:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "MIA:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "MIA:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "MIA:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "MIA": [],
+          "KC": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 62
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_KC_MIA.json",
+          "sha256": "bbf0777d9cd422d4362370dac0504a5248e405eb36218b60bcc9675716abb301",
+          "normalizedSha256": "156d6fdf2edbf2bfed4536becaa4555bbb3b05cc0f006cd56f68d78d5487a364"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LAC_BUF.json",
+      "sha256": "d1e58898f359098b681653d338ce89ad0f7178cc154fa7a8a6018dd12ebe89d5",
+      "normalizedSha256": "7191a95282007bfbfa1925c8812f01322ce0b0bb6e0d2705049b521b00e406ee",
+      "contentSha256": "16d1c683394d3993236c39366a6ecdd90b280c413be308973355b030ae406ab7",
+      "gameId": "2026_03_LAC_BUF",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "BUF": [
+            1,
+            2
+          ],
+          "LAC": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "BUF:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "BUF:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "BUF:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BUF:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "BUF:DROPBACK_RATE": [
+            "positive"
+          ],
+          "BUF:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "BUF:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "BUF:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "BUF:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "LAC:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "LAC:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "LAC:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "LAC:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "LAC:DROPBACK_RATE": [
+            "positive"
+          ],
+          "LAC:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "LAC:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "LAC:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "LAC:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "BUF": [],
+          "LAC": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 63
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LAC_BUF.json",
+          "sha256": "d1e58898f359098b681653d338ce89ad0f7178cc154fa7a8a6018dd12ebe89d5",
+          "normalizedSha256": "7191a95282007bfbfa1925c8812f01322ce0b0bb6e0d2705049b521b00e406ee"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LA_DEN.json",
+      "sha256": "8e28dd4668e61e6f017ce512eaa1e951d5fc19e7961f2418b752e7e2fd06749f",
+      "normalizedSha256": "70b34e272777dd2d1ff3030e0f2997cd856fb525c8515b2d5cb26b16adcf5d73",
+      "contentSha256": "79b7d218d5dce79934c2bd2975f3e00b71bf6eedf6825fe1b759a864f1a0b471",
+      "gameId": "2026_03_LA_DEN",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "DEN": [
+            1,
+            2
+          ],
+          "LA": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "DEN:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "DEN:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "DEN:DEF_EPA_RUSH": [
+            "positive"
+          ],
+          "DEN:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "DEN:DROPBACK_RATE": [
+            "positive"
+          ],
+          "DEN:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "DEN:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "DEN:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "DEN:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "LA:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "LA:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "LA:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "LA:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "LA:DROPBACK_RATE": [
+            "positive"
+          ],
+          "LA:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "LA:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "LA:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "LA:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "DEN": [],
+          "LA": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 64
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LA_DEN.json",
+          "sha256": "8e28dd4668e61e6f017ce512eaa1e951d5fc19e7961f2418b752e7e2fd06749f",
+          "normalizedSha256": "70b34e272777dd2d1ff3030e0f2997cd856fb525c8515b2d5cb26b16adcf5d73"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LV_NO.json",
+      "sha256": "ee6b6f9aff1c9277d6e55ace2cd254d59a3c7ecf77954a8f5dbcc61b3d898fbd",
+      "normalizedSha256": "dace00b442c50bb0d3359a857fb94532d6b5b5a161e9f812a6e0eea08915228e",
+      "contentSha256": "a28928e7e690f5e62d644e98f1ef2a15535819a600bc286117b062f6f136ec0e",
+      "gameId": "2026_03_LV_NO",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "NO": [
+            1,
+            2
+          ],
+          "LV": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "LV:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "LV:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "LV:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "LV:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "LV:DROPBACK_RATE": [
+            "positive"
+          ],
+          "LV:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "LV:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "LV:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "LV:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NO:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "NO:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "NO:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "NO:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NO:DROPBACK_RATE": [
+            "positive"
+          ],
+          "NO:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "NO:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "NO:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "NO:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "NO": [],
+          "LV": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 65
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_LV_NO.json",
+          "sha256": "ee6b6f9aff1c9277d6e55ace2cd254d59a3c7ecf77954a8f5dbcc61b3d898fbd",
+          "normalizedSha256": "dace00b442c50bb0d3359a857fb94532d6b5b5a161e9f812a6e0eea08915228e"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_MIN_TB.json",
+      "sha256": "3ed663a50340d0bb0a34aebbe35c6e7fb88e64229df289bf8ab257f82727fc3f",
+      "normalizedSha256": "c24f1b1d51ed957e4fc4f970f0f64e4cf318ab932e4c9ae8794442241fb621d0",
+      "contentSha256": "3c156340bbc1b5ea555afc75d542c1ac17f06204a2a951aa4a39a9028ec7f5b7",
+      "gameId": "2026_03_MIN_TB",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "TB": [
+            1,
+            2
+          ],
+          "MIN": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "MIN:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "MIN:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "MIN:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "MIN:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "MIN:DROPBACK_RATE": [
+            "positive"
+          ],
+          "MIN:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "MIN:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "MIN:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "MIN:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "TB:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "TB:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "TB:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "TB:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "TB:DROPBACK_RATE": [
+            "positive"
+          ],
+          "TB:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "TB:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "TB:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "TB:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "TB": [],
+          "MIN": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": true,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 66
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/cases.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/holdout-v1/2026_03_MIN_TB/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-development/2026_03_MIN_TB/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/2026_03_MIN_TB/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_MIN_TB.json",
+          "sha256": "3ed663a50340d0bb0a34aebbe35c6e7fb88e64229df289bf8ab257f82727fc3f",
+          "normalizedSha256": "c24f1b1d51ed957e4fc4f970f0f64e4cf318ab932e4c9ae8794442241fb621d0"
+        },
+        {
+          "path": "editorial/local-rules-runs/holdout-v1/2026_03_MIN_TB/context.json",
+          "sha256": "dc4fc18739fc8f8f5bf34ef9e8e1a7d0b3e5b25d2841523de1077959149bea0d",
+          "normalizedSha256": "c24f1b1d51ed957e4fc4f970f0f64e4cf318ab932e4c9ae8794442241fb621d0"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/2026_03_MIN_TB/context.json",
+          "sha256": "dc4fc18739fc8f8f5bf34ef9e8e1a7d0b3e5b25d2841523de1077959149bea0d",
+          "normalizedSha256": "c24f1b1d51ed957e4fc4f970f0f64e4cf318ab932e4c9ae8794442241fb621d0"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/2026_03_MIN_TB/context.json",
+          "sha256": "dc4fc18739fc8f8f5bf34ef9e8e1a7d0b3e5b25d2841523de1077959149bea0d",
+          "normalizedSha256": "c24f1b1d51ed957e4fc4f970f0f64e4cf318ab932e4c9ae8794442241fb621d0"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_NE_JAX.json",
+      "sha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+      "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a",
+      "contentSha256": "281e961a3a4275f558ee5e174374df17b1b9fd0dc94f7e9fe9e47791d6877fc9",
+      "gameId": "2026_03_NE_JAX",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "JAX": [
+            1,
+            2
+          ],
+          "NE": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "JAX:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "JAX:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "JAX:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "JAX:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "JAX:DROPBACK_RATE": [
+            "positive"
+          ],
+          "JAX:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "JAX:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "JAX:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "JAX:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NE:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "NE:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "NE:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "NE:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NE:DROPBACK_RATE": [
+            "positive"
+          ],
+          "NE:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "NE:OFF_EPA_PLAY": [
+            "negative"
+          ],
+          "NE:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "NE:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "JAX": [],
+          "NE": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": true,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 67
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/attempt-ledger.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/cases.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-final/2026_03_NE_JAX/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/development-v1/2026_03_NE_JAX/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-development/2026_03_NE_JAX/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/2026_03_NE_JAX/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_NE_JAX.json",
+          "sha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+          "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/context.json",
+          "sha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+          "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a"
+        },
+        {
+          "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/context.json",
+          "sha256": "e064b79cbb7516fdbef4fe6d8f17e12dd1aca4943c6d779f80d0d35f94c30520",
+          "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-final/2026_03_NE_JAX/context.json",
+          "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+          "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a"
+        },
+        {
+          "path": "editorial/local-rules-runs/development-v1/2026_03_NE_JAX/context.json",
+          "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+          "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/2026_03_NE_JAX/context.json",
+          "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+          "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/2026_03_NE_JAX/context.json",
+          "sha256": "58d70c4474d86117e7420be3aa46457a0a0b5fa7f7c3462dba854320f6c33894",
+          "normalizedSha256": "cfa34d8621af07baecec076aa2e9c848f5a5ab2baddd9e44d00acfa875ce451a"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_NYJ_DET.json",
+      "sha256": "05c981bac14590cf65f06d9cc296f52b2f61fd40f3c18ec96aca66b78341c7ed",
+      "normalizedSha256": "c2732f138b4560532d7142fac635c2b9e36c4967736df8e6218181c860534d28",
+      "contentSha256": "8f6a93b8bee5bf37435c3c841ea64de8feb03875a063d989237221a97f0e4efe",
+      "gameId": "2026_03_NYJ_DET",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "DET": [
+            1,
+            2
+          ],
+          "NYJ": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "DET:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "DET:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "DET:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "DET:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "DET:DROPBACK_RATE": [
+            "positive"
+          ],
+          "DET:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "DET:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "DET:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "DET:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NYJ:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "NYJ:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "NYJ:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "NYJ:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NYJ:DROPBACK_RATE": [
+            "positive"
+          ],
+          "NYJ:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "NYJ:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "NYJ:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "NYJ:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "DET": [],
+          "NYJ": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 68
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_NYJ_DET.json",
+          "sha256": "05c981bac14590cf65f06d9cc296f52b2f61fd40f3c18ec96aca66b78341c7ed",
+          "normalizedSha256": "c2732f138b4560532d7142fac635c2b9e36c4967736df8e6218181c860534d28"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_PHI_CHI.json",
+      "sha256": "ea0592cb77e9e2cc4a57d4916357d33a50716196bada1cce74a52040e1fb206e",
+      "normalizedSha256": "df4fad5bf08df2da77cfca585fa67274dad77882a36a5020b36809e8f2851c50",
+      "contentSha256": "eb1dec1f5885e0b3a66b1665ee39776b182ca547d4602519a361579d2427f099",
+      "gameId": "2026_03_PHI_CHI",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "CHI": [
+            1,
+            2
+          ],
+          "PHI": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "CHI:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "CHI:DEF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "CHI:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CHI:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "CHI:DROPBACK_RATE": [
+            "positive"
+          ],
+          "CHI:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "CHI:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "PHI:DEF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "PHI:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "PHI:DEF_EPA_RUSH": [
+            "positive"
+          ],
+          "PHI:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "PHI:DROPBACK_RATE": [
+            "positive"
+          ],
+          "PHI:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "PHI:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "PHI:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "PHI:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "CHI": [],
+          "PHI": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 71
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_PHI_CHI.json",
+          "sha256": "ea0592cb77e9e2cc4a57d4916357d33a50716196bada1cce74a52040e1fb206e",
+          "normalizedSha256": "df4fad5bf08df2da77cfca585fa67274dad77882a36a5020b36809e8f2851c50"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_SEA_WAS.json",
+      "sha256": "c7019c73dbd4252b375af51225f9eddff64368c9038905913256cb589c69a990",
+      "normalizedSha256": "70dcc8a17196780d89cb49cb65fa3307bb627067c8392934da99d198eaea16cc",
+      "contentSha256": "7e7751241f8a4c844ddb146d9be1890f6becc0e2f23c63440ba6d861bb904626",
+      "gameId": "2026_03_SEA_WAS",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "WAS": [
+            1,
+            2
+          ],
+          "SEA": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "SEA:DEF_EPA_PASS": [
+            "negative"
+          ],
+          "SEA:DEF_EPA_PLAY": [
+            "negative"
+          ],
+          "SEA:DEF_EPA_RUSH": [
+            "negative"
+          ],
+          "SEA:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "SEA:DROPBACK_RATE": [
+            "positive"
+          ],
+          "SEA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "SEA:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "SEA:OFF_EPA_RUSH": [
+            "negative"
+          ],
+          "SEA:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "WAS:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "WAS:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "WAS:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "WAS:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "WAS:DROPBACK_RATE": [
+            "positive"
+          ],
+          "WAS:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "WAS:OFF_EPA_PLAY": [
+            "positive"
+          ],
+          "WAS:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "WAS:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "WAS": [],
+          "SEA": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": true,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 69
+        },
+        {
+          "source": "editorial/evaluations/2026-09-26/cases.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-runs/holdout-v1/2026_03_SEA_WAS/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-development/2026_03_SEA_WAS/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/2026_03_SEA_WAS/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_SEA_WAS.json",
+          "sha256": "c7019c73dbd4252b375af51225f9eddff64368c9038905913256cb589c69a990",
+          "normalizedSha256": "70dcc8a17196780d89cb49cb65fa3307bb627067c8392934da99d198eaea16cc"
+        },
+        {
+          "path": "editorial/local-rules-runs/holdout-v1/2026_03_SEA_WAS/context.json",
+          "sha256": "66b597560b699b78e751e5334cfd69701acbb02f57414700c093273183dccffa",
+          "normalizedSha256": "70dcc8a17196780d89cb49cb65fa3307bb627067c8392934da99d198eaea16cc"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/2026_03_SEA_WAS/context.json",
+          "sha256": "66b597560b699b78e751e5334cfd69701acbb02f57414700c093273183dccffa",
+          "normalizedSha256": "70dcc8a17196780d89cb49cb65fa3307bb627067c8392934da99d198eaea16cc"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/2026_03_SEA_WAS/context.json",
+          "sha256": "66b597560b699b78e751e5334cfd69701acbb02f57414700c093273183dccffa",
+          "normalizedSha256": "70dcc8a17196780d89cb49cb65fa3307bb627067c8392934da99d198eaea16cc"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/contexts/2026_03_TEN_NYG.json",
+      "sha256": "c84caffcfc0ee855e95fe312274b621facf2dfc8b3c5152a9e186975695825a6",
+      "normalizedSha256": "39ac6972b772df4fce624aa04e9510ed53b21ddf1c505c0c0295b43d22469e65",
+      "contentSha256": "e61840c01de41382e9f381b7995c95392ac33dbe2b453f83fc4d69d49d14db44",
+      "gameId": "2026_03_TEN_NYG",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 3,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "NYG": [
+            1,
+            2
+          ],
+          "TEN": [
+            1,
+            2
+          ]
+        },
+        "weekCounts": [
+          2,
+          2
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "NYG:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "NYG:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "NYG:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "NYG:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "NYG:DROPBACK_RATE": [
+            "positive"
+          ],
+          "NYG:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "NYG:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "NYG:OFF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "NYG:OFF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "TEN:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "TEN:DEF_EPA_PLAY": [
+            "positive"
+          ],
+          "TEN:DEF_EPA_RUSH": [
+            "negative",
+            "positive"
+          ],
+          "TEN:DEF_SUCCESS_RATE": [
+            "positive"
+          ],
+          "TEN:DROPBACK_RATE": [
+            "positive"
+          ],
+          "TEN:OFF_EPA_PASS": [
+            "negative"
+          ],
+          "TEN:OFF_EPA_PLAY": [
+            "negative",
+            "positive"
+          ],
+          "TEN:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "TEN:OFF_SUCCESS_RATE": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "NYG": [],
+          "TEN": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "regression",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+          "type": "prior_cached_generation",
+          "cacheId": 70
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/evaluations/2026-09-26/contexts/2026_03_TEN_NYG.json",
+          "sha256": "c84caffcfc0ee855e95fe312274b621facf2dfc8b3c5152a9e186975695825a6",
+          "normalizedSha256": "39ac6972b772df4fce624aa04e9510ed53b21ddf1c505c0c0295b43d22469e65"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/both-teams/context.json",
+      "sha256": "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+      "normalizedSha256": "984800bab7bc2cc2fdf60e14b487a9170b1aa6eb1aa62e10cbaf6c0f32cb9a15",
+      "contentSha256": "9a0c3ffd3bffe3675f7b71200f84fcf5396d0ca0b1ebf4dfadc0231d706e8f21",
+      "gameId": "both-teams",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:DEF_EPA_RUSH": [
+            "positive"
+          ],
+          "AAA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:OFF_EPA_RUSH": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "synthetic",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/local-rules-v2/regression-development/synthetic/both-teams/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/synthetic/both-teams/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/both-teams/context.json",
+          "sha256": "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+          "normalizedSha256": "984800bab7bc2cc2fdf60e14b487a9170b1aa6eb1aa62e10cbaf6c0f32cb9a15"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/fixtures/both-teams.json",
+          "sha256": "eb328554225ff9cc35151f8ff09471e4717ec4c89baf51383a08a69dd284312a",
+          "normalizedSha256": "984800bab7bc2cc2fdf60e14b487a9170b1aa6eb1aa62e10cbaf6c0f32cb9a15"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/both-teams/context.json",
+          "sha256": "6fbe30969ec15d418b6860b29a84452457b6e1b9988e363857099076acc80248",
+          "normalizedSha256": "984800bab7bc2cc2fdf60e14b487a9170b1aa6eb1aa62e10cbaf6c0f32cb9a15"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/both-teams.json",
+          "sha256": "eb328554225ff9cc35151f8ff09471e4717ec4c89baf51383a08a69dd284312a",
+          "normalizedSha256": "984800bab7bc2cc2fdf60e14b487a9170b1aa6eb1aa62e10cbaf6c0f32cb9a15"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/fixtures/opposing-signs.json",
+      "sha256": "1708af445b075d1dbb4eac2bb6dc5eb4528c7aa0b9ae6154bf97077be7a58c21",
+      "normalizedSha256": "c00c888531896a7f6bb74e75da209dd68f8c0e6ac5b080e33ae9c50fb20cc4a5",
+      "contentSha256": "5355cb9ed731da3d4cddc0115a26aa0a3fbe912430dd1a252558c6648eb910f5",
+      "gameId": "opposing-signs",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "negative"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "synthetic",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/local-rules-v2/regression-development/synthetic/opposing-signs/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/synthetic/opposing-signs/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/fixtures/opposing-signs.json",
+          "sha256": "1708af445b075d1dbb4eac2bb6dc5eb4528c7aa0b9ae6154bf97077be7a58c21",
+          "normalizedSha256": "c00c888531896a7f6bb74e75da209dd68f8c0e6ac5b080e33ae9c50fb20cc4a5"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/opposing-signs/context.json",
+          "sha256": "cd56cd83694a27d09688876d4f25c458769597e8d9baacc328c178b886f7102f",
+          "normalizedSha256": "c00c888531896a7f6bb74e75da209dd68f8c0e6ac5b080e33ae9c50fb20cc4a5"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/opposing-signs.json",
+          "sha256": "1708af445b075d1dbb4eac2bb6dc5eb4528c7aa0b9ae6154bf97077be7a58c21",
+          "normalizedSha256": "c00c888531896a7f6bb74e75da209dd68f8c0e6ac5b080e33ae9c50fb20cc4a5"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/opposing-signs/context.json",
+          "sha256": "cd56cd83694a27d09688876d4f25c458769597e8d9baacc328c178b886f7102f",
+          "normalizedSha256": "c00c888531896a7f6bb74e75da209dd68f8c0e6ac5b080e33ae9c50fb20cc4a5"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/fixtures/tied-opportunities.json",
+      "sha256": "296a186f0932f4ae963d665c066338918962fbff7ae36248626d9118ad3a5cf2",
+      "normalizedSha256": "fb5422a585ed0fd9784c57a2fc9e8a65f0d9b19775ca852cdf49cd3a5ffd5fca",
+      "contentSha256": "b840c12729f35722f6c657e8031ce945418aba6b3da6c4b05e777b09f84c156a",
+      "gameId": "tied-opportunities",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:OFF_EPA_PASS": [
+            "positive"
+          ],
+          "AAA:OFF_EPA_RUSH": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "positive"
+          ],
+          "BBB:DEF_EPA_RUSH": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "synthetic",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/local-rules-v2/regression-development/synthetic/tied-opportunities/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/synthetic/tied-opportunities/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/fixtures/tied-opportunities.json",
+          "sha256": "296a186f0932f4ae963d665c066338918962fbff7ae36248626d9118ad3a5cf2",
+          "normalizedSha256": "fb5422a585ed0fd9784c57a2fc9e8a65f0d9b19775ca852cdf49cd3a5ffd5fca"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/tied-opportunities/context.json",
+          "sha256": "ff5cb9514fc711f475a0d422a5aa7ce0b68ed2419c63df37567ba576da30d859",
+          "normalizedSha256": "fb5422a585ed0fd9784c57a2fc9e8a65f0d9b19775ca852cdf49cd3a5ffd5fca"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/tied-opportunities.json",
+          "sha256": "296a186f0932f4ae963d665c066338918962fbff7ae36248626d9118ad3a5cf2",
+          "normalizedSha256": "fb5422a585ed0fd9784c57a2fc9e8a65f0d9b19775ca852cdf49cd3a5ffd5fca"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/tied-opportunities/context.json",
+          "sha256": "ff5cb9514fc711f475a0d422a5aa7ce0b68ed2419c63df37567ba576da30d859",
+          "normalizedSha256": "fb5422a585ed0fd9784c57a2fc9e8a65f0d9b19775ca852cdf49cd3a5ffd5fca"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/fixtures/weekly-variation.json",
+      "sha256": "1035a9a906d7b4e7779c8100f066ce30431b482b59b2a662bf6bde92e3f04577",
+      "normalizedSha256": "d82369e53efde2aee910ceba7cc6381294d4fb099611d71849ef93bcf4ea1be3",
+      "contentSha256": "1d4419c020975dd8fcd28c839dfe68e1493f6bf8297b190ab181171a8381f408",
+      "gameId": "weekly-variation",
+      "descriptors": {
+        "season": 2026,
+        "gameWeek": 4,
+        "seasonStage": "early",
+        "weeksByTeam": {
+          "AAA": [
+            1,
+            2,
+            3
+          ],
+          "BBB": [
+            1,
+            2,
+            3
+          ]
+        },
+        "weekCounts": [
+          3,
+          3
+        ],
+        "differentWeeks": false,
+        "signsByTeamMetric": {
+          "AAA:OFF_EPA_PASS": [
+            "negative",
+            "positive"
+          ],
+          "BBB:DEF_EPA_PASS": [
+            "positive"
+          ]
+        },
+        "missingExpectedWeeks": {
+          "AAA": [],
+          "BBB": []
+        },
+        "byeConfirmed": false,
+        "byeEvidence": null,
+        "gapCause": "no_gap_identified"
+      },
+      "cohort": "synthetic",
+      "knownSix": false,
+      "usageHistory": [
+        {
+          "source": "editorial/local-rules-v2/regression-development/synthetic/weekly-variation/result.json",
+          "type": "prior_evaluation_record"
+        },
+        {
+          "source": "editorial/local-rules-v2/regression-final/synthetic/weekly-variation/result.json",
+          "type": "prior_evaluation_record"
+        }
+      ],
+      "novelty": "not_independent",
+      "origins": [
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/fixtures/weekly-variation.json",
+          "sha256": "1035a9a906d7b4e7779c8100f066ce30431b482b59b2a662bf6bde92e3f04577",
+          "normalizedSha256": "d82369e53efde2aee910ceba7cc6381294d4fb099611d71849ef93bcf4ea1be3"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-development/synthetic/weekly-variation/context.json",
+          "sha256": "65c36895567b1bfd064e2b6eb0d29d81ffbd47a5daaea3dcaa94c59528d82072",
+          "normalizedSha256": "d82369e53efde2aee910ceba7cc6381294d4fb099611d71849ef93bcf4ea1be3"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/fixtures/weekly-variation.json",
+          "sha256": "1035a9a906d7b4e7779c8100f066ce30431b482b59b2a662bf6bde92e3f04577",
+          "normalizedSha256": "d82369e53efde2aee910ceba7cc6381294d4fb099611d71849ef93bcf4ea1be3"
+        },
+        {
+          "path": "editorial/local-rules-v2/regression-final/synthetic/weekly-variation/context.json",
+          "sha256": "65c36895567b1bfd064e2b6eb0d29d81ffbd47a5daaea3dcaa94c59528d82072",
+          "normalizedSha256": "d82369e53efde2aee910ceba7cc6381294d4fb099611d71849ef93bcf4ea1be3"
+        }
+      ],
+      "distinctNormalizedVersions": 1
+    }
+  ],
+  "excluded": [
+    {
+      "path": "editorial/analysis-selections.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/attempt-ledger.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorization.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_ARI_SF/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/2026_03_BAL_DAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/resume-1790513136516.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-adjusted/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2025_08_CHI_BAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_ARI_SF/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_BAL_DAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/2026_03_NE_JAX/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/authorized-initial/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2025_08_CHI_BAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_ARI_SF/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_BAL_DAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/2026_03_NE_JAX/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/baseline-development/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/cases.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/completion-adjusted-remainder.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/completion-adjusted.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/completion-initial.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-both/GEMINI_API_KEY/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-both/GEMINI_API_KEY/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-both/GEMINI_API_KEY_PROD/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-both/GEMINI_API_KEY_PROD/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-both/comparison.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-prod/attempt.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-prod/interpretation.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/credential-diagnostic-prod/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/evaluation-results.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted/hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/adjusted-remainder/hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/final/hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/frozen-input-hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/initial/hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/publication-hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/regression/criteria.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/regression/integrity.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/regression/originals.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/regression/published-originals.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/regression/uneven-input.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/regression/uneven-source.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/reservation-adjusted.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/reservation-initial.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/verification.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2025_08_CHI_BAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2025_08_CHI_BAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2025_08_CHI_BAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2025_08_CHI_BAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_ARI_SF/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_ARI_SF/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_ARI_SF/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_ARI_SF/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_BAL_DAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_BAL_DAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_BAL_DAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_BAL_DAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_NE_JAX/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_NE_JAX/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_NE_JAX/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/2026_03_NE_JAX/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/results.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-final/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2025_08_CHI_BAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2025_08_CHI_BAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2025_08_CHI_BAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2025_08_CHI_BAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_ARI_SF/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_ARI_SF/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_ARI_SF/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_ARI_SF/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_BAL_DAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_BAL_DAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_BAL_DAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_BAL_DAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_NE_JAX/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_NE_JAX/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_NE_JAX/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/2026_03_NE_JAX/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/results.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/development-v1/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/evaluation-plan.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/evaluation-summary.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_MIN_TB/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_MIN_TB/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_MIN_TB/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_MIN_TB/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_SEA_WAS/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_SEA_WAS/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_SEA_WAS/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/2026_03_SEA_WAS/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/results.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/holdout-v1/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/public-data-integrity-before-holdout.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/rules-v1.freeze.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-runs/verification.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/preserved-input-hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2025_08_CHI_BAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2025_08_CHI_BAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2025_08_CHI_BAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2025_08_CHI_BAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_ARI_SF/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_ARI_SF/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_ARI_SF/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_ARI_SF/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_BAL_DAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_BAL_DAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_BAL_DAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_BAL_DAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_MIN_TB/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_MIN_TB/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_MIN_TB/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_MIN_TB/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_NE_JAX/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_NE_JAX/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_NE_JAX/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_NE_JAX/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_SEA_WAS/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_SEA_WAS/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_SEA_WAS/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/2026_03_SEA_WAS/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/comparison.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/results.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/both-teams/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/both-teams/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/both-teams/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/both-teams/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/opposing-signs/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/opposing-signs/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/opposing-signs/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/opposing-signs/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/tied-opportunities/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/tied-opportunities/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/tied-opportunities/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/tied-opportunities/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/weekly-variation/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/weekly-variation/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/weekly-variation/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-development/synthetic/weekly-variation/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2025_08_CHI_BAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2025_08_CHI_BAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2025_08_CHI_BAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2025_08_CHI_BAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_ARI_SF/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_ARI_SF/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_ARI_SF/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_ARI_SF/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_BAL_DAL/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_BAL_DAL/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_BAL_DAL/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_BAL_DAL/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_MIN_TB/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_MIN_TB/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_MIN_TB/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_MIN_TB/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_NE_JAX/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_NE_JAX/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_NE_JAX/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_NE_JAX/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_SEA_WAS/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_SEA_WAS/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_SEA_WAS/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/2026_03_SEA_WAS/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/comparison.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/results.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/run.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/both-teams/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/both-teams/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/both-teams/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/both-teams/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/opposing-signs/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/opposing-signs/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/opposing-signs/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/opposing-signs/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/tied-opportunities/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/tied-opportunities/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/tied-opportunities/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/tied-opportunities/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/weekly-variation/claims.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/weekly-variation/rendered.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/weekly-variation/result.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/regression-final/synthetic/weekly-variation/selection.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/release-v2-hashes.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "editorial/local-rules-v2/verification.json",
+      "reason": "NOT_TACTICAL_CONTEXT"
+    },
+    {
+      "path": "etl-pipeline/data/raw/pbp/season=2023/pbp.parquet",
+      "reason": "NOT_DIRECT_CONTEXT_FORMAT",
+      "sha256": "19fc2ce8abb85be47fad16ceff178c67d6581309e87d53bb70c4531373867b1e"
+    },
+    {
+      "path": "etl-pipeline/data/raw/pbp/season=2025/pbp.parquet",
+      "reason": "NOT_DIRECT_CONTEXT_FORMAT",
+      "sha256": "5ed293fdf54d79e34426133829f3111faf577db29b8cfc25cf910d75eb55b2ef"
+    },
+    {
+      "path": "etl-pipeline/data/raw/pbp/season=2026/pbp.parquet",
+      "reason": "NOT_DIRECT_CONTEXT_FORMAT",
+      "sha256": "4e3707397912babcd0d7d02abd3be95db8e66785250e62bf9d874f37229d895e"
+    },
+    {
+      "path": "etl-pipeline/data/raw/schedules/season=2023/schedules.parquet",
+      "reason": "NOT_DIRECT_CONTEXT_FORMAT",
+      "sha256": "374486417a0ba32495817457c26b77e09499c7614b0285086cf41ccef9d759cc"
+    },
+    {
+      "path": "etl-pipeline/data/raw/schedules/season=2025/schedules.parquet",
+      "reason": "NOT_DIRECT_CONTEXT_FORMAT",
+      "sha256": "56818014e9d3d8f42bbfa5e8f787f1c6c412a4fe3f38b55b3d40a8ee3ce10a91"
+    },
+    {
+      "path": "etl-pipeline/data/raw/schedules/season=2026/schedules.parquet",
+      "reason": "NOT_DIRECT_CONTEXT_FORMAT",
+      "sha256": "fe33824f2d7519a7e550feccedb66d670d0de1af83e27c5af6084c45f488f81d"
+    }
+  ],
+  "calendarPolicy": "No confirmed bye annotation consumed; gaps remain unknown",
+  "usageEvidence": [
+    {
+      "path": "editorial/evaluations/2026-09-26/provenance/database-originals.json",
+      "sha256": "5ad5b9622300626bd5d16c40b8b2c0c57c96dd9da7172fe9e40ccb278f8cc580"
+    },
+    {
+      "path": "editorial/evaluations/2026-09-26/cases.json",
+      "sha256": "d9c3b251086ea0f4cdacda5e83d4106f69b811bb382fdab32d5a27c260e6f942"
+    }
+  ]
+}

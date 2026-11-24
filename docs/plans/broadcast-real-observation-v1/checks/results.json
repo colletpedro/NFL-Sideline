@@ -1,0 +1,73 @@
+[
+  {
+    "name": "frontend-tests",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "test"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "lint",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "lint"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "public-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "build"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "experience-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "experience:build"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "real-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "web-ui",
+      "run",
+      "real:build"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "isolation",
+    "command": [
+      "python3",
+      "docs/plans/broadcast-real-observation-v1/isolation.py"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exitCode": 0
+  }
+]

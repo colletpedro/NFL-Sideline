@@ -1,0 +1,723 @@
+{
+  "animation": {
+    "open": {
+      "events": [
+        {
+          "type": "run",
+          "open": true
+        },
+        {
+          "type": "end",
+          "height": 1371.828125
+        }
+      ],
+      "samples": [
+        {
+          "t": 0.09999990463256836,
+          "h": 0,
+          "opacity": "0",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 10.099999904632568,
+          "h": 83.7109375,
+          "opacity": "0.0837298",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 26,
+          "h": 247.6328125,
+          "opacity": "0.250865",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 42.59999990463257,
+          "h": 477.2421875,
+          "opacity": "0.457367",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 63,
+          "h": 711.125,
+          "opacity": "0.637205",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 77.59999990463257,
+          "h": 887.859375,
+          "opacity": "0.759367",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 92.89999997615814,
+          "h": 1026.4296875,
+          "opacity": "0.848063",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 111.89999997615814,
+          "h": 1139.8515625,
+          "opacity": "0.91491",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 129.69999992847443,
+          "h": 1219.6796875,
+          "opacity": "0.957038",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 143.79999995231628,
+          "h": 1278.9453125,
+          "opacity": "0.983437",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 161.29999995231628,
+          "h": 1320.90625,
+          "opacity": "0.996887",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 178.09999990463257,
+          "h": 1349.1953125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 194,
+          "h": 1365.328125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 211.29999995231628,
+          "h": 1371.65625,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 226.89999997615814,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 243.59999990463257,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 259.6999999284744,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 276.39999997615814,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 299.39999997615814,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 309.6999999284744,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 326.39999997615814,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 343.2999999523163,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        },
+        {
+          "t": 359.6999999284744,
+          "h": 1371.828125,
+          "opacity": "1",
+          "buttonY": 580.1484375,
+          "summaryY": 450.3203125,
+          "scrollY": 2146
+        }
+      ]
+    },
+    "closing": {
+      "expanded": "false",
+      "focus": "rr-expand",
+      "height": 151.6171875,
+      "hidden": "true",
+      "inert": true
+    },
+    "closedAfterRapid": {
+      "expanded": "false",
+      "focus": "rr-expand",
+      "height": 0,
+      "inert": true
+    },
+    "resized": {
+      "expanded": "true",
+      "height": 1607.59375,
+      "natural": 1607.59375,
+      "overflow": false,
+      "width": 390
+    },
+    "rapidClicks": 4
+  },
+  "matrix": [
+    {
+      "campaigns": 4,
+      "client": 1425,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 1425,
+      "summary": [
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\n21º\nNE\n31,3%\n5 de 16\n29º\nSEA\n18,2%\n2 de 11",
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\n20º\nNE\n50,0%\n1 de 2\n30º\nSEA\n0,0%\n0 de 2"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NE_SEA",
+      "width": 1440
+    },
+    {
+      "campaigns": 4,
+      "client": 375,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 375,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n21º\nNE\n31,3%\n5 de 16\n29º\nSEA\n18,2%\n2 de 11",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n20º\nNE\n50,0%\n1 de 2\n30º\nSEA\n0,0%\n0 de 2"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NE_SEA",
+      "width": 390
+    },
+    {
+      "campaigns": 4,
+      "client": 305,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 305,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n21º\nNE\n31,3%\n5 de 16\n29º\nSEA\n18,2%\n2 de 11",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n20º\nNE\n50,0%\n1 de 2\n30º\nSEA\n0,0%\n0 de 2"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NE_SEA",
+      "width": 320
+    },
+    {
+      "campaigns": 4,
+      "client": 1425,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 1425,
+      "summary": [
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\n27º\nNYJ\n20,0%\n2 de 10\n18º\nTEN\n33,3%\n4 de 12",
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\n15º\nNYJ\n66,7%\n2 de 3\n1º\nTEN\n100,0%\n1 de 1"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NYJ_TEN&returnWeek=2&q=NYJ",
+      "width": 1440
+    },
+    {
+      "campaigns": 4,
+      "client": 375,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 375,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n27º\nNYJ\n20,0%\n2 de 10\n18º\nTEN\n33,3%\n4 de 12",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n15º\nNYJ\n66,7%\n2 de 3\n1º\nTEN\n100,0%\n1 de 1"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NYJ_TEN&returnWeek=2&q=NYJ",
+      "width": 390
+    },
+    {
+      "campaigns": 4,
+      "client": 305,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 305,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n27º\nNYJ\n20,0%\n2 de 10\n18º\nTEN\n33,3%\n4 de 12",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n15º\nNYJ\n66,7%\n2 de 3\n1º\nTEN\n100,0%\n1 de 1"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NYJ_TEN&returnWeek=2&q=NYJ",
+      "width": 320
+    },
+    {
+      "campaigns": 2,
+      "client": 1425,
+      "clipped": [
+        "rr-identity",
+        "rr-identity"
+      ],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 1425,
+      "summary": [
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\n30º\nATL\n16,7%\n2 de 12\n23º\nPIT\n25,0%\n3 de 12",
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\nSem\nposição\nATL\n0/0 · sem oportunidades, sem taxa\n20º\nPIT\n50,0%\n1 de 2"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_ATL_PIT",
+      "width": 1440
+    },
+    {
+      "campaigns": 2,
+      "client": 375,
+      "clipped": [
+        "rr-identity",
+        "rr-identity"
+      ],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 375,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n30º\nATL\n16,7%\n2 de 12\n23º\nPIT\n25,0%\n3 de 12",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\nSem\nposição\nATL\n0/0 · sem oportunidades, sem taxa\n20º\nPIT\n50,0%\n1 de 2"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_ATL_PIT",
+      "width": 390
+    },
+    {
+      "campaigns": 2,
+      "client": 305,
+      "clipped": [
+        "rr-identity",
+        "rr-identity"
+      ],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 305,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n30º\nATL\n16,7%\n2 de 12\n23º\nPIT\n25,0%\n3 de 12",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\nSem\nposição\nATL\n0/0 · sem oportunidades, sem taxa\n20º\nPIT\n50,0%\n1 de 2"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_ATL_PIT",
+      "width": 320
+    },
+    {
+      "campaigns": 7,
+      "client": 1425,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 1425,
+      "summary": [
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\n32º\nGB\n11,1%\n1 de 9\n14º\nNYJ\n42,1%\n8 de 19",
+        "Posição · time\n0%\n25%\n50%\n75%\n100%\nTaxa · razão\n15º\nGB\n50,0%\n2 de 4\n10º\nNYJ\n66,7%\n2 de 3"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_02_GB_NYJ",
+      "width": 1440
+    },
+    {
+      "campaigns": 7,
+      "client": 375,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 375,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n32º\nGB\n11,1%\n1 de 9\n14º\nNYJ\n42,1%\n8 de 19",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n15º\nGB\n50,0%\n2 de 4\n10º\nNYJ\n66,7%\n2 de 3"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_02_GB_NYJ",
+      "width": 390
+    },
+    {
+      "campaigns": 7,
+      "client": 305,
+      "clipped": [],
+      "full": [
+        32,
+        31
+      ],
+      "scroll": 305,
+      "summary": [
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n32º\nGB\n11,1%\n1 de 9\n14º\nNYJ\n42,1%\n8 de 19",
+        "Posição · time\n0%\n50%\n100%\nTaxa · razão\n15º\nGB\n50,0%\n2 de 4\n10º\nNYJ\n66,7%\n2 de 3"
+      ],
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_02_GB_NYJ",
+      "width": 320
+    },
+    {
+      "campaigns": 11,
+      "client": 1425,
+      "clipped": [],
+      "full": [],
+      "scroll": 1425,
+      "summary": [],
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=NYJ&season=2026&returnWeek=2&q=NYJ",
+      "width": 1440
+    },
+    {
+      "campaigns": 11,
+      "client": 375,
+      "clipped": [],
+      "full": [],
+      "scroll": 375,
+      "summary": [],
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=NYJ&season=2026&returnWeek=2&q=NYJ",
+      "width": 390
+    },
+    {
+      "campaigns": 11,
+      "client": 305,
+      "clipped": [],
+      "full": [],
+      "scroll": 305,
+      "summary": [],
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=NYJ&season=2026&returnWeek=2&q=NYJ",
+      "width": 320
+    },
+    {
+      "campaigns": 8,
+      "client": 1425,
+      "clipped": [],
+      "full": [],
+      "scroll": 1425,
+      "summary": [],
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=ATL&season=2026&returnWeek=2",
+      "width": 1440
+    },
+    {
+      "campaigns": 8,
+      "client": 375,
+      "clipped": [],
+      "full": [],
+      "scroll": 375,
+      "summary": [],
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=ATL&season=2026&returnWeek=2",
+      "width": 390
+    },
+    {
+      "campaigns": 8,
+      "client": 305,
+      "clipped": [],
+      "full": [],
+      "scroll": 305,
+      "summary": [],
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=ATL&season=2026&returnWeek=2",
+      "width": 320
+    }
+  ],
+  "reducedMotion": {
+    "closedHeight": 0,
+    "duration": "0s",
+    "inert": true,
+    "open": {
+      "duration": "0s",
+      "height": 1607.59375,
+      "natural": 1607.59375
+    }
+  },
+  "buttonRefinement": {
+    "closed": 70.796875,
+    "open": 70.796875
+  },
+  "atlFix": {
+    "clipped": [],
+    "summary": "Posição · time\n0%\n50%\n100%\nTaxa · razão\nSem\nposição\nATL\n0/0 · sem oportunidades, sem taxa\n20º\nPIT\n50,0%\n1 de 2"
+  },
+  "zoom": {
+    "client": 305,
+    "clipped": [],
+    "font": "32px",
+    "scroll": 305,
+    "width": 320
+  },
+  "zoomExpanded": {
+    "client": 305,
+    "clipped": [],
+    "expanded": [
+      "false",
+      "true"
+    ],
+    "scroll": 305
+  },
+  "campaignSelection": {
+    "label": "NE com a bola, NE contra SEA, W1, campanha 18, Turnover — mudança de posse",
+    "outline": "rgb(23, 98, 141) solid 3px",
+    "readout": "NE contra SEA · Campanha 18 · Turnover.\n\nEntrada demonstrada nas jogadas 4006; desfecho na(s) jogada(s) 4006.\n\nID 2026_01_NE_SEA:drive:18.0",
+    "selected": "true"
+  },
+  "nyj": {
+    "campaigns": 4,
+    "legend": "Passe — terceira convertida\nPasse — terceira não convertida\nCorrida — terceira convertida\nCorrida — terceira não convertida\n\nUma marca por tentativa. Sacks entram em passe; scrambles entram em corrida.",
+    "rates": [
+      "66,7%\n2 de 3\ncampanhas",
+      "100,0%\n1 de 1\ncampanha"
+    ],
+    "summary": "Posição · time\n0%\n50%\n100%\nTaxa · razão\n15º\nNYJ\n66,7%\n2 de 3\n1º\nTEN\n100,0%\n1 de 1"
+  },
+  "team": {
+    "campaigns": 11,
+    "labels": [
+      "TD · W1 · Campanha 1",
+      "FG · W1 · Campanha 5",
+      "TD · W1 · Campanha 10",
+      "TD · W2 · Campanha 8",
+      "TD · W2 · Campanha 13",
+      "FG · W2 · Campanha 17",
+      "TD · W1 · Campanha 19",
+      "TD · W2 · Campanha 7",
+      "TD · W2 · Campanha 18",
+      "FG · W2 · Campanha 20",
+      "FG · W2 · Campanha 24"
+    ],
+    "ranking": 0,
+    "url": "http://127.0.0.1:18107/?q=NYJ&view=team-w12&team=NYJ&season=2026&returnWeek=2"
+  },
+  "teamSelection": {
+    "focus": "rgb(23, 98, 141) solid 3px",
+    "readout": "NYJ com a bola · NYJ contra TEN · W1, campanha 1 · TD · entradas: 276, 298 · desfecho: 298 · ID 2026_01_NYJ_TEN:drive:1.0",
+    "selected": "true"
+  },
+  "returnContext": {
+    "query": "NYJ",
+    "url": "http://127.0.0.1:18107/?q=NYJ&season=2026&week=2",
+    "week": "Semana 2\n16 jogos"
+  },
+  "teamZoom": {
+    "client": 305,
+    "clipped": [],
+    "font": "32px",
+    "scroll": 305,
+    "width": 320
+  },
+  "atlTeam": {
+    "campaigns": 8,
+    "noRate": "ATL com a bola: nenhuma oportunidade elegível em W1–2. 0/0, sem taxa.",
+    "opponents": [
+      "50,0%\n4 de 8"
+    ]
+  },
+  "matrixFinal": [
+    {
+      "client": 1425,
+      "clipped": [],
+      "scroll": 1425,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NE_SEA",
+      "width": 1440
+    },
+    {
+      "client": 375,
+      "clipped": [],
+      "scroll": 375,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NE_SEA",
+      "width": 390
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "scroll": 305,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NE_SEA",
+      "width": 320
+    },
+    {
+      "client": 1425,
+      "clipped": [],
+      "scroll": 1425,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NYJ_TEN&returnWeek=2&q=NYJ",
+      "width": 1440
+    },
+    {
+      "client": 375,
+      "clipped": [],
+      "scroll": 375,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NYJ_TEN&returnWeek=2&q=NYJ",
+      "width": 390
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "scroll": 305,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NYJ_TEN&returnWeek=2&q=NYJ",
+      "width": 320
+    },
+    {
+      "client": 1425,
+      "clipped": [],
+      "scroll": 1425,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_ATL_PIT",
+      "width": 1440
+    },
+    {
+      "client": 375,
+      "clipped": [],
+      "scroll": 375,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_ATL_PIT",
+      "width": 390
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "scroll": 305,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_ATL_PIT",
+      "width": 320
+    },
+    {
+      "client": 1425,
+      "clipped": [],
+      "scroll": 1425,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_02_GB_NYJ",
+      "width": 1440
+    },
+    {
+      "client": 375,
+      "clipped": [],
+      "scroll": 375,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_02_GB_NYJ",
+      "width": 390
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "scroll": 305,
+      "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_02_GB_NYJ",
+      "width": 320
+    },
+    {
+      "client": 1425,
+      "clipped": [],
+      "scroll": 1425,
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=NYJ&season=2026&returnWeek=2&q=NYJ",
+      "width": 1440
+    },
+    {
+      "client": 375,
+      "clipped": [],
+      "scroll": 375,
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=NYJ&season=2026&returnWeek=2&q=NYJ",
+      "width": 390
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "scroll": 305,
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=NYJ&season=2026&returnWeek=2&q=NYJ",
+      "width": 320
+    },
+    {
+      "client": 1425,
+      "clipped": [],
+      "scroll": 1425,
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=ATL&season=2026&returnWeek=2",
+      "width": 1440
+    },
+    {
+      "client": 375,
+      "clipped": [],
+      "scroll": 375,
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=ATL&season=2026&returnWeek=2",
+      "width": 390
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "scroll": 305,
+      "url": "http://127.0.0.1:18107/?view=team-w12&team=ATL&season=2026&returnWeek=2",
+      "width": 320
+    }
+  ],
+  "accessibility": {
+    "closedRegionInAX": false,
+    "controls": [
+      {
+        "associated": true,
+        "expanded": "false"
+      },
+      {
+        "associated": true,
+        "expanded": "false"
+      }
+    ]
+  },
+  "restored": {
+    "font": "16px",
+    "url": "http://127.0.0.1:18107/?view=matchup-w12&game=2026_01_NE_SEA",
+    "width": 1280
+  }
+}

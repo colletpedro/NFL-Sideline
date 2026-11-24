@@ -1,0 +1,92 @@
+{
+  "bundleId": "sha256:b10a2028f26d6acc229f80bbd27269016dd2e6b2e4b432a6d8a9109f643e5ee4",
+  "responseBytes": 243841,
+  "exactArtifactBytes": true,
+  "cases": [
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "PUT",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "OPTIONS",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/?path=/etc/passwd",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/child",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__situational/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__observations/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/__comparison/",
+      "status": 403
+    }
+  ]
+}

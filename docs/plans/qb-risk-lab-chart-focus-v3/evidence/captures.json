@@ -1,0 +1,22 @@
+{
+  "reviewDate": "2026-11-05",
+  "referenceUrl": "http://127.0.0.1:18123/?view=risk-lab&season=2026",
+  "refinedUrl": "http://127.0.0.1:18124/?view=risk-lab&season=2026",
+  "sha256": {
+    "before-desktop.png": "25aaba1056b3b38db5a32fecafe5b36b2a0d273d2aaf1b3a4f5af47ac2c9a63b",
+    "text200-320.png": "0f3d946db856ea3d31bd9265f718cf40ac1d7b64825de2aad87d81a180a5b5ae",
+    "dense-390.png": "ab749ac0faf57f88f5b986a73ea1642ca31e0855b7be995d1853175a709b70c2",
+    "evidence-390.png": "1fdca04839dfc44121aae8c30b6dc4c2577cec118423f1d982c7f32b524a4cf8",
+    "selected-daniel-desktop.png": "b9254c8df8fcd629cf6662f3b86c501bb0cba29894edf743826fcbcffae0a779",
+    "opening-1440.png": "09c3cfdee4ed2732df878f41178fc68c50c04fd1f494928592f83a828f4706d4",
+    "hover-daniel-desktop.png": "c38d3a6071048c192b3417fabf9697478a0adcbb0699fe288c1e0fdcb98902e9",
+    "after-desktop.png": "22774a93c0bb3d4ffcaf6434d531a524e83592be7098c8654727b30d25e36d3d",
+    "chart-320.png": "165dc83506795620bbbb970699cab88fc8f120344ab86a502b81dfcface30f5b",
+    "failure.png": "e445cd89d1e6ddf0479baa17bd0fbc03f59e9df8c9083e942deb8522edb73ead",
+    "selected-summary-desktop.png": "3a0da2d59e1663233089e492cea4d3a5ac2677a7a0e91ebe6ed590e2b06c17a9",
+    "chart-390.png": "acf457345ccef95b743cc8c6469bb2dd1ef88264c99034163397f62701e4b975",
+    "near-diagonal.png": "2201ae125955e77912c13140a862bc5c20f7d105827bb71b240f7a1702c6114c",
+    "chart-960.png": "38e6d1d4cc19d46a92fae413f2d4efb8a234209050630313c537762a8113ece6",
+    "loading.png": "c0ea395bb795b8e03b7569c1eac17c8d2a19fd533ca0de755eca8d7f1f770cdc"
+  }
+}

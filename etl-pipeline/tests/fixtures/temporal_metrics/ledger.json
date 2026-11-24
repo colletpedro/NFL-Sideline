@@ -1,0 +1,30 @@
+{
+  "kind": "MANUAL_SYNTHETIC_LEDGER",
+  "pit": {
+    "byeWeek": 2,
+    "completeGames": 2,
+    "eligible_n": 8,
+    "epa": "1/14",
+    "epa_n": 7,
+    "epa_sum": "0.5",
+    "expectedGames": 3,
+    "gap": "SOURCE_UNKNOWN",
+    "passFrequency": "3/4",
+    "rushFrequency": "1/4",
+    "selected": {
+      "alpha": "revision:alpha-old",
+      "beta": "revision:beta"
+    },
+    "successRate": "3/7",
+    "success_n": 3
+  },
+  "reconstruction": {
+    "epa": "1/2",
+    "epa_sum": "3.5",
+    "selected": {
+      "alpha": "revision:alpha-corrected",
+      "beta": "revision:beta"
+    },
+    "usesLaterKnowledge": true
+  }
+}

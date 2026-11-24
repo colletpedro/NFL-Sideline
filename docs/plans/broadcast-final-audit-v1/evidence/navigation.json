@@ -1,0 +1,24 @@
+[
+  {
+    "heading": "Baltimore Ravens",
+    "step": "keyboard-pick",
+    "title": "BAL · W1–7 · NFL Sideline",
+    "url": "http://127.0.0.1:18111/?q=BAL&scope=season&view=team-season&team=BAL&season=2026&returnWeek=7"
+  },
+  {
+    "input": "BAL",
+    "results": "Resultados para “BAL”",
+    "step": "return",
+    "url": "http://127.0.0.1:18111/?q=BAL&scope=season&season=2026&week=7"
+  },
+  {
+    "foundation": "classified_pass",
+    "step": "pass",
+    "url": "http://127.0.0.1:18111/?q=BAL&scope=season&view=matchup-season&game=2026_07_CIN_BAL&season=2026&week=7&returnWeek=7&foundation=classified_pass"
+  },
+  {
+    "foundation": "classified_pass",
+    "step": "reload",
+    "url": "http://127.0.0.1:18111/?q=BAL&scope=season&view=matchup-season&game=2026_07_CIN_BAL&season=2026&week=7&returnWeek=7&foundation=classified_pass"
+  }
+]

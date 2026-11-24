@@ -1,0 +1,18 @@
+
+> web-ui@0.0.0 experience:build
+> tsc -p tsconfig.experience.json && vite build --config vite.experience.config.ts
+
+vite v5.4.21 building for production...
+transforming...
+✓ 1859 modules transformed.
+rendering chunks...
+computing gzip size...
+../experience-dist/index.html                                      0.43 kB │ gzip:  0.30 kB
+../experience-dist/assets/ne-CjQy7Z4T.png                         32.08 kB
+../experience-dist/assets/dal-DumH5f6I.png                        32.37 kB
+../experience-dist/assets/bal-B02a8qg4.png                        55.99 kB
+../experience-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf  371.62 kB
+../experience-dist/assets/Archivo-Variable-DuIT1y7V.ttf          658.60 kB
+../experience-dist/assets/index-CQYYltCK.css                      41.67 kB │ gzip:  8.78 kB
+../experience-dist/assets/index-GcVoNuvq.js                      190.08 kB │ gzip: 61.17 kB
+✓ built in 724ms

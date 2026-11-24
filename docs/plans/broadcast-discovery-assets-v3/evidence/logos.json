@@ -1,0 +1,258 @@
+[
+  {
+    "team": "ARI",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/ari.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "ATL",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/atl.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "BAL",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/bal.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "BUF",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-experience/assets/buf.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "CAR",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/car.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "CHI",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-experience/assets/chi.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "CIN",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/cin.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "CLE",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/cle.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "DAL",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/dal.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "DEN",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/den.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "DET",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/det.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "GB",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-experience/assets/gb.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "HOU",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/hou.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "IND",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/ind.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "JAX",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/jax.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "KC",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-experience/assets/kc.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "LA",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/la.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgb(225, 233, 237)"
+  },
+  {
+    "team": "LAC",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/lac.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "LV",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/lv.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "MIA",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/mia.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "MIN",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/min.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "NE",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/local-editorial/broadcast/assets/ne.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "NO",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/no.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "NYG",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/nyg.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgb(225, 233, 237)"
+  },
+  {
+    "team": "NYJ",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/nyj.png",
+    "complete": true,
+    "width": 4096,
+    "height": 4096,
+    "plateColor": "rgb(225, 233, 237)"
+  },
+  {
+    "team": "PHI",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/phi.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "PIT",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-experience/assets/pit.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "SEA",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/sea.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "SF",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/sf.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "TB",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/tb.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "TEN",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/ten.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "team": "WAS",
+    "src": "/@fs/Users/pedrocollet/.codex/worktrees/broadcast-discovery-assets-v3/NFL%20Sideline/web-ui/broadcast-real/assets/was.png",
+    "complete": true,
+    "width": 500,
+    "height": 500,
+    "plateColor": "rgba(0, 0, 0, 0)"
+  }
+]

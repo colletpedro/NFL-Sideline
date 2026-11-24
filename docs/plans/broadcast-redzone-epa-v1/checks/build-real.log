@@ -1,0 +1,43 @@
+vite v5.4.21 building for production...
+transforming...
+✓ 73 modules transformed.
+rendering chunks...
+computing gzip size...
+../real-dist/index.html                                      0.38 kB │ gzip:  0.28 kB
+../real-dist/assets/nyg-B7GEzpDk.png                         7.57 kB
+../real-dist/assets/cin-DAWVRKmj.png                        26.63 kB
+../real-dist/assets/was-BcwmxSCJ.png                        30.42 kB
+../real-dist/assets/sea-Bs6vHzbc.png                        32.08 kB
+../real-dist/assets/ne-CjQy7Z4T.png                         32.08 kB
+../real-dist/assets/dal-DumH5f6I.png                        32.37 kB
+../real-dist/assets/lac-G0yXcTHr.png                        32.85 kB
+../real-dist/assets/hou-BTtnUu_J.png                        35.77 kB
+../real-dist/assets/car-CGu1pDhv.png                        36.64 kB
+../real-dist/assets/buf-C8E5u14Q.png                        38.00 kB
+../real-dist/assets/la-Cnbeu6OW.png                         38.71 kB
+../real-dist/assets/gb-Kq_Dl-1v.png                         39.19 kB
+../real-dist/assets/kc-qEo7C-YT.png                         40.23 kB
+../real-dist/assets/den-ZMwN9Kj8.png                        40.95 kB
+../real-dist/assets/ari-SWmA0hjl.png                        41.99 kB
+../real-dist/assets/ind-BjFZCeSx.png                        42.08 kB
+../real-dist/assets/sf-VDD_-KP9.png                         48.70 kB
+../real-dist/assets/ten-BjiV9AWL.png                        50.73 kB
+../real-dist/assets/atl-BOcCry6n.png                        51.78 kB
+../real-dist/assets/no-CRvSwJHd.png                         52.02 kB
+../real-dist/assets/bal-B02a8qg4.png                        55.99 kB
+../real-dist/assets/pit-CVCA5Q0Z.png                        56.62 kB
+../real-dist/assets/det-DOjjcZuE.png                        57.47 kB
+../real-dist/assets/mia-pvajL4QF.png                        64.41 kB
+../real-dist/assets/min-DxdqfIZ7.png                        69.69 kB
+../real-dist/assets/phi-DVPW4bAp.png                        70.33 kB
+../real-dist/assets/lv-BdvUO8u-.png                         77.77 kB
+../real-dist/assets/jax-DFcKN7bi.png                        78.81 kB
+../real-dist/assets/chi-BAA7PtZp.png                        93.59 kB
+../real-dist/assets/cle-CjWlBQek.png                        94.48 kB
+../real-dist/assets/tb-B-m6i7aa.png                         96.11 kB
+../real-dist/assets/nyj-No6xqtcN.png                       130.61 kB
+../real-dist/assets/RobotoCondensed-Variable-BR5DqaBH.ttf  371.62 kB
+../real-dist/assets/Archivo-Variable-DuIT1y7V.ttf          658.60 kB
+../real-dist/assets/index-C2JVOmrS.css                      62.29 kB │ gzip: 12.42 kB
+../real-dist/assets/index-BRu3c88X.js                      181.32 kB │ gzip: 58.10 kB
+✓ built in 438ms

@@ -1,0 +1,303 @@
+{
+  "status": "baseline executed, evaluated and reproduced; not production-ready",
+  "base": "5b38f04e559bad5fc1b4ef25116cc0afb93293d9",
+  "evaluated_code_commit": "35ac931",
+  "evaluation_documentation_commit": "910dfae",
+  "new_offline_tests": 23,
+  "test_warnings_policy": "RuntimeWarning and FutureWarning errors in final local test run",
+  "fresh_offline_environment_tests": 23,
+  "legacy_tests": 6,
+  "legacy_expected_failures_preserved": 5,
+  "offline_reproduction": {
+    "scientific_files": 84,
+    "byte_identical": true,
+    "python_connections_blocked": true,
+    "frozen_config_sha256": "3add5c6113c91f720ae7dfde759617f114daf66f700b4ce7229c2efa21f3e90a"
+  },
+  "recovery": {
+    "files": 347,
+    "bytes": 234055567,
+    "backup": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/backups/qb-interception-risk-baseline-v1/20261104-v1",
+    "all_hashes_verified": true,
+    "receipt_sha256": "0ed59384e8ea03066a4fcd8cffe4ada17dd81b70ced53b8677e6f52f66f732bc"
+  },
+  "isolation": {
+    "protected_paths_unchanged": true,
+    "approved_worktree_clean": true,
+    "approved_pbp_unchanged": true,
+    "server_18111_preserved": true
+  },
+  "figures_inspected": [
+    "calibration_2025",
+    "observed_expected_2026",
+    "difference_per100_2026",
+    "depth_sensitivity_2026"
+  ],
+  "no_frontend_visual_reaudit": "No product code changed; objective isolation plus legacy regressions used",
+  "no_gemini_paid_service_push_merge_deploy": true,
+  "logs": {
+    "tests-final.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/tests-final.log",
+      "sha256": "381721b174411166227ac30b309eb97aa68370c5626e5de1d32d2d4bd89ad6e9",
+      "bytes": 99
+    },
+    "offline-tests.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/offline-tests.log",
+      "sha256": "be9efab81763088e9154ffaebddfe73540ada49b3b5736395d7f9734d3317832",
+      "bytes": 100
+    },
+    "legacy-tests.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/legacy-tests.log",
+      "sha256": "bf3882470673b021578866605c4258adb3180bfcde6514011a0747f88e31ac8d",
+      "bytes": 448
+    },
+    "reproduction-final.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/reproduction-final.log",
+      "sha256": "669ebe377df27af34d539fb9b0eaf13dc2a61ec01eadb7ead1afbfdf06ce2d47",
+      "bytes": 2469
+    },
+    "offline-install.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/offline-install.log",
+      "sha256": "6d77e0cda60d6ff8e1976658f23aa76408a8220e7c01cf59ff2fca4332dc2ff9",
+      "bytes": 6375
+    },
+    "development-v3.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/development-v3.log",
+      "sha256": "bc3890026e45a514417d49f954f6181edeb015ca154abcb8d85eaa1c88f3d1ad",
+      "bytes": 121
+    },
+    "evaluation-v1.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/evaluation-v1.log",
+      "sha256": "ad9903dc45bc22670f710e0254daf0d7073c00887a31baeffe7fe0378ce3d8b4",
+      "bytes": 2096
+    },
+    "application-v1.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/application-v1.log",
+      "sha256": "c6fefe07c6abae9330fbb2c246ec0e8a801605a63186811453102fe78b83427a",
+      "bytes": 49
+    },
+    "git-diff-check.log": {
+      "path": "/Users/pedrocollet/Downloads/NFL Sideline/editorial/local-artifacts/qb-interception-risk-baseline-v1/20261104-v1/git-diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "documentation_check_attempt": "Initial check ran before creating verification.json and rejected the self-link. Corrected order; no scientific output changed.",
+  "documentation_links": [
+    {
+      "document": "DATA-AUDIT.md",
+      "target": "evidence/sources.json",
+      "exists": true
+    },
+    {
+      "document": "DATA-AUDIT.md",
+      "target": "evidence/data-audit.json",
+      "exists": true
+    },
+    {
+      "document": "DATA-AUDIT.md",
+      "target": "evidence/counts_by_week.csv",
+      "exists": true
+    },
+    {
+      "document": "DATA-AUDIT.md",
+      "target": "evidence/counts_by_game.csv",
+      "exists": true
+    },
+    {
+      "document": "DATA-AUDIT.md",
+      "target": "evidence/counts_by_qb.csv",
+      "exists": true
+    },
+    {
+      "document": "DATA-AUDIT.md",
+      "target": "evidence/identities.csv",
+      "exists": true
+    },
+    {
+      "document": "DATA-AUDIT.md",
+      "target": "NOTICE.md",
+      "exists": true
+    },
+    {
+      "document": "MODEL-CARD.md",
+      "target": "RESEARCH-CONTRACT.md",
+      "exists": true
+    },
+    {
+      "document": "MODEL-CARD.md",
+      "target": "evidence/frozen-config.json",
+      "exists": true
+    },
+    {
+      "document": "MODEL-CARD.md",
+      "target": "NOTICE.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "DATA-AUDIT.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/calibration_2025.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/calibration_context.json",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/calibration_depth.json",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/feature_distributions.csv",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/observed_expected_2026.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/difference_per100_2026.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/qb_context.csv",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/qb_depth.csv",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "figures/depth_sensitivity_2026.png",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/qb_sensitivity.csv",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "MODEL-CARD.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "FEATURE-AVAILABILITY.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "NOTICE.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "evidence/numerical-check.json",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "CHECKPOINTS.md",
+      "exists": true
+    },
+    {
+      "document": "REPORT.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "RESEARCH-CONTRACT.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "DATA-AUDIT.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "FEATURE-AVAILABILITY.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "MODEL-CARD.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "HANDOFF.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "NOTICE.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "CHECKPOINTS.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/sources.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/verification.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "CHECKPOINTS.md",
+      "exists": true
+    },
+    {
+      "document": "FEATURE-AVAILABILITY.md",
+      "target": "evidence/environment_by_stadium.csv",
+      "exists": true
+    },
+    {
+      "document": "FEATURE-AVAILABILITY.md",
+      "target": "evidence/feature_distributions.csv",
+      "exists": true
+    },
+    {
+      "document": "HANDOFF.md",
+      "target": "REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "HANDOFF.md",
+      "target": "MODEL-CARD.md",
+      "exists": true
+    },
+    {
+      "document": "HANDOFF.md",
+      "target": "README.md",
+      "exists": true
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "file": "home-1440.png",
+    "route": "/?round=7",
+    "width": 1440,
+    "height": 1691,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 902356,
+    "sha256": "cf822cbda3b5e5b50bd788ee2365e702053c2f59cb1d2b91bfb3165376278d0c",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "home-390.png",
+    "route": "/?round=7",
+    "width": 390,
+    "height": 2574,
+    "viewport": {
+      "width": 390,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 487236,
+    "sha256": "c10ccb603e5be368c84d4180c8f6cf820206d7bedc4c5fa06ce81925834df1c4",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "matchup-1440.png",
+    "route": "/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 1440,
+    "height": 2637,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 1213787,
+    "sha256": "d52b056e21bc6583599765957952dc8a3fd8ee68a0cae3e49fe03a9b99083628",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "matchup-390.png",
+    "route": "/confronto/dallas-new-england?round=7&period=second&play=rush",
+    "width": 390,
+    "height": 3948,
+    "viewport": {
+      "width": 390,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 706664,
+    "sha256": "e61c29900eca457c2bd0649b59877672e625c93e9bda7c437f9180b91c3c65d9",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "pregame-1440.png",
+    "route": "/confronto/green-bay-chicago?round=7",
+    "width": 1440,
+    "height": 1397,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 672271,
+    "sha256": "cb30317771f91f38d84cabad6e9c60596cbf0d070047689fc02edb88dc3e1c37",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "pregame-390.png",
+    "route": "/confronto/green-bay-chicago?round=7",
+    "width": 390,
+    "height": 1942,
+    "viewport": {
+      "width": 390,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 382621,
+    "sha256": "8d57f2cdc1e50c43141064db9d00460a78fcd203b85612f2c7925d010a65a8c4",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "missing-1440.png",
+    "route": "/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "width": 1440,
+    "height": 2627,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 1208555,
+    "sha256": "30fe2328179e7b21a4a2f6724aad0e972251e0198af5cc8f65aa4e494e6de3ee",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "missing-390.png",
+    "route": "/confronto/kansas-city-buffalo?round=7&period=second&play=pass",
+    "width": 390,
+    "height": 3979,
+    "viewport": {
+      "width": 390,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 712146,
+    "sha256": "6ddfc5b6d5c06cb0c2592c416d7cd21c44ed7b86e46f75ae40fc121412a164e0",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  },
+  {
+    "file": "axis-expanded-320.png",
+    "route": "/confronto/kansas-city-buffalo?round=7&period=first&play=pass",
+    "width": 320,
+    "height": 4076,
+    "viewport": {
+      "width": 320,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "bytes": 629273,
+    "sha256": "2833fe06521cf64027718ba5ac93565c33ddabf36cbfe39831451ed66c3bc156",
+    "implementationCommit": "840e3603920b3db15dca44116d2072f5a8528d4f"
+  }
+]

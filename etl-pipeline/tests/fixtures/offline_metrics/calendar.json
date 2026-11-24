@@ -1,0 +1,60 @@
+{
+  "columns": [
+    "game_id",
+    "season",
+    "game_type",
+    "week",
+    "home_team",
+    "away_team"
+  ],
+  "rows": [
+    {
+      "game_id": "synthetic-1",
+      "season": 2026,
+      "game_type": "REG",
+      "week": 1,
+      "home_team": "A",
+      "away_team": "B"
+    },
+    {
+      "game_id": "synthetic-2",
+      "season": 2026,
+      "game_type": "WC",
+      "week": 2,
+      "home_team": "A",
+      "away_team": "B"
+    },
+    {
+      "game_id": "synthetic-3",
+      "season": 2026,
+      "game_type": "REG",
+      "week": 3,
+      "home_team": "A",
+      "away_team": "B"
+    },
+    {
+      "game_id": "synthetic-4",
+      "season": 2026,
+      "game_type": "REG",
+      "week": 4,
+      "home_team": "A",
+      "away_team": "B"
+    },
+    {
+      "game_id": "synthetic-5",
+      "season": 2026,
+      "game_type": "REG",
+      "week": 5,
+      "home_team": "A",
+      "away_team": "B"
+    },
+    {
+      "game_id": "synthetic-6",
+      "season": 2026,
+      "game_type": "REG",
+      "week": 6,
+      "home_team": "A",
+      "away_team": "B"
+    }
+  ]
+}

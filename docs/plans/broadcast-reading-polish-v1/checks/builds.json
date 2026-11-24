@@ -1,0 +1,170 @@
+{
+  "commands": [
+    {
+      "name": "lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "typescript-journey",
+      "command": [
+        "npx",
+        "tsc",
+        "-p",
+        "tsconfig.journey.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "typescript-polish",
+      "command": [
+        "npx",
+        "tsc",
+        "-p",
+        "tsconfig.reading-polish.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "typescript-reading-polish-config",
+      "command": [
+        "npx",
+        "tsc",
+        "-p",
+        "tsconfig.reading-polish.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-reading-polish",
+      "command": [
+        "npx",
+        "vite",
+        "build",
+        "--config",
+        "vite.reading-polish.config.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "typescript-hub-team-config",
+      "command": [
+        "npx",
+        "tsc",
+        "-p",
+        "tsconfig.hub-team.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-hub-team",
+      "command": [
+        "npx",
+        "vite",
+        "build",
+        "--config",
+        "vite.hub-team.config.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "typescript-journey-config",
+      "command": [
+        "npx",
+        "tsc",
+        "-p",
+        "tsconfig.journey.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-journey",
+      "command": [
+        "npx",
+        "vite",
+        "build",
+        "--config",
+        "vite.journey.config.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "typescript-matchup-config",
+      "command": [
+        "npx",
+        "tsc",
+        "-p",
+        "tsconfig.matchup.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-matchup",
+      "command": [
+        "npx",
+        "vite",
+        "build",
+        "--config",
+        "vite.matchup.config.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "typescript-w12-config",
+      "command": [
+        "npx",
+        "tsc",
+        "-p",
+        "tsconfig.w12.json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-w12",
+      "command": [
+        "npx",
+        "vite",
+        "build",
+        "--config",
+        "vite.w12.config.ts"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-real",
+      "command": [
+        "npm",
+        "run",
+        "real:build"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-experience",
+      "command": [
+        "npm",
+        "run",
+        "experience:build"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "build-public",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit": 0
+    }
+  ],
+  "hostilePublicBuild": 0,
+  "publicHashes": {
+    ".css": "2b4ae179cefd815c1838e0a7498188a33d39ebad9856ca5e71d84a415344d41d",
+    ".js": "73f18e255b7226e7357acc9e9f81593d1610c6183a27090481a54d8f4f959ad5"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "catalog": {
+    "sessionId": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+    "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+    "count": 48
+  },
+  "cases": 6,
+  "responsive": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "body": 320
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "body": 390
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "body": 768
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "body": 1024
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "body": 1440
+    }
+  ],
+  "fonts": [
+    {
+      "selector": ".barlow article h3",
+      "css": {
+        "family": "\"Sideline Barlow\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "postScriptName": "Barlow-Bold",
+          "isCustomFont": true,
+          "glyphCount": 30
+        }
+      ]
+    },
+    {
+      "selector": ".barlow .subtitle",
+      "css": {
+        "family": "\"Sideline Barlow\", Arial, sans-serif",
+        "weight": "400",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "postScriptName": "Barlow-Regular",
+          "isCustomFont": true,
+          "glyphCount": 37
+        }
+      ]
+    },
+    {
+      "selector": ".barlow .stat strong",
+      "css": {
+        "family": "\"Sideline Barlow\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "Barlow",
+          "postScriptName": "Barlow-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    },
+    {
+      "selector": ".plex article h3",
+      "css": {
+        "family": "\"Sideline Plex\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "postScriptName": "IBMPlexSans-Bold",
+          "isCustomFont": true,
+          "glyphCount": 30
+        }
+      ]
+    },
+    {
+      "selector": ".plex .subtitle",
+      "css": {
+        "family": "\"Sideline Plex\", Arial, sans-serif",
+        "weight": "400",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "postScriptName": "IBMPlexSans",
+          "isCustomFont": true,
+          "glyphCount": 37
+        }
+      ]
+    },
+    {
+      "selector": ".plex .stat strong",
+      "css": {
+        "family": "\"Sideline Plex\", Arial, sans-serif",
+        "weight": "700",
+        "stretch": "100%"
+      },
+      "fonts": [
+        {
+          "familyName": "IBM Plex Sans",
+          "postScriptName": "IBMPlexSans-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    "denominator-zero",
+    "complete-empty",
+    "exact-zero",
+    "near-zero"
+  ]
+}

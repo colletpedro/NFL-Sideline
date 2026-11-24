@@ -1,0 +1,110 @@
+{
+  "archive-failure-390.png": {
+    "bytes": 841247,
+    "sha256": "bbc4c5ab9fd81ae7db3b0b8680ef6f54a08af90d50c25811d964f765bd545212"
+  },
+  "bal-gap-1440.png": {
+    "bytes": 930861,
+    "sha256": "05fb63fd896750b91786adc3ae6badef89987cac806ebe12c19d59250fb21c32"
+  },
+  "bal-inclusive-1440.png": {
+    "bytes": 1107439,
+    "sha256": "72b1c7517d7e0bc6a348f06c5d7f7754e7af163f68c1031a0045d53d20839cbf"
+  },
+  "bal-individual-1440.png": {
+    "bytes": 1075611,
+    "sha256": "6a480f217fb2a96c487e41309f5b1736345879d7d8a5b0bb2e4894d40bb4cbcb"
+  },
+  "bal-week2-1440.png": {
+    "bytes": 1075595,
+    "sha256": "05e9e23c3c2137a25f4b3dab05d60dd0d026a9c06027f0de5a6c4d5bdf96d45b"
+  },
+  "calendar-1440-text100.png": {
+    "bytes": 1556498,
+    "sha256": "3028d96b6330a90211b78efc343d5a47476c1408f05d74af7d8d78b4a35d119d"
+  },
+  "calendar-320-text100.png": {
+    "bytes": 792928,
+    "sha256": "56ae668e67808b1c8427afbc00cdc20c43dd2eac6c19b8fba5be43662a8856bd"
+  },
+  "calendar-320-text200.png": {
+    "bytes": 1621718,
+    "sha256": "b16fc1edb963ef5eb5f5cd9610399feafbe20c40baa18adcd9789fe0ed127d38"
+  },
+  "calendar-390-text100.png": {
+    "bytes": 845007,
+    "sha256": "71d8e0dfe354079aade80d3b22eda5de2e02002a9c2b84bea718d690b8b0f602"
+  },
+  "calendar-900-text100.png": {
+    "bytes": 1235148,
+    "sha256": "a6a43212a4927c0cd75a7107fa0d3621c099a96ea524a3f099169389215bf3f0"
+  },
+  "calendar-failure-390.png": {
+    "bytes": 655744,
+    "sha256": "d09982965f9ab992545bf9556ecb078c33bb04aea902bbde0f8438c89974143e"
+  },
+  "gap-matchup-1440.png": {
+    "bytes": 2989801,
+    "sha256": "5775c8ad50b67ad0279a40e920aa5cc683517f596042dd1644014a2a03f3fe9f"
+  },
+  "incompatible-1440.png": {
+    "bytes": 387997,
+    "sha256": "1e8b473d676efe9d2cfecaf97054c5e71d01d665758b8b3fcd21083bf0fac8ef"
+  },
+  "keyboard-390.png": {
+    "bytes": 671759,
+    "sha256": "5ca8cdea8be0de9609c0eab5a2ea4d9fa3f6f8f099540eebb68ce81bbba51f1f"
+  },
+  "matchup-1440-text100.png": {
+    "bytes": 2316464,
+    "sha256": "f37dfd5481d7f5f02b34f84959212bff3e0e6f1a0dc149cf01c6adb400636b8d"
+  },
+  "matchup-320-text100.png": {
+    "bytes": 1188729,
+    "sha256": "4f319d98d2da5615a157c5edc9c23b1ae1299fe4d5ad1d4c27520e9eebfb792f"
+  },
+  "matchup-320-text200.png": {
+    "bytes": 2557314,
+    "sha256": "7b23ca2d4d93a420b6b610dfc2a25fe1937712483084a622867876ee1f42a9a2"
+  },
+  "matchup-390-text100.png": {
+    "bytes": 1272049,
+    "sha256": "78622d6c0423d69108324f1abf7fed3e4d641d0b9e40760c1a8dcdc792ec3d56"
+  },
+  "matchup-900-text100.png": {
+    "bytes": 1771132,
+    "sha256": "08ef46179148c3cb1fa17308519e1a608220608fe2cba8f109e8eee5a70bac59"
+  },
+  "ne-archive-1440.png": {
+    "bytes": 1155434,
+    "sha256": "7f4cfc7aa4302bd823b62be2c7c96aa4604636e47887bf726085ae8aa8b21915"
+  },
+  "no-readings-1440.png": {
+    "bytes": 876879,
+    "sha256": "afd3d445fdaf185197412d73ec44fe99658e45fb50e3f975c339f3e0d319b110"
+  },
+  "reading-1440-text100.png": {
+    "bytes": 1363502,
+    "sha256": "bacdeeece54810b3147bc7cdd2f35500432cad8853cb0fc3954afa9d7bafd078"
+  },
+  "reading-320-text100.png": {
+    "bytes": 715403,
+    "sha256": "fe8dcc6c15f6f297d8cce846e0ab551233b43efc8553c994d668afa445a24854"
+  },
+  "reading-320-text200.png": {
+    "bytes": 1575870,
+    "sha256": "97f6d8aed18d4c538de44ebf53aee939ddf3c6ee67d8f060e4ba019b05924df1"
+  },
+  "reading-390-text100.png": {
+    "bytes": 784088,
+    "sha256": "bc5d0e47c3bb2f565d6c7d9e6cf320772a8dd3de590dd322ee549efb171bec61"
+  },
+  "reading-900-text100.png": {
+    "bytes": 1139255,
+    "sha256": "c21cac9f9e40b63436e4337454c36e4b3a7aa416453638e8a84f57bcb88aa60b"
+  },
+  "session-failure-390.png": {
+    "bytes": 148188,
+    "sha256": "20b4899dcc72d8eb1ffc022c1af28d71a5ceefbae6f9aa97ba5c7bd7fb26496e"
+  }
+}

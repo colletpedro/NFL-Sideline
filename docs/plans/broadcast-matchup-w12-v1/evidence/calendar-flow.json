@@ -1,0 +1,8 @@
+{
+  "opened": "http://127.0.0.1:18104/?season=2026&week=1&q=Patriots&scope=season&filter=all&view=matchup-w12&game=2026_01_NE_SEA&returnWeek=2",
+  "backHref": "/?season=2026&week=2&q=Patriots&scope=season&filter=all",
+  "reload": true,
+  "returned": "http://127.0.0.1:18104/?season=2026&week=2&q=Patriots&scope=season&filter=all",
+  "historyBack": true,
+  "historyForward": true
+}

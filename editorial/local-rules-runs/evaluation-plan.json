@@ -1,0 +1,18 @@
+{
+  "selector": "local-descriptive-rules",
+  "version": "1.0.0",
+  "holdoutIdsFromManifest": [
+    "2026_03_SEA_WAS",
+    "2026_03_MIN_TB"
+  ],
+  "development": "development-final",
+  "acceptance": [
+    "all claims pass the shared validator",
+    "all verdicts INCONCLUSIVE and thesis NONE",
+    "all six directions classified before selection",
+    "all eligible opportunities retained in verdict",
+    "no tuning after holdout"
+  ],
+  "qualityEditorialProven": false,
+  "geminiEvaluationEvidence": false
+}

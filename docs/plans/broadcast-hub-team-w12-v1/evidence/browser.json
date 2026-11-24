@@ -1,0 +1,1260 @@
+{
+  "flows": [
+    {
+      "back": "/?season=2026&week=1",
+      "h1": "GB × NYJ",
+      "step": "time para W2",
+      "url": "http://127.0.0.1:18105/?view=matchup-w12&game=2026_02_GB_NYJ&season=2026&week=2&returnWeek=1"
+    },
+    {
+      "games": 16,
+      "step": "retorno W1",
+      "url": "http://127.0.0.1:18105/?season=2026&week=1"
+    },
+    {
+      "games": 16,
+      "step": "hub W2",
+      "url": "http://127.0.0.1:18105/?season=2026&week=2"
+    },
+    {
+      "expanded": "false",
+      "focus": "game-search",
+      "step": "Escape"
+    },
+    {
+      "back": "/?q=NYJ&scope=season&season=2026&week=2",
+      "h1": "New York Jets",
+      "step": "busca time teclado",
+      "url": "http://127.0.0.1:18105/?q=NYJ&scope=season&view=team-w12&team=NYJ&season=2026&returnWeek=2"
+    },
+    {
+      "back": "/?q=NYJ&scope=season&season=2026&week=2",
+      "step": "W2 time para jogo W1",
+      "url": "http://127.0.0.1:18105/?q=NYJ&scope=season&view=matchup-w12&game=2026_01_NYJ_TEN&season=2026&week=1&returnWeek=2"
+    },
+    {
+      "games": 16,
+      "q": "NYJ",
+      "step": "retorno preserva W2 e busca",
+      "url": "http://127.0.0.1:18105/?q=NYJ&scope=season&season=2026&week=2"
+    },
+    {
+      "step": "busca partida destino exato",
+      "title": "NYJ × TEN",
+      "url": "http://127.0.0.1:18105/?q=TEN&scope=season&view=matchup-w12&game=2026_01_NYJ_TEN&season=2026&week=1&returnWeek=2"
+    },
+    {
+      "step": "recarga partida",
+      "title": "NYJ × TEN",
+      "url": "http://127.0.0.1:18105/?q=TEN&scope=season&view=matchup-w12&game=2026_01_NYJ_TEN&season=2026&week=1&returnWeek=2"
+    },
+    {
+      "q": "NYJ",
+      "step": "historico voltar",
+      "url": "http://127.0.0.1:18105/?q=NYJ&scope=season&season=2026&week=2"
+    },
+    {
+      "step": "historico avancar",
+      "title": "NYJ × TEN",
+      "url": "http://127.0.0.1:18105/?q=TEN&scope=season&view=matchup-w12&game=2026_01_NYJ_TEN&season=2026&week=1&returnWeek=2"
+    },
+    {
+      "identity": "ATL",
+      "step": "ATL antes de liberar BAL",
+      "title": "Atlanta Falcons",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=ATL&season=2026&returnWeek=2"
+    },
+    {
+      "identity": "ATL",
+      "step": "resposta BAL tardia liberada",
+      "thirds": 51,
+      "title": "Atlanta Falcons",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=ATL&season=2026&returnWeek=2"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nNão foi possível carregar esta fonte local. Nenhum outro time, jogo ou período foi usado.\n\nTentar carregar novamenteVoltar à semana",
+      "stale": 0,
+      "step": "falha independente times",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=ATL&season=2026&returnWeek=2"
+    },
+    {
+      "step": "confronto permanece sem fonte time",
+      "title": "NYJ × TEN"
+    },
+    {
+      "step": "time independe do HTTP confronto",
+      "title": "Atlanta Falcons"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nTime desconhecido neste acervo. Nenhum time substituto foi escolhido.\n\nTentar carregar novamenteVoltar à semana",
+      "stale": 0,
+      "step": "endereco invalido",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=XYZ&season=2026"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nA página do time usa explicitamente W1–2. Use returnWeek somente para retornar ao hub.\n\nTentar carregar novamenteVoltar à semana",
+      "stale": 0,
+      "step": "endereco invalido",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=BAL&week=1"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nEsta entrada está disponível somente em 2026 REG W1–2.\n\nTentar carregar novamenteVoltar à semana",
+      "stale": 0,
+      "step": "endereco invalido",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=BAL&season=2025"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nIdentificador de confronto desconhecido. Nenhum jogo substituto foi escolhido.\n\nTentar carregar novamenteVoltar à semana",
+      "stale": 0,
+      "step": "endereco invalido",
+      "url": "http://127.0.0.1:18105/?view=matchup-w12&game=2026_03_NYJ_TEN"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nSemana ou identificador incompatível com o hub W1–2.\n\nTentar carregar novamenteVoltar à semana",
+      "stale": 0,
+      "step": "endereco invalido",
+      "url": "http://127.0.0.1:18105/?season=2026&week=3"
+    },
+    {
+      "focus": "2026_01_NYJ_TEN:1118",
+      "readout": "NYJ com a bola · NYJ contra TEN · W1, 1 jardas · corrida · convertida · ID 2026_01_NYJ_TEN:1118",
+      "step": "marca pelo teclado"
+    },
+    {
+      "open": true,
+      "step": "regra pelo teclado",
+      "text": "O que é uma terceira elegível?\n\nPasse/corrida de terceira com flags válidas. Ajoelhadas, spikes, anuladas, abortadas e tentativas especiais ficam fora; avanço por penalidade não é adicionado automaticamente. Os dois jogos compõem o denominador. Zero oportunidades não é fonte ausente; falta de componente impede o agregado completo.\n\nConsultar método completo"
+    },
+    {
+      "hash": "#mr-method",
+      "open": [
+        false,
+        true
+      ],
+      "step": "auditoria pelo teclado"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nO endereço do time contém um confronto incompatível. Abra somente o time escolhido.\n\nTentar carregar novamenteVoltar à semana",
+      "step": "identificadores mistos ou fase",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=BAL&game=2026_01_BAL_IND"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nO endereço do confronto contém um time incompatível. Abra somente a partida escolhida.\n\nTentar carregar novamenteVoltar à semana",
+      "step": "identificadores mistos ou fase",
+      "url": "http://127.0.0.1:18105/?view=matchup-w12&game=2026_01_BAL_IND&team=BAL"
+    },
+    {
+      "error": "Esta leitura não está disponível\n\nEsta entrada está disponível somente em 2026 REG W1–2.\n\nTentar carregar novamenteVoltar à semana",
+      "step": "identificadores mistos ou fase",
+      "url": "http://127.0.0.1:18105/?season=2026&week=1&phase=POST"
+    },
+    {
+      "focus": "ht-results-title",
+      "step": "envio busca e foco",
+      "title": "Resultados para “NYJ”",
+      "url": "http://127.0.0.1:18105/?season=2026&week=2&scope=week&filter=participants&q=NYJ"
+    },
+    {
+      "back": "/?q=NYJ&scope=week&filter=participants&season=2026&week=2",
+      "step": "preserva scope e filtro na escolha",
+      "url": "http://127.0.0.1:18105/?q=NYJ&scope=week&filter=participants&view=team-w12&team=NYJ&season=2026&returnWeek=2"
+    },
+    {
+      "step": "Tab na leitura do time",
+      "sequence": [
+        {
+          "outline": "solid",
+          "tag": "A",
+          "text": "EPA"
+        },
+        {
+          "outline": "solid",
+          "tag": "A",
+          "text": "Terceiras"
+        },
+        {
+          "outline": "solid",
+          "tag": "A",
+          "text": "Red zone"
+        },
+        {
+          "outline": "solid",
+          "tag": "A",
+          "text": "Jogos"
+        },
+        {
+          "outline": "solid",
+          "tag": "A",
+          "text": "Método"
+        },
+        {
+          "outline": "solid",
+          "tag": "BUTTON",
+          "text": "Geral"
+        },
+        {
+          "outline": "solid",
+          "tag": "BUTTON",
+          "text": "Passe"
+        }
+      ]
+    },
+    {
+      "headings": [
+        "Explorador de recortes",
+        "Conversões de terceira por distância",
+        "Quantas terceiras viraram conversão?"
+      ],
+      "step": "explorador secundario mobile",
+      "url": "http://127.0.0.1:18105/?view=explorer&season=2026&week=1&game=2026_01_NYJ_TEN&team=NYJ&side=off&reading=game&question=distance&analysis=third&example=nyj"
+    },
+    {
+      "games": 16,
+      "step": "historico retorna do explorador",
+      "title": "Seu próximo confronto.",
+      "url": "http://127.0.0.1:18105/?season=2026&week=2"
+    },
+    {
+      "redzone": "Red zone\n\nTDs ofensivos / campanhas que entraram nas 20 · W1–2\n\nATL com a bola\n\nATL com a bola: nenhuma oportunidade elegível em W1–2. 0/0, sem taxa.\n\nW1 · 0/0 · sem oportunidades, sem taxa\n\nW2 · 0/0 · sem oportunidades, sem taxa\n\nAdversários contra ATL\n4/8\n50,0%\n\nW1 · 1/2\n\nW2 · 3/6\n\nAdversários contra ATL\nField goal\nW1 · campanha 7\nTD\nW1 · campanha 9\nTD\nW2 · campanha 2\nField goal\nW2 · campanha 6\nField goal\nW2 · campanha 10\nTD\nW2 · campanha 12\nTD\nW2 · campanha 14\nPerda por descidas\nW2 · campanha 16\n\n1 Perda por descidas · 3 Field goal · 4 TD\n\nToque ou use Tab e Enter em uma marca para consultar sua unidade original.\n\nQuando uma campanha entra na red zone?",
+      "step": "URL direta com ancora e ATL zero",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=ATL&season=2026&returnWeek=2#team-redzone"
+    },
+    {
+      "productions": 2,
+      "step": "recarga direta time final",
+      "title": "New York Jets",
+      "url": "http://127.0.0.1:18105/?view=team-w12&team=NYJ&season=2026"
+    },
+    {
+      "hasNewTeam": false,
+      "headings": [
+        "Encontre seu jogo.",
+        "Temporada 2026",
+        "Semana 1"
+      ],
+      "step": "referencia18104preservada",
+      "url": "http://127.0.0.1:18104/?season=2026&week=1"
+    }
+  ],
+  "responsive": [
+    {
+      "case": "WAS320200",
+      "font": "32px",
+      "offenders": [
+        {
+          "cl": "",
+          "right": 353.6171875,
+          "tag": "NAV",
+          "text": "Voltar à semanaExplorador anterior"
+        },
+        {
+          "cl": "",
+          "right": 353.6171875,
+          "tag": "A",
+          "text": "Voltar à semana"
+        }
+      ],
+      "scroll": 353,
+      "width": 320
+    },
+    {
+      "case": "hub320200-after",
+      "font": "32px",
+      "scroll": 314,
+      "width": 320
+    },
+    {
+      "case": "hubW2-320",
+      "games": 16,
+      "scroll": 320,
+      "width": 320
+    },
+    {
+      "case": "hubW1-390",
+      "client": 390,
+      "games": 16,
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "case": "WAS-390",
+      "fonts": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "filter": "none"
+        }
+      ],
+      "scroll": 390,
+      "title": "Washington Commanders",
+      "width": 390
+    },
+    {
+      "active": "general",
+      "case": "EPA320",
+      "domains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "focus": "Geral",
+      "scroll": 305,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n+0,020\n131 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,171\n99 jogadas com EPA válido"
+      ],
+      "width": 320
+    },
+    {
+      "active": "classified_pass",
+      "case": "EPA320",
+      "domains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "focus": "Passe",
+      "scroll": 305,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n+0,207\n68 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,157\n67 jogadas com EPA válido"
+      ],
+      "width": 320
+    },
+    {
+      "active": "classified_rush",
+      "case": "EPA320",
+      "domains": [
+        "-0.4/0.4",
+        "-0.4/0.4"
+      ],
+      "focus": "Corrida",
+      "scroll": 305,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n−0,182\n63 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,200\n32 jogadas com EPA válido"
+      ],
+      "width": 320
+    },
+    {
+      "case": "WAS320200-after",
+      "client": 305,
+      "font": "32px",
+      "offenders": [],
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "active": "general",
+      "case": "EPA-1440",
+      "domains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "scroll": 1425,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n+0,020\n131 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,171\n99 jogadas com EPA válido"
+      ],
+      "width": 1440
+    },
+    {
+      "active": "classified_pass",
+      "case": "EPA-1440",
+      "domains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "scroll": 1425,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n+0,207\n68 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,157\n67 jogadas com EPA válido"
+      ],
+      "width": 1440
+    },
+    {
+      "active": "classified_rush",
+      "case": "EPA-1440",
+      "domains": [
+        "-0.4/0.4",
+        "-0.4/0.4"
+      ],
+      "scroll": 1425,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n−0,182\n63 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,200\n32 jogadas com EPA válido"
+      ],
+      "width": 1440
+    },
+    {
+      "active": "general",
+      "case": "EPA-390",
+      "domains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "scroll": 375,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n+0,020\n131 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,171\n99 jogadas com EPA válido"
+      ],
+      "width": 390
+    },
+    {
+      "active": "classified_pass",
+      "case": "EPA-390",
+      "domains": [
+        "-0.2/0.4",
+        "-0.2/0.4"
+      ],
+      "scroll": 375,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n+0,207\n68 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,157\n67 jogadas com EPA válido"
+      ],
+      "width": 390
+    },
+    {
+      "active": "classified_rush",
+      "case": "EPA-390",
+      "domains": [
+        "-0.4/0.4",
+        "-0.4/0.4"
+      ],
+      "scroll": 375,
+      "values": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n−0,182\n63 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,200\n32 jogadas com EPA válido"
+      ],
+      "width": 390
+    },
+    {
+      "abbreviations": [
+        {
+          "scroll": 121,
+          "text": "DET",
+          "width": 121
+        },
+        {
+          "scroll": 121,
+          "text": "BUF",
+          "width": 121
+        }
+      ],
+      "case": "hub320200-final",
+      "client": 305,
+      "font": "32px",
+      "outside": [],
+      "scroll": 305
+    },
+    {
+      "case": "hub320-final",
+      "client": 305,
+      "font": "16px",
+      "scroll": 305
+    },
+    {
+      "case": "teamEPA320200-final",
+      "client": 305,
+      "font": "32px",
+      "scroll": 305,
+      "values": [
+        {
+          "children": [
+            {
+              "scroll": 165,
+              "text": "+0,072",
+              "width": 165
+            },
+            {
+              "scroll": 98,
+              "text": "134 jogadas com EPA válido",
+              "width": 98
+            }
+          ],
+          "scroll": 275,
+          "text": "+0,072134 jogadas com EPA válido",
+          "width": 249
+        },
+        {
+          "children": [
+            {
+              "scroll": 165,
+              "text": "+0,151",
+              "width": 165
+            },
+            {
+              "scroll": 98,
+              "text": "105 jogadas com EPA válido",
+              "width": 98
+            }
+          ],
+          "scroll": 275,
+          "text": "+0,151105 jogadas com EPA válido",
+          "width": 249
+        }
+      ]
+    },
+    {
+      "case": "teamEPA320200-wrapped",
+      "client": 305,
+      "font": "32px",
+      "scroll": 305,
+      "values": [
+        {
+          "childrenFit": true,
+          "scroll": 249,
+          "text": "+0,072134 jogadas com EPA válido",
+          "width": 249
+        },
+        {
+          "childrenFit": true,
+          "scroll": 249,
+          "text": "+0,151105 jogadas com EPA válido",
+          "width": 249
+        }
+      ]
+    }
+  ],
+  "identities": [
+    {
+      "campaigns": 14,
+      "epa": [
+        "ARI com a bola\nDois jogos observados · W1–2\n−0,046\n116 jogadas com EPA válido",
+        "Adversários contra ARI\nDois jogos observados · W1–2\n−0,030\n118 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_ARI_LAC",
+        "2026_02_SEA_ARI"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "ARI",
+      "thirds": 46,
+      "title": "Arizona Cardinals"
+    },
+    {
+      "campaigns": 8,
+      "epa": [
+        "ATL com a bola\nDois jogos observados · W1–2\n−0,403\n124 jogadas com EPA válido",
+        "Adversários contra ATL\nDois jogos observados · W1–2\n−0,084\n120 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_ATL_PIT",
+        "2026_02_CAR_ATL"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "ATL",
+      "thirds": 51,
+      "title": "Atlanta Falcons"
+    },
+    {
+      "campaigns": 11,
+      "epa": [
+        "BAL com a bola\nDois jogos observados · W1–2\n+0,223\n115 jogadas com EPA válido",
+        "Adversários contra BAL\nDois jogos observados · W1–2\n−0,037\n116 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_BAL_IND",
+        "2026_02_NO_BAL"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "BAL",
+      "thirds": 42,
+      "title": "Baltimore Ravens"
+    },
+    {
+      "campaigns": 18,
+      "epa": [
+        "BUF com a bola\nDois jogos observados · W1–2\n+0,355\n117 jogadas com EPA válido",
+        "Adversários contra BUF\nDois jogos observados · W1–2\n+0,144\n135 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_BUF_HOU",
+        "2026_02_DET_BUF"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "BUF",
+      "thirds": 46,
+      "title": "Buffalo Bills"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "CAR com a bola\nDois jogos observados · W1–2\n+0,162\n121 jogadas com EPA válido",
+        "Adversários contra CAR\nDois jogos observados · W1–2\n−0,022\n137 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_CHI_CAR",
+        "2026_02_CAR_ATL"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "CAR",
+      "thirds": 50,
+      "title": "Carolina Panthers"
+    },
+    {
+      "campaigns": 12,
+      "epa": [
+        "CHI com a bola\nDois jogos observados · W1–2\n+0,144\n139 jogadas com EPA válido",
+        "Adversários contra CHI\nDois jogos observados · W1–2\n+0,064\n113 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_CHI_CAR",
+        "2026_02_MIN_CHI"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "CHI",
+      "thirds": 50,
+      "title": "Chicago Bears"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "CIN com a bola\nDois jogos observados · W1–2\n−0,045\n120 jogadas com EPA válido",
+        "Adversários contra CIN\nDois jogos observados · W1–2\n−0,222\n127 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_TB_CIN",
+        "2026_02_CIN_HOU"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "CIN",
+      "thirds": 56,
+      "title": "Cincinnati Bengals"
+    },
+    {
+      "campaigns": 11,
+      "epa": [
+        "CLE com a bola\nDois jogos observados · W1–2\n−0,084\n102 jogadas com EPA válido",
+        "Adversários contra CLE\nDois jogos observados · W1–2\n+0,077\n115 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_CLE_JAX",
+        "2026_02_CLE_TB"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "CLE",
+      "thirds": 46,
+      "title": "Cleveland Browns"
+    },
+    {
+      "campaigns": 16,
+      "epa": [
+        "DAL com a bola\nDois jogos observados · W1–2\n+0,224\n106 jogadas com EPA válido",
+        "Adversários contra DAL\nDois jogos observados · W1–2\n+0,217\n132 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_DAL_NYG",
+        "2026_02_WAS_DAL"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "DAL",
+      "thirds": 46,
+      "title": "Dallas Cowboys"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "DEN com a bola\nDois jogos observados · W1–2\n−0,087\n102 jogadas com EPA válido",
+        "Adversários contra DEN\nDois jogos observados · W1–2\n+0,066\n119 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_DEN_KC",
+        "2026_02_JAX_DEN"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "DEN",
+      "thirds": 50,
+      "title": "Denver Broncos"
+    },
+    {
+      "campaigns": 20,
+      "epa": [
+        "DET com a bola\nDois jogos observados · W1–2\n+0,107\n135 jogadas com EPA válido",
+        "Adversários contra DET\nDois jogos observados · W1–2\n+0,179\n151 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_NO_DET",
+        "2026_02_DET_BUF"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "DET",
+      "thirds": 50,
+      "title": "Detroit Lions"
+    },
+    {
+      "campaigns": 17,
+      "epa": [
+        "GB com a bola\nDois jogos observados · W1–2\n−0,195\n117 jogadas com EPA válido",
+        "Adversários contra GB\nDois jogos observados · W1–2\n−0,076\n129 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_GB_MIN",
+        "2026_02_GB_NYJ"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "GB",
+      "thirds": 54,
+      "title": "Green Bay Packers"
+    },
+    {
+      "campaigns": 13,
+      "epa": [
+        "HOU com a bola\nDois jogos observados · W1–2\n−0,092\n149 jogadas com EPA válido",
+        "Adversários contra HOU\nDois jogos observados · W1–2\n+0,069\n109 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_BUF_HOU",
+        "2026_02_CIN_HOU"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "HOU",
+      "thirds": 57,
+      "title": "Houston Texans"
+    },
+    {
+      "campaigns": 15,
+      "epa": [
+        "IND com a bola\nDois jogos observados · W1–2\n−0,026\n116 jogadas com EPA válido",
+        "Adversários contra IND\nDois jogos observados · W1–2\n+0,269\n138 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_BAL_IND",
+        "2026_02_IND_KC"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "IND",
+      "thirds": 43,
+      "title": "Indianapolis Colts"
+    },
+    {
+      "campaigns": 11,
+      "epa": [
+        "JAX com a bola\nDois jogos observados · W1–2\n+0,142\n108 jogadas com EPA válido",
+        "Adversários contra JAX\nDois jogos observados · W1–2\n−0,020\n105 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_CLE_JAX",
+        "2026_02_JAX_DEN"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "JAX",
+      "thirds": 39,
+      "title": "Jacksonville Jaguars"
+    },
+    {
+      "campaigns": 15,
+      "epa": [
+        "KC com a bola\nDois jogos observados · W1–2\n+0,200\n142 jogadas com EPA válido",
+        "Adversários contra KC\nDois jogos observados · W1–2\n−0,056\n109 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_DEN_KC",
+        "2026_02_IND_KC"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "KC",
+      "thirds": 53,
+      "title": "Kansas City Chiefs"
+    },
+    {
+      "campaigns": 12,
+      "epa": [
+        "LA com a bola\nDois jogos observados · W1–2\n+0,013\n112 jogadas com EPA válido",
+        "Adversários contra LA\nDois jogos observados · W1–2\n−0,102\n119 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_SF_LA",
+        "2026_02_NYG_LA"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "brightness(0) invert(1)",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "LA",
+      "thirds": 43,
+      "title": "Los Angeles Rams"
+    },
+    {
+      "campaigns": 13,
+      "epa": [
+        "LAC com a bola\nDois jogos observados · W1–2\n−0,253\n113 jogadas com EPA válido",
+        "Adversários contra LAC\nDois jogos observados · W1–2\n+0,035\n126 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_ARI_LAC",
+        "2026_02_LV_LAC"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "LAC",
+      "thirds": 47,
+      "title": "Los Angeles Chargers"
+    },
+    {
+      "campaigns": 12,
+      "epa": [
+        "LV com a bola\nDois jogos observados · W1–2\n−0,066\n121 jogadas com EPA válido",
+        "Adversários contra LV\nDois jogos observados · W1–2\n−0,250\n112 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_MIA_LV",
+        "2026_02_LV_LAC"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "LV",
+      "thirds": 48,
+      "title": "Las Vegas Raiders"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "MIA com a bola\nDois jogos observados · W1–2\n−0,112\n106 jogadas com EPA válido",
+        "Adversários contra MIA\nDois jogos observados · W1–2\n+0,172\n111 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_MIA_LV",
+        "2026_02_MIA_SF"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "MIA",
+      "thirds": 44,
+      "title": "Miami Dolphins"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "MIN com a bola\nDois jogos observados · W1–2\n−0,057\n109 jogadas com EPA válido",
+        "Adversários contra MIN\nDois jogos observados · W1–2\n−0,150\n136 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_GB_MIN",
+        "2026_02_MIN_CHI"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "MIN",
+      "thirds": 53,
+      "title": "Minnesota Vikings"
+    },
+    {
+      "campaigns": 6,
+      "epa": [
+        "NE com a bola\nDois jogos observados · W1–2\n−0,092\n118 jogadas com EPA válido",
+        "Adversários contra NE\nDois jogos observados · W1–2\n−0,182\n114 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_NE_SEA",
+        "2026_02_PIT_NE"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "NE",
+      "thirds": 51,
+      "title": "New England Patriots"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "NO com a bola\nDois jogos observados · W1–2\n+0,046\n148 jogadas com EPA válido",
+        "Adversários contra NO\nDois jogos observados · W1–2\n+0,050\n128 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_NO_DET",
+        "2026_02_NO_BAL"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "NO",
+      "thirds": 53,
+      "title": "New Orleans Saints"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "NYG com a bola\nDois jogos observados · W1–2\n+0,003\n120 jogadas com EPA válido",
+        "Adversários contra NYG\nDois jogos observados · W1–2\n+0,257\n108 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_DAL_NYG",
+        "2026_02_NYG_LA"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "brightness(0) invert(1)",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "NYG",
+      "thirds": 43,
+      "title": "New York Giants"
+    },
+    {
+      "campaigns": 11,
+      "epa": [
+        "NYJ com a bola\nDois jogos observados · W1–2\n+0,020\n131 jogadas com EPA válido",
+        "Adversários contra NYJ\nDois jogos observados · W1–2\n−0,171\n99 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_NYJ_TEN",
+        "2026_02_GB_NYJ"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "brightness(0) invert(1)",
+          "width": 4096
+        }
+      ],
+      "overflow": false,
+      "team": "NYJ",
+      "thirds": 50,
+      "title": "New York Jets"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "PHI com a bola\nDois jogos observados · W1–2\n+0,052\n123 jogadas com EPA válido",
+        "Adversários contra PHI\nDois jogos observados · W1–2\n+0,075\n118 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_WAS_PHI",
+        "2026_02_PHI_TEN"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "PHI",
+      "thirds": 60,
+      "title": "Philadelphia Eagles"
+    },
+    {
+      "campaigns": 4,
+      "epa": [
+        "PIT com a bola\nDois jogos observados · W1–2\n−0,330\n128 jogadas com EPA válido",
+        "Adversários contra PIT\nDois jogos observados · W1–2\n−0,202\n108 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_ATL_PIT",
+        "2026_02_PIT_NE"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "PIT",
+      "thirds": 48,
+      "title": "Pittsburgh Steelers"
+    },
+    {
+      "campaigns": 10,
+      "epa": [
+        "SEA com a bola\nDois jogos observados · W1–2\n+0,106\n114 jogadas com EPA válido",
+        "Adversários contra SEA\nDois jogos observados · W1–2\n−0,199\n114 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_NE_SEA",
+        "2026_02_SEA_ARI"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "SEA",
+      "thirds": 52,
+      "title": "Seattle Seahawks"
+    },
+    {
+      "campaigns": 13,
+      "epa": [
+        "SF com a bola\nDois jogos observados · W1–2\n+0,298\n111 jogadas com EPA válido",
+        "Adversários contra SF\nDois jogos observados · W1–2\n−0,133\n112 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_SF_LA",
+        "2026_02_MIA_SF"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "SF",
+      "thirds": 43,
+      "title": "San Francisco 49ers"
+    },
+    {
+      "campaigns": 16,
+      "epa": [
+        "TB com a bola\nDois jogos observados · W1–2\n−0,164\n113 jogadas com EPA válido",
+        "Adversários contra TB\nDois jogos observados · W1–2\n+0,003\n115 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_TB_CIN",
+        "2026_02_CLE_TB"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "TB",
+      "thirds": 53,
+      "title": "Tampa Bay Buccaneers"
+    },
+    {
+      "campaigns": 12,
+      "epa": [
+        "TEN com a bola\nDois jogos observados · W1–2\n−0,020\n100 jogadas com EPA válido",
+        "Adversários contra TEN\nDois jogos observados · W1–2\n+0,098\n132 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_NYJ_TEN",
+        "2026_02_PHI_TEN"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "TEN",
+      "thirds": 53,
+      "title": "Tennessee Titans"
+    },
+    {
+      "campaigns": 14,
+      "epa": [
+        "WAS com a bola\nDois jogos observados · W1–2\n+0,072\n134 jogadas com EPA válido",
+        "Adversários contra WAS\nDois jogos observados · W1–2\n+0,151\n105 jogadas com EPA válido"
+      ],
+      "games": [
+        "2026_01_WAS_PHI",
+        "2026_02_WAS_DAL"
+      ],
+      "logo": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "complete": true,
+          "filter": "none",
+          "width": 500
+        }
+      ],
+      "overflow": false,
+      "team": "WAS",
+      "thirds": 54,
+      "title": "Washington Commanders"
+    }
+  ],
+  "restored": {
+    "font": "16px",
+    "testFetchWrapper": "undefined",
+    "url": "http://127.0.0.1:18105/?season=2026&week=1",
+    "width": 1280
+  }
+}

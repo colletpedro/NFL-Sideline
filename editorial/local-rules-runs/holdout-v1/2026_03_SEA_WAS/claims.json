@@ -1,0 +1,37 @@
+{
+  "verdict" : "INCONCLUSIVE",
+  "claims" : [ {
+    "type" : "MATCHUP",
+    "subject" : "SEA",
+    "predicate" : "POSITIVE_EPA_CONVERGENCE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "claim_id" : "SEA:OFF_EPA_PASS",
+    "evidence_ids" : [ "rw:2026:SEA:OFF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:WAS:DEF_EPA_PASS:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  }, {
+    "type" : "LIMITATION",
+    "subject" : "MATCHUP",
+    "predicate" : "SMALL_SAMPLE",
+    "period" : "NONE",
+    "role" : "LIMITATION",
+    "claim_id" : "limitation",
+    "evidence_ids" : [ ]
+  }, {
+    "type" : "MATCHUP",
+    "subject" : "SEA",
+    "predicate" : "POSITIVE_EPA_CONVERGENCE",
+    "period" : "CURRENT",
+    "role" : "OPPORTUNITY",
+    "claim_id" : "SEA:OFF_EPA_PLAY",
+    "evidence_ids" : [ "rw:2026:SEA:OFF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2", "rw:2026:WAS:DEF_EPA_PLAY:CURRENT_SEASON_PRIOR_WEEKS:1,2" ]
+  } ],
+  "sections" : {
+    "fator_chave" : [ "SEA:OFF_EPA_PASS" ],
+    "vantagem_tatica" : [ "SEA:OFF_EPA_PASS" ],
+    "alerta_vermelho" : [ "limitation" ],
+    "veredito" : [ "limitation", "SEA:OFF_EPA_PASS", "SEA:OFF_EPA_PLAY" ]
+  },
+  "links" : [ ],
+  "contract_version" : 4,
+  "thesis_team" : "NONE"
+}

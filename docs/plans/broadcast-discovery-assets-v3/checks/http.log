@@ -1,0 +1,34 @@
+{
+  "bundleId": "sha256:2fae3be2b1ab7e5799287469ec29b9a98ff652a365ccafcb11b46c55d98ace8a",
+  "sessionId": "sha256:a0b4a5b4ffbac39ef3ea827c1c7b0b53a30156aa1a94214da3722630dd3d9e2c",
+  "materializationId": "sha256:f7a70f61b442d8d631e858ac05c5c6191652b8d0ed0ffd5a7ac8094939a8d3fa",
+  "temporalInputId": "sha256:9dc7e6de11af1d0e494877c82f6cc234be3cbe002ab5ee47bf29cc2cf1d3a0e6",
+  "completeReaderValidated": true,
+  "backupCompleteReaderValidated": true,
+  "pinMatched": true,
+  "expectedCohortMatched": true,
+  "documents": 48,
+  "reconciledProjection": 48,
+  "states": {
+    "OBSERVED": 42,
+    "ABSENT": 6
+  },
+  "guarantees": {
+    "integrity": [
+      "RECONCILED"
+    ],
+    "completeness": [
+      "UNKNOWN"
+    ],
+    "coverage": [
+      "UNKNOWN"
+    ],
+    "temporal": [
+      "UNKNOWN"
+    ]
+  },
+  "epaModelStates": [
+    "UNKNOWN"
+  ],
+  "primaryAndBackupUnchanged": true
+}

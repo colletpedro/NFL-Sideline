@@ -1,0 +1,16 @@
+{
+  "allKeysLabelsTargetsProbabilitiesAuditedNamesAndPositionsExact": true,
+  "noFit": true,
+  "note": "Sources manifest dates/provenance differ from full research acquisition by scope; semantic predictions and aggregates agree. No active laboratory pointer written.",
+  "offlineReplay": true,
+  "passed": true,
+  "passesCompared": 7970,
+  "pinnedModelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+  "revision": {
+    "added": [],
+    "changed": [],
+    "current_predictions_sha256": "a4a1b644abc0474829f4476f47e92f02bf22d6857c2968f359eb7b042a0e71e0",
+    "previous_predictions_sha256": "a4a1b644abc0474829f4476f47e92f02bf22d6857c2968f359eb7b042a0e71e0",
+    "removed": []
+  }
+}

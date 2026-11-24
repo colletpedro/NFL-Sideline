@@ -1,0 +1,44 @@
+{
+  "proof": "REAL_HTTP_SYNTHETIC_BUNDLES",
+  "sessionId": "sha256:a9c839a6e35f753ef446a66ec82a3f4d1c5a29747dc91801b2276f7a13b474c9",
+  "documents": 120,
+  "refusals": 12,
+  "entries": [
+    {
+      "entryId": "real-archive",
+      "status": "ERROR",
+      "bundleId": null,
+      "errorCode": "BUNDLE_VALIDATION_FAILED"
+    },
+    {
+      "entryId": "synthetic",
+      "status": "READY",
+      "bundleId": "sha256:7d6e3c71116935e42fe01e3cad1c2161dff89b4776f679d1ec2d629d96b9778c",
+      "errorCode": null
+    },
+    {
+      "entryId": "zero",
+      "status": "READY",
+      "bundleId": "sha256:58c7abff7588e041fa57204bbb3790cc3a04c2dc1a3cfe23e877201b9e3ed7f6",
+      "errorCode": null
+    },
+    {
+      "entryId": "no-epa",
+      "status": "READY",
+      "bundleId": "sha256:398e20ebca4c3d3250251f7150e17d83d1e92b9823a48d772a01e7096ae61e86",
+      "errorCode": null
+    },
+    {
+      "entryId": "history",
+      "status": "READY",
+      "bundleId": "sha256:14cae84f726df3ae59c31d3cb0ef1606357022f3e0e8b85d9bc8eb4e8c52d2e9",
+      "errorCode": null
+    },
+    {
+      "entryId": "absent",
+      "status": "READY",
+      "bundleId": "sha256:bbdbea7f14b774818be927bdd6bde7c7cebbf60324a0d51222954b7170785ec6",
+      "errorCode": null
+    }
+  ]
+}

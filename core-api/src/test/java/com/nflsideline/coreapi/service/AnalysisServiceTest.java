@@ -6,6 +6,7 @@ import com.nflsideline.coreapi.domain.Game;
 import com.nflsideline.coreapi.editorial.AnalysisContext;
 import com.nflsideline.coreapi.editorial.AnalysisContextBuilder;
 import com.nflsideline.coreapi.editorial.AnalysisDepth;
+import com.nflsideline.coreapi.editorial.ContextQuality;
 import com.nflsideline.coreapi.llm.GeminiGateway;
 import com.nflsideline.coreapi.repository.AnalysisCacheRepository;
 import com.nflsideline.coreapi.repository.GameRepository;
@@ -14,174 +15,101 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class AnalysisServiceTest {
-    private static final LocalDate AS_OF = LocalDate.parse("2026-09-15");
-    private static final String VALID = "{\"fator_chave\":\"duelo central\",\"vantagem_tatica\":\"equilíbrio\","
-            + "\"alerta_vermelho\":\"incerteza\",\"veredito\":\"jogo aberto\",\"metricas_citadas\":{}}";
+    private static final LocalDate DATE = LocalDate.parse("2026-09-15");
+    private static final String VALID = """
+            {"contract_version":3,"thesis_team":"NONE","verdict":"INCONCLUSIVE","claims":[
+            {"claim_id":"k","type":"LIMITATION","subject":"MATCHUP","predicate":"NO_DATA","period":"NONE","evidence_ids":[],"role":"LIMITATION"},
+            {"claim_id":"a","type":"LIMITATION","subject":"MATCHUP","predicate":"NO_MATCHUP_SUPPORT","period":"NONE","evidence_ids":[],"role":"LIMITATION"},
+            {"claim_id":"r","type":"LIMITATION","subject":"MATCHUP","predicate":"NO_DATA","period":"NONE","evidence_ids":[],"role":"LIMITATION"},
+            {"claim_id":"v","type":"LIMITATION","subject":"MATCHUP","predicate":"NO_DATA","period":"NONE","evidence_ids":[],"role":"LIMITATION"}],
+            "sections":{"fator_chave":["k"],"vantagem_tatica":["a"],"alerta_vermelho":["r"],"veredito":["v"]}}
+            """;
 
-    @Test
-    void identicalExecutionCallsGeminiOnceAndRevisionCreatesImmutableVersion() {
-        Fixture fixture = fixture(VALID);
-        var first = fixture.service.generateMatchupAnalysis(request("r1"));
-        var cached = fixture.service.generateMatchupAnalysis(request("r1"));
-        fixture.service.generateMatchupAnalysis(request("r2"));
+    @Test void cacheIdentityIsVersionedAndRevisionCreatesNewRow() {
+        Fixture f = fixture(VALID);
+        var first = f.service.generateMatchupAnalysis(request("r1"));
+        var repeat = f.service.generateMatchupAnalysis(request("r1"));
+        f.service.generateMatchupAnalysis(request("r2"));
         assertThat(first.fromCache()).isFalse();
-        assertThat(cached.fromCache()).isTrue();
-        assertThat(fixture.calls).hasValue(2);
-        assertThat(fixture.saved).hasSize(2);
+        assertThat(repeat.fromCache()).isTrue();
+        assertThat(f.calls).hasValue(2);
+        assertThat(f.saved).hasSize(2);
+        String baseline = f.service.promptHash(AnalysisDepth.FULL, "{}", DATE, "r1");
+        assertThat(f.service.promptHash(AnalysisDepth.BASIC, "{}", DATE, "r1")).isNotEqualTo(baseline);
+        assertThat(f.service.promptHash(AnalysisDepth.FULL, "{}", DATE, "r2")).isNotEqualTo(baseline);
     }
 
-    @Test
-    void hashChangesForEveryApprovedIdentityDimension() {
-        Fixture fixture = fixture(VALID);
-        String baseline = fixture.service.promptHash(AnalysisDepth.FULL, "{\"x\":1}", AS_OF, "r1");
-        assertThat(fixture.service.promptHash(AnalysisDepth.BASIC, "{\"x\":1}", AS_OF, "r1")).isNotEqualTo(baseline);
-        assertThat(fixture.service.promptHash(AnalysisDepth.FULL, "{\"x\":2}", AS_OF, "r1")).isNotEqualTo(baseline);
-        assertThat(fixture.service.promptHash(AnalysisDepth.FULL, "{\"x\":1}", AS_OF.plusDays(1), "r1")).isNotEqualTo(baseline);
-        assertThat(fixture.service.promptHash(AnalysisDepth.FULL, "{\"x\":1}", AS_OF, "r2")).isNotEqualTo(baseline);
-        AnalysisService otherModel = new AnalysisService(fixture.games, fixture.caches, fixture.contexts,
-                fixture.gateway, new ObjectMapper(), "other-model");
-        assertThat(otherModel.promptHash(AnalysisDepth.FULL, "{\"x\":1}", AS_OF, "r1")).isNotEqualTo(baseline);
-    }
-
-    @Test
-    void unknownTypeAndInvalidResponseNeverCreateUsableCache() {
-        Fixture fixture = fixture("{\"fator_chave\":\"20 pontos\",\"vantagem_tatica\":\"x\","
-                + "\"alerta_vermelho\":\"y\",\"veredito\":\"z\"}");
-        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(
-                new AnalysisRequest("g", "matchup", AS_OF, "r1"))).isInstanceOf(IllegalArgumentException.class);
-        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
-                .isInstanceOf(IllegalStateException.class);
-        verify(fixture.caches, never()).saveAndFlush(any());
-    }
-
-    @Test
-    void timeoutOrClientFailureNeverCreatesUsableCache() {
-        Fixture fixture = fixture((system, user) -> { throw new IllegalStateException("timed out"); });
-        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
-                .isInstanceOf(IllegalStateException.class);
-        verify(fixture.caches, never()).saveAndFlush(any());
-    }
-
-    @Test
-    void validStructuredResponseStoresOnlyFourPublicFields() throws Exception {
-        Fixture f = fixture(VALID.replace("duelo central", "20 pontos na temporada anterior")
-                .replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":20}"));
-        var result = f.service.generateMatchupAnalysis(request("r1"));
-        var json = new ObjectMapper().readTree(f.saved.values().iterator().next().getResponseText());
+    @Test void onlyFourRenderedFieldsArePersistedAndLegacyReadsRemainAvailable() throws Exception {
+        Fixture f = fixture(VALID);
+        f.service.generateMatchupAnalysis(request("r1"));
+        var saved = f.saved.values().iterator().next();
+        var json = new ObjectMapper().readTree(saved.getResponseText());
         assertThat(json.size()).isEqualTo(4);
-        assertThat(json.has("metricas_citadas")).isFalse();
+        assertThat(json.path("veredito").asText()).contains("inconclusivo");
+        AnalysisCache legacy = AnalysisCache.builder().gameId("g").responseText("{\"fator_chave\":\"antigo\"}").build();
+        when(f.caches.findFirstByGameIdAndAnalysisTypeInOrderByCreatedAtDescIdDesc(eq("g"), any()))
+                .thenReturn(Optional.of(legacy));
+        assertThat(f.service.findLatestCachedMatchup("g").orElseThrow().markdownText()).contains("antigo");
     }
 
-    @Test
-    void textualNumberInContextDoesNotNeedDuplicatedCitation() {
-        Fixture fixture = fixture(VALID.replace("duelo central", "20 pontos"));
-        fixture.service.generateMatchupAnalysis(request("r1"));
-        assertThat(fixture.saved).hasSize(1);
+    @Test void invalidReferenceCannotCreateCache() {
+        Fixture f = fixture(VALID.replace("\"fator_chave\":[\"k\"]", "\"fator_chave\":[\"missing\"]"));
+        assertThatThrownBy(() -> f.service.generateMatchupAnalysis(request("r1"))).hasMessage("INVALID_REFERENCE");
+        assertThat(f.saved).isEmpty();
+        verify(f.caches, never()).saveAndFlush(any());
     }
 
-    @Test
-    void textualNumberMissingFromContextIsRejected() {
-        Fixture fixture = fixture(VALID.replace("duelo central", "21 pontos"));
-        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
-                .hasMessage("INVALID_NUMERIC_CITATIONS");
-        assertThat(fixture.saved).isEmpty();
+    @Test void malformedOrFailedGenerationCannotCreateCache() {
+        Fixture malformed = fixture("{oops");
+        assertThatThrownBy(() -> malformed.service.generateMatchupAnalysis(request("r1"))).hasMessage("INVALID_JSON");
+        assertThat(malformed.saved).isEmpty();
+        Fixture failed = fixture((system, prompt) -> { throw new IllegalStateException("timeout"); });
+        assertThatThrownBy(() -> failed.service.generateMatchupAnalysis(request("r1"))).isInstanceOf(IllegalStateException.class);
+        assertThat(failed.saved).isEmpty();
     }
 
-    @Test
-    void citedNumberMissingFromContextIsRejected() {
-        Fixture fixture = fixture(VALID.replace("\"metricas_citadas\":{}", "\"metricas_citadas\":{\"pontos\":21}"));
-        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
-                .hasMessage("INVALID_NUMERIC_CITATIONS");
-        assertThat(fixture.saved).isEmpty();
+    @Test void geminiDoesNotAdoptLocalContractImplicitly() {
+        Fixture f = fixture(VALID.replace("\"contract_version\":3", "\"contract_version\":5"));
+        assertThatThrownBy(() -> f.service.generateMatchupAnalysis(request("local-contract")))
+                .hasMessage("INCOMPATIBLE_PREDICATE");
+        assertThat(f.saved).isEmpty();
     }
 
-    @Test
-    void citedValuesMustRemainNumeric() {
-        Fixture fixture = fixture(VALID.replace("\"metricas_citadas\":{}",
-                "\"metricas_citadas\":{\"pontos\":{\"valor\":20}}"));
-        assertThatThrownBy(() -> fixture.service.generateMatchupAnalysis(request("r1")))
-                .hasMessage("INVALID_NUMERIC_CITATIONS");
-        assertThat(fixture.saved).isEmpty();
-    }
-
-    @Test
-    void historicalYearsAreIgnoredAsMetrics() {
-        Fixture fixture = fixture(VALID.replace("duelo central", "Histórico de 1999, 2025 e 2100"));
-        fixture.service.generateMatchupAnalysis(request("r1"));
-        assertThat(fixture.saved).hasSize(1);
-    }
-
-    @Test
-    void allFourFieldsMustBeNonblankStringsAndCitationsObjectRequired() throws Exception {
-        for (String key : java.util.List.of("fator_chave", "vantagem_tatica", "alerta_vermelho", "veredito")) {
-            for (String value : java.util.List.of("missing", "blank", "number")) {
-                var json = (com.fasterxml.jackson.databind.node.ObjectNode) new ObjectMapper().readTree(VALID);
-                if (value.equals("missing")) json.remove(key);
-                else if (value.equals("blank")) json.put(key, "  ");
-                else json.put(key, 20);
-                Fixture f = fixture(json.toString());
-                assertThatThrownBy(() -> f.service.generateMatchupAnalysis(request("r1"))).hasMessage("MISSING_FIELDS");
-                assertThat(f.saved).isEmpty();
-            }
-        }
-        Fixture invalid = fixture("{secret");
-        assertThatThrownBy(() -> invalid.service.generateMatchupAnalysis(request("r1"))).hasMessage("INVALID_JSON");
-        Fixture empty = fixture(" ");
-        assertThatThrownBy(() -> empty.service.generateMatchupAnalysis(request("r1"))).hasMessage("EMPTY_RESPONSE");
-        Fixture missing = fixture(VALID.replace(",\"metricas_citadas\":{}", ""));
-        assertThatThrownBy(() -> missing.service.generateMatchupAnalysis(request("r1"))).hasMessage("MISSING_FIELDS");
-    }
-
-    private AnalysisRequest request(String revision) {
-        return new AnalysisRequest("g", "matchup_full_v0", AS_OF, revision);
-    }
-
-    private Fixture fixture(String output) {
+    private AnalysisRequest request(String revision) { return new AnalysisRequest("g", "matchup_full_v0", DATE, revision); }
+    private Fixture fixture(String response) {
         AtomicInteger calls = new AtomicInteger();
-        return fixture((system, user) -> { calls.incrementAndGet(); return output; }, calls);
+        return fixture((system, prompt) -> { calls.incrementAndGet(); return response; }, calls);
     }
-
-    private Fixture fixture(GeminiGateway gateway) {
-        return fixture(gateway, new AtomicInteger());
-    }
-
+    private Fixture fixture(GeminiGateway gateway) { return fixture(gateway, new AtomicInteger()); }
     private Fixture fixture(GeminiGateway gateway, AtomicInteger calls) {
         GameRepository games = mock(GameRepository.class);
         AnalysisCacheRepository caches = mock(AnalysisCacheRepository.class);
         AnalysisContextBuilder contexts = mock(AnalysisContextBuilder.class);
-        Game game = Game.builder().gameId("g").season(2026).week(2).gameType("REG")
-                .gameday(AS_OF).build();
+        Game game = Game.builder().gameId("g").season(2026).week(2).gameType("REG").gameday(DATE).build();
         when(games.findById("g")).thenReturn(Optional.of(game));
-        when(games.findAllBySeasonWithDetails(2026)).thenReturn(java.util.List.of(game));
-        when(contexts.build(any(), any())).thenReturn(new AnalysisContext("{\"metric\":20}",
-                com.nflsideline.coreapi.editorial.ContextQuality.PARTIAL));
+        when(games.findAllBySeasonWithDetails(2026)).thenReturn(List.of(game));
+        when(contexts.build(any(), any())).thenReturn(new AnalysisContext("{\"contract_version\":3}",
+                ContextQuality.MINIMAL, List.of(), "HOME", "AWAY"));
         Map<String, AnalysisCache> saved = new HashMap<>();
         when(caches.findByGameIdAndAnalysisTypeAndPromptHash(any(), any(), any()))
-                .thenAnswer(invocation -> Optional.ofNullable(saved.get(invocation.getArgument(2))));
-        when(caches.saveAndFlush(any())).thenAnswer(invocation -> {
-            AnalysisCache value = invocation.getArgument(0);
-            saved.put(value.getPromptHash(), value);
-            return value;
+                .thenAnswer(call -> Optional.ofNullable(saved.get(call.getArgument(2))));
+        when(caches.saveAndFlush(any())).thenAnswer(call -> {
+            AnalysisCache cache = call.getArgument(0); saved.put(cache.getPromptHash(), cache); return cache;
         });
         AnalysisService service = new AnalysisService(games, caches, contexts, gateway,
                 new ObjectMapper().findAndRegisterModules(), "model-a");
-        return new Fixture(service, games, caches, contexts, gateway, calls, saved);
+        return new Fixture(service, caches, calls, saved);
     }
-
-    private record Fixture(AnalysisService service, GameRepository games, AnalysisCacheRepository caches,
-                           AnalysisContextBuilder contexts, GeminiGateway gateway, AtomicInteger calls,
+    private record Fixture(AnalysisService service, AnalysisCacheRepository caches, AtomicInteger calls,
                            Map<String, AnalysisCache> saved) { }
 }

@@ -1,0 +1,225 @@
+{
+  "feedback": "Avaliação direta do usuário; verificações abaixo são técnicas, sem nova sessão humana.",
+  "matrix": [
+    {
+      "client": 305,
+      "clipped": [
+        {
+          "c": "rp-team-identity",
+          "s": 62,
+          "w": 38
+        },
+        {
+          "c": "rp-team-identity",
+          "s": 90,
+          "w": 38
+        }
+      ],
+      "font": "32px",
+      "route": "http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NE_SEA#mr-third",
+      "rows": 63,
+      "scroll": 305,
+      "track": 235,
+      "width": 320
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "font": "32px",
+      "league": 9468.34375,
+      "route": "http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NE_SEA#mr-third",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "campaigns": 4,
+      "client": 1425,
+      "clipped": [],
+      "font": "16px",
+      "logos": true,
+      "route": "http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NE_SEA",
+      "rows": [
+        32,
+        31
+      ],
+      "scroll": 1425,
+      "third": 27,
+      "width": 1440
+    },
+    {
+      "campaigns": 4,
+      "client": 375,
+      "clipped": [],
+      "font": "16px",
+      "logos": true,
+      "route": "http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NE_SEA",
+      "rows": [
+        32,
+        31
+      ],
+      "scroll": 375,
+      "third": 27,
+      "width": 390
+    },
+    {
+      "campaigns": 4,
+      "client": 305,
+      "clipped": [],
+      "font": "16px",
+      "logos": true,
+      "route": "http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NE_SEA",
+      "rows": [
+        32,
+        31
+      ],
+      "scroll": 305,
+      "third": 27,
+      "width": 320
+    },
+    {
+      "client": 1425,
+      "clipped": [],
+      "font": "16px",
+      "games": 16,
+      "identityLinks": 32,
+      "route": "http://127.0.0.1:18106/?season=2026&week=1",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "client": 375,
+      "clipped": [],
+      "font": "16px",
+      "games": 16,
+      "identityLinks": 32,
+      "route": "http://127.0.0.1:18106/?season=2026&week=1",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "client": 305,
+      "clipped": [
+        "rp-team-identity",
+        "rp-team-identity"
+      ],
+      "font": "16px",
+      "games": 16,
+      "identityLinks": 32,
+      "route": "http://127.0.0.1:18106/?season=2026&week=1",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "font": "32px",
+      "route": "http://127.0.0.1:18106/?season=2026&week=1",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 305,
+      "clipped": [],
+      "font": "16px",
+      "route": "http://127.0.0.1:18106/?season=2026&week=1",
+      "scroll": 305,
+      "stage": "final-logo-bound",
+      "width": 320
+    }
+  ],
+  "symbols": [
+    {
+      "converted": "true",
+      "fill": "rgb(38, 60, 72)",
+      "kind": "pass",
+      "path": "rgb(247, 250, 252)"
+    },
+    {
+      "converted": "false",
+      "fill": "none",
+      "kind": "pass",
+      "path": "rgb(38, 60, 72)"
+    },
+    {
+      "converted": "true",
+      "fill": "rgb(38, 60, 72)",
+      "kind": "run",
+      "path": "rgb(247, 250, 252)"
+    },
+    {
+      "converted": "false",
+      "fill": "none",
+      "kind": "run",
+      "path": "rgb(38, 60, 72)"
+    }
+  ],
+  "teamNavigation": {
+    "identity": "NYJ",
+    "legend": "Passe — terceira convertida\nPasse — terceira não convertida\nCorrida — terceira convertida\nCorrida — terceira não convertida\n\nUma marca por tentativa. Sacks entram em passe; scrambles entram em corrida.",
+    "links": [
+      {
+        "href": "/?q=NYJ&view=matchup-w12&game=2026_01_NYJ_TEN&season=2026&week=1&returnWeek=2",
+        "label": "Ver confronto NYJ × TEN, semana 1"
+      },
+      {
+        "href": "/?q=NYJ&view=matchup-w12&game=2026_02_GB_NYJ&season=2026&week=2&returnWeek=2",
+        "label": "Ver confronto GB × NYJ, semana 2"
+      }
+    ],
+    "marks": 50,
+    "url": "http://127.0.0.1:18106/?q=NYJ&view=team-w12&team=NYJ&season=2026&returnWeek=2"
+  },
+  "otherGame": {
+    "period": "Resultado registrado · 20 de setembro de 2026 · 2026 REG · Semana 2",
+    "title": "GB × NYJ",
+    "url": "http://127.0.0.1:18106/?q=NYJ&view=matchup-w12&game=2026_02_GB_NYJ&season=2026&week=2&returnWeek=2"
+  },
+  "return": {
+    "games": 16,
+    "query": "NYJ",
+    "url": "http://127.0.0.1:18106/?q=NYJ&season=2026&week=2",
+    "week": "Semana 2\n16 jogos"
+  },
+  "atl": {
+    "client": 305,
+    "ownCampaigns": "ATL com a bola: nenhuma oportunidade elegível em W1–2. 0/0, sem taxa.",
+    "redzone": "Red zone\n\nTDs ofensivos / campanhas que entraram nas 20 · W1–2\n\nATL com a bola\n\nATL com a bola: nenhuma oportunidade elegível em W1–2. 0/0, sem taxa.\n\nW1 · 0/0 · sem oportunidades, sem taxa\n\nW2 · 0/0 · sem oportunidades, sem taxa\n\nAdversários contra ATL\n50,0%\n4 de 8\n\nW1 · 1/2\n\nW2 · 3/6\n\nAdversários contra ATL\nField goal\nW1 · campanha 7\nTD\nW1 · campanha 9\nTD\nW2 · campanha 2\nField goal\nW2 · campanha 6\nField goal\nW2 · campanha 10\nTD\nW2 · campanha 12\nTD\nW2 · campanha 14\nPerda por descidas\nW2 · campanha 16\n\n1 Perda por descidas · 3 Field goal · 4 TD\n\nToque ou use Tab e Enter em uma marca para consultar sua unidade original.\n\nQuando uma campanha entra na red zone?",
+    "scroll": 305,
+    "url": "http://127.0.0.1:18106/?view=team-w12&team=ATL&season=2026&returnWeek=2#team-redzone"
+  },
+  "rule": {
+    "open": true,
+    "text": "O que é uma terceira elegível?\n\nPasse ou corrida de terceira com flags válidas de conversão/falha. Exclui ajoelhadas, spikes, anuladas, abortadas e tentativas especiais. Avanço por penalidade não é automaticamente conversão. São as regras do projeto, não uma afirmação de estatística oficial da NFL.\n\nConsultar método completo"
+  },
+  "audit": {
+    "open": [
+      "Consultar garantias, fontes e permissões"
+    ],
+    "unknown": true
+  },
+  "reload": {
+    "rows": 63,
+    "title": "NE × SEA",
+    "url": "http://127.0.0.1:18106/?view=matchup-w12&game=2026_01_NE_SEA#mr-method"
+  },
+  "history": {
+    "team": "http://127.0.0.1:18106/?q=NYJ&view=team-w12&team=NYJ&season=2026&returnWeek=2",
+    "back": "http://127.0.0.1:18106/?season=2026&week=2&q=NYJ",
+    "forward": "http://127.0.0.1:18106/?q=NYJ&view=team-w12&team=NYJ&season=2026&returnWeek=2"
+  },
+  "nyj": {
+    "campaigns": 4,
+    "ratios": [
+      "20,0%\n2 de 10\ntentativas",
+      "33,3%\n4 de 12\ntentativas",
+      "66,7%\n2 de 3\ncampanhas",
+      "100,0%\n1 de 1\ncampanha"
+    ],
+    "third": 22
+  },
+  "restored": {
+    "font": "16px",
+    "url": "http://127.0.0.1:18106/?season=2026&week=1",
+    "width": 1280
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "fixedModelSha256": "ebc588e7990e29fb2e5ba8848558c1e5948222d7a6f002f07575a66d38186db8",
+  "inferenceModelAndCodeHashesVerified": true,
+  "install": "--no-index from own copied wheelhouse",
+  "passed": true,
+  "result": "PASS: fresh offline environment, 7970 predictions byte-numeric identical",
+  "venv": "/var/folders/7t/l3c1txvj58x4rfm4njhyb_8h0000gn/T/nfl-xint-offline-env-mu4dc44v/.venv"
+}

@@ -1,0 +1,68 @@
+              name position_class  eligible_passes  observed_interceptions  expected_interceptions  observed_minus_expected
+           AJ Cole          other                1                       0                0.004463                -0.004463
+     Aaron Rodgers             qb              284                       6                4.002850                 1.997150
+       Andy Dalton             qb                1                       1                0.551537                 0.448463
+Anthony Richardson             qb                2                       0                0.008926                -0.008926
+  Antonio Williams          other                1                       0                0.004463                -0.004463
+ Athan Kaliakmanis             qb               33                       1                0.694352                 0.305648
+    Baker Mayfield             qb              110                       2                1.585074                 0.414926
+            Bo Nix             qb              250                       3                5.492332                -2.492332
+       Brock Purdy             qb              209                       4                4.215203                -0.215203
+       Bryce Young             qb              267                       5                3.379906                 1.620094
+       C.J. Stroud             qb              243                       1                2.725721                -1.725721
+    Caleb Williams             qb              158                       1                1.252221                -0.252221
+          Cam Ward             qb              248                       5                3.842184                 1.157816
+  Cameron Johnston          other                1                       0                0.004463                -0.004463
+      Carson Wentz             qb               39                       0                0.721129                -0.721129
+       Case Keenum             qb               53                       1                0.783611                 0.216389
+       Cooper Rush             qb               39                       4                2.909426                 1.090574
+      Dak Prescott             qb              302                       5                5.177332                -0.177332
+      Daniel Jones             qb              267                       9               10.491870                -1.491870
+    Deshaun Watson             qb              249                       3                4.393721                -1.393721
+        Drake Maye             qb              233                       8                5.963536                 2.036464
+         Drew Lock             qb               48                       0                0.761296                -0.761296
+       Dyami Brown          other                1                       0                0.004463                -0.004463
+   Efton Chism III          other                1                       0                0.004463                -0.004463
+  Fernando Mendoza             qb                8                       0                0.035704                -0.035704
+   Gardner Minshew             qb               20                       0                0.089259                -0.089259
+        Geno Smith             qb              238                       3                3.797554                -0.797554
+     J.J. McCarthy             qb               44                       1                1.837592                -0.837592
+       Jack Strand             qb               15                       1                0.066944                 0.933056
+   Jacoby Brissett             qb              303                       7                5.728869                 1.271131
+       Jalen Hurts             qb              154                       3                2.875592                 0.124408
+     Jalon Daniels             qb               98                       5                3.719815                 1.280185
+    Jameis Winston             qb              158                       5                3.987592                 1.012408
+        Jared Goff             qb              248                       1                3.295110                -2.295110
+Jaxon Smith-Njigba          other                1                       0                0.004463                -0.004463
+       Jaxson Dart             qb               34                       0                0.698815                -0.698815
+    Jayden Daniels             qb              143                       0                0.638203                -0.638203
+        Joe Burrow             qb              267                       6                4.474054                 1.525946
+       Joe Fagnano             qb               21                       1                0.640796                 0.359204
+       Jordan Love             qb              312                       6                8.504406                -2.504406
+        Josh Allen             qb              205                       5                4.744425                 0.255575
+    Justin Herbert             qb              210                      10                8.049185                 1.950815
+       Kai Kroeger          other                1                       0                0.004463                -0.004463
+     Kenny Pickett             qb                5                       0                0.022315                -0.022315
+      Kirk Cousins             qb              280                       5                5.079147                -0.079147
+      Kyler Murray             qb              153                       3                2.871129                 0.128871
+     Lamar Jackson             qb               95                       1                2.065203                -1.065203
+      Malik Willis             qb              182                       5                3.547629                 1.452371
+    Marcus Mariota             qb               51                       0                0.774685                -0.774685
+     Mason Rudolph             qb                1                       0                0.004463                -0.004463
+  Matthew Stafford             qb              300                       8                8.450851                -0.450851
+ Michael Penix Jr.             qb              167                       5                4.574833                 0.425167
+    Michael Wilson          other                1                       0                0.004463                -0.004463
+   Patrick Mahomes             qb              232                       4                4.317851                -0.317851
+       Quinn Ewers             qb                3                       0                0.013389                -0.013389
+       Sam Darnold             qb              209                       9                5.309351                 3.690649
+   Shedeur Sanders             qb                3                       0                0.013389                -0.013389
+   Stetson Bennett             qb                3                       0                0.013389                -0.013389
+      Tanner McKee             qb              114                       2                2.149999                -0.149999
+      Tommy DeVito             qb                5                       0                0.022315                -0.022315
+        Tre Harris          other                1                       0                0.004463                -0.004463
+   Trevor Lawrence             qb              197                       4                4.708721                -0.708721
+    Tua Tagovailoa             qb                3                       1                0.560463                 0.439537
+     Tyler Huntley             qb              110                       1                2.679222                -1.679222
+      Tyler Shough             qb              272                       6                6.137591                -0.137591
+      Tyson Bagent             qb               63                       3                2.469463                 0.530537
+{'packageId': '7a06817ccdca4eac4ee8a3d3', 'indexSha256': '078477acf100807f932faf1ca0491ddb98d81ec8d38133c5419211ef1617375d', 'checkedAt': '2026-11-05T19:16:19.805710+00:00'}

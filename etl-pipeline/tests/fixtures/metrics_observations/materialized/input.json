@@ -1,0 +1,1373 @@
+{
+  "calculations": [
+    {
+      "calculation_id": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+      "calendar_revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "completeness": {
+        "evidence_id": "sha256:940ebeb82deba80929f15ed3a6db4aa13ced1c7aec2775bde335a2f9be02bb4f",
+        "value": "UNKNOWN"
+      },
+      "coverage_revision_id": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+      "game": {
+        "away_team": "BBB",
+        "game_id": "synthetic-1",
+        "home_team": "AAA",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 1
+      },
+      "metadata_revision_ids": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "model": null,
+      "original": {
+        "coverage": {
+          "away_team": "BBB",
+          "calendar_duplicate_rows_ignored": 0,
+          "calendar_revision_id": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+          "completeness": "UNKNOWN",
+          "coverage_revision_id": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+          "declared_completeness": "UNKNOWN",
+          "duplicate_rows_ignored": 0,
+          "eligible_content_n": 4,
+          "excluded_n": 1,
+          "exclusions": {
+            "unknown_filter_flags": 1
+          },
+          "expected_raw_unique_count_matches": null,
+          "expected_unique_rows": null,
+          "game_id": "synthetic-1",
+          "home_team": "AAA",
+          "outside_pass_run_null_teams_n": 0,
+          "pbp_content_id": "sha256:c07a787fd4b9ebb222d5515ac37c49ff648438c0e1e4dd655ec4ae6d8edb3d8d",
+          "pbp_revision_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df",
+          "phase": "REG",
+          "provenance": {
+            "available_at": null,
+            "event_upper_bound": null,
+            "ingested_at": null
+          },
+          "raw_n": 5,
+          "round": "REG",
+          "scope": "AUDITABLE_SUBSET",
+          "season": 2026,
+          "statistics_status": "PARTIAL",
+          "unique_n": 5,
+          "unknown_filter_flags_n": 1,
+          "week": 1
+        },
+        "manifest": {
+          "artifactVersion": "metrics-offline-v1",
+          "calculation_id": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+          "inputs": [
+            {
+              "bytes": 774,
+              "kind": "calendar",
+              "raw_rows": 4,
+              "relevant_schema": {
+                "away_team": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "game_type": "JSON scalar (validated per row)",
+                "home_team": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9",
+              "source_revision_id": "sha256:7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9"
+            },
+            {
+              "bytes": 2549,
+              "kind": "pbp",
+              "raw_rows": 6,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+              "source_revision_id": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+            }
+          ],
+          "limitations": [
+            "Completeness UNKNOWN unless explicitly evidenced for these input bytes.",
+            "AUDITABLE_SUBSET counts describe present content, not certified full-game volume.",
+            "Absent rows do not identify bye, source delay or ingestion failure.",
+            "Evidence assertions are supplied by the caller, not independently authenticated.",
+            "EPA model version UNKNOWN unless explicitly evidenced; adapter version is separate.",
+            "No certified temporal window, revision selection, pregame or POINT_IN_TIME guarantee."
+          ],
+          "metadata": {
+            "games": {
+              "synthetic-4": {
+                "completeness": "COMPLETE",
+                "evidence": {
+                  "basis": "SYNTHETIC_FIXTURE",
+                  "reference": "synthetic-empty-population"
+                },
+                "expected_unique_rows": 0
+              }
+            },
+            "metadataVersion": 1,
+            "sources": {}
+          },
+          "mode": "OFFLINE_DRY_RUN",
+          "replica_projection": {
+            "calendar": [
+              "game_id",
+              "season",
+              "game_type",
+              "week",
+              "home_team",
+              "away_team"
+            ],
+            "normalization": "Numeric round-trip decimals, binary flags, phase/round; additional columns ignored. Drive and all raw contract fields participate, even outside pass/run.",
+            "pbp": [
+              "game_id",
+              "play_id",
+              "drive",
+              "season",
+              "season_type",
+              "week",
+              "posteam",
+              "defteam",
+              "play_type",
+              "qb_kneel",
+              "qb_spike",
+              "play_deleted",
+              "special_teams_play",
+              "two_point_attempt",
+              "epa"
+            ]
+          },
+          "requested_seasons": [
+            2026
+          ],
+          "source_model_versions": {
+            "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363": {
+              "evidence": null,
+              "value": "UNKNOWN"
+            }
+          },
+          "versions": {
+            "adapter": "1.0.0",
+            "artifact": "metrics-offline-v1",
+            "definition": "1.0.0",
+            "population": "classified-scrimmage-v1"
+          }
+        }
+      },
+      "pbp_revision_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df",
+      "revision_id": "sha256:b2e15b6677a87769c744d0bd3ac032d44574d5c961bd37223164bf78e6948264",
+      "source_models": {
+        "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363": null
+      },
+      "statistics": [
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 0,
+          "epa_n": 1,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.1",
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 1,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 0,
+          "epa_n": 1,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.1",
+          "foundation": "general",
+          "role": "def",
+          "success_n": 1,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-0.0000000000000000000000000000001",
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 1,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 3,
+          "epa_missing_n": 1,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-0.0000000000000000000000000000001",
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 2,
+          "epa_missing_n": 0,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-0.0000000000000000000000000000001",
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 1,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 3,
+          "epa_missing_n": 1,
+          "epa_n": 2,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "-0.0000000000000000000000000000001",
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 0,
+          "epa_n": 1,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.1",
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 1,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 1,
+          "epa_missing_n": 0,
+          "epa_n": 1,
+          "epa_nonfinite_n": 0,
+          "epa_sum": "0.1",
+          "foundation": "general",
+          "role": "off",
+          "success_n": 1,
+          "team": "BBB"
+        }
+      ],
+      "unknown_filter_flags_n": 1,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    },
+    {
+      "calculation_id": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+      "calendar_revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "completeness": {
+        "evidence_id": "sha256:60f5ca605e7381dddc7a6ba09d145d501d5d627f7310fb1e5b719048b2e72163",
+        "value": "UNKNOWN"
+      },
+      "coverage_revision_id": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+      "game": {
+        "away_team": "BBB",
+        "game_id": "synthetic-3",
+        "home_team": "AAA",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 2
+      },
+      "metadata_revision_ids": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "model": null,
+      "original": {
+        "coverage": {
+          "away_team": "BBB",
+          "calendar_duplicate_rows_ignored": 0,
+          "calendar_revision_id": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+          "completeness": "UNKNOWN",
+          "coverage_revision_id": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+          "declared_completeness": "UNKNOWN",
+          "duplicate_rows_ignored": 0,
+          "eligible_content_n": 0,
+          "excluded_n": 1,
+          "exclusions": {
+            "outside_pass_run": 1
+          },
+          "expected_raw_unique_count_matches": null,
+          "expected_unique_rows": null,
+          "game_id": "synthetic-3",
+          "home_team": "AAA",
+          "outside_pass_run_null_teams_n": 0,
+          "pbp_content_id": "sha256:2d7d6974b81f6d0ffcdcf9ffc95f2c20d66bbb3dfa94f1835eace3b182b450a6",
+          "pbp_revision_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df",
+          "phase": "REG",
+          "provenance": {
+            "available_at": null,
+            "event_upper_bound": null,
+            "ingested_at": null
+          },
+          "raw_n": 1,
+          "round": "REG",
+          "scope": "AUDITABLE_SUBSET",
+          "season": 2026,
+          "statistics_status": "PARTIAL",
+          "unique_n": 1,
+          "unknown_filter_flags_n": 0,
+          "week": 2
+        },
+        "manifest": {
+          "artifactVersion": "metrics-offline-v1",
+          "calculation_id": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+          "inputs": [
+            {
+              "bytes": 774,
+              "kind": "calendar",
+              "raw_rows": 4,
+              "relevant_schema": {
+                "away_team": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "game_type": "JSON scalar (validated per row)",
+                "home_team": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9",
+              "source_revision_id": "sha256:7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9"
+            },
+            {
+              "bytes": 2549,
+              "kind": "pbp",
+              "raw_rows": 6,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+              "source_revision_id": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+            }
+          ],
+          "limitations": [
+            "Completeness UNKNOWN unless explicitly evidenced for these input bytes.",
+            "AUDITABLE_SUBSET counts describe present content, not certified full-game volume.",
+            "Absent rows do not identify bye, source delay or ingestion failure.",
+            "Evidence assertions are supplied by the caller, not independently authenticated.",
+            "EPA model version UNKNOWN unless explicitly evidenced; adapter version is separate.",
+            "No certified temporal window, revision selection, pregame or POINT_IN_TIME guarantee."
+          ],
+          "metadata": {
+            "games": {
+              "synthetic-4": {
+                "completeness": "COMPLETE",
+                "evidence": {
+                  "basis": "SYNTHETIC_FIXTURE",
+                  "reference": "synthetic-empty-population"
+                },
+                "expected_unique_rows": 0
+              }
+            },
+            "metadataVersion": 1,
+            "sources": {}
+          },
+          "mode": "OFFLINE_DRY_RUN",
+          "replica_projection": {
+            "calendar": [
+              "game_id",
+              "season",
+              "game_type",
+              "week",
+              "home_team",
+              "away_team"
+            ],
+            "normalization": "Numeric round-trip decimals, binary flags, phase/round; additional columns ignored. Drive and all raw contract fields participate, even outside pass/run.",
+            "pbp": [
+              "game_id",
+              "play_id",
+              "drive",
+              "season",
+              "season_type",
+              "week",
+              "posteam",
+              "defteam",
+              "play_type",
+              "qb_kneel",
+              "qb_spike",
+              "play_deleted",
+              "special_teams_play",
+              "two_point_attempt",
+              "epa"
+            ]
+          },
+          "requested_seasons": [
+            2026
+          ],
+          "source_model_versions": {
+            "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363": {
+              "evidence": null,
+              "value": "UNKNOWN"
+            }
+          },
+          "versions": {
+            "adapter": "1.0.0",
+            "artifact": "metrics-offline-v1",
+            "definition": "1.0.0",
+            "population": "classified-scrimmage-v1"
+          }
+        }
+      },
+      "pbp_revision_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df",
+      "revision_id": "sha256:0e116ee758c66223a1d03871560419159afd894203dc5fd2165f29f2eb7f1db6",
+      "source_models": {
+        "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363": null
+      },
+      "statistics": [
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "BBB"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    },
+    {
+      "calculation_id": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+      "calendar_revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "completeness": {
+        "evidence_id": "sha256:344a722a4806de8d4861c9a1101cd97ab50d8539f1940ba26380b5a97b243586",
+        "value": "COMPLETE"
+      },
+      "coverage_revision_id": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+      "game": {
+        "away_team": "BBB",
+        "game_id": "synthetic-4",
+        "home_team": "AAA",
+        "phase": "REG",
+        "round": "REG",
+        "season": 2026,
+        "week": 3
+      },
+      "metadata_revision_ids": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "model": null,
+      "original": {
+        "coverage": {
+          "away_team": "BBB",
+          "calendar_duplicate_rows_ignored": 0,
+          "calendar_revision_id": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+          "completeness": "COMPLETE",
+          "coverage_revision_id": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+          "declared_completeness": "COMPLETE",
+          "duplicate_rows_ignored": 0,
+          "eligible_content_n": 0,
+          "excluded_n": 0,
+          "exclusions": {},
+          "expected_raw_unique_count_matches": true,
+          "expected_unique_rows": 0,
+          "game_id": "synthetic-4",
+          "home_team": "AAA",
+          "outside_pass_run_null_teams_n": 0,
+          "pbp_content_id": "sha256:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "pbp_revision_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df",
+          "phase": "REG",
+          "provenance": {
+            "available_at": null,
+            "completeness": "COMPLETE",
+            "event_upper_bound": null,
+            "evidence": {
+              "basis": "SYNTHETIC_FIXTURE",
+              "reference": "synthetic-empty-population"
+            },
+            "expected_unique_rows": 0,
+            "ingested_at": null
+          },
+          "raw_n": 0,
+          "round": "REG",
+          "scope": "FULL_GAME_CONTENT",
+          "season": 2026,
+          "statistics_status": "COMPLETE",
+          "unique_n": 0,
+          "unknown_filter_flags_n": 0,
+          "week": 3
+        },
+        "manifest": {
+          "artifactVersion": "metrics-offline-v1",
+          "calculation_id": "sha256:92c3ca246b7e5d8a3c0fb70b56a8c704e05751aecd31ed051d610a8ad70a0d15",
+          "inputs": [
+            {
+              "bytes": 774,
+              "kind": "calendar",
+              "raw_rows": 4,
+              "relevant_schema": {
+                "away_team": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "game_type": "JSON scalar (validated per row)",
+                "home_team": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9",
+              "source_revision_id": "sha256:7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9"
+            },
+            {
+              "bytes": 2549,
+              "kind": "pbp",
+              "raw_rows": 6,
+              "relevant_schema": {
+                "defteam": "JSON scalar (validated per row)",
+                "drive": "JSON scalar (validated per row)",
+                "epa": "JSON scalar (validated per row)",
+                "game_id": "JSON scalar (validated per row)",
+                "play_deleted": "JSON scalar (validated per row)",
+                "play_id": "JSON scalar (validated per row)",
+                "play_type": "JSON scalar (validated per row)",
+                "posteam": "JSON scalar (validated per row)",
+                "qb_kneel": "JSON scalar (validated per row)",
+                "qb_spike": "JSON scalar (validated per row)",
+                "season": "JSON scalar (validated per row)",
+                "season_type": "JSON scalar (validated per row)",
+                "special_teams_play": "JSON scalar (validated per row)",
+                "two_point_attempt": "JSON scalar (validated per row)",
+                "week": "JSON scalar (validated per row)"
+              },
+              "sha256": "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+              "source_revision_id": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+            }
+          ],
+          "limitations": [
+            "Completeness UNKNOWN unless explicitly evidenced for these input bytes.",
+            "AUDITABLE_SUBSET counts describe present content, not certified full-game volume.",
+            "Absent rows do not identify bye, source delay or ingestion failure.",
+            "Evidence assertions are supplied by the caller, not independently authenticated.",
+            "EPA model version UNKNOWN unless explicitly evidenced; adapter version is separate.",
+            "No certified temporal window, revision selection, pregame or POINT_IN_TIME guarantee."
+          ],
+          "metadata": {
+            "games": {
+              "synthetic-4": {
+                "completeness": "COMPLETE",
+                "evidence": {
+                  "basis": "SYNTHETIC_FIXTURE",
+                  "reference": "synthetic-empty-population"
+                },
+                "expected_unique_rows": 0
+              }
+            },
+            "metadataVersion": 1,
+            "sources": {}
+          },
+          "mode": "OFFLINE_DRY_RUN",
+          "replica_projection": {
+            "calendar": [
+              "game_id",
+              "season",
+              "game_type",
+              "week",
+              "home_team",
+              "away_team"
+            ],
+            "normalization": "Numeric round-trip decimals, binary flags, phase/round; additional columns ignored. Drive and all raw contract fields participate, even outside pass/run.",
+            "pbp": [
+              "game_id",
+              "play_id",
+              "drive",
+              "season",
+              "season_type",
+              "week",
+              "posteam",
+              "defteam",
+              "play_type",
+              "qb_kneel",
+              "qb_spike",
+              "play_deleted",
+              "special_teams_play",
+              "two_point_attempt",
+              "epa"
+            ]
+          },
+          "requested_seasons": [
+            2026
+          ],
+          "source_model_versions": {
+            "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363": {
+              "evidence": null,
+              "value": "UNKNOWN"
+            }
+          },
+          "versions": {
+            "adapter": "1.0.0",
+            "artifact": "metrics-offline-v1",
+            "definition": "1.0.0",
+            "population": "classified-scrimmage-v1"
+          }
+        }
+      },
+      "pbp_revision_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df",
+      "revision_id": "sha256:bbdf9eaafb0e0d353817caa3a2c48725710011cf2aba68981a973e995c36e088",
+      "source_models": {
+        "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363": null
+      },
+      "statistics": [
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "AAA"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "def",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_pass",
+          "role": "off",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "classified_rush",
+          "role": "off",
+          "success_n": 0,
+          "team": "BBB"
+        },
+        {
+          "eligible_n": 0,
+          "epa_missing_n": 0,
+          "epa_n": 0,
+          "epa_nonfinite_n": 0,
+          "epa_sum": null,
+          "foundation": "general",
+          "role": "off",
+          "success_n": 0,
+          "team": "BBB"
+        }
+      ],
+      "unknown_filter_flags_n": 0,
+      "versions": {
+        "adapter": "1.0.0",
+        "definition": "1.0.0",
+        "population": "classified-scrimmage-v1"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:c710d8c556dad853aa8ec871542e68c7baf7a1f6022263209378173dfdea5ef7",
+      "kind": "CALENDAR_COMPLETE",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "value": true
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:2a377bd64129af3bd8912a8e8e263294fe11cc4bbc2d290b5d98205f4ae50da2",
+      "kind": "EVENT_END_BOUND",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:3d9842e7266faefdb1aafad65ab91c9094eda7019179b031521bfdd8b042439e",
+      "value": "2026-09-28T11:59:59.999999999999Z"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:e10770c98d815d42b7cb250ecba0ef56d61b03261d7c31d1287b1f3df3780dc7",
+      "kind": "EVENT_END_BOUND",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:71d4e205f326d43ae95bcc1e01b150629acce949c7a970ea363b1bbb78b41110",
+      "value": "2026-09-28T11:59:59.999999999999Z"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:7ceea21dd8e0b4e3abb5256c8ebe99728971164d8e70ed55a46a5068d5de2f09",
+      "kind": "EVENT_END_BOUND",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:b946e2e5880873b5f0d2363d72a205781e6acc199ebf21f2acf548020d8fbf24",
+      "value": "2026-09-28T11:59:59.999999999999Z"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:a08e976f46f598c9eeaa46dad5c437304660ddb91c6cff66994ab26a446e533c",
+      "kind": "EVENT_END_BOUND",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:9957450616a29f1eae0c5c177ed552ee5cf104f2fba5fbd177ad8f0850cf8fe8",
+      "value": "2026-09-28T11:59:59.999999999999Z"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:940ebeb82deba80929f15ed3a6db4aa13ced1c7aec2775bde335a2f9be02bb4f",
+      "kind": "PBP_COMPLETE",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:55648355d9b39e1bcc785bbd741f0f9fa11ab77240a61e9bdb32ead4b2225cc7",
+      "value": "UNKNOWN"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:60f5ca605e7381dddc7a6ba09d145d501d5d627f7310fb1e5b719048b2e72163",
+      "kind": "PBP_COMPLETE",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:bff949fe5cd81e9c93e23143be44766da6d4cf58ba78962eefbd2a7cf9ace6d4",
+      "value": "UNKNOWN"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:344a722a4806de8d4861c9a1101cd97ab50d8539f1940ba26380b5a97b243586",
+      "kind": "PBP_COMPLETE",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-11T12:00:00.000000000001Z",
+      "reference": "versioned-fixture-ledger",
+      "subject_id": "sha256:f9413ff7c03b8b01363dce853fb20df6cf9ba144c55a0bbf3a9b1c28014e5084",
+      "value": "COMPLETE"
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:c615c9525e15f20d888bdbee4763288645c68c1be7b5e9c0f4844b015b7a205e",
+      "kind": "PERIOD_CLOSED",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-15T12:00:00Z",
+      "reference": "SYNTHETIC_FIXTURE",
+      "subject_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "value": 1
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:539a41f66a58051a406ef0f0c0924d24e51e3e98147e004cb6b565084089bf3c",
+      "kind": "PERIOD_CLOSED",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-15T12:00:00Z",
+      "reference": "SYNTHETIC_FIXTURE",
+      "subject_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "value": 2
+    },
+    {
+      "dependencies": [
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "evidence_id": "sha256:3161d92de765e0a1de6aba8236350a5fec8f127ea38b3737331d79488eedddb6",
+      "kind": "PERIOD_CLOSED",
+      "origin": "synthetic-e5b4",
+      "recorded_at": "2026-10-15T12:00:00Z",
+      "reference": "SYNTHETIC_FIXTURE",
+      "subject_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+      "value": 3
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "local-archive",
+      "receipt": {
+        "archive_id": "05050505-5555-4555-8555-555555555555",
+        "archive_root": "/synthetic/nfl-e5c2/archive",
+        "locator": "blobs/sha256/50/50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+        "observed_at": "2026-10-15T12:00:00Z",
+        "origin": {
+          "reference": "e5c2-finite-fixture",
+          "type": "SYNTHETIC_FIXTURE"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+        "sha256": "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+      },
+      "recorded_at": "2026-10-15T12:00:00Z",
+      "reference": "receipt:sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+      "subject_id": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+      "value": "2026-10-15T12:00:00Z"
+    },
+    {
+      "dependencies": [],
+      "evidence_id": "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+      "kind": "ARCHIVE_OBSERVATION",
+      "origin": "local-archive",
+      "receipt": {
+        "archive_id": "05050505-5555-4555-8555-555555555555",
+        "archive_root": "/synthetic/nfl-e5c2/archive",
+        "locator": "blobs/sha256/7e/7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9",
+        "observed_at": "2026-10-15T12:00:00Z",
+        "origin": {
+          "reference": "e5c2-finite-fixture",
+          "type": "SYNTHETIC_FIXTURE"
+        },
+        "receiptVersion": 1,
+        "receipt_id": "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+        "sha256": "7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9"
+      },
+      "recorded_at": "2026-10-15T12:00:00Z",
+      "reference": "receipt:sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+      "subject_id": "sha256:7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9",
+      "value": "2026-10-15T12:00:00Z"
+    }
+  ],
+  "inputVersion": "metrics-temporal-input-v3",
+  "policy": {
+    "policyVersion": "materialized-evidence-v1",
+    "trustedOrigins": [
+      "synthetic-e5b4"
+    ]
+  },
+  "resources": [
+    {
+      "available_at": null,
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "METADATA",
+      "payload": {
+        "document": {
+          "content": {
+            "assertion": "Synthetic calendar/states/completeness; not authenticated"
+          },
+          "documentVersion": "metrics-auxiliary-document-v1",
+          "origin": "synthetic-e5b4",
+          "received_at": "2026-10-11T12:00:00Z",
+          "reference": "versioned-fixture-ledger"
+        },
+        "origin": "synthetic-e5b4"
+      },
+      "revision_id": "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc",
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "ingested_at": null,
+      "kind": "CALENDAR",
+      "payload": {
+        "closed_weeks": [
+          {
+            "evidence_id": "sha256:c615c9525e15f20d888bdbee4763288645c68c1be7b5e9c0f4844b015b7a205e",
+            "week": 1
+          },
+          {
+            "evidence_id": "sha256:539a41f66a58051a406ef0f0c0924d24e51e3e98147e004cb6b565084089bf3c",
+            "week": 2
+          },
+          {
+            "evidence_id": "sha256:3161d92de765e0a1de6aba8236350a5fec8f127ea38b3737331d79488eedddb6",
+            "week": 3
+          }
+        ],
+        "complete": {
+          "evidence_id": "sha256:c710d8c556dad853aa8ec871542e68c7baf7a1f6022263209378173dfdea5ef7",
+          "value": true
+        },
+        "games": [
+          {
+            "away_team": "BBB",
+            "game_id": "synthetic-1",
+            "home_team": "AAA",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 1
+          },
+          {
+            "away_team": "BBB",
+            "game_id": "synthetic-2",
+            "home_team": "AAA",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 2
+          },
+          {
+            "away_team": "BBB",
+            "game_id": "synthetic-3",
+            "home_team": "AAA",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 2
+          },
+          {
+            "away_team": "BBB",
+            "game_id": "synthetic-4",
+            "home_team": "AAA",
+            "phase": "REG",
+            "round": "REG",
+            "season": 2026,
+            "week": 3
+          }
+        ],
+        "phase": "REG",
+        "season": 2026
+      },
+      "revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:2a377bd64129af3bd8912a8e8e263294fe11cc4bbc2d290b5d98205f4ae50da2",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-1",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:3d9842e7266faefdb1aafad65ab91c9094eda7019179b031521bfdd8b042439e"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:e10770c98d815d42b7cb250ecba0ef56d61b03261d7c31d1287b1f3df3780dc7",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-2",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:71d4e205f326d43ae95bcc1e01b150629acce949c7a970ea363b1bbb78b41110"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:7ceea21dd8e0b4e3abb5256c8ebe99728971164d8e70ed55a46a5068d5de2f09",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-3",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:b946e2e5880873b5f0d2363d72a205781e6acc199ebf21f2acf548020d8fbf24"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "sha256:0069bebedb3ee0c0cd7f3f76e22e9a6b375bd4ef913956ca48cf7b0e76e125cc"
+      ],
+      "ingested_at": null,
+      "kind": "STATE",
+      "payload": {
+        "calendar_revision_id": "sha256:7dd9113cc1b1c4bfaaafb4cd9ac089ab9bf94de89104095630462c1a3d6cd4dc",
+        "event_lower_bound": null,
+        "event_upper_bound": {
+          "evidence_id": "sha256:a08e976f46f598c9eeaa46dad5c437304660ddb91c6cff66994ab26a446e533c",
+          "value": "2026-09-28T11:59:59.999999999999Z"
+        },
+        "game_id": "synthetic-4",
+        "kickoff": null,
+        "status": "FINAL"
+      },
+      "revision_id": "sha256:9957450616a29f1eae0c5c177ed552ee5cf104f2fba5fbd177ad8f0850cf8fe8"
+    },
+    {
+      "available_at": {
+        "evidence_id": "sha256:960d043d391675e61bbae9853c6edb25db442b9cfda769f13b542a09b42f4b97",
+        "value": "2026-10-15T12:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "ewogICJjb2x1bW5zIjogWwogICAgImdhbWVfaWQiLAogICAgInBsYXlfaWQiLAogICAgImRyaXZlIiwKICAgICJzZWFzb24iLAogICAgInNlYXNvbl90eXBlIiwKICAgICJ3ZWVrIiwKICAgICJwb3N0ZWFtIiwKICAgICJkZWZ0ZWFtIiwKICAgICJwbGF5X3R5cGUiLAogICAgInFiX2tuZWVsIiwKICAgICJxYl9zcGlrZSIsCiAgICAicGxheV9kZWxldGVkIiwKICAgICJzcGVjaWFsX3RlYW1zX3BsYXkiLAogICAgInR3b19wb2ludF9hdHRlbXB0IiwKICAgICJlcGEiCiAgXSwKICAicm93cyI6IFsKICAgIHsKICAgICAgImRlZnRlYW0iOiAiQkJCIiwKICAgICAgImRyaXZlIjogMSwKICAgICAgImVwYSI6ICIwIiwKICAgICAgImdhbWVfaWQiOiAic3ludGhldGljLTEiLAogICAgICAicGxheV9kZWxldGVkIjogMCwKICAgICAgInBsYXlfaWQiOiAxLAogICAgICAicGxheV90eXBlIjogInBhc3MiLAogICAgICAicG9zdGVhbSI6ICJBQUEiLAogICAgICAicWJfa25lZWwiOiAwLAogICAgICAicWJfc3Bpa2UiOiAwLAogICAgICAic2Vhc29uIjogMjAyNiwKICAgICAgInNlYXNvbl90eXBlIjogIlJFRyIsCiAgICAgICJzcGVjaWFsX3RlYW1zX3BsYXkiOiAwLAogICAgICAidHdvX3BvaW50X2F0dGVtcHQiOiAwLAogICAgICAid2VlayI6IDEKICAgIH0sCiAgICB7CiAgICAgICJkZWZ0ZWFtIjogIkJCQiIsCiAgICAgICJkcml2ZSI6IDEsCiAgICAgICJlcGEiOiBudWxsLAogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMSIsCiAgICAgICJwbGF5X2RlbGV0ZWQiOiAwLAogICAgICAicGxheV9pZCI6IDIsCiAgICAgICJwbGF5X3R5cGUiOiAicnVuIiwKICAgICAgInBvc3RlYW0iOiAiQUFBIiwKICAgICAgInFiX2tuZWVsIjogMCwKICAgICAgInFiX3NwaWtlIjogMCwKICAgICAgInNlYXNvbiI6IDIwMjYsCiAgICAgICJzZWFzb25fdHlwZSI6ICJSRUciLAogICAgICAic3BlY2lhbF90ZWFtc19wbGF5IjogMCwKICAgICAgInR3b19wb2ludF9hdHRlbXB0IjogMCwKICAgICAgIndlZWsiOiAxCiAgICB9LAogICAgewogICAgICAiZGVmdGVhbSI6ICJCQkIiLAogICAgICAiZHJpdmUiOiAxLAogICAgICAiZXBhIjogIi0wLjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEiLAogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMSIsCiAgICAgICJwbGF5X2RlbGV0ZWQiOiAwLAogICAgICAicGxheV9pZCI6IDMsCiAgICAgICJwbGF5X3R5cGUiOiAicGFzcyIsCiAgICAgICJwb3N0ZWFtIjogIkFBQSIsCiAgICAgICJxYl9rbmVlbCI6IDAsCiAgICAgICJxYl9zcGlrZSI6IDAsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAic2Vhc29uX3R5cGUiOiAiUkVHIiwKICAgICAgInNwZWNpYWxfdGVhbXNfcGxheSI6IDAsCiAgICAgICJ0d29fcG9pbnRfYXR0ZW1wdCI6IDAsCiAgICAgICJ3ZWVrIjogMQogICAgfSwKICAgIHsKICAgICAgImRlZnRlYW0iOiAiQUFBIiwKICAgICAgImRyaXZlIjogMSwKICAgICAgImVwYSI6ICIwLjEiLAogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMSIsCiAgICAgICJwbGF5X2RlbGV0ZWQiOiAwLAogICAgICAicGxheV9pZCI6IDQsCiAgICAgICJwbGF5X3R5cGUiOiAicGFzcyIsCiAgICAgICJwb3N0ZWFtIjogIkJCQiIsCiAgICAgICJxYl9rbmVlbCI6IDAsCiAgICAgICJxYl9zcGlrZSI6IDAsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAic2Vhc29uX3R5cGUiOiAiUkVHIiwKICAgICAgInNwZWNpYWxfdGVhbXNfcGxheSI6IDAsCiAgICAgICJ0d29fcG9pbnRfYXR0ZW1wdCI6IDAsCiAgICAgICJ3ZWVrIjogMQogICAgfSwKICAgIHsKICAgICAgImRlZnRlYW0iOiAiQkJCIiwKICAgICAgImRyaXZlIjogMSwKICAgICAgImVwYSI6ICIyIiwKICAgICAgImdhbWVfaWQiOiAic3ludGhldGljLTEiLAogICAgICAicGxheV9kZWxldGVkIjogMCwKICAgICAgInBsYXlfaWQiOiA1LAogICAgICAicGxheV90eXBlIjogInBhc3MiLAogICAgICAicG9zdGVhbSI6ICJBQUEiLAogICAgICAicWJfa25lZWwiOiAwLAogICAgICAicWJfc3Bpa2UiOiBudWxsLAogICAgICAic2Vhc29uIjogMjAyNiwKICAgICAgInNlYXNvbl90eXBlIjogIlJFRyIsCiAgICAgICJzcGVjaWFsX3RlYW1zX3BsYXkiOiAwLAogICAgICAidHdvX3BvaW50X2F0dGVtcHQiOiAwLAogICAgICAid2VlayI6IDEKICAgIH0sCiAgICB7CiAgICAgICJkZWZ0ZWFtIjogIkJCQiIsCiAgICAgICJkcml2ZSI6IDEsCiAgICAgICJlcGEiOiBudWxsLAogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMyIsCiAgICAgICJwbGF5X2RlbGV0ZWQiOiAwLAogICAgICAicGxheV9pZCI6IDEsCiAgICAgICJwbGF5X3R5cGUiOiAibm9fcGxheSIsCiAgICAgICJwb3N0ZWFtIjogIkFBQSIsCiAgICAgICJxYl9rbmVlbCI6IDAsCiAgICAgICJxYl9zcGlrZSI6IDAsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAic2Vhc29uX3R5cGUiOiAiUkVHIiwKICAgICAgInNwZWNpYWxfdGVhbXNfcGxheSI6IDAsCiAgICAgICJ0d29fcG9pbnRfYXR0ZW1wdCI6IDAsCiAgICAgICJ3ZWVrIjogMgogICAgfQogIF0KfQo=",
+        "origin": "local-archive",
+        "sha256": "50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363",
+        "source_revision_id": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+      },
+      "revision_id": "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+    },
+    {
+      "available_at": {
+        "evidence_id": "sha256:8e4531ffec6fb460abdafef3dda950d7205a1e579e7d0858529cdaa169f0c481",
+        "value": "2026-10-15T12:00:00Z"
+      },
+      "dependencies": [],
+      "ingested_at": null,
+      "kind": "FILE",
+      "payload": {
+        "bytes_base64": "ewogICJjb2x1bW5zIjogWwogICAgImdhbWVfaWQiLAogICAgInNlYXNvbiIsCiAgICAiZ2FtZV90eXBlIiwKICAgICJ3ZWVrIiwKICAgICJob21lX3RlYW0iLAogICAgImF3YXlfdGVhbSIKICBdLAogICJyb3dzIjogWwogICAgewogICAgICAiYXdheV90ZWFtIjogIkJCQiIsCiAgICAgICJnYW1lX2lkIjogInN5bnRoZXRpYy0xIiwKICAgICAgImdhbWVfdHlwZSI6ICJSRUciLAogICAgICAiaG9tZV90ZWFtIjogIkFBQSIsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAid2VlayI6IDEKICAgIH0sCiAgICB7CiAgICAgICJhd2F5X3RlYW0iOiAiQkJCIiwKICAgICAgImdhbWVfaWQiOiAic3ludGhldGljLTIiLAogICAgICAiZ2FtZV90eXBlIjogIlJFRyIsCiAgICAgICJob21lX3RlYW0iOiAiQUFBIiwKICAgICAgInNlYXNvbiI6IDIwMjYsCiAgICAgICJ3ZWVrIjogMgogICAgfSwKICAgIHsKICAgICAgImF3YXlfdGVhbSI6ICJCQkIiLAogICAgICAiZ2FtZV9pZCI6ICJzeW50aGV0aWMtMyIsCiAgICAgICJnYW1lX3R5cGUiOiAiUkVHIiwKICAgICAgImhvbWVfdGVhbSI6ICJBQUEiLAogICAgICAic2Vhc29uIjogMjAyNiwKICAgICAgIndlZWsiOiAyCiAgICB9LAogICAgewogICAgICAiYXdheV90ZWFtIjogIkJCQiIsCiAgICAgICJnYW1lX2lkIjogInN5bnRoZXRpYy00IiwKICAgICAgImdhbWVfdHlwZSI6ICJSRUciLAogICAgICAiaG9tZV90ZWFtIjogIkFBQSIsCiAgICAgICJzZWFzb24iOiAyMDI2LAogICAgICAid2VlayI6IDMKICAgIH0KICBdCn0K",
+        "origin": "local-archive",
+        "sha256": "7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9",
+        "source_revision_id": "sha256:7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9"
+      },
+      "revision_id": "sha256:7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:7e28926688943a4edfdf9b221b7e34531e076297a5b130aae472548d1e0e13b9"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "calendar",
+        "source_set_id": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc"
+      },
+      "revision_id": "sha256:1077d6ceb33a845e7a0f57fbdc06b128f17609806681c17edbe530c9cef5b3fc"
+    },
+    {
+      "available_at": null,
+      "dependencies": [
+        "sha256:50e05f88e89b411f32abe2c7a93206f9e33f80ea20619e24fe0fdaa976e90363"
+      ],
+      "ingested_at": null,
+      "kind": "SET",
+      "payload": {
+        "source_kind": "pbp",
+        "source_set_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df"
+      },
+      "revision_id": "sha256:4e5b89ee5a15addfcc78172674e33789445edd7b9be00ab22539119177b1b7df"
+    }
+  ]
+}

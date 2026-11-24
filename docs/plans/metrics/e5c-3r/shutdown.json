@@ -1,0 +1,43 @@
+{
+  "ownContainers": [
+    {
+      "name": "nfl-e5c3r-affa7f45-24af-4d49-a7e6-e5c3960a786c",
+      "state": "exited",
+      "pid": 0,
+      "port": 50049,
+      "pgCtlStatus": 3,
+      "postmasterPidAbsent": true
+    },
+    {
+      "name": "nfl-e5c3r-b321d664-b54c-4d59-b56d-db30a726c1f1",
+      "state": "exited",
+      "pid": 0,
+      "port": 50101,
+      "pgCtlStatus": 3,
+      "postmasterPidAbsent": true
+    }
+  ],
+  "portsCheckedFree": [
+    18083,
+    50049,
+    50101
+  ],
+  "ownServerPidsAbsent": [
+    88768,
+    88796,
+    88799
+  ],
+  "allOwnServersAndBrowsersClosed": true,
+  "existingRunningContainersUnchanged": true,
+  "existingRunningContainers": [
+    "f1e79f5fd81e brandcare-bench-pg",
+    "f271fb90cd4f brandcareai-worker",
+    "f210dc3963da brandcareai-app",
+    "6f54a56cb88b brandcareai-redis",
+    "8c3414c8239c brandcareai-postgres",
+    "8841cd584b9d supabase_db_NFL_Sideline",
+    "626a625cef05 quantlab-mongo",
+    "41c2491699a2 welldress-api"
+  ],
+  "dataAndLogsPreserved": true
+}

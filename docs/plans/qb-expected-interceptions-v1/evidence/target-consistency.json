@@ -1,0 +1,57 @@
+[
+  {
+    "defender_gsis_without_interception": 0,
+    "ftn_retrieval_dates_not_blind_annotation_timestamps": true,
+    "games": 271,
+    "interception_rows_on_no_play": 0,
+    "interception_without_defender_gsis": 0,
+    "interceptions": 418,
+    "interceptions_marked_complete": 0,
+    "interceptions_marked_incomplete": 0,
+    "season": 2022
+  },
+  {
+    "defender_gsis_without_interception": 0,
+    "ftn_retrieval_dates_not_blind_annotation_timestamps": true,
+    "games": 272,
+    "interception_rows_on_no_play": 0,
+    "interception_without_defender_gsis": 0,
+    "interceptions": 430,
+    "interceptions_marked_complete": 0,
+    "interceptions_marked_incomplete": 0,
+    "season": 2023
+  },
+  {
+    "defender_gsis_without_interception": 0,
+    "ftn_retrieval_dates_not_blind_annotation_timestamps": true,
+    "games": 272,
+    "interception_rows_on_no_play": 0,
+    "interception_without_defender_gsis": 0,
+    "interceptions": 387,
+    "interceptions_marked_complete": 0,
+    "interceptions_marked_incomplete": 0,
+    "season": 2024
+  },
+  {
+    "defender_gsis_without_interception": 0,
+    "ftn_retrieval_dates_not_blind_annotation_timestamps": true,
+    "games": 272,
+    "interception_rows_on_no_play": 0,
+    "interception_without_defender_gsis": 0,
+    "interceptions": 380,
+    "interceptions_marked_complete": 0,
+    "interceptions_marked_incomplete": 0,
+    "season": 2025
+  },
+  {
+    "defender_gsis_without_interception": 0,
+    "ftn_retrieval_dates_not_blind_annotation_timestamps": true,
+    "games": 121,
+    "interception_rows_on_no_play": 0,
+    "interception_without_defender_gsis": 0,
+    "interceptions": 170,
+    "interceptions_marked_complete": 0,
+    "interceptions_marked_incomplete": 0,
+    "season": 2026
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "status" : "GENERATION_FAILED",
+  "category" : "UNKNOWN",
+  "diagnosticTypes" : [ "org.springframework.web.client.HttpClientErrorException" ]
+}

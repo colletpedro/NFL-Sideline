@@ -1,0 +1,62 @@
+[
+  {
+    "case": "logo-1280",
+    "measure": {
+      "logo": {
+        "bottom": 477.96875,
+        "height": 178,
+        "left": 717,
+        "right": 954.59375,
+        "top": 299.96875,
+        "width": 237.59375,
+        "x": 717,
+        "y": 299.96875
+      },
+      "wing": {
+        "bottom": 562.484375,
+        "height": 288,
+        "left": 480,
+        "right": 920,
+        "top": 274.484375,
+        "width": 440,
+        "x": 480,
+        "y": 274.484375
+      }
+    }
+  },
+  {
+    "case": "access-390",
+    "rect": {
+      "bottom": 906.1796875,
+      "height": 48,
+      "left": 36,
+      "right": 354,
+      "top": 858.1796875,
+      "width": 318,
+      "x": 36,
+      "y": 858.1796875
+    }
+  },
+  {
+    "case": "access-320",
+    "rect": {
+      "bottom": 922.8046875,
+      "height": 48,
+      "left": 30,
+      "right": 290,
+      "top": 874.8046875,
+      "width": 260,
+      "x": 30,
+      "y": 874.8046875
+    }
+  },
+  {
+    "case": "synthesis",
+    "copy": "Leitura do recorte\nO chão também move a posse.\n\nDallas: −0,100 EPA por jogada em 12 tentativas. New England: +0,060 EPA por jogada em 14 tentativas. Compare a eficiência com a taxa de sucesso para distinguir impacto e regularidade."
+  },
+  {
+    "case": "navigation",
+    "url": "http://127.0.0.1:18086/confronto/baltimore-dallas?round=7",
+    "menu": "/confronto/dallas-new-england?round=7"
+  }
+]

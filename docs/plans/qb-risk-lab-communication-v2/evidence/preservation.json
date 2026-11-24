@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "base": "8e98296dd9352b5ea51ea69b2be67ea0f163f473",
+  "referenceCheckoutClean": true,
+  "approvedSiteHead": "5b38f04e559bad5fc1b4ef25116cc0afb93293d9",
+  "approvedSiteCheckoutClean": true,
+  "packageId": "d3739e3d9103c48fda1c417a",
+  "modelSha256": "38b9933535dada0f8b0ed22842ef247fe8e9beeca2a4c3469f4abc54b2b535a6",
+  "unchangedPackageAndPointerFiles": 71,
+  "unchangedRawSources": 4,
+  "unchangedCompiledDataDocuments": 209,
+  "publicBuildByteIdentical": true,
+  "protectedPathsUnchanged": [
+    "research",
+    "etl-pipeline",
+    "core-api",
+    "supabase",
+    "web-ui/src",
+    "web-ui/public",
+    "web-ui/vercel.json",
+    "web-ui/vite.config.ts",
+    "Spec.md",
+    "docs/static-snapshot-contract.md",
+    "docs/plans/qb-risk-lab-v1",
+    "docs/plans/qb-risk-temporal-calibration-v2",
+    "docs/plans/qb-interception-risk-baseline-v1",
+    "docs/plans/broadcast-final-audit-v1"
+  ],
+  "acquisition": false,
+  "training": false,
+  "recalibration": false
+}

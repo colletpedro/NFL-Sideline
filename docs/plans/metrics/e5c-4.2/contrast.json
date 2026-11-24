@@ -1,0 +1,51 @@
+{
+  "paper ink": {
+    "colors": [
+      "#18252d",
+      "#ced6df"
+    ],
+    "ratio": 10.67
+  },
+  "paper muted": {
+    "colors": [
+      "#42515d",
+      "#ced6df"
+    ],
+    "ratio": 5.57
+  },
+  "context": {
+    "colors": [
+      "#f2f4f6",
+      "#3a4853"
+    ],
+    "ratio": 8.53
+  },
+  "BAL": {
+    "colors": [
+      "#f2f4f6",
+      "#241773"
+    ],
+    "ratio": 13.18
+  },
+  "NE": {
+    "colors": [
+      "#f2f4f6",
+      "#002244"
+    ],
+    "ratio": 14.51
+  },
+  "DAL": {
+    "colors": [
+      "#002244",
+      "#aeb9c3"
+    ],
+    "ratio": 8.02
+  },
+  "data parts": {
+    "colors": [
+      "#32677d",
+      "#acb9c4"
+    ],
+    "ratio": 3.11
+  }
+}

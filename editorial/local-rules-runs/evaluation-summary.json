@@ -1,0 +1,108 @@
+{
+  "freezeTime": "2026-10-01T01:56:29.085123+00:00",
+  "cases": [
+    {
+      "split": "development-final",
+      "gameId": "2025_08_CHI_BAL",
+      "classifications": {
+        "CONFLICTING": 5,
+        "INSUFFICIENT_OR_INCOMPATIBLE": 1
+      },
+      "primary": [
+        "BAL:OFF_EPA_PLAY",
+        "CHI:OFF_EPA_PLAY"
+      ],
+      "opportunities": [],
+      "thesis": "NONE",
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "split": "development-final",
+      "gameId": "2026_03_ARI_SF",
+      "classifications": {
+        "CONFLICTING": 6
+      },
+      "primary": [
+        "ARI:OFF_EPA_PASS",
+        "ARI:OFF_EPA_RUSH",
+        "SF:OFF_EPA_PASS",
+        "SF:OFF_EPA_RUSH"
+      ],
+      "opportunities": [],
+      "thesis": "NONE",
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "split": "development-final",
+      "gameId": "2026_03_BAL_DAL",
+      "classifications": {
+        "OPPORTUNITY": 3,
+        "CONFLICTING": 3
+      },
+      "primary": [
+        "BAL:OFF_EPA_PASS",
+        "BAL:OFF_EPA_RUSH"
+      ],
+      "opportunities": [
+        "BAL:OFF_EPA_PASS",
+        "BAL:OFF_EPA_RUSH",
+        "BAL:OFF_EPA_PLAY"
+      ],
+      "thesis": "NONE",
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "split": "development-final",
+      "gameId": "2026_03_NE_JAX",
+      "classifications": {
+        "CONFLICTING": 6
+      },
+      "primary": [
+        "JAX:OFF_EPA_PASS",
+        "JAX:OFF_EPA_RUSH",
+        "NE:OFF_EPA_PASS",
+        "NE:OFF_EPA_RUSH"
+      ],
+      "opportunities": [],
+      "thesis": "NONE",
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "split": "holdout-v1",
+      "gameId": "2026_03_MIN_TB",
+      "classifications": {
+        "CONFLICTING": 4,
+        "PROFILE": 2
+      },
+      "primary": [
+        "MIN:OFF_EPA_PASS",
+        "MIN:OFF_EPA_RUSH",
+        "TB:OFF_EPA_PASS",
+        "TB:OFF_EPA_RUSH"
+      ],
+      "opportunities": [],
+      "thesis": "NONE",
+      "verdict": "INCONCLUSIVE"
+    },
+    {
+      "split": "holdout-v1",
+      "gameId": "2026_03_SEA_WAS",
+      "classifications": {
+        "OPPORTUNITY": 2,
+        "CONFLICTING": 4
+      },
+      "primary": [
+        "SEA:OFF_EPA_PASS"
+      ],
+      "opportunities": [
+        "SEA:OFF_EPA_PASS",
+        "SEA:OFF_EPA_PLAY"
+      ],
+      "thesis": "NONE",
+      "verdict": "INCONCLUSIVE"
+    }
+  ],
+  "noPostHoldoutTuning": true,
+  "qualityEditorialProven": false,
+  "geminiEvidence": false
+}

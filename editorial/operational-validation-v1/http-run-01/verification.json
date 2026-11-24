@@ -1,0 +1,457 @@
+{
+  "transport": "REAL_LOOPBACK_HTTP",
+  "jarSha256": "8a03bf92515876b04e5d4714543e15849bd4af9ca3a23cc8b20d41ebb22e1763",
+  "independentEvaluation": false,
+  "cases": [
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_ARI_SF",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_ATL_GB",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_BAL_DAL",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_CAR_CLE",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_CIN_PIT",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_HOU_IND",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_LAC_BUF",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_LA_DEN",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": [
+        "alerta_vermelho"
+      ]
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_NE_JAX",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_NYJ_DET",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_PHI_CHI",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_SEA_WAS",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "2026_03_TEN_NYG",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "both-teams",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "opposing-signs",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "tied-opportunities",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    },
+    {
+      "gameId": "weekly-variation",
+      "cliHttpParity": true,
+      "selectionUnchanged": true,
+      "changedBlocks": []
+    }
+  ],
+  "requests": [
+    {
+      "label": "2025_08_CHI_BAL-post",
+      "status": 201
+    },
+    {
+      "label": "2025_08_CHI_BAL-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_ARI_SF-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_ARI_SF-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_ATL_GB-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_ATL_GB-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_BAL_DAL-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_BAL_DAL-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_CAR_CLE-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_CAR_CLE-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_CIN_PIT-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_CIN_PIT-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_HOU_IND-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_HOU_IND-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_KC_MIA-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_KC_MIA-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_LAC_BUF-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_LAC_BUF-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_LA_DEN-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_LA_DEN-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_LV_NO-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_LV_NO-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_MIN_TB-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_MIN_TB-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_NE_JAX-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_NE_JAX-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_NYJ_DET-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_NYJ_DET-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_PHI_CHI-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_PHI_CHI-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_SEA_WAS-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_SEA_WAS-get",
+      "status": 200
+    },
+    {
+      "label": "2026_03_TEN_NYG-post",
+      "status": 201
+    },
+    {
+      "label": "2026_03_TEN_NYG-get",
+      "status": 200
+    },
+    {
+      "label": "both-teams-post",
+      "status": 201
+    },
+    {
+      "label": "both-teams-get",
+      "status": 200
+    },
+    {
+      "label": "opposing-signs-post",
+      "status": 201
+    },
+    {
+      "label": "opposing-signs-get",
+      "status": 200
+    },
+    {
+      "label": "tied-opportunities-post",
+      "status": 201
+    },
+    {
+      "label": "tied-opportunities-get",
+      "status": 200
+    },
+    {
+      "label": "weekly-variation-post",
+      "status": 201
+    },
+    {
+      "label": "weekly-variation-get",
+      "status": 200
+    },
+    {
+      "label": "concurrent-0",
+      "status": 201
+    },
+    {
+      "label": "concurrent-1",
+      "status": 201
+    },
+    {
+      "label": "concurrent-2",
+      "status": 201
+    },
+    {
+      "label": "concurrent-3",
+      "status": 201
+    },
+    {
+      "label": "origin-rejected",
+      "status": 400
+    },
+    {
+      "label": "host-rejected",
+      "status": 400
+    },
+    {
+      "label": "body-rejected",
+      "status": 400
+    },
+    {
+      "label": "query-rejected",
+      "status": 400
+    },
+    {
+      "label": "encoding-rejected",
+      "status": 400
+    },
+    {
+      "label": "unknown-game",
+      "status": 404
+    },
+    {
+      "label": "method-rejected",
+      "status": 405
+    },
+    {
+      "label": "unknown-result",
+      "status": 404
+    },
+    {
+      "label": "2025_08_CHI_BAL-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_ARI_SF-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_ATL_GB-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_BAL_DAL-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_CAR_CLE-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_CIN_PIT-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_HOU_IND-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_KC_MIA-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_LAC_BUF-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_LA_DEN-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_LV_NO-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_MIN_TB-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_NE_JAX-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_NYJ_DET-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_PHI_CHI-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_SEA_WAS-after-restart",
+      "status": 200
+    },
+    {
+      "label": "2026_03_TEN_NYG-after-restart",
+      "status": 200
+    },
+    {
+      "label": "both-teams-after-restart",
+      "status": 200
+    },
+    {
+      "label": "opposing-signs-after-restart",
+      "status": 200
+    },
+    {
+      "label": "tied-opportunities-after-restart",
+      "status": 200
+    },
+    {
+      "label": "weekly-variation-after-restart",
+      "status": 200
+    }
+  ],
+  "processes": [
+    {
+      "pid": 2884,
+      "log": "server-1.log",
+      "stopped": true,
+      "port": 53430,
+      "exitCode": 143
+    },
+    {
+      "pid": 2980,
+      "log": "server-2.log",
+      "stopped": true,
+      "port": 53485,
+      "exitCode": 143
+    }
+  ],
+  "concurrentAttempts": 4,
+  "secondOwnerRejected": true,
+  "persistedAfterRestart": 21,
+  "status": "PASSED"
+}

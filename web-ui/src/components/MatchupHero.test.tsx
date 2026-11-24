@@ -1,6 +1,5 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import type { Confidence } from "../services/model";
 import type { Game } from "../services/types";
 import MatchupHero from "./MatchupHero";
 
@@ -42,8 +41,6 @@ interface HeroMarket {
   awayPct: number | null;
   homePct: number | null;
   favAbbr: string | null;
-  confidence: Confidence | null;
-  edge: number | null;
   vig: number | null;
 }
 
@@ -51,8 +48,6 @@ const market: HeroMarket = {
   awayPct: 0.4,
   homePct: 0.6,
   favAbbr: "SEA",
-  confidence: "MEDIUM",
-  edge: 10,
   vig: 0.04,
 };
 
@@ -60,8 +55,6 @@ const noMarket: HeroMarket = {
   awayPct: null,
   homePct: null,
   favAbbr: null,
-  confidence: null,
-  edge: null,
   vig: null,
 };
 
@@ -82,8 +75,8 @@ describe("MatchupHero score presentation", () => {
     expect(html).toContain('aria-label="NE score 10">10</span>');
     expect(html).toContain('aria-label="SEA score 13">13</span>');
     expect(html).toContain("Final · SEA won by 3");
-    expect(html).not.toContain('aria-label="NE win probability');
-    expect(html).not.toContain('aria-label="SEA win probability');
+    expect(html).not.toContain('aria-label="NE market probability');
+    expect(html).not.toContain('aria-label="SEA market probability');
     expect(html).toContain("NE 40%");
     expect(html).toContain("SEA 60%");
   });
@@ -125,8 +118,8 @@ describe("MatchupHero score presentation", () => {
   it("future game with market keeps probability presentation", () => {
     const html = renderHero();
 
-    expect(html).toContain('aria-label="NE win probability 40.0 percent">40.0%</span>');
-    expect(html).toContain('aria-label="SEA win probability 60.0 percent">60.0%</span>');
+    expect(html).toContain('aria-label="NE market probability 40.0 percent">40.0%</span>');
+    expect(html).toContain('aria-label="SEA market probability 60.0 percent">60.0%</span>');
     expect(html).toContain("Market favorite: SEA");
     expect(html).not.toContain("Final");
   });
@@ -146,7 +139,7 @@ describe("MatchupHero score presentation", () => {
     expect(html).toContain('aria-label="NE primary value unavailable">—</span>');
     expect(html).toContain('aria-label="SEA primary value unavailable">—</span>');
     expect(html).not.toMatch(/Final|score 10|won by/);
-    expect(html).not.toContain('aria-label="SEA win probability');
+    expect(html).not.toContain('aria-label="SEA market probability');
   });
 
   it("inconsistent result is not final", () => {
