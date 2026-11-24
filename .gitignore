@@ -106,3 +106,6 @@ web-ui/risk-outcomes-dist/
 /editorial/local-artifacts/mlflow/
 # Stores científicos completos dos experimentos QB; evidências pequenas ficam em docs/plans/qb-*.
 /editorial/local-artifacts/qb-*/
+
+# Hub de modelos: cache nflverse, feature store e saídas locais (ver docs/plans/model-hub-v1)
+/editorial/local-artifacts/model-hub/
