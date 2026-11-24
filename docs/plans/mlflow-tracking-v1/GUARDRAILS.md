@@ -49,5 +49,6 @@ Testes escrevem só em `tmp_path`. Saídas de verificação vão para o scratchp
 - `mlflow ui`/`mlflow server` só em `127.0.0.1`. Nunca publicar o servidor nem o store.
 - Nada de `git commit`, `push`, `checkout`, `reset`, `stash`, `rebase` por agentes. Commits só pelo dono do projeto.
 - Não abrir `.env` nem imprimir segredos.
-- Dados FTN (CC BY-SA 4.0) e artefatos com linhas reais não saem da máquina; o CI usa só dados sintéticos.
+- Dados FTN (CC BY-SA 4.0): o CI usa só dados sintéticos e os stores não são publicados. Evidências já versionadas
+  podem ir ao GitHub com a atribuição "FTN Data via nflverse, CC BY-SA 4.0" (D13).
 - Arquivos e hashes dos stores são a fonte de verdade. Se o MLflow divergir de um arquivo, o MLflow está errado.

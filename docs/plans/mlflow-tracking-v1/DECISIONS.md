@@ -19,6 +19,7 @@ anotado.
 | D12 | 23/11/2026 | `npm ci` permitido em `W/web-ui` com Node 24 para rodar os testes da Fase 5 | Orquestrador | Revisável | Apagar `node_modules` |
 | D9 | 23/11/2026 | Agentes: implementador e revisor em Sonnet; batedor e verificador em Haiku; orquestração e verificação final pelo modelo principal | Pedido do dono | Aceita | — |
 | D10 | 23/11/2026 | Nenhum commit é feito pelos agentes nem pelo orquestrador; o dono revisa e commita | Regra da sessão | Aceita | — |
+| D13 | 24/11/2026 | Publicar no GitHub (repositório público) o branch com todo o histórico local, incluindo evidências com linhas derivadas de FTN; a atribuição "FTN Data via nflverse, CC BY-SA 4.0" já consta nos documentos da pesquisa | Dono | Aceita | Reescrever histórico para remover os arquivos |
 
 ## Perguntas abertas
 
