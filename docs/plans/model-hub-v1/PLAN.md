@@ -1,6 +1,6 @@
 # Plano: hub de modelos de ML do NFL Sideline (v1, fundação)
 
-Revisão 1 — 24/11/2026. Status: H0–H5 concluídas (ver CHECKPOINTS); próximo plano: publicação e novos modelos. Plano vivo: mudanças de rumo entram em [DECISIONS.md](DECISIONS.md) e a evidência de
+Revisão 1 — 24/11/2026. Status: H0–H8 concluídas (ver CHECKPOINTS); próximo: publicação no site e novos modelos. Plano vivo: mudanças de rumo entram em [DECISIONS.md](DECISIONS.md) e a evidência de
 cada fase em [CHECKPOINTS.md](CHECKPOINTS.md). Proteções em [GUARDRAILS.md](GUARDRAILS.md).
 Decisão de arquitetura: [ADR-012](../../adr/012-model-hub-foundation.md).
 
@@ -66,3 +66,17 @@ estilo, família "over expected" de jogadores, monitoramento semanal.
 - Volume: ~16 temporadas × ~48 mil jogadas. Cabe em memória (polars), mas testes usam dados sintéticos.
 - O nflverse corrige dados retroativamente: por isso cada aquisição tem manifesto e o build referencia um.
 - O modelo do nflverse como referência é otimista (viu os dados de teste); o cartão diz isso explicitamente.
+
+## Revisão 2 — 25/11/2026: ratings, WP pré-jogo e EP v2
+
+Branch `codex/model-hub-v2` (empilhado sobre `codex/model-hub-v1`). Mesmas convenções, GUARDRAILS e harness.
+Dados: build `8631a979…` (4.259 jogos completos; moneyline e spread em 100% dos jogos; 14 empates).
+
+| Fase | Entrega | Pronto quando |
+|---|---|---|
+| H6. Ratings de times | `models/ratings.py`: tarefa de regressão da margem do mandante (`result`); candidatos Elo (com margem, vantagem de casa e regressão entre temporadas) e ratings por mínimos quadrados com decaimento temporal; baselines `zero` e `hfa` (margem média do mandante no treino); referência `market` (= `spread_line`, linha de fechamento, positiva quando o mandante é favorito). Splits semanais 2018–2026 (cada semana treina com tudo antes dela). Registro `hub-ratings`; `predict ratings` grava o histórico semanal de ratings por time | Backtest completo; selecionado bate os baselines em RMSE; ratings atuais plausíveis (ordem e escala) |
+| H7. WP pré-jogo | `models/wp_pregame.py`: tarefa binária `home_win` (empates fora, contados); candidatos logísticos sobre diferença de ratings (calculados só com o treino de cada dobra), descanso, campo neutro, divisão e/ou features de `team_asof`; baselines `home_rate` e `coin`; referência `market` = probabilidade justa do moneyline com remoção proporcional da margem da casa. Splits semanais 2018–2026. Registro `hub-wp-pregame`; `predict wp_pregame` grava previsões para todos os jogos, inclusive os futuros de 2026 | Backtest completo; métricas log loss, Brier, ECE e AUC; previsões para as semanas restantes de 2026 |
+| H8. EP v2 | Candidato com ponderação por recência (meia-vida em temporadas) no mesmo backtest do EP | Viés de calibração walk-forward menor que +0,08 sem piorar o log loss; regra de seleção inalterada |
+
+Decisões desta revisão: H-D12 (linha de fechamento como referência, não como feature, para manter a comparação
+"modelo × mercado" honesta), H-D13 (splits semanais como cadência real de uso).

@@ -62,3 +62,47 @@
 - Verificação final do orquestrador: 151 testes verdes; simulação do CI com home vazio 144 passam / 7 pulam;
   nenhum diff em código congelado nem fora do escopo; nenhum pickle em `hub-ep`; raw da ETL intocado;
   home do hub = 467 MB (fora do Git).
+
+## H8 — EP v2 (25/11/2026)
+
+- Candidatos `logit_hinge_hl2`/`hl4` (peso 0,5^(idade/meia-vida), normalizado para média 1). Backtest real
+  967 s, pai `af769b33…`. Selecionado `logit_hinge_hl4` (log loss 1,28267 vs 1,28304 sem peso); viés pooled
+  +0,079 → +0,049. `hl2` tem viés menor (+0,030) mas log loss 0,00012 pior; regra mantida (escolher pelo viés
+  depois de ver o teste seria seleção no teste). `hub-ep` v4 @champion.
+
+## H6 — Ratings de times (25/11/2026)
+
+- 184 splits semanais (2018 s1 – 2026 s11), 1.288 filhas, 406 s. n = 2.390 jogos de teste.
+- RMSE da margem: market (referência) 12,696; **elo** 13,077 (selecionado); ridge_decay_hl17 13,113;
+  asof_linear 13,114; hfa (baseline) 14,232; zero 14,307. Acerto do vencedor: market 66,4%, elo 64,1%,
+  hfa 54,2%. Elo vence o hfa em todas as temporadas e perde do mercado em todas.
+- Hiperparâmetros do Elo/ridge fixados num piloto walk-forward 2013–2017 (sem ver 2018+).
+- `hub-ratings` v1 @champion (elo); histórico semanal walk-forward 2012–2026 (9.952 linhas). Top atual: BUF,
+  JAX, SF, LA, SEA; fundo: TEN, ARI, NYJ, MIA, LV. Suíte: 178 verdes.
+
+## Revisão 3 (25/11/2026) — ratings e EP v2
+
+- Sem crítico/alto. RMSE recalculado do zero bate com o MLflow para elo, ridge_hl17, asof_linear, market, hfa,
+  zero; 0 vazamentos nos 184 splits; `ratings_history` recalculado em 4 semanas com diferença 0,0; EP v2 s2026
+  recalculado igual; champions = ajuste em memória.
+- M1 (pai dos ratings gerado antes de uma edição) e B1 (piloto sem artefato) corrigidos: `pilots/ratings_pilot.py`
+  + resultados versionados (só 2013–2017; teste prova que 2018+ não muda nada). Achado honesto: só k=0,07
+  coincide com o ótimo do piloto; a configuração usada é a 9ª de 180 (+0,011 RMSE); ridge λ=5/hl17 é o ótimo.
+  Nenhum hiperparâmetro trocado após o teste. Pai novo `bb7d2992…`, `hub-ratings` v2, métricas idênticas.
+- Suíte: 201 verdes.
+
+## H7 — WP pré-jogo (25/11/2026)
+
+- Elo pré-jogo online para todos os jogos (teste: mudar o jogo X não altera features com kickoff ≤ X).
+  4.245 jogos modelados (14 empates fora); 184 splits semanais; n = 2.381; pai `06a4f0ba…` (reaproveitado
+  após a edição de `ratings.py`, o que confirma que o hash de código bate com a árvore).
+- Log loss pooled: market (referência) 0,6089; **logit_combo** 0,6334 (selecionado); demais candidatos até
+  0,6365 (diferença entre candidatos 0,003, escolha não robusta); home_rate 0,6907; coin 0,6931.
+- `hub-wp-pregame` v4 @champion; 4.368 previsões (2.381 fora da amostra, 1.878 dentro, 109 futuras);
+  `upcoming` com os 16 jogos da semana 12 de 2026, modelo × mercado.
+- Revisão 4 (WP): sem crítico/médio. Elo recalculado do zero igual em 4.368 jogos; quinta × domingo sem efeito
+  (nenhum time joga duas vezes na semana; log loss com Elo congelado idêntico); log loss do combo e do market
+  recalculados iguais ao MLflow. Dois ajustes de texto no cartão (viés global +2,5 pp; seleção não significativa,
+  Elo puro equivalente). Backtest refeito (pai `7143d28f…`, métricas idênticas), `hub-wp-pregame` v5 @champion.
+- Fechamento da rodada: 201 testes verdes; simulação do CI 192 passam / 9 pulam; nenhum diff fora do escopo;
+  nenhum pickle em `hub-*`.

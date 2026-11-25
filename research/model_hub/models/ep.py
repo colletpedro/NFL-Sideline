@@ -49,6 +49,8 @@ STATE = BASIC + ["half_seconds_remaining", "posteam_timeouts_remaining", "deftea
 HINGE = (STATE + [f"relu_yl_k{k}" for k in range(10, 100, 10)] + ["relu_t_120", "relu_t_300"]
          + [f"down{d}_x_yardline_100" for d in (2, 3, 4)] + ["t_x_yardline_100", "relu_t_300_x_yardline_100"])
 FEATURE_SETS = {"logit_basic": BASIC, "logit_state": STATE, "logit_hinge": HINGE}
+# v2 (recência): mesma família e features de `logit_hinge`; só muda o peso das amostras no fit (meia-vida em temporadas).
+HALF_LIVES = {"logit_hinge_hl2": 2.0, "logit_hinge_hl4": 4.0}
 
 LOAD_COLUMNS = ["game_id", "play_id", "season", "week", "season_type", "next_score_type", "next_score_points",
                 *NFLVERSE_COLUMNS, "ep", *pf.RAW_COLUMNS]
@@ -196,16 +198,31 @@ class NflverseReference:
         return _Fitted(predict, {"note": "sem ajuste"})
 
 
+def recency_weights(seasons, half_life: float) -> np.ndarray:
+    """Peso 0,5^((última temporada do treino - temporada)/meia-vida): a temporada mais recente pesa 1 e o peso
+    cai pela metade a cada `half_life` temporadas. Usa só as temporadas do próprio treino (sem olhar o teste)."""
+    s = np.asarray(seasons, dtype="float64")
+    return np.power(0.5, (s.max() - s) / float(half_life))
+
+
 class LogitEP:
     """Candidato: logística multinomial (sklearn, lbfgs) sobre as features de `ep_pyfunc`, padronizadas com média e
-    desvio do TREINO. Exporta o formato `hub-ep-logit-v1`; a previsão usa `ep_pyfunc.probs_from_params`."""
+    desvio do TREINO (sem pesos). Exporta o formato `hub-ep-logit-v1`; a previsão usa `ep_pyfunc.probs_from_params`.
 
-    def __init__(self, name: str, features, C: float = C, max_iter: int = MAX_ITER):
+    `half_life` (v2): se dado, as amostras entram no fit com `recency_weights`, normalizados para média 1 (assim `C`
+    mantém o mesmo significado do modelo sem pesos). Os pesos só afetam o ajuste: o JSON de parâmetros e o pyfunc
+    são idênticos em formato."""
+
+    def __init__(self, name: str, features, C: float = C, max_iter: int = MAX_ITER, half_life: float | None = None):
         self.name, self.features, self.C, self.max_iter = name, list(features), C, max_iter
+        self.half_life = half_life
 
     def params(self):
-        return {"features": self.features, "C": self.C, "max_iter": self.max_iter, "solver": "lbfgs",
-                "recipe_version": pf.RECIPE_VERSION}
+        p = {"features": self.features, "C": self.C, "max_iter": self.max_iter, "solver": "lbfgs",
+             "recipe_version": pf.RECIPE_VERSION}
+        if self.half_life is not None:
+            p |= {"half_life_seasons": self.half_life, "sample_weight": "0.5^((ultima_temporada_treino-temporada)/meia_vida), media 1"}
+        return p
 
     def columns(self):
         return ["next_score_type", *pf.required_columns(self.features)]
@@ -217,7 +234,11 @@ class LogitEP:
         scale[scale == 0] = 1.0
         y = _target_index(train)
         clf = LogisticRegression(C=self.C, solver="lbfgs", max_iter=self.max_iter)
-        clf.fit((X - mean) / scale, y)
+        w = None
+        if self.half_life is not None:
+            w = recency_weights(train["season"], self.half_life)
+            w = w / w.mean()
+        clf.fit((X - mean) / scale, y, sample_weight=w)
         if list(clf.classes_) != list(range(len(CLASSES))):
             raise EPError(f"o treino não contém as 7 classes (presentes: {list(clf.classes_)})")
         n_iter = int(np.max(clf.n_iter_))
@@ -227,13 +248,14 @@ class LogitEP:
               "features": self.features, "classes": list(CLASSES), "points": pf.POINTS,
               "intercept": clf.intercept_.tolist(), "coef": clf.coef_.tolist(), "mean": mean.tolist(),
               "scale": scale.tolist(), "C": self.C, "max_iter": self.max_iter, "n_iter": n_iter,
-              "n_train": int(len(train)), "train_seasons": [int(train["season"].min()), int(train["season"].max())]}
+              "n_train": int(len(train)), "half_life_seasons": self.half_life, "train_seasons": [int(train["season"].min()), int(train["season"].max())]}
         return _Fitted(lambda df: pf.probs_from_params(js, df), js)
 
 
 def make_models(min_cell: int = MIN_CELL, max_iter: int = MAX_ITER):
     baselines = [FreqBaseline(), FreqFieldDownBaseline(min_cell)]
     candidates = [LogitEP(n, f, max_iter=max_iter) for n, f in FEATURE_SETS.items()]
+    candidates += [LogitEP(n, HINGE, max_iter=max_iter, half_life=hl) for n, hl in HALF_LIVES.items()]
     return candidates, baselines, [NflverseReference()]
 
 
@@ -251,7 +273,13 @@ def ep_rmse(test: pd.DataFrame, pred) -> float:
     return M.rmse(test["next_score_points"].to_numpy(dtype="float64"), expected_points(pred))
 
 
-EXTRA_METRICS = {"ep_mae": ep_mae, "ep_rmse": ep_rmse}
+def ep_bias(test: pd.DataFrame, pred) -> float:
+    """Viés do EP = média(pontos reais - EP previsto), COM sinal (positivo = o modelo subestima). Mais perto de zero é
+    melhor. Métrica extra do backtest: por split e pooled, reportada, FORA da regra de seleção."""
+    return float(np.mean(test["next_score_points"].to_numpy(dtype="float64") - expected_points(pred)))
+
+
+EXTRA_METRICS = {"ep_mae": ep_mae, "ep_rmse": ep_rmse, "ep_bias": ep_bias}
 EXTRA_COLUMNS = ["next_score_points"]  # lidas pelas métricas extras e pela calibração (entram na impressão digital)
 
 
@@ -391,7 +419,7 @@ def _reasons(by_reason: dict) -> str:
     return "; ".join(f"{names.get(k, k)}: {v}" for k, v in by_reason.items()) or "sem detalhe"
 
 
-def limitations(info: dict) -> list:
+def limitations(info: dict, drift: str | None = None) -> list:
     return [
         "A referência `nflverse` foi treinada com dados que incluem as temporadas de teste (inclusive jogadas "
         "futuras ao split), portanto é OTIMISTA: serve de teto de comparação, não de adversário justo. Ela está fora "
@@ -408,9 +436,8 @@ def limitations(info: dict) -> list:
         "As previsões em lote (`predict ep`) usam o champion ajustado com TODAS as jogadas: são dentro da amostra. "
         "Para avaliação use o backtest.",
         "Baselines com suavização de Laplace (+1 por classe) para evitar probabilidade zero no log-loss.",
-        "Deriva temporal: o EP walk-forward fica cerca de 0,08 ponto ABAIXO do real, porque a pontuação média por "
-        "jogada subiu de ~1,58 (2011) para ~2,10 (2026) e o treino mistura épocas; a próxima versão deve testar "
-        "ponderação por recência.",
+        drift or ("Deriva temporal: a pontuação média por jogada subiu de ~1,58 (2011) para ~2,10 (2026) e o treino "
+                  "mistura épocas, o que tende a deixar o EP walk-forward abaixo do real; veja `ep_bias` e os candidatos de ponderação por recência."),
         "A referência `nflverse` pode incluir as temporadas de teste no seu treino (a versão do modelo nflverse não "
         "está fixada), então pode haver vazamento a favor dela, em grau desconhecido.",
         "Há uma descontinuidade de cerca de 0,3 ponto no EP na fronteira goal-to-go (1ª&gol na 10 vs 1ª&10 na 11), "
@@ -445,13 +472,35 @@ def card_text(parent_run_id: str, info: dict) -> str:
             extra.append("")
         except Exception as exc:  # artefato ausente em backtests antigos
             extra += [f"(calibração indisponível: {exc})", ""]
+    drift = None
+    hinge = [m for m in ("logit_hinge", *HALF_LIVES) if f"{m}.ep_bias" in run.data.metrics]
+    if hinge:
+        extra += ["## Viés do EP (média real - previsto; mais perto de zero é melhor)", "",
+                  "| modelo | log_loss pooled | brier pooled | ep_mae pooled | ep_bias pooled |", "|---|---|---|---|---|"]
+        for m in hinge:
+            g = run.data.metrics.get
+            extra.append(f"| `{m}` | {g(f'{m}.log_loss'):.5f} | {g(f'{m}.brier'):.5f} | {g(f'{m}.ep_mae'):.5f} | "
+                         f"{g(f'{m}.ep_bias'):+.4f} |")
+        extra.append("")
+        bias = per_split_metric(parent_run_id, "ep_bias")
+        extra += ["## Viés do EP por temporada de teste", "", "| split | " + " | ".join(f"`{m}`" for m in hinge) + " |",
+                  "|---|" + "---|" * len(hinge)]
+        for sp in sorted(next(iter(bias.values()))):
+            extra.append(f"| {sp} | " + " | ".join(f"{bias[m].get(sp, float('nan')):+.4f}" for m in hinge) + " |")
+        extra.append("")
+        if sel != "none" and f"{sel}.ep_bias" in run.data.metrics:
+            g = run.data.metrics
+            drift = ("Deriva temporal: a pontuação média por jogada subiu de ~1,58 (2011) para ~2,10 (2026). O `logit_hinge` "
+                     f"sem pesos tem viés pooled {g.get('logit_hinge.ep_bias', float('nan')):+.3f} (o EP fica abaixo do real); "
+                     f"o selecionado (`{sel}`) tem {g[f'{sel}.ep_bias']:+.3f}, com candidatos de ponderação por recência (meia-vida 2 e 4 "
+                     "temporadas) na disputa. O viés é métrica reportada, fora da regra de seleção.")
     try:
         name = hubtrack.experiment_name(MODEL_KEY)
         mv = client.get_model_version_by_alias(name, "champion")
         extra += ["## Registro", "", f"- `{name}@champion` = versão {mv.version} (params_sha256 `{mv.tags.get('params_sha256')}`)", ""]
     except Exception:
         extra += ["## Registro", "", "- nenhuma versão `champion` registrada ainda.", ""]
-    return card.render_card(parent_run_id, PURPOSE, limitations(info), "\n".join(extra))
+    return card.render_card(parent_run_id, PURPOSE, limitations(info, drift), "\n".join(extra))
 
 
 # ------------------------------------------------------------------ comandos do CLI
