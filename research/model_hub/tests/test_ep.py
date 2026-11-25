@@ -164,14 +164,15 @@ def bt(data):
 def test_backtest_selects_candidate_and_reference_is_outside_the_rule(bt):
     data, res = bt
     assert res.roles["nflverse"] == "reference" and res.roles["freq"] == "baseline"
-    assert set(res.roles) == {"freq", "freq_field_down", "nflverse", "logit_basic", "logit_state", "logit_hinge"}
-    assert res.selected_model in {"logit_basic", "logit_state", "logit_hinge"} and res.beats_baselines
-    best = min(res.pooled[m]["log_loss"] for m in ("logit_basic", "logit_state", "logit_hinge"))
+    assert set(res.roles) == {"freq", "freq_field_down", "nflverse", "logit_basic", "logit_state", "logit_hinge",
+                              "logit_hinge_hl2", "logit_hinge_hl4"}
+    assert res.selected_model in {"logit_basic", "logit_state", "logit_hinge", "logit_hinge_hl2", "logit_hinge_hl4"} and res.beats_baselines
+    best = min(res.pooled[m]["log_loss"] for m in ("logit_basic", "logit_state", "logit_hinge", "logit_hinge_hl2", "logit_hinge_hl4"))
     assert res.pooled[res.selected_model]["log_loss"] == best
     # a referência é melhor que todos (sintético: usa os dados verdadeiros) e MESMO ASSIM não é selecionada
     assert res.pooled["nflverse"]["log_loss"] < best
     for m in res.pooled:
-        assert {"log_loss", "brier", "ep_mae", "ep_rmse", "n"} <= set(res.pooled[m])
+        assert {"log_loss", "brier", "ep_mae", "ep_rmse", "ep_bias", "n"} <= set(res.pooled[m])
     run = MlflowClient().get_run(res.parent_run_id)
     assert "nflverse" in run.data.params["references"]
     art = Path_artifact(res.parent_run_id, f"extras/{res.selected_model}/ep_calibration.json")
@@ -335,3 +336,44 @@ def test_card_requires_parent_from_current_build_l3(bt, tmp_path, monkeypatch):
         "build_id": "synth-build", "ep_eligible": 50, "used": 50, "dropped_invalid_rows": 0, "dropped_by_reason": {}}))
     args.run_id = None
     ep.cmd_card(args)
+
+
+# ------------------------------------------------------------------ v2: recência
+
+def test_recency_weights_latest_is_one_and_half_life_halves():
+    seasons = np.array([2011, 2014, 2015, 2017, 2017])
+    w = ep.recency_weights(seasons, 2.0)
+    assert w[-1] == 1.0 and w[-2] == 1.0
+    assert w[3] == 1.0 and w[2] == pytest.approx(0.5) and w[1] == pytest.approx(0.5 ** 1.5)
+    assert w[0] == pytest.approx(0.5 ** 3)
+    # dobrar a meia-vida: o peso de uma temporada com defasagem d com hl=4 é o de defasagem d/2 com hl=2
+    np.testing.assert_allclose(ep.recency_weights(seasons, 4.0), ep.recency_weights(2017 - (2017 - seasons) / 2, 2.0))
+
+
+def test_hinge_half_life_candidates_declared_and_weights_change_fit(data):
+    cands, _b, _r = ep.make_models()
+    by = {c.name: c for c in cands}
+    assert by["logit_hinge_hl2"].features == by["logit_hinge"].features == ep.HINGE
+    assert by["logit_hinge_hl2"].params()["half_life_seasons"] == 2.0 and by["logit_hinge_hl4"].params()["half_life_seasons"] == 4.0
+    assert "half_life_seasons" not in by["logit_hinge"].params()
+    train = data[data.season < 2017]
+    a = by["logit_hinge_hl2"].fit(train).to_json()
+    b = by["logit_hinge"].fit(train).to_json()
+    assert a["half_life_seasons"] == 2.0 and a["coef"] != b["coef"]
+    assert a["mean"] == b["mean"] and a["scale"] == b["scale"]  # padronização sem pesos
+
+
+def test_hinge_half_life_deterministic_and_pyfunc_identical(data):
+    train, test = data[data.season < 2017], data[data.season == 2017]
+    m = ep.LogitEP("logit_hinge_hl2", ep.HINGE, half_life=2.0)
+    f1, f2 = m.fit(train), m.fit(train)
+    assert f1.to_json() == f2.to_json()
+    np.testing.assert_array_equal(f1.predict(test), f2.predict(test))
+    out = pf.predict_frame(json.loads(json.dumps(f1.to_json())), test)
+    np.testing.assert_allclose(out[pf.PROB_COLUMNS].to_numpy(), f1.predict(test), atol=1e-12)
+
+
+def test_ep_bias_signed_mean_of_real_minus_predicted():
+    test = pd.DataFrame({"next_score_points": [7.0, 0.0, -3.0]})
+    P = np.zeros((3, 7)); P[:, 6] = 1.0  # EP previsto 0
+    assert ep.ep_bias(test, P) == pytest.approx(4.0 / 3.0)
